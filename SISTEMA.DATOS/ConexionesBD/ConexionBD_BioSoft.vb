@@ -54,10 +54,10 @@ Public Class ConexionBD_BioSoft
     End Property
 
     Public Sub New()
-        Me.Base = bdBiosoft '"BIOSOFT"
+        Me.Base = bdLocal '"BIOSOFT"
         Me.Servidor = servBiosoft '"10.0.6.18"
-        Me.Usuario = usuarioBiosoft '"biosoft"
-        Me.Clave = claveBiosoft '"$B1@S0FT$"
+        Me.Usuario = usuarioLocal '"biosoft"
+        Me.Clave = claveLocal '"$B1@S0FT$"
         Me.conn = New SqlConnection(CrearCadena)
     End Sub
 

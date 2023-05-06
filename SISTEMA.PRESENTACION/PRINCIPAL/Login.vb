@@ -37,22 +37,22 @@ Public Class Login
                 'GENERAL
                 company = GetIniValue("GENERAL", "Company", My.Application.Info.DirectoryPath & "\config.ini").Trim.ToString
                 correo = GetIniValue("GENERAL", "Correo", My.Application.Info.DirectoryPath & "\config.ini").Trim.ToString
-                'BIOSOFT
-                servBiosoft = GetIniValue("BIOSOFT", "Servidor", My.Application.Info.DirectoryPath & "\config.ini")
-                bdBiosoft = GetIniValue("BIOSOFT", "BD", My.Application.Info.DirectoryPath & "\config.ini")
-                usuarioBiosoft = GetIniValue("BIOSOFT", "Usuario", My.Application.Info.DirectoryPath & "\config.ini")
-                claveBiosoft = GetIniValue("BIOSOFT", "Clave", My.Application.Info.DirectoryPath & "\config.ini")
-                'BIOTIMEPRO
-                servBiotime = GetIniValue("BIOTIMEPRO", "Servidor", My.Application.Info.DirectoryPath & "\config.ini")
-                bdBiotime = GetIniValue("BIOTIMEPRO", "BD", My.Application.Info.DirectoryPath & "\config.ini")
-                usuarioBiotime = GetIniValue("BIOTIMEPRO", "Usuario", My.Application.Info.DirectoryPath & "\config.ini")
-                claveBiotime = GetIniValue("BIOTIMEPRO", "Clave", My.Application.Info.DirectoryPath & "\config.ini")
-                'ERP
-                servERP = GetIniValue("ADA", "Servidor", My.Application.Info.DirectoryPath & "\config.ini")
-                bdERP = GetIniValue("ADA", "BD", My.Application.Info.DirectoryPath & "\config.ini")
-                usuarioERP = GetIniValue("ADA", "Usuario", My.Application.Info.DirectoryPath & "\config.ini")
-                claveERP = GetIniValue("ADA", "Clave", My.Application.Info.DirectoryPath & "\config.ini")
-                btnIngresar.Enabled = True
+                ''BIOSOFT
+                'servBiosoft = GetIniValue("BIOSOFT", "Servidor", My.Application.Info.DirectoryPath & "\config.ini")
+                'bdLocal = GetIniValue("BIOSOFT", "BD", My.Application.Info.DirectoryPath & "\config.ini")
+                'usuarioLocal = GetIniValue("BIOSOFT", "Usuario", My.Application.Info.DirectoryPath & "\config.ini")
+                'claveLocal = GetIniValue("BIOSOFT", "Clave", My.Application.Info.DirectoryPath & "\config.ini")
+                ''BIOTIMEPRO
+                'servExterno = GetIniValue("BIOTIMEPRO", "Servidor", My.Application.Info.DirectoryPath & "\config.ini")
+                'bdExterno = GetIniValue("BIOTIMEPRO", "BD", My.Application.Info.DirectoryPath & "\config.ini")
+                'usuarioExterno = GetIniValue("BIOTIMEPRO", "Usuario", My.Application.Info.DirectoryPath & "\config.ini")
+                'claveExterno = GetIniValue("BIOTIMEPRO", "Clave", My.Application.Info.DirectoryPath & "\config.ini")
+                ''ERP
+                'servERP = GetIniValue("ADA", "Servidor", My.Application.Info.DirectoryPath & "\config.ini")
+                'bdERP = GetIniValue("ADA", "BD", My.Application.Info.DirectoryPath & "\config.ini")
+                'usuarioERP = GetIniValue("ADA", "Usuario", My.Application.Info.DirectoryPath & "\config.ini")
+                'claveERP = GetIniValue("ADA", "Clave", My.Application.Info.DirectoryPath & "\config.ini")
+                'btnIngresar.Enabled = True
             Else
                 MsgBox("¡¡¡EL ARCHIVO DE CONFIGURACIÓN NO EXISTE O NO FUE ENCONTRADO!!!" + vbLf + "Contacte al encargado de Sistemas", MsgBoxStyle.Critical, "Configuración")
                 btnIngresar.Enabled = False

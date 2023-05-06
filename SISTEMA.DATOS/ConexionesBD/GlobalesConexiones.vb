@@ -6,9 +6,8 @@ Public Module GlobalesConexiones
 #Region "Usuario y Roles"
     'Variables de configuracion del sistema - Se cargan del archivo config.ini
     Public company As String, correo As String = ""
-    Public servBiosoft As String = "", bdBiosoft As String = "", usuarioBiosoft As String = "", claveBiosoft As String = "" 'BIOSOFT
-    Public servBiotime As String = "", bdBiotime As String = "", usuarioBiotime As String = "", claveBiotime As String = "" 'BIOTIMEPRO
-    Public servERP As String = "", bdERP As String = "", usuarioERP As String = "", claveERP As String = "" 'ERP
+    Public servLocal As String = "", bdLocal As String = "", usuarioLocal As String = "", claveLocal As String = "" 'BASE DE DATOS LOCAL
+    Public servExterno As String = "", bdExterno As String = "", usuarioExterno As String = "", claveExterno As String = "" 'BASE DE DATOS EXTERNA
 #End Region
 
     <DllImport("kernel32")>

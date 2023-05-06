@@ -53,10 +53,10 @@ Public Class ConexionBD_BioTime
     End Property
 
     Public Sub New()
-        Me.Base = bdBiotime '"BIOTIMEPRO"
-        Me.Servidor = servBiotime '"10.0.6.18"
-        Me.Usuario = usuarioBiotime '"biosoft"
-        Me.Clave = claveBiotime '"$B1@S0FT$"
+        Me.Base = bdExterno '"BIOTIMEPRO"
+        Me.Servidor = servExterno '"10.0.6.18"
+        Me.Usuario = usuarioExterno '"biosoft"
+        Me.Clave = claveExterno '"$B1@S0FT$"
         Me.conn = New SqlConnection(CrearCadena)
     End Sub
 
