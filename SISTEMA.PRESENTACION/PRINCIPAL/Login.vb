@@ -21,9 +21,9 @@ Public Class Login
         Try
             'SINCRONIZACIÓN DE LOS USUARIOS BIOTIMEPRO<->BIOSOFT
             'cargarArchivoIni()
-            Timer1.Start()
+            'Timer1.Start()
             'gsLogin.NSincronizarUsuarios()
-            txtContraseña.PasswordChar = "*"
+            txtContraseña.PasswordChar = CChar("*")
         Catch ex As Exception
             mensajeError(ex)
         End Try
@@ -118,7 +118,7 @@ Public Class Login
     End Sub
 
     Private Sub btnIngresar_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click
-        If estadoConexión = True Then
+        If estadoConexión = False Then 'CAMBIAR A TRUE
             cargarCredenciales()
         Else
             MsgBox("NO HAY CONEXIÓN AL SERVIDOR DE BASE DE DATOS:" + vbLf + vbLf +
@@ -156,10 +156,12 @@ Public Class Login
 
     Private Sub btnVerPass_Click(sender As Object, e As EventArgs) Handles btnVerPass.Click
         Try
-            If txtContraseña.PasswordChar = "*" Then
-                txtContraseña.PasswordChar = ""
+            If txtContraseña.UseSystemPasswordChar = True Then
+                txtContraseña.PasswordChar = CChar("")
+                txtContraseña.UseSystemPasswordChar = False
             Else
-                txtContraseña.PasswordChar = "*"
+                txtContraseña.PasswordChar = CChar("●")
+                txtContraseña.UseSystemPasswordChar = True
             End If
         Catch ex As Exception
             mensajeError(ex)

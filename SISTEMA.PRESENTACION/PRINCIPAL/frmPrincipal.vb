@@ -15,7 +15,7 @@ Public Class frmPrincipal
 #Region "Funciones y Metodos"
     Private Sub TimerConexión_Tick(sender As Object, e As EventArgs) Handles TimerConexión.Tick
         Try
-
+            bsiFecha.Caption = Format(Now, "dd/mm/yyyy hh:mm:ss")
             If My.Computer.Network.Ping(servLocal, 100) And My.Computer.Network.Ping(servExterno, 100) Then
                 If My.Computer.Network.Ping(servLocal, 100) Then
                     servLocal = servLocal
@@ -41,13 +41,17 @@ Public Class frmPrincipal
             estadoConexión = False
         End Try
     End Sub
-    Private Sub AbrirFormulario(ByVal frmHijo As Object) 'METODO PARA CARGAR LOS FORMULARIOS EN EL PANEL CONTENEDOR
+
+
+    Private Sub AbrirFormulario(ByVal frmHijo As Form) 'METODO PARA CARGAR LOS FORMULARIOS EN EL PANEL CONTENEDOR
         Dim frm As Form         'Se crea el Form contenedor
-        frm = CType(frmHijo, Form)           'Se asigna el objeto frmHijo recibido al form contenedor
+
+        frm = frmHijo           'Se asigna el objeto frmHijo recibido al form contenedor
+
         If PanelControl1.Controls.ContainsKey(frmHijo.Name) Then 'Consulta el estado del form False = CERRADO, True = ABIERTO
             Dim opcion As DialogResult
             'Se valida al cambiar de ventana o recargar la misma ventana
-            opcion = MessageBox.Show("El " & frmHijo.Text & " ya se encuentra abierto", "Cambio de Módulo", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            opcion = MessageBox.Show(CStr("El " & frmHijo.Text & " ya se encuentra abierto"), "Cambio de Módulo", MessageBoxButtons.OK, MessageBoxIcon.Information)
             If (opcion = DialogResult.OK) Then
                 Me.PanelControl1.Controls.RemoveAt(0)           'Se remueven los controles existentes
                 frm.TopLevel = False                            'Asigna la ventana de nivel superior
@@ -100,16 +104,77 @@ Public Class frmPrincipal
 
     Private Sub btnVerPass_Click(sender As Object, e As EventArgs) Handles btnVerPass.Click
         Try
-            If txtPass.PasswordChar = "*" Then
+            If txtPass.UseSystemPasswordChar = True Then
                 txtPass.PasswordChar = CChar("")
                 txtPassConfirma.PasswordChar = CChar("")
+                txtPass.UseSystemPasswordChar = False
+                txtPassConfirma.UseSystemPasswordChar = False
             Else
-                txtPass.PasswordChar = CChar("*")
-                txtPassConfirma.PasswordChar = CChar("*")
+                txtPass.PasswordChar = CChar("●")
+                txtPassConfirma.PasswordChar = CChar("●")
+                txtPass.UseSystemPasswordChar = True
+                txtPassConfirma.UseSystemPasswordChar = True
             End If
         Catch ex As Exception
             MsgBox(ex)
         End Try
+    End Sub
+
+    Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
+        AbrirFormulario(XtraForm1)
+    End Sub
+
+    Private Sub btnCerrarSesion_Click(sender As Object, e As EventArgs) Handles btnCerrarSesion.Click
+        Dim respuesta As Integer
+        respuesta = MessageBox.Show("¿Seguro que desea cerrar la sesión actual?", "Cierre de Sesión", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
+        If (respuesta = DialogResult.OK) Then
+            Login.Show()
+            Me.Dispose()
+        End If
+    End Sub
+
+    Private Sub btnCambiarContraseña_Click(sender As Object, e As EventArgs) Handles btnCambiarContraseña.Click
+        Centrar(GroupBoxRestabPass)
+        txtPass.PasswordChar = CChar("*")
+        txtPassConfirma.PasswordChar = CChar("*")
+        GroupBoxRestabPass.Visible = True
+    End Sub
+
+    Private Sub btnCambiarPass_Click(sender As Object, e As EventArgs) Handles btnCambiarPass.Click
+        Try
+            'AGREGAR VALIDACION DE CONTRASEÑA ACTUAL
+            If txtPass.Text.Trim.Equals(txtPassConfirma.Text.Trim) Then
+                If ValidarPassword(txtPass.Text.Trim) = True Then
+                    'If gsUsuarios.NRestablecerPass(idUsuario, txtPass.Text) = True Then
+                    MessageBox.Show("Contraseña restablecida correctamente" & vbLf &
+                                    vbLf & "Usuario: " & usuario &
+                                    vbLf & "Nueva Contraseña: " & txtPass.Text.ToString &
+                                    "", "Cambiar Contraseña", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    GroupBoxRestabPass.Visible = False
+                    'Else
+                    '    MessageBox.Show("La contraseña no se logró cambiar", "Cambiar Contraseña", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    'End If
+                Else
+                    MessageBox.Show("La contraseña no cumple con los requisitos mínimos de complejidad:" & vbLf &
+                                    vbLf & "Mínimo: 8 caracteres" &
+                                    vbLf & "Contener: 1 Mayúscula" &
+                                    vbLf & "Contener: 2 Minúsculas" &
+                                    vbLf & "Contener: 2 Números" &
+                                    vbLf & "Contener: 2 caracteres especiales", "Formato inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                End If
+            Else
+                MessageBox.Show("Las contraseñas no coinciden", "Cambiar Contraseña", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+
+        Catch ex As Exception
+            mensajeError(ex)
+        End Try
+    End Sub
+
+    Private Sub btnCancelarRestablecerPass_Click(sender As Object, e As EventArgs) Handles btnCancelarRestablecerPass.Click
+        GroupBoxRestabPass.Visible = False
+        txtPass.Text = ""
+        txtPassConfirma.Text = ""
     End Sub
 
     '    Private Sub iniciarMenu()
@@ -248,6 +313,28 @@ Public Class frmPrincipal
             mensajeError(ex)
         End Try
     End Sub
+    Private Sub frmPrincipal_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+        If e.KeyCode = Keys.Escape Then
+            Dim respuesta As Integer
+            respuesta = MessageBox.Show("¿Seguro que desea salir? " & vbLf & " Al salir perderá cualquier cambio que no haya guardado", "Cierre de Sesión", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
+            If (respuesta = DialogResult.OK) Then
+                Me.Dispose()
+                Login.Close()
+            End If
+        End If
+    End Sub
+
+    Private Sub frmPrincipal_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        Dim respuesta As Integer
+        respuesta = MessageBox.Show("¿Seguro que desea salir? " & vbLf & " Al salir perderá cualquier cambio que no haya guardado", "Cierre de Sesión", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
+        If (respuesta = DialogResult.OK) Then
+            Me.Dispose()
+            Login.Close()
+        Else
+            e.Cancel = True
+        End If
+    End Sub
+
 
 
 #End Region

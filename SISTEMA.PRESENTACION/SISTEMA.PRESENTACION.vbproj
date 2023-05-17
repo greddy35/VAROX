@@ -101,6 +101,12 @@
     <Compile Include="PRINCIPAL\SplashScreen.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="PRINCIPAL\XtraForm1.Designer.vb">
+      <DependentUpon>XtraForm1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PRINCIPAL\XtraForm1.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -120,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PRINCIPAL\SplashScreen.resx">
       <DependentUpon>SplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRINCIPAL\XtraForm1.resx">
+      <DependentUpon>XtraForm1.vb</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="My Project\Settings.settings">
