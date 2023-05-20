@@ -1,7 +1,6 @@
 ﻿Imports System.Data.SqlClient
 
-Public Class ConexionBD_BioSoft
-
+Public Class ConexionBD_Externa
     Private _Base As String
     Private _Servidor As String
     Private _Usuario As String
@@ -54,10 +53,10 @@ Public Class ConexionBD_BioSoft
     End Property
 
     Public Sub New()
-        Me.Base = bdLocal '"BIOSOFT"
-        Me.Servidor = servLocal '"10.0.6.18"
-        Me.Usuario = usuarioLocal '"biosoft"
-        Me.Clave = claveLocal '"$B1@S0FT$"
+        Me.Base = bdExterno
+        Me.Servidor = servExterno
+        Me.Usuario = usuarioExterno
+        Me.Clave = claveExterno
         Me.conn = New SqlConnection(CrearCadena)
     End Sub
 
@@ -72,8 +71,13 @@ Public Class ConexionBD_BioSoft
         Return cadena
     End Function
 
-    Public Function probarConexiónBioSoft() As Boolean
+    Public Function probarConexiónExterno() As Boolean
         Try
+            Me.Base = bdExterno
+            Me.Servidor = servExterno
+            Me.Usuario = usuarioExterno
+            Me.Clave = claveExterno
+            Me.conn = New SqlConnection(CrearCadena)
             conn.Open()
             Return True
         Catch ex As Exception

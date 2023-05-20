@@ -2,12 +2,14 @@
 Imports System.Threading
 Imports Microsoft.SqlServer
 Imports SISTEMA.DATOS
+Imports SISTEMA.NEGOCIO
 
 Public Class Login
 
 #Region "Variables Globles"
-    'Private gsLogin As New NLogin
-    'Private conexion As New ConexionBD_Local
+    Private gsLogin As New NLogin
+    Private conexionL As New ConexionBD_Local
+    Private conexionE As New ConexionBD_Externa
     Private comando As New SqlCommand
 
     Friend Config As Globalization.CultureInfo
@@ -19,11 +21,9 @@ Public Class Login
 
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
-            'SINCRONIZACIÓN DE LOS USUARIOS BIOTIMEPRO<->BIOSOFT
-            'cargarArchivoIni()
-            'Timer1.Start()
-            'gsLogin.NSincronizarUsuarios()
-            txtContraseña.PasswordChar = CChar("*")
+            cargarArchivoIni()
+            Timer1.Start()
+            'txtContraseña.PasswordChar = CChar("*")
         Catch ex As Exception
             mensajeError(ex)
         End Try
@@ -37,22 +37,27 @@ Public Class Login
                 'GENERAL
                 company = GetIniValue("GENERAL", "Company", My.Application.Info.DirectoryPath & "\config.ini").Trim.ToString
                 correo = GetIniValue("GENERAL", "Correo", My.Application.Info.DirectoryPath & "\config.ini").Trim.ToString
-                ''BIOSOFT
-                'servBiosoft = GetIniValue("BIOSOFT", "Servidor", My.Application.Info.DirectoryPath & "\config.ini")
-                'bdLocal = GetIniValue("BIOSOFT", "BD", My.Application.Info.DirectoryPath & "\config.ini")
-                'usuarioLocal = GetIniValue("BIOSOFT", "Usuario", My.Application.Info.DirectoryPath & "\config.ini")
-                'claveLocal = GetIniValue("BIOSOFT", "Clave", My.Application.Info.DirectoryPath & "\config.ini")
-                ''BIOTIMEPRO
-                'servExterno = GetIniValue("BIOTIMEPRO", "Servidor", My.Application.Info.DirectoryPath & "\config.ini")
-                'bdExterno = GetIniValue("BIOTIMEPRO", "BD", My.Application.Info.DirectoryPath & "\config.ini")
-                'usuarioExterno = GetIniValue("BIOTIMEPRO", "Usuario", My.Application.Info.DirectoryPath & "\config.ini")
-                'claveExterno = GetIniValue("BIOTIMEPRO", "Clave", My.Application.Info.DirectoryPath & "\config.ini")
-                ''ERP
-                'servERP = GetIniValue("ADA", "Servidor", My.Application.Info.DirectoryPath & "\config.ini")
-                'bdERP = GetIniValue("ADA", "BD", My.Application.Info.DirectoryPath & "\config.ini")
-                'usuarioERP = GetIniValue("ADA", "Usuario", My.Application.Info.DirectoryPath & "\config.ini")
-                'claveERP = GetIniValue("ADA", "Clave", My.Application.Info.DirectoryPath & "\config.ini")
-                'btnIngresar.Enabled = True
+                user_sesion = GetIniValue("SESION", "Usuario", My.Application.Info.DirectoryPath & "\config.ini").Trim.ToString
+                ''SERVER
+                'REGISTRA EN SISTEMA QUE SERVIDORES ESTAN ACTIVOS
+                estadoLocal = GetIniValue("LOCAL", "Activo", My.Application.Info.DirectoryPath & "\config.ini").ToString
+                estadoExterno = GetIniValue("EXTERNO", "Activo", My.Application.Info.DirectoryPath & "\config.ini").ToString
+
+                servLocal = GetIniValue("LOCAL", "Servidor", My.Application.Info.DirectoryPath & "\config.ini")
+                bdLocal = GetIniValue("LOCAL", "BD", My.Application.Info.DirectoryPath & "\config.ini")
+                usuarioLocal = GetIniValue("LOCAL", "Usuario", My.Application.Info.DirectoryPath & "\config.ini")
+                claveLocal = GetIniValue("LOCAL", "Clave", My.Application.Info.DirectoryPath & "\config.ini")
+
+                servExterno = GetIniValue("EXTERNO", "Servidor", My.Application.Info.DirectoryPath & "\config.ini")
+                bdExterno = GetIniValue("EXTERNO", "BD", My.Application.Info.DirectoryPath & "\config.ini")
+                usuarioExterno = GetIniValue("EXTERNO", "Usuario", My.Application.Info.DirectoryPath & "\config.ini")
+                claveExterno = GetIniValue("EXTERNO", "Clave", My.Application.Info.DirectoryPath & "\config.ini")
+
+                If user_sesion.ToString <> "" Then
+                    txtUsuario.Text = user_sesion.ToString
+                    txtContraseña.Focus()
+                End If
+                btnIngresar.Enabled = True
             Else
                 MsgBox("¡¡¡EL ARCHIVO DE CONFIGURACIÓN NO EXISTE O NO FUE ENCONTRADO!!!" + vbLf + "Contacte al encargado de Sistemas", MsgBoxStyle.Critical, "Configuración")
                 btnIngresar.Enabled = False
@@ -77,28 +82,30 @@ Public Class Login
             ElseIf (contraseña = "") Then
                 MsgBox("DEBES INGRESAR UNA CONTRASEÑA", MsgBoxStyle.Exclamation, "Validación de datos")
             ElseIf (user <> "" And contraseña <> "") Then
-                'Dim Tabla As New DataTable
 
-                'Tabla = gsLogin.NLoginUsuario(user, contraseña)
+                Dim Tabla As New DataTable
 
-                'If (Tabla.Rows.Count > 0) Then
-                'Dim fila As DataRow = Tabla.Rows(0)
-                'Console.WriteLine("Valida al usuario")
-                usuario = user                  'Se almacena el usuario en una variable global
-                'nombreUsuario = fila("nombre").ToString  '
-                'idUsuario = CInt(fila("id_usuario"))  'Se almacena el id del usuario, homologo de la BD.BIOTIMEPRO = BD.BIOSOFT
-                'idRol = CInt(fila("id_rol"))          'Se almacena el id del rol, es administrado en el BIOSOFT'
-                'rol = CInt(fila("rol"))               'Se almacena el nombre de rol del usuario
-                'company = cboCompañia.SelectedItem.ToString
-                txtUsuario.Text = ""
+                Tabla = gsLogin.NLoginUsuario(user, contraseña)
+
+                If (Tabla.Rows.Count > 0) Then
+                    Dim fila As DataRow = Tabla.Rows(0)
+                    'Console.WriteLine("Valida al usuario")
+                    usuario = user                  'Se almacena el usuario en una variable global
+                    contraseña_actual = contraseña
+                    nombreUsuario = fila("nombre").ToString  '
+                    idUsuario = CInt(fila("id_usuario"))  'Se almacena el id del usuario, homologo de la BD.BIOTIMEPRO = BD.BIOSOFT
+                    idRol = CInt(fila("id_rol"))          'Se almacena el id del rol, es administrado en el BIOSOFT'
+                    rol = fila("rol").ToString               'Se almacena el nombre de rol del usuario
+                    'company = cboCompañia.SelectedItem.ToString
+                    txtUsuario.Text = ""
                     txtContraseña.Text = ""
-                'SE CARGAN LOS PRIVILEGIOS AL DATASET GLOBAL PRIVILEGIOS
-                'Privilegios = gsLogin.NCargarPrivilegios(idRol, idUsuario)
-                Me.Hide()
+                    'SE CARGAN LOS PRIVILEGIOS AL DATASET GLOBAL PRIVILEGIOS
+                    Privilegios = gsLogin.NCargarPrivilegios(idRol.ToString, idUsuario.ToString)
+                    Me.Hide()
                     frmPrincipal.Show()
-                'Else
-                '    MsgBox("USUARIO Y/O CONTRASEÑA INCORRECTO/A", MsgBoxStyle.Critical, "Inicio de sesión")
-                'End If
+                Else
+                    MsgBox("USUARIO Y/O CONTRASEÑA INCORRECTO/A", MsgBoxStyle.Critical, "Inicio de sesión")
+                End If
             End If
 
         Catch ex As Exception
@@ -118,7 +125,7 @@ Public Class Login
     End Sub
 
     Private Sub btnIngresar_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click
-        If estadoConexión = False Then 'CAMBIAR A TRUE
+        If estadoConexión = True Then 'CAMBIAR A TRUE
             cargarCredenciales()
         Else
             MsgBox("NO HAY CONEXIÓN AL SERVIDOR DE BASE DE DATOS:" + vbLf + vbLf +
@@ -170,14 +177,29 @@ Public Class Login
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Try
-            If My.Computer.Network.Ping("10.0.6.18") Or My.Computer.Network.Ping("10.0.1.188") Then
-                estadoConexión = True
-            Else
-                estadoConexión = False
+            If estadoLocal.Equals("SI") Then
+                If My.Computer.Network.Ping(servLocal) Then
+                    If estadoExterno.Equals("SI") Then
+                        If My.Computer.Network.Ping(servExterno) Then
+                            estadoConexión = True
+                        Else
+                            estadoConexión = False
+                        End If
+                    Else
+                        estadoConexión = True
+                    End If
+                Else
+                    estadoConexión = False
+                End If
             End If
         Catch ex As Exception
             estadoConexión = False
         End Try
+        'If conexionL.probarConexiónLocal() Then
+        '    MsgBox("CONEXION LOCAL EXITOSA", MsgBoxStyle.Information, "Prueba de Conexión")
+        'Else
+        '    MsgBox("CONEXION LOCAL FÁLLIDA", MsgBoxStyle.Critical, "Prueba de Conexión")
+        'End If
     End Sub
 #End Region
 End Class

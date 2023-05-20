@@ -1,13 +1,14 @@
 ﻿Imports DevExpress.XtraEditors
 Imports Microsoft.SqlServer
 Imports SISTEMA.DATOS
+Imports SISTEMA.NEGOCIO
 Imports System.Globalization
 
 Public Class frmPrincipal
 
 
     'Variables globales
-    'Dim gsUsuarios As New NUsuarios
+    Dim gsLogin As New NLogin
     'Dim biosoft As New ConexionBD_BioSoft
 
     Dim estadoConexión As Boolean = False
@@ -15,27 +16,37 @@ Public Class frmPrincipal
 #Region "Funciones y Metodos"
     Private Sub TimerConexión_Tick(sender As Object, e As EventArgs) Handles TimerConexión.Tick
         Try
-            bsiFecha.Caption = Format(Now, "dd/mm/yyyy hh:mm:ss")
-            If My.Computer.Network.Ping(servLocal, 100) And My.Computer.Network.Ping(servExterno, 100) Then
-                If My.Computer.Network.Ping(servLocal, 100) Then
-                    servLocal = servLocal
+            bsiFecha.Caption = Format(Now, "dd/MM/yyyy hh:mm:ss")
+            If estadoLocal.Equals("SI") Then
+                If My.Computer.Network.Ping(servLocal) Then
+                    If estadoExterno.Equals("SI") Then
+                        If My.Computer.Network.Ping(servExterno) Then
+                            bsiServidores.Caption = servLocal + "/" + servExterno
+                            estadoConexión = True
+                            AccordionControl1.Enabled = True
+                            PanelControl1.Enabled = True
+                            bsiConexión.Caption = "CONECTADO"
+                        Else
+                            bsiServidores.Caption = "---"
+                            bsiConexión.Caption = "DESCONECTADO"
+                            estadoConexión = False
+                            AccordionControl1.Enabled = False
+                            PanelControl1.Enabled = False
+                        End If
+                    Else
+                        bsiServidores.Caption = servLocal
+                        estadoConexión = True
+                        AccordionControl1.Enabled = True
+                        PanelControl1.Enabled = True
+                        bsiConexión.Caption = "CONECTADO"
+                    End If
+                Else
+                    bsiServidores.Caption = "---"
+                    bsiConexión.Caption = "DESCONECTADO"
+                    estadoConexión = False
+                    AccordionControl1.Enabled = False
+                    PanelControl1.Enabled = False
                 End If
-                If My.Computer.Network.Ping(servExterno, 100) Then
-                    servExterno = servExterno
-                End If
-                bsiServidores.Caption = servLocal + "-" + servExterno
-                estadoConexión = True
-                AccordionControl1.Enabled = True
-                PanelControl1.Enabled = True
-                bsiConexión.Caption = "CONECTADO"
-                'Debug.Print("HAY CONEXION...")
-            Else
-                bsiServidores.Caption = "---"
-                bsiConexión.Caption = "DESCONECTADO"
-                estadoConexión = False
-                AccordionControl1.Enabled = False
-                PanelControl1.Enabled = False
-                'Debug.Print("SIN CONEXIÓN...")
             End If
         Catch ex As Exception
             estadoConexión = False
@@ -137,6 +148,9 @@ Public Class frmPrincipal
         Centrar(GroupBoxRestabPass)
         txtPass.PasswordChar = CChar("*")
         txtPassConfirma.PasswordChar = CChar("*")
+        txtPassActual.Text = ""
+        txtPass.Text = ""
+        txtPassConfirma.Text = ""
         GroupBoxRestabPass.Visible = True
     End Sub
 
@@ -144,23 +158,26 @@ Public Class frmPrincipal
         Try
             'AGREGAR VALIDACION DE CONTRASEÑA ACTUAL
             If txtPass.Text.Trim.Equals(txtPassConfirma.Text.Trim) Then
-                If ValidarPassword(txtPass.Text.Trim) = True Then
-                    'If gsUsuarios.NRestablecerPass(idUsuario, txtPass.Text) = True Then
-                    MessageBox.Show("Contraseña restablecida correctamente" & vbLf &
-                                    vbLf & "Usuario: " & usuario &
-                                    vbLf & "Nueva Contraseña: " & txtPass.Text.ToString &
-                                    "", "Cambiar Contraseña", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    GroupBoxRestabPass.Visible = False
-                    'Else
-                    '    MessageBox.Show("La contraseña no se logró cambiar", "Cambiar Contraseña", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    'End If
+                If contraseña_actual.ToString = txtPassActual.Text.Trim Then
+                    If ValidarPassword(txtPass.Text.Trim) = True Then
+                        If gsLogin.NRestablecerPass(idUsuario.ToString, txtPass.Text) = True Then
+                            MessageBox.Show("Contraseña restablecida correctamente", "Cambiar Contraseña", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                            contraseña_actual = txtPassActual.Text.ToString
+                            GroupBoxRestabPass.Visible = False
+                        Else
+                            MessageBox.Show("La contraseña no se logró cambiar", "Cambiar Contraseña", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        End If
+                    Else
+                        MessageBox.Show("La contraseña no cumple con los requisitos mínimos de complejidad:" & vbLf &
+                                        vbLf & "Mínimo: 8 caracteres" &
+                                        vbLf & "Contener: 1 Mayúscula" &
+                                        vbLf & "Contener: 2 Minúsculas" &
+                                        vbLf & "Contener: 2 Números" &
+                                        vbLf & "Contener: 2 caracteres especiales", "Formato inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                    End If
                 Else
-                    MessageBox.Show("La contraseña no cumple con los requisitos mínimos de complejidad:" & vbLf &
-                                    vbLf & "Mínimo: 8 caracteres" &
-                                    vbLf & "Contener: 1 Mayúscula" &
-                                    vbLf & "Contener: 2 Minúsculas" &
-                                    vbLf & "Contener: 2 Números" &
-                                    vbLf & "Contener: 2 caracteres especiales", "Formato inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                    txtPassActual.Text = ""
+                    MessageBox.Show("La contraseña actual no es correcta, intente de nuevo", "Cambiar Contraseña", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
             Else
                 MessageBox.Show("Las contraseñas no coinciden", "Cambiar Contraseña", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -173,6 +190,7 @@ Public Class frmPrincipal
 
     Private Sub btnCancelarRestablecerPass_Click(sender As Object, e As EventArgs) Handles btnCancelarRestablecerPass.Click
         GroupBoxRestabPass.Visible = False
+        txtPassActual.Text = ""
         txtPass.Text = ""
         txtPassConfirma.Text = ""
     End Sub
@@ -298,6 +316,7 @@ Public Class frmPrincipal
             Me.lblUser.Caption = usuario
             Me.lblRol.Caption = rol
             Me.lblNombre.Caption = nombreUsuario
+            Me.lblCompañia.Caption = company
             txtPass.PasswordChar = CChar("*")
             txtPassConfirma.PasswordChar = CChar("*")
             'ASIGNA COMO IDIOMA A LOS OBJETOS DE LA LIBRERIA DEVEXPRESS EL ESPAÑOL
