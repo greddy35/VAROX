@@ -1,6 +1,7 @@
 ﻿Imports System.Data.SqlClient
 
-Public Class ConexionBD_BioTime
+Public Class ConexionBD_Local
+
     Private _Base As String
     Private _Servidor As String
     Private _Usuario As String
@@ -53,10 +54,10 @@ Public Class ConexionBD_BioTime
     End Property
 
     Public Sub New()
-        Me.Base = bdExterno '"BIOTIMEPRO"
-        Me.Servidor = servExterno '"10.0.6.18"
-        Me.Usuario = usuarioExterno '"biosoft"
-        Me.Clave = claveExterno '"$B1@S0FT$"
+        Me.Base = bdLocal
+        Me.Servidor = servLocal
+        Me.Usuario = usuarioLocal
+        Me.Clave = claveLocal
         Me.conn = New SqlConnection(CrearCadena)
     End Sub
 
@@ -64,22 +65,26 @@ Public Class ConexionBD_BioTime
         Dim cadena As String
         cadena = "Server=" & Me.Servidor & "; Database=" & Me.Base & ";"
         If Me.Seguridad Then
-            cadena = cadena & "Integrated Security= SSPI"
+            cadena = cadena & "Integrated Security= SSPI;Connection Timeout= 15;"
         Else
             cadena = cadena & "User Id=" & Me.Usuario & ";Password=" & Me.Clave
         End If
         Return cadena
     End Function
 
-    Public Function probarConexiónBioTimePro() As Boolean
+    Public Function probarConexiónLocal() As Boolean
         Try
-            conn.Open()
+            Me.Base = bdLocal
+            Me.Servidor = servLocal
+            Me.Usuario = usuarioLocal
+            Me.Clave = claveLocal
+            Me.conn = New SqlConnection(CrearCadena)
+            Me.conn.Open()
             Return True
         Catch ex As Exception
             Return False
         Finally
-            conn.Close()
+            Me.conn.Close()
         End Try
     End Function
 End Class
-

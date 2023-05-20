@@ -33,6 +33,8 @@ Partial Class frmPrincipal
         Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
         Me.GroupBoxRestabPass = New System.Windows.Forms.GroupBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.txtPassActual = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.txtPassConfirma = New System.Windows.Forms.TextBox()
         Me.txtPass = New System.Windows.Forms.TextBox()
         Me.btnVerPass = New DevExpress.XtraEditors.SimpleButton()
@@ -41,15 +43,13 @@ Partial Class frmPrincipal
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.FluentFormDefaultManager1 = New DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(Me.components)
-        Me.BarStaticItem3 = New DevExpress.XtraBars.BarStaticItem()
-        Me.lblCompañia = New DevExpress.XtraBars.BarStaticItem()
-        Me.btnAcerca = New DevExpress.XtraBars.BarStaticItem()
         Me.BarStaticItem6 = New DevExpress.XtraBars.BarStaticItem()
         Me.BarStaticItem7 = New DevExpress.XtraBars.BarStaticItem()
         Me.BarStaticItem8 = New DevExpress.XtraBars.BarStaticItem()
         Me.lblRol = New DevExpress.XtraBars.BarStaticItem()
         Me.lblUser = New DevExpress.XtraBars.BarStaticItem()
         Me.lblNombre = New DevExpress.XtraBars.BarStaticItem()
+        Me.btnAcerca = New DevExpress.XtraBars.BarButtonItem()
         Me.AccordionControl1 = New DevExpress.XtraBars.Navigation.AccordionControl()
         Me.AccordionControlElement1 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AccordionControlElement2 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
@@ -87,14 +87,14 @@ Partial Class frmPrincipal
         Me.bsiConexión = New DevExpress.XtraBars.BarStaticItem()
         Me.BarStaticItem5 = New DevExpress.XtraBars.BarStaticItem()
         Me.bsiFecha = New DevExpress.XtraBars.BarStaticItem()
+        Me.BarStaticItem3 = New DevExpress.XtraBars.BarStaticItem()
+        Me.lblCompañia = New DevExpress.XtraBars.BarStaticItem()
         Me.barDockControlTop = New DevExpress.XtraBars.BarDockControl()
         Me.barDockControlBottom = New DevExpress.XtraBars.BarDockControl()
         Me.barDockControlLeft = New DevExpress.XtraBars.BarDockControl()
         Me.barDockControlRight = New DevExpress.XtraBars.BarDockControl()
         Me.BarStaticItem4 = New DevExpress.XtraBars.BarStaticItem()
         Me.Bar1 = New DevExpress.XtraBars.Bar()
-        Me.txtPassActual = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.contenedor.SuspendLayout()
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl1.SuspendLayout()
@@ -111,9 +111,9 @@ Partial Class frmPrincipal
         Me.contenedor.Controls.Add(Me.PanelControl1)
         Me.contenedor.Dock = System.Windows.Forms.DockStyle.Fill
         Me.contenedor.Location = New System.Drawing.Point(292, 37)
-        Me.contenedor.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.contenedor.Margin = New System.Windows.Forms.Padding(2)
         Me.contenedor.Name = "contenedor"
-        Me.contenedor.Size = New System.Drawing.Size(847, 556)
+        Me.contenedor.Size = New System.Drawing.Size(980, 638)
         Me.contenedor.TabIndex = 0
         '
         'PanelControl1
@@ -121,8 +121,9 @@ Partial Class frmPrincipal
         Me.PanelControl1.Controls.Add(Me.GroupBoxRestabPass)
         Me.PanelControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelControl1.Location = New System.Drawing.Point(0, 0)
+        Me.PanelControl1.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.PanelControl1.Name = "PanelControl1"
-        Me.PanelControl1.Size = New System.Drawing.Size(847, 556)
+        Me.PanelControl1.Size = New System.Drawing.Size(980, 638)
         Me.PanelControl1.TabIndex = 0
         '
         'GroupBoxRestabPass
@@ -131,7 +132,9 @@ Partial Class frmPrincipal
         Me.GroupBoxRestabPass.Controls.Add(Me.Panel1)
         Me.GroupBoxRestabPass.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBoxRestabPass.Location = New System.Drawing.Point(321, 306)
+        Me.GroupBoxRestabPass.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.GroupBoxRestabPass.Name = "GroupBoxRestabPass"
+        Me.GroupBoxRestabPass.Padding = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.GroupBoxRestabPass.Size = New System.Drawing.Size(485, 244)
         Me.GroupBoxRestabPass.TabIndex = 0
         Me.GroupBoxRestabPass.TabStop = False
@@ -151,15 +154,39 @@ Partial Class frmPrincipal
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(3, 22)
+        Me.Panel1.Location = New System.Drawing.Point(4, 21)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(479, 219)
+        Me.Panel1.Size = New System.Drawing.Size(477, 221)
         Me.Panel1.TabIndex = 1
+        '
+        'txtPassActual
+        '
+        Me.txtPassActual.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPassActual.Location = New System.Drawing.Point(201, 14)
+        Me.txtPassActual.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
+        Me.txtPassActual.Name = "txtPassActual"
+        Me.txtPassActual.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtPassActual.Size = New System.Drawing.Size(205, 32)
+        Me.txtPassActual.TabIndex = 10
+        Me.txtPassActual.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txtPassActual.UseSystemPasswordChar = True
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(46, 22)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(149, 18)
+        Me.Label3.TabIndex = 9
+        Me.Label3.Text = "Contraseña Actual:"
         '
         'txtPassConfirma
         '
         Me.txtPassConfirma.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPassConfirma.Location = New System.Drawing.Point(201, 94)
+        Me.txtPassConfirma.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.txtPassConfirma.Name = "txtPassConfirma"
         Me.txtPassConfirma.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPassConfirma.Size = New System.Drawing.Size(205, 32)
@@ -171,6 +198,7 @@ Partial Class frmPrincipal
         '
         Me.txtPass.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPass.Location = New System.Drawing.Point(201, 54)
+        Me.txtPass.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.txtPass.Name = "txtPass"
         Me.txtPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPass.Size = New System.Drawing.Size(205, 32)
@@ -186,6 +214,7 @@ Partial Class frmPrincipal
         Me.btnVerPass.ImageOptions.Image = CType(resources.GetObject("btnVerPass.ImageOptions.Image"), System.Drawing.Image)
         Me.btnVerPass.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter
         Me.btnVerPass.Location = New System.Drawing.Point(412, 94)
+        Me.btnVerPass.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.btnVerPass.Name = "btnVerPass"
         Me.btnVerPass.Size = New System.Drawing.Size(42, 32)
         ToolTipTitleItem1.AllowHtmlText = DevExpress.Utils.DefaultBoolean.[True]
@@ -204,7 +233,8 @@ Partial Class frmPrincipal
         Me.btnCambiarPass.Appearance.Options.UseFont = True
         Me.btnCambiarPass.ImageOptions.Image = CType(resources.GetObject("btnCambiarPass.ImageOptions.Image"), System.Drawing.Image)
         Me.btnCambiarPass.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight
-        Me.btnCambiarPass.Location = New System.Drawing.Point(201, 147)
+        Me.btnCambiarPass.Location = New System.Drawing.Point(201, 146)
+        Me.btnCambiarPass.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.btnCambiarPass.Name = "btnCambiarPass"
         Me.btnCambiarPass.Size = New System.Drawing.Size(112, 50)
         Me.btnCambiarPass.TabIndex = 5
@@ -217,7 +247,8 @@ Partial Class frmPrincipal
         Me.btnCancelarRestablecerPass.Appearance.Options.UseFont = True
         Me.btnCancelarRestablecerPass.ImageOptions.Image = CType(resources.GetObject("btnCancelarRestablecerPass.ImageOptions.Image"), System.Drawing.Image)
         Me.btnCancelarRestablecerPass.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight
-        Me.btnCancelarRestablecerPass.Location = New System.Drawing.Point(342, 147)
+        Me.btnCancelarRestablecerPass.Location = New System.Drawing.Point(342, 146)
+        Me.btnCancelarRestablecerPass.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.btnCancelarRestablecerPass.Name = "btnCancelarRestablecerPass"
         Me.btnCancelarRestablecerPass.Size = New System.Drawing.Size(112, 50)
         Me.btnCancelarRestablecerPass.TabIndex = 4
@@ -227,6 +258,7 @@ Partial Class frmPrincipal
         '
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(18, 102)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(177, 18)
         Me.Label2.TabIndex = 1
@@ -235,7 +267,8 @@ Partial Class frmPrincipal
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(45, 62)
+        Me.Label1.Location = New System.Drawing.Point(46, 62)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(150, 18)
         Me.Label1.TabIndex = 0
@@ -244,60 +277,15 @@ Partial Class frmPrincipal
         'FluentFormDefaultManager1
         '
         Me.FluentFormDefaultManager1.Form = Me
-        Me.FluentFormDefaultManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.BarStaticItem3, Me.lblCompañia, Me.btnAcerca, Me.BarStaticItem6, Me.BarStaticItem7, Me.BarStaticItem8, Me.lblRol, Me.lblUser, Me.lblNombre})
-        Me.FluentFormDefaultManager1.MaxItemId = 9
-        '
-        'BarStaticItem3
-        '
-        Me.BarStaticItem3.AllowFocus = DevExpress.Utils.DefaultBoolean.[False]
-        Me.BarStaticItem3.AllowRightClickInMenu = False
-        Me.BarStaticItem3.Caption = "Compañia:"
-        Me.BarStaticItem3.Id = 0
-        Me.BarStaticItem3.ImageOptions.Image = CType(resources.GetObject("BarStaticItem3.ImageOptions.Image"), System.Drawing.Image)
-        Me.BarStaticItem3.ImageOptions.LargeImage = CType(resources.GetObject("BarStaticItem3.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.BarStaticItem3.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BarStaticItem3.ItemAppearance.Normal.ForeColor = System.Drawing.Color.Black
-        Me.BarStaticItem3.ItemAppearance.Normal.Options.UseFont = True
-        Me.BarStaticItem3.ItemAppearance.Normal.Options.UseForeColor = True
-        Me.BarStaticItem3.Name = "BarStaticItem3"
-        Me.BarStaticItem3.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
-        Me.BarStaticItem3.Size = New System.Drawing.Size(0, 30)
-        '
-        'lblCompañia
-        '
-        Me.lblCompañia.AllowFocus = DevExpress.Utils.DefaultBoolean.[False]
-        Me.lblCompañia.AllowRightClickInMenu = False
-        Me.lblCompañia.Caption = "---"
-        Me.lblCompañia.Id = 1
-        Me.lblCompañia.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCompañia.ItemAppearance.Normal.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.lblCompañia.ItemAppearance.Normal.Options.UseFont = True
-        Me.lblCompañia.ItemAppearance.Normal.Options.UseForeColor = True
-        Me.lblCompañia.Name = "lblCompañia"
-        Me.lblCompañia.Size = New System.Drawing.Size(0, 30)
-        '
-        'btnAcerca
-        '
-        Me.btnAcerca.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right
-        Me.btnAcerca.AllowFocus = DevExpress.Utils.DefaultBoolean.[False]
-        Me.btnAcerca.AllowRightClickInMenu = False
-        Me.btnAcerca.Caption = "Acerca"
-        Me.btnAcerca.Id = 2
-        Me.btnAcerca.ImageOptions.Image = CType(resources.GetObject("btnAcerca.ImageOptions.Image"), System.Drawing.Image)
-        Me.btnAcerca.ImageOptions.LargeImage = CType(resources.GetObject("btnAcerca.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.btnAcerca.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAcerca.ItemAppearance.Normal.ForeColor = System.Drawing.Color.Black
-        Me.btnAcerca.ItemAppearance.Normal.Options.UseFont = True
-        Me.btnAcerca.ItemAppearance.Normal.Options.UseForeColor = True
-        Me.btnAcerca.Name = "btnAcerca"
-        Me.btnAcerca.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
-        Me.btnAcerca.Size = New System.Drawing.Size(0, 30)
+        Me.FluentFormDefaultManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.BarStaticItem6, Me.BarStaticItem7, Me.BarStaticItem8, Me.lblRol, Me.lblUser, Me.lblNombre, Me.btnAcerca})
+        Me.FluentFormDefaultManager1.MaxItemId = 10
         '
         'BarStaticItem6
         '
         Me.BarStaticItem6.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right
         Me.BarStaticItem6.AllowFocus = DevExpress.Utils.DefaultBoolean.[False]
         Me.BarStaticItem6.AllowRightClickInMenu = False
+        Me.BarStaticItem6.AutoSize = DevExpress.XtraBars.BarStaticItemSize.None
         Me.BarStaticItem6.Caption = "Usuario:"
         Me.BarStaticItem6.Id = 3
         Me.BarStaticItem6.ImageOptions.Image = CType(resources.GetObject("BarStaticItem6.ImageOptions.Image"), System.Drawing.Image)
@@ -308,14 +296,15 @@ Partial Class frmPrincipal
         Me.BarStaticItem6.ItemAppearance.Normal.Options.UseForeColor = True
         Me.BarStaticItem6.Name = "BarStaticItem6"
         Me.BarStaticItem6.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
-        Me.BarStaticItem6.Size = New System.Drawing.Size(0, 30)
+        Me.BarStaticItem6.Size = New System.Drawing.Size(90, 0)
+        Me.BarStaticItem6.Width = 90
         '
         'BarStaticItem7
         '
         Me.BarStaticItem7.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right
         Me.BarStaticItem7.AllowFocus = DevExpress.Utils.DefaultBoolean.[False]
         Me.BarStaticItem7.AllowRightClickInMenu = False
-        Me.BarStaticItem7.Caption = "Privilegios:"
+        Me.BarStaticItem7.Caption = "Rol:"
         Me.BarStaticItem7.Id = 4
         Me.BarStaticItem7.ImageOptions.Image = CType(resources.GetObject("BarStaticItem7.ImageOptions.Image"), System.Drawing.Image)
         Me.BarStaticItem7.ImageOptions.LargeImage = CType(resources.GetObject("BarStaticItem7.ImageOptions.LargeImage"), System.Drawing.Image)
@@ -325,30 +314,32 @@ Partial Class frmPrincipal
         Me.BarStaticItem7.ItemAppearance.Normal.Options.UseForeColor = True
         Me.BarStaticItem7.Name = "BarStaticItem7"
         Me.BarStaticItem7.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
-        Me.BarStaticItem7.Size = New System.Drawing.Size(0, 30)
         '
         'BarStaticItem8
         '
         Me.BarStaticItem8.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right
         Me.BarStaticItem8.AllowFocus = DevExpress.Utils.DefaultBoolean.[False]
         Me.BarStaticItem8.AllowRightClickInMenu = False
+        Me.BarStaticItem8.AutoSize = DevExpress.XtraBars.BarStaticItemSize.None
         Me.BarStaticItem8.Caption = "Nombre:"
         Me.BarStaticItem8.Id = 5
         Me.BarStaticItem8.ImageOptions.Image = CType(resources.GetObject("BarStaticItem8.ImageOptions.Image"), System.Drawing.Image)
         Me.BarStaticItem8.ImageOptions.LargeImage = CType(resources.GetObject("BarStaticItem8.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.BarStaticItem8.ItemAppearance.Normal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.BarStaticItem8.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BarStaticItem8.ItemAppearance.Normal.ForeColor = System.Drawing.Color.Black
         Me.BarStaticItem8.ItemAppearance.Normal.Options.UseFont = True
         Me.BarStaticItem8.ItemAppearance.Normal.Options.UseForeColor = True
         Me.BarStaticItem8.Name = "BarStaticItem8"
         Me.BarStaticItem8.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
-        Me.BarStaticItem8.Size = New System.Drawing.Size(0, 30)
+        Me.BarStaticItem8.Size = New System.Drawing.Size(90, 0)
+        Me.BarStaticItem8.Width = 90
         '
         'lblRol
         '
         Me.lblRol.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right
         Me.lblRol.AllowFocus = DevExpress.Utils.DefaultBoolean.[False]
         Me.lblRol.AllowRightClickInMenu = False
+        Me.lblRol.AutoSize = DevExpress.XtraBars.BarStaticItemSize.None
         Me.lblRol.Caption = "---"
         Me.lblRol.Id = 6
         Me.lblRol.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -356,13 +347,16 @@ Partial Class frmPrincipal
         Me.lblRol.ItemAppearance.Normal.Options.UseFont = True
         Me.lblRol.ItemAppearance.Normal.Options.UseForeColor = True
         Me.lblRol.Name = "lblRol"
-        Me.lblRol.Size = New System.Drawing.Size(0, 30)
+        Me.lblRol.Size = New System.Drawing.Size(150, 30)
+        Me.lblRol.TextAlignment = System.Drawing.StringAlignment.Center
+        Me.lblRol.Width = 150
         '
         'lblUser
         '
         Me.lblUser.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right
         Me.lblUser.AllowFocus = DevExpress.Utils.DefaultBoolean.[False]
         Me.lblUser.AllowRightClickInMenu = False
+        Me.lblUser.AutoSize = DevExpress.XtraBars.BarStaticItemSize.None
         Me.lblUser.Caption = "---"
         Me.lblUser.Id = 7
         Me.lblUser.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -370,13 +364,16 @@ Partial Class frmPrincipal
         Me.lblUser.ItemAppearance.Normal.Options.UseFont = True
         Me.lblUser.ItemAppearance.Normal.Options.UseForeColor = True
         Me.lblUser.Name = "lblUser"
-        Me.lblUser.Size = New System.Drawing.Size(0, 30)
+        Me.lblUser.Size = New System.Drawing.Size(150, 30)
+        Me.lblUser.TextAlignment = System.Drawing.StringAlignment.Center
+        Me.lblUser.Width = 150
         '
         'lblNombre
         '
         Me.lblNombre.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right
         Me.lblNombre.AllowFocus = DevExpress.Utils.DefaultBoolean.[False]
         Me.lblNombre.AllowRightClickInMenu = False
+        Me.lblNombre.AutoSize = DevExpress.XtraBars.BarStaticItemSize.None
         Me.lblNombre.Caption = "---"
         Me.lblNombre.Id = 8
         Me.lblNombre.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -384,17 +381,34 @@ Partial Class frmPrincipal
         Me.lblNombre.ItemAppearance.Normal.Options.UseFont = True
         Me.lblNombre.ItemAppearance.Normal.Options.UseForeColor = True
         Me.lblNombre.Name = "lblNombre"
-        Me.lblNombre.Size = New System.Drawing.Size(0, 30)
+        Me.lblNombre.Size = New System.Drawing.Size(250, 30)
+        Me.lblNombre.TextAlignment = System.Drawing.StringAlignment.Center
+        Me.lblNombre.Width = 250
+        '
+        'btnAcerca
+        '
+        Me.btnAcerca.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right
+        Me.btnAcerca.Caption = "Acerca"
+        Me.btnAcerca.Id = 9
+        Me.btnAcerca.ImageOptions.Image = CType(resources.GetObject("btnAcerca.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnAcerca.ImageOptions.LargeImage = CType(resources.GetObject("btnAcerca.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.btnAcerca.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAcerca.ItemAppearance.Normal.ForeColor = System.Drawing.Color.Black
+        Me.btnAcerca.ItemAppearance.Normal.Options.UseFont = True
+        Me.btnAcerca.ItemAppearance.Normal.Options.UseForeColor = True
+        Me.btnAcerca.Name = "btnAcerca"
+        Me.btnAcerca.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
+        Me.btnAcerca.Size = New System.Drawing.Size(80, 0)
         '
         'AccordionControl1
         '
         Me.AccordionControl1.Dock = System.Windows.Forms.DockStyle.Left
         Me.AccordionControl1.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlElement1, Me.AccordionControlElement2, Me.AccordionControlAdminSistema, Me.AccordionControlElementSesion})
         Me.AccordionControl1.Location = New System.Drawing.Point(0, 37)
-        Me.AccordionControl1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.AccordionControl1.Margin = New System.Windows.Forms.Padding(2)
         Me.AccordionControl1.Name = "AccordionControl1"
         Me.AccordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch
-        Me.AccordionControl1.Size = New System.Drawing.Size(292, 556)
+        Me.AccordionControl1.Size = New System.Drawing.Size(292, 638)
         Me.AccordionControl1.TabIndex = 1
         Me.AccordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu
         '
@@ -555,16 +569,14 @@ Partial Class frmPrincipal
         'FluentDesignFormControl1
         '
         Me.FluentDesignFormControl1.FluentDesignForm = Me
-        Me.FluentDesignFormControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.BarStaticItem3, Me.lblCompañia, Me.btnAcerca, Me.BarStaticItem6, Me.BarStaticItem7, Me.BarStaticItem8, Me.lblRol, Me.lblUser, Me.lblNombre})
+        Me.FluentDesignFormControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.BarStaticItem6, Me.BarStaticItem7, Me.BarStaticItem8, Me.lblRol, Me.lblUser, Me.lblNombre, Me.btnAcerca})
         Me.FluentDesignFormControl1.Location = New System.Drawing.Point(0, 0)
         Me.FluentDesignFormControl1.Manager = Me.FluentFormDefaultManager1
-        Me.FluentDesignFormControl1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.FluentDesignFormControl1.Margin = New System.Windows.Forms.Padding(2)
         Me.FluentDesignFormControl1.Name = "FluentDesignFormControl1"
-        Me.FluentDesignFormControl1.Size = New System.Drawing.Size(1139, 37)
+        Me.FluentDesignFormControl1.Size = New System.Drawing.Size(1272, 37)
         Me.FluentDesignFormControl1.TabIndex = 2
         Me.FluentDesignFormControl1.TabStop = False
-        Me.FluentDesignFormControl1.TitleItemLinks.Add(Me.BarStaticItem3)
-        Me.FluentDesignFormControl1.TitleItemLinks.Add(Me.lblCompañia)
         Me.FluentDesignFormControl1.TitleItemLinks.Add(Me.lblNombre)
         Me.FluentDesignFormControl1.TitleItemLinks.Add(Me.BarStaticItem8)
         Me.FluentDesignFormControl1.TitleItemLinks.Add(Me.lblUser)
@@ -586,8 +598,8 @@ Partial Class frmPrincipal
         Me.BarManager1.DockControls.Add(Me.barDockControlLeft)
         Me.BarManager1.DockControls.Add(Me.barDockControlRight)
         Me.BarManager1.Form = Me
-        Me.BarManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.BarStaticItem1, Me.bsiServidores, Me.BarStaticItem2, Me.bsiConexión, Me.BarStaticItem5, Me.bsiFecha})
-        Me.BarManager1.MaxItemId = 10
+        Me.BarManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.BarStaticItem1, Me.bsiServidores, Me.BarStaticItem2, Me.bsiConexión, Me.BarStaticItem5, Me.bsiFecha, Me.BarStaticItem3, Me.lblCompañia})
+        Me.BarManager1.MaxItemId = 12
         Me.BarManager1.StatusBar = Me.Bar3
         '
         'Bar3
@@ -597,7 +609,7 @@ Partial Class frmPrincipal
         Me.Bar3.DockCol = 0
         Me.Bar3.DockRow = 0
         Me.Bar3.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom
-        Me.Bar3.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.BarStaticItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.bsiServidores), New DevExpress.XtraBars.LinkPersistInfo(Me.BarStaticItem2), New DevExpress.XtraBars.LinkPersistInfo(Me.bsiConexión), New DevExpress.XtraBars.LinkPersistInfo(Me.BarStaticItem5), New DevExpress.XtraBars.LinkPersistInfo(Me.bsiFecha)})
+        Me.Bar3.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.BarStaticItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.bsiServidores), New DevExpress.XtraBars.LinkPersistInfo(Me.BarStaticItem2), New DevExpress.XtraBars.LinkPersistInfo(Me.bsiConexión), New DevExpress.XtraBars.LinkPersistInfo(Me.BarStaticItem5), New DevExpress.XtraBars.LinkPersistInfo(Me.bsiFecha), New DevExpress.XtraBars.LinkPersistInfo(Me.BarStaticItem3), New DevExpress.XtraBars.LinkPersistInfo(Me.lblCompañia)})
         Me.Bar3.OptionsBar.AllowQuickCustomization = False
         Me.Bar3.OptionsBar.DrawDragBorder = False
         Me.Bar3.OptionsBar.UseWholeRow = True
@@ -609,7 +621,7 @@ Partial Class frmPrincipal
         Me.BarStaticItem1.Id = 0
         Me.BarStaticItem1.ImageOptions.Image = CType(resources.GetObject("BarStaticItem1.ImageOptions.Image"), System.Drawing.Image)
         Me.BarStaticItem1.ImageOptions.LargeImage = CType(resources.GetObject("BarStaticItem1.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.BarStaticItem1.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BarStaticItem1.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BarStaticItem1.ItemAppearance.Normal.ForeColor = System.Drawing.Color.Black
         Me.BarStaticItem1.ItemAppearance.Normal.Options.UseFont = True
         Me.BarStaticItem1.ItemAppearance.Normal.Options.UseForeColor = True
@@ -635,7 +647,7 @@ Partial Class frmPrincipal
         Me.BarStaticItem2.Id = 2
         Me.BarStaticItem2.ImageOptions.Image = CType(resources.GetObject("BarStaticItem2.ImageOptions.Image"), System.Drawing.Image)
         Me.BarStaticItem2.ImageOptions.LargeImage = CType(resources.GetObject("BarStaticItem2.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.BarStaticItem2.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BarStaticItem2.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold)
         Me.BarStaticItem2.ItemAppearance.Normal.ForeColor = System.Drawing.Color.Black
         Me.BarStaticItem2.ItemAppearance.Normal.Options.UseFont = True
         Me.BarStaticItem2.ItemAppearance.Normal.Options.UseForeColor = True
@@ -657,12 +669,13 @@ Partial Class frmPrincipal
         '
         'BarStaticItem5
         '
+        Me.BarStaticItem5.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right
         Me.BarStaticItem5.AllowFocus = DevExpress.Utils.DefaultBoolean.[False]
         Me.BarStaticItem5.Caption = "FECHA:"
         Me.BarStaticItem5.Id = 8
         Me.BarStaticItem5.ImageOptions.Image = CType(resources.GetObject("BarStaticItem5.ImageOptions.Image"), System.Drawing.Image)
         Me.BarStaticItem5.ImageOptions.LargeImage = CType(resources.GetObject("BarStaticItem5.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.BarStaticItem5.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BarStaticItem5.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold)
         Me.BarStaticItem5.ItemAppearance.Normal.ForeColor = System.Drawing.Color.Black
         Me.BarStaticItem5.ItemAppearance.Normal.Options.UseFont = True
         Me.BarStaticItem5.ItemAppearance.Normal.Options.UseForeColor = True
@@ -672,6 +685,7 @@ Partial Class frmPrincipal
         '
         'bsiFecha
         '
+        Me.bsiFecha.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right
         Me.bsiFecha.AllowFocus = DevExpress.Utils.DefaultBoolean.[False]
         Me.bsiFecha.Caption = "---"
         Me.bsiFecha.Id = 9
@@ -682,21 +696,43 @@ Partial Class frmPrincipal
         Me.bsiFecha.Name = "bsiFecha"
         Me.bsiFecha.Size = New System.Drawing.Size(0, 30)
         '
+        'BarStaticItem3
+        '
+        Me.BarStaticItem3.Caption = "COMPAÑIA:"
+        Me.BarStaticItem3.Id = 10
+        Me.BarStaticItem3.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.BarStaticItem3.ItemAppearance.Normal.ForeColor = System.Drawing.Color.Black
+        Me.BarStaticItem3.ItemAppearance.Normal.Options.UseFont = True
+        Me.BarStaticItem3.ItemAppearance.Normal.Options.UseForeColor = True
+        Me.BarStaticItem3.Name = "BarStaticItem3"
+        '
+        'lblCompañia
+        '
+        Me.lblCompañia.Caption = "---"
+        Me.lblCompañia.Id = 11
+        Me.lblCompañia.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.lblCompañia.ItemAppearance.Normal.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.lblCompañia.ItemAppearance.Normal.Options.UseFont = True
+        Me.lblCompañia.ItemAppearance.Normal.Options.UseForeColor = True
+        Me.lblCompañia.Name = "lblCompañia"
+        '
         'barDockControlTop
         '
         Me.barDockControlTop.CausesValidation = False
         Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.barDockControlTop.Location = New System.Drawing.Point(0, 37)
         Me.barDockControlTop.Manager = Me.BarManager1
-        Me.barDockControlTop.Size = New System.Drawing.Size(1139, 0)
+        Me.barDockControlTop.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
+        Me.barDockControlTop.Size = New System.Drawing.Size(1272, 0)
         '
         'barDockControlBottom
         '
         Me.barDockControlBottom.CausesValidation = False
         Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 593)
+        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 675)
         Me.barDockControlBottom.Manager = Me.BarManager1
-        Me.barDockControlBottom.Size = New System.Drawing.Size(1139, 41)
+        Me.barDockControlBottom.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
+        Me.barDockControlBottom.Size = New System.Drawing.Size(1272, 41)
         '
         'barDockControlLeft
         '
@@ -704,15 +740,17 @@ Partial Class frmPrincipal
         Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
         Me.barDockControlLeft.Location = New System.Drawing.Point(0, 37)
         Me.barDockControlLeft.Manager = Me.BarManager1
-        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 556)
+        Me.barDockControlLeft.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
+        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 638)
         '
         'barDockControlRight
         '
         Me.barDockControlRight.CausesValidation = False
         Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
-        Me.barDockControlRight.Location = New System.Drawing.Point(1139, 37)
+        Me.barDockControlRight.Location = New System.Drawing.Point(1272, 37)
         Me.barDockControlRight.Manager = Me.BarManager1
-        Me.barDockControlRight.Size = New System.Drawing.Size(0, 556)
+        Me.barDockControlRight.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
+        Me.barDockControlRight.Size = New System.Drawing.Size(0, 638)
         '
         'BarStaticItem4
         '
@@ -733,31 +771,11 @@ Partial Class frmPrincipal
         Me.Bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top
         Me.Bar1.Text = "Custom 3"
         '
-        'txtPassActual
-        '
-        Me.txtPassActual.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPassActual.Location = New System.Drawing.Point(201, 14)
-        Me.txtPassActual.Name = "txtPassActual"
-        Me.txtPassActual.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPassActual.Size = New System.Drawing.Size(205, 32)
-        Me.txtPassActual.TabIndex = 10
-        Me.txtPassActual.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.txtPassActual.UseSystemPasswordChar = True
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(46, 22)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(149, 18)
-        Me.Label3.TabIndex = 9
-        Me.Label3.Text = "Contraseña Actual:"
-        '
         'frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1139, 634)
+        Me.ClientSize = New System.Drawing.Size(1272, 716)
         Me.ControlContainer = Me.contenedor
         Me.Controls.Add(Me.contenedor)
         Me.Controls.Add(Me.AccordionControl1)
@@ -769,7 +787,7 @@ Partial Class frmPrincipal
         Me.FluentDesignFormControl = Me.FluentDesignFormControl1
         Me.IconOptions.SvgImage = CType(resources.GetObject("frmPrincipal.IconOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
         Me.KeyPreview = True
-        Me.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frmPrincipal"
         Me.NavigationControl = Me.AccordionControl1
         Me.Text = "Menú Principal"
@@ -814,9 +832,6 @@ Partial Class frmPrincipal
     Friend WithEvents Label1 As Label
     Friend WithEvents txtPassConfirma As TextBox
     Friend WithEvents txtPass As TextBox
-    Friend WithEvents BarStaticItem3 As DevExpress.XtraBars.BarStaticItem
-    Friend WithEvents lblCompañia As DevExpress.XtraBars.BarStaticItem
-    Friend WithEvents btnAcerca As DevExpress.XtraBars.BarStaticItem
     Friend WithEvents BarStaticItem6 As DevExpress.XtraBars.BarStaticItem
     Friend WithEvents BarStaticItem7 As DevExpress.XtraBars.BarStaticItem
     Friend WithEvents BarStaticItem8 As DevExpress.XtraBars.BarStaticItem
@@ -854,4 +869,7 @@ Partial Class frmPrincipal
     Friend WithEvents Bar1 As DevExpress.XtraBars.Bar
     Friend WithEvents txtPassActual As TextBox
     Friend WithEvents Label3 As Label
+    Friend WithEvents BarStaticItem3 As DevExpress.XtraBars.BarStaticItem
+    Friend WithEvents lblCompañia As DevExpress.XtraBars.BarStaticItem
+    Friend WithEvents btnAcerca As DevExpress.XtraBars.BarButtonItem
 End Class
