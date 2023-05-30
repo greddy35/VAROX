@@ -45,7 +45,6 @@
     <Reference Include="DevExpress.BonusSkins.v22.2" />
     <Reference Include="DevExpress.Charts.v22.2.Core, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.CodeParser.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Data.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v22.2" />
     <Reference Include="DevExpress.Data.Desktop.v22.2" />
     <Reference Include="DevExpress.DataAccess.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -114,6 +113,30 @@
     <Import Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dashboard\frmDashboardGeneral.Designer.vb">
+      <DependentUpon>frmDashboardGeneral.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\frmDashboardGeneral.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Sistema\frmConfigClaveBloq.Designer.vb">
+      <DependentUpon>frmConfigClaveBloq.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Sistema\frmConfigClaveBloq.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Sistema\frmUsuariosPrivilegios.Designer.vb">
+      <DependentUpon>frmUsuariosPrivilegios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Sistema\frmUsuariosPrivilegios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\frmDashboardRapido.Designer.vb">
+      <DependentUpon>frmDashboardRapido.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\frmDashboardRapido.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ModuleGlobales.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -121,30 +144,54 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
-    <Compile Include="PRINCIPAL\frmPrincipal.Designer.vb">
+    <Compile Include="Principal\frmPrincipal.Designer.vb">
       <DependentUpon>frmPrincipal.vb</DependentUpon>
     </Compile>
-    <Compile Include="PRINCIPAL\frmPrincipal.vb">
+    <Compile Include="Principal\frmPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PRINCIPAL\Login.Designer.vb">
+    <Compile Include="Principal\Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
     </Compile>
-    <Compile Include="PRINCIPAL\Login.vb">
+    <Compile Include="Principal\Login.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PRINCIPAL\SplashScreen.Designer.vb">
+    <Compile Include="Principal\SplashScreen.Designer.vb">
       <DependentUpon>SplashScreen.vb</DependentUpon>
     </Compile>
-    <Compile Include="PRINCIPAL\SplashScreen.vb">
+    <Compile Include="Principal\SplashScreen.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PRINCIPAL\Dashboard.Designer.vb">
+    <Compile Include="Principal\Dashboard.Designer.vb">
       <DependentUpon>Dashboard.vb</DependentUpon>
     </Compile>
-    <Compile Include="PRINCIPAL\Dashboard.vb">
+    <Compile Include="Principal\Dashboard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reportería\frmCorteGeneral.Designer.vb">
+      <DependentUpon>frmCorteGeneral.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportería\frmCorteGeneral.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportería\frmCortePorLocal.Designer.vb">
+      <DependentUpon>frmCortePorLocal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportería\frmCortePorLocal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="Dashboard\frmDashboardGeneral.resx">
+      <DependentUpon>frmDashboardGeneral.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Sistema\frmConfigClaveBloq.resx">
+      <DependentUpon>frmConfigClaveBloq.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Sistema\frmUsuariosPrivilegios.resx">
+      <DependentUpon>frmUsuariosPrivilegios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\frmDashboardRapido.resx">
+      <DependentUpon>frmDashboardRapido.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -156,17 +203,23 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="PRINCIPAL\frmPrincipal.resx">
+    <EmbeddedResource Include="Principal\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PRINCIPAL\Login.resx">
+    <EmbeddedResource Include="Principal\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PRINCIPAL\SplashScreen.resx">
+    <EmbeddedResource Include="Principal\SplashScreen.resx">
       <DependentUpon>SplashScreen.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PRINCIPAL\Dashboard.resx">
+    <EmbeddedResource Include="Principal\Dashboard.resx">
       <DependentUpon>Dashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportería\frmCorteGeneral.resx">
+      <DependentUpon>frmCorteGeneral.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportería\frmCortePorLocal.resx">
+      <DependentUpon>frmCortePorLocal.vb</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="My Project\Settings.settings">

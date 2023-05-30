@@ -26,9 +26,9 @@ Partial Class frmPrincipal
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPrincipal))
-        Dim SuperToolTip1 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-        Dim ToolTipTitleItem1 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-        Dim ToolTipItem1 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+        Dim SuperToolTip5 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+        Dim ToolTipTitleItem5 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+        Dim ToolTipItem5 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
         Me.contenedor = New DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer()
         Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
         Me.GroupBoxRestabPass = New System.Windows.Forms.GroupBox()
@@ -52,14 +52,24 @@ Partial Class frmPrincipal
         Me.btnAcerca = New DevExpress.XtraBars.BarButtonItem()
         Me.AccordionControl1 = New DevExpress.XtraBars.Navigation.AccordionControl()
         Me.AccordionControlElement1 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.AccordionControlDashboard = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.AccordionControlSeparator14 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
+        Me.AccordionControlDashboardRapido = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.AccordionControlSeparator13 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
         Me.AccordionControlElement2 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.AccordionControlElement4 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.AccordionControlSeparator16 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
+        Me.AccordionControlElement6 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.AccordionControlSeparator15 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
         Me.AccordionControlAdminSistema = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AccordionControlSeguridad = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AccordionControlSeparator4 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
         Me.AccordionControlUsuariosPrivilegios = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AccordionControlSeparator10 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
-        Me.AccordionControlElement4 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.AccordionControlRoles = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AccordionControlSeparator11 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
+        Me.AccordionControlConfigClavBloq = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.AccordionControlSeparator12 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
         Me.AccordionControlMantenimientos = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AccordionControlSeparator9 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
         Me.AccordionControlElement5 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
@@ -217,13 +227,13 @@ Partial Class frmPrincipal
         Me.btnVerPass.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.btnVerPass.Name = "btnVerPass"
         Me.btnVerPass.Size = New System.Drawing.Size(42, 32)
-        ToolTipTitleItem1.AllowHtmlText = DevExpress.Utils.DefaultBoolean.[True]
-        ToolTipTitleItem1.Text = "<b>Ver</b>"
-        ToolTipItem1.ImageOptions.Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
-        ToolTipItem1.Text = "Mostrar contraseñas ingresadas"
-        SuperToolTip1.Items.Add(ToolTipTitleItem1)
-        SuperToolTip1.Items.Add(ToolTipItem1)
-        Me.btnVerPass.SuperTip = SuperToolTip1
+        ToolTipTitleItem5.AllowHtmlText = DevExpress.Utils.DefaultBoolean.[True]
+        ToolTipTitleItem5.Text = "<b>Ver</b>"
+        ToolTipItem5.ImageOptions.Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
+        ToolTipItem5.Text = "Mostrar contraseñas ingresadas"
+        SuperToolTip5.Items.Add(ToolTipTitleItem5)
+        SuperToolTip5.Items.Add(ToolTipItem5)
+        Me.btnVerPass.SuperTip = SuperToolTip5
         Me.btnVerPass.TabIndex = 6
         '
         'btnCambiarPass
@@ -339,7 +349,6 @@ Partial Class frmPrincipal
         Me.lblRol.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right
         Me.lblRol.AllowFocus = DevExpress.Utils.DefaultBoolean.[False]
         Me.lblRol.AllowRightClickInMenu = False
-        Me.lblRol.AutoSize = DevExpress.XtraBars.BarStaticItemSize.None
         Me.lblRol.Caption = "---"
         Me.lblRol.Id = 6
         Me.lblRol.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -348,7 +357,6 @@ Partial Class frmPrincipal
         Me.lblRol.ItemAppearance.Normal.Options.UseForeColor = True
         Me.lblRol.Name = "lblRol"
         Me.lblRol.Size = New System.Drawing.Size(150, 30)
-        Me.lblRol.TextAlignment = System.Drawing.StringAlignment.Center
         Me.lblRol.Width = 150
         '
         'lblUser
@@ -356,7 +364,6 @@ Partial Class frmPrincipal
         Me.lblUser.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right
         Me.lblUser.AllowFocus = DevExpress.Utils.DefaultBoolean.[False]
         Me.lblUser.AllowRightClickInMenu = False
-        Me.lblUser.AutoSize = DevExpress.XtraBars.BarStaticItemSize.None
         Me.lblUser.Caption = "---"
         Me.lblUser.Id = 7
         Me.lblUser.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -365,7 +372,6 @@ Partial Class frmPrincipal
         Me.lblUser.ItemAppearance.Normal.Options.UseForeColor = True
         Me.lblUser.Name = "lblUser"
         Me.lblUser.Size = New System.Drawing.Size(150, 30)
-        Me.lblUser.TextAlignment = System.Drawing.StringAlignment.Center
         Me.lblUser.Width = 150
         '
         'lblNombre
@@ -373,7 +379,6 @@ Partial Class frmPrincipal
         Me.lblNombre.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right
         Me.lblNombre.AllowFocus = DevExpress.Utils.DefaultBoolean.[False]
         Me.lblNombre.AllowRightClickInMenu = False
-        Me.lblNombre.AutoSize = DevExpress.XtraBars.BarStaticItemSize.None
         Me.lblNombre.Caption = "---"
         Me.lblNombre.Id = 8
         Me.lblNombre.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -381,9 +386,6 @@ Partial Class frmPrincipal
         Me.lblNombre.ItemAppearance.Normal.Options.UseFont = True
         Me.lblNombre.ItemAppearance.Normal.Options.UseForeColor = True
         Me.lblNombre.Name = "lblNombre"
-        Me.lblNombre.Size = New System.Drawing.Size(250, 30)
-        Me.lblNombre.TextAlignment = System.Drawing.StringAlignment.Center
-        Me.lblNombre.Width = 250
         '
         'btnAcerca
         '
@@ -398,12 +400,12 @@ Partial Class frmPrincipal
         Me.btnAcerca.ItemAppearance.Normal.Options.UseForeColor = True
         Me.btnAcerca.Name = "btnAcerca"
         Me.btnAcerca.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
-        Me.btnAcerca.Size = New System.Drawing.Size(80, 0)
+        Me.btnAcerca.Size = New System.Drawing.Size(100, 0)
         '
         'AccordionControl1
         '
         Me.AccordionControl1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.AccordionControl1.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlElement1, Me.AccordionControlElement2, Me.AccordionControlAdminSistema, Me.AccordionControlElementSesion})
+        Me.AccordionControl1.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlElement1, Me.AccordionControlSeparator13, Me.AccordionControlElement2, Me.AccordionControlSeparator15, Me.AccordionControlAdminSistema, Me.AccordionControlElementSesion})
         Me.AccordionControl1.Location = New System.Drawing.Point(0, 37)
         Me.AccordionControl1.Margin = New System.Windows.Forms.Padding(2)
         Me.AccordionControl1.Name = "AccordionControl1"
@@ -414,13 +416,63 @@ Partial Class frmPrincipal
         '
         'AccordionControlElement1
         '
+        Me.AccordionControlElement1.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlDashboard, Me.AccordionControlSeparator14, Me.AccordionControlDashboardRapido})
+        Me.AccordionControlElement1.Expanded = True
+        Me.AccordionControlElement1.ImageOptions.Image = CType(resources.GetObject("AccordionControlElement1.ImageOptions.Image"), System.Drawing.Image)
         Me.AccordionControlElement1.Name = "AccordionControlElement1"
-        Me.AccordionControlElement1.Text = "Módulo 1"
+        Me.AccordionControlElement1.Text = "Dashboard"
+        '
+        'AccordionControlDashboard
+        '
+        Me.AccordionControlDashboard.ImageOptions.Image = CType(resources.GetObject("AccordionControlDashboard.ImageOptions.Image"), System.Drawing.Image)
+        Me.AccordionControlDashboard.Name = "AccordionControlDashboard"
+        Me.AccordionControlDashboard.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
+        Me.AccordionControlDashboard.Text = "General"
+        '
+        'AccordionControlSeparator14
+        '
+        Me.AccordionControlSeparator14.Name = "AccordionControlSeparator14"
+        '
+        'AccordionControlDashboardRapido
+        '
+        Me.AccordionControlDashboardRapido.ImageOptions.Image = CType(resources.GetObject("AccordionControlDashboardRapido.ImageOptions.Image"), System.Drawing.Image)
+        Me.AccordionControlDashboardRapido.Name = "AccordionControlDashboardRapido"
+        Me.AccordionControlDashboardRapido.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
+        Me.AccordionControlDashboardRapido.Text = "Dashboard Rápido"
+        '
+        'AccordionControlSeparator13
+        '
+        Me.AccordionControlSeparator13.Name = "AccordionControlSeparator13"
         '
         'AccordionControlElement2
         '
+        Me.AccordionControlElement2.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlElement4, Me.AccordionControlSeparator16, Me.AccordionControlElement6})
+        Me.AccordionControlElement2.Expanded = True
+        Me.AccordionControlElement2.ImageOptions.Image = CType(resources.GetObject("AccordionControlElement2.ImageOptions.Image"), System.Drawing.Image)
         Me.AccordionControlElement2.Name = "AccordionControlElement2"
-        Me.AccordionControlElement2.Text = "Módulo 2"
+        Me.AccordionControlElement2.Text = "Reportería"
+        '
+        'AccordionControlElement4
+        '
+        Me.AccordionControlElement4.ImageOptions.Image = CType(resources.GetObject("AccordionControlElement4.ImageOptions.Image"), System.Drawing.Image)
+        Me.AccordionControlElement4.Name = "AccordionControlElement4"
+        Me.AccordionControlElement4.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
+        Me.AccordionControlElement4.Text = "Corte General"
+        '
+        'AccordionControlSeparator16
+        '
+        Me.AccordionControlSeparator16.Name = "AccordionControlSeparator16"
+        '
+        'AccordionControlElement6
+        '
+        Me.AccordionControlElement6.ImageOptions.Image = CType(resources.GetObject("AccordionControlElement6.ImageOptions.Image"), System.Drawing.Image)
+        Me.AccordionControlElement6.Name = "AccordionControlElement6"
+        Me.AccordionControlElement6.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
+        Me.AccordionControlElement6.Text = "Corte por Local"
+        '
+        'AccordionControlSeparator15
+        '
+        Me.AccordionControlSeparator15.Name = "AccordionControlSeparator15"
         '
         'AccordionControlAdminSistema
         '
@@ -432,7 +484,7 @@ Partial Class frmPrincipal
         '
         'AccordionControlSeguridad
         '
-        Me.AccordionControlSeguridad.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeparator4, Me.AccordionControlUsuariosPrivilegios, Me.AccordionControlSeparator10, Me.AccordionControlElement4, Me.AccordionControlSeparator11})
+        Me.AccordionControlSeguridad.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeparator4, Me.AccordionControlUsuariosPrivilegios, Me.AccordionControlSeparator10, Me.AccordionControlRoles, Me.AccordionControlSeparator11, Me.AccordionControlConfigClavBloq, Me.AccordionControlSeparator12})
         Me.AccordionControlSeguridad.Expanded = True
         Me.AccordionControlSeguridad.Name = "AccordionControlSeguridad"
         Me.AccordionControlSeguridad.Text = "Seguridad"
@@ -452,17 +504,28 @@ Partial Class frmPrincipal
         '
         Me.AccordionControlSeparator10.Name = "AccordionControlSeparator10"
         '
-        'AccordionControlElement4
+        'AccordionControlRoles
         '
-        Me.AccordionControlElement4.ImageOptions.Image = CType(resources.GetObject("AccordionControlElement4.ImageOptions.Image"), System.Drawing.Image)
-        Me.AccordionControlElement4.ImageOptions.ImageLayoutMode = DevExpress.XtraBars.Navigation.ImageLayoutMode.Squeeze
-        Me.AccordionControlElement4.Name = "AccordionControlElement4"
-        Me.AccordionControlElement4.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
-        Me.AccordionControlElement4.Text = "Roles"
+        Me.AccordionControlRoles.ImageOptions.Image = CType(resources.GetObject("AccordionControlRoles.ImageOptions.Image"), System.Drawing.Image)
+        Me.AccordionControlRoles.ImageOptions.ImageLayoutMode = DevExpress.XtraBars.Navigation.ImageLayoutMode.Squeeze
+        Me.AccordionControlRoles.Name = "AccordionControlRoles"
+        Me.AccordionControlRoles.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
+        Me.AccordionControlRoles.Text = "Roles"
         '
         'AccordionControlSeparator11
         '
         Me.AccordionControlSeparator11.Name = "AccordionControlSeparator11"
+        '
+        'AccordionControlConfigClavBloq
+        '
+        Me.AccordionControlConfigClavBloq.ImageOptions.Image = CType(resources.GetObject("AccordionControlConfigClavBloq.ImageOptions.Image"), System.Drawing.Image)
+        Me.AccordionControlConfigClavBloq.Name = "AccordionControlConfigClavBloq"
+        Me.AccordionControlConfigClavBloq.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
+        Me.AccordionControlConfigClavBloq.Text = "Config. de Clave y Bloqueo"
+        '
+        'AccordionControlSeparator12
+        '
+        Me.AccordionControlSeparator12.Name = "AccordionControlSeparator12"
         '
         'AccordionControlMantenimientos
         '
@@ -500,7 +563,7 @@ Partial Class frmPrincipal
         Me.AccordionControlElement8.ImageOptions.ImageLayoutMode = DevExpress.XtraBars.Navigation.ImageLayoutMode.Squeeze
         Me.AccordionControlElement8.Name = "AccordionControlElement8"
         Me.AccordionControlElement8.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
-        Me.AccordionControlElement8.Text = "Opción 1"
+        Me.AccordionControlElement8.Text = "Tipos de Mediciones"
         '
         'AccordionControlSeparator6
         '
@@ -512,7 +575,7 @@ Partial Class frmPrincipal
         Me.AccordionControlElement9.ImageOptions.ImageLayoutMode = DevExpress.XtraBars.Navigation.ImageLayoutMode.Squeeze
         Me.AccordionControlElement9.Name = "AccordionControlElement9"
         Me.AccordionControlElement9.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
-        Me.AccordionControlElement9.Text = "Opción 2"
+        Me.AccordionControlElement9.Text = "Tipos de Válvulas"
         '
         'AccordionControlSeparator7
         '
@@ -845,7 +908,7 @@ Partial Class frmPrincipal
     Friend WithEvents AccordionControlSeparator4 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
     Friend WithEvents AccordionControlUsuariosPrivilegios As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents AccordionControlSeparator10 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
-    Friend WithEvents AccordionControlElement4 As DevExpress.XtraBars.Navigation.AccordionControlElement
+    Friend WithEvents AccordionControlRoles As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents AccordionControlSeparator11 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
     Friend WithEvents AccordionControlMantenimientos As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents AccordionControlSeparator9 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
@@ -872,4 +935,14 @@ Partial Class frmPrincipal
     Friend WithEvents BarStaticItem3 As DevExpress.XtraBars.BarStaticItem
     Friend WithEvents lblCompañia As DevExpress.XtraBars.BarStaticItem
     Friend WithEvents btnAcerca As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents AccordionControlConfigClavBloq As DevExpress.XtraBars.Navigation.AccordionControlElement
+    Friend WithEvents AccordionControlSeparator12 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
+    Friend WithEvents AccordionControlDashboard As DevExpress.XtraBars.Navigation.AccordionControlElement
+    Friend WithEvents AccordionControlSeparator14 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
+    Friend WithEvents AccordionControlDashboardRapido As DevExpress.XtraBars.Navigation.AccordionControlElement
+    Friend WithEvents AccordionControlSeparator13 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
+    Friend WithEvents AccordionControlElement4 As DevExpress.XtraBars.Navigation.AccordionControlElement
+    Friend WithEvents AccordionControlSeparator16 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
+    Friend WithEvents AccordionControlElement6 As DevExpress.XtraBars.Navigation.AccordionControlElement
+    Friend WithEvents AccordionControlSeparator15 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
 End Class

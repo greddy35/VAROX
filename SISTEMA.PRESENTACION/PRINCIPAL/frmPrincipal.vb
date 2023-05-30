@@ -132,7 +132,12 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
-        AbrirFormulario(XtraForm1)
+        Dim respuesta As Integer
+        respuesta = MessageBox.Show("¿Seguro que desea salir? " & vbLf & " Al salir perderá cualquier cambio que no haya guardado", "Cierre de Sesión", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
+        If (respuesta = DialogResult.OK) Then
+            Me.Dispose()
+            Login.Close()
+        End If
     End Sub
 
     Private Sub btnCerrarSesion_Click(sender As Object, e As EventArgs) Handles btnCerrarSesion.Click
@@ -352,6 +357,30 @@ Public Class frmPrincipal
         Else
             e.Cancel = True
         End If
+    End Sub
+
+    Private Sub AccordionControlConfigClavBloq_Click(sender As Object, e As EventArgs) Handles AccordionControlConfigClavBloq.Click
+        AbrirFormulario(frmConfigClaveBloq)
+    End Sub
+
+    Private Sub AccordionControlUsuariosPrivilegios_Click(sender As Object, e As EventArgs) Handles AccordionControlUsuariosPrivilegios.Click
+        AbrirFormulario(frmUsuariosPrivilegios)
+    End Sub
+
+    Private Sub AccordionControlDashboard_Click(sender As Object, e As EventArgs) Handles AccordionControlDashboard.Click
+        AbrirFormulario(frmDashboardGeneral)
+    End Sub
+
+    Private Sub AccordionControlDashboardRapido_Click(sender As Object, e As EventArgs) Handles AccordionControlDashboardRapido.Click
+        AbrirFormulario(frmDashboardRapido)
+    End Sub
+
+    Private Sub AccordionControlElement4_Click(sender As Object, e As EventArgs) Handles AccordionControlElement4.Click
+        AbrirFormulario(frmCortePorLocal)
+    End Sub
+
+    Private Sub AccordionControlElement6_Click(sender As Object, e As EventArgs) Handles AccordionControlElement6.Click
+        AbrirFormulario(frmCortePorLocal)
     End Sub
 
 

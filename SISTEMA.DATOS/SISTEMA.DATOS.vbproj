@@ -64,6 +64,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ADMIN_SISTEMA\DUsuarios.vb" />
     <Compile Include="ConexionesBD\ConexionBD_Externa.vb" />
     <Compile Include="ConexionesBD\ConexionBD_Local.vb" />
     <Compile Include="ConexionesBD\GlobalesConexiones.vb" />
