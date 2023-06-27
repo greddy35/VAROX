@@ -132,6 +132,8 @@ Public Class Login
                 "Revise que tenga conexion a las redes de la compañia a traves de:" + vbLf +
                 "1 - Red cableada" + vbLf + "2 - Red inalámbrica", MsgBoxStyle.Critical, "Sin conexión")
         End If
+        'Me.Hide()
+        'frmPrincipal.Show()
     End Sub
 
     Private Sub txtUsuario_KeyDown(sender As Object, e As KeyEventArgs) Handles txtUsuario.KeyDown

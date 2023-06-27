@@ -19,11 +19,12 @@ Partial Class frmDashboardRapido
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.RibbonControl = New DevExpress.XtraBars.Ribbon.RibbonControl()
-        Me.RibbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
-        Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonStatusBar = New DevExpress.XtraBars.Ribbon.RibbonStatusBar()
+        Me.DashboardViewer1 = New DevExpress.DashboardWin.DashboardViewer(Me.components)
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DashboardViewer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'RibbonControl
@@ -33,20 +34,8 @@ Partial Class frmDashboardRapido
         Me.RibbonControl.Location = New System.Drawing.Point(0, 0)
         Me.RibbonControl.MaxItemId = 1
         Me.RibbonControl.Name = "RibbonControl"
-        Me.RibbonControl.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1})
-        Me.RibbonControl.Size = New System.Drawing.Size(941, 182)
+        Me.RibbonControl.Size = New System.Drawing.Size(941, 66)
         Me.RibbonControl.StatusBar = Me.RibbonStatusBar
-        '
-        'RibbonPage1
-        '
-        Me.RibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup1})
-        Me.RibbonPage1.Name = "RibbonPage1"
-        Me.RibbonPage1.Text = "RibbonPage1"
-        '
-        'RibbonPageGroup1
-        '
-        Me.RibbonPageGroup1.Name = "RibbonPageGroup1"
-        Me.RibbonPageGroup1.Text = "RibbonPageGroup1"
         '
         'RibbonStatusBar
         '
@@ -55,11 +44,24 @@ Partial Class frmDashboardRapido
         Me.RibbonStatusBar.Ribbon = Me.RibbonControl
         Me.RibbonStatusBar.Size = New System.Drawing.Size(941, 27)
         '
+        'DashboardViewer1
+        '
+        Me.DashboardViewer1.Appearance.BackColor = System.Drawing.Color.FromArgb(CType(CType(227, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DashboardViewer1.Appearance.Options.UseBackColor = True
+        Me.DashboardViewer1.AsyncMode = True
+        Me.DashboardViewer1.DashboardSource = New System.Uri("C:\FUENTES\ESS\Desarrollos\VAROX\SISTEMA.PRESENTACION\bin\Debug\DashEjemplo.xml", System.UriKind.Absolute)
+        Me.DashboardViewer1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DashboardViewer1.Location = New System.Drawing.Point(0, 66)
+        Me.DashboardViewer1.Name = "DashboardViewer1"
+        Me.DashboardViewer1.Size = New System.Drawing.Size(941, 441)
+        Me.DashboardViewer1.TabIndex = 2
+        '
         'frmDashboardRapido
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(941, 534)
+        Me.Controls.Add(Me.DashboardViewer1)
         Me.Controls.Add(Me.RibbonStatusBar)
         Me.Controls.Add(Me.RibbonControl)
         Me.Name = "frmDashboardRapido"
@@ -67,15 +69,14 @@ Partial Class frmDashboardRapido
         Me.StatusBar = Me.RibbonStatusBar
         Me.Text = "frmDashboardRapido"
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DashboardViewer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents RibbonControl As DevExpress.XtraBars.Ribbon.RibbonControl
-    Friend WithEvents RibbonPage1 As DevExpress.XtraBars.Ribbon.RibbonPage
-    Friend WithEvents RibbonPageGroup1 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
     Friend WithEvents RibbonStatusBar As DevExpress.XtraBars.Ribbon.RibbonStatusBar
-
+    Friend WithEvents DashboardViewer1 As DevExpress.DashboardWin.DashboardViewer
 
 End Class
