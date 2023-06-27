@@ -98,6 +98,7 @@ Partial Class Login
         Me.txtContraseña.Name = "txtContraseña"
         Me.txtContraseña.Size = New System.Drawing.Size(180, 29)
         Me.txtContraseña.TabIndex = 3
+        Me.txtContraseña.Text = "1234"
         Me.txtContraseña.UseSystemPasswordChar = True
         '
         'txtUsuario

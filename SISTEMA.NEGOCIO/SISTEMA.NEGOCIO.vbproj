@@ -64,7 +64,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ADMIN_SISTEMA\NUsuarios.vb" />
+    <Compile Include="Admin_Sistema\NTipoValv.vb" />
+    <Compile Include="Admin_Sistema\NTipoMed.vb" />
+    <Compile Include="Admin_Sistema\NClases.vb" />
+    <Compile Include="Admin_Sistema\NUsuarios.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -80,7 +83,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="PRINCIPAL\NLogin.vb" />
+    <Compile Include="Principal\NLogin.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

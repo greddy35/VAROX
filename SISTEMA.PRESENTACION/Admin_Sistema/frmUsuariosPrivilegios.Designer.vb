@@ -98,9 +98,6 @@ Partial Class frmUsuariosPrivilegios
         Me.txtUsuarioRol = New DevExpress.XtraEditors.TextEdit()
         Me.LabelControl7 = New DevExpress.XtraEditors.LabelControl()
         Me.LabelControl6 = New DevExpress.XtraEditors.LabelControl()
-        Me.XtraTabControl1 = New DevExpress.XtraTab.XtraTabControl()
-        Me.XtraTabPage1 = New DevExpress.XtraTab.XtraTabPage()
-        Me.XtraTabPage2 = New DevExpress.XtraTab.XtraTabPage()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TablePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -139,9 +136,6 @@ Partial Class frmUsuariosPrivilegios
         Me.Panel2.SuspendLayout()
         CType(Me.txtIdUsuarioRol.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtUsuarioRol.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.XtraTabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.XtraTabControl1.SuspendLayout()
-        Me.XtraTabPage1.SuspendLayout()
         Me.SuspendLayout()
         '
         'RibbonControl
@@ -212,11 +206,11 @@ Partial Class frmUsuariosPrivilegios
         Me.TablePanel1.Controls.Add(Me.PanelControl2)
         Me.TablePanel1.Controls.Add(Me.PanelControl1)
         Me.TablePanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TablePanel1.Location = New System.Drawing.Point(0, 0)
+        Me.TablePanel1.Location = New System.Drawing.Point(0, 182)
         Me.TablePanel1.Margin = New System.Windows.Forms.Padding(4)
         Me.TablePanel1.Name = "TablePanel1"
         Me.TablePanel1.Rows.AddRange(New DevExpress.Utils.Layout.TablePanelRow() {New DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 38.19999!), New DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 26.0!)})
-        Me.TablePanel1.Size = New System.Drawing.Size(1107, 481)
+        Me.TablePanel1.Size = New System.Drawing.Size(1113, 515)
         Me.TablePanel1.TabIndex = 8
         '
         'PanelControl4
@@ -225,11 +219,11 @@ Partial Class frmUsuariosPrivilegios
         Me.TablePanel1.SetColumn(Me.PanelControl4, 1)
         Me.PanelControl4.Controls.Add(Me.TablePanel2)
         Me.PanelControl4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PanelControl4.Location = New System.Drawing.Point(454, 42)
+        Me.PanelControl4.Location = New System.Drawing.Point(457, 42)
         Me.PanelControl4.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelControl4.Name = "PanelControl4"
         Me.TablePanel1.SetRow(Me.PanelControl4, 1)
-        Me.PanelControl4.Size = New System.Drawing.Size(649, 435)
+        Me.PanelControl4.Size = New System.Drawing.Size(652, 469)
         Me.PanelControl4.TabIndex = 6
         '
         'TablePanel2
@@ -243,7 +237,7 @@ Partial Class frmUsuariosPrivilegios
         Me.TablePanel2.Margin = New System.Windows.Forms.Padding(4)
         Me.TablePanel2.Name = "TablePanel2"
         Me.TablePanel2.Rows.AddRange(New DevExpress.Utils.Layout.TablePanelRow() {New DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 150.6001!), New DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 201.0!)})
-        Me.TablePanel2.Size = New System.Drawing.Size(645, 431)
+        Me.TablePanel2.Size = New System.Drawing.Size(648, 465)
         Me.TablePanel2.TabIndex = 0
         '
         'chkLstPrivilegios
@@ -268,7 +262,7 @@ Partial Class frmUsuariosPrivilegios
         Me.chkLstPrivilegios.PictureChecked = CType(resources.GetObject("chkLstPrivilegios.PictureChecked"), System.Drawing.Image)
         Me.chkLstPrivilegios.PictureUnchecked = CType(resources.GetObject("chkLstPrivilegios.PictureUnchecked"), System.Drawing.Image)
         Me.TablePanel2.SetRow(Me.chkLstPrivilegios, 1)
-        Me.chkLstPrivilegios.Size = New System.Drawing.Size(637, 272)
+        Me.chkLstPrivilegios.Size = New System.Drawing.Size(640, 306)
         Me.chkLstPrivilegios.TabIndex = 4
         '
         'PanelControl7
@@ -282,7 +276,7 @@ Partial Class frmUsuariosPrivilegios
         Me.PanelControl7.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelControl7.Name = "PanelControl7"
         Me.TablePanel2.SetRow(Me.PanelControl7, 0)
-        Me.PanelControl7.Size = New System.Drawing.Size(637, 143)
+        Me.PanelControl7.Size = New System.Drawing.Size(640, 143)
         Me.PanelControl7.TabIndex = 3
         '
         'PanelControl9
@@ -293,7 +287,7 @@ Partial Class frmUsuariosPrivilegios
         Me.PanelControl9.Location = New System.Drawing.Point(2, 84)
         Me.PanelControl9.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelControl9.Name = "PanelControl9"
-        Me.PanelControl9.Size = New System.Drawing.Size(633, 57)
+        Me.PanelControl9.Size = New System.Drawing.Size(636, 57)
         Me.PanelControl9.TabIndex = 1
         '
         'LabelControl8
@@ -319,7 +313,7 @@ Partial Class frmUsuariosPrivilegios
         Me.btnGuardarPrivilegios.Dock = System.Windows.Forms.DockStyle.Right
         Me.btnGuardarPrivilegios.ImageOptions.Image = CType(resources.GetObject("btnGuardarPrivilegios.ImageOptions.Image"), System.Drawing.Image)
         Me.btnGuardarPrivilegios.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightCenter
-        Me.btnGuardarPrivilegios.Location = New System.Drawing.Point(431, 2)
+        Me.btnGuardarPrivilegios.Location = New System.Drawing.Point(434, 2)
         Me.btnGuardarPrivilegios.Margin = New System.Windows.Forms.Padding(4)
         Me.btnGuardarPrivilegios.Name = "btnGuardarPrivilegios"
         Me.btnGuardarPrivilegios.Size = New System.Drawing.Size(200, 53)
@@ -346,14 +340,14 @@ Partial Class frmUsuariosPrivilegios
         Me.PanelControl6.Location = New System.Drawing.Point(344, 2)
         Me.PanelControl6.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelControl6.Name = "PanelControl6"
-        Me.PanelControl6.Size = New System.Drawing.Size(292, 78)
+        Me.PanelControl6.Size = New System.Drawing.Size(295, 78)
         Me.PanelControl6.TabIndex = 1
         '
         'txtIdUsuario
         '
         Me.txtIdUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtIdUsuario.Enabled = False
-        Me.txtIdUsuario.Location = New System.Drawing.Point(257, 4)
+        Me.txtIdUsuario.Location = New System.Drawing.Point(260, 4)
         Me.txtIdUsuario.Margin = New System.Windows.Forms.Padding(4)
         Me.txtIdUsuario.MenuManager = Me.RibbonControl
         Me.txtIdUsuario.Name = "txtIdUsuario"
@@ -375,7 +369,7 @@ Partial Class frmUsuariosPrivilegios
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold)
         Me.txtNombre.Properties.Appearance.Options.UseFont = True
-        Me.txtNombre.Size = New System.Drawing.Size(202, 30)
+        Me.txtNombre.Size = New System.Drawing.Size(205, 30)
         Me.txtNombre.TabIndex = 3
         '
         'LabelControl5
@@ -487,11 +481,11 @@ Partial Class frmUsuariosPrivilegios
         Me.TablePanel1.SetColumn(Me.PanelControl3, 1)
         Me.PanelControl3.Controls.Add(Me.LabelControl2)
         Me.PanelControl3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PanelControl3.Location = New System.Drawing.Point(454, 4)
+        Me.PanelControl3.Location = New System.Drawing.Point(457, 4)
         Me.PanelControl3.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelControl3.Name = "PanelControl3"
         Me.TablePanel1.SetRow(Me.PanelControl3, 0)
-        Me.PanelControl3.Size = New System.Drawing.Size(649, 30)
+        Me.PanelControl3.Size = New System.Drawing.Size(652, 30)
         Me.PanelControl3.TabIndex = 5
         '
         'LabelControl2
@@ -515,7 +509,7 @@ Partial Class frmUsuariosPrivilegios
         Me.PanelControl2.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelControl2.Name = "PanelControl2"
         Me.TablePanel1.SetRow(Me.PanelControl2, 1)
-        Me.PanelControl2.Size = New System.Drawing.Size(442, 435)
+        Me.PanelControl2.Size = New System.Drawing.Size(445, 469)
         Me.PanelControl2.TabIndex = 4
         '
         'GridControlUsuarios
@@ -526,7 +520,7 @@ Partial Class frmUsuariosPrivilegios
         Me.GridControlUsuarios.MenuManager = Me.RibbonControl
         Me.GridControlUsuarios.Name = "GridControlUsuarios"
         Me.GridControlUsuarios.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemButtonEditAsigRol, Me.RepositoryItemButtonEditCambPass})
-        Me.GridControlUsuarios.Size = New System.Drawing.Size(438, 431)
+        Me.GridControlUsuarios.Size = New System.Drawing.Size(441, 465)
         Me.GridControlUsuarios.TabIndex = 0
         Me.GridControlUsuarios.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridViewUsuarios})
         '
@@ -634,7 +628,7 @@ Partial Class frmUsuariosPrivilegios
         Me.PanelControl1.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelControl1.Name = "PanelControl1"
         Me.TablePanel1.SetRow(Me.PanelControl1, 0)
-        Me.PanelControl1.Size = New System.Drawing.Size(442, 30)
+        Me.PanelControl1.Size = New System.Drawing.Size(445, 30)
         Me.PanelControl1.TabIndex = 3
         '
         'LabelControl1
@@ -654,7 +648,7 @@ Partial Class frmUsuariosPrivilegios
         Me.GroupBoxRestabPass.BackColor = System.Drawing.Color.IndianRed
         Me.GroupBoxRestabPass.Controls.Add(Me.Panel1)
         Me.GroupBoxRestabPass.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBoxRestabPass.Location = New System.Drawing.Point(1090, 600)
+        Me.GroupBoxRestabPass.Location = New System.Drawing.Point(0, 500)
         Me.GroupBoxRestabPass.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.GroupBoxRestabPass.Name = "GroupBoxRestabPass"
         Me.GroupBoxRestabPass.Padding = New System.Windows.Forms.Padding(4, 2, 4, 2)
@@ -803,7 +797,7 @@ Partial Class frmUsuariosPrivilegios
         Me.GroupBox2.BackColor = System.Drawing.Color.CornflowerBlue
         Me.GroupBox2.Controls.Add(Me.Panel2)
         Me.GroupBox2.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.GroupBox2.Location = New System.Drawing.Point(19, 554)
+        Me.GroupBox2.Location = New System.Drawing.Point(0, 300)
         Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
@@ -924,40 +918,6 @@ Partial Class frmUsuariosPrivilegios
         Me.LabelControl6.TabIndex = 2
         Me.LabelControl6.Text = "Usuario:"
         '
-        'XtraTabControl1
-        '
-        Me.XtraTabControl1.AppearancePage.Header.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.XtraTabControl1.AppearancePage.Header.Options.UseFont = True
-        Me.XtraTabControl1.AppearancePage.HeaderActive.ForeColor = System.Drawing.Color.Blue
-        Me.XtraTabControl1.AppearancePage.HeaderActive.Options.UseForeColor = True
-        Me.XtraTabControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
-        Me.XtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.XtraTabControl1.Location = New System.Drawing.Point(0, 182)
-        Me.XtraTabControl1.Margin = New System.Windows.Forms.Padding(4)
-        Me.XtraTabControl1.Name = "XtraTabControl1"
-        Me.XtraTabControl1.SelectedTabPage = Me.XtraTabPage1
-        Me.XtraTabControl1.Size = New System.Drawing.Size(1113, 515)
-        Me.XtraTabControl1.TabIndex = 11
-        Me.XtraTabControl1.TabPages.AddRange(New DevExpress.XtraTab.XtraTabPage() {Me.XtraTabPage1, Me.XtraTabPage2})
-        '
-        'XtraTabPage1
-        '
-        Me.XtraTabPage1.Controls.Add(Me.TablePanel1)
-        Me.XtraTabPage1.ImageOptions.Image = CType(resources.GetObject("XtraTabPage1.ImageOptions.Image"), System.Drawing.Image)
-        Me.XtraTabPage1.Margin = New System.Windows.Forms.Padding(4)
-        Me.XtraTabPage1.Name = "XtraTabPage1"
-        Me.XtraTabPage1.Size = New System.Drawing.Size(1107, 481)
-        Me.XtraTabPage1.Text = "Usuarios"
-        '
-        'XtraTabPage2
-        '
-        Me.XtraTabPage2.ImageOptions.Image = CType(resources.GetObject("XtraTabPage2.ImageOptions.Image"), System.Drawing.Image)
-        Me.XtraTabPage2.Margin = New System.Windows.Forms.Padding(4)
-        Me.XtraTabPage2.Name = "XtraTabPage2"
-        Me.XtraTabPage2.PageVisible = False
-        Me.XtraTabPage2.Size = New System.Drawing.Size(1107, 481)
-        Me.XtraTabPage2.Text = "Roles"
-        '
         'Timer1
         '
         Me.Timer1.Enabled = True
@@ -970,7 +930,7 @@ Partial Class frmUsuariosPrivilegios
         Me.ClientSize = New System.Drawing.Size(1113, 724)
         Me.Controls.Add(Me.GroupBoxRestabPass)
         Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.XtraTabControl1)
+        Me.Controls.Add(Me.TablePanel1)
         Me.Controls.Add(Me.RibbonStatusBar)
         Me.Controls.Add(Me.RibbonControl)
         Me.IconOptions.Image = CType(resources.GetObject("frmUsuariosPrivilegios.IconOptions.Image"), System.Drawing.Image)
@@ -1024,9 +984,6 @@ Partial Class frmUsuariosPrivilegios
         Me.Panel2.PerformLayout()
         CType(Me.txtIdUsuarioRol.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtUsuarioRol.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.XtraTabControl1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.XtraTabControl1.ResumeLayout(False)
-        Me.XtraTabPage1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1065,9 +1022,6 @@ Partial Class frmUsuariosPrivilegios
     Friend WithEvents txtIdUsuarioRol As DevExpress.XtraEditors.TextEdit
     Friend WithEvents btnAsignarRol As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents btnCancelarAsignarRol As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents XtraTabControl1 As DevExpress.XtraTab.XtraTabControl
-    Friend WithEvents XtraTabPage2 As DevExpress.XtraTab.XtraTabPage
-    Friend WithEvents XtraTabPage1 As DevExpress.XtraTab.XtraTabPage
     Friend WithEvents txtSiglasModulo As DevExpress.XtraEditors.TextEdit
     Friend WithEvents PanelControl9 As DevExpress.XtraEditors.PanelControl
     Friend WithEvents btnGuardarPrivilegios As DevExpress.XtraEditors.SimpleButton

@@ -64,7 +64,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ADMIN_SISTEMA\Usuarios.vb" />
+    <Compile Include="Admin_Sistema\Clases.vb" />
+    <Compile Include="Admin_Sistema\TipoMed_TiposValv.vb" />
+    <Compile Include="Admin_Sistema\Usuarios.vb" />
+    <Compile Include="Gestión_General\Clientes.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -80,7 +83,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="PRINCIPAL\Login.vb" />
+    <Compile Include="Principal\Login.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
