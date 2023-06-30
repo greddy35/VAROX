@@ -131,7 +131,7 @@ Public Class frmPrincipal
         End Try
     End Sub
 
-    Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
+    Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles accSalir.Click
         Dim respuesta As Integer
         respuesta = MessageBox.Show("¿Seguro que desea salir? " & vbLf & " Al salir perderá cualquier cambio que no haya guardado", "Cierre de Sesión", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
         If (respuesta = DialogResult.OK) Then
@@ -140,7 +140,7 @@ Public Class frmPrincipal
         End If
     End Sub
 
-    Private Sub btnCerrarSesion_Click(sender As Object, e As EventArgs) Handles btnCerrarSesion.Click
+    Private Sub btnCerrarSesion_Click(sender As Object, e As EventArgs) Handles accCerrarSesion.Click
         Dim respuesta As Integer
         respuesta = MessageBox.Show("¿Seguro que desea cerrar la sesión actual?", "Cierre de Sesión", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
         If (respuesta = DialogResult.OK) Then
@@ -149,7 +149,7 @@ Public Class frmPrincipal
         End If
     End Sub
 
-    Private Sub btnCambiarContraseña_Click(sender As Object, e As EventArgs) Handles btnCambiarContraseña.Click
+    Private Sub btnCambiarContraseña_Click(sender As Object, e As EventArgs) Handles accCambiarContraseña.Click
         Centrar(GroupBoxRestabPass)
         txtPass.PasswordChar = CChar("*")
         txtPassConfirma.PasswordChar = CChar("*")
@@ -359,28 +359,60 @@ Public Class frmPrincipal
         End If
     End Sub
 
-    Private Sub AccordionControlConfigClavBloq_Click(sender As Object, e As EventArgs) Handles AccordionControlConfigClavBloq.Click
+    Private Sub AccordionControlConfigClavBloq_Click(sender As Object, e As EventArgs) Handles accConfBloq.Click
         AbrirFormulario(frmConfigClaveBloq)
     End Sub
 
-    Private Sub AccordionControlUsuariosPrivilegios_Click(sender As Object, e As EventArgs) Handles AccordionControlUsuariosPrivilegios.Click
+    Private Sub AccordionControlUsuariosPrivilegios_Click(sender As Object, e As EventArgs) Handles accUsuariosPrivilegios.Click
         AbrirFormulario(frmUsuariosPrivilegios)
     End Sub
 
-    Private Sub AccordionControlDashboard_Click(sender As Object, e As EventArgs) Handles AccordionControlDashboard.Click
-        AbrirFormulario(frmDashboardGeneral)
+    Private Sub AccordionControlDashboard_Click(sender As Object, e As EventArgs) Handles accDashboardDesigner.Click
+        AbrirFormulario(frmDashboardDesigner)
     End Sub
 
-    Private Sub AccordionControlDashboardRapido_Click(sender As Object, e As EventArgs) Handles AccordionControlDashboardRapido.Click
+    Private Sub AccordionControlDashboardRapido_Click(sender As Object, e As EventArgs) Handles accDashboardRap.Click
         AbrirFormulario(frmDashboardRapido)
     End Sub
 
-    Private Sub AccordionControlElement4_Click(sender As Object, e As EventArgs) Handles AccordionControlElement4.Click
+    Private Sub AccordionControlElement4_Click(sender As Object, e As EventArgs) Handles accCorteGeneral.Click
         AbrirFormulario(frmCortePorLocal)
     End Sub
 
-    Private Sub AccordionControlElement6_Click(sender As Object, e As EventArgs) Handles AccordionControlElement6.Click
+    Private Sub AccordionControlElement6_Click(sender As Object, e As EventArgs) Handles accCorte_X_Local.Click
         AbrirFormulario(frmCortePorLocal)
+    End Sub
+
+    Private Sub AccordionControlElement10_Click(sender As Object, e As EventArgs) Handles accValvulas.Click
+        AbrirFormulario(frmValvulas)
+    End Sub
+
+    Private Sub AccordionControlElement11_Click(sender As Object, e As EventArgs) Handles accLocales.Click
+        AbrirFormulario(frmLocales)
+    End Sub
+
+    Private Sub AccordionControlElement12_Click(sender As Object, e As EventArgs) Handles accClientes.Click
+        AbrirFormulario(frmClientes)
+    End Sub
+
+    Private Sub AccordionControlElement14_Click(sender As Object, e As EventArgs) Handles accClasesDispo.Click
+        AbrirFormulario(frmClasesDispositivos)
+    End Sub
+
+    Private Sub AccordionControlElement9_Click(sender As Object, e As EventArgs) Handles accTiposValvulas.Click
+        AbrirFormulario(frmTiposValvulas)
+    End Sub
+
+    Private Sub accValLocClien_Click(sender As Object, e As EventArgs) Handles accValLocClien.Click
+        AbrirFormulario(frmValv_Loc_Cli)
+    End Sub
+
+    Private Sub accRoles_Click(sender As Object, e As EventArgs) Handles accRoles.Click
+        AbrirFormulario(frmRoles)
+    End Sub
+
+    Private Sub accTiposMedicion_Click(sender As Object, e As EventArgs) Handles accTiposMedicion.Click
+        AbrirFormulario(frmTiposMediciones)
     End Sub
 
 

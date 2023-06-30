@@ -64,10 +64,15 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ADMIN_SISTEMA\DUsuarios.vb" />
+    <Compile Include="Admin_Sistema\DTipoValv.vb" />
+    <Compile Include="Admin_Sistema\DTipoMed.vb" />
+    <Compile Include="Admin_Sistema\DClases.vb" />
+    <Compile Include="Admin_Sistema\DUsuarios.vb" />
     <Compile Include="ConexionesBD\ConexionBD_Externa.vb" />
     <Compile Include="ConexionesBD\ConexionBD_Local.vb" />
     <Compile Include="ConexionesBD\GlobalesConexiones.vb" />
+    <Compile Include="Gestión_General\DClientes.vb" />
+    <Compile Include="Gestión_General\DLocales.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -83,7 +88,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="PRINCIPAL\DLogin.vb" />
+    <Compile Include="Principal\DLogin.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

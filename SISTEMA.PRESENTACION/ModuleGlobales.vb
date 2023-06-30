@@ -3,7 +3,7 @@
 Public Module ModuleGlobales
     Public pbRegistros As String
     Public pbContador As String
-
+    Public listado As DataTable = Nothing
 #Region "Usuario y Roles"
     Public usuario As String, correo As String = GlobalesConexiones.correo
     Public nombreUsuario As String
