@@ -17,6 +17,7 @@ Public Class frmClientes
         btnGuardar.Enabled = True
         btnCancelar.Enabled = True
         btnRefrescar.Enabled = True
+        txtNIT.Enabled = True
     End Sub
     Private Sub Modificar()
         habilitarEditables()
@@ -54,6 +55,8 @@ Public Class frmClientes
         txtAlias.Text = ""
         cboTipoNIT.SelectedIndex = -1
         txtNIT.Text = ""
+        txtCorreo.Text = ""
+        chkEstado.Checked = False
         txtCreadoPor.Text = ""
         txtCreadoEl.Text = ""
         txtModificadoPor.Text = ""
@@ -65,13 +68,14 @@ Public Class frmClientes
         txtAlias.Enabled = False
         cboTipoNIT.Enabled = False
         txtNIT.Enabled = False
+        txtCorreo.Enabled = False
         chkEstado.Enabled = False
     End Sub
     Private Sub habilitarEditables()
         txtNombre.Enabled = True
         txtAlias.Enabled = True
         cboTipoNIT.Enabled = True
-        txtNIT.Enabled = True
+        txtCorreo.Enabled = True
         chkEstado.Enabled = True
     End Sub
 
@@ -97,7 +101,9 @@ Public Class frmClientes
                     End If
                 End If
             End If
-
+            If txtCorreo.Text.Trim.Length = 0 Then
+                mensaje += "Correo del Ciente" + vbCrLf
+            End If
             Return mensaje
         Catch ex As Exception
             mensajeError(ex)
@@ -107,7 +113,7 @@ Public Class frmClientes
 
     Private Sub cargarClientes()
         Try
-            GridControlClientes.DataSource = gestor.NConsultar()   'Llenado del grid
+            'GridControlClientes.DataSource = gestor.NConsultar()   'Llenado del grid
             GridViewClientes.BestFitColumns()
         Catch ex As Exception
             mensajeError(ex)
@@ -201,49 +207,49 @@ Public Class frmClientes
         If msj <> ("INFORMACIÓN INCOMPLETA:" + vbCrLf + vbCrLf) Then
             MessageBox.Show(msj, "Datos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else                                'Si los datos estan completos, se llena la clase constructora con la informacion
-            Dim tabla As DataTable = gestor.NBuscar(txtID.Text.ToString)
-            'CONSTRUIMOS LA CLASE CON LA INFORMACION A PROCESAR
-            clase.Nombre = txtNombre.Text.ToUpper.ToString
-            clase.Alias = txtAlias.Text.ToString
-            clase.Estado = CChar(IIf(chkEstado.CheckState = CheckState.Checked, "S", "N"))
-            clase.Codigo = txtCodNIT.Text.ToString
-            clase.Nit = txtNIT.Text.ToString
-            clase.CreadoPor = ModuleGlobales.usuario
-            If tabla.Rows.Count = 0 Then
-                If MessageBox.Show("¿Desea guardar el registro nuevo?" & vbCrLf & vbCrLf &
-                        "NOMBRE: " & clase.Nombre & vbCrLf &
-                        "NIT: " & clase.Nit, "Nuevo Registro", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
-                    'LLAMAMOS AL METODO INSERTAR ,ENVIANDOLE LA CLASE CONSTRUIDA CON LA INFO
-                    Dim resp As String = gestor.NInsertar(clase)
-                    If resp = "" Then       'Si se realiza la inserción nos retorna TRUE, e informamos al usuario
-                        MessageBox.Show("Registro almacenado con éxito", "Nuevo Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                        Guardar_Cancelar_Eliminar_Refrescar()
-                        cargarClientes()
-                    Else
-                        MessageBox.Show("Ocurrió un error inesperado, intente de nuevo:" & vbCrLf & resp, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                        cargarClientes()
-                    End If
-                End If
-            ElseIf tabla.Rows.Count > 0 Then
-                If MessageBox.Show("¿Desea modificar el registro?" & vbCrLf & vbCrLf &
-                        "---Actual---" & vbCrLf &
-                        "NOMBRE: " & GridViewClientes.GetRow(GridViewClientes.FocusedRowHandle)("NOMBRE_CLIENTE").ToString & vbCrLf &
-                        "NIT: " & GridViewClientes.GetRow(GridViewClientes.FocusedRowHandle)("NIT").ToString & vbCrLf & vbCrLf &
-                        "---Cambia á---" & vbCrLf &
-                        "NOMBRE: " & clase.Nombre & vbCrLf &
-                        "NIT: " & clase.Nit, "Modificar Registro", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
-                    'LLAMAMOS AL METODO MODIFICAR ,ENVIANDOLE LA CLASE CONSTRUIDA CON LA INFO
-                    Dim resp As String = gestor.NModificar(clase)
-                    If resp = "" Then       'Si se realiza la inserción nos retorna TRUE, e informamos al usuario
-                        MessageBox.Show("Registro modificado con éxito", "Modificar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                        Guardar_Cancelar_Eliminar_Refrescar()
-                        cargarClientes()
-                    Else
-                        MessageBox.Show("Ocurrió un error inesperado, intente de nuevo:" & vbCrLf & resp, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                        cargarClientes()
-                    End If
-                End If
-            End If
+            'Dim tabla As DataTable = gestor.NBuscar(txtID.Text.ToString)
+            ''CONSTRUIMOS LA CLASE CON LA INFORMACION A PROCESAR
+            'clase.Nombre = txtNombre.Text.ToUpper.ToString
+            'clase.Alias = txtAlias.Text.ToString
+            'clase.Estado = CChar(IIf(chkEstado.CheckState = CheckState.Checked, "S", "N"))
+            'clase.Codigo = txtCodNIT.Text.ToString
+            'clase.Nit = txtNIT.Text.ToString
+            'clase.CreadoPor = ModuleGlobales.usuario
+            'If tabla.Rows.Count = 0 Then
+            '    If MessageBox.Show("¿Desea guardar el registro nuevo?" & vbCrLf & vbCrLf &
+            '            "NOMBRE: " & clase.Nombre & vbCrLf &
+            '            "NIT: " & clase.Nit, "Nuevo Registro", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+            '        'LLAMAMOS AL METODO INSERTAR ,ENVIANDOLE LA CLASE CONSTRUIDA CON LA INFO
+            '        Dim resp As String = gestor.NInsertar(clase)
+            '        If resp = "" Then       'Si se realiza la inserción nos retorna TRUE, e informamos al usuario
+            '            MessageBox.Show("Registro almacenado con éxito", "Nuevo Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            '            Guardar_Cancelar_Eliminar_Refrescar()
+            '            cargarClientes()
+            '        Else
+            '            MessageBox.Show("Ocurrió un error inesperado, intente de nuevo:" & vbCrLf & resp, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            '            cargarClientes()
+            '        End If
+            '    End If
+            'ElseIf tabla.Rows.Count > 0 Then
+            '    If MessageBox.Show("¿Desea modificar el registro?" & vbCrLf & vbCrLf &
+            '            "---Actual---" & vbCrLf &
+            '            "NOMBRE: " & GridViewClientes.GetRow(GridViewClientes.FocusedRowHandle)("NOMBRE_CLIENTE").ToString & vbCrLf &
+            '            "NIT: " & GridViewClientes.GetRow(GridViewClientes.FocusedRowHandle)("NIT").ToString & vbCrLf & vbCrLf &
+            '            "---Cambia á---" & vbCrLf &
+            '            "NOMBRE: " & clase.Nombre & vbCrLf &
+            '            "NIT: " & clase.Nit, "Modificar Registro", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+            '        'LLAMAMOS AL METODO MODIFICAR ,ENVIANDOLE LA CLASE CONSTRUIDA CON LA INFO
+            '        Dim resp As String = gestor.NModificar(clase)
+            '        If resp = "" Then       'Si se realiza la inserción nos retorna TRUE, e informamos al usuario
+            '            MessageBox.Show("Registro modificado con éxito", "Modificar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            '            Guardar_Cancelar_Eliminar_Refrescar()
+            '            cargarClientes()
+            '        Else
+            '            MessageBox.Show("Ocurrió un error inesperado, intente de nuevo:" & vbCrLf & resp, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            '            cargarClientes()
+            '        End If
+            '    End If
+            'End If
 
         End If
     End Sub
@@ -253,7 +259,23 @@ Public Class frmClientes
     End Sub
 
     Private Sub btnEliminar_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnEliminar.ItemClick
-
+        If MessageBox.Show("¿Desea eliminar el registro seleccionado?" + vbCrLf + vbCrLf +
+            "ID = " + txtID.Text.ToString + "" + vbCrLf +
+            "NOMBRE = " + txtNombre.Text.ToString + "", "Eliminar registro", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+            Try
+                Dim valor As String = txtID.Text.ToString
+                'Dim resp As String = gestor.NEliminar(valor)
+                'If resp = "" Then
+                '    MessageBox.Show("El registro de eliminó con éxito", "Eliminar registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                '    Limpiar()
+                '    Guardar_Cancelar_Eliminar_Refrescar()
+                'Else
+                '    MessageBox.Show("Ocurrió un error inesperado, intente de nuevo:" & vbCrLf & resp, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                'End If
+            Catch ex As Exception
+                mensajeError(ex)
+            End Try
+        End If
     End Sub
 
     Private Sub btnRefrescar_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnRefrescar.ItemClick

@@ -23,7 +23,8 @@ Public Class Login
         Try
             cargarArchivoIni()
             Timer1.Start()
-            'txtContraseña.PasswordChar = CChar("*")
+            Label1.Parent = PictureBox1
+            Label2.Parent = PictureBox1
         Catch ex As Exception
             mensajeError(ex)
         End Try

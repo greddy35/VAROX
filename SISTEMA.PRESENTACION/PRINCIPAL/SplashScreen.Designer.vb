@@ -24,13 +24,14 @@ Partial Class SplashScreen
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SplashScreen))
         Me.peImage = New DevExpress.XtraEditors.PictureEdit()
-        Me.peLogo = New DevExpress.XtraEditors.PictureEdit()
         Me.labelStatus = New DevExpress.XtraEditors.LabelControl()
         Me.labelCopyright = New DevExpress.XtraEditors.LabelControl()
         Me.progressBarControl = New DevExpress.XtraEditors.MarqueeProgressBarControl()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.LabelControl1 = New DevExpress.XtraEditors.LabelControl()
         CType(Me.peImage.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.peLogo.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.progressBarControl.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'peImage
@@ -48,43 +49,34 @@ Partial Class SplashScreen
         Me.peImage.Properties.ShowMenu = False
         Me.peImage.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch
         Me.peImage.Properties.SvgImageColorizationMode = DevExpress.Utils.SvgImageColorizationMode.None
+        Me.peImage.Properties.ZoomAcceleration = 10.0R
         Me.peImage.Size = New System.Drawing.Size(598, 246)
         Me.peImage.TabIndex = 14
         '
-        'peLogo
-        '
-        Me.peLogo.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.peLogo.Cursor = System.Windows.Forms.Cursors.Default
-        Me.peLogo.EditValue = CType(resources.GetObject("peLogo.EditValue"), Object)
-        Me.peLogo.Location = New System.Drawing.Point(372, 329)
-        Me.peLogo.Margin = New System.Windows.Forms.Padding(4)
-        Me.peLogo.Name = "peLogo"
-        Me.peLogo.Properties.AllowFocused = False
-        Me.peLogo.Properties.Appearance.BackColor = System.Drawing.Color.Transparent
-        Me.peLogo.Properties.Appearance.Options.UseBackColor = True
-        Me.peLogo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
-        Me.peLogo.Properties.ShowMenu = False
-        Me.peLogo.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze
-        Me.peLogo.Size = New System.Drawing.Size(211, 59)
-        Me.peLogo.TabIndex = 13
-        '
         'labelStatus
         '
-        Me.labelStatus.Location = New System.Drawing.Point(32, 265)
+        Me.labelStatus.Appearance.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labelStatus.Appearance.ForeColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.labelStatus.Appearance.Options.UseFont = True
+        Me.labelStatus.Appearance.Options.UseForeColor = True
+        Me.labelStatus.Location = New System.Drawing.Point(4, 4)
         Me.labelStatus.Margin = New System.Windows.Forms.Padding(4, 4, 4, 1)
         Me.labelStatus.Name = "labelStatus"
-        Me.labelStatus.Size = New System.Drawing.Size(113, 16)
+        Me.labelStatus.Size = New System.Drawing.Size(149, 18)
         Me.labelStatus.TabIndex = 12
         Me.labelStatus.Text = "Iniciando Sistema..."
         '
         'labelCopyright
         '
+        Me.labelCopyright.Appearance.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labelCopyright.Appearance.ForeColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.labelCopyright.Appearance.Options.UseFont = True
+        Me.labelCopyright.Appearance.Options.UseForeColor = True
         Me.labelCopyright.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
-        Me.labelCopyright.Location = New System.Drawing.Point(32, 353)
+        Me.labelCopyright.Location = New System.Drawing.Point(4, 124)
         Me.labelCopyright.Margin = New System.Windows.Forms.Padding(4)
         Me.labelCopyright.Name = "labelCopyright"
-        Me.labelCopyright.Size = New System.Drawing.Size(54, 16)
+        Me.labelCopyright.Size = New System.Drawing.Size(61, 18)
         Me.labelCopyright.TabIndex = 11
         Me.labelCopyright.Text = "Copyright"
         '
@@ -92,37 +84,64 @@ Partial Class SplashScreen
         '
         Me.progressBarControl.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.progressBarControl.EditValue = 0
-        Me.progressBarControl.Location = New System.Drawing.Point(32, 286)
+        Me.progressBarControl.EditValue = -1000
+        Me.progressBarControl.Location = New System.Drawing.Point(4, 25)
         Me.progressBarControl.Margin = New System.Windows.Forms.Padding(4)
         Me.progressBarControl.Name = "progressBarControl"
-        Me.progressBarControl.Size = New System.Drawing.Size(536, 15)
+        Me.progressBarControl.Properties.ProgressAnimationMode = DevExpress.Utils.Drawing.ProgressAnimationMode.PingPong
+        Me.progressBarControl.Size = New System.Drawing.Size(594, 21)
         Me.progressBarControl.TabIndex = 10
+        '
+        'Panel1
+        '
+        Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
+        Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.Panel1.Controls.Add(Me.LabelControl1)
+        Me.Panel1.Controls.Add(Me.labelStatus)
+        Me.Panel1.Controls.Add(Me.progressBarControl)
+        Me.Panel1.Controls.Add(Me.labelCopyright)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Location = New System.Drawing.Point(1, 247)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(598, 146)
+        Me.Panel1.TabIndex = 15
+        '
+        'LabelControl1
+        '
+        Me.LabelControl1.Appearance.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelControl1.Appearance.ForeColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.LabelControl1.Appearance.Options.UseFont = True
+        Me.LabelControl1.Appearance.Options.UseForeColor = True
+        Me.LabelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
+        Me.LabelControl1.Location = New System.Drawing.Point(521, 124)
+        Me.LabelControl1.Margin = New System.Windows.Forms.Padding(4)
+        Me.LabelControl1.Name = "LabelControl1"
+        Me.LabelControl1.Size = New System.Drawing.Size(73, 18)
+        Me.LabelControl1.TabIndex = 13
+        Me.LabelControl1.Text = "VAROX 1.1"
         '
         'SplashScreen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(600, 394)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.peImage)
-        Me.Controls.Add(Me.peLogo)
-        Me.Controls.Add(Me.labelStatus)
-        Me.Controls.Add(Me.labelCopyright)
-        Me.Controls.Add(Me.progressBarControl)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "SplashScreen"
         Me.Padding = New System.Windows.Forms.Padding(1)
         Me.Text = "SplashScreen"
         CType(Me.peImage.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.peLogo.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.progressBarControl.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Private WithEvents peImage As DevExpress.XtraEditors.PictureEdit
-    Private WithEvents peLogo As DevExpress.XtraEditors.PictureEdit
     Private WithEvents labelStatus As DevExpress.XtraEditors.LabelControl
     Private WithEvents labelCopyright As DevExpress.XtraEditors.LabelControl
     Private WithEvents progressBarControl As DevExpress.XtraEditors.MarqueeProgressBarControl
+    Friend WithEvents Panel1 As Panel
+    Private WithEvents LabelControl1 As DevExpress.XtraEditors.LabelControl
 End Class

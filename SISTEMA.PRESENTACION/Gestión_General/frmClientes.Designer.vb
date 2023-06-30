@@ -35,6 +35,8 @@ Partial Class frmClientes
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.chkEstado = New DevExpress.XtraEditors.CheckEdit()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtNIT = New System.Windows.Forms.MaskedTextBox()
         Me.txtCodNIT = New System.Windows.Forms.TextBox()
@@ -69,24 +71,26 @@ Partial Class frmClientes
         Me.GridColumn10 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn11 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn12 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.chkEstado = New DevExpress.XtraEditors.CheckEdit()
+        Me.RibbonPageGroup3 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+        Me.btnLocalesVinculados = New DevExpress.XtraBars.BarButtonItem()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.txtCorreo = New System.Windows.Forms.MaskedTextBox()
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        CType(Me.chkEstado.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
         CType(Me.GridControlClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridViewClientes, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.chkEstado.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'RibbonControl
         '
         Me.RibbonControl.ExpandCollapseItem.Id = 0
-        Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.RibbonControl.SearchEditItem, Me.btnSalir, Me.btnNuevo, Me.btnGuardar, Me.btnModificar, Me.btnEliminar, Me.btnRefrescar, Me.btnCancelar})
+        Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.RibbonControl.SearchEditItem, Me.btnSalir, Me.btnNuevo, Me.btnGuardar, Me.btnModificar, Me.btnEliminar, Me.btnRefrescar, Me.btnCancelar, Me.btnLocalesVinculados})
         Me.RibbonControl.Location = New System.Drawing.Point(0, 0)
-        Me.RibbonControl.MaxItemId = 10
+        Me.RibbonControl.MaxItemId = 11
         Me.RibbonControl.Name = "RibbonControl"
         Me.RibbonControl.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1})
         Me.RibbonControl.Size = New System.Drawing.Size(968, 182)
@@ -157,7 +161,7 @@ Partial Class frmClientes
         '
         'RibbonPage1
         '
-        Me.RibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup1, Me.RibbonPageGroup2})
+        Me.RibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup1, Me.RibbonPageGroup3, Me.RibbonPageGroup2})
         Me.RibbonPage1.Name = "RibbonPage1"
         Me.RibbonPage1.Text = "Inicio"
         '
@@ -211,6 +215,8 @@ Partial Class frmClientes
         '
         'Panel2
         '
+        Me.Panel2.Controls.Add(Me.Label11)
+        Me.Panel2.Controls.Add(Me.txtCorreo)
         Me.Panel2.Controls.Add(Me.chkEstado)
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.Label2)
@@ -239,6 +245,27 @@ Partial Class frmClientes
         Me.Panel2.Size = New System.Drawing.Size(962, 149)
         Me.Panel2.TabIndex = 6
         '
+        'chkEstado
+        '
+        Me.chkEstado.Location = New System.Drawing.Point(95, 118)
+        Me.chkEstado.MenuManager = Me.RibbonControl
+        Me.chkEstado.Name = "chkEstado"
+        Me.chkEstado.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkEstado.Properties.Appearance.Options.UseFont = True
+        Me.chkEstado.Properties.Caption = "Inactivo"
+        Me.chkEstado.Size = New System.Drawing.Size(94, 22)
+        Me.chkEstado.TabIndex = 38
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(29, 120)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(60, 18)
+        Me.Label3.TabIndex = 37
+        Me.Label3.Text = "Activo:"
+        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -253,7 +280,7 @@ Partial Class frmClientes
         '
         Me.txtNIT.Enabled = False
         Me.txtNIT.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNIT.Location = New System.Drawing.Point(399, 84)
+        Me.txtNIT.Location = New System.Drawing.Point(399, 79)
         Me.txtNIT.Name = "txtNIT"
         Me.txtNIT.Size = New System.Drawing.Size(234, 26)
         Me.txtNIT.TabIndex = 35
@@ -264,7 +291,7 @@ Partial Class frmClientes
         Me.txtCodNIT.BackColor = System.Drawing.SystemColors.Info
         Me.txtCodNIT.Enabled = False
         Me.txtCodNIT.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCodNIT.Location = New System.Drawing.Point(399, 45)
+        Me.txtCodNIT.Location = New System.Drawing.Point(399, 44)
         Me.txtCodNIT.Name = "txtCodNIT"
         Me.txtCodNIT.Size = New System.Drawing.Size(65, 26)
         Me.txtCodNIT.TabIndex = 34
@@ -602,26 +629,40 @@ Partial Class frmClientes
         Me.GridColumn12.VisibleIndex = 10
         Me.GridColumn12.Width = 94
         '
-        'Label3
+        'RibbonPageGroup3
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(29, 120)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(60, 18)
-        Me.Label3.TabIndex = 37
-        Me.Label3.Text = "Activo:"
+        Me.RibbonPageGroup3.ItemLinks.Add(Me.btnLocalesVinculados)
+        Me.RibbonPageGroup3.Name = "RibbonPageGroup3"
+        Me.RibbonPageGroup3.Text = "Locales"
         '
-        'chkEstado
+        'btnLocalesVinculados
         '
-        Me.chkEstado.Location = New System.Drawing.Point(95, 118)
-        Me.chkEstado.MenuManager = Me.RibbonControl
-        Me.chkEstado.Name = "chkEstado"
-        Me.chkEstado.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chkEstado.Properties.Appearance.Options.UseFont = True
-        Me.chkEstado.Properties.Caption = "Inactivo"
-        Me.chkEstado.Size = New System.Drawing.Size(94, 22)
-        Me.chkEstado.TabIndex = 38
+        Me.btnLocalesVinculados.Caption = "Locales Vinculados"
+        Me.btnLocalesVinculados.Id = 10
+        Me.btnLocalesVinculados.ImageOptions.Image = CType(resources.GetObject("btnLocalesCliente.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnLocalesVinculados.ImageOptions.LargeImage = CType(resources.GetObject("btnLocalesCliente.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.btnLocalesVinculados.LargeWidth = 55
+        Me.btnLocalesVinculados.Name = "btnLocalesVinculados"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(329, 120)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(64, 18)
+        Me.Label11.TabIndex = 40
+        Me.Label11.Text = "Correo:"
+        '
+        'txtCorreo
+        '
+        Me.txtCorreo.Enabled = False
+        Me.txtCorreo.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCorreo.Location = New System.Drawing.Point(399, 114)
+        Me.txtCorreo.Name = "txtCorreo"
+        Me.txtCorreo.Size = New System.Drawing.Size(276, 26)
+        Me.txtCorreo.TabIndex = 39
+        Me.txtCorreo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'frmClientes
         '
@@ -641,10 +682,10 @@ Partial Class frmClientes
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.chkEstado.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         CType(Me.GridControlClientes, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridViewClientes, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.chkEstado.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -701,4 +742,8 @@ Partial Class frmClientes
     Friend WithEvents btnCancelar As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents chkEstado As DevExpress.XtraEditors.CheckEdit
     Friend WithEvents Label3 As Label
+    Friend WithEvents btnLocalesVinculados As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents RibbonPageGroup3 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
+    Friend WithEvents Label11 As Label
+    Friend WithEvents txtCorreo As MaskedTextBox
 End Class

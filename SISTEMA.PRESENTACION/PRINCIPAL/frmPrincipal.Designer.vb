@@ -26,9 +26,9 @@ Partial Class frmPrincipal
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPrincipal))
-        Dim SuperToolTip1 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-        Dim ToolTipTitleItem1 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-        Dim ToolTipItem1 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+        Dim SuperToolTip2 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+        Dim ToolTipTitleItem2 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+        Dim ToolTipItem2 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
         Me.contenedor = New DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer()
         Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
         Me.GroupBoxRestabPass = New System.Windows.Forms.GroupBox()
@@ -42,6 +42,7 @@ Partial Class frmPrincipal
         Me.btnCancelarRestablecerPass = New DevExpress.XtraEditors.SimpleButton()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.FluentFormDefaultManager1 = New DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(Me.components)
         Me.BarStaticItem6 = New DevExpress.XtraBars.BarStaticItem()
         Me.BarStaticItem7 = New DevExpress.XtraBars.BarStaticItem()
@@ -49,7 +50,6 @@ Partial Class frmPrincipal
         Me.lblRol = New DevExpress.XtraBars.BarStaticItem()
         Me.lblUser = New DevExpress.XtraBars.BarStaticItem()
         Me.lblNombre = New DevExpress.XtraBars.BarStaticItem()
-        Me.btnAcerca = New DevExpress.XtraBars.BarButtonItem()
         Me.AccordionControl1 = New DevExpress.XtraBars.Navigation.AccordionControl()
         Me.AccordionControlSeparator13 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
         Me.AccordionControlElement1 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
@@ -130,6 +130,7 @@ Partial Class frmPrincipal
         Me.PanelControl1.SuspendLayout()
         Me.GroupBoxRestabPass.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FluentFormDefaultManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AccordionControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FluentDesignFormControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -151,6 +152,7 @@ Partial Class frmPrincipal
         'PanelControl1
         '
         Me.PanelControl1.Controls.Add(Me.GroupBoxRestabPass)
+        Me.PanelControl1.Controls.Add(Me.PictureBox1)
         Me.PanelControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelControl1.Location = New System.Drawing.Point(0, 0)
         Me.PanelControl1.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
@@ -249,13 +251,13 @@ Partial Class frmPrincipal
         Me.btnVerPass.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.btnVerPass.Name = "btnVerPass"
         Me.btnVerPass.Size = New System.Drawing.Size(42, 32)
-        ToolTipTitleItem1.AllowHtmlText = DevExpress.Utils.DefaultBoolean.[True]
-        ToolTipTitleItem1.Text = "<b>Ver</b>"
-        ToolTipItem1.ImageOptions.Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
-        ToolTipItem1.Text = "Mostrar contraseñas ingresadas"
-        SuperToolTip1.Items.Add(ToolTipTitleItem1)
-        SuperToolTip1.Items.Add(ToolTipItem1)
-        Me.btnVerPass.SuperTip = SuperToolTip1
+        ToolTipTitleItem2.AllowHtmlText = DevExpress.Utils.DefaultBoolean.[True]
+        ToolTipTitleItem2.Text = "<b>Ver</b>"
+        ToolTipItem2.ImageOptions.Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
+        ToolTipItem2.Text = "Mostrar contraseñas ingresadas"
+        SuperToolTip2.Items.Add(ToolTipTitleItem2)
+        SuperToolTip2.Items.Add(ToolTipItem2)
+        Me.btnVerPass.SuperTip = SuperToolTip2
         Me.btnVerPass.TabIndex = 6
         '
         'btnCambiarPass
@@ -306,10 +308,21 @@ Partial Class frmPrincipal
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Contraseña Nueva:"
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PictureBox1.Location = New System.Drawing.Point(2, 2)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(976, 634)
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
+        '
         'FluentFormDefaultManager1
         '
         Me.FluentFormDefaultManager1.Form = Me
-        Me.FluentFormDefaultManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.BarStaticItem6, Me.BarStaticItem7, Me.BarStaticItem8, Me.lblRol, Me.lblUser, Me.lblNombre, Me.btnAcerca})
+        Me.FluentFormDefaultManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.BarStaticItem6, Me.BarStaticItem7, Me.BarStaticItem8, Me.lblRol, Me.lblUser, Me.lblNombre})
         Me.FluentFormDefaultManager1.MaxItemId = 10
         '
         'BarStaticItem6
@@ -415,21 +428,6 @@ Partial Class frmPrincipal
         Me.lblNombre.Size = New System.Drawing.Size(250, 28)
         Me.lblNombre.Width = 250
         '
-        'btnAcerca
-        '
-        Me.btnAcerca.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right
-        Me.btnAcerca.Caption = "Acerca"
-        Me.btnAcerca.Id = 9
-        Me.btnAcerca.ImageOptions.Image = CType(resources.GetObject("btnAcerca.ImageOptions.Image"), System.Drawing.Image)
-        Me.btnAcerca.ImageOptions.LargeImage = CType(resources.GetObject("btnAcerca.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.btnAcerca.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAcerca.ItemAppearance.Normal.ForeColor = System.Drawing.Color.Black
-        Me.btnAcerca.ItemAppearance.Normal.Options.UseFont = True
-        Me.btnAcerca.ItemAppearance.Normal.Options.UseForeColor = True
-        Me.btnAcerca.Name = "btnAcerca"
-        Me.btnAcerca.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
-        Me.btnAcerca.Size = New System.Drawing.Size(120, 0)
-        '
         'AccordionControl1
         '
         Me.AccordionControl1.Dock = System.Windows.Forms.DockStyle.Left
@@ -503,7 +501,6 @@ Partial Class frmPrincipal
         'AccordionControlElement7
         '
         Me.AccordionControlElement7.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlMantenimientos, Me.AccordionControlElement13})
-        Me.AccordionControlElement7.Expanded = True
         Me.AccordionControlElement7.ImageOptions.Image = CType(resources.GetObject("AccordionControlElement7.ImageOptions.Image"), System.Drawing.Image)
         Me.AccordionControlElement7.Name = "AccordionControlElement7"
         Me.AccordionControlElement7.Text = "Gestión General"
@@ -574,6 +571,7 @@ Partial Class frmPrincipal
         'AccordionControlAdminSistema
         '
         Me.AccordionControlAdminSistema.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeguridad, Me.AccordionControlElement3})
+        Me.AccordionControlAdminSistema.Expanded = True
         Me.AccordionControlAdminSistema.ImageOptions.Image = CType(resources.GetObject("AccordionControlAdminSistema.ImageOptions.Image"), System.Drawing.Image)
         Me.AccordionControlAdminSistema.Name = "AccordionControlAdminSistema"
         Me.AccordionControlAdminSistema.Text = "Administración de Sistema"
@@ -715,7 +713,7 @@ Partial Class frmPrincipal
         'FluentDesignFormControl1
         '
         Me.FluentDesignFormControl1.FluentDesignForm = Me
-        Me.FluentDesignFormControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.BarStaticItem6, Me.BarStaticItem7, Me.BarStaticItem8, Me.lblRol, Me.lblUser, Me.lblNombre, Me.btnAcerca})
+        Me.FluentDesignFormControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.BarStaticItem6, Me.BarStaticItem7, Me.BarStaticItem8, Me.lblRol, Me.lblUser, Me.lblNombre})
         Me.FluentDesignFormControl1.Location = New System.Drawing.Point(0, 0)
         Me.FluentDesignFormControl1.Manager = Me.FluentFormDefaultManager1
         Me.FluentDesignFormControl1.Margin = New System.Windows.Forms.Padding(2)
@@ -729,7 +727,6 @@ Partial Class frmPrincipal
         Me.FluentDesignFormControl1.TitleItemLinks.Add(Me.lblNombre)
         Me.FluentDesignFormControl1.TitleItemLinks.Add(Me.lblRol)
         Me.FluentDesignFormControl1.TitleItemLinks.Add(Me.BarStaticItem7)
-        Me.FluentDesignFormControl1.TitleItemLinks.Add(Me.btnAcerca)
         '
         'TimerConexión
         '
@@ -1019,12 +1016,12 @@ Partial Class frmPrincipal
         Me.Controls.Add(Me.BarDockControl5)
         Me.Controls.Add(Me.FluentDesignFormControl1)
         Me.FluentDesignFormControl = Me.FluentDesignFormControl1
-        Me.IconOptions.SvgImage = CType(resources.GetObject("frmPrincipal.IconOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.IconOptions.Image = CType(resources.GetObject("frmPrincipal.IconOptions.Image"), System.Drawing.Image)
         Me.KeyPreview = True
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frmPrincipal"
         Me.NavigationControl = Me.AccordionControl1
-        Me.Text = "Menú Principal      "
+        Me.Text = "VAROX 1.1 "
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.contenedor.ResumeLayout(False)
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1032,6 +1029,7 @@ Partial Class frmPrincipal
         Me.GroupBoxRestabPass.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FluentFormDefaultManager1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AccordionControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FluentDesignFormControl1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1137,5 +1135,5 @@ Partial Class frmPrincipal
     Friend WithEvents BarDockControl5 As DevExpress.XtraBars.BarDockControl
     Friend WithEvents BarDockControl6 As DevExpress.XtraBars.BarDockControl
     Friend WithEvents BarDockControl8 As DevExpress.XtraBars.BarDockControl
-    Private WithEvents btnAcerca As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

@@ -24,6 +24,7 @@ Public Class DTipoMed
         Try
             Dim Comando As New SqlCommand("AS_actualizarTipoMed", MyBase.conn)
             Comando.CommandType = CommandType.StoredProcedure
+            Comando.Parameters.Add("@id", SqlDbType.VarChar).Value = Obj.Id
             Comando.Parameters.Add("@nombre", SqlDbType.VarChar).Value = Obj.Nombre
             Comando.Parameters.Add("@descripcion", SqlDbType.VarChar).Value = Obj.Descripcion
             Comando.Parameters.Add("@usuario", SqlDbType.VarChar).Value = Obj.ModificadoPor

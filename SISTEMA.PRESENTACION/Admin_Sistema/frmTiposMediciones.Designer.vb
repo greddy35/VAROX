@@ -46,7 +46,6 @@ Partial Class frmTiposMediciones
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtDescripcion = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtNombreTipo = New System.Windows.Forms.TextBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
@@ -59,6 +58,7 @@ Partial Class frmTiposMediciones
         Me.GridColumn10 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn11 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn12 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.txtDescripcion = New System.Windows.Forms.RichTextBox()
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -76,7 +76,7 @@ Partial Class frmTiposMediciones
         Me.RibbonControl.MaxItemId = 8
         Me.RibbonControl.Name = "RibbonControl"
         Me.RibbonControl.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1})
-        Me.RibbonControl.Size = New System.Drawing.Size(908, 182)
+        Me.RibbonControl.Size = New System.Drawing.Size(1042, 182)
         Me.RibbonControl.StatusBar = Me.RibbonStatusBar
         '
         'btnNuevo
@@ -85,8 +85,13 @@ Partial Class frmTiposMediciones
         Me.btnNuevo.Id = 1
         Me.btnNuevo.ImageOptions.Image = CType(resources.GetObject("btnNuevo.ImageOptions.Image"), System.Drawing.Image)
         Me.btnNuevo.ImageOptions.LargeImage = CType(resources.GetObject("btnNuevo.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.btnNuevo.LargeWidth = 55
+        Me.btnNuevo.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNuevo.ItemAppearance.Normal.Options.UseFont = True
+        Me.btnNuevo.ItemShortcut = New DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.N))
+        Me.btnNuevo.LargeWidth = 65
         Me.btnNuevo.Name = "btnNuevo"
+        Me.btnNuevo.ShortcutKeyDisplayString = "Ctrl+N"
+        Me.btnNuevo.ShowItemShortcut = DevExpress.Utils.DefaultBoolean.[True]
         '
         'btnGuardar
         '
@@ -94,8 +99,13 @@ Partial Class frmTiposMediciones
         Me.btnGuardar.Id = 2
         Me.btnGuardar.ImageOptions.Image = CType(resources.GetObject("btnGuardar.ImageOptions.Image"), System.Drawing.Image)
         Me.btnGuardar.ImageOptions.LargeImage = CType(resources.GetObject("btnGuardar.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.btnGuardar.LargeWidth = 55
+        Me.btnGuardar.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGuardar.ItemAppearance.Normal.Options.UseFont = True
+        Me.btnGuardar.ItemShortcut = New DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.G))
+        Me.btnGuardar.LargeWidth = 65
         Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.ShortcutKeyDisplayString = "Ctrl+G"
+        Me.btnGuardar.ShowItemShortcut = DevExpress.Utils.DefaultBoolean.[True]
         '
         'btnModificar
         '
@@ -103,8 +113,13 @@ Partial Class frmTiposMediciones
         Me.btnModificar.Id = 3
         Me.btnModificar.ImageOptions.Image = CType(resources.GetObject("btnModificar.ImageOptions.Image"), System.Drawing.Image)
         Me.btnModificar.ImageOptions.LargeImage = CType(resources.GetObject("btnModificar.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.btnModificar.LargeWidth = 55
+        Me.btnModificar.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnModificar.ItemAppearance.Normal.Options.UseFont = True
+        Me.btnModificar.ItemShortcut = New DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.M))
+        Me.btnModificar.LargeWidth = 65
         Me.btnModificar.Name = "btnModificar"
+        Me.btnModificar.ShortcutKeyDisplayString = "Ctrl+M"
+        Me.btnModificar.ShowItemShortcut = DevExpress.Utils.DefaultBoolean.[True]
         '
         'btnEliminar
         '
@@ -112,8 +127,13 @@ Partial Class frmTiposMediciones
         Me.btnEliminar.Id = 4
         Me.btnEliminar.ImageOptions.Image = CType(resources.GetObject("btnEliminar.ImageOptions.Image"), System.Drawing.Image)
         Me.btnEliminar.ImageOptions.LargeImage = CType(resources.GetObject("btnEliminar.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.btnEliminar.LargeWidth = 55
+        Me.btnEliminar.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEliminar.ItemAppearance.Normal.Options.UseFont = True
+        Me.btnEliminar.ItemShortcut = New DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.Delete)
+        Me.btnEliminar.LargeWidth = 65
         Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.ShortcutKeyDisplayString = "Supr"
+        Me.btnEliminar.ShowItemShortcut = DevExpress.Utils.DefaultBoolean.[True]
         '
         'btnRefrescar
         '
@@ -121,8 +141,13 @@ Partial Class frmTiposMediciones
         Me.btnRefrescar.Id = 5
         Me.btnRefrescar.ImageOptions.Image = CType(resources.GetObject("btnRefrescar.ImageOptions.Image"), System.Drawing.Image)
         Me.btnRefrescar.ImageOptions.LargeImage = CType(resources.GetObject("btnRefrescar.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.btnRefrescar.LargeWidth = 55
+        Me.btnRefrescar.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRefrescar.ItemAppearance.Normal.Options.UseFont = True
+        Me.btnRefrescar.ItemShortcut = New DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.R))
+        Me.btnRefrescar.LargeWidth = 65
         Me.btnRefrescar.Name = "btnRefrescar"
+        Me.btnRefrescar.ShortcutKeyDisplayString = "Ctrl+R"
+        Me.btnRefrescar.ShowItemShortcut = DevExpress.Utils.DefaultBoolean.[True]
         '
         'btnSalir
         '
@@ -130,8 +155,13 @@ Partial Class frmTiposMediciones
         Me.btnSalir.Id = 6
         Me.btnSalir.ImageOptions.Image = CType(resources.GetObject("btnSalir.ImageOptions.Image"), System.Drawing.Image)
         Me.btnSalir.ImageOptions.LargeImage = CType(resources.GetObject("btnSalir.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.btnSalir.LargeWidth = 55
+        Me.btnSalir.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSalir.ItemAppearance.Normal.Options.UseFont = True
+        Me.btnSalir.ItemShortcut = New DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Delete))
+        Me.btnSalir.LargeWidth = 65
         Me.btnSalir.Name = "btnSalir"
+        Me.btnSalir.ShortcutKeyDisplayString = "Ctrl+Supr"
+        Me.btnSalir.ShowItemShortcut = DevExpress.Utils.DefaultBoolean.[True]
         '
         'btnCancelar
         '
@@ -139,7 +169,13 @@ Partial Class frmTiposMediciones
         Me.btnCancelar.Id = 7
         Me.btnCancelar.ImageOptions.Image = CType(resources.GetObject("btnCancelar.ImageOptions.Image"), System.Drawing.Image)
         Me.btnCancelar.ImageOptions.LargeImage = CType(resources.GetObject("btnCancelar.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.btnCancelar.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancelar.ItemAppearance.Normal.Options.UseFont = True
+        Me.btnCancelar.ItemShortcut = New DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Z))
+        Me.btnCancelar.LargeWidth = 65
         Me.btnCancelar.Name = "btnCancelar"
+        Me.btnCancelar.ShortcutKeyDisplayString = "Ctrl+Z"
+        Me.btnCancelar.ShowItemShortcut = DevExpress.Utils.DefaultBoolean.[True]
         '
         'RibbonPage1
         '
@@ -166,10 +202,10 @@ Partial Class frmTiposMediciones
         '
         'RibbonStatusBar
         '
-        Me.RibbonStatusBar.Location = New System.Drawing.Point(0, 583)
+        Me.RibbonStatusBar.Location = New System.Drawing.Point(0, 590)
         Me.RibbonStatusBar.Name = "RibbonStatusBar"
         Me.RibbonStatusBar.Ribbon = Me.RibbonControl
-        Me.RibbonStatusBar.Size = New System.Drawing.Size(908, 27)
+        Me.RibbonStatusBar.Size = New System.Drawing.Size(1042, 27)
         '
         'TableLayoutPanel1
         '
@@ -181,9 +217,9 @@ Partial Class frmTiposMediciones
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 182)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 115.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 150.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(908, 401)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1042, 408)
         Me.TableLayoutPanel1.TabIndex = 4
         '
         'Panel1
@@ -192,11 +228,12 @@ Partial Class frmTiposMediciones
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(3, 3)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(902, 109)
+        Me.Panel1.Size = New System.Drawing.Size(1036, 144)
         Me.Panel1.TabIndex = 0
         '
         'Panel2
         '
+        Me.Panel2.Controls.Add(Me.txtDescripcion)
         Me.Panel2.Controls.Add(Me.txtID)
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.txtModificadoEl)
@@ -208,32 +245,33 @@ Partial Class frmTiposMediciones
         Me.Panel2.Controls.Add(Me.Label7)
         Me.Panel2.Controls.Add(Me.Label6)
         Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Controls.Add(Me.txtDescripcion)
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.txtNombreTipo)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel2.Font = New System.Drawing.Font("Tahoma", 10.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(902, 109)
+        Me.Panel2.Size = New System.Drawing.Size(1036, 144)
         Me.Panel2.TabIndex = 6
         '
         'txtID
         '
         Me.txtID.Enabled = False
-        Me.txtID.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtID.Location = New System.Drawing.Point(124, 7)
+        Me.txtID.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtID.ForeColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.txtID.Location = New System.Drawing.Point(142, 5)
         Me.txtID.Name = "txtID"
-        Me.txtID.Size = New System.Drawing.Size(88, 26)
+        Me.txtID.Size = New System.Drawing.Size(88, 28)
         Me.txtID.TabIndex = 23
         Me.txtID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(87, 12)
+        Me.Label1.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(99, 12)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(31, 18)
+        Me.Label1.Size = New System.Drawing.Size(37, 21)
         Me.Label1.TabIndex = 22
         Me.Label1.Text = "ID:"
         '
@@ -241,10 +279,11 @@ Partial Class frmTiposMediciones
         '
         Me.txtModificadoEl.BackColor = System.Drawing.SystemColors.Info
         Me.txtModificadoEl.Enabled = False
-        Me.txtModificadoEl.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtModificadoEl.Location = New System.Drawing.Point(742, 41)
+        Me.txtModificadoEl.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtModificadoEl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.txtModificadoEl.Location = New System.Drawing.Point(827, 34)
         Me.txtModificadoEl.Name = "txtModificadoEl"
-        Me.txtModificadoEl.Size = New System.Drawing.Size(137, 26)
+        Me.txtModificadoEl.Size = New System.Drawing.Size(175, 28)
         Me.txtModificadoEl.TabIndex = 18
         Me.txtModificadoEl.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -252,10 +291,11 @@ Partial Class frmTiposMediciones
         '
         Me.txtModificadoPor.BackColor = System.Drawing.SystemColors.Info
         Me.txtModificadoPor.Enabled = False
-        Me.txtModificadoPor.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtModificadoPor.Location = New System.Drawing.Point(742, 9)
+        Me.txtModificadoPor.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtModificadoPor.ForeColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.txtModificadoPor.Location = New System.Drawing.Point(827, 3)
         Me.txtModificadoPor.Name = "txtModificadoPor"
-        Me.txtModificadoPor.Size = New System.Drawing.Size(137, 26)
+        Me.txtModificadoPor.Size = New System.Drawing.Size(175, 28)
         Me.txtModificadoPor.TabIndex = 17
         Me.txtModificadoPor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -263,10 +303,11 @@ Partial Class frmTiposMediciones
         '
         Me.txtCreadoEl.BackColor = System.Drawing.SystemColors.Info
         Me.txtCreadoEl.Enabled = False
-        Me.txtCreadoEl.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCreadoEl.Location = New System.Drawing.Point(459, 41)
+        Me.txtCreadoEl.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCreadoEl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.txtCreadoEl.Location = New System.Drawing.Point(491, 35)
         Me.txtCreadoEl.Name = "txtCreadoEl"
-        Me.txtCreadoEl.Size = New System.Drawing.Size(137, 26)
+        Me.txtCreadoEl.Size = New System.Drawing.Size(175, 28)
         Me.txtCreadoEl.TabIndex = 16
         Me.txtCreadoEl.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -274,92 +315,83 @@ Partial Class frmTiposMediciones
         '
         Me.txtCreadoPor.BackColor = System.Drawing.SystemColors.Info
         Me.txtCreadoPor.Enabled = False
-        Me.txtCreadoPor.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCreadoPor.Location = New System.Drawing.Point(459, 9)
+        Me.txtCreadoPor.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCreadoPor.ForeColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.txtCreadoPor.Location = New System.Drawing.Point(491, 3)
         Me.txtCreadoPor.Name = "txtCreadoPor"
-        Me.txtCreadoPor.Size = New System.Drawing.Size(137, 26)
+        Me.txtCreadoPor.Size = New System.Drawing.Size(175, 28)
         Me.txtCreadoPor.TabIndex = 15
         Me.txtCreadoPor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Tahoma", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(623, 44)
+        Me.Label8.Font = New System.Drawing.Font("Tahoma", 10.2!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(690, 38)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(113, 18)
+        Me.Label8.Size = New System.Drawing.Size(131, 21)
         Me.Label8.TabIndex = 14
         Me.Label8.Text = "Modificado el:"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Tahoma", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(612, 17)
+        Me.Label9.Font = New System.Drawing.Font("Tahoma", 10.2!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(676, 10)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(124, 18)
+        Me.Label9.Size = New System.Drawing.Size(145, 21)
         Me.Label9.TabIndex = 13
         Me.Label9.Text = "Modificado por:"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Tahoma", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(369, 45)
+        Me.Label7.Font = New System.Drawing.Font("Tahoma", 10.2!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(389, 41)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(84, 18)
+        Me.Label7.Size = New System.Drawing.Size(96, 21)
         Me.Label7.TabIndex = 12
         Me.Label7.Text = "Creado el:"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Tahoma", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(358, 15)
+        Me.Label6.Font = New System.Drawing.Font("Tahoma", 10.2!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(375, 10)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(95, 18)
+        Me.Label6.Size = New System.Drawing.Size(110, 21)
         Me.Label6.TabIndex = 11
         Me.Label6.Text = "Creado por:"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(10, 42)
+        Me.Label2.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(10, 43)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(108, 18)
+        Me.Label2.Size = New System.Drawing.Size(126, 21)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Nombre Tipo:"
-        '
-        'txtDescripcion
-        '
-        Me.txtDescripcion.Enabled = False
-        Me.txtDescripcion.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDescripcion.Location = New System.Drawing.Point(124, 71)
-        Me.txtDescripcion.MaxLength = 100
-        Me.txtDescripcion.Name = "txtDescripcion"
-        Me.txtDescripcion.Size = New System.Drawing.Size(436, 26)
-        Me.txtDescripcion.TabIndex = 5
-        Me.txtDescripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(17, 74)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(101, 18)
+        Me.Label3.Size = New System.Drawing.Size(116, 21)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Descripción:"
         '
         'txtNombreTipo
         '
         Me.txtNombreTipo.Enabled = False
-        Me.txtNombreTipo.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNombreTipo.Location = New System.Drawing.Point(124, 39)
+        Me.txtNombreTipo.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNombreTipo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.txtNombreTipo.Location = New System.Drawing.Point(142, 37)
         Me.txtNombreTipo.MaxLength = 50
         Me.txtNombreTipo.Name = "txtNombreTipo"
-        Me.txtNombreTipo.Size = New System.Drawing.Size(226, 26)
+        Me.txtNombreTipo.Size = New System.Drawing.Size(226, 28)
         Me.txtNombreTipo.TabIndex = 3
         Me.txtNombreTipo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -367,9 +399,9 @@ Partial Class frmTiposMediciones
         '
         Me.Panel4.Controls.Add(Me.GridControlTiposMediciones)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel4.Location = New System.Drawing.Point(3, 118)
+        Me.Panel4.Location = New System.Drawing.Point(3, 153)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(902, 280)
+        Me.Panel4.Size = New System.Drawing.Size(1036, 288)
         Me.Panel4.TabIndex = 1
         '
         'GridControlTiposMediciones
@@ -379,13 +411,32 @@ Partial Class frmTiposMediciones
         Me.GridControlTiposMediciones.MainView = Me.GridViewTiposMediciones
         Me.GridControlTiposMediciones.MenuManager = Me.RibbonControl
         Me.GridControlTiposMediciones.Name = "GridControlTiposMediciones"
-        Me.GridControlTiposMediciones.Size = New System.Drawing.Size(902, 280)
+        Me.GridControlTiposMediciones.Size = New System.Drawing.Size(1036, 288)
         Me.GridControlTiposMediciones.TabIndex = 1
         Me.GridControlTiposMediciones.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridViewTiposMediciones})
         '
         'GridViewTiposMediciones
         '
+        Me.GridViewTiposMediciones.Appearance.Empty.BackColor = System.Drawing.Color.FromArgb(CType(CType(90, Byte), Integer), CType(CType(202, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.GridViewTiposMediciones.Appearance.Empty.Options.UseBackColor = True
+        Me.GridViewTiposMediciones.Appearance.GroupRow.Font = New System.Drawing.Font("Tahoma", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridViewTiposMediciones.Appearance.GroupRow.ForeColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.GridViewTiposMediciones.Appearance.GroupRow.Options.UseFont = True
+        Me.GridViewTiposMediciones.Appearance.GroupRow.Options.UseForeColor = True
+        Me.GridViewTiposMediciones.Appearance.HeaderPanel.Font = New System.Drawing.Font("Tahoma", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridViewTiposMediciones.Appearance.HeaderPanel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.GridViewTiposMediciones.Appearance.HeaderPanel.Options.UseFont = True
+        Me.GridViewTiposMediciones.Appearance.HeaderPanel.Options.UseForeColor = True
+        Me.GridViewTiposMediciones.Appearance.Row.Font = New System.Drawing.Font("Tahoma", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridViewTiposMediciones.Appearance.Row.ForeColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.GridViewTiposMediciones.Appearance.Row.Options.UseFont = True
+        Me.GridViewTiposMediciones.Appearance.Row.Options.UseForeColor = True
+        Me.GridViewTiposMediciones.Appearance.SelectedRow.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridViewTiposMediciones.Appearance.SelectedRow.ForeColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.GridViewTiposMediciones.Appearance.SelectedRow.Options.UseFont = True
+        Me.GridViewTiposMediciones.Appearance.SelectedRow.Options.UseForeColor = True
         Me.GridViewTiposMediciones.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn1, Me.GridColumn2, Me.GridColumn3, Me.GridColumn9, Me.GridColumn10, Me.GridColumn11, Me.GridColumn12})
+        Me.GridViewTiposMediciones.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus
         Me.GridViewTiposMediciones.GridControl = Me.GridControlTiposMediciones
         Me.GridViewTiposMediciones.Name = "GridViewTiposMediciones"
         '
@@ -474,11 +525,22 @@ Partial Class frmTiposMediciones
         Me.GridColumn12.VisibleIndex = 6
         Me.GridColumn12.Width = 94
         '
+        'txtDescripcion
+        '
+        Me.txtDescripcion.Font = New System.Drawing.Font("Tahoma", 10.2!)
+        Me.txtDescripcion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.txtDescripcion.Location = New System.Drawing.Point(142, 72)
+        Me.txtDescripcion.MaxLength = 100
+        Me.txtDescripcion.Name = "txtDescripcion"
+        Me.txtDescripcion.Size = New System.Drawing.Size(343, 69)
+        Me.txtDescripcion.TabIndex = 24
+        Me.txtDescripcion.Text = ""
+        '
         'frmTiposMediciones
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(908, 610)
+        Me.ClientSize = New System.Drawing.Size(1042, 617)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.RibbonStatusBar)
         Me.Controls.Add(Me.RibbonControl)
@@ -525,7 +587,6 @@ Partial Class frmTiposMediciones
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents txtDescripcion As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents txtNombreTipo As TextBox
     Friend WithEvents Panel4 As Panel
@@ -539,4 +600,5 @@ Partial Class frmTiposMediciones
     Friend WithEvents GridColumn11 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn12 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents btnCancelar As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents txtDescripcion As RichTextBox
 End Class

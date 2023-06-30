@@ -1,15 +1,14 @@
-﻿Imports System.Data.SqlClient
-Imports SISTEMA.ENTIDADES
+﻿Imports SISTEMA.ENTIDADES
+Imports System.Data.SqlClient
 
-Public Class DTipoValv
-
+Public Class DClientes
     Inherits ConexionBD_Local
-    Public Function Insertar(ByVal Obj As TipoMed_TiposValv) As String
+    Public Function Insertar(ByVal Obj As Clientes) As String
         Try
-            Dim Comando As New SqlCommand("AS_insertarTipoValv", MyBase.conn)
+            Dim Comando As New SqlCommand("AS_insertarTipoMed", MyBase.conn)
             Comando.CommandType = CommandType.StoredProcedure
             Comando.Parameters.Add("@nombre", SqlDbType.VarChar).Value = Obj.Nombre
-            Comando.Parameters.Add("@descripcion", SqlDbType.VarChar).Value = Obj.Descripcion
+            Comando.Parameters.Add("@descripcion", SqlDbType.VarChar).Value = Obj.Codigo
             Comando.Parameters.Add("@usuario", SqlDbType.VarChar).Value = Obj.CreadoPor
             MyBase.conn.Open()
             Comando.ExecuteNonQuery()
@@ -20,13 +19,12 @@ Public Class DTipoValv
         End Try
     End Function
 
-    Public Function Modificar(ByVal Obj As TipoMed_TiposValv) As String
+    Public Function Modificar(ByVal Obj As Clientes) As String
         Try
-            Dim Comando As New SqlCommand("AS_actualizarTipoValv", MyBase.conn)
+            Dim Comando As New SqlCommand("AS_actualizarTipoMed", MyBase.conn)
             Comando.CommandType = CommandType.StoredProcedure
-            Comando.Parameters.Add("@id", SqlDbType.VarChar).Value = Obj.Id
             Comando.Parameters.Add("@nombre", SqlDbType.VarChar).Value = Obj.Nombre
-            Comando.Parameters.Add("@descripcion", SqlDbType.VarChar).Value = Obj.Descripcion
+            Comando.Parameters.Add("@descripcion", SqlDbType.VarChar).Value = Obj.Codigo
             Comando.Parameters.Add("@usuario", SqlDbType.VarChar).Value = Obj.ModificadoPor
             MyBase.conn.Open()
             Comando.ExecuteNonQuery()
@@ -39,7 +37,7 @@ Public Class DTipoValv
 
     Public Function Eliminar(ByVal valor As String) As String
         Try
-            Dim Comando As New SqlCommand("AS_eliminarTipoValv", MyBase.conn)
+            Dim Comando As New SqlCommand("AS_eliminarTipoMed", MyBase.conn)
             Comando.CommandType = CommandType.StoredProcedure
             Comando.Parameters.Add("@id", SqlDbType.VarChar).Value = valor
             MyBase.conn.Open()
@@ -58,7 +56,7 @@ Public Class DTipoValv
         Try
             Dim Resultado As SqlDataReader
             Dim Tabla As New DataTable
-            Dim Comando As New SqlCommand("AS_consultarTipoValv", MyBase.conn)
+            Dim Comando As New SqlCommand("AS_consultarTipoMed", MyBase.conn)
             Comando.CommandType = CommandType.StoredProcedure
             MyBase.conn.Open()                                                              'Abrimos conexion a la BD
             Resultado = Comando.ExecuteReader()
@@ -76,7 +74,7 @@ Public Class DTipoValv
         Try
             Dim Resultado As SqlDataReader
             Dim Tabla As New DataTable
-            Dim Comando As New SqlCommand("AS_buscarTipoValv", MyBase.conn)
+            Dim Comando As New SqlCommand("AS_buscarTipoMed", MyBase.conn)
             Comando.CommandType = CommandType.StoredProcedure
             Comando.Parameters.Add("@id", SqlDbType.VarChar).Value = valor
             MyBase.conn.Open()                                                              'Abrimos conexion a la BD

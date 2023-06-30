@@ -1,13 +1,14 @@
 ﻿Imports DevExpress.Utils
 Imports DevExpress.XtraBars
 Imports DevExpress.XtraGrid.Views.Base
+Imports DevExpress.XtraGrid.Views.Grid
 Imports SISTEMA.ENTIDADES
 Imports SISTEMA.NEGOCIO
 
 Public Class frmTiposMediciones
 #Region "Variables Globales"
     Dim gestor As New NTipoMed
-    Dim clase As New TipoMed
+    Dim clase As New TipoMed_TiposValv
 #End Region
 
 #Region "Funciones y Metodos"
@@ -32,12 +33,15 @@ Public Class frmTiposMediciones
         inhabilitarTodo()
         btnNuevo.Enabled = True
         btnRefrescar.Enabled = True
+        btnCancelar.Enabled = True
     End Sub
     Private Sub ClicGrid()
         inhabilitarTodo()
+        inhabilitarEditables()
         btnModificar.Enabled = True
         btnCancelar.Enabled = True
         btnRefrescar.Enabled = True
+        btnEliminar.Enabled = True
     End Sub
 
     Private Sub inhabilitarTodo()
@@ -130,55 +134,6 @@ Public Class frmTiposMediciones
         Guardar_Cancelar_Eliminar_Refrescar()
         cargarTiposMediciones()
     End Sub
-    Private Sub GridControlTiposMediciones_Click(sender As Object, e As EventArgs) Handles GridControlTiposMediciones.Click
-        'Try
-        '    If GridViewTiposMediciones.GetSelectedRows.Count = 1 Then
-        '        'EXTRAE Y MUESTRA LA INFORMACION DE LA FILA SELECCIONADO DEL GRID FRANJAS
-        '        Dim id As String = GridViewTiposMediciones.GetRow(GridViewTiposMediciones.FocusedRowHandle)("ID_TIPO_MEDICION").ToString
-        '        Dim nombre As String = GridViewTiposMediciones.GetRow(GridViewTiposMediciones.FocusedRowHandle)("TIPO_MEDICION").ToString
-        '        Dim descripcion As String = GridViewTiposMediciones.GetRow(GridViewTiposMediciones.FocusedRowHandle)("DESCRIPCION").ToString
-        '        Dim creadoPor As String = GridViewTiposMediciones.GetRow(GridViewTiposMediciones.FocusedRowHandle)("CREADO_POR").ToString
-        '        Dim creadoEl As String = GridViewTiposMediciones.GetRow(GridViewTiposMediciones.FocusedRowHandle)("CREADO_EL").ToString
-        '        Dim modificadoPor As String = GridViewTiposMediciones.GetRow(GridViewTiposMediciones.FocusedRowHandle)("MODIFICADO_POR").ToString
-        '        Dim modificadoEl As String = GridViewTiposMediciones.GetRow(GridViewTiposMediciones.FocusedRowHandle)("MODIFICADO_EL").ToString
-        '        txtID.Text = id.ToString
-        '        txtNombreTipo.Text = nombre.ToString
-        '        txtDescripcion.Text = descripcion.ToString
-        '        txtCreadoPor.Text = creadoPor.ToString
-        '        txtCreadoEl.Text = creadoEl.ToString
-        '        txtModificadoPor.Text = modificadoPor.ToString
-        '        txtModificadoEl.Text = modificadoEl.ToString
-        '        ClicGrid()
-        '    End If
-        'Catch ex As Exception
-        '    mensajeError(ex)
-        'End Try
-    End Sub
-
-    Private Sub GridViewTiposMediciones_FocusedRowChanged(sender As Object, e As FocusedRowChangedEventArgs) Handles GridViewTiposMediciones.FocusedRowChanged
-        Try
-            If GridViewTiposMediciones.GetSelectedRows.Count = 1 Then
-                'EXTRAE Y MUESTRA LA INFORMACION DE LA FILA SELECCIONADO DEL GRID FRANJAS
-                Dim id As String = GridViewTiposMediciones.GetRowCellValue(e.FocusedRowHandle, "ID_TIPO_MEDICION").ToString
-                Dim nombre As String = GridViewTiposMediciones.GetRowCellValue(e.FocusedRowHandle, "TIPO_MEDICION").ToString
-                Dim descripcion As String = GridViewTiposMediciones.GetRowCellValue(e.FocusedRowHandle, "DESCRIPCION").ToString
-                Dim creadoPor As String = GridViewTiposMediciones.GetRowCellValue(e.FocusedRowHandle, "CREADO_POR").ToString
-                Dim creadoEl As String = GridViewTiposMediciones.GetRowCellValue(e.FocusedRowHandle, "CREADO_EL").ToString
-                Dim modificadoPor As String = GridViewTiposMediciones.GetRowCellValue(e.FocusedRowHandle, "MODIFICADO_POR").ToString
-                Dim modificadoEl As String = GridViewTiposMediciones.GetRowCellValue(e.FocusedRowHandle, "MODIFICADO_EL").ToString
-                txtID.Text = id.ToString
-                txtNombreTipo.Text = nombre.ToString
-                txtDescripcion.Text = descripcion.ToString
-                txtCreadoPor.Text = creadoPor.ToString
-                txtCreadoEl.Text = creadoEl.ToString
-                txtModificadoPor.Text = modificadoPor.ToString
-                txtModificadoEl.Text = modificadoEl.ToString
-                ClicGrid()
-            End If
-        Catch ex As Exception
-            mensajeError(ex)
-        End Try
-    End Sub
 #End Region
 
 #Region "Acciones de Botones"
@@ -200,9 +155,11 @@ Public Class frmTiposMediciones
         Else                                'Si los datos estan completos, se llena la clase constructora con la informacion
             Dim tabla As DataTable = gestor.NBuscar(txtID.Text.ToString)
             'CONSTRUIMOS LA CLASE CON LA INFORMACION A PROCESAR
+            clase.Id = CInt(txtID.Text.ToString)
             clase.Nombre = txtNombreTipo.Text.ToUpper.ToString
             clase.Descripcion = txtDescripcion.Text.ToString
             clase.CreadoPor = ModuleGlobales.usuario
+            clase.ModificadoPor = ModuleGlobales.usuario
             If tabla.Rows.Count = 0 Then
                 If MessageBox.Show("¿Desea guardar el registro nuevo?" & vbCrLf & vbCrLf &
                         "NOMBRE: " & clase.Nombre & vbCrLf &
@@ -221,8 +178,8 @@ Public Class frmTiposMediciones
             ElseIf tabla.Rows.Count > 0 Then
                 If MessageBox.Show("¿Desea modificar el registro?" & vbCrLf & vbCrLf &
                         "---Actual---" & vbCrLf &
-                        "NOMBRE: " & GridViewTiposMediciones.GetRow(GridViewTiposMediciones.FocusedRowHandle)("TIPO_MEDICION").ToString & vbCrLf &
-                        "DESCRIPCIÓN: " & GridViewTiposMediciones.GetRow(GridViewTiposMediciones.FocusedRowHandle)("DESCRIPCION").ToString & vbCrLf & vbCrLf &
+                        "NOMBRE: " & GridViewTiposMediciones.GetRowCellValue(GridViewTiposMediciones.FocusedRowHandle, "TIPO_MEDICION").ToString & vbCrLf &
+                        "DESCRIPCIÓN: " & GridViewTiposMediciones.GetRowCellValue(GridViewTiposMediciones.FocusedRowHandle, "DESCRIPCION").ToString & vbCrLf & vbCrLf &
                         "---Cambia á---" & vbCrLf &
                         "NOMBRE: " & clase.Nombre & vbCrLf &
                         "DESCRIPCIÓN: " & clase.Descripcion, "Modificar Registro", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
@@ -253,6 +210,7 @@ Public Class frmTiposMediciones
                     MessageBox.Show("El registro de eliminó con éxito", "Eliminar registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     Limpiar()
                     Guardar_Cancelar_Eliminar_Refrescar()
+                    cargarTiposMediciones()
                 Else
                     MessageBox.Show("Ocurrió un error inesperado, intente de nuevo:" & vbCrLf & resp, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
@@ -272,6 +230,31 @@ Public Class frmTiposMediciones
 
     Private Sub btnCancelar_ItemClick(sender As Object, e As ItemClickEventArgs) Handles btnCancelar.ItemClick
         Guardar_Cancelar_Eliminar_Refrescar()
+    End Sub
+
+    Private Sub GridViewTiposMediciones_RowClick(sender As Object, e As RowClickEventArgs) Handles GridViewTiposMediciones.RowClick
+        Try
+            If GridViewTiposMediciones.GetSelectedRows.Count = 1 Then
+                'EXTRAE Y MUESTRA LA INFORMACION DE LA FILA SELECCIONADO DEL GRID FRANJAS
+                Dim id As String = GridViewTiposMediciones.GetRowCellValue(GridViewTiposMediciones.FocusedRowHandle, "ID_TIPO_MEDICION").ToString
+                Dim nombre As String = GridViewTiposMediciones.GetRowCellValue(GridViewTiposMediciones.FocusedRowHandle, "TIPO_MEDICION").ToString
+                Dim descripcion As String = GridViewTiposMediciones.GetRowCellValue(GridViewTiposMediciones.FocusedRowHandle, "DESCRIPCION").ToString
+                Dim creadoPor As String = GridViewTiposMediciones.GetRowCellValue(GridViewTiposMediciones.FocusedRowHandle, "CREADO_POR").ToString
+                Dim creadoEl As String = GridViewTiposMediciones.GetRowCellValue(GridViewTiposMediciones.FocusedRowHandle, "CREADO_EL").ToString
+                Dim modificadoPor As String = GridViewTiposMediciones.GetRowCellValue(GridViewTiposMediciones.FocusedRowHandle, "MODIFICADO_POR").ToString
+                Dim modificadoEl As String = GridViewTiposMediciones.GetRowCellValue(GridViewTiposMediciones.FocusedRowHandle, "MODIFICADO_EL").ToString
+                txtID.Text = id.ToString
+                txtNombreTipo.Text = nombre.ToString
+                txtDescripcion.Text = descripcion.ToString
+                txtCreadoPor.Text = creadoPor.ToString
+                txtCreadoEl.Text = creadoEl.ToString
+                txtModificadoPor.Text = modificadoPor.ToString
+                txtModificadoEl.Text = modificadoEl.ToString
+                ClicGrid()
+            End If
+        Catch ex As Exception
+            mensajeError(ex)
+        End Try
     End Sub
 
 

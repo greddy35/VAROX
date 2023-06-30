@@ -68,6 +68,8 @@
     <Compile Include="Admin_Sistema\NTipoMed.vb" />
     <Compile Include="Admin_Sistema\NClases.vb" />
     <Compile Include="Admin_Sistema\NUsuarios.vb" />
+    <Compile Include="Gestión_General\NClientes.vb" />
+    <Compile Include="Gestión_General\NLocales.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

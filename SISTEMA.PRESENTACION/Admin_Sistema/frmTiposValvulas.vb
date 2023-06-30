@@ -1,5 +1,6 @@
 ﻿Imports DevExpress.XtraBars
 Imports DevExpress.XtraGrid.Views.Base
+Imports DevExpress.XtraGrid.Views.Grid
 Imports SISTEMA.ENTIDADES
 Imports SISTEMA.NEGOCIO
 
@@ -31,12 +32,15 @@ Public Class frmTiposValvulas
         inhabilitarTodo()
         btnNuevo.Enabled = True
         btnRefrescar.Enabled = True
+        btnCancelar.Enabled = True
     End Sub
     Private Sub ClicGrid()
         inhabilitarTodo()
+        inhabilitarEditables()
         btnModificar.Enabled = True
         btnCancelar.Enabled = True
         btnRefrescar.Enabled = True
+        btnEliminar.Enabled = True
     End Sub
 
     Private Sub inhabilitarTodo()
@@ -46,7 +50,6 @@ Public Class frmTiposValvulas
         btnEliminar.Enabled = False
         btnCancelar.Enabled = False
     End Sub
-
     Private Sub Limpiar()
         txtID.Text = ""
         txtNombreTipo.Text = ""
@@ -129,42 +132,21 @@ Public Class frmTiposValvulas
         Guardar_Cancelar_Eliminar_Refrescar()
         cargarTiposValvulas()
     End Sub
-    Private Sub GridControlTiposValvulas_Click(sender As Object, e As EventArgs) Handles GridControlTiposValvulas.Click
-        'Try
-        '    If GridViewTiposValvulas.GetSelectedRows.Count = 1 Then
-        '        'EXTRAE Y MUESTRA LA INFORMACION DE LA FILA SELECCIONADO DEL GRID FRANJAS
-        '        Dim id As String = GridViewTiposValvulas.GetRow(GridViewTiposValvulas.FocusedRowHandle)("ID_TIPO_MEDICION").ToString
-        '        Dim nombre As String = GridViewTiposValvulas.GetRow(GridViewTiposValvulas.FocusedRowHandle)("TIPO_MEDICION").ToString
-        '        Dim descripcion As String = GridViewTiposValvulas.GetRow(GridViewTiposValvulas.FocusedRowHandle)("DESCRIPCION").ToString
-        '        Dim creadoPor As String = GridViewTiposValvulas.GetRow(GridViewTiposValvulas.FocusedRowHandle)("CREADO_POR").ToString
-        '        Dim creadoEl As String = GridViewTiposValvulas.GetRow(GridViewTiposValvulas.FocusedRowHandle)("CREADO_EL").ToString
-        '        Dim modificadoPor As String = GridViewTiposValvulas.GetRow(GridViewTiposValvulas.FocusedRowHandle)("MODIFICADO_POR").ToString
-        '        Dim modificadoEl As String = GridViewTiposValvulas.GetRow(GridViewTiposValvulas.FocusedRowHandle)("MODIFICADO_EL").ToString
-        '        txtID.Text = id.ToString
-        '        txtNombreTipo.Text = nombre.ToString
-        '        txtDescripcion.Text = descripcion.ToString
-        '        txtCreadoPor.Text = creadoPor.ToString
-        '        txtCreadoEl.Text = creadoEl.ToString
-        '        txtModificadoPor.Text = modificadoPor.ToString
-        '        txtModificadoEl.Text = modificadoEl.ToString
-        '        ClicGrid()
-        '    End If
-        'Catch ex As Exception
-        '    mensajeError(ex)
-        'End Try
-    End Sub
+#End Region
 
-    Private Sub GridViewTiposValvulas_FocusedRowChanged(sender As Object, e As FocusedRowChangedEventArgs) Handles GridViewTiposValvulas.FocusedRowChanged
+#Region "Acciones de Botones"
+
+    Private Sub GridViewTiposValvulas_RowClick(sender As Object, e As RowClickEventArgs) Handles GridViewTiposValvulas.RowClick
         Try
             If GridViewTiposValvulas.GetSelectedRows.Count = 1 Then
                 'EXTRAE Y MUESTRA LA INFORMACION DE LA FILA SELECCIONADO DEL GRID FRANJAS
-                Dim id As String = GridViewTiposValvulas.GetRowCellValue(e.FocusedRowHandle, "ID_TIPO_VALVULA").ToString
-                Dim nombre As String = GridViewTiposValvulas.GetRowCellValue(e.FocusedRowHandle, "TIPO").ToString
-                Dim descripcion As String = GridViewTiposValvulas.GetRowCellValue(e.FocusedRowHandle, "DESCRIPCION").ToString
-                Dim creadoPor As String = GridViewTiposValvulas.GetRowCellValue(e.FocusedRowHandle, "CREADO_POR").ToString
-                Dim creadoEl As String = GridViewTiposValvulas.GetRowCellValue(e.FocusedRowHandle, "CREADO_EL").ToString
-                Dim modificadoPor As String = GridViewTiposValvulas.GetRowCellValue(e.FocusedRowHandle, "MODIFICADO_POR").ToString
-                Dim modificadoEl As String = GridViewTiposValvulas.GetRowCellValue(e.FocusedRowHandle, "MODIFICADO_EL").ToString
+                Dim id As String = GridViewTiposValvulas.GetRowCellValue(GridViewTiposValvulas.FocusedRowHandle, "ID_TIPO_VALVULA").ToString
+                Dim nombre As String = GridViewTiposValvulas.GetRowCellValue(GridViewTiposValvulas.FocusedRowHandle, "TIPO_VALVULA").ToString
+                Dim descripcion As String = GridViewTiposValvulas.GetRowCellValue(GridViewTiposValvulas.FocusedRowHandle, "DESCRIPCION").ToString
+                Dim creadoPor As String = GridViewTiposValvulas.GetRowCellValue(GridViewTiposValvulas.FocusedRowHandle, "CREADO_POR").ToString
+                Dim creadoEl As String = GridViewTiposValvulas.GetRowCellValue(GridViewTiposValvulas.FocusedRowHandle, "CREADO_EL").ToString
+                Dim modificadoPor As String = GridViewTiposValvulas.GetRowCellValue(GridViewTiposValvulas.FocusedRowHandle, "MODIFICADO_POR").ToString
+                Dim modificadoEl As String = GridViewTiposValvulas.GetRowCellValue(GridViewTiposValvulas.FocusedRowHandle, "MODIFICADO_EL").ToString
                 txtID.Text = id.ToString
                 txtNombreTipo.Text = nombre.ToString
                 txtDescripcion.Text = descripcion.ToString
@@ -178,9 +160,6 @@ Public Class frmTiposValvulas
             mensajeError(ex)
         End Try
     End Sub
-#End Region
-
-#Region "Acciones de Botones"
     Private Sub btnSalir_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnSalir.ItemClick
         Me.Close()
     End Sub
@@ -197,9 +176,11 @@ Public Class frmTiposValvulas
         Else                                'Si los datos estan completos, se llena la clase constructora con la informacion
             Dim tabla As DataTable = gestor.NBuscar(txtID.Text.ToString)
             'CONSTRUIMOS LA CLASE CON LA INFORMACION A PROCESAR
+            clase.Id = CInt(txtID.Text.ToString)
             clase.Nombre = txtNombreTipo.Text.ToUpper.ToString
             clase.Descripcion = txtDescripcion.Text.ToString
             clase.CreadoPor = ModuleGlobales.usuario
+            clase.ModificadoPor = ModuleGlobales.usuario
             If tabla.Rows.Count = 0 Then
                 If MessageBox.Show("¿Desea guardar el registro nuevo?" & vbCrLf & vbCrLf &
                         "NOMBRE: " & clase.Nombre & vbCrLf &
@@ -218,8 +199,8 @@ Public Class frmTiposValvulas
             ElseIf tabla.Rows.Count > 0 Then
                 If MessageBox.Show("¿Desea modificar el registro?" & vbCrLf & vbCrLf &
                         "---Actual---" & vbCrLf &
-                        "NOMBRE: " & GridViewTiposValvulas.GetRow(GridViewTiposValvulas.FocusedRowHandle)("TIPO").ToString & vbCrLf &
-                        "DESCRIPCIÓN: " & GridViewTiposValvulas.GetRow(GridViewTiposValvulas.FocusedRowHandle)("DESCRIPCION").ToString & vbCrLf & vbCrLf &
+                        "NOMBRE: " & GridViewTiposValvulas.GetRowCellValue(GridViewTiposValvulas.FocusedRowHandle, "TIPO_VALVULA").ToString & vbCrLf &
+                        "DESCRIPCIÓN: " & GridViewTiposValvulas.GetRowCellValue(GridViewTiposValvulas.FocusedRowHandle, "DESCRIPCION").ToString & vbCrLf & vbCrLf &
                         "---Cambia á---" & vbCrLf &
                         "NOMBRE: " & clase.Nombre & vbCrLf &
                         "DESCRIPCIÓN: " & clase.Descripcion, "Modificar Registro", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
@@ -254,6 +235,7 @@ Public Class frmTiposValvulas
                     MessageBox.Show("El registro de eliminó con éxito", "Eliminar registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     Limpiar()
                     Guardar_Cancelar_Eliminar_Refrescar()
+                    cargarTiposValvulas()
                 Else
                     MessageBox.Show("Ocurrió un error inesperado, intente de nuevo:" & vbCrLf & resp, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
@@ -271,6 +253,7 @@ Public Class frmTiposValvulas
     Private Sub btnCancelar_ItemClick(sender As Object, e As ItemClickEventArgs) Handles btnCancelar.ItemClick
         Guardar_Cancelar_Eliminar_Refrescar()
     End Sub
+
 
 #End Region
 

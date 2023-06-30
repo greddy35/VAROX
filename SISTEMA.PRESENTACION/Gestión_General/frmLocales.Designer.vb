@@ -22,32 +22,30 @@ Partial Class frmLocales
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLocales))
         Me.RibbonControl = New DevExpress.XtraBars.Ribbon.RibbonControl()
         Me.btnSalir = New DevExpress.XtraBars.BarButtonItem()
-        Me.lblEstado = New DevExpress.XtraBars.BarStaticItem()
-        Me.tsEstado = New DevExpress.XtraBars.BarToggleSwitchItem()
-        Me.BarButtonItem1 = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarButtonItem2 = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarButtonItem3 = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarButtonItem4 = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarButtonItem5 = New DevExpress.XtraBars.BarButtonItem()
+        Me.btnNuevo = New DevExpress.XtraBars.BarButtonItem()
+        Me.btnGuardar = New DevExpress.XtraBars.BarButtonItem()
+        Me.btnModificar = New DevExpress.XtraBars.BarButtonItem()
+        Me.btnEliminar = New DevExpress.XtraBars.BarButtonItem()
+        Me.btnRefrescar = New DevExpress.XtraBars.BarButtonItem()
+        Me.btnCancelar = New DevExpress.XtraBars.BarButtonItem()
         Me.RibbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
-        Me.RibbonPageGroup2 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup3 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonStatusBar = New DevExpress.XtraBars.Ribbon.RibbonStatusBar()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.chkEstado = New DevExpress.XtraEditors.CheckEdit()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.txtDireccion = New System.Windows.Forms.RichTextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtCodigo = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.cboTipoNIT = New System.Windows.Forms.ComboBox()
+        Me.cboUbicacion = New System.Windows.Forms.ComboBox()
         Me.txtID = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtModificadoEl = New System.Windows.Forms.TextBox()
@@ -63,6 +61,7 @@ Partial Class frmLocales
         Me.GridControlLocales = New DevExpress.XtraGrid.GridControl()
         Me.GridViewLocales = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.GridColumn1 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn8 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn2 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn3 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn5 = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -72,11 +71,11 @@ Partial Class frmLocales
         Me.GridColumn10 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn11 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn12 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.GridColumn8 = New DevExpress.XtraGrid.Columns.GridColumn()
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        CType(Me.chkEstado.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
         CType(Me.GridControlLocales, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridViewLocales, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -85,12 +84,12 @@ Partial Class frmLocales
         'RibbonControl
         '
         Me.RibbonControl.ExpandCollapseItem.Id = 0
-        Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.RibbonControl.SearchEditItem, Me.btnSalir, Me.lblEstado, Me.tsEstado, Me.BarButtonItem1, Me.BarButtonItem2, Me.BarButtonItem3, Me.BarButtonItem4, Me.BarButtonItem5})
+        Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.RibbonControl.SearchEditItem, Me.btnSalir, Me.btnNuevo, Me.btnGuardar, Me.btnModificar, Me.btnEliminar, Me.btnRefrescar, Me.btnCancelar})
         Me.RibbonControl.Location = New System.Drawing.Point(0, 0)
-        Me.RibbonControl.MaxItemId = 9
+        Me.RibbonControl.MaxItemId = 10
         Me.RibbonControl.Name = "RibbonControl"
         Me.RibbonControl.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1})
-        Me.RibbonControl.Size = New System.Drawing.Size(964, 182)
+        Me.RibbonControl.Size = New System.Drawing.Size(1009, 182)
         Me.RibbonControl.StatusBar = Me.RibbonStatusBar
         '
         'btnSalir
@@ -102,86 +101,75 @@ Partial Class frmLocales
         Me.btnSalir.LargeWidth = 55
         Me.btnSalir.Name = "btnSalir"
         '
-        'lblEstado
+        'btnNuevo
         '
-        Me.lblEstado.Caption = "Inactivo/Activo"
-        Me.lblEstado.Id = 2
-        Me.lblEstado.Name = "lblEstado"
+        Me.btnNuevo.Caption = "Nuevo"
+        Me.btnNuevo.Id = 4
+        Me.btnNuevo.ImageOptions.Image = CType(resources.GetObject("btnNuevo.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnNuevo.ImageOptions.LargeImage = CType(resources.GetObject("btnNuevo.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.btnNuevo.LargeWidth = 55
+        Me.btnNuevo.Name = "btnNuevo"
         '
-        'tsEstado
+        'btnGuardar
         '
-        Me.tsEstado.BindableChecked = True
-        Me.tsEstado.Checked = True
-        Me.tsEstado.Id = 3
-        Me.tsEstado.Name = "tsEstado"
+        Me.btnGuardar.Caption = "Guardar"
+        Me.btnGuardar.Id = 5
+        Me.btnGuardar.ImageOptions.Image = CType(resources.GetObject("btnGuardar.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnGuardar.ImageOptions.LargeImage = CType(resources.GetObject("btnGuardar.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.btnGuardar.LargeWidth = 55
+        Me.btnGuardar.Name = "btnGuardar"
         '
-        'BarButtonItem1
+        'btnModificar
         '
-        Me.BarButtonItem1.Caption = "Nuevo"
-        Me.BarButtonItem1.Id = 4
-        Me.BarButtonItem1.ImageOptions.Image = CType(resources.GetObject("BarButtonItem1.ImageOptions.Image"), System.Drawing.Image)
-        Me.BarButtonItem1.ImageOptions.LargeImage = CType(resources.GetObject("BarButtonItem1.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.BarButtonItem1.LargeWidth = 55
-        Me.BarButtonItem1.Name = "BarButtonItem1"
+        Me.btnModificar.Caption = "Modificar"
+        Me.btnModificar.Id = 6
+        Me.btnModificar.ImageOptions.Image = CType(resources.GetObject("btnModificar.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnModificar.ImageOptions.LargeImage = CType(resources.GetObject("btnModificar.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.btnModificar.LargeWidth = 55
+        Me.btnModificar.Name = "btnModificar"
         '
-        'BarButtonItem2
+        'btnEliminar
         '
-        Me.BarButtonItem2.Caption = "Guardar"
-        Me.BarButtonItem2.Id = 5
-        Me.BarButtonItem2.ImageOptions.Image = CType(resources.GetObject("BarButtonItem2.ImageOptions.Image"), System.Drawing.Image)
-        Me.BarButtonItem2.ImageOptions.LargeImage = CType(resources.GetObject("BarButtonItem2.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.BarButtonItem2.LargeWidth = 55
-        Me.BarButtonItem2.Name = "BarButtonItem2"
+        Me.btnEliminar.Caption = "Eliminar"
+        Me.btnEliminar.Id = 7
+        Me.btnEliminar.ImageOptions.Image = CType(resources.GetObject("btnEliminar.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnEliminar.ImageOptions.LargeImage = CType(resources.GetObject("btnEliminar.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.btnEliminar.LargeWidth = 55
+        Me.btnEliminar.Name = "btnEliminar"
         '
-        'BarButtonItem3
+        'btnRefrescar
         '
-        Me.BarButtonItem3.Caption = "Modificar"
-        Me.BarButtonItem3.Id = 6
-        Me.BarButtonItem3.ImageOptions.Image = CType(resources.GetObject("BarButtonItem3.ImageOptions.Image"), System.Drawing.Image)
-        Me.BarButtonItem3.ImageOptions.LargeImage = CType(resources.GetObject("BarButtonItem3.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.BarButtonItem3.LargeWidth = 55
-        Me.BarButtonItem3.Name = "BarButtonItem3"
+        Me.btnRefrescar.Caption = "Refrescar"
+        Me.btnRefrescar.Id = 8
+        Me.btnRefrescar.ImageOptions.Image = CType(resources.GetObject("btnRefrescar.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnRefrescar.ImageOptions.LargeImage = CType(resources.GetObject("btnRefrescar.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.btnRefrescar.LargeWidth = 55
+        Me.btnRefrescar.Name = "btnRefrescar"
         '
-        'BarButtonItem4
+        'btnCancelar
         '
-        Me.BarButtonItem4.Caption = "Eliminar"
-        Me.BarButtonItem4.Id = 7
-        Me.BarButtonItem4.ImageOptions.Image = CType(resources.GetObject("BarButtonItem4.ImageOptions.Image"), System.Drawing.Image)
-        Me.BarButtonItem4.ImageOptions.LargeImage = CType(resources.GetObject("BarButtonItem4.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.BarButtonItem4.LargeWidth = 55
-        Me.BarButtonItem4.Name = "BarButtonItem4"
-        '
-        'BarButtonItem5
-        '
-        Me.BarButtonItem5.Caption = "Refrescar"
-        Me.BarButtonItem5.Id = 8
-        Me.BarButtonItem5.ImageOptions.Image = CType(resources.GetObject("BarButtonItem5.ImageOptions.Image"), System.Drawing.Image)
-        Me.BarButtonItem5.ImageOptions.LargeImage = CType(resources.GetObject("BarButtonItem5.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.BarButtonItem5.LargeWidth = 55
-        Me.BarButtonItem5.Name = "BarButtonItem5"
+        Me.btnCancelar.Caption = "Cancelar"
+        Me.btnCancelar.Id = 9
+        Me.btnCancelar.ImageOptions.Image = CType(resources.GetObject("btnCancelar.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnCancelar.ImageOptions.LargeImage = CType(resources.GetObject("btnCancelar.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.btnCancelar.Name = "btnCancelar"
         '
         'RibbonPage1
         '
-        Me.RibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup1, Me.RibbonPageGroup2, Me.RibbonPageGroup3})
+        Me.RibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup1, Me.RibbonPageGroup3})
         Me.RibbonPage1.Name = "RibbonPage1"
         Me.RibbonPage1.Text = "Inicio"
         '
         'RibbonPageGroup1
         '
-        Me.RibbonPageGroup1.ItemLinks.Add(Me.BarButtonItem1)
-        Me.RibbonPageGroup1.ItemLinks.Add(Me.BarButtonItem2)
-        Me.RibbonPageGroup1.ItemLinks.Add(Me.BarButtonItem3)
-        Me.RibbonPageGroup1.ItemLinks.Add(Me.BarButtonItem4)
-        Me.RibbonPageGroup1.ItemLinks.Add(Me.BarButtonItem5)
+        Me.RibbonPageGroup1.ItemLinks.Add(Me.btnNuevo)
+        Me.RibbonPageGroup1.ItemLinks.Add(Me.btnCancelar)
+        Me.RibbonPageGroup1.ItemLinks.Add(Me.btnGuardar)
+        Me.RibbonPageGroup1.ItemLinks.Add(Me.btnModificar)
+        Me.RibbonPageGroup1.ItemLinks.Add(Me.btnEliminar)
+        Me.RibbonPageGroup1.ItemLinks.Add(Me.btnRefrescar)
         Me.RibbonPageGroup1.Name = "RibbonPageGroup1"
         Me.RibbonPageGroup1.Text = "Acciones"
-        '
-        'RibbonPageGroup2
-        '
-        Me.RibbonPageGroup2.ItemLinks.Add(Me.lblEstado)
-        Me.RibbonPageGroup2.ItemLinks.Add(Me.tsEstado)
-        Me.RibbonPageGroup2.Name = "RibbonPageGroup2"
-        Me.RibbonPageGroup2.Text = "Estado Local"
         '
         'RibbonPageGroup3
         '
@@ -194,7 +182,7 @@ Partial Class frmLocales
         Me.RibbonStatusBar.Location = New System.Drawing.Point(0, 645)
         Me.RibbonStatusBar.Name = "RibbonStatusBar"
         Me.RibbonStatusBar.Ribbon = Me.RibbonControl
-        Me.RibbonStatusBar.Size = New System.Drawing.Size(964, 27)
+        Me.RibbonStatusBar.Size = New System.Drawing.Size(1009, 27)
         '
         'TableLayoutPanel1
         '
@@ -206,9 +194,9 @@ Partial Class frmLocales
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 182)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 155.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 190.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(964, 463)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1009, 463)
         Me.TableLayoutPanel1.TabIndex = 7
         '
         'Panel1
@@ -217,22 +205,22 @@ Partial Class frmLocales
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(3, 3)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(962, 149)
+        Me.Panel1.Size = New System.Drawing.Size(1003, 184)
         Me.Panel1.TabIndex = 0
         '
         'Panel2
         '
+        Me.Panel2.Controls.Add(Me.chkEstado)
+        Me.Panel2.Controls.Add(Me.Label11)
         Me.Panel2.Controls.Add(Me.txtDireccion)
         Me.Panel2.Controls.Add(Me.Label5)
         Me.Panel2.Controls.Add(Me.txtCodigo)
         Me.Panel2.Controls.Add(Me.Label3)
-        Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Controls.Add(Me.MaskedTextBox1)
         Me.Panel2.Controls.Add(Me.txtNombre)
         Me.Panel2.Controls.Add(Me.Label12)
         Me.Panel2.Controls.Add(Me.Label10)
         Me.Panel2.Controls.Add(Me.Label4)
-        Me.Panel2.Controls.Add(Me.cboTipoNIT)
+        Me.Panel2.Controls.Add(Me.cboUbicacion)
         Me.Panel2.Controls.Add(Me.txtID)
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.txtModificadoEl)
@@ -247,14 +235,36 @@ Partial Class frmLocales
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(962, 149)
+        Me.Panel2.Size = New System.Drawing.Size(1003, 184)
         Me.Panel2.TabIndex = 6
+        '
+        'chkEstado
+        '
+        Me.chkEstado.Location = New System.Drawing.Point(93, 149)
+        Me.chkEstado.MenuManager = Me.RibbonControl
+        Me.chkEstado.Name = "chkEstado"
+        Me.chkEstado.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkEstado.Properties.Appearance.Options.UseFont = True
+        Me.chkEstado.Properties.Caption = "Inactivo"
+        Me.chkEstado.Size = New System.Drawing.Size(94, 22)
+        Me.chkEstado.TabIndex = 43
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(27, 151)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(60, 18)
+        Me.Label11.TabIndex = 42
+        Me.Label11.Text = "Activo:"
         '
         'txtDireccion
         '
-        Me.txtDireccion.Location = New System.Drawing.Point(397, 82)
+        Me.txtDireccion.Location = New System.Drawing.Point(397, 54)
+        Me.txtDireccion.MaxLength = 250
         Me.txtDireccion.Name = "txtDireccion"
-        Me.txtDireccion.Size = New System.Drawing.Size(276, 59)
+        Me.txtDireccion.Size = New System.Drawing.Size(276, 87)
         Me.txtDireccion.TabIndex = 41
         Me.txtDireccion.Text = ""
         '
@@ -262,7 +272,7 @@ Partial Class frmLocales
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(307, 83)
+        Me.Label5.Location = New System.Drawing.Point(307, 54)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(84, 18)
         Me.Label5.TabIndex = 40
@@ -274,7 +284,7 @@ Partial Class frmLocales
         Me.txtCodigo.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCodigo.Location = New System.Drawing.Point(93, 44)
         Me.txtCodigo.Name = "txtCodigo"
-        Me.txtCodigo.Size = New System.Drawing.Size(175, 26)
+        Me.txtCodigo.Size = New System.Drawing.Size(135, 26)
         Me.txtCodigo.TabIndex = 39
         Me.txtCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -282,32 +292,11 @@ Partial Class frmLocales
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(23, 48)
+        Me.Label3.Location = New System.Drawing.Point(23, 47)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(64, 18)
         Me.Label3.TabIndex = 38
         Me.Label3.Text = "Código:"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(327, 51)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(64, 18)
-        Me.Label2.TabIndex = 36
-        Me.Label2.Text = "Correo:"
-        '
-        'MaskedTextBox1
-        '
-        Me.MaskedTextBox1.Enabled = False
-        Me.MaskedTextBox1.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MaskedTextBox1.Location = New System.Drawing.Point(397, 48)
-        Me.MaskedTextBox1.Mask = "___________@__________"
-        Me.MaskedTextBox1.Name = "MaskedTextBox1"
-        Me.MaskedTextBox1.Size = New System.Drawing.Size(276, 26)
-        Me.MaskedTextBox1.TabIndex = 35
-        Me.MaskedTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtNombre
         '
@@ -323,7 +312,7 @@ Partial Class frmLocales
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(37, 118)
+        Me.Label12.Location = New System.Drawing.Point(37, 117)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(50, 18)
         Me.Label12.TabIndex = 31
@@ -349,18 +338,18 @@ Partial Class frmLocales
         Me.Label4.TabIndex = 25
         Me.Label4.Text = "Ubicación:"
         '
-        'cboTipoNIT
+        'cboUbicacion
         '
-        Me.cboTipoNIT.DropDownHeight = 50
-        Me.cboTipoNIT.Enabled = False
-        Me.cboTipoNIT.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cboTipoNIT.FormattingEnabled = True
-        Me.cboTipoNIT.IntegralHeight = False
-        Me.cboTipoNIT.Items.AddRange(New Object() {"Persona Física", "Persona Jurídica", "Persona Extranjera", "DIMEX", "DIDI"})
-        Me.cboTipoNIT.Location = New System.Drawing.Point(397, 9)
-        Me.cboTipoNIT.Name = "cboTipoNIT"
-        Me.cboTipoNIT.Size = New System.Drawing.Size(210, 26)
-        Me.cboTipoNIT.TabIndex = 24
+        Me.cboUbicacion.DropDownHeight = 50
+        Me.cboUbicacion.Enabled = False
+        Me.cboUbicacion.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboUbicacion.FormattingEnabled = True
+        Me.cboUbicacion.IntegralHeight = False
+        Me.cboUbicacion.Items.AddRange(New Object() {"Persona Física", "Persona Jurídica", "Persona Extranjera", "DIMEX", "DIDI"})
+        Me.cboUbicacion.Location = New System.Drawing.Point(397, 9)
+        Me.cboUbicacion.Name = "cboUbicacion"
+        Me.cboUbicacion.Size = New System.Drawing.Size(210, 26)
+        Me.cboUbicacion.TabIndex = 24
         '
         'txtID
         '
@@ -480,9 +469,9 @@ Partial Class frmLocales
         '
         Me.Panel4.Controls.Add(Me.GridControlLocales)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel4.Location = New System.Drawing.Point(3, 158)
+        Me.Panel4.Location = New System.Drawing.Point(3, 193)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(962, 307)
+        Me.Panel4.Size = New System.Drawing.Size(1003, 307)
         Me.Panel4.TabIndex = 1
         '
         'GridControlLocales
@@ -492,7 +481,7 @@ Partial Class frmLocales
         Me.GridControlLocales.MainView = Me.GridViewLocales
         Me.GridControlLocales.MenuManager = Me.RibbonControl
         Me.GridControlLocales.Name = "GridControlLocales"
-        Me.GridControlLocales.Size = New System.Drawing.Size(962, 307)
+        Me.GridControlLocales.Size = New System.Drawing.Size(1003, 307)
         Me.GridControlLocales.TabIndex = 1
         Me.GridControlLocales.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridViewLocales})
         '
@@ -512,6 +501,17 @@ Partial Class frmLocales
         Me.GridColumn1.Visible = True
         Me.GridColumn1.VisibleIndex = 0
         Me.GridColumn1.Width = 94
+        '
+        'GridColumn8
+        '
+        Me.GridColumn8.Caption = "CÓDIGO LOCAL"
+        Me.GridColumn8.FieldName = "CODIGO_LOCAL"
+        Me.GridColumn8.MinWidth = 25
+        Me.GridColumn8.Name = "GridColumn8"
+        Me.GridColumn8.OptionsColumn.AllowEdit = False
+        Me.GridColumn8.Visible = True
+        Me.GridColumn8.VisibleIndex = 1
+        Me.GridColumn8.Width = 94
         '
         'GridColumn2
         '
@@ -620,22 +620,11 @@ Partial Class frmLocales
         Me.GridColumn12.VisibleIndex = 10
         Me.GridColumn12.Width = 94
         '
-        'GridColumn8
-        '
-        Me.GridColumn8.Caption = "CÓDIGO LOCAL"
-        Me.GridColumn8.FieldName = "CODIGO_LOCAL"
-        Me.GridColumn8.MinWidth = 25
-        Me.GridColumn8.Name = "GridColumn8"
-        Me.GridColumn8.OptionsColumn.AllowEdit = False
-        Me.GridColumn8.Visible = True
-        Me.GridColumn8.VisibleIndex = 1
-        Me.GridColumn8.Width = 94
-        '
         'frmLocales
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(964, 672)
+        Me.ClientSize = New System.Drawing.Size(1009, 672)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.RibbonStatusBar)
         Me.Controls.Add(Me.RibbonControl)
@@ -649,6 +638,7 @@ Partial Class frmLocales
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.chkEstado.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         CType(Me.GridControlLocales, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridViewLocales, System.ComponentModel.ISupportInitialize).EndInit()
@@ -661,26 +651,21 @@ Partial Class frmLocales
     Friend WithEvents RibbonPage1 As DevExpress.XtraBars.Ribbon.RibbonPage
     Friend WithEvents RibbonPageGroup1 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
     Friend WithEvents RibbonStatusBar As DevExpress.XtraBars.Ribbon.RibbonStatusBar
-    Friend WithEvents RibbonPageGroup2 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
     Friend WithEvents RibbonPageGroup3 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
     Friend WithEvents btnSalir As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents lblEstado As DevExpress.XtraBars.BarStaticItem
-    Friend WithEvents tsEstado As DevExpress.XtraBars.BarToggleSwitchItem
-    Friend WithEvents BarButtonItem1 As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents BarButtonItem2 As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents BarButtonItem3 As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents BarButtonItem4 As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents BarButtonItem5 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents btnNuevo As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents btnGuardar As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents btnModificar As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents btnEliminar As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents btnRefrescar As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Label2 As Label
-    Friend WithEvents MaskedTextBox1 As MaskedTextBox
     Friend WithEvents txtNombre As TextBox
     Friend WithEvents Label12 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents cboTipoNIT As ComboBox
+    Friend WithEvents cboUbicacion As ComboBox
     Friend WithEvents txtID As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents txtModificadoEl As TextBox
@@ -710,4 +695,7 @@ Partial Class frmLocales
     Friend WithEvents Label5 As Label
     Friend WithEvents txtDireccion As RichTextBox
     Friend WithEvents GridColumn8 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents chkEstado As DevExpress.XtraEditors.CheckEdit
+    Friend WithEvents Label11 As Label
+    Friend WithEvents btnCancelar As DevExpress.XtraBars.BarButtonItem
 End Class

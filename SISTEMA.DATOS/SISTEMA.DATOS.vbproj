@@ -71,6 +71,8 @@
     <Compile Include="ConexionesBD\ConexionBD_Externa.vb" />
     <Compile Include="ConexionesBD\ConexionBD_Local.vb" />
     <Compile Include="ConexionesBD\GlobalesConexiones.vb" />
+    <Compile Include="Gestión_General\DClientes.vb" />
+    <Compile Include="Gestión_General\DLocales.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

@@ -1,7 +1,10 @@
-﻿Public Class SplashScreen
-    Sub New
+﻿Imports DevExpress.XtraEditors
+Imports DevExpress.XtraSplashScreen
+
+Public Class SplashScreen
+    Sub New()
         InitializeComponent()
-        Me.labelCopyright.Text = "Copyright © 1998-" & DateTime.Now.Year.ToString()
+        Me.labelCopyright.Text = "Copyright © 1998-" & DateTime.Now.Year.ToString() & " ESS"
     End Sub
 
     Public Overrides Sub ProcessCommand(ByVal cmd As System.Enum, ByVal arg As Object)
