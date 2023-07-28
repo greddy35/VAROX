@@ -28,7 +28,7 @@ Public Class NLocales
         Dim msj As String = ""
         Try
             Dim Datos As New DLocales
-            Datos.Eliminar(valor)
+            msj = Datos.Eliminar(valor)
             Return msj
         Catch ex As Exception
             Return msj
@@ -50,6 +50,26 @@ Public Class NLocales
             Dim Datos As New DLocales
             Dim Tabla As New DataTable
             Tabla = Datos.Buscar(valor)
+            Return Tabla
+        Catch ex As Exception
+            Return Nothing
+        End Try
+    End Function
+    Public Function NBuscar2(ByVal valor As String) As DataTable
+        Try
+            Dim Datos As New DLocales
+            Dim Tabla As New DataTable
+            Tabla = Datos.Buscar2(valor)
+            Return Tabla
+        Catch ex As Exception
+            Return Nothing
+        End Try
+    End Function
+    Public Function NCargarUbicaciones() As DataSet
+        Try
+            Dim Datos As New DLocales
+            Dim Tabla As New DataSet
+            Tabla = Datos.CargarUbicaciones()
             Return Tabla
         Catch ex As Exception
             Return Nothing

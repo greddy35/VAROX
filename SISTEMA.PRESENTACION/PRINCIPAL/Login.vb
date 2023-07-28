@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Globalization
 Imports System.Threading
 Imports Microsoft.SqlServer
 Imports SISTEMA.DATOS
@@ -12,7 +13,6 @@ Public Class Login
     Private conexionE As New ConexionBD_Externa
     Private comando As New SqlCommand
 
-    Friend Config As Globalization.CultureInfo
     Dim estadoConexión As Boolean = False
 
 #End Region

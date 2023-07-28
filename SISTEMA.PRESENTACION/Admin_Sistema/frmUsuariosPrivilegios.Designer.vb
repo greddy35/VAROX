@@ -531,6 +531,7 @@ Partial Class frmUsuariosPrivilegios
         Me.GridViewUsuarios.GridControl = Me.GridControlUsuarios
         Me.GridViewUsuarios.Name = "GridViewUsuarios"
         Me.GridViewUsuarios.OptionsView.ColumnAutoWidth = False
+        Me.GridViewUsuarios.OptionsView.ShowAutoFilterRow = True
         '
         'GridColumn1
         '

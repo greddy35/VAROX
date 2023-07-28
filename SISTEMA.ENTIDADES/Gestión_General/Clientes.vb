@@ -5,6 +5,9 @@
     Private _estado As Char
     Private _codigo As String
     Private _nit As String
+    Private _idNit As Integer
+    Private _iva As Integer
+    Private _correo As String
     Private _creadoPor As String
     Private _creadoEl As String
     Private _modificadoPor As String
@@ -97,6 +100,33 @@
         End Get
         Set(value As String)
             _modificadoEl = value
+        End Set
+    End Property
+
+    Public Property IdNit As Integer
+        Get
+            Return _idNit
+        End Get
+        Set(value As Integer)
+            _idNit = value
+        End Set
+    End Property
+
+    Public Property Correo As String
+        Get
+            Return _correo
+        End Get
+        Set(value As String)
+            _correo = value
+        End Set
+    End Property
+
+    Public Property Iva As Integer
+        Get
+            Return _iva
+        End Get
+        Set(value As Integer)
+            _iva = value
         End Set
     End Property
 End Class

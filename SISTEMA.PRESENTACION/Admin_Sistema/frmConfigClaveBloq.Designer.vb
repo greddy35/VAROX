@@ -100,6 +100,7 @@ Partial Class frmConfigClaveBloq
         Me.Panel1.Controls.Add(Me.chkConfBloqueoCuentas)
         Me.Panel1.Controls.Add(Me.GroupBoxBloqueoCuentas)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Enabled = False
         Me.Panel1.Location = New System.Drawing.Point(3, 3)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(574, 366)
@@ -220,6 +221,7 @@ Partial Class frmConfigClaveBloq
         Me.Panel2.Controls.Add(Me.GroupBoxComposiciónClaves)
         Me.Panel2.Controls.Add(Me.GroupBoxReglas)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel2.Enabled = False
         Me.Panel2.Location = New System.Drawing.Point(3, 3)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(578, 370)

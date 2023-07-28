@@ -5,6 +5,7 @@
     Private _alias As String
     Private _estado As String
     Private _ubicacion As String
+    Private _direccion As String
     Private _creadoPor As String
     Private _creadoEl As String
     Private _modificadoPor As String
@@ -97,6 +98,15 @@
         End Get
         Set(value As String)
             _modificadoEl = value
+        End Set
+    End Property
+
+    Public Property Direccion As String
+        Get
+            Return _direccion
+        End Get
+        Set(value As String)
+            _direccion = value
         End Set
     End Property
 End Class

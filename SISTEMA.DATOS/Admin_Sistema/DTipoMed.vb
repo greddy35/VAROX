@@ -9,6 +9,8 @@ Public Class DTipoMed
             Dim Comando As New SqlCommand("AS_insertarTipoMed", MyBase.conn)
             Comando.CommandType = CommandType.StoredProcedure
             Comando.Parameters.Add("@nombre", SqlDbType.VarChar).Value = Obj.Nombre
+            Comando.Parameters.Add("@unidad", SqlDbType.VarChar).Value = Obj.Unidad
+            Comando.Parameters.Add("@valor", SqlDbType.Float).Value = Obj.Valor
             Comando.Parameters.Add("@descripcion", SqlDbType.VarChar).Value = Obj.Descripcion
             Comando.Parameters.Add("@usuario", SqlDbType.VarChar).Value = Obj.CreadoPor
             MyBase.conn.Open()
@@ -26,6 +28,8 @@ Public Class DTipoMed
             Comando.CommandType = CommandType.StoredProcedure
             Comando.Parameters.Add("@id", SqlDbType.VarChar).Value = Obj.Id
             Comando.Parameters.Add("@nombre", SqlDbType.VarChar).Value = Obj.Nombre
+            Comando.Parameters.Add("@unidad", SqlDbType.VarChar).Value = Obj.Unidad
+            Comando.Parameters.Add("@valor", SqlDbType.Float).Value = Obj.Valor
             Comando.Parameters.Add("@descripcion", SqlDbType.VarChar).Value = Obj.Descripcion
             Comando.Parameters.Add("@usuario", SqlDbType.VarChar).Value = Obj.ModificadoPor
             MyBase.conn.Open()

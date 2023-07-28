@@ -65,7 +65,6 @@ Partial Class frmClasesDispositivos
         Me.GridColumn3 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn4 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn5 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.GridColumn6 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn7 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn8 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn9 = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -150,6 +149,7 @@ Partial Class frmClasesDispositivos
         Me.btnNuevaClase.ItemAppearance.Normal.Options.UseFont = True
         Me.btnNuevaClase.LargeWidth = 55
         Me.btnNuevaClase.Name = "btnNuevaClase"
+        Me.btnNuevaClase.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
         '
         'btnGuardar
         '
@@ -161,6 +161,7 @@ Partial Class frmClasesDispositivos
         Me.btnGuardar.ItemAppearance.Normal.Options.UseFont = True
         Me.btnGuardar.LargeWidth = 55
         Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
         '
         'btnModificar
         '
@@ -172,6 +173,7 @@ Partial Class frmClasesDispositivos
         Me.btnModificar.ItemAppearance.Normal.Options.UseFont = True
         Me.btnModificar.LargeWidth = 55
         Me.btnModificar.Name = "btnModificar"
+        Me.btnModificar.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
         '
         'btnEliminar
         '
@@ -183,6 +185,7 @@ Partial Class frmClasesDispositivos
         Me.btnEliminar.ItemAppearance.Normal.Options.UseFont = True
         Me.btnEliminar.LargeWidth = 55
         Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
         '
         'btnRefrescar
         '
@@ -515,6 +518,7 @@ Partial Class frmClasesDispositivos
         '
         'Panel4
         '
+        Me.Panel4.Controls.Add(Me.GroupBoxExtraer)
         Me.Panel4.Controls.Add(Me.GridControlClases)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel4.Location = New System.Drawing.Point(3, 138)
@@ -535,9 +539,10 @@ Partial Class frmClasesDispositivos
         '
         'GridViewClases
         '
-        Me.GridViewClases.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn1, Me.GridColumn2, Me.GridColumn3, Me.GridColumn4, Me.GridColumn5, Me.GridColumn6, Me.GridColumn7, Me.GridColumn8, Me.GridColumn9, Me.GridColumn10, Me.GridColumn11, Me.GridColumn12})
+        Me.GridViewClases.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn1, Me.GridColumn2, Me.GridColumn3, Me.GridColumn4, Me.GridColumn5, Me.GridColumn7, Me.GridColumn8, Me.GridColumn9, Me.GridColumn10, Me.GridColumn11, Me.GridColumn12})
         Me.GridViewClases.GridControl = Me.GridControlClases
         Me.GridViewClases.Name = "GridViewClases"
+        Me.GridViewClases.OptionsView.ColumnAutoWidth = False
         '
         'GridColumn1
         '
@@ -554,78 +559,67 @@ Partial Class frmClasesDispositivos
         '
         Me.GridColumn2.Caption = "CLASE"
         Me.GridColumn2.FieldName = "CLASE"
-        Me.GridColumn2.MinWidth = 25
+        Me.GridColumn2.MinWidth = 150
         Me.GridColumn2.Name = "GridColumn2"
         Me.GridColumn2.OptionsColumn.AllowEdit = False
         Me.GridColumn2.Visible = True
         Me.GridColumn2.VisibleIndex = 1
-        Me.GridColumn2.Width = 94
+        Me.GridColumn2.Width = 150
         '
         'GridColumn3
         '
         Me.GridColumn3.Caption = "CONCEPTO"
         Me.GridColumn3.FieldName = "CONCEPTO"
-        Me.GridColumn3.MinWidth = 25
+        Me.GridColumn3.MinWidth = 180
         Me.GridColumn3.Name = "GridColumn3"
         Me.GridColumn3.OptionsColumn.AllowEdit = False
         Me.GridColumn3.Visible = True
         Me.GridColumn3.VisibleIndex = 2
-        Me.GridColumn3.Width = 94
+        Me.GridColumn3.Width = 180
         '
         'GridColumn4
         '
         Me.GridColumn4.Caption = "CHAR INICIO DISP"
         Me.GridColumn4.FieldName = "CHAR_DISPOSITIVO_INICIO"
-        Me.GridColumn4.MinWidth = 25
+        Me.GridColumn4.MinWidth = 150
         Me.GridColumn4.Name = "GridColumn4"
         Me.GridColumn4.OptionsColumn.AllowEdit = False
         Me.GridColumn4.Visible = True
         Me.GridColumn4.VisibleIndex = 3
-        Me.GridColumn4.Width = 94
+        Me.GridColumn4.Width = 150
         '
         'GridColumn5
         '
-        Me.GridColumn5.Caption = "CHAR FIN DISP"
-        Me.GridColumn5.FieldName = "CHAR_DISPOSITIVO_FIN"
-        Me.GridColumn5.MinWidth = 25
+        Me.GridColumn5.Caption = "AJUSTE CHAR INICIO"
+        Me.GridColumn5.FieldName = "AJUSTE_CHAR_DISP_INICIO"
+        Me.GridColumn5.MinWidth = 150
         Me.GridColumn5.Name = "GridColumn5"
         Me.GridColumn5.OptionsColumn.AllowEdit = False
         Me.GridColumn5.Visible = True
         Me.GridColumn5.VisibleIndex = 4
-        Me.GridColumn5.Width = 94
-        '
-        'GridColumn6
-        '
-        Me.GridColumn6.Caption = "REITERACIÓN INICIO DISP"
-        Me.GridColumn6.FieldName = "NUM_REIT_CARACT_DISP_INICIO"
-        Me.GridColumn6.MinWidth = 25
-        Me.GridColumn6.Name = "GridColumn6"
-        Me.GridColumn6.OptionsColumn.AllowEdit = False
-        Me.GridColumn6.Visible = True
-        Me.GridColumn6.VisibleIndex = 5
-        Me.GridColumn6.Width = 94
+        Me.GridColumn5.Width = 150
         '
         'GridColumn7
         '
-        Me.GridColumn7.Caption = "REITERACIÓN FIN DISP"
-        Me.GridColumn7.FieldName = "NUM_REIT_CARACT_DISP_FIN"
-        Me.GridColumn7.MinWidth = 25
+        Me.GridColumn7.Caption = "CARACT EXTRACCIÓN"
+        Me.GridColumn7.FieldName = "CARACTERES_EXTRACCION"
+        Me.GridColumn7.MinWidth = 150
         Me.GridColumn7.Name = "GridColumn7"
         Me.GridColumn7.OptionsColumn.AllowEdit = False
         Me.GridColumn7.Visible = True
-        Me.GridColumn7.VisibleIndex = 6
-        Me.GridColumn7.Width = 94
+        Me.GridColumn7.VisibleIndex = 5
+        Me.GridColumn7.Width = 150
         '
         'GridColumn8
         '
         Me.GridColumn8.Caption = "ACTIVO"
         Me.GridColumn8.FieldName = "ACTIVO"
-        Me.GridColumn8.MinWidth = 25
+        Me.GridColumn8.MinWidth = 100
         Me.GridColumn8.Name = "GridColumn8"
         Me.GridColumn8.OptionsColumn.AllowEdit = False
         Me.GridColumn8.Visible = True
-        Me.GridColumn8.VisibleIndex = 7
-        Me.GridColumn8.Width = 94
+        Me.GridColumn8.VisibleIndex = 6
+        Me.GridColumn8.Width = 100
         '
         'GridColumn9
         '
@@ -633,12 +627,12 @@ Partial Class frmClasesDispositivos
         Me.GridColumn9.AppearanceCell.Options.UseFont = True
         Me.GridColumn9.Caption = "CREADO POR"
         Me.GridColumn9.FieldName = "CREADO_POR"
-        Me.GridColumn9.MinWidth = 25
+        Me.GridColumn9.MinWidth = 120
         Me.GridColumn9.Name = "GridColumn9"
         Me.GridColumn9.OptionsColumn.AllowEdit = False
         Me.GridColumn9.Visible = True
-        Me.GridColumn9.VisibleIndex = 8
-        Me.GridColumn9.Width = 94
+        Me.GridColumn9.VisibleIndex = 7
+        Me.GridColumn9.Width = 120
         '
         'GridColumn10
         '
@@ -646,12 +640,12 @@ Partial Class frmClasesDispositivos
         Me.GridColumn10.AppearanceCell.Options.UseFont = True
         Me.GridColumn10.Caption = "CREADO EL"
         Me.GridColumn10.FieldName = "CREADO_EL"
-        Me.GridColumn10.MinWidth = 25
+        Me.GridColumn10.MinWidth = 140
         Me.GridColumn10.Name = "GridColumn10"
         Me.GridColumn10.OptionsColumn.AllowEdit = False
         Me.GridColumn10.Visible = True
-        Me.GridColumn10.VisibleIndex = 9
-        Me.GridColumn10.Width = 94
+        Me.GridColumn10.VisibleIndex = 8
+        Me.GridColumn10.Width = 140
         '
         'GridColumn11
         '
@@ -659,12 +653,12 @@ Partial Class frmClasesDispositivos
         Me.GridColumn11.AppearanceCell.Options.UseFont = True
         Me.GridColumn11.Caption = "MODIFICADO POR"
         Me.GridColumn11.FieldName = "MODIFICADO_POR"
-        Me.GridColumn11.MinWidth = 25
+        Me.GridColumn11.MinWidth = 120
         Me.GridColumn11.Name = "GridColumn11"
         Me.GridColumn11.OptionsColumn.AllowEdit = False
         Me.GridColumn11.Visible = True
-        Me.GridColumn11.VisibleIndex = 10
-        Me.GridColumn11.Width = 94
+        Me.GridColumn11.VisibleIndex = 9
+        Me.GridColumn11.Width = 120
         '
         'GridColumn12
         '
@@ -672,12 +666,12 @@ Partial Class frmClasesDispositivos
         Me.GridColumn12.AppearanceCell.Options.UseFont = True
         Me.GridColumn12.Caption = "MODIFICADO EL"
         Me.GridColumn12.FieldName = "MODIFICADO_EL"
-        Me.GridColumn12.MinWidth = 25
+        Me.GridColumn12.MinWidth = 140
         Me.GridColumn12.Name = "GridColumn12"
         Me.GridColumn12.OptionsColumn.AllowEdit = False
         Me.GridColumn12.Visible = True
-        Me.GridColumn12.VisibleIndex = 11
-        Me.GridColumn12.Width = 94
+        Me.GridColumn12.VisibleIndex = 10
+        Me.GridColumn12.Width = 140
         '
         'GroupBoxExtraer
         '
@@ -687,7 +681,7 @@ Partial Class frmClasesDispositivos
         Me.GroupBoxExtraer.Controls.Add(Me.Panel5)
         Me.GroupBoxExtraer.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBoxExtraer.ForeColor = System.Drawing.Color.DarkRed
-        Me.GroupBoxExtraer.Location = New System.Drawing.Point(177, 379)
+        Me.GroupBoxExtraer.Location = New System.Drawing.Point(63, 96)
         Me.GroupBoxExtraer.Name = "GroupBoxExtraer"
         Me.GroupBoxExtraer.Size = New System.Drawing.Size(627, 445)
         Me.GroupBoxExtraer.TabIndex = 3
@@ -1025,6 +1019,7 @@ Partial Class frmClasesDispositivos
         Me.GridViewListado.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn13})
         Me.GridViewListado.GridControl = Me.GridControlListado
         Me.GridViewListado.Name = "GridViewListado"
+        Me.GridViewListado.OptionsView.ShowAutoFilterRow = True
         Me.GridViewListado.OptionsView.ShowGroupPanel = False
         '
         'GridColumn13
@@ -1064,7 +1059,6 @@ Partial Class frmClasesDispositivos
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(847, 597)
-        Me.Controls.Add(Me.GroupBoxExtraer)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.RibbonStatusBar)
         Me.Controls.Add(Me.RibbonControl)
@@ -1175,7 +1169,6 @@ Partial Class frmClasesDispositivos
     Friend WithEvents GridColumn3 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn4 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn5 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents GridColumn6 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn7 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn8 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn9 As DevExpress.XtraGrid.Columns.GridColumn

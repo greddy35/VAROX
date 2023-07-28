@@ -26,9 +26,9 @@ Partial Class frmPrincipal
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPrincipal))
-        Dim SuperToolTip2 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-        Dim ToolTipTitleItem2 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-        Dim ToolTipItem2 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+        Dim SuperToolTip1 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+        Dim ToolTipTitleItem1 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+        Dim ToolTipItem1 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
         Me.contenedor = New DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer()
         Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
         Me.GroupBoxRestabPass = New System.Windows.Forms.GroupBox()
@@ -50,17 +50,27 @@ Partial Class frmPrincipal
         Me.lblRol = New DevExpress.XtraBars.BarStaticItem()
         Me.lblUser = New DevExpress.XtraBars.BarStaticItem()
         Me.lblNombre = New DevExpress.XtraBars.BarStaticItem()
+        Me.SkinDropDownButtonItem1 = New DevExpress.XtraBars.SkinDropDownButtonItem()
         Me.AccordionControl1 = New DevExpress.XtraBars.Navigation.AccordionControl()
-        Me.AccordionControlSeparator13 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
-        Me.AccordionControlElement1 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
-        Me.accDashboardDesigner = New DevExpress.XtraBars.Navigation.AccordionControlElement()
-        Me.AccordionControlSeparator14 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
-        Me.accDashboardRap = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.AccordionControlSeparator31 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
         Me.AccordionControlElement2 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.AccordionControlSeparator24 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
+        Me.AccordionControlElement8 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.AccordionControlSeparator13 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
         Me.accCorteGeneral = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.AccordionControlSeparator22 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
+        Me.AccordionControlElement6 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AccordionControlSeparator16 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
-        Me.accCorte_X_Local = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.accDiseñadorReportes = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.AccordionControlSeparator25 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
+        Me.accVisualizadorReportes = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.AccordionControlSeparator23 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
+        Me.AccordionControlElement5 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AccordionControlSeparator15 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
+        Me.accDiseñadorDashboard = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.AccordionControlSeparator14 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
+        Me.accVisualizadorDashboard = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.AccordionControlSeparator30 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
         Me.AccordionControlElement7 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AccordionControlMantenimientos = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AccordionControlSeparator9 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
@@ -72,7 +82,7 @@ Partial Class frmPrincipal
         Me.accLocales = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AccordionControlSeparator17 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
         Me.accValvulas = New DevExpress.XtraBars.Navigation.AccordionControlElement()
-        Me.AccordionControlSeparator19 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
+        Me.AccordionControlSeparator27 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
         Me.AccordionControlAdminSistema = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AccordionControlSeguridad = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AccordionControlSeparator4 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
@@ -88,7 +98,7 @@ Partial Class frmPrincipal
         Me.accTiposValvulas = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AccordionControlSeparator7 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
         Me.accClasesDispo = New DevExpress.XtraBars.Navigation.AccordionControlElement()
-        Me.AccordionControlSeparator20 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
+        Me.AccordionControlSeparator28 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
         Me.AccordionControlElementSesion = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AccordionControlSeparator3 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
         Me.accCambiarContraseña = New DevExpress.XtraBars.Navigation.AccordionControlElement()
@@ -96,7 +106,7 @@ Partial Class frmPrincipal
         Me.accCerrarSesion = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AccordionControlSeparator2 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
         Me.accSalir = New DevExpress.XtraBars.Navigation.AccordionControlElement()
-        Me.AccordionControlSeparator8 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
+        Me.AccordionControlSeparator29 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
         Me.FluentDesignFormControl1 = New DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl()
         Me.TimerConexión = New System.Windows.Forms.Timer(Me.components)
         Me.BarManager1 = New DevExpress.XtraBars.BarManager(Me.components)
@@ -143,7 +153,7 @@ Partial Class frmPrincipal
         '
         Me.contenedor.Controls.Add(Me.PanelControl1)
         Me.contenedor.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.contenedor.Location = New System.Drawing.Point(292, 37)
+        Me.contenedor.Location = New System.Drawing.Point(292, 39)
         Me.contenedor.Margin = New System.Windows.Forms.Padding(2)
         Me.contenedor.Name = "contenedor"
         Me.contenedor.Size = New System.Drawing.Size(980, 638)
@@ -251,13 +261,13 @@ Partial Class frmPrincipal
         Me.btnVerPass.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.btnVerPass.Name = "btnVerPass"
         Me.btnVerPass.Size = New System.Drawing.Size(42, 32)
-        ToolTipTitleItem2.AllowHtmlText = DevExpress.Utils.DefaultBoolean.[True]
-        ToolTipTitleItem2.Text = "<b>Ver</b>"
-        ToolTipItem2.ImageOptions.Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
-        ToolTipItem2.Text = "Mostrar contraseñas ingresadas"
-        SuperToolTip2.Items.Add(ToolTipTitleItem2)
-        SuperToolTip2.Items.Add(ToolTipItem2)
-        Me.btnVerPass.SuperTip = SuperToolTip2
+        ToolTipTitleItem1.AllowHtmlText = DevExpress.Utils.DefaultBoolean.[True]
+        ToolTipTitleItem1.Text = "<b>Ver</b>"
+        ToolTipItem1.ImageOptions.Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
+        ToolTipItem1.Text = "Mostrar contraseñas ingresadas"
+        SuperToolTip1.Items.Add(ToolTipTitleItem1)
+        SuperToolTip1.Items.Add(ToolTipItem1)
+        Me.btnVerPass.SuperTip = SuperToolTip1
         Me.btnVerPass.TabIndex = 6
         '
         'btnCambiarPass
@@ -322,8 +332,8 @@ Partial Class frmPrincipal
         'FluentFormDefaultManager1
         '
         Me.FluentFormDefaultManager1.Form = Me
-        Me.FluentFormDefaultManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.BarStaticItem6, Me.BarStaticItem7, Me.BarStaticItem8, Me.lblRol, Me.lblUser, Me.lblNombre})
-        Me.FluentFormDefaultManager1.MaxItemId = 10
+        Me.FluentFormDefaultManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.BarStaticItem6, Me.BarStaticItem7, Me.BarStaticItem8, Me.lblRol, Me.lblUser, Me.lblNombre, Me.SkinDropDownButtonItem1})
+        Me.FluentFormDefaultManager1.MaxItemId = 11
         '
         'BarStaticItem6
         '
@@ -347,7 +357,6 @@ Partial Class frmPrincipal
         '
         'BarStaticItem7
         '
-        Me.BarStaticItem7.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right
         Me.BarStaticItem7.AllowFocus = DevExpress.Utils.DefaultBoolean.[False]
         Me.BarStaticItem7.AllowRightClickInMenu = False
         Me.BarStaticItem7.Caption = "Rol:"
@@ -384,7 +393,6 @@ Partial Class frmPrincipal
         '
         'lblRol
         '
-        Me.lblRol.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right
         Me.lblRol.AllowFocus = DevExpress.Utils.DefaultBoolean.[False]
         Me.lblRol.AllowRightClickInMenu = False
         Me.lblRol.Caption = "---"
@@ -425,14 +433,23 @@ Partial Class frmPrincipal
         Me.lblNombre.ItemAppearance.Normal.Options.UseFont = True
         Me.lblNombre.ItemAppearance.Normal.Options.UseForeColor = True
         Me.lblNombre.Name = "lblNombre"
-        Me.lblNombre.Size = New System.Drawing.Size(250, 28)
-        Me.lblNombre.Width = 250
+        Me.lblNombre.Size = New System.Drawing.Size(220, 28)
+        Me.lblNombre.Width = 220
+        '
+        'SkinDropDownButtonItem1
+        '
+        Me.SkinDropDownButtonItem1.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right
+        Me.SkinDropDownButtonItem1.Id = 10
+        Me.SkinDropDownButtonItem1.Name = "SkinDropDownButtonItem1"
+        Me.SkinDropDownButtonItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
         '
         'AccordionControl1
         '
+        Me.AccordionControl1.Appearance.Item.Hovered.ForeColor = System.Drawing.Color.MediumBlue
+        Me.AccordionControl1.Appearance.Item.Hovered.Options.UseForeColor = True
         Me.AccordionControl1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.AccordionControl1.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeparator13, Me.AccordionControlElement1, Me.AccordionControlElement2, Me.AccordionControlSeparator15, Me.AccordionControlElement7, Me.AccordionControlAdminSistema, Me.AccordionControlElementSesion})
-        Me.AccordionControl1.Location = New System.Drawing.Point(0, 37)
+        Me.AccordionControl1.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeparator31, Me.AccordionControlElement2, Me.AccordionControlSeparator30, Me.AccordionControlElement7, Me.AccordionControlSeparator27, Me.AccordionControlAdminSistema, Me.AccordionControlSeparator28, Me.AccordionControlElementSesion, Me.AccordionControlSeparator29})
+        Me.AccordionControl1.Location = New System.Drawing.Point(0, 39)
         Me.AccordionControl1.Margin = New System.Windows.Forms.Padding(2)
         Me.AccordionControl1.Name = "AccordionControl1"
         Me.AccordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch
@@ -440,63 +457,114 @@ Partial Class frmPrincipal
         Me.AccordionControl1.TabIndex = 1
         Me.AccordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu
         '
+        'AccordionControlSeparator31
+        '
+        Me.AccordionControlSeparator31.Name = "AccordionControlSeparator31"
+        '
+        'AccordionControlElement2
+        '
+        Me.AccordionControlElement2.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeparator24, Me.AccordionControlElement8, Me.AccordionControlElement6, Me.AccordionControlElement5})
+        Me.AccordionControlElement2.Expanded = True
+        Me.AccordionControlElement2.ImageOptions.Image = CType(resources.GetObject("AccordionControlElement2.ImageOptions.Image"), System.Drawing.Image)
+        Me.AccordionControlElement2.Name = "AccordionControlElement2"
+        Me.AccordionControlElement2.Text = "Reportería y Ánalisis"
+        '
+        'AccordionControlSeparator24
+        '
+        Me.AccordionControlSeparator24.Name = "AccordionControlSeparator24"
+        '
+        'AccordionControlElement8
+        '
+        Me.AccordionControlElement8.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeparator13, Me.accCorteGeneral, Me.AccordionControlSeparator22})
+        Me.AccordionControlElement8.Expanded = True
+        Me.AccordionControlElement8.Name = "AccordionControlElement8"
+        Me.AccordionControlElement8.Text = "Ánalisis"
+        '
         'AccordionControlSeparator13
         '
         Me.AccordionControlSeparator13.Name = "AccordionControlSeparator13"
         '
-        'AccordionControlElement1
-        '
-        Me.AccordionControlElement1.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.accDashboardDesigner, Me.AccordionControlSeparator14, Me.accDashboardRap})
-        Me.AccordionControlElement1.ImageOptions.Image = CType(resources.GetObject("AccordionControlElement1.ImageOptions.Image"), System.Drawing.Image)
-        Me.AccordionControlElement1.Name = "AccordionControlElement1"
-        Me.AccordionControlElement1.Text = "Dashboard"
-        '
-        'accDashboardDesigner
-        '
-        Me.accDashboardDesigner.ImageOptions.Image = CType(resources.GetObject("accDashboardDesigner.ImageOptions.Image"), System.Drawing.Image)
-        Me.accDashboardDesigner.Name = "accDashboardDesigner"
-        Me.accDashboardDesigner.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
-        Me.accDashboardDesigner.Text = "General"
-        '
-        'AccordionControlSeparator14
-        '
-        Me.AccordionControlSeparator14.Name = "AccordionControlSeparator14"
-        '
-        'accDashboardRap
-        '
-        Me.accDashboardRap.ImageOptions.Image = CType(resources.GetObject("accDashboardRap.ImageOptions.Image"), System.Drawing.Image)
-        Me.accDashboardRap.Name = "accDashboardRap"
-        Me.accDashboardRap.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
-        Me.accDashboardRap.Text = "Dashboard Rápido"
-        '
-        'AccordionControlElement2
-        '
-        Me.AccordionControlElement2.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.accCorteGeneral, Me.AccordionControlSeparator16, Me.accCorte_X_Local})
-        Me.AccordionControlElement2.ImageOptions.Image = CType(resources.GetObject("AccordionControlElement2.ImageOptions.Image"), System.Drawing.Image)
-        Me.AccordionControlElement2.Name = "AccordionControlElement2"
-        Me.AccordionControlElement2.Text = "Reportería"
-        '
         'accCorteGeneral
         '
         Me.accCorteGeneral.ImageOptions.Image = CType(resources.GetObject("accCorteGeneral.ImageOptions.Image"), System.Drawing.Image)
+        Me.accCorteGeneral.ImageOptions.ImageLayoutMode = DevExpress.XtraBars.Navigation.ImageLayoutMode.Squeeze
         Me.accCorteGeneral.Name = "accCorteGeneral"
         Me.accCorteGeneral.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
-        Me.accCorteGeneral.Text = "Corte General"
+        Me.accCorteGeneral.Text = "Ánalisis y Cortes"
+        '
+        'AccordionControlSeparator22
+        '
+        Me.AccordionControlSeparator22.Name = "AccordionControlSeparator22"
+        '
+        'AccordionControlElement6
+        '
+        Me.AccordionControlElement6.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeparator16, Me.accDiseñadorReportes, Me.AccordionControlSeparator25, Me.accVisualizadorReportes, Me.AccordionControlSeparator23})
+        Me.AccordionControlElement6.Expanded = True
+        Me.AccordionControlElement6.Name = "AccordionControlElement6"
+        Me.AccordionControlElement6.Text = "Reportes"
         '
         'AccordionControlSeparator16
         '
         Me.AccordionControlSeparator16.Name = "AccordionControlSeparator16"
         '
-        'accCorte_X_Local
+        'accDiseñadorReportes
         '
-        Me.accCorte_X_Local.ImageOptions.Image = CType(resources.GetObject("accCorte_X_Local.ImageOptions.Image"), System.Drawing.Image)
-        Me.accCorte_X_Local.Name = "accCorte_X_Local"
-        Me.accCorte_X_Local.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
-        Me.accCorte_X_Local.Text = "Corte por Local"
+        Me.accDiseñadorReportes.ImageOptions.Image = CType(resources.GetObject("accDiseñadorReportes.ImageOptions.Image"), System.Drawing.Image)
+        Me.accDiseñadorReportes.ImageOptions.ImageLayoutMode = DevExpress.XtraBars.Navigation.ImageLayoutMode.Squeeze
+        Me.accDiseñadorReportes.Name = "accDiseñadorReportes"
+        Me.accDiseñadorReportes.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
+        Me.accDiseñadorReportes.Text = "Diseñador de Reportes"
+        '
+        'AccordionControlSeparator25
+        '
+        Me.AccordionControlSeparator25.Name = "AccordionControlSeparator25"
+        '
+        'accVisualizadorReportes
+        '
+        Me.accVisualizadorReportes.ImageOptions.Image = CType(resources.GetObject("accVisualizadorReportes.ImageOptions.Image"), System.Drawing.Image)
+        Me.accVisualizadorReportes.ImageOptions.ImageLayoutMode = DevExpress.XtraBars.Navigation.ImageLayoutMode.Squeeze
+        Me.accVisualizadorReportes.Name = "accVisualizadorReportes"
+        Me.accVisualizadorReportes.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
+        Me.accVisualizadorReportes.Text = "Visualizador de Reportes"
+        '
+        'AccordionControlSeparator23
+        '
+        Me.AccordionControlSeparator23.Name = "AccordionControlSeparator23"
+        '
+        'AccordionControlElement5
+        '
+        Me.AccordionControlElement5.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeparator15, Me.accDiseñadorDashboard, Me.AccordionControlSeparator14, Me.accVisualizadorDashboard})
+        Me.AccordionControlElement5.Expanded = True
+        Me.AccordionControlElement5.Name = "AccordionControlElement5"
+        Me.AccordionControlElement5.Text = "Dashboard"
         '
         'AccordionControlSeparator15
         '
         Me.AccordionControlSeparator15.Name = "AccordionControlSeparator15"
+        '
+        'accDiseñadorDashboard
+        '
+        Me.accDiseñadorDashboard.ImageOptions.Image = CType(resources.GetObject("accDiseñadorDashboard.ImageOptions.Image"), System.Drawing.Image)
+        Me.accDiseñadorDashboard.ImageOptions.ImageLayoutMode = DevExpress.XtraBars.Navigation.ImageLayoutMode.Squeeze
+        Me.accDiseñadorDashboard.Name = "accDiseñadorDashboard"
+        Me.accDiseñadorDashboard.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
+        Me.accDiseñadorDashboard.Text = "Diseñador de Dashboard"
+        '
+        'AccordionControlSeparator14
+        '
+        Me.AccordionControlSeparator14.Name = "AccordionControlSeparator14"
+        '
+        'accVisualizadorDashboard
+        '
+        Me.accVisualizadorDashboard.ImageOptions.Image = CType(resources.GetObject("accVisualizadorDashboard.ImageOptions.Image"), System.Drawing.Image)
+        Me.accVisualizadorDashboard.ImageOptions.ImageLayoutMode = DevExpress.XtraBars.Navigation.ImageLayoutMode.Squeeze
+        Me.accVisualizadorDashboard.Name = "accVisualizadorDashboard"
+        Me.accVisualizadorDashboard.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
+        Me.accVisualizadorDashboard.Text = "Visualizador de Dashboard"
+        '
+        'AccordionControlSeparator30
+        '
+        Me.AccordionControlSeparator30.Name = "AccordionControlSeparator30"
         '
         'AccordionControlElement7
         '
@@ -508,7 +576,6 @@ Partial Class frmPrincipal
         'AccordionControlMantenimientos
         '
         Me.AccordionControlMantenimientos.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeparator9, Me.accValLocClien, Me.AccordionControlSeparator5})
-        Me.AccordionControlMantenimientos.Expanded = True
         Me.AccordionControlMantenimientos.Name = "AccordionControlMantenimientos"
         Me.AccordionControlMantenimientos.Text = "Gestión"
         '
@@ -530,8 +597,7 @@ Partial Class frmPrincipal
         '
         'AccordionControlElement13
         '
-        Me.AccordionControlElement13.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.accClientes, Me.AccordionControlSeparator18, Me.accLocales, Me.AccordionControlSeparator17, Me.accValvulas, Me.AccordionControlSeparator19})
-        Me.AccordionControlElement13.Expanded = True
+        Me.AccordionControlElement13.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.accClientes, Me.AccordionControlSeparator18, Me.accLocales, Me.AccordionControlSeparator17, Me.accValvulas})
         Me.AccordionControlElement13.Name = "AccordionControlElement13"
         Me.AccordionControlElement13.Text = "Mantenimientos"
         '
@@ -564,14 +630,13 @@ Partial Class frmPrincipal
         Me.accValvulas.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
         Me.accValvulas.Text = "Válvulas"
         '
-        'AccordionControlSeparator19
+        'AccordionControlSeparator27
         '
-        Me.AccordionControlSeparator19.Name = "AccordionControlSeparator19"
+        Me.AccordionControlSeparator27.Name = "AccordionControlSeparator27"
         '
         'AccordionControlAdminSistema
         '
         Me.AccordionControlAdminSistema.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeguridad, Me.AccordionControlElement3})
-        Me.AccordionControlAdminSistema.Expanded = True
         Me.AccordionControlAdminSistema.ImageOptions.Image = CType(resources.GetObject("AccordionControlAdminSistema.ImageOptions.Image"), System.Drawing.Image)
         Me.AccordionControlAdminSistema.Name = "AccordionControlAdminSistema"
         Me.AccordionControlAdminSistema.Text = "Administración de Sistema"
@@ -579,7 +644,6 @@ Partial Class frmPrincipal
         'AccordionControlSeguridad
         '
         Me.AccordionControlSeguridad.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeparator4, Me.accUsuariosPrivilegios, Me.AccordionControlSeparator10, Me.accRoles, Me.AccordionControlSeparator11, Me.accConfBloq, Me.AccordionControlSeparator12})
-        Me.AccordionControlSeguridad.Expanded = True
         Me.AccordionControlSeguridad.Name = "AccordionControlSeguridad"
         Me.AccordionControlSeguridad.Text = "Seguridad"
         '
@@ -623,8 +687,7 @@ Partial Class frmPrincipal
         '
         'AccordionControlElement3
         '
-        Me.AccordionControlElement3.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.accTiposMedicion, Me.AccordionControlSeparator6, Me.accTiposValvulas, Me.AccordionControlSeparator7, Me.accClasesDispo, Me.AccordionControlSeparator20})
-        Me.AccordionControlElement3.Expanded = True
+        Me.AccordionControlElement3.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.accTiposMedicion, Me.AccordionControlSeparator6, Me.accTiposValvulas, Me.AccordionControlSeparator7, Me.accClasesDispo})
         Me.AccordionControlElement3.Name = "AccordionControlElement3"
         Me.AccordionControlElement3.Text = "Parámetros del Sistema"
         '
@@ -659,13 +722,13 @@ Partial Class frmPrincipal
         Me.accClasesDispo.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
         Me.accClasesDispo.Text = "Clases de Dispositivos"
         '
-        'AccordionControlSeparator20
+        'AccordionControlSeparator28
         '
-        Me.AccordionControlSeparator20.Name = "AccordionControlSeparator20"
+        Me.AccordionControlSeparator28.Name = "AccordionControlSeparator28"
         '
         'AccordionControlElementSesion
         '
-        Me.AccordionControlElementSesion.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeparator3, Me.accCambiarContraseña, Me.AccordionControlSeparator1, Me.accCerrarSesion, Me.AccordionControlSeparator2, Me.accSalir, Me.AccordionControlSeparator8})
+        Me.AccordionControlElementSesion.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeparator3, Me.accCambiarContraseña, Me.AccordionControlSeparator1, Me.accCerrarSesion, Me.AccordionControlSeparator2, Me.accSalir})
         Me.AccordionControlElementSesion.ImageOptions.SvgImage = CType(resources.GetObject("AccordionControlElementSesion.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
         Me.AccordionControlElementSesion.Name = "AccordionControlElementSesion"
         Me.AccordionControlElementSesion.Text = "Sesión"
@@ -706,27 +769,28 @@ Partial Class frmPrincipal
         Me.accSalir.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
         Me.accSalir.Text = "Salir"
         '
-        'AccordionControlSeparator8
+        'AccordionControlSeparator29
         '
-        Me.AccordionControlSeparator8.Name = "AccordionControlSeparator8"
+        Me.AccordionControlSeparator29.Name = "AccordionControlSeparator29"
         '
         'FluentDesignFormControl1
         '
         Me.FluentDesignFormControl1.FluentDesignForm = Me
-        Me.FluentDesignFormControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.BarStaticItem6, Me.BarStaticItem7, Me.BarStaticItem8, Me.lblRol, Me.lblUser, Me.lblNombre})
+        Me.FluentDesignFormControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.BarStaticItem6, Me.BarStaticItem7, Me.BarStaticItem8, Me.lblRol, Me.lblUser, Me.lblNombre, Me.SkinDropDownButtonItem1})
         Me.FluentDesignFormControl1.Location = New System.Drawing.Point(0, 0)
         Me.FluentDesignFormControl1.Manager = Me.FluentFormDefaultManager1
         Me.FluentDesignFormControl1.Margin = New System.Windows.Forms.Padding(2)
         Me.FluentDesignFormControl1.Name = "FluentDesignFormControl1"
-        Me.FluentDesignFormControl1.Size = New System.Drawing.Size(1272, 37)
+        Me.FluentDesignFormControl1.Size = New System.Drawing.Size(1272, 39)
         Me.FluentDesignFormControl1.TabIndex = 2
         Me.FluentDesignFormControl1.TabStop = False
         Me.FluentDesignFormControl1.TitleItemLinks.Add(Me.BarStaticItem6)
         Me.FluentDesignFormControl1.TitleItemLinks.Add(Me.lblUser)
         Me.FluentDesignFormControl1.TitleItemLinks.Add(Me.BarStaticItem8)
         Me.FluentDesignFormControl1.TitleItemLinks.Add(Me.lblNombre)
-        Me.FluentDesignFormControl1.TitleItemLinks.Add(Me.lblRol)
         Me.FluentDesignFormControl1.TitleItemLinks.Add(Me.BarStaticItem7)
+        Me.FluentDesignFormControl1.TitleItemLinks.Add(Me.lblRol)
+        Me.FluentDesignFormControl1.TitleItemLinks.Add(Me.SkinDropDownButtonItem1)
         '
         'TimerConexión
         '
@@ -863,7 +927,7 @@ Partial Class frmPrincipal
         '
         Me.barDockControlTop.CausesValidation = False
         Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
-        Me.barDockControlTop.Location = New System.Drawing.Point(0, 37)
+        Me.barDockControlTop.Location = New System.Drawing.Point(0, 39)
         Me.barDockControlTop.Manager = Me.BarManager1
         Me.barDockControlTop.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.barDockControlTop.Size = New System.Drawing.Size(1272, 0)
@@ -872,16 +936,16 @@ Partial Class frmPrincipal
         '
         Me.barDockControlBottom.CausesValidation = False
         Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 675)
+        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 677)
         Me.barDockControlBottom.Manager = Me.BarManager1
         Me.barDockControlBottom.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
-        Me.barDockControlBottom.Size = New System.Drawing.Size(1272, 41)
+        Me.barDockControlBottom.Size = New System.Drawing.Size(1272, 39)
         '
         'barDockControlLeft
         '
         Me.barDockControlLeft.CausesValidation = False
         Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
-        Me.barDockControlLeft.Location = New System.Drawing.Point(0, 37)
+        Me.barDockControlLeft.Location = New System.Drawing.Point(0, 39)
         Me.barDockControlLeft.Manager = Me.BarManager1
         Me.barDockControlLeft.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.barDockControlLeft.Size = New System.Drawing.Size(0, 638)
@@ -890,7 +954,7 @@ Partial Class frmPrincipal
         '
         Me.barDockControlRight.CausesValidation = False
         Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
-        Me.barDockControlRight.Location = New System.Drawing.Point(1272, 37)
+        Me.barDockControlRight.Location = New System.Drawing.Point(1272, 39)
         Me.barDockControlRight.Manager = Me.BarManager1
         Me.barDockControlRight.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.barDockControlRight.Size = New System.Drawing.Size(0, 638)
@@ -926,7 +990,7 @@ Partial Class frmPrincipal
         '
         Me.BarDockControl1.CausesValidation = False
         Me.BarDockControl1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BarDockControl1.Location = New System.Drawing.Point(0, 37)
+        Me.BarDockControl1.Location = New System.Drawing.Point(0, 39)
         Me.BarDockControl1.Manager = Me.BarManager2
         Me.BarDockControl1.Size = New System.Drawing.Size(1272, 0)
         '
@@ -942,17 +1006,17 @@ Partial Class frmPrincipal
         '
         Me.BarDockControl3.CausesValidation = False
         Me.BarDockControl3.Dock = System.Windows.Forms.DockStyle.Left
-        Me.BarDockControl3.Location = New System.Drawing.Point(0, 37)
+        Me.BarDockControl3.Location = New System.Drawing.Point(0, 39)
         Me.BarDockControl3.Manager = Me.BarManager2
-        Me.BarDockControl3.Size = New System.Drawing.Size(0, 679)
+        Me.BarDockControl3.Size = New System.Drawing.Size(0, 677)
         '
         'BarDockControl4
         '
         Me.BarDockControl4.CausesValidation = False
         Me.BarDockControl4.Dock = System.Windows.Forms.DockStyle.Right
-        Me.BarDockControl4.Location = New System.Drawing.Point(1272, 37)
+        Me.BarDockControl4.Location = New System.Drawing.Point(1272, 39)
         Me.BarDockControl4.Manager = Me.BarManager2
-        Me.BarDockControl4.Size = New System.Drawing.Size(0, 679)
+        Me.BarDockControl4.Size = New System.Drawing.Size(0, 677)
         '
         'BarManager3
         '
@@ -966,7 +1030,7 @@ Partial Class frmPrincipal
         '
         Me.BarDockControl5.CausesValidation = False
         Me.BarDockControl5.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BarDockControl5.Location = New System.Drawing.Point(0, 37)
+        Me.BarDockControl5.Location = New System.Drawing.Point(0, 39)
         Me.BarDockControl5.Manager = Me.BarManager3
         Me.BarDockControl5.Size = New System.Drawing.Size(1272, 0)
         '
@@ -982,17 +1046,17 @@ Partial Class frmPrincipal
         '
         Me.BarDockControl7.CausesValidation = False
         Me.BarDockControl7.Dock = System.Windows.Forms.DockStyle.Left
-        Me.BarDockControl7.Location = New System.Drawing.Point(0, 37)
+        Me.BarDockControl7.Location = New System.Drawing.Point(0, 39)
         Me.BarDockControl7.Manager = Me.BarManager3
-        Me.BarDockControl7.Size = New System.Drawing.Size(0, 679)
+        Me.BarDockControl7.Size = New System.Drawing.Size(0, 677)
         '
         'BarDockControl8
         '
         Me.BarDockControl8.CausesValidation = False
         Me.BarDockControl8.Dock = System.Windows.Forms.DockStyle.Right
-        Me.BarDockControl8.Location = New System.Drawing.Point(1272, 37)
+        Me.BarDockControl8.Location = New System.Drawing.Point(1272, 39)
         Me.BarDockControl8.Manager = Me.BarManager3
-        Me.BarDockControl8.Size = New System.Drawing.Size(0, 679)
+        Me.BarDockControl8.Size = New System.Drawing.Size(0, 677)
         '
         'frmPrincipal
         '
@@ -1016,12 +1080,13 @@ Partial Class frmPrincipal
         Me.Controls.Add(Me.BarDockControl5)
         Me.Controls.Add(Me.FluentDesignFormControl1)
         Me.FluentDesignFormControl = Me.FluentDesignFormControl1
+        Me.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow
         Me.IconOptions.Image = CType(resources.GetObject("frmPrincipal.IconOptions.Image"), System.Drawing.Image)
         Me.KeyPreview = True
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frmPrincipal"
         Me.NavigationControl = Me.AccordionControl1
-        Me.Text = "VAROX 1.1 "
+        Me.Text = "VAROX 1.1          "
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.contenedor.ResumeLayout(False)
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1042,7 +1107,6 @@ Partial Class frmPrincipal
     End Sub
     Friend WithEvents contenedor As DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer
     Friend WithEvents AccordionControl1 As DevExpress.XtraBars.Navigation.AccordionControl
-    Friend WithEvents AccordionControlElement1 As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents FluentDesignFormControl1 As DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl
     Friend WithEvents FluentFormDefaultManager1 As DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager
     Friend WithEvents TimerConexión As Timer
@@ -1097,7 +1161,6 @@ Partial Class frmPrincipal
     Friend WithEvents accCerrarSesion As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents AccordionControlSeparator2 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
     Friend WithEvents accSalir As DevExpress.XtraBars.Navigation.AccordionControlElement
-    Friend WithEvents AccordionControlSeparator8 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
     Friend WithEvents BarStaticItem5 As DevExpress.XtraBars.BarStaticItem
     Friend WithEvents bsiFecha As DevExpress.XtraBars.BarStaticItem
     Friend WithEvents Bar1 As DevExpress.XtraBars.Bar
@@ -1107,14 +1170,9 @@ Partial Class frmPrincipal
     Friend WithEvents lblCompañia As DevExpress.XtraBars.BarStaticItem
     Friend WithEvents accConfBloq As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents AccordionControlSeparator12 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
-    Friend WithEvents accDashboardDesigner As DevExpress.XtraBars.Navigation.AccordionControlElement
-    Friend WithEvents AccordionControlSeparator14 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
-    Friend WithEvents accDashboardRap As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents AccordionControlSeparator13 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
     Friend WithEvents accCorteGeneral As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents AccordionControlSeparator16 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
-    Friend WithEvents accCorte_X_Local As DevExpress.XtraBars.Navigation.AccordionControlElement
-    Friend WithEvents AccordionControlSeparator15 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
     Friend WithEvents AccordionControlElement7 As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents AccordionControlElement13 As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents accClientes As DevExpress.XtraBars.Navigation.AccordionControlElement
@@ -1122,9 +1180,7 @@ Partial Class frmPrincipal
     Friend WithEvents accLocales As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents AccordionControlSeparator17 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
     Friend WithEvents accValvulas As DevExpress.XtraBars.Navigation.AccordionControlElement
-    Friend WithEvents AccordionControlSeparator19 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
     Friend WithEvents accClasesDispo As DevExpress.XtraBars.Navigation.AccordionControlElement
-    Friend WithEvents AccordionControlSeparator20 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
     Friend WithEvents BarDockControl3 As DevExpress.XtraBars.BarDockControl
     Friend WithEvents BarManager2 As DevExpress.XtraBars.BarManager
     Friend WithEvents BarDockControl1 As DevExpress.XtraBars.BarDockControl
@@ -1136,4 +1192,23 @@ Partial Class frmPrincipal
     Friend WithEvents BarDockControl6 As DevExpress.XtraBars.BarDockControl
     Friend WithEvents BarDockControl8 As DevExpress.XtraBars.BarDockControl
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents AccordionControlSeparator31 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
+    Friend WithEvents AccordionControlSeparator24 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
+    Friend WithEvents AccordionControlElement8 As DevExpress.XtraBars.Navigation.AccordionControlElement
+    Friend WithEvents AccordionControlElement6 As DevExpress.XtraBars.Navigation.AccordionControlElement
+    Friend WithEvents accDiseñadorReportes As DevExpress.XtraBars.Navigation.AccordionControlElement
+    Friend WithEvents AccordionControlSeparator25 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
+    Friend WithEvents accVisualizadorReportes As DevExpress.XtraBars.Navigation.AccordionControlElement
+    Friend WithEvents AccordionControlSeparator23 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
+    Friend WithEvents AccordionControlElement5 As DevExpress.XtraBars.Navigation.AccordionControlElement
+    Friend WithEvents AccordionControlSeparator15 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
+    Friend WithEvents accDiseñadorDashboard As DevExpress.XtraBars.Navigation.AccordionControlElement
+    Friend WithEvents AccordionControlSeparator14 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
+    Friend WithEvents accVisualizadorDashboard As DevExpress.XtraBars.Navigation.AccordionControlElement
+    Friend WithEvents AccordionControlSeparator30 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
+    Friend WithEvents AccordionControlSeparator27 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
+    Friend WithEvents AccordionControlSeparator28 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
+    Friend WithEvents AccordionControlSeparator29 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
+    Friend WithEvents SkinDropDownButtonItem1 As DevExpress.XtraBars.SkinDropDownButtonItem
+    Friend WithEvents AccordionControlSeparator22 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
 End Class

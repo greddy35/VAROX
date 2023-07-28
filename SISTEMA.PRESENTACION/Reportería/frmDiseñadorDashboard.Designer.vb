@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmDashboardDesigner
+Partial Class frmDiseñadorDashboard
     Inherits DevExpress.XtraBars.Ribbon.RibbonForm
 
     'Form overrides dispose to clean up the component list.
@@ -20,199 +20,191 @@ Partial Class frmDashboardDesigner
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDashboardDesigner))
-        Dim GalleryItemGroup1 As DevExpress.XtraBars.Ribbon.GalleryItemGroup = New DevExpress.XtraBars.Ribbon.GalleryItemGroup()
-        Dim GalleryItem1 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem2 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem3 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem4 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem5 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem6 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem7 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem8 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem9 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem10 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem11 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem12 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem13 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem14 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem15 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem16 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem17 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem18 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem19 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem20 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem21 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem22 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem23 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem24 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem25 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItemGroup2 As DevExpress.XtraBars.Ribbon.GalleryItemGroup = New DevExpress.XtraBars.Ribbon.GalleryItemGroup()
-        Dim GalleryItem26 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem27 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem28 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem29 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem30 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem31 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem32 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem33 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem34 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem35 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem36 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem37 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem38 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem39 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem40 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem41 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem42 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem43 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem44 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem45 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem46 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem47 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem48 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem49 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem50 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem51 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItemGroup3 As DevExpress.XtraBars.Ribbon.GalleryItemGroup = New DevExpress.XtraBars.Ribbon.GalleryItemGroup()
-        Dim GalleryItem52 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem53 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem54 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem55 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem56 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem57 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem58 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItem59 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
-        Dim GalleryItemGroup4 As DevExpress.XtraBars.Ribbon.GalleryItemGroup = New DevExpress.XtraBars.Ribbon.GalleryItemGroup()
-        Dim SkinPaddingEdges1 As DevExpress.Skins.SkinPaddingEdges = New DevExpress.Skins.SkinPaddingEdges()
-        Dim ChartInsideHorizontalLegendGalleryGroup1 As DevExpress.DashboardWin.Bars.ChartInsideHorizontalLegendGalleryGroup = New DevExpress.DashboardWin.Bars.ChartInsideHorizontalLegendGalleryGroup()
-        Dim ChartLegendInsideTopLeftHorizontalGalleryItem1 As DevExpress.DashboardWin.Bars.ChartLegendInsideTopLeftHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideTopLeftHorizontalGalleryItem()
-        Dim ChartLegendInsideTopCenterHorizontalGalleryItem1 As DevExpress.DashboardWin.Bars.ChartLegendInsideTopCenterHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideTopCenterHorizontalGalleryItem()
-        Dim ChartLegendInsideTopRightHorizontalGalleryItem1 As DevExpress.DashboardWin.Bars.ChartLegendInsideTopRightHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideTopRightHorizontalGalleryItem()
-        Dim ChartLegendInsideBottomLeftHorizontalGalleryItem1 As DevExpress.DashboardWin.Bars.ChartLegendInsideBottomLeftHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideBottomLeftHorizontalGalleryItem()
-        Dim ChartLegendInsideBottomCenterHorizontalGalleryItem1 As DevExpress.DashboardWin.Bars.ChartLegendInsideBottomCenterHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideBottomCenterHorizontalGalleryItem()
-        Dim ChartLegendInsideBottomRightHorizontalGalleryItem1 As DevExpress.DashboardWin.Bars.ChartLegendInsideBottomRightHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideBottomRightHorizontalGalleryItem()
-        Dim ChartInsideVerticalLegendGalleryGroup1 As DevExpress.DashboardWin.Bars.ChartInsideVerticalLegendGalleryGroup = New DevExpress.DashboardWin.Bars.ChartInsideVerticalLegendGalleryGroup()
-        Dim ChartLegendInsideTopLeftVerticalGalleryItem1 As DevExpress.DashboardWin.Bars.ChartLegendInsideTopLeftVerticalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideTopLeftVerticalGalleryItem()
-        Dim ChartLegendInsideTopCenterVerticalGalleryItem1 As DevExpress.DashboardWin.Bars.ChartLegendInsideTopCenterVerticalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideTopCenterVerticalGalleryItem()
-        Dim ChartLegendInsideTopRightVerticalGalleryItem1 As DevExpress.DashboardWin.Bars.ChartLegendInsideTopRightVerticalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideTopRightVerticalGalleryItem()
-        Dim ChartLegendInsideBottomLeftVerticalGalleryItem1 As DevExpress.DashboardWin.Bars.ChartLegendInsideBottomLeftVerticalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideBottomLeftVerticalGalleryItem()
-        Dim ChartLegendInsideBottomCenterVerticalGalleryItem1 As DevExpress.DashboardWin.Bars.ChartLegendInsideBottomCenterVerticalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideBottomCenterVerticalGalleryItem()
-        Dim ChartLegendInsideBottomRightVerticalGalleryItem1 As DevExpress.DashboardWin.Bars.ChartLegendInsideBottomRightVerticalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideBottomRightVerticalGalleryItem()
-        Dim ChartOutsideHorizontalLegendGalleryGroup1 As DevExpress.DashboardWin.Bars.ChartOutsideHorizontalLegendGalleryGroup = New DevExpress.DashboardWin.Bars.ChartOutsideHorizontalLegendGalleryGroup()
-        Dim ChartLegendOutsideTopLeftHorizontalGalleryItem1 As DevExpress.DashboardWin.Bars.ChartLegendOutsideTopLeftHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendOutsideTopLeftHorizontalGalleryItem()
-        Dim ChartLegendOutsideTopCenterHorizontalGalleryItem1 As DevExpress.DashboardWin.Bars.ChartLegendOutsideTopCenterHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendOutsideTopCenterHorizontalGalleryItem()
-        Dim ChartLegendOutsideTopRightHorizontalGalleryItem1 As DevExpress.DashboardWin.Bars.ChartLegendOutsideTopRightHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendOutsideTopRightHorizontalGalleryItem()
-        Dim ChartLegendOutsideBottomLeftHorizontalGalleryItem1 As DevExpress.DashboardWin.Bars.ChartLegendOutsideBottomLeftHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendOutsideBottomLeftHorizontalGalleryItem()
-        Dim ChartLegendOutsideBottomCenterHorizontalGalleryItem1 As DevExpress.DashboardWin.Bars.ChartLegendOutsideBottomCenterHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendOutsideBottomCenterHorizontalGalleryItem()
-        Dim ChartLegendOutsideBottomRightHorizontalGalleryItem1 As DevExpress.DashboardWin.Bars.ChartLegendOutsideBottomRightHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendOutsideBottomRightHorizontalGalleryItem()
-        Dim ChartOutsideVerticalLegendGalleryGroup1 As DevExpress.DashboardWin.Bars.ChartOutsideVerticalLegendGalleryGroup = New DevExpress.DashboardWin.Bars.ChartOutsideVerticalLegendGalleryGroup()
-        Dim ChartLegendOutsideTopLeftVerticalGalleryItem1 As DevExpress.DashboardWin.Bars.ChartLegendOutsideTopLeftVerticalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendOutsideTopLeftVerticalGalleryItem()
-        Dim ChartLegendOutsideTopRightVerticalGalleryItem1 As DevExpress.DashboardWin.Bars.ChartLegendOutsideTopRightVerticalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendOutsideTopRightVerticalGalleryItem()
-        Dim ChartLegendOutsideBottomLeftVerticalGalleryItem1 As DevExpress.DashboardWin.Bars.ChartLegendOutsideBottomLeftVerticalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendOutsideBottomLeftVerticalGalleryItem()
-        Dim ChartLegendOutsideBottomRightVerticalGalleryItem1 As DevExpress.DashboardWin.Bars.ChartLegendOutsideBottomRightVerticalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendOutsideBottomRightVerticalGalleryItem()
-        Dim ChartBarSeriesGalleryGroup1 As DevExpress.DashboardWin.Bars.ChartBarSeriesGalleryGroup = New DevExpress.DashboardWin.Bars.ChartBarSeriesGalleryGroup()
-        Dim ChartBarSeriesGalleryItem1 As DevExpress.DashboardWin.Bars.ChartBarSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartBarSeriesGalleryItem()
-        Dim ChartStackedBarSeriesGalleryItem1 As DevExpress.DashboardWin.Bars.ChartStackedBarSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartStackedBarSeriesGalleryItem()
-        Dim ChartFullStackedBarSeriesGalleryItem1 As DevExpress.DashboardWin.Bars.ChartFullStackedBarSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartFullStackedBarSeriesGalleryItem()
-        Dim ChartPointLineSeriesGalleryGroup1 As DevExpress.DashboardWin.Bars.ChartPointLineSeriesGalleryGroup = New DevExpress.DashboardWin.Bars.ChartPointLineSeriesGalleryGroup()
-        Dim ChartPointSeriesGalleryItem1 As DevExpress.DashboardWin.Bars.ChartPointSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartPointSeriesGalleryItem()
-        Dim ChartLineSeriesGalleryItem1 As DevExpress.DashboardWin.Bars.ChartLineSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartLineSeriesGalleryItem()
-        Dim ChartStackedLineSeriesGalleryItem1 As DevExpress.DashboardWin.Bars.ChartStackedLineSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartStackedLineSeriesGalleryItem()
-        Dim ChartFullStackedLineSeriesGalleryItem1 As DevExpress.DashboardWin.Bars.ChartFullStackedLineSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartFullStackedLineSeriesGalleryItem()
-        Dim ChartStepLineSeriesGalleryItem1 As DevExpress.DashboardWin.Bars.ChartStepLineSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartStepLineSeriesGalleryItem()
-        Dim ChartSplineSeriesGalleryItem1 As DevExpress.DashboardWin.Bars.ChartSplineSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartSplineSeriesGalleryItem()
-        Dim ChartAreaSeriesGalleryGroup1 As DevExpress.DashboardWin.Bars.ChartAreaSeriesGalleryGroup = New DevExpress.DashboardWin.Bars.ChartAreaSeriesGalleryGroup()
-        Dim ChartAreaSeriesGalleryItem1 As DevExpress.DashboardWin.Bars.ChartAreaSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartAreaSeriesGalleryItem()
-        Dim ChartStackedAreaSeriesGalleryItem1 As DevExpress.DashboardWin.Bars.ChartStackedAreaSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartStackedAreaSeriesGalleryItem()
-        Dim ChartFullStackedAreaSeriesGalleryItem1 As DevExpress.DashboardWin.Bars.ChartFullStackedAreaSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartFullStackedAreaSeriesGalleryItem()
-        Dim ChartStepAreaSeriesGalleryItem1 As DevExpress.DashboardWin.Bars.ChartStepAreaSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartStepAreaSeriesGalleryItem()
-        Dim ChartSplineAreaSeriesGalleryItem1 As DevExpress.DashboardWin.Bars.ChartSplineAreaSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartSplineAreaSeriesGalleryItem()
-        Dim ChartStackedSplineAreaSeriesGalleryItem1 As DevExpress.DashboardWin.Bars.ChartStackedSplineAreaSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartStackedSplineAreaSeriesGalleryItem()
-        Dim ChartFullStackedSplineAreaSeriesGalleryItem1 As DevExpress.DashboardWin.Bars.ChartFullStackedSplineAreaSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartFullStackedSplineAreaSeriesGalleryItem()
-        Dim ChartRangeSeriesGalleryGroup1 As DevExpress.DashboardWin.Bars.ChartRangeSeriesGalleryGroup = New DevExpress.DashboardWin.Bars.ChartRangeSeriesGalleryGroup()
-        Dim ChartSideBySideRangeBarSeriesGalleryItem1 As DevExpress.DashboardWin.Bars.ChartSideBySideRangeBarSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartSideBySideRangeBarSeriesGalleryItem()
-        Dim ChartRangeAreaSeriesGalleryItem1 As DevExpress.DashboardWin.Bars.ChartRangeAreaSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartRangeAreaSeriesGalleryItem()
-        Dim ChartBubbleSeriesGalleryGroup1 As DevExpress.DashboardWin.Bars.ChartBubbleSeriesGalleryGroup = New DevExpress.DashboardWin.Bars.ChartBubbleSeriesGalleryGroup()
-        Dim ChartWeightedSeriesGalleryItem1 As DevExpress.DashboardWin.Bars.ChartWeightedSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartWeightedSeriesGalleryItem()
-        Dim ChartFinancialSeriesGalleryGroup1 As DevExpress.DashboardWin.Bars.ChartFinancialSeriesGalleryGroup = New DevExpress.DashboardWin.Bars.ChartFinancialSeriesGalleryGroup()
-        Dim ChartHighLowCloseSeriesGalleryItem1 As DevExpress.DashboardWin.Bars.ChartHighLowCloseSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartHighLowCloseSeriesGalleryItem()
-        Dim ChartCandleStickSeriesGalleryItem1 As DevExpress.DashboardWin.Bars.ChartCandleStickSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartCandleStickSeriesGalleryItem()
-        Dim ChartStockSeriesGalleryItem1 As DevExpress.DashboardWin.Bars.ChartStockSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartStockSeriesGalleryItem()
-        Dim ChartInsideHorizontalLegendGalleryGroup2 As DevExpress.DashboardWin.Bars.ChartInsideHorizontalLegendGalleryGroup = New DevExpress.DashboardWin.Bars.ChartInsideHorizontalLegendGalleryGroup()
-        Dim ChartLegendInsideTopLeftHorizontalGalleryItem2 As DevExpress.DashboardWin.Bars.ChartLegendInsideTopLeftHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideTopLeftHorizontalGalleryItem()
-        Dim ChartLegendInsideTopCenterHorizontalGalleryItem2 As DevExpress.DashboardWin.Bars.ChartLegendInsideTopCenterHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideTopCenterHorizontalGalleryItem()
-        Dim ChartLegendInsideTopRightHorizontalGalleryItem2 As DevExpress.DashboardWin.Bars.ChartLegendInsideTopRightHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideTopRightHorizontalGalleryItem()
-        Dim ChartLegendInsideBottomLeftHorizontalGalleryItem2 As DevExpress.DashboardWin.Bars.ChartLegendInsideBottomLeftHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideBottomLeftHorizontalGalleryItem()
-        Dim ChartLegendInsideBottomCenterHorizontalGalleryItem2 As DevExpress.DashboardWin.Bars.ChartLegendInsideBottomCenterHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideBottomCenterHorizontalGalleryItem()
-        Dim ChartLegendInsideBottomRightHorizontalGalleryItem2 As DevExpress.DashboardWin.Bars.ChartLegendInsideBottomRightHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideBottomRightHorizontalGalleryItem()
-        Dim ChartInsideVerticalLegendGalleryGroup2 As DevExpress.DashboardWin.Bars.ChartInsideVerticalLegendGalleryGroup = New DevExpress.DashboardWin.Bars.ChartInsideVerticalLegendGalleryGroup()
-        Dim ChartLegendInsideTopLeftVerticalGalleryItem2 As DevExpress.DashboardWin.Bars.ChartLegendInsideTopLeftVerticalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideTopLeftVerticalGalleryItem()
-        Dim ChartLegendInsideTopCenterVerticalGalleryItem2 As DevExpress.DashboardWin.Bars.ChartLegendInsideTopCenterVerticalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideTopCenterVerticalGalleryItem()
-        Dim ChartLegendInsideTopRightVerticalGalleryItem2 As DevExpress.DashboardWin.Bars.ChartLegendInsideTopRightVerticalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideTopRightVerticalGalleryItem()
-        Dim ChartLegendInsideBottomLeftVerticalGalleryItem2 As DevExpress.DashboardWin.Bars.ChartLegendInsideBottomLeftVerticalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideBottomLeftVerticalGalleryItem()
-        Dim ChartLegendInsideBottomCenterVerticalGalleryItem2 As DevExpress.DashboardWin.Bars.ChartLegendInsideBottomCenterVerticalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideBottomCenterVerticalGalleryItem()
-        Dim ChartLegendInsideBottomRightVerticalGalleryItem2 As DevExpress.DashboardWin.Bars.ChartLegendInsideBottomRightVerticalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideBottomRightVerticalGalleryItem()
-        Dim ChartOutsideHorizontalLegendGalleryGroup2 As DevExpress.DashboardWin.Bars.ChartOutsideHorizontalLegendGalleryGroup = New DevExpress.DashboardWin.Bars.ChartOutsideHorizontalLegendGalleryGroup()
-        Dim ChartLegendOutsideTopLeftHorizontalGalleryItem2 As DevExpress.DashboardWin.Bars.ChartLegendOutsideTopLeftHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendOutsideTopLeftHorizontalGalleryItem()
-        Dim ChartLegendOutsideTopCenterHorizontalGalleryItem2 As DevExpress.DashboardWin.Bars.ChartLegendOutsideTopCenterHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendOutsideTopCenterHorizontalGalleryItem()
-        Dim ChartLegendOutsideTopRightHorizontalGalleryItem2 As DevExpress.DashboardWin.Bars.ChartLegendOutsideTopRightHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendOutsideTopRightHorizontalGalleryItem()
-        Dim ChartLegendOutsideBottomLeftHorizontalGalleryItem2 As DevExpress.DashboardWin.Bars.ChartLegendOutsideBottomLeftHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendOutsideBottomLeftHorizontalGalleryItem()
-        Dim ChartLegendOutsideBottomCenterHorizontalGalleryItem2 As DevExpress.DashboardWin.Bars.ChartLegendOutsideBottomCenterHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendOutsideBottomCenterHorizontalGalleryItem()
-        Dim ChartLegendOutsideBottomRightHorizontalGalleryItem2 As DevExpress.DashboardWin.Bars.ChartLegendOutsideBottomRightHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendOutsideBottomRightHorizontalGalleryItem()
-        Dim ChartOutsideVerticalLegendGalleryGroup2 As DevExpress.DashboardWin.Bars.ChartOutsideVerticalLegendGalleryGroup = New DevExpress.DashboardWin.Bars.ChartOutsideVerticalLegendGalleryGroup()
-        Dim ChartLegendOutsideTopLeftVerticalGalleryItem2 As DevExpress.DashboardWin.Bars.ChartLegendOutsideTopLeftVerticalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendOutsideTopLeftVerticalGalleryItem()
-        Dim ChartLegendOutsideTopRightVerticalGalleryItem2 As DevExpress.DashboardWin.Bars.ChartLegendOutsideTopRightVerticalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendOutsideTopRightVerticalGalleryItem()
-        Dim ChartLegendOutsideBottomLeftVerticalGalleryItem2 As DevExpress.DashboardWin.Bars.ChartLegendOutsideBottomLeftVerticalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendOutsideBottomLeftVerticalGalleryItem()
-        Dim ChartLegendOutsideBottomRightVerticalGalleryItem2 As DevExpress.DashboardWin.Bars.ChartLegendOutsideBottomRightVerticalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendOutsideBottomRightVerticalGalleryItem()
-        Dim RangePointLineSeriesGalleryGroup1 As DevExpress.DashboardWin.Bars.RangePointLineSeriesGalleryGroup = New DevExpress.DashboardWin.Bars.RangePointLineSeriesGalleryGroup()
-        Dim RangeLineSeriesGalleryItem1 As DevExpress.DashboardWin.Bars.RangeLineSeriesGalleryItem = New DevExpress.DashboardWin.Bars.RangeLineSeriesGalleryItem()
-        Dim RangeStackedLineSeriesGalleryItem1 As DevExpress.DashboardWin.Bars.RangeStackedLineSeriesGalleryItem = New DevExpress.DashboardWin.Bars.RangeStackedLineSeriesGalleryItem()
-        Dim RangeFullStackedLineSeriesGalleryItem1 As DevExpress.DashboardWin.Bars.RangeFullStackedLineSeriesGalleryItem = New DevExpress.DashboardWin.Bars.RangeFullStackedLineSeriesGalleryItem()
-        Dim RangeAreaSeriesGalleryGroup1 As DevExpress.DashboardWin.Bars.RangeAreaSeriesGalleryGroup = New DevExpress.DashboardWin.Bars.RangeAreaSeriesGalleryGroup()
-        Dim RangeAreaSeriesGalleryItem1 As DevExpress.DashboardWin.Bars.RangeAreaSeriesGalleryItem = New DevExpress.DashboardWin.Bars.RangeAreaSeriesGalleryItem()
-        Dim RangeStackedAreaSeriesGalleryItem1 As DevExpress.DashboardWin.Bars.RangeStackedAreaSeriesGalleryItem = New DevExpress.DashboardWin.Bars.RangeStackedAreaSeriesGalleryItem()
-        Dim RangeFullStackedAreaSeriesGalleryItem1 As DevExpress.DashboardWin.Bars.RangeFullStackedAreaSeriesGalleryItem = New DevExpress.DashboardWin.Bars.RangeFullStackedAreaSeriesGalleryItem()
-        Dim RangeBarSeriesGalleryGroup1 As DevExpress.DashboardWin.Bars.RangeBarSeriesGalleryGroup = New DevExpress.DashboardWin.Bars.RangeBarSeriesGalleryGroup()
-        Dim RangeBarSeriesGalleryItem1 As DevExpress.DashboardWin.Bars.RangeBarSeriesGalleryItem = New DevExpress.DashboardWin.Bars.RangeBarSeriesGalleryItem()
-        Dim RangeStackedBarSeriesGalleryItem1 As DevExpress.DashboardWin.Bars.RangeStackedBarSeriesGalleryItem = New DevExpress.DashboardWin.Bars.RangeStackedBarSeriesGalleryItem()
-        Dim RangeFullStackedBarSeriesGalleryItem1 As DevExpress.DashboardWin.Bars.RangeFullStackedBarSeriesGalleryItem = New DevExpress.DashboardWin.Bars.RangeFullStackedBarSeriesGalleryItem()
-        Dim MapVerticalLegendGalleryGroup1 As DevExpress.DashboardWin.Bars.MapVerticalLegendGalleryGroup = New DevExpress.DashboardWin.Bars.MapVerticalLegendGalleryGroup()
-        Dim MapLegendTopLeftVerticalGalleryItem1 As DevExpress.DashboardWin.Bars.MapLegendTopLeftVerticalGalleryItem = New DevExpress.DashboardWin.Bars.MapLegendTopLeftVerticalGalleryItem()
-        Dim MapLegendTopCenterVerticalGalleryItem1 As DevExpress.DashboardWin.Bars.MapLegendTopCenterVerticalGalleryItem = New DevExpress.DashboardWin.Bars.MapLegendTopCenterVerticalGalleryItem()
-        Dim MapLegendTopRightVerticalGalleryItem1 As DevExpress.DashboardWin.Bars.MapLegendTopRightVerticalGalleryItem = New DevExpress.DashboardWin.Bars.MapLegendTopRightVerticalGalleryItem()
-        Dim MapLegendBottomLeftVerticalGalleryItem1 As DevExpress.DashboardWin.Bars.MapLegendBottomLeftVerticalGalleryItem = New DevExpress.DashboardWin.Bars.MapLegendBottomLeftVerticalGalleryItem()
-        Dim MapLegendBottomCenterVerticalGalleryItem1 As DevExpress.DashboardWin.Bars.MapLegendBottomCenterVerticalGalleryItem = New DevExpress.DashboardWin.Bars.MapLegendBottomCenterVerticalGalleryItem()
-        Dim MapLegendBottomRightVerticalGalleryItem1 As DevExpress.DashboardWin.Bars.MapLegendBottomRightVerticalGalleryItem = New DevExpress.DashboardWin.Bars.MapLegendBottomRightVerticalGalleryItem()
-        Dim MapHorizontalLegendGalleryGroup1 As DevExpress.DashboardWin.Bars.MapHorizontalLegendGalleryGroup = New DevExpress.DashboardWin.Bars.MapHorizontalLegendGalleryGroup()
-        Dim MapLegendTopLeftHorizontalGalleryItem1 As DevExpress.DashboardWin.Bars.MapLegendTopLeftHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.MapLegendTopLeftHorizontalGalleryItem()
-        Dim MapLegendTopCenterHorizontalGalleryItem1 As DevExpress.DashboardWin.Bars.MapLegendTopCenterHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.MapLegendTopCenterHorizontalGalleryItem()
-        Dim MapLegendTopRightHorizontalGalleryItem1 As DevExpress.DashboardWin.Bars.MapLegendTopRightHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.MapLegendTopRightHorizontalGalleryItem()
-        Dim MapLegendBottomLeftHorizontalGalleryItem1 As DevExpress.DashboardWin.Bars.MapLegendBottomLeftHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.MapLegendBottomLeftHorizontalGalleryItem()
-        Dim MapLegendBottomCenterHorizontalGalleryItem1 As DevExpress.DashboardWin.Bars.MapLegendBottomCenterHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.MapLegendBottomCenterHorizontalGalleryItem()
-        Dim MapLegendBottomRightHorizontalGalleryItem1 As DevExpress.DashboardWin.Bars.MapLegendBottomRightHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.MapLegendBottomRightHorizontalGalleryItem()
-        Dim MapWeightedLegendGalleryGroup1 As DevExpress.DashboardWin.Bars.MapWeightedLegendGalleryGroup = New DevExpress.DashboardWin.Bars.MapWeightedLegendGalleryGroup()
-        Dim MapWeightedLegendTopLeftGalleryItem1 As DevExpress.DashboardWin.Bars.MapWeightedLegendTopLeftGalleryItem = New DevExpress.DashboardWin.Bars.MapWeightedLegendTopLeftGalleryItem()
-        Dim MapWeightedLegendTopCenterGalleryItem1 As DevExpress.DashboardWin.Bars.MapWeightedLegendTopCenterGalleryItem = New DevExpress.DashboardWin.Bars.MapWeightedLegendTopCenterGalleryItem()
-        Dim MapWeightedLegendTopRightGalleryItem1 As DevExpress.DashboardWin.Bars.MapWeightedLegendTopRightGalleryItem = New DevExpress.DashboardWin.Bars.MapWeightedLegendTopRightGalleryItem()
-        Dim MapWeightedLegendBottomLeftGalleryItem1 As DevExpress.DashboardWin.Bars.MapWeightedLegendBottomLeftGalleryItem = New DevExpress.DashboardWin.Bars.MapWeightedLegendBottomLeftGalleryItem()
-        Dim MapWeightedLegendBottomCenterGalleryItem1 As DevExpress.DashboardWin.Bars.MapWeightedLegendBottomCenterGalleryItem = New DevExpress.DashboardWin.Bars.MapWeightedLegendBottomCenterGalleryItem()
-        Dim MapWeightedLegendBottomRightGalleryItem1 As DevExpress.DashboardWin.Bars.MapWeightedLegendBottomRightGalleryItem = New DevExpress.DashboardWin.Bars.MapWeightedLegendBottomRightGalleryItem()
-        Dim GalleryItemGroup5 As DevExpress.XtraBars.Ribbon.GalleryItemGroup = New DevExpress.XtraBars.Ribbon.GalleryItemGroup()
-        Dim GalleryItemGroup6 As DevExpress.XtraBars.Ribbon.GalleryItemGroup = New DevExpress.XtraBars.Ribbon.GalleryItemGroup()
-        Dim ReduceOperation1 As DevExpress.XtraBars.Ribbon.ReduceOperation = New DevExpress.XtraBars.Ribbon.ReduceOperation()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.DashboardDesigner1 = New DevExpress.DashboardWin.DashboardDesigner()
-        Me.DashboardBarAndDockingController1 = New DevExpress.DashboardWin.Native.DashboardBarAndDockingController(Me.components)
+        Dim GalleryItemGroup7 As DevExpress.XtraBars.Ribbon.GalleryItemGroup = New DevExpress.XtraBars.Ribbon.GalleryItemGroup()
+        Dim GalleryItem61 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDiseñadorDashboard))
+        Dim GalleryItem62 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem63 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem64 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem65 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem66 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem67 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem68 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem69 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem70 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem71 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem72 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem73 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem74 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem75 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem76 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem77 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem78 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem79 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem80 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem81 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem82 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem83 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem84 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem85 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItemGroup8 As DevExpress.XtraBars.Ribbon.GalleryItemGroup = New DevExpress.XtraBars.Ribbon.GalleryItemGroup()
+        Dim GalleryItem86 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem87 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem88 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem89 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem90 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem91 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem92 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem93 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem94 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem95 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem96 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem97 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem98 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem99 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem100 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem101 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem102 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem103 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem104 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem105 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem106 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem107 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem108 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem109 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem110 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem111 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItemGroup9 As DevExpress.XtraBars.Ribbon.GalleryItemGroup = New DevExpress.XtraBars.Ribbon.GalleryItemGroup()
+        Dim GalleryItem112 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem113 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem114 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem115 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem116 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem117 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem118 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItem119 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim GalleryItemGroup10 As DevExpress.XtraBars.Ribbon.GalleryItemGroup = New DevExpress.XtraBars.Ribbon.GalleryItemGroup()
+        Dim GalleryItem120 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim SkinPaddingEdges2 As DevExpress.Skins.SkinPaddingEdges = New DevExpress.Skins.SkinPaddingEdges()
+        Dim ChartInsideHorizontalLegendGalleryGroup3 As DevExpress.DashboardWin.Bars.ChartInsideHorizontalLegendGalleryGroup = New DevExpress.DashboardWin.Bars.ChartInsideHorizontalLegendGalleryGroup()
+        Dim ChartLegendInsideTopLeftHorizontalGalleryItem3 As DevExpress.DashboardWin.Bars.ChartLegendInsideTopLeftHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideTopLeftHorizontalGalleryItem()
+        Dim ChartLegendInsideTopCenterHorizontalGalleryItem3 As DevExpress.DashboardWin.Bars.ChartLegendInsideTopCenterHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideTopCenterHorizontalGalleryItem()
+        Dim ChartLegendInsideTopRightHorizontalGalleryItem3 As DevExpress.DashboardWin.Bars.ChartLegendInsideTopRightHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideTopRightHorizontalGalleryItem()
+        Dim ChartLegendInsideBottomLeftHorizontalGalleryItem3 As DevExpress.DashboardWin.Bars.ChartLegendInsideBottomLeftHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideBottomLeftHorizontalGalleryItem()
+        Dim ChartLegendInsideBottomCenterHorizontalGalleryItem3 As DevExpress.DashboardWin.Bars.ChartLegendInsideBottomCenterHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideBottomCenterHorizontalGalleryItem()
+        Dim ChartLegendInsideBottomRightHorizontalGalleryItem3 As DevExpress.DashboardWin.Bars.ChartLegendInsideBottomRightHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideBottomRightHorizontalGalleryItem()
+        Dim ChartInsideVerticalLegendGalleryGroup3 As DevExpress.DashboardWin.Bars.ChartInsideVerticalLegendGalleryGroup = New DevExpress.DashboardWin.Bars.ChartInsideVerticalLegendGalleryGroup()
+        Dim ChartLegendInsideTopLeftVerticalGalleryItem3 As DevExpress.DashboardWin.Bars.ChartLegendInsideTopLeftVerticalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideTopLeftVerticalGalleryItem()
+        Dim ChartLegendInsideTopCenterVerticalGalleryItem3 As DevExpress.DashboardWin.Bars.ChartLegendInsideTopCenterVerticalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideTopCenterVerticalGalleryItem()
+        Dim ChartLegendInsideTopRightVerticalGalleryItem3 As DevExpress.DashboardWin.Bars.ChartLegendInsideTopRightVerticalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideTopRightVerticalGalleryItem()
+        Dim ChartLegendInsideBottomLeftVerticalGalleryItem3 As DevExpress.DashboardWin.Bars.ChartLegendInsideBottomLeftVerticalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideBottomLeftVerticalGalleryItem()
+        Dim ChartLegendInsideBottomCenterVerticalGalleryItem3 As DevExpress.DashboardWin.Bars.ChartLegendInsideBottomCenterVerticalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideBottomCenterVerticalGalleryItem()
+        Dim ChartLegendInsideBottomRightVerticalGalleryItem3 As DevExpress.DashboardWin.Bars.ChartLegendInsideBottomRightVerticalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideBottomRightVerticalGalleryItem()
+        Dim ChartOutsideHorizontalLegendGalleryGroup3 As DevExpress.DashboardWin.Bars.ChartOutsideHorizontalLegendGalleryGroup = New DevExpress.DashboardWin.Bars.ChartOutsideHorizontalLegendGalleryGroup()
+        Dim ChartLegendOutsideTopLeftHorizontalGalleryItem3 As DevExpress.DashboardWin.Bars.ChartLegendOutsideTopLeftHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendOutsideTopLeftHorizontalGalleryItem()
+        Dim ChartLegendOutsideTopCenterHorizontalGalleryItem3 As DevExpress.DashboardWin.Bars.ChartLegendOutsideTopCenterHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendOutsideTopCenterHorizontalGalleryItem()
+        Dim ChartLegendOutsideTopRightHorizontalGalleryItem3 As DevExpress.DashboardWin.Bars.ChartLegendOutsideTopRightHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendOutsideTopRightHorizontalGalleryItem()
+        Dim ChartLegendOutsideBottomLeftHorizontalGalleryItem3 As DevExpress.DashboardWin.Bars.ChartLegendOutsideBottomLeftHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendOutsideBottomLeftHorizontalGalleryItem()
+        Dim ChartLegendOutsideBottomCenterHorizontalGalleryItem3 As DevExpress.DashboardWin.Bars.ChartLegendOutsideBottomCenterHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendOutsideBottomCenterHorizontalGalleryItem()
+        Dim ChartLegendOutsideBottomRightHorizontalGalleryItem3 As DevExpress.DashboardWin.Bars.ChartLegendOutsideBottomRightHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendOutsideBottomRightHorizontalGalleryItem()
+        Dim ChartOutsideVerticalLegendGalleryGroup3 As DevExpress.DashboardWin.Bars.ChartOutsideVerticalLegendGalleryGroup = New DevExpress.DashboardWin.Bars.ChartOutsideVerticalLegendGalleryGroup()
+        Dim ChartLegendOutsideTopLeftVerticalGalleryItem3 As DevExpress.DashboardWin.Bars.ChartLegendOutsideTopLeftVerticalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendOutsideTopLeftVerticalGalleryItem()
+        Dim ChartLegendOutsideTopRightVerticalGalleryItem3 As DevExpress.DashboardWin.Bars.ChartLegendOutsideTopRightVerticalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendOutsideTopRightVerticalGalleryItem()
+        Dim ChartLegendOutsideBottomLeftVerticalGalleryItem3 As DevExpress.DashboardWin.Bars.ChartLegendOutsideBottomLeftVerticalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendOutsideBottomLeftVerticalGalleryItem()
+        Dim ChartLegendOutsideBottomRightVerticalGalleryItem3 As DevExpress.DashboardWin.Bars.ChartLegendOutsideBottomRightVerticalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendOutsideBottomRightVerticalGalleryItem()
+        Dim ChartBarSeriesGalleryGroup2 As DevExpress.DashboardWin.Bars.ChartBarSeriesGalleryGroup = New DevExpress.DashboardWin.Bars.ChartBarSeriesGalleryGroup()
+        Dim ChartBarSeriesGalleryItem2 As DevExpress.DashboardWin.Bars.ChartBarSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartBarSeriesGalleryItem()
+        Dim ChartStackedBarSeriesGalleryItem2 As DevExpress.DashboardWin.Bars.ChartStackedBarSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartStackedBarSeriesGalleryItem()
+        Dim ChartFullStackedBarSeriesGalleryItem2 As DevExpress.DashboardWin.Bars.ChartFullStackedBarSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartFullStackedBarSeriesGalleryItem()
+        Dim ChartPointLineSeriesGalleryGroup2 As DevExpress.DashboardWin.Bars.ChartPointLineSeriesGalleryGroup = New DevExpress.DashboardWin.Bars.ChartPointLineSeriesGalleryGroup()
+        Dim ChartPointSeriesGalleryItem2 As DevExpress.DashboardWin.Bars.ChartPointSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartPointSeriesGalleryItem()
+        Dim ChartLineSeriesGalleryItem2 As DevExpress.DashboardWin.Bars.ChartLineSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartLineSeriesGalleryItem()
+        Dim ChartStackedLineSeriesGalleryItem2 As DevExpress.DashboardWin.Bars.ChartStackedLineSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartStackedLineSeriesGalleryItem()
+        Dim ChartFullStackedLineSeriesGalleryItem2 As DevExpress.DashboardWin.Bars.ChartFullStackedLineSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartFullStackedLineSeriesGalleryItem()
+        Dim ChartStepLineSeriesGalleryItem2 As DevExpress.DashboardWin.Bars.ChartStepLineSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartStepLineSeriesGalleryItem()
+        Dim ChartSplineSeriesGalleryItem2 As DevExpress.DashboardWin.Bars.ChartSplineSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartSplineSeriesGalleryItem()
+        Dim ChartAreaSeriesGalleryGroup2 As DevExpress.DashboardWin.Bars.ChartAreaSeriesGalleryGroup = New DevExpress.DashboardWin.Bars.ChartAreaSeriesGalleryGroup()
+        Dim ChartAreaSeriesGalleryItem2 As DevExpress.DashboardWin.Bars.ChartAreaSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartAreaSeriesGalleryItem()
+        Dim ChartStackedAreaSeriesGalleryItem2 As DevExpress.DashboardWin.Bars.ChartStackedAreaSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartStackedAreaSeriesGalleryItem()
+        Dim ChartFullStackedAreaSeriesGalleryItem2 As DevExpress.DashboardWin.Bars.ChartFullStackedAreaSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartFullStackedAreaSeriesGalleryItem()
+        Dim ChartStepAreaSeriesGalleryItem2 As DevExpress.DashboardWin.Bars.ChartStepAreaSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartStepAreaSeriesGalleryItem()
+        Dim ChartSplineAreaSeriesGalleryItem2 As DevExpress.DashboardWin.Bars.ChartSplineAreaSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartSplineAreaSeriesGalleryItem()
+        Dim ChartStackedSplineAreaSeriesGalleryItem2 As DevExpress.DashboardWin.Bars.ChartStackedSplineAreaSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartStackedSplineAreaSeriesGalleryItem()
+        Dim ChartFullStackedSplineAreaSeriesGalleryItem2 As DevExpress.DashboardWin.Bars.ChartFullStackedSplineAreaSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartFullStackedSplineAreaSeriesGalleryItem()
+        Dim ChartRangeSeriesGalleryGroup2 As DevExpress.DashboardWin.Bars.ChartRangeSeriesGalleryGroup = New DevExpress.DashboardWin.Bars.ChartRangeSeriesGalleryGroup()
+        Dim ChartSideBySideRangeBarSeriesGalleryItem2 As DevExpress.DashboardWin.Bars.ChartSideBySideRangeBarSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartSideBySideRangeBarSeriesGalleryItem()
+        Dim ChartRangeAreaSeriesGalleryItem2 As DevExpress.DashboardWin.Bars.ChartRangeAreaSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartRangeAreaSeriesGalleryItem()
+        Dim ChartBubbleSeriesGalleryGroup2 As DevExpress.DashboardWin.Bars.ChartBubbleSeriesGalleryGroup = New DevExpress.DashboardWin.Bars.ChartBubbleSeriesGalleryGroup()
+        Dim ChartWeightedSeriesGalleryItem2 As DevExpress.DashboardWin.Bars.ChartWeightedSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartWeightedSeriesGalleryItem()
+        Dim ChartFinancialSeriesGalleryGroup2 As DevExpress.DashboardWin.Bars.ChartFinancialSeriesGalleryGroup = New DevExpress.DashboardWin.Bars.ChartFinancialSeriesGalleryGroup()
+        Dim ChartHighLowCloseSeriesGalleryItem2 As DevExpress.DashboardWin.Bars.ChartHighLowCloseSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartHighLowCloseSeriesGalleryItem()
+        Dim ChartCandleStickSeriesGalleryItem2 As DevExpress.DashboardWin.Bars.ChartCandleStickSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartCandleStickSeriesGalleryItem()
+        Dim ChartStockSeriesGalleryItem2 As DevExpress.DashboardWin.Bars.ChartStockSeriesGalleryItem = New DevExpress.DashboardWin.Bars.ChartStockSeriesGalleryItem()
+        Dim ChartInsideHorizontalLegendGalleryGroup4 As DevExpress.DashboardWin.Bars.ChartInsideHorizontalLegendGalleryGroup = New DevExpress.DashboardWin.Bars.ChartInsideHorizontalLegendGalleryGroup()
+        Dim ChartLegendInsideTopLeftHorizontalGalleryItem4 As DevExpress.DashboardWin.Bars.ChartLegendInsideTopLeftHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideTopLeftHorizontalGalleryItem()
+        Dim ChartLegendInsideTopCenterHorizontalGalleryItem4 As DevExpress.DashboardWin.Bars.ChartLegendInsideTopCenterHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideTopCenterHorizontalGalleryItem()
+        Dim ChartLegendInsideTopRightHorizontalGalleryItem4 As DevExpress.DashboardWin.Bars.ChartLegendInsideTopRightHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideTopRightHorizontalGalleryItem()
+        Dim ChartLegendInsideBottomLeftHorizontalGalleryItem4 As DevExpress.DashboardWin.Bars.ChartLegendInsideBottomLeftHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideBottomLeftHorizontalGalleryItem()
+        Dim ChartLegendInsideBottomCenterHorizontalGalleryItem4 As DevExpress.DashboardWin.Bars.ChartLegendInsideBottomCenterHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideBottomCenterHorizontalGalleryItem()
+        Dim ChartLegendInsideBottomRightHorizontalGalleryItem4 As DevExpress.DashboardWin.Bars.ChartLegendInsideBottomRightHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideBottomRightHorizontalGalleryItem()
+        Dim ChartInsideVerticalLegendGalleryGroup4 As DevExpress.DashboardWin.Bars.ChartInsideVerticalLegendGalleryGroup = New DevExpress.DashboardWin.Bars.ChartInsideVerticalLegendGalleryGroup()
+        Dim ChartLegendInsideTopLeftVerticalGalleryItem4 As DevExpress.DashboardWin.Bars.ChartLegendInsideTopLeftVerticalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideTopLeftVerticalGalleryItem()
+        Dim ChartLegendInsideTopCenterVerticalGalleryItem4 As DevExpress.DashboardWin.Bars.ChartLegendInsideTopCenterVerticalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideTopCenterVerticalGalleryItem()
+        Dim ChartLegendInsideTopRightVerticalGalleryItem4 As DevExpress.DashboardWin.Bars.ChartLegendInsideTopRightVerticalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideTopRightVerticalGalleryItem()
+        Dim ChartLegendInsideBottomLeftVerticalGalleryItem4 As DevExpress.DashboardWin.Bars.ChartLegendInsideBottomLeftVerticalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideBottomLeftVerticalGalleryItem()
+        Dim ChartLegendInsideBottomCenterVerticalGalleryItem4 As DevExpress.DashboardWin.Bars.ChartLegendInsideBottomCenterVerticalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideBottomCenterVerticalGalleryItem()
+        Dim ChartLegendInsideBottomRightVerticalGalleryItem4 As DevExpress.DashboardWin.Bars.ChartLegendInsideBottomRightVerticalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideBottomRightVerticalGalleryItem()
+        Dim ChartOutsideHorizontalLegendGalleryGroup4 As DevExpress.DashboardWin.Bars.ChartOutsideHorizontalLegendGalleryGroup = New DevExpress.DashboardWin.Bars.ChartOutsideHorizontalLegendGalleryGroup()
+        Dim ChartLegendOutsideTopLeftHorizontalGalleryItem4 As DevExpress.DashboardWin.Bars.ChartLegendOutsideTopLeftHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendOutsideTopLeftHorizontalGalleryItem()
+        Dim ChartLegendOutsideTopCenterHorizontalGalleryItem4 As DevExpress.DashboardWin.Bars.ChartLegendOutsideTopCenterHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendOutsideTopCenterHorizontalGalleryItem()
+        Dim ChartLegendOutsideTopRightHorizontalGalleryItem4 As DevExpress.DashboardWin.Bars.ChartLegendOutsideTopRightHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendOutsideTopRightHorizontalGalleryItem()
+        Dim ChartLegendOutsideBottomLeftHorizontalGalleryItem4 As DevExpress.DashboardWin.Bars.ChartLegendOutsideBottomLeftHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendOutsideBottomLeftHorizontalGalleryItem()
+        Dim ChartLegendOutsideBottomCenterHorizontalGalleryItem4 As DevExpress.DashboardWin.Bars.ChartLegendOutsideBottomCenterHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendOutsideBottomCenterHorizontalGalleryItem()
+        Dim ChartLegendOutsideBottomRightHorizontalGalleryItem4 As DevExpress.DashboardWin.Bars.ChartLegendOutsideBottomRightHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendOutsideBottomRightHorizontalGalleryItem()
+        Dim ChartOutsideVerticalLegendGalleryGroup4 As DevExpress.DashboardWin.Bars.ChartOutsideVerticalLegendGalleryGroup = New DevExpress.DashboardWin.Bars.ChartOutsideVerticalLegendGalleryGroup()
+        Dim ChartLegendOutsideTopLeftVerticalGalleryItem4 As DevExpress.DashboardWin.Bars.ChartLegendOutsideTopLeftVerticalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendOutsideTopLeftVerticalGalleryItem()
+        Dim ChartLegendOutsideTopRightVerticalGalleryItem4 As DevExpress.DashboardWin.Bars.ChartLegendOutsideTopRightVerticalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendOutsideTopRightVerticalGalleryItem()
+        Dim ChartLegendOutsideBottomLeftVerticalGalleryItem4 As DevExpress.DashboardWin.Bars.ChartLegendOutsideBottomLeftVerticalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendOutsideBottomLeftVerticalGalleryItem()
+        Dim ChartLegendOutsideBottomRightVerticalGalleryItem4 As DevExpress.DashboardWin.Bars.ChartLegendOutsideBottomRightVerticalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendOutsideBottomRightVerticalGalleryItem()
+        Dim RangePointLineSeriesGalleryGroup2 As DevExpress.DashboardWin.Bars.RangePointLineSeriesGalleryGroup = New DevExpress.DashboardWin.Bars.RangePointLineSeriesGalleryGroup()
+        Dim RangeLineSeriesGalleryItem2 As DevExpress.DashboardWin.Bars.RangeLineSeriesGalleryItem = New DevExpress.DashboardWin.Bars.RangeLineSeriesGalleryItem()
+        Dim RangeStackedLineSeriesGalleryItem2 As DevExpress.DashboardWin.Bars.RangeStackedLineSeriesGalleryItem = New DevExpress.DashboardWin.Bars.RangeStackedLineSeriesGalleryItem()
+        Dim RangeFullStackedLineSeriesGalleryItem2 As DevExpress.DashboardWin.Bars.RangeFullStackedLineSeriesGalleryItem = New DevExpress.DashboardWin.Bars.RangeFullStackedLineSeriesGalleryItem()
+        Dim RangeAreaSeriesGalleryGroup2 As DevExpress.DashboardWin.Bars.RangeAreaSeriesGalleryGroup = New DevExpress.DashboardWin.Bars.RangeAreaSeriesGalleryGroup()
+        Dim RangeAreaSeriesGalleryItem2 As DevExpress.DashboardWin.Bars.RangeAreaSeriesGalleryItem = New DevExpress.DashboardWin.Bars.RangeAreaSeriesGalleryItem()
+        Dim RangeStackedAreaSeriesGalleryItem2 As DevExpress.DashboardWin.Bars.RangeStackedAreaSeriesGalleryItem = New DevExpress.DashboardWin.Bars.RangeStackedAreaSeriesGalleryItem()
+        Dim RangeFullStackedAreaSeriesGalleryItem2 As DevExpress.DashboardWin.Bars.RangeFullStackedAreaSeriesGalleryItem = New DevExpress.DashboardWin.Bars.RangeFullStackedAreaSeriesGalleryItem()
+        Dim RangeBarSeriesGalleryGroup2 As DevExpress.DashboardWin.Bars.RangeBarSeriesGalleryGroup = New DevExpress.DashboardWin.Bars.RangeBarSeriesGalleryGroup()
+        Dim RangeBarSeriesGalleryItem2 As DevExpress.DashboardWin.Bars.RangeBarSeriesGalleryItem = New DevExpress.DashboardWin.Bars.RangeBarSeriesGalleryItem()
+        Dim RangeStackedBarSeriesGalleryItem2 As DevExpress.DashboardWin.Bars.RangeStackedBarSeriesGalleryItem = New DevExpress.DashboardWin.Bars.RangeStackedBarSeriesGalleryItem()
+        Dim RangeFullStackedBarSeriesGalleryItem2 As DevExpress.DashboardWin.Bars.RangeFullStackedBarSeriesGalleryItem = New DevExpress.DashboardWin.Bars.RangeFullStackedBarSeriesGalleryItem()
+        Dim MapVerticalLegendGalleryGroup2 As DevExpress.DashboardWin.Bars.MapVerticalLegendGalleryGroup = New DevExpress.DashboardWin.Bars.MapVerticalLegendGalleryGroup()
+        Dim MapLegendTopLeftVerticalGalleryItem2 As DevExpress.DashboardWin.Bars.MapLegendTopLeftVerticalGalleryItem = New DevExpress.DashboardWin.Bars.MapLegendTopLeftVerticalGalleryItem()
+        Dim MapLegendTopCenterVerticalGalleryItem2 As DevExpress.DashboardWin.Bars.MapLegendTopCenterVerticalGalleryItem = New DevExpress.DashboardWin.Bars.MapLegendTopCenterVerticalGalleryItem()
+        Dim MapLegendTopRightVerticalGalleryItem2 As DevExpress.DashboardWin.Bars.MapLegendTopRightVerticalGalleryItem = New DevExpress.DashboardWin.Bars.MapLegendTopRightVerticalGalleryItem()
+        Dim MapLegendBottomLeftVerticalGalleryItem2 As DevExpress.DashboardWin.Bars.MapLegendBottomLeftVerticalGalleryItem = New DevExpress.DashboardWin.Bars.MapLegendBottomLeftVerticalGalleryItem()
+        Dim MapLegendBottomCenterVerticalGalleryItem2 As DevExpress.DashboardWin.Bars.MapLegendBottomCenterVerticalGalleryItem = New DevExpress.DashboardWin.Bars.MapLegendBottomCenterVerticalGalleryItem()
+        Dim MapLegendBottomRightVerticalGalleryItem2 As DevExpress.DashboardWin.Bars.MapLegendBottomRightVerticalGalleryItem = New DevExpress.DashboardWin.Bars.MapLegendBottomRightVerticalGalleryItem()
+        Dim MapHorizontalLegendGalleryGroup2 As DevExpress.DashboardWin.Bars.MapHorizontalLegendGalleryGroup = New DevExpress.DashboardWin.Bars.MapHorizontalLegendGalleryGroup()
+        Dim MapLegendTopLeftHorizontalGalleryItem2 As DevExpress.DashboardWin.Bars.MapLegendTopLeftHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.MapLegendTopLeftHorizontalGalleryItem()
+        Dim MapLegendTopCenterHorizontalGalleryItem2 As DevExpress.DashboardWin.Bars.MapLegendTopCenterHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.MapLegendTopCenterHorizontalGalleryItem()
+        Dim MapLegendTopRightHorizontalGalleryItem2 As DevExpress.DashboardWin.Bars.MapLegendTopRightHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.MapLegendTopRightHorizontalGalleryItem()
+        Dim MapLegendBottomLeftHorizontalGalleryItem2 As DevExpress.DashboardWin.Bars.MapLegendBottomLeftHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.MapLegendBottomLeftHorizontalGalleryItem()
+        Dim MapLegendBottomCenterHorizontalGalleryItem2 As DevExpress.DashboardWin.Bars.MapLegendBottomCenterHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.MapLegendBottomCenterHorizontalGalleryItem()
+        Dim MapLegendBottomRightHorizontalGalleryItem2 As DevExpress.DashboardWin.Bars.MapLegendBottomRightHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.MapLegendBottomRightHorizontalGalleryItem()
+        Dim MapWeightedLegendGalleryGroup2 As DevExpress.DashboardWin.Bars.MapWeightedLegendGalleryGroup = New DevExpress.DashboardWin.Bars.MapWeightedLegendGalleryGroup()
+        Dim MapWeightedLegendTopLeftGalleryItem2 As DevExpress.DashboardWin.Bars.MapWeightedLegendTopLeftGalleryItem = New DevExpress.DashboardWin.Bars.MapWeightedLegendTopLeftGalleryItem()
+        Dim MapWeightedLegendTopCenterGalleryItem2 As DevExpress.DashboardWin.Bars.MapWeightedLegendTopCenterGalleryItem = New DevExpress.DashboardWin.Bars.MapWeightedLegendTopCenterGalleryItem()
+        Dim MapWeightedLegendTopRightGalleryItem2 As DevExpress.DashboardWin.Bars.MapWeightedLegendTopRightGalleryItem = New DevExpress.DashboardWin.Bars.MapWeightedLegendTopRightGalleryItem()
+        Dim MapWeightedLegendBottomLeftGalleryItem2 As DevExpress.DashboardWin.Bars.MapWeightedLegendBottomLeftGalleryItem = New DevExpress.DashboardWin.Bars.MapWeightedLegendBottomLeftGalleryItem()
+        Dim MapWeightedLegendBottomCenterGalleryItem2 As DevExpress.DashboardWin.Bars.MapWeightedLegendBottomCenterGalleryItem = New DevExpress.DashboardWin.Bars.MapWeightedLegendBottomCenterGalleryItem()
+        Dim MapWeightedLegendBottomRightGalleryItem2 As DevExpress.DashboardWin.Bars.MapWeightedLegendBottomRightGalleryItem = New DevExpress.DashboardWin.Bars.MapWeightedLegendBottomRightGalleryItem()
+        Dim GalleryItemGroup11 As DevExpress.XtraBars.Ribbon.GalleryItemGroup = New DevExpress.XtraBars.Ribbon.GalleryItemGroup()
+        Dim GalleryItemGroup12 As DevExpress.XtraBars.Ribbon.GalleryItemGroup = New DevExpress.XtraBars.Ribbon.GalleryItemGroup()
+        Dim ReduceOperation2 As DevExpress.XtraBars.Ribbon.ReduceOperation = New DevExpress.XtraBars.Ribbon.ReduceOperation()
+        Me.RibbonStatusBar = New DevExpress.XtraBars.Ribbon.RibbonStatusBar()
         Me.RibbonControl = New DevExpress.XtraBars.Ribbon.RibbonControl()
-        Me.DashboardBackstageViewControl1 = New DevExpress.DashboardWin.Bars.DashboardBackstageViewControl()
-        Me.BackstageViewClientControl1 = New DevExpress.XtraBars.Ribbon.BackstageViewClientControl()
-        Me.RecentDashboardsControl1 = New DevExpress.DashboardWin.Bars.RecentDashboardsControl()
-        Me.DashboardBackstageRecentTab1 = New DevExpress.DashboardWin.Bars.DashboardBackstageRecentTab()
-        Me.DashboardBackstageNewButton1 = New DevExpress.DashboardWin.Bars.DashboardBackstageNewButton()
-        Me.DashboardBackstageOpenButton1 = New DevExpress.DashboardWin.Bars.DashboardBackstageOpenButton()
-        Me.DashboardBackstageSaveButton1 = New DevExpress.DashboardWin.Bars.DashboardBackstageSaveButton()
-        Me.DashboardBackstageSaveAsButton1 = New DevExpress.DashboardWin.Bars.DashboardBackstageSaveAsButton()
+        Me.DashboardBarAndDockingController1 = New DevExpress.DashboardWin.Native.DashboardBarAndDockingController(Me.components)
         Me.FileNewBarItem1 = New DevExpress.DashboardWin.Bars.FileNewBarItem()
         Me.FileOpenBarItem1 = New DevExpress.DashboardWin.Bars.FileOpenBarItem()
         Me.FileSaveBarItem1 = New DevExpress.DashboardWin.Bars.FileSaveBarItem()
@@ -690,6 +682,8 @@ Partial Class frmDashboardDesigner
         Me.FloatingObjectSendToBackItem1 = New DevExpress.XtraRichEdit.UI.FloatingObjectSendToBackItem()
         Me.FloatingObjectSendBehindTextItem1 = New DevExpress.XtraRichEdit.UI.FloatingObjectSendBehindTextItem()
         Me.PivotToolsRibbonPageCategory1 = New DevExpress.DashboardWin.Bars.PivotToolsRibbonPageCategory()
+        Me.DashboardDesigner1 = New DevExpress.DashboardWin.DashboardDesigner()
+        Me.DashboardPopupMenu1 = New DevExpress.DashboardWin.DashboardPopupMenu(Me.components)
         Me.DataRibbonPage1 = New DevExpress.DashboardWin.Bars.DataRibbonPage()
         Me.FilteringRibbonPageGroup1 = New DevExpress.DashboardWin.Bars.FilteringRibbonPageGroup()
         Me.InteractivitySettingsRibbonPageGroup1 = New DevExpress.DashboardWin.Bars.InteractivitySettingsRibbonPageGroup()
@@ -932,61 +926,37 @@ Partial Class frmDashboardDesigner
         Me.ViewRibbonPage1 = New DevExpress.DashboardWin.Bars.ViewRibbonPage()
         Me.SkinsRibbonPageGroup1 = New DevExpress.DashboardWin.Bars.SkinsRibbonPageGroup()
         Me.SkinPaletteGalleryRibbonPageGroup1 = New DevExpress.DashboardWin.Bars.SkinPaletteGalleryRibbonPageGroup()
-        Me.RibbonStatusBar = New DevExpress.XtraBars.Ribbon.RibbonStatusBar()
-        Me.DashboardPopupMenu1 = New DevExpress.DashboardWin.DashboardPopupMenu(Me.components)
         Me.DashboardBarController1 = New DevExpress.DashboardWin.Bars.DashboardBarController(Me.components)
         Me.TextBoxEditorBarController1 = New DevExpress.DashboardWin.Bars.TextBoxEditorBarController(Me.components)
-        Me.Panel1.SuspendLayout()
-        CType(Me.DashboardDesigner1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DashboardBarAndDockingController1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DashboardBackstageViewControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.DashboardBackstageViewControl1.SuspendLayout()
-        Me.BackstageViewClientControl1.SuspendLayout()
+        CType(Me.DashboardBarAndDockingController1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemSpinEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemFontEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemRichEditFontSizeEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemBorderLineStyle1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemBorderLineWeight1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemFloatingObjectOutlineWeight1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DashboardDesigner1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DashboardPopupMenu1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DashboardBarController1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TextBoxEditorBarController1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Panel1
+        'RibbonStatusBar
         '
-        Me.Panel1.Controls.Add(Me.DashboardDesigner1)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(0, 182)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1003, 442)
-        Me.Panel1.TabIndex = 2
-        '
-        'DashboardDesigner1
-        '
-        Me.DashboardDesigner1.AsyncMode = True
-        Me.DashboardDesigner1.BarAndDockingController = Me.DashboardBarAndDockingController1
-        Me.DashboardDesigner1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DashboardDesigner1.Location = New System.Drawing.Point(0, 0)
-        Me.DashboardDesigner1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.DashboardDesigner1.MenuManager = Me.RibbonControl
-        Me.DashboardDesigner1.Name = "DashboardDesigner1"
-        Me.DashboardDesigner1.PopupMenu = Me.DashboardPopupMenu1
-        Me.DashboardDesigner1.Size = New System.Drawing.Size(1003, 442)
-        Me.DashboardDesigner1.TabIndex = 0
+        Me.RibbonStatusBar.Location = New System.Drawing.Point(0, 542)
+        Me.RibbonStatusBar.Name = "RibbonStatusBar"
+        Me.RibbonStatusBar.Ribbon = Me.RibbonControl
+        Me.RibbonStatusBar.Size = New System.Drawing.Size(958, 30)
         '
         'RibbonControl
         '
-        Me.RibbonControl.ApplicationButtonDropDownControl = Me.DashboardBackstageViewControl1
-        Me.RibbonControl.AutoHideEmptyItems = True
-        Me.RibbonControl.AutoSizeItems = True
         Me.RibbonControl.Controller = Me.DashboardBarAndDockingController1
         Me.RibbonControl.ExpandCollapseItem.Id = 0
         Me.RibbonControl.ItemPanelStyle = DevExpress.XtraBars.Ribbon.RibbonItemPanelStyle.Classic
         Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.RibbonControl.SearchEditItem, Me.FileNewBarItem1, Me.FileOpenBarItem1, Me.FileSaveBarItem1, Me.FileSaveAsBarItem1, Me.QuickAccessUndoBarItem1, Me.QuickAccessRedoBarItem1, Me.UndoBarItem1, Me.RedoBarItem1, Me.InsertPivotBarItem1, Me.InsertGridBarItem1, Me.InsertChartBarItem1, Me.InsertScatterChartBarItem1, Me.InsertPiesBarItem1, Me.InsertGaugesBarItem1, Me.InsertCardsBarItem1, Me.InsertTreemapBarItem1, Me.InsertChoroplethMapBarItem1, Me.InsertGeoPointMapBarSubItem1, Me.InsertGeoPointMapBarItem1, Me.InsertBubbleMapBarItem1, Me.InsertPieMapBarItem1, Me.InsertRangeFilterBarItem1, Me.InsertFilterElementSubItem1, Me.InsertComboBoxBarItem1, Me.InsertListBoxBarItem1, Me.InsertTreeViewBarItem1, Me.InsertDateFilterBarItem1, Me.InsertImagesBarSubItem1, Me.InsertImageBarItem1, Me.InsertBoundImageBarItem1, Me.InsertTextBoxBarItem1, Me.InsertGroupBarItem1, Me.InsertTabContainerBarItem1, Me.DuplicateItemBarItem1, Me.DeleteItemBarItem1, Me.ConvertDashboardItemTypeBarItem1, Me.ConvertToPivotBarItem1, Me.ConvertToGridBarItem1, Me.ConvertToChartBarItem1, Me.ConvertToScatterChartBarItem1, Me.ConvertToPieBarItem1, Me.ConvertToGaugeBarItem1, Me.ConvertToCardBarItem1, Me.ConvertToTreemapBarItem1, Me.ConvertToChoroplethMapBarItem1, Me.ConvertToGeoPointMapBarItem1, Me.ConvertToBubbleMapBarItem1, Me.ConvertToPieMapBarItem1, Me.ConvertGeoPointMapBaseBarItem1, Me.ConvertToRangeFilterBarItem1, Me.ConvertToComboBoxBarItem1, Me.ConvertToListBoxBarItem1, Me.ConvertToTreeViewBarItem1, Me.ConvertToDateFilterBarItem1, Me.ConvertToFilterElementsBaseBarItem1, Me.ConvertToBoundImageBarItem1, Me.ConvertToTextBoxBarItem1, Me.RemoveDataItemsBarItem1, Me.TransposeItemBarItem1, Me.EditRulesBarItem1, Me.DeleteGroupBarItem1, Me.DeleteTabContainerBarItem1, Me.DeleteTabPageBarItem1, Me.DashboardTitleBarItem1, Me.SetCurrencyCultureBarItem1, Me.DashboardColorSchemeBarItem1, Me.DashboardParametersBarItem1, Me.LayoutOptionsBarItem1, Me.DashboardAutomaticUpdatesBarItem1, Me.UpdateDataBarItem1, Me.NewDataSourceBarItem1, Me.EditSqlConnectionBarItem1, Me.EditMongoDBConnectionBarItem1, Me.EditXpoConnectionBarItem1, Me.EditOlapConnectionBarItem1, Me.EditObjectDataSourceBarItem1, Me.EditExcelDataSourceBarItem1, Me.EditEFDataSourceBarItem1, Me.EditExtractOptionsBarItem1, Me.RenameDataSourceBarItem1, Me.DeleteDataSourceBarItem1, Me.ServerModeBarItem1, Me.UpateDataExtractBarItem1, Me.AddCalculatedFieldBarItem1, Me.EditJsonDataSourceBarItem1, Me.AddQueryBarItem1, Me.EditQueryBarItem1, Me.RenameQueryBarItem1, Me.EditQueryFilterBarItem1, Me.DeleteQueryBarItem1, Me.EditExtractSourceConnectionBarItem1, Me.EditExtractSourceBarItem1, Me.EditExtractSourceQueryBarItem1, Me.AddFederationQueryBarItem1, Me.EditFederationQueryBarItem1, Me.RenameFederationQueryBarItem1, Me.DeleteFederationQueryBarItem1, Me.ManageMongoDBQueriesBarItem1, Me.RenameMongoDBQueryBarItem1, Me.DeleteMongoDBQueryBarItem1, Me.EditDataSourceFilterBarItem1, Me.ClearDataSourceFilterBarItem1, Me.DashboardSkinsBarItem1, Me.DashboardSkinDropDownButtonItem1, Me.DashboardSkinPaletteRibbonGalleryBarItem1, Me.EditFilterBarItem1, Me.ClearFilterBarItem1, Me.EditVisibleDataFilterBarItem1, Me.IgnoreMasterFiltersBarItem1, Me.ShowItemCaptionBarItem1, Me.EditItemNamesBarItem1, Me.PivotInitialStateBarItem1, Me.PivotAutoExpandColumnBarItem1, Me.PivotAutoExpandRowBarItem1, Me.PivotShowTotalsBarItem1, Me.PivotShowColumnTotalsBarItem1, Me.PivotShowRowTotalsBarItem1, Me.PivotShowGrandTotalsBarItem1, Me.PivotShowColumnGrandTotalsBarItem1, Me.PivotShowRowGrandTotalsBarItem1, Me.PivotLayoutTypeBarItem1, Me.PivotLayoutTypeCompactBarItem1, Me.PivotLayoutTypeTabularBarItem1, Me.PivotRowTotalsPositionBarItem1, Me.PivotRowTotalsPositionTopBarItem1, Me.PivotRowTotalsPositionBottomBarItem1, Me.PivotColumnTotalsPositionBarItem1, Me.PivotColumnTotalsPositionNearBarItem1, Me.PivotColumnTotalsPositionFarBarItem1, Me.PivotValuesPositionBarItem1, Me.PivotValuesPositionColumnsBarItem1, Me.PivotValuesPositionRowsBarItem1, Me.PivotResetLayoutOptionsBarItem1, Me.MasterFilterBarItem1, Me.MultipleValuesMasterFilterBarItem1, Me.DrillDownBarItem1, Me.CrossDataSourceFilteringBarItem1, Me.GridHorizontalLinesBarItem1, Me.GridVerticalLinesBarItem1, Me.GridBandedRowsBarItem1, Me.GridMergeCellsBarItem1, Me.GridColumnHeadersBarItem1, Me.GridWordWrapBarItem1, Me.GridFilterRowBarItem1, Me.GridUpdateTotalsBarItem1, Me.GridAutoFitToContentsColumnWidthModeBarItem1, Me.GridAutoFitToGridColumnWidthModeBarItem1, Me.ManualGridColumnWidthModeBarItem1, Me.ChartTargetDimensionsArgumentsBarItem1, Me.ChartTargetDimensionsSeriesBarItem1, Me.ChartTargetDimensionsPointsBarItem1, Me.ChartRotateBarItem1, Me.ChartXAxisSettingsBarItem1, Me.ChartYAxisSettingsBarItem1, Me.ChartShowLegendBarItem1, Me.GalleryChartLegendPositionItem1, Me.GalleryChartSeriesTypeItem1, Me.UseGlobalColorsBarItem1, Me.UseLocalColorsBarItem1, Me.EditActualColorsBarItem1, Me.ScatterChartRotateBarItem1, Me.ScatterChartXAxisSettingsBarItem1, Me.ScatterChartYAxisSettingsBarItem1, Me.ScatterChartPointLabelOptionsBarItem1, Me.ScatterChartShowLegendBarItem1, Me.GalleryScatterChartLegendPositionItem1, Me.PieTargetDimensionsArgumentsBarItem1, Me.PieTargetDimensionsSeriesBarItem1, Me.PieTargetDimensionsPointsBarItem1, Me.ContentAutoArrangeBarItem1, Me.ContentArrangeInColumnsBarItem1, Me.ContentArrangeInRowsBarItem1, Me.ContentArrangementCountBarItem1, Me.PieLabelsDataLabelsBarItem1, Me.PieLabelsDataLabelsNoneBarItem1, Me.PieLabelsDataLabelArgumentBarItem1, Me.PieLabelsDataLabelsValueBarItem1, Me.PieLabelsDataLabelsArgumentAndValueBarItem1, Me.PieLabelsDataLabelsPercentBarItem1, Me.PieLabelsDataLabelsValueAndPercentBarItem1, Me.PieLabelsDataLabelsArgumentAndPercentBarItem1, Me.PieLabelsDataLabelsArgumentValueAndPercentBarItem1, Me.PieLabelPositionBarItem1, Me.PieLabelPositionOutsideBarItem1, Me.PieLabelPositionInsideBarItem1, Me.PieTooltipsBarItem1, Me.PieLabelsTooltipsNoneBarItem1, Me.PieLabelsTooltipsArgumentBarItem1, Me.PieLabelsTooltipsValueBarItem1, Me.PieLabelsTooltipsArgumentAndValueBarItem1, Me.PieLabelsTooltipsPercentBarItem1, Me.PieLabelsTooltipsValueAndPercentBarItem1, Me.PieLabelsTooltipsArgumentAndPercentBarItem1, Me.PieLabelsTooltipsArgumentValueAndPercentBarItem1, Me.PieStylePieBarItem1, Me.PieStyleDonutBarItem1, Me.PieShowCaptionsBarItem1, Me.GaugeStyleFullCircularBarItem1, Me.GaugeStyleHalfCircularBarItem1, Me.GaugeStyleLeftQuarterCircularBarItem1, Me.GaugeStyleRightQuarterCircularBarItem1, Me.GaugeStyleThreeForthCircularBarItem1, Me.GaugeStyleLinearHorizontalBarItem1, Me.GaugeStyleLinearVerticalBarItem1, Me.GaugeShowCaptionsBarItem1, Me.GalleryRangeFilterSeriesTypeItem1, Me.RangeFilterEditDateTimePeriodsBarItem1, Me.MapLoadBarItem1, Me.MapImportBarItem1, Me.MapDefaultShapefileBarItem1, Me.MapWorldCountriesBarItem1, Me.MapEuropeBarItem1, Me.MapAsiaBarItem1, Me.MapNorthAmericaBarItem1, Me.MapSouthAmericaBarItem1, Me.MapAfricaBarItem1, Me.MapUSABarItem1, Me.MapCanadaBarItem1, Me.MapLockNavigationBarItem1, Me.MapFullExtentBarItem1, Me.ChoroplethMapShapeLabelsAttributeBarItem1, Me.MapShowLegendBarItem1, Me.GalleryMapLegendPositionItem1, Me.GeoPointMapClusterizationBarItem1, Me.MapShapeTitleAttributeBarItem1, Me.ChangeWeightedLegendTypeBarItem1, Me.WeightedLegendNoneBarItem1, Me.WeightedLegendLinearBarItem1, Me.WeightedLegendNestedBarItem1, Me.GalleryWeightedLegendPositionItem1, Me.PieMapIsWeightedBarItem1, Me.ComboBoxStandardTypeBarItem1, Me.ComboBoxCheckedTypeBarItem1, Me.ListBoxCheckedTypeBarItem1, Me.ListBoxRadioTypeBarItem1, Me.FilterElementShowAllValueBarItem1, Me.FilterElementEnableSearchBarItem1, Me.TreeViewAutoExpandBarItem1, Me.DateFilterTypeBarItem1, Me.DateFilterExactTypeBarItem1, Me.DateFilterFromTypeBarItem1, Me.DateFilterToTypeBarItem1, Me.DateFilterRangeTypeBarItem1, Me.DateFilterArrangementModeBarItem1, Me.DateFilterAutoHeightArrangementModeBarItem1, Me.DateFilterHorizontalArrangementModeBarItem1, Me.DateFilterVerticalArrangementModeBarItem1, Me.DateFilterDatePickerLocationBarItem1, Me.DateFilterFarDatePickerLocationBarItem1, Me.DateFilterNearDatePickerLocationBarItem1, Me.DateFilterHiddenDatePickerLocationBarItem1, Me.DateFilterEditDateTimePeriodsBarItem1, Me.ImageSizeModeClipBarItem1, Me.ImageSizeModeStretchBarItem1, Me.ImageSizeModeSqueezeBarItem1, Me.ImageSizeModeZoomBarItem1, Me.ImageAlignmentTopLeftBarItem1, Me.ImageAlignmentCenterLeftBarItem1, Me.ImageAlignmentBottomLeftBarItem1, Me.ImageAlignmentTopCenterBarItem1, Me.ImageAlignmentCenterCenterBarItem1, Me.ImageAlignmentBottomCenterBarItem1, Me.ImageAlignmentTopRightBarItem1, Me.ImageAlignmentCenterRightBarItem1, Me.ImageAlignmentBottomRightBarItem1, Me.TextBoxEditTextBarItem1, Me.TextBoxInsertFieldBarItem1, Me.TreemapSliceAndDiceLayoutAlgorithmBarItem1, Me.TreemapSquarifiedLayoutAlgorithmBarItem1, Me.TreemapStripedLayoutAlgorithmBarItem1, Me.TreemapLayoutDirectionBarItem1, Me.TreemapBottomLeftToTopRightLayoutDirectionBarItem1, Me.TreemapBottomRightToTopLeftLayoutDirectionBarItem1, Me.TreemapTopLeftToBottomRightLayoutDirectionBarItem1, Me.TreemapTopRightToBottomLeftLayoutDirectionBarItem1, Me.TreemapTileLabelsBarItem1, Me.TreemapTileLabelsNoneBarItem1, Me.TreemapTileLabelsArgumentBarItem1, Me.TreemapTileLabelsValueBarItem1, Me.TreemapTileLabelsArgumentAndValueBarItem1, Me.TreemapTileTooltipsBarItem1, Me.TreemapTileTooltipsNoneBarItem1, Me.TreemapTileTooltipsArgumentBarItem1, Me.TreemapTileTooltipsValueBarItem1, Me.TreemapTileTooltipsArgumentAndValueBarItem1, Me.TreemapGroupLabelsBarItem1, Me.TreemapGroupLabelsNoneBarItem1, Me.TreemapGroupLabelsArgumentBarItem1, Me.TreemapGroupLabelsValueBarItem1, Me.TreemapGroupLabelsArgumentAndValueBarItem1, Me.TreemapGroupTooltipsBarItem1, Me.TreemapGroupTooltipsNoneBarItem1, Me.TreemapGroupTooltipsArgumentBarItem1, Me.TreemapGroupTooltipsValueBarItem1, Me.TreemapGroupTooltipsArgumentAndValueBarItem1, Me.ImageLoadBarItem1, Me.ImageImportBarItem1, Me.GroupMasterFilterBarItem1, Me.GroupIgnoreMasterFilterBarItem1, Me.ShowGroupCaptionBarItem1, Me.EditGroupNamesBarItem1, Me.TabPageMasterFilterBarItem1, Me.TabPageIgnoreMasterFilterBarItem1, Me.ShowTabPageCaptionBarItem1, Me.EditTabPageNamesBarItem1, Me.DisplayItemAsTabPageBarItem1, Me.ReorderTabsBarItem1, Me.UndoItem1, Me.RedoItem1, Me.FileOpenItem1, Me.PasteItem1, Me.CutItem1, Me.CopyItem1, Me.PasteSpecialItem1, Me.BarButtonGroup1, Me.ChangeFontNameItem1, Me.ChangeFontSizeItem1, Me.FontSizeIncreaseItem1, Me.FontSizeDecreaseItem1, Me.BarButtonGroup2, Me.ToggleFontBoldItem1, Me.ToggleFontItalicItem1, Me.ToggleFontUnderlineItem1, Me.ToggleFontDoubleUnderlineItem1, Me.ToggleFontStrikeoutItem1, Me.ToggleFontDoubleStrikeoutItem1, Me.ToggleFontSuperscriptItem1, Me.ToggleFontSubscriptItem1, Me.BarButtonGroup3, Me.ChangeFontColorItem1, Me.ChangeFontHighlightColorItem1, Me.ChangeTextCaseItem1, Me.MakeTextUpperCaseItem1, Me.MakeTextLowerCaseItem1, Me.CapitalizeEachWordCaseItem1, Me.ToggleTextCaseItem1, Me.ClearFormattingItem1, Me.BarButtonGroup4, Me.ToggleBulletedListItem1, Me.ToggleNumberingListItem1, Me.ToggleMultiLevelListItem1, Me.BarButtonGroup5, Me.DecreaseIndentItem1, Me.IncreaseIndentItem1, Me.RtlToggleBulletedListItem1, Me.RtlToggleNumberingListItem1, Me.RtlToggleMultiLevelListItem1, Me.RtlDecreaseIndentItem1, Me.RtlIncreaseIndentItem1, Me.ToggleParagraphLeftToRightItem1, Me.ToggleParagraphRightToLeftItem1, Me.BarButtonGroup6, Me.ToggleParagraphAlignmentLeftItem1, Me.ToggleParagraphAlignmentCenterItem1, Me.ToggleParagraphAlignmentRightItem1, Me.ToggleParagraphAlignmentJustifyItem1, Me.ToggleParagraphAlignmentArabicJustifyGroupItem1, Me.ToggleParagraphAlignmentArabicJustifyItem1, Me.ToggleParagraphAlignmentJustifyLowItem1, Me.ToggleParagraphAlignmentJustifyMediumItem1, Me.ToggleParagraphAlignmentJustifyHighItem1, Me.ToggleParagraphAlignmentDistributeItem1, Me.ToggleParagraphAlignmentThaiDistributeItem1, Me.ToggleShowWhitespaceItem1, Me.BarButtonGroup7, Me.ChangeParagraphLineSpacingItem1, Me.SetSingleParagraphSpacingItem1, Me.SetSesquialteralParagraphSpacingItem1, Me.SetDoubleParagraphSpacingItem1, Me.ShowLineSpacingFormItem1, Me.AddSpacingBeforeParagraphItem1, Me.RemoveSpacingBeforeParagraphItem1, Me.AddSpacingAfterParagraphItem1, Me.RemoveSpacingAfterParagraphItem1, Me.ChangeParagraphBackColorItem1, Me.GalleryChangeStyleItem1, Me.FindItem1, Me.ReplaceItem1, Me.InsertTableItem1, Me.InsertFloatingPictureItem1, Me.InsertBookmarkItem1, Me.InsertHyperlinkItem1, Me.InsertSymbolItem1, Me.ChangePageColorItem1, Me.WatermarkItem1, Me.DeleteWatermarkItem1, Me.ToggleFirstRowItem1, Me.ToggleLastRowItem1, Me.ToggleBandedRowsItem1, Me.ToggleFirstColumnItem1, Me.ToggleLastColumnItem1, Me.ToggleBandedColumnsItem1, Me.GalleryChangeTableStyleItem1, Me.ChangeTableBorderLineStyleItem1, Me.ChangeTableBorderLineWeightItem1, Me.ChangeTableBorderColorItem1, Me.ChangeTableBordersItem1, Me.ToggleTableCellsBottomBorderItem1, Me.ToggleTableCellsTopBorderItem1, Me.ToggleTableCellsLeftBorderItem1, Me.ToggleTableCellsRightBorderItem1, Me.ResetTableCellsAllBordersItem1, Me.ToggleTableCellsAllBordersItem1, Me.ToggleTableCellsOutsideBorderItem1, Me.ToggleTableCellsInsideBorderItem1, Me.ToggleTableCellsInsideHorizontalBorderItem1, Me.ToggleTableCellsInsideVerticalBorderItem1, Me.ToggleShowTableGridLinesItem1, Me.ChangeTableCellsShadingItem1, Me.SelectTableElementsItem1, Me.SelectTableCellItem1, Me.SelectTableColumnItem1, Me.SelectTableRowItem1, Me.SelectTableItem1, Me.ShowTablePropertiesFormItem1, Me.DeleteTableElementsItem1, Me.ShowDeleteTableCellsFormItem1, Me.DeleteTableColumnsItem1, Me.DeleteTableRowsItem1, Me.DeleteTableItem1, Me.InsertTableRowAboveItem1, Me.InsertTableRowBelowItem1, Me.InsertTableColumnToLeftItem1, Me.InsertTableColumnToRightItem1, Me.MergeTableCellsItem1, Me.ShowSplitTableCellsForm1, Me.SplitTableItem1, Me.ToggleTableAutoFitItem1, Me.ToggleTableAutoFitContentsItem1, Me.ToggleTableAutoFitWindowItem1, Me.ToggleTableFixedColumnWidthItem1, Me.ToggleTableCellsTopLeftAlignmentItem1, Me.ToggleTableCellsMiddleLeftAlignmentItem1, Me.ToggleTableCellsBottomLeftAlignmentItem1, Me.ToggleTableCellsTopCenterAlignmentItem1, Me.ToggleTableCellsMiddleCenterAlignmentItem1, Me.ToggleTableCellsBottomCenterAlignmentItem1, Me.ToggleTableCellsTopRightAlignmentItem1, Me.ToggleTableCellsMiddleRightAlignmentItem1, Me.ToggleTableCellsBottomRightAlignmentItem1, Me.ShowTableOptionsFormItem1, Me.ChangeFloatingObjectFillColorItem1, Me.ChangeFloatingObjectOutlineColorItem1, Me.ChangeFloatingObjectOutlineWeightItem1, Me.ChangeFloatingObjectTextWrapTypeItem1, Me.SetFloatingObjectInlineTextWrapTypeItem1, Me.SetFloatingObjectSquareTextWrapTypeItem1, Me.SetFloatingObjectTightTextWrapTypeItem1, Me.SetFloatingObjectThroughTextWrapTypeItem1, Me.SetFloatingObjectTopAndBottomTextWrapTypeItem1, Me.SetFloatingObjectBehindTextWrapTypeItem1, Me.SetFloatingObjectInFrontOfTextWrapTypeItem1, Me.ChangeFloatingObjectAlignmentItem1, Me.SetFloatingObjectTopLeftAlignmentItem1, Me.SetFloatingObjectTopCenterAlignmentItem1, Me.SetFloatingObjectTopRightAlignmentItem1, Me.SetFloatingObjectMiddleLeftAlignmentItem1, Me.SetFloatingObjectMiddleCenterAlignmentItem1, Me.SetFloatingObjectMiddleRightAlignmentItem1, Me.SetFloatingObjectBottomLeftAlignmentItem1, Me.SetFloatingObjectBottomCenterAlignmentItem1, Me.SetFloatingObjectBottomRightAlignmentItem1, Me.FloatingObjectBringForwardSubItem1, Me.FloatingObjectBringForwardItem1, Me.FloatingObjectBringToFrontItem1, Me.FloatingObjectBringInFrontOfTextItem1, Me.FloatingObjectSendBackwardSubItem1, Me.FloatingObjectSendBackwardItem1, Me.FloatingObjectSendToBackItem1, Me.FloatingObjectSendBehindTextItem1})
         Me.RibbonControl.Location = New System.Drawing.Point(0, 0)
-        Me.RibbonControl.MaxItemId = 694
+        Me.RibbonControl.MaxItemId = 471
         Me.RibbonControl.Name = "RibbonControl"
         Me.RibbonControl.OptionsPageCategories.AutoCorrectForeColor = DevExpress.Utils.DefaultBoolean.[True]
         Me.RibbonControl.PageCategories.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageCategory() {Me.PivotToolsRibbonPageCategory1, Me.GridToolsRibbonPageCategory1, Me.ChartToolsRibbonPageCategory1, Me.ScatterChartToolsRibbonPageCategory1, Me.PiesToolsRibbonPageCategory1, Me.GaugesToolsRibbonPageCategory1, Me.CardsToolsRibbonPageCategory1, Me.RangeFilterToolsRibbonPageCategory1, Me.ChoroplethMapToolsRibbonPageCategory1, Me.GeoPointMapToolsRibbonPageCategory1, Me.BubbleMapToolsRibbonPageCategory1, Me.PieMapToolsRibbonPageCategory1, Me.FilterElementToolsRibbonPageCategory1, Me.DateFilterToolsRibbonPageCategory1, Me.BoundImageToolsRibbonPageCategory1, Me.TextBoxToolsRibbonPageCategory1, Me.TreemapToolsRibbonPageCategory1, Me.ImageToolsRibbonPageCategory1, Me.GroupToolsRibbonPageCategory1, Me.TabPageToolsRibbonPageCategory1, Me.TabContainerToolsRibbonPageCategory1, Me.TextBoxEditorRibbonPageCategory1})
@@ -996,601 +966,526 @@ Partial Class frmDashboardDesigner
         Me.RibbonControl.QuickToolbarItemLinks.Add(Me.QuickAccessRedoBarItem1)
         Me.RibbonControl.QuickToolbarItemLinks.Add(Me.UpdateDataBarItem1)
         Me.RibbonControl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemSpinEdit1, Me.RepositoryItemFontEdit1, Me.RepositoryItemRichEditFontSizeEdit1, Me.RepositoryItemBorderLineStyle1, Me.RepositoryItemBorderLineWeight1, Me.RepositoryItemFloatingObjectOutlineWeight1})
-        Me.RibbonControl.ShowItemCaptionsInPageHeader = True
-        Me.RibbonControl.Size = New System.Drawing.Size(1003, 182)
+        Me.RibbonControl.Size = New System.Drawing.Size(958, 193)
         Me.RibbonControl.StatusBar = Me.RibbonStatusBar
-        Me.RibbonControl.TransparentEditorsMode = DevExpress.Utils.DefaultBoolean.[True]
-        '
-        'DashboardBackstageViewControl1
-        '
-        Me.DashboardBackstageViewControl1.Controls.Add(Me.BackstageViewClientControl1)
-        Me.DashboardBackstageViewControl1.DashboardRecentTab = Me.DashboardBackstageRecentTab1
-        Me.DashboardBackstageViewControl1.Items.Add(Me.DashboardBackstageNewButton1)
-        Me.DashboardBackstageViewControl1.Items.Add(Me.DashboardBackstageOpenButton1)
-        Me.DashboardBackstageViewControl1.Items.Add(Me.DashboardBackstageSaveButton1)
-        Me.DashboardBackstageViewControl1.Items.Add(Me.DashboardBackstageSaveAsButton1)
-        Me.DashboardBackstageViewControl1.Items.Add(Me.DashboardBackstageRecentTab1)
-        Me.DashboardBackstageViewControl1.Location = New System.Drawing.Point(0, 0)
-        Me.DashboardBackstageViewControl1.Name = "DashboardBackstageViewControl1"
-        Me.DashboardBackstageViewControl1.OwnerControl = Me.RibbonControl
-        Me.DashboardBackstageViewControl1.SelectedTab = Me.DashboardBackstageRecentTab1
-        Me.DashboardBackstageViewControl1.SelectedTabIndex = 4
-        Me.DashboardBackstageViewControl1.Size = New System.Drawing.Size(240, 150)
-        Me.DashboardBackstageViewControl1.TabIndex = 5
-        Me.DashboardBackstageViewControl1.VisibleInDesignTime = True
-        '
-        'BackstageViewClientControl1
-        '
-        Me.BackstageViewClientControl1.Controls.Add(Me.RecentDashboardsControl1)
-        Me.BackstageViewClientControl1.Location = New System.Drawing.Point(132, 78)
-        Me.BackstageViewClientControl1.Name = "BackstageViewClientControl1"
-        Me.BackstageViewClientControl1.Size = New System.Drawing.Size(86, 71)
-        Me.BackstageViewClientControl1.TabIndex = 1
-        '
-        'RecentDashboardsControl1
-        '
-        Me.RecentDashboardsControl1.Appearance.ForeColor = System.Drawing.Color.Transparent
-        Me.RecentDashboardsControl1.Appearance.Options.UseForeColor = True
-        Me.RecentDashboardsControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RecentDashboardsControl1.Location = New System.Drawing.Point(0, 0)
-        Me.RecentDashboardsControl1.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.RecentDashboardsControl1.Name = "RecentDashboardsControl1"
-        Me.RecentDashboardsControl1.ServiceProvider = Me.DashboardDesigner1
-        Me.RecentDashboardsControl1.Size = New System.Drawing.Size(86, 71)
-        Me.RecentDashboardsControl1.TabIndex = 0
-        '
-        'DashboardBackstageRecentTab1
-        '
-        Me.DashboardBackstageRecentTab1.ContentControl = Me.BackstageViewClientControl1
-        Me.DashboardBackstageRecentTab1.Name = "DashboardBackstageRecentTab1"
-        Me.DashboardBackstageRecentTab1.RecentDashboardsControl = Me.RecentDashboardsControl1
-        Me.DashboardBackstageRecentTab1.Selected = True
-        '
-        'DashboardBackstageNewButton1
-        '
-        Me.DashboardBackstageNewButton1.ImageOptions.ItemNormal.SvgImage = CType(resources.GetObject("DashboardBackstageNewButton1.ImageOptions.ItemNormal.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.DashboardBackstageNewButton1.ImageOptions.ItemNormal.SvgImageSize = New System.Drawing.Size(16, 16)
-        Me.DashboardBackstageNewButton1.Name = "DashboardBackstageNewButton1"
-        Me.DashboardBackstageNewButton1.ServiceProvider = Me.DashboardDesigner1
-        '
-        'DashboardBackstageOpenButton1
-        '
-        Me.DashboardBackstageOpenButton1.ImageOptions.ItemNormal.SvgImage = CType(resources.GetObject("DashboardBackstageOpenButton1.ImageOptions.ItemNormal.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.DashboardBackstageOpenButton1.ImageOptions.ItemNormal.SvgImageSize = New System.Drawing.Size(16, 16)
-        Me.DashboardBackstageOpenButton1.Name = "DashboardBackstageOpenButton1"
-        Me.DashboardBackstageOpenButton1.ServiceProvider = Me.DashboardDesigner1
-        '
-        'DashboardBackstageSaveButton1
-        '
-        Me.DashboardBackstageSaveButton1.ImageOptions.ItemNormal.SvgImage = CType(resources.GetObject("DashboardBackstageSaveButton1.ImageOptions.ItemNormal.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.DashboardBackstageSaveButton1.ImageOptions.ItemNormal.SvgImageSize = New System.Drawing.Size(16, 16)
-        Me.DashboardBackstageSaveButton1.Name = "DashboardBackstageSaveButton1"
-        Me.DashboardBackstageSaveButton1.ServiceProvider = Me.DashboardDesigner1
-        '
-        'DashboardBackstageSaveAsButton1
-        '
-        Me.DashboardBackstageSaveAsButton1.ImageOptions.ItemNormal.SvgImage = CType(resources.GetObject("DashboardBackstageSaveAsButton1.ImageOptions.ItemNormal.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.DashboardBackstageSaveAsButton1.ImageOptions.ItemNormal.SvgImageSize = New System.Drawing.Size(16, 16)
-        Me.DashboardBackstageSaveAsButton1.Name = "DashboardBackstageSaveAsButton1"
-        Me.DashboardBackstageSaveAsButton1.ServiceProvider = Me.DashboardDesigner1
         '
         'FileNewBarItem1
         '
-        Me.FileNewBarItem1.Id = 224
+        Me.FileNewBarItem1.Id = 1
         Me.FileNewBarItem1.Name = "FileNewBarItem1"
         '
         'FileOpenBarItem1
         '
-        Me.FileOpenBarItem1.Id = 225
+        Me.FileOpenBarItem1.Id = 2
         Me.FileOpenBarItem1.Name = "FileOpenBarItem1"
         '
         'FileSaveBarItem1
         '
-        Me.FileSaveBarItem1.Id = 226
+        Me.FileSaveBarItem1.Id = 3
         Me.FileSaveBarItem1.Name = "FileSaveBarItem1"
         '
         'FileSaveAsBarItem1
         '
-        Me.FileSaveAsBarItem1.Id = 227
+        Me.FileSaveAsBarItem1.Id = 4
         Me.FileSaveAsBarItem1.Name = "FileSaveAsBarItem1"
         '
         'QuickAccessUndoBarItem1
         '
-        Me.QuickAccessUndoBarItem1.Id = 228
+        Me.QuickAccessUndoBarItem1.Id = 5
         Me.QuickAccessUndoBarItem1.Name = "QuickAccessUndoBarItem1"
         '
         'QuickAccessRedoBarItem1
         '
-        Me.QuickAccessRedoBarItem1.Id = 229
+        Me.QuickAccessRedoBarItem1.Id = 6
         Me.QuickAccessRedoBarItem1.Name = "QuickAccessRedoBarItem1"
         '
         'UndoBarItem1
         '
-        Me.UndoBarItem1.Id = 230
+        Me.UndoBarItem1.Id = 7
         Me.UndoBarItem1.Name = "UndoBarItem1"
         '
         'RedoBarItem1
         '
-        Me.RedoBarItem1.Id = 231
+        Me.RedoBarItem1.Id = 8
         Me.RedoBarItem1.Name = "RedoBarItem1"
         '
         'InsertPivotBarItem1
         '
-        Me.InsertPivotBarItem1.Id = 232
+        Me.InsertPivotBarItem1.Id = 9
         Me.InsertPivotBarItem1.Name = "InsertPivotBarItem1"
         '
         'InsertGridBarItem1
         '
-        Me.InsertGridBarItem1.Id = 233
+        Me.InsertGridBarItem1.Id = 10
         Me.InsertGridBarItem1.Name = "InsertGridBarItem1"
         '
         'InsertChartBarItem1
         '
-        Me.InsertChartBarItem1.Id = 234
+        Me.InsertChartBarItem1.Id = 11
         Me.InsertChartBarItem1.Name = "InsertChartBarItem1"
         '
         'InsertScatterChartBarItem1
         '
-        Me.InsertScatterChartBarItem1.Id = 235
+        Me.InsertScatterChartBarItem1.Id = 12
         Me.InsertScatterChartBarItem1.Name = "InsertScatterChartBarItem1"
         '
         'InsertPiesBarItem1
         '
-        Me.InsertPiesBarItem1.Id = 236
+        Me.InsertPiesBarItem1.Id = 13
         Me.InsertPiesBarItem1.Name = "InsertPiesBarItem1"
         '
         'InsertGaugesBarItem1
         '
-        Me.InsertGaugesBarItem1.Id = 237
+        Me.InsertGaugesBarItem1.Id = 14
         Me.InsertGaugesBarItem1.Name = "InsertGaugesBarItem1"
         '
         'InsertCardsBarItem1
         '
-        Me.InsertCardsBarItem1.Id = 238
+        Me.InsertCardsBarItem1.Id = 15
         Me.InsertCardsBarItem1.Name = "InsertCardsBarItem1"
         '
         'InsertTreemapBarItem1
         '
-        Me.InsertTreemapBarItem1.Id = 239
+        Me.InsertTreemapBarItem1.Id = 16
         Me.InsertTreemapBarItem1.Name = "InsertTreemapBarItem1"
         '
         'InsertChoroplethMapBarItem1
         '
-        Me.InsertChoroplethMapBarItem1.Id = 240
+        Me.InsertChoroplethMapBarItem1.Id = 17
         Me.InsertChoroplethMapBarItem1.Name = "InsertChoroplethMapBarItem1"
         '
         'InsertGeoPointMapBarSubItem1
         '
-        Me.InsertGeoPointMapBarSubItem1.Id = 241
+        Me.InsertGeoPointMapBarSubItem1.Id = 18
         Me.InsertGeoPointMapBarSubItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.InsertGeoPointMapBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.InsertBubbleMapBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.InsertPieMapBarItem1)})
         Me.InsertGeoPointMapBarSubItem1.Name = "InsertGeoPointMapBarSubItem1"
         Me.InsertGeoPointMapBarSubItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu
         '
         'InsertGeoPointMapBarItem1
         '
-        Me.InsertGeoPointMapBarItem1.Id = 242
+        Me.InsertGeoPointMapBarItem1.Id = 19
         Me.InsertGeoPointMapBarItem1.Name = "InsertGeoPointMapBarItem1"
         '
         'InsertBubbleMapBarItem1
         '
-        Me.InsertBubbleMapBarItem1.Id = 243
+        Me.InsertBubbleMapBarItem1.Id = 20
         Me.InsertBubbleMapBarItem1.Name = "InsertBubbleMapBarItem1"
         '
         'InsertPieMapBarItem1
         '
-        Me.InsertPieMapBarItem1.Id = 244
+        Me.InsertPieMapBarItem1.Id = 21
         Me.InsertPieMapBarItem1.Name = "InsertPieMapBarItem1"
         '
         'InsertRangeFilterBarItem1
         '
-        Me.InsertRangeFilterBarItem1.Id = 245
+        Me.InsertRangeFilterBarItem1.Id = 22
         Me.InsertRangeFilterBarItem1.Name = "InsertRangeFilterBarItem1"
         '
         'InsertFilterElementSubItem1
         '
-        Me.InsertFilterElementSubItem1.Id = 246
+        Me.InsertFilterElementSubItem1.Id = 23
         Me.InsertFilterElementSubItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.InsertComboBoxBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.InsertListBoxBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.InsertTreeViewBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.InsertDateFilterBarItem1)})
         Me.InsertFilterElementSubItem1.Name = "InsertFilterElementSubItem1"
         Me.InsertFilterElementSubItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu
         '
         'InsertComboBoxBarItem1
         '
-        Me.InsertComboBoxBarItem1.Id = 247
+        Me.InsertComboBoxBarItem1.Id = 24
         Me.InsertComboBoxBarItem1.Name = "InsertComboBoxBarItem1"
         '
         'InsertListBoxBarItem1
         '
-        Me.InsertListBoxBarItem1.Id = 248
+        Me.InsertListBoxBarItem1.Id = 25
         Me.InsertListBoxBarItem1.Name = "InsertListBoxBarItem1"
         '
         'InsertTreeViewBarItem1
         '
-        Me.InsertTreeViewBarItem1.Id = 249
+        Me.InsertTreeViewBarItem1.Id = 26
         Me.InsertTreeViewBarItem1.Name = "InsertTreeViewBarItem1"
         '
         'InsertDateFilterBarItem1
         '
-        Me.InsertDateFilterBarItem1.Id = 250
+        Me.InsertDateFilterBarItem1.Id = 27
         Me.InsertDateFilterBarItem1.Name = "InsertDateFilterBarItem1"
         '
         'InsertImagesBarSubItem1
         '
-        Me.InsertImagesBarSubItem1.Id = 251
+        Me.InsertImagesBarSubItem1.Id = 28
         Me.InsertImagesBarSubItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.InsertImageBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.InsertBoundImageBarItem1)})
         Me.InsertImagesBarSubItem1.Name = "InsertImagesBarSubItem1"
         Me.InsertImagesBarSubItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu
         '
         'InsertImageBarItem1
         '
-        Me.InsertImageBarItem1.Id = 252
+        Me.InsertImageBarItem1.Id = 29
         Me.InsertImageBarItem1.Name = "InsertImageBarItem1"
         '
         'InsertBoundImageBarItem1
         '
-        Me.InsertBoundImageBarItem1.Id = 253
+        Me.InsertBoundImageBarItem1.Id = 30
         Me.InsertBoundImageBarItem1.Name = "InsertBoundImageBarItem1"
         '
         'InsertTextBoxBarItem1
         '
-        Me.InsertTextBoxBarItem1.Id = 254
+        Me.InsertTextBoxBarItem1.Id = 31
         Me.InsertTextBoxBarItem1.Name = "InsertTextBoxBarItem1"
         '
         'InsertGroupBarItem1
         '
-        Me.InsertGroupBarItem1.Id = 255
+        Me.InsertGroupBarItem1.Id = 32
         Me.InsertGroupBarItem1.Name = "InsertGroupBarItem1"
         '
         'InsertTabContainerBarItem1
         '
-        Me.InsertTabContainerBarItem1.Id = 256
+        Me.InsertTabContainerBarItem1.Id = 33
         Me.InsertTabContainerBarItem1.Name = "InsertTabContainerBarItem1"
         '
         'DuplicateItemBarItem1
         '
-        Me.DuplicateItemBarItem1.Id = 257
+        Me.DuplicateItemBarItem1.Id = 34
         Me.DuplicateItemBarItem1.Name = "DuplicateItemBarItem1"
         '
         'DeleteItemBarItem1
         '
-        Me.DeleteItemBarItem1.Id = 258
+        Me.DeleteItemBarItem1.Id = 35
         Me.DeleteItemBarItem1.Name = "DeleteItemBarItem1"
         '
         'ConvertDashboardItemTypeBarItem1
         '
-        Me.ConvertDashboardItemTypeBarItem1.Id = 259
+        Me.ConvertDashboardItemTypeBarItem1.Id = 36
         Me.ConvertDashboardItemTypeBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.ConvertToPivotBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ConvertToGridBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ConvertToChartBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ConvertToScatterChartBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ConvertToPieBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ConvertToGaugeBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ConvertToCardBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ConvertToTreemapBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ConvertToChoroplethMapBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ConvertGeoPointMapBaseBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ConvertToRangeFilterBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ConvertToFilterElementsBaseBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ConvertToBoundImageBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ConvertToTextBoxBarItem1)})
         Me.ConvertDashboardItemTypeBarItem1.Name = "ConvertDashboardItemTypeBarItem1"
         '
         'ConvertToPivotBarItem1
         '
-        Me.ConvertToPivotBarItem1.Id = 260
+        Me.ConvertToPivotBarItem1.Id = 37
         Me.ConvertToPivotBarItem1.Name = "ConvertToPivotBarItem1"
         '
         'ConvertToGridBarItem1
         '
-        Me.ConvertToGridBarItem1.Id = 261
+        Me.ConvertToGridBarItem1.Id = 38
         Me.ConvertToGridBarItem1.Name = "ConvertToGridBarItem1"
         '
         'ConvertToChartBarItem1
         '
-        Me.ConvertToChartBarItem1.Id = 262
+        Me.ConvertToChartBarItem1.Id = 39
         Me.ConvertToChartBarItem1.Name = "ConvertToChartBarItem1"
         '
         'ConvertToScatterChartBarItem1
         '
-        Me.ConvertToScatterChartBarItem1.Id = 263
+        Me.ConvertToScatterChartBarItem1.Id = 40
         Me.ConvertToScatterChartBarItem1.Name = "ConvertToScatterChartBarItem1"
         '
         'ConvertToPieBarItem1
         '
-        Me.ConvertToPieBarItem1.Id = 264
+        Me.ConvertToPieBarItem1.Id = 41
         Me.ConvertToPieBarItem1.Name = "ConvertToPieBarItem1"
         '
         'ConvertToGaugeBarItem1
         '
-        Me.ConvertToGaugeBarItem1.Id = 265
+        Me.ConvertToGaugeBarItem1.Id = 42
         Me.ConvertToGaugeBarItem1.Name = "ConvertToGaugeBarItem1"
         '
         'ConvertToCardBarItem1
         '
-        Me.ConvertToCardBarItem1.Id = 266
+        Me.ConvertToCardBarItem1.Id = 43
         Me.ConvertToCardBarItem1.Name = "ConvertToCardBarItem1"
         '
         'ConvertToTreemapBarItem1
         '
-        Me.ConvertToTreemapBarItem1.Id = 267
+        Me.ConvertToTreemapBarItem1.Id = 44
         Me.ConvertToTreemapBarItem1.Name = "ConvertToTreemapBarItem1"
         '
         'ConvertToChoroplethMapBarItem1
         '
-        Me.ConvertToChoroplethMapBarItem1.Id = 268
+        Me.ConvertToChoroplethMapBarItem1.Id = 45
         Me.ConvertToChoroplethMapBarItem1.Name = "ConvertToChoroplethMapBarItem1"
         '
         'ConvertGeoPointMapBaseBarItem1
         '
-        Me.ConvertGeoPointMapBaseBarItem1.Id = 272
+        Me.ConvertGeoPointMapBaseBarItem1.Id = 49
         Me.ConvertGeoPointMapBaseBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.ConvertToGeoPointMapBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ConvertToBubbleMapBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ConvertToPieMapBarItem1)})
         Me.ConvertGeoPointMapBaseBarItem1.Name = "ConvertGeoPointMapBaseBarItem1"
         '
         'ConvertToGeoPointMapBarItem1
         '
-        Me.ConvertToGeoPointMapBarItem1.Id = 269
+        Me.ConvertToGeoPointMapBarItem1.Id = 46
         Me.ConvertToGeoPointMapBarItem1.Name = "ConvertToGeoPointMapBarItem1"
         '
         'ConvertToBubbleMapBarItem1
         '
-        Me.ConvertToBubbleMapBarItem1.Id = 270
+        Me.ConvertToBubbleMapBarItem1.Id = 47
         Me.ConvertToBubbleMapBarItem1.Name = "ConvertToBubbleMapBarItem1"
         '
         'ConvertToPieMapBarItem1
         '
-        Me.ConvertToPieMapBarItem1.Id = 271
+        Me.ConvertToPieMapBarItem1.Id = 48
         Me.ConvertToPieMapBarItem1.Name = "ConvertToPieMapBarItem1"
         '
         'ConvertToRangeFilterBarItem1
         '
-        Me.ConvertToRangeFilterBarItem1.Id = 273
+        Me.ConvertToRangeFilterBarItem1.Id = 50
         Me.ConvertToRangeFilterBarItem1.Name = "ConvertToRangeFilterBarItem1"
         '
         'ConvertToFilterElementsBaseBarItem1
         '
-        Me.ConvertToFilterElementsBaseBarItem1.Id = 278
+        Me.ConvertToFilterElementsBaseBarItem1.Id = 55
         Me.ConvertToFilterElementsBaseBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.ConvertToComboBoxBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ConvertToListBoxBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ConvertToTreeViewBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ConvertToDateFilterBarItem1)})
         Me.ConvertToFilterElementsBaseBarItem1.Name = "ConvertToFilterElementsBaseBarItem1"
         '
         'ConvertToComboBoxBarItem1
         '
-        Me.ConvertToComboBoxBarItem1.Id = 274
+        Me.ConvertToComboBoxBarItem1.Id = 51
         Me.ConvertToComboBoxBarItem1.Name = "ConvertToComboBoxBarItem1"
         '
         'ConvertToListBoxBarItem1
         '
-        Me.ConvertToListBoxBarItem1.Id = 275
+        Me.ConvertToListBoxBarItem1.Id = 52
         Me.ConvertToListBoxBarItem1.Name = "ConvertToListBoxBarItem1"
         '
         'ConvertToTreeViewBarItem1
         '
-        Me.ConvertToTreeViewBarItem1.Id = 276
+        Me.ConvertToTreeViewBarItem1.Id = 53
         Me.ConvertToTreeViewBarItem1.Name = "ConvertToTreeViewBarItem1"
         '
         'ConvertToDateFilterBarItem1
         '
-        Me.ConvertToDateFilterBarItem1.Id = 277
+        Me.ConvertToDateFilterBarItem1.Id = 54
         Me.ConvertToDateFilterBarItem1.Name = "ConvertToDateFilterBarItem1"
         '
         'ConvertToBoundImageBarItem1
         '
-        Me.ConvertToBoundImageBarItem1.Id = 279
+        Me.ConvertToBoundImageBarItem1.Id = 56
         Me.ConvertToBoundImageBarItem1.Name = "ConvertToBoundImageBarItem1"
         '
         'ConvertToTextBoxBarItem1
         '
-        Me.ConvertToTextBoxBarItem1.Id = 280
+        Me.ConvertToTextBoxBarItem1.Id = 57
         Me.ConvertToTextBoxBarItem1.Name = "ConvertToTextBoxBarItem1"
         '
         'RemoveDataItemsBarItem1
         '
-        Me.RemoveDataItemsBarItem1.Id = 281
+        Me.RemoveDataItemsBarItem1.Id = 58
         Me.RemoveDataItemsBarItem1.Name = "RemoveDataItemsBarItem1"
         '
         'TransposeItemBarItem1
         '
-        Me.TransposeItemBarItem1.Id = 282
+        Me.TransposeItemBarItem1.Id = 59
         Me.TransposeItemBarItem1.Name = "TransposeItemBarItem1"
         '
         'EditRulesBarItem1
         '
-        Me.EditRulesBarItem1.Id = 283
+        Me.EditRulesBarItem1.Id = 60
         Me.EditRulesBarItem1.Name = "EditRulesBarItem1"
         '
         'DeleteGroupBarItem1
         '
-        Me.DeleteGroupBarItem1.Id = 284
+        Me.DeleteGroupBarItem1.Id = 61
         Me.DeleteGroupBarItem1.Name = "DeleteGroupBarItem1"
         '
         'DeleteTabContainerBarItem1
         '
-        Me.DeleteTabContainerBarItem1.Id = 285
+        Me.DeleteTabContainerBarItem1.Id = 62
         Me.DeleteTabContainerBarItem1.Name = "DeleteTabContainerBarItem1"
         '
         'DeleteTabPageBarItem1
         '
-        Me.DeleteTabPageBarItem1.Id = 286
+        Me.DeleteTabPageBarItem1.Id = 63
         Me.DeleteTabPageBarItem1.Name = "DeleteTabPageBarItem1"
         '
         'DashboardTitleBarItem1
         '
-        Me.DashboardTitleBarItem1.Id = 287
+        Me.DashboardTitleBarItem1.Id = 64
         Me.DashboardTitleBarItem1.Name = "DashboardTitleBarItem1"
         '
         'SetCurrencyCultureBarItem1
         '
-        Me.SetCurrencyCultureBarItem1.Id = 288
+        Me.SetCurrencyCultureBarItem1.Id = 65
         Me.SetCurrencyCultureBarItem1.Name = "SetCurrencyCultureBarItem1"
         '
         'DashboardColorSchemeBarItem1
         '
-        Me.DashboardColorSchemeBarItem1.Id = 289
+        Me.DashboardColorSchemeBarItem1.Id = 66
         Me.DashboardColorSchemeBarItem1.Name = "DashboardColorSchemeBarItem1"
         '
         'DashboardParametersBarItem1
         '
-        Me.DashboardParametersBarItem1.Id = 290
+        Me.DashboardParametersBarItem1.Id = 67
         Me.DashboardParametersBarItem1.Name = "DashboardParametersBarItem1"
         '
         'LayoutOptionsBarItem1
         '
-        Me.LayoutOptionsBarItem1.Id = 291
+        Me.LayoutOptionsBarItem1.Id = 68
         Me.LayoutOptionsBarItem1.Name = "LayoutOptionsBarItem1"
         '
         'DashboardAutomaticUpdatesBarItem1
         '
-        Me.DashboardAutomaticUpdatesBarItem1.Id = 292
+        Me.DashboardAutomaticUpdatesBarItem1.Id = 69
         Me.DashboardAutomaticUpdatesBarItem1.Name = "DashboardAutomaticUpdatesBarItem1"
         '
         'UpdateDataBarItem1
         '
-        Me.UpdateDataBarItem1.Id = 293
+        Me.UpdateDataBarItem1.Id = 70
         Me.UpdateDataBarItem1.Name = "UpdateDataBarItem1"
         '
         'NewDataSourceBarItem1
         '
-        Me.NewDataSourceBarItem1.Id = 294
+        Me.NewDataSourceBarItem1.Id = 71
         Me.NewDataSourceBarItem1.Name = "NewDataSourceBarItem1"
         '
         'EditSqlConnectionBarItem1
         '
-        Me.EditSqlConnectionBarItem1.Id = 295
+        Me.EditSqlConnectionBarItem1.Id = 72
         Me.EditSqlConnectionBarItem1.Name = "EditSqlConnectionBarItem1"
         '
         'EditMongoDBConnectionBarItem1
         '
-        Me.EditMongoDBConnectionBarItem1.Id = 296
+        Me.EditMongoDBConnectionBarItem1.Id = 73
         Me.EditMongoDBConnectionBarItem1.Name = "EditMongoDBConnectionBarItem1"
         '
         'EditXpoConnectionBarItem1
         '
-        Me.EditXpoConnectionBarItem1.Id = 297
+        Me.EditXpoConnectionBarItem1.Id = 74
         Me.EditXpoConnectionBarItem1.Name = "EditXpoConnectionBarItem1"
         '
         'EditOlapConnectionBarItem1
         '
-        Me.EditOlapConnectionBarItem1.Id = 298
+        Me.EditOlapConnectionBarItem1.Id = 75
         Me.EditOlapConnectionBarItem1.Name = "EditOlapConnectionBarItem1"
         '
         'EditObjectDataSourceBarItem1
         '
-        Me.EditObjectDataSourceBarItem1.Id = 299
+        Me.EditObjectDataSourceBarItem1.Id = 76
         Me.EditObjectDataSourceBarItem1.Name = "EditObjectDataSourceBarItem1"
         '
         'EditExcelDataSourceBarItem1
         '
-        Me.EditExcelDataSourceBarItem1.Id = 300
+        Me.EditExcelDataSourceBarItem1.Id = 77
         Me.EditExcelDataSourceBarItem1.Name = "EditExcelDataSourceBarItem1"
         '
         'EditEFDataSourceBarItem1
         '
-        Me.EditEFDataSourceBarItem1.Id = 301
+        Me.EditEFDataSourceBarItem1.Id = 78
         Me.EditEFDataSourceBarItem1.Name = "EditEFDataSourceBarItem1"
         '
         'EditExtractOptionsBarItem1
         '
-        Me.EditExtractOptionsBarItem1.Id = 302
+        Me.EditExtractOptionsBarItem1.Id = 79
         Me.EditExtractOptionsBarItem1.Name = "EditExtractOptionsBarItem1"
         '
         'RenameDataSourceBarItem1
         '
-        Me.RenameDataSourceBarItem1.Id = 303
+        Me.RenameDataSourceBarItem1.Id = 80
         Me.RenameDataSourceBarItem1.Name = "RenameDataSourceBarItem1"
         '
         'DeleteDataSourceBarItem1
         '
-        Me.DeleteDataSourceBarItem1.Id = 304
+        Me.DeleteDataSourceBarItem1.Id = 81
         Me.DeleteDataSourceBarItem1.Name = "DeleteDataSourceBarItem1"
         '
         'ServerModeBarItem1
         '
-        Me.ServerModeBarItem1.Id = 305
+        Me.ServerModeBarItem1.Id = 82
         Me.ServerModeBarItem1.Name = "ServerModeBarItem1"
         '
         'UpateDataExtractBarItem1
         '
-        Me.UpateDataExtractBarItem1.Id = 306
+        Me.UpateDataExtractBarItem1.Id = 83
         Me.UpateDataExtractBarItem1.Name = "UpateDataExtractBarItem1"
         '
         'AddCalculatedFieldBarItem1
         '
-        Me.AddCalculatedFieldBarItem1.Id = 307
+        Me.AddCalculatedFieldBarItem1.Id = 84
         Me.AddCalculatedFieldBarItem1.Name = "AddCalculatedFieldBarItem1"
         '
         'EditJsonDataSourceBarItem1
         '
-        Me.EditJsonDataSourceBarItem1.Id = 308
+        Me.EditJsonDataSourceBarItem1.Id = 85
         Me.EditJsonDataSourceBarItem1.Name = "EditJsonDataSourceBarItem1"
         '
         'AddQueryBarItem1
         '
-        Me.AddQueryBarItem1.Id = 309
+        Me.AddQueryBarItem1.Id = 86
         Me.AddQueryBarItem1.Name = "AddQueryBarItem1"
         '
         'EditQueryBarItem1
         '
-        Me.EditQueryBarItem1.Id = 310
+        Me.EditQueryBarItem1.Id = 87
         Me.EditQueryBarItem1.Name = "EditQueryBarItem1"
         '
         'RenameQueryBarItem1
         '
-        Me.RenameQueryBarItem1.Id = 311
+        Me.RenameQueryBarItem1.Id = 88
         Me.RenameQueryBarItem1.Name = "RenameQueryBarItem1"
         '
         'EditQueryFilterBarItem1
         '
-        Me.EditQueryFilterBarItem1.Id = 312
+        Me.EditQueryFilterBarItem1.Id = 89
         Me.EditQueryFilterBarItem1.Name = "EditQueryFilterBarItem1"
         '
         'DeleteQueryBarItem1
         '
-        Me.DeleteQueryBarItem1.Id = 313
+        Me.DeleteQueryBarItem1.Id = 90
         Me.DeleteQueryBarItem1.Name = "DeleteQueryBarItem1"
         '
         'EditExtractSourceConnectionBarItem1
         '
-        Me.EditExtractSourceConnectionBarItem1.Id = 314
+        Me.EditExtractSourceConnectionBarItem1.Id = 91
         Me.EditExtractSourceConnectionBarItem1.Name = "EditExtractSourceConnectionBarItem1"
         '
         'EditExtractSourceBarItem1
         '
-        Me.EditExtractSourceBarItem1.Id = 315
+        Me.EditExtractSourceBarItem1.Id = 92
         Me.EditExtractSourceBarItem1.Name = "EditExtractSourceBarItem1"
         '
         'EditExtractSourceQueryBarItem1
         '
-        Me.EditExtractSourceQueryBarItem1.Id = 316
+        Me.EditExtractSourceQueryBarItem1.Id = 93
         Me.EditExtractSourceQueryBarItem1.Name = "EditExtractSourceQueryBarItem1"
         '
         'AddFederationQueryBarItem1
         '
-        Me.AddFederationQueryBarItem1.Id = 317
+        Me.AddFederationQueryBarItem1.Id = 94
         Me.AddFederationQueryBarItem1.Name = "AddFederationQueryBarItem1"
         '
         'EditFederationQueryBarItem1
         '
-        Me.EditFederationQueryBarItem1.Id = 318
+        Me.EditFederationQueryBarItem1.Id = 95
         Me.EditFederationQueryBarItem1.Name = "EditFederationQueryBarItem1"
         '
         'RenameFederationQueryBarItem1
         '
-        Me.RenameFederationQueryBarItem1.Id = 319
+        Me.RenameFederationQueryBarItem1.Id = 96
         Me.RenameFederationQueryBarItem1.Name = "RenameFederationQueryBarItem1"
         '
         'DeleteFederationQueryBarItem1
         '
-        Me.DeleteFederationQueryBarItem1.Id = 320
+        Me.DeleteFederationQueryBarItem1.Id = 97
         Me.DeleteFederationQueryBarItem1.Name = "DeleteFederationQueryBarItem1"
         '
         'ManageMongoDBQueriesBarItem1
         '
-        Me.ManageMongoDBQueriesBarItem1.Id = 321
+        Me.ManageMongoDBQueriesBarItem1.Id = 98
         Me.ManageMongoDBQueriesBarItem1.Name = "ManageMongoDBQueriesBarItem1"
         '
         'RenameMongoDBQueryBarItem1
         '
-        Me.RenameMongoDBQueryBarItem1.Id = 322
+        Me.RenameMongoDBQueryBarItem1.Id = 99
         Me.RenameMongoDBQueryBarItem1.Name = "RenameMongoDBQueryBarItem1"
         '
         'DeleteMongoDBQueryBarItem1
         '
-        Me.DeleteMongoDBQueryBarItem1.Id = 323
+        Me.DeleteMongoDBQueryBarItem1.Id = 100
         Me.DeleteMongoDBQueryBarItem1.Name = "DeleteMongoDBQueryBarItem1"
         '
         'EditDataSourceFilterBarItem1
         '
-        Me.EditDataSourceFilterBarItem1.Id = 324
+        Me.EditDataSourceFilterBarItem1.Id = 101
         Me.EditDataSourceFilterBarItem1.Name = "EditDataSourceFilterBarItem1"
         '
         'ClearDataSourceFilterBarItem1
         '
-        Me.ClearDataSourceFilterBarItem1.Id = 325
+        Me.ClearDataSourceFilterBarItem1.Id = 102
         Me.ClearDataSourceFilterBarItem1.Name = "ClearDataSourceFilterBarItem1"
         '
         'DashboardSkinsBarItem1
@@ -1601,630 +1496,634 @@ Partial Class frmDashboardDesigner
         Me.DashboardSkinsBarItem1.Gallery.AllowHoverImages = True
         Me.DashboardSkinsBarItem1.Gallery.ColumnCount = 4
         Me.DashboardSkinsBarItem1.Gallery.FixedHoverImageSize = False
-        GalleryItemGroup1.Caption = "Standard Skins"
-        GalleryItem1.Caption = "Basic"
-        GalleryItem1.Hint = "Basic"
-        GalleryItem1.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        GalleryItem1.Tag = "Basic"
-        GalleryItem1.Value = "Basic"
-        GalleryItem2.Caption = "The Bezier"
-        GalleryItem2.Hint = "The Bezier"
-        GalleryItem2.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage1"), DevExpress.Utils.Svg.SvgImage)
-        GalleryItem2.Tag = "The Bezier"
-        GalleryItem2.Value = "The Bezier"
-        GalleryItem3.Caption = "WXI"
-        GalleryItem3.Hint = "WXI"
-        GalleryItem3.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage2"), DevExpress.Utils.Svg.SvgImage)
-        GalleryItem3.Tag = "WXI"
-        GalleryItem3.Value = "WXI"
-        GalleryItem4.Caption = "WXI Compact"
-        GalleryItem4.Hint = "WXI Compact"
-        GalleryItem4.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage3"), DevExpress.Utils.Svg.SvgImage)
-        GalleryItem4.Tag = "WXI"
-        GalleryItem4.Value = "WXI Compact"
-        GalleryItem5.Caption = "Office 2019 Colorful"
-        GalleryItem5.Hint = "Office 2019 Colorful"
-        GalleryItem5.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage4"), DevExpress.Utils.Svg.SvgImage)
-        GalleryItem5.Tag = "Office 2019 Colorful"
-        GalleryItem5.Value = "Office 2019 Colorful"
-        GalleryItem6.Caption = "Office 2019 Black"
-        GalleryItem6.Hint = "Office 2019 Black"
-        GalleryItem6.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage5"), DevExpress.Utils.Svg.SvgImage)
-        GalleryItem6.Tag = "Office 2019 Black"
-        GalleryItem6.Value = "Office 2019 Black"
-        GalleryItem7.Caption = "Office 2019 White"
-        GalleryItem7.Hint = "Office 2019 White"
-        GalleryItem7.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage6"), DevExpress.Utils.Svg.SvgImage)
-        GalleryItem7.Tag = "Office 2019 White"
-        GalleryItem7.Value = "Office 2019 White"
-        GalleryItem8.Caption = "Office 2019 Dark"
-        GalleryItem8.Hint = "Office 2019 Dark"
-        GalleryItem8.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage7"), DevExpress.Utils.Svg.SvgImage)
-        GalleryItem8.Tag = "Office 2019 Dark Gray"
-        GalleryItem8.Value = "Office 2019 Dark"
-        GalleryItem9.Caption = "High Contrast"
-        GalleryItem9.Hint = "High Contrast"
-        GalleryItem9.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage8"), DevExpress.Utils.Svg.SvgImage)
-        GalleryItem9.Tag = "High Contrast"
-        GalleryItem9.Value = "High Contrast"
-        GalleryItem10.Caption = "DevExpress Style"
-        GalleryItem10.Hint = "DevExpress Style"
-        GalleryItem10.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage9"), DevExpress.Utils.Svg.SvgImage)
-        GalleryItem10.Tag = "DevExpress Style"
-        GalleryItem10.Value = "DevExpress Style"
-        GalleryItem11.Caption = "DevExpress Dark Style"
-        GalleryItem11.Hint = "DevExpress Dark Style"
-        GalleryItem11.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage10"), DevExpress.Utils.Svg.SvgImage)
-        GalleryItem11.Tag = "DevExpress Dark Style"
-        GalleryItem11.Value = "DevExpress Dark Style"
-        GalleryItem12.Caption = "Office 2016 Colorful"
-        GalleryItem12.Hint = "Office 2016 Colorful"
-        GalleryItem12.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage11"), DevExpress.Utils.Svg.SvgImage)
-        GalleryItem12.Tag = "Office 2016 Colorful"
-        GalleryItem12.Value = "Office 2016 Colorful"
-        GalleryItem13.Caption = "Office 2016 Dark"
-        GalleryItem13.Hint = "Office 2016 Dark"
-        GalleryItem13.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage12"), DevExpress.Utils.Svg.SvgImage)
-        GalleryItem13.Tag = "Office 2016 Dark"
-        GalleryItem13.Value = "Office 2016 Dark"
-        GalleryItem14.Caption = "Office 2016 Black"
-        GalleryItem14.Hint = "Office 2016 Black"
-        GalleryItem14.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage13"), DevExpress.Utils.Svg.SvgImage)
-        GalleryItem14.Tag = "Office 2016 Black"
-        GalleryItem14.Value = "Office 2016 Black"
-        GalleryItem15.Caption = "Office 2013 White"
-        GalleryItem15.Hint = "Office 2013 White"
-        GalleryItem15.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage14"), DevExpress.Utils.Svg.SvgImage)
-        GalleryItem15.Tag = "Office 2013"
-        GalleryItem15.Value = "Office 2013 White"
-        GalleryItem16.Caption = "Office 2013 Dark Gray"
-        GalleryItem16.Hint = "Office 2013 Dark Gray"
-        GalleryItem16.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage15"), DevExpress.Utils.Svg.SvgImage)
-        GalleryItem16.Tag = "Office 2013 Dark Gray"
-        GalleryItem16.Value = "Office 2013 Dark Gray"
-        GalleryItem17.Caption = "Office 2013 Light Gray"
-        GalleryItem17.Hint = "Office 2013 Light Gray"
-        GalleryItem17.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage16"), DevExpress.Utils.Svg.SvgImage)
-        GalleryItem17.Tag = "Office 2013 Light Gray"
-        GalleryItem17.Value = "Office 2013 Light Gray"
-        GalleryItem18.Caption = "Office 2010 Blue"
-        GalleryItem18.Hint = "Office 2010 Blue"
-        GalleryItem18.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage17"), DevExpress.Utils.Svg.SvgImage)
-        GalleryItem18.Tag = "Office 2010 Blue"
-        GalleryItem18.Value = "Office 2010 Blue"
-        GalleryItem19.Caption = "Office 2010 Black"
-        GalleryItem19.Hint = "Office 2010 Black"
-        GalleryItem19.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage18"), DevExpress.Utils.Svg.SvgImage)
-        GalleryItem19.Tag = "Office 2010 Black"
-        GalleryItem19.Value = "Office 2010 Black"
-        GalleryItem20.Caption = "Office 2010 Silver"
-        GalleryItem20.Hint = "Office 2010 Silver"
-        GalleryItem20.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage19"), DevExpress.Utils.Svg.SvgImage)
-        GalleryItem20.Tag = "Office 2010 Silver"
-        GalleryItem20.Value = "Office 2010 Silver"
-        GalleryItem21.Caption = "Visual Studio 2013 Blue"
-        GalleryItem21.Hint = "Visual Studio 2013 Blue"
-        GalleryItem21.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage20"), DevExpress.Utils.Svg.SvgImage)
-        GalleryItem21.Tag = "Visual Studio 2013 Blue"
-        GalleryItem21.Value = "Visual Studio 2013 Blue"
-        GalleryItem22.Caption = "Visual Studio 2013 Dark"
-        GalleryItem22.Hint = "Visual Studio 2013 Dark"
-        GalleryItem22.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage21"), DevExpress.Utils.Svg.SvgImage)
-        GalleryItem22.Tag = "Visual Studio 2013 Dark"
-        GalleryItem22.Value = "Visual Studio 2013 Dark"
-        GalleryItem23.Caption = "Visual Studio 2013 Light"
-        GalleryItem23.Hint = "Visual Studio 2013 Light"
-        GalleryItem23.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage22"), DevExpress.Utils.Svg.SvgImage)
-        GalleryItem23.Tag = "Visual Studio 2013 Light"
-        GalleryItem23.Value = "Visual Studio 2013 Light"
-        GalleryItem24.Caption = "Seven Classic"
-        GalleryItem24.Hint = "Seven Classic"
-        GalleryItem24.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage23"), DevExpress.Utils.Svg.SvgImage)
-        GalleryItem24.Tag = "Seven Classic"
-        GalleryItem24.Value = "Seven Classic"
-        GalleryItem25.Caption = "Visual Studio 2010"
-        GalleryItem25.Hint = "Visual Studio 2010"
-        GalleryItem25.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage24"), DevExpress.Utils.Svg.SvgImage)
-        GalleryItem25.Tag = "VS2010"
-        GalleryItem25.Value = "Visual Studio 2010"
-        GalleryItemGroup1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {GalleryItem1, GalleryItem2, GalleryItem3, GalleryItem4, GalleryItem5, GalleryItem6, GalleryItem7, GalleryItem8, GalleryItem9, GalleryItem10, GalleryItem11, GalleryItem12, GalleryItem13, GalleryItem14, GalleryItem15, GalleryItem16, GalleryItem17, GalleryItem18, GalleryItem19, GalleryItem20, GalleryItem21, GalleryItem22, GalleryItem23, GalleryItem24, GalleryItem25})
-        GalleryItemGroup2.Caption = "Bonus Skins"
-        GalleryItem26.Caption = "Black"
-        GalleryItem26.Hint = "Black"
-        GalleryItem26.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage"), System.Drawing.Image)
-        GalleryItem26.ImageOptions.Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
-        GalleryItem26.Tag = "Black"
-        GalleryItem26.Value = "Black"
-        GalleryItem27.Caption = "Blue"
-        GalleryItem27.Checked = True
-        GalleryItem27.Hint = "Blue"
-        GalleryItem27.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage1"), System.Drawing.Image)
-        GalleryItem27.ImageOptions.Image = CType(resources.GetObject("resource.Image1"), System.Drawing.Image)
-        GalleryItem27.Tag = "Blue"
-        GalleryItem27.Value = "Blue"
-        GalleryItem28.Caption = "Caramel"
-        GalleryItem28.Hint = "Caramel"
-        GalleryItem28.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage2"), System.Drawing.Image)
-        GalleryItem28.ImageOptions.Image = CType(resources.GetObject("resource.Image2"), System.Drawing.Image)
-        GalleryItem28.Tag = "Caramel"
-        GalleryItem28.Value = "Caramel"
-        GalleryItem29.Caption = "Coffee"
-        GalleryItem29.Hint = "Coffee"
-        GalleryItem29.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage3"), System.Drawing.Image)
-        GalleryItem29.ImageOptions.Image = CType(resources.GetObject("resource.Image3"), System.Drawing.Image)
-        GalleryItem29.Tag = "Coffee"
-        GalleryItem29.Value = "Coffee"
-        GalleryItem30.Caption = "Dark Side"
-        GalleryItem30.Hint = "Dark Side"
-        GalleryItem30.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage4"), System.Drawing.Image)
-        GalleryItem30.ImageOptions.Image = CType(resources.GetObject("resource.Image4"), System.Drawing.Image)
-        GalleryItem30.Tag = "Dark Side"
-        GalleryItem30.Value = "Dark Side"
-        GalleryItem31.Caption = "Darkroom"
-        GalleryItem31.Hint = "Darkroom"
-        GalleryItem31.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage5"), System.Drawing.Image)
-        GalleryItem31.ImageOptions.Image = CType(resources.GetObject("resource.Image5"), System.Drawing.Image)
-        GalleryItem31.Tag = "Darkroom"
-        GalleryItem31.Value = "Darkroom"
-        GalleryItem32.Caption = "Foggy"
-        GalleryItem32.Hint = "Foggy"
-        GalleryItem32.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage6"), System.Drawing.Image)
-        GalleryItem32.ImageOptions.Image = CType(resources.GetObject("resource.Image6"), System.Drawing.Image)
-        GalleryItem32.Tag = "Foggy"
-        GalleryItem32.Value = "Foggy"
-        GalleryItem33.Caption = "Glass Oceans"
-        GalleryItem33.Hint = "Glass Oceans"
-        GalleryItem33.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage7"), System.Drawing.Image)
-        GalleryItem33.ImageOptions.Image = CType(resources.GetObject("resource.Image7"), System.Drawing.Image)
-        GalleryItem33.Tag = "Glass Oceans"
-        GalleryItem33.Value = "Glass Oceans"
-        GalleryItem34.Caption = "High Contrast (classic)"
-        GalleryItem34.Hint = "High Contrast (classic)"
-        GalleryItem34.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage8"), System.Drawing.Image)
-        GalleryItem34.ImageOptions.Image = CType(resources.GetObject("resource.Image8"), System.Drawing.Image)
-        GalleryItem34.Tag = "High Contrast Classic"
-        GalleryItem34.Value = "High Contrast (classic)"
-        GalleryItem35.Caption = "iMaginary"
-        GalleryItem35.Hint = "iMaginary"
-        GalleryItem35.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage9"), System.Drawing.Image)
-        GalleryItem35.ImageOptions.Image = CType(resources.GetObject("resource.Image9"), System.Drawing.Image)
-        GalleryItem35.Tag = "iMaginary"
-        GalleryItem35.Value = "iMaginary"
-        GalleryItem36.Caption = "Lilian"
-        GalleryItem36.Hint = "Lilian"
-        GalleryItem36.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage10"), System.Drawing.Image)
-        GalleryItem36.ImageOptions.Image = CType(resources.GetObject("resource.Image10"), System.Drawing.Image)
-        GalleryItem36.Tag = "Lilian"
-        GalleryItem36.Value = "Lilian"
-        GalleryItem37.Caption = "Liquid Sky"
-        GalleryItem37.Hint = "Liquid Sky"
-        GalleryItem37.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage11"), System.Drawing.Image)
-        GalleryItem37.ImageOptions.Image = CType(resources.GetObject("resource.Image11"), System.Drawing.Image)
-        GalleryItem37.Tag = "Liquid Sky"
-        GalleryItem37.Value = "Liquid Sky"
-        GalleryItem38.Caption = "London Liquid Sky"
-        GalleryItem38.Hint = "London Liquid Sky"
-        GalleryItem38.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage12"), System.Drawing.Image)
-        GalleryItem38.ImageOptions.Image = CType(resources.GetObject("resource.Image12"), System.Drawing.Image)
-        GalleryItem38.Tag = "London Liquid Sky"
-        GalleryItem38.Value = "London Liquid Sky"
-        GalleryItem39.Caption = "Metropolis"
-        GalleryItem39.Hint = "Metropolis"
-        GalleryItem39.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage13"), System.Drawing.Image)
-        GalleryItem39.ImageOptions.Image = CType(resources.GetObject("resource.Image13"), System.Drawing.Image)
-        GalleryItem39.Tag = "Metropolis"
-        GalleryItem39.Value = "Metropolis"
-        GalleryItem40.Caption = "Metropolis Dark"
-        GalleryItem40.Hint = "Metropolis Dark"
-        GalleryItem40.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage14"), System.Drawing.Image)
-        GalleryItem40.ImageOptions.Image = CType(resources.GetObject("resource.Image14"), System.Drawing.Image)
-        GalleryItem40.Tag = "Metropolis Dark"
-        GalleryItem40.Value = "Metropolis Dark"
-        GalleryItem41.Caption = "Money Twins"
-        GalleryItem41.Hint = "Money Twins"
-        GalleryItem41.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage15"), System.Drawing.Image)
-        GalleryItem41.ImageOptions.Image = CType(resources.GetObject("resource.Image15"), System.Drawing.Image)
-        GalleryItem41.Tag = "Money Twins"
-        GalleryItem41.Value = "Money Twins"
-        GalleryItem42.Caption = "Office 2007 Black"
-        GalleryItem42.Hint = "Office 2007 Black"
-        GalleryItem42.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage16"), System.Drawing.Image)
-        GalleryItem42.ImageOptions.Image = CType(resources.GetObject("resource.Image16"), System.Drawing.Image)
-        GalleryItem42.Tag = "Office 2007 Black"
-        GalleryItem42.Value = "Office 2007 Black"
-        GalleryItem43.Caption = "Office 2007 Blue"
-        GalleryItem43.Hint = "Office 2007 Blue"
-        GalleryItem43.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage17"), System.Drawing.Image)
-        GalleryItem43.ImageOptions.Image = CType(resources.GetObject("resource.Image17"), System.Drawing.Image)
-        GalleryItem43.Tag = "Office 2007 Blue"
-        GalleryItem43.Value = "Office 2007 Blue"
-        GalleryItem44.Caption = "Office 2007 Green"
-        GalleryItem44.Hint = "Office 2007 Green"
-        GalleryItem44.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage18"), System.Drawing.Image)
-        GalleryItem44.ImageOptions.Image = CType(resources.GetObject("resource.Image18"), System.Drawing.Image)
-        GalleryItem44.Tag = "Office 2007 Green"
-        GalleryItem44.Value = "Office 2007 Green"
-        GalleryItem45.Caption = "Office 2007 Pink"
-        GalleryItem45.Hint = "Office 2007 Pink"
-        GalleryItem45.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage19"), System.Drawing.Image)
-        GalleryItem45.ImageOptions.Image = CType(resources.GetObject("resource.Image19"), System.Drawing.Image)
-        GalleryItem45.Tag = "Office 2007 Pink"
-        GalleryItem45.Value = "Office 2007 Pink"
-        GalleryItem46.Caption = "Office 2007 Silver"
-        GalleryItem46.Hint = "Office 2007 Silver"
-        GalleryItem46.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage20"), System.Drawing.Image)
-        GalleryItem46.ImageOptions.Image = CType(resources.GetObject("resource.Image20"), System.Drawing.Image)
-        GalleryItem46.Tag = "Office 2007 Silver"
-        GalleryItem46.Value = "Office 2007 Silver"
-        GalleryItem47.Caption = "Seven"
-        GalleryItem47.Hint = "Seven"
-        GalleryItem47.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage21"), System.Drawing.Image)
-        GalleryItem47.ImageOptions.Image = CType(resources.GetObject("resource.Image21"), System.Drawing.Image)
-        GalleryItem47.Tag = "Seven"
-        GalleryItem47.Value = "Seven"
-        GalleryItem48.Caption = "Sharp"
-        GalleryItem48.Hint = "Sharp"
-        GalleryItem48.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage22"), System.Drawing.Image)
-        GalleryItem48.ImageOptions.Image = CType(resources.GetObject("resource.Image22"), System.Drawing.Image)
-        GalleryItem48.Tag = "Sharp"
-        GalleryItem48.Value = "Sharp"
-        GalleryItem49.Caption = "Sharp Plus"
-        GalleryItem49.Hint = "Sharp Plus"
-        GalleryItem49.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage23"), System.Drawing.Image)
-        GalleryItem49.ImageOptions.Image = CType(resources.GetObject("resource.Image23"), System.Drawing.Image)
-        GalleryItem49.Tag = "Sharp Plus"
-        GalleryItem49.Value = "Sharp Plus"
-        GalleryItem50.Caption = "Stardust"
-        GalleryItem50.Hint = "Stardust"
-        GalleryItem50.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage24"), System.Drawing.Image)
-        GalleryItem50.ImageOptions.Image = CType(resources.GetObject("resource.Image24"), System.Drawing.Image)
-        GalleryItem50.Tag = "Stardust"
-        GalleryItem50.Value = "Stardust"
-        GalleryItem51.Caption = "The Asphalt World"
-        GalleryItem51.Hint = "The Asphalt World"
-        GalleryItem51.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage25"), System.Drawing.Image)
-        GalleryItem51.ImageOptions.Image = CType(resources.GetObject("resource.Image25"), System.Drawing.Image)
-        GalleryItem51.Tag = "The Asphalt World"
-        GalleryItem51.Value = "The Asphalt World"
-        GalleryItemGroup2.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {GalleryItem26, GalleryItem27, GalleryItem28, GalleryItem29, GalleryItem30, GalleryItem31, GalleryItem32, GalleryItem33, GalleryItem34, GalleryItem35, GalleryItem36, GalleryItem37, GalleryItem38, GalleryItem39, GalleryItem40, GalleryItem41, GalleryItem42, GalleryItem43, GalleryItem44, GalleryItem45, GalleryItem46, GalleryItem47, GalleryItem48, GalleryItem49, GalleryItem50, GalleryItem51})
-        GalleryItemGroup3.Caption = "Theme Skins"
-        GalleryItem52.Caption = "Pumpkin"
-        GalleryItem52.Hint = "Pumpkin"
-        GalleryItem52.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage26"), System.Drawing.Image)
-        GalleryItem52.ImageOptions.Image = CType(resources.GetObject("resource.Image26"), System.Drawing.Image)
-        GalleryItem52.Tag = "Pumpkin"
-        GalleryItem52.Value = "Pumpkin"
-        GalleryItem53.Caption = "Springtime"
-        GalleryItem53.Hint = "Springtime"
-        GalleryItem53.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage27"), System.Drawing.Image)
-        GalleryItem53.ImageOptions.Image = CType(resources.GetObject("resource.Image27"), System.Drawing.Image)
-        GalleryItem53.Tag = "Springtime"
-        GalleryItem53.Value = "Springtime"
-        GalleryItem54.Caption = "Summer"
-        GalleryItem54.Hint = "Summer"
-        GalleryItem54.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage28"), System.Drawing.Image)
-        GalleryItem54.ImageOptions.Image = CType(resources.GetObject("resource.Image28"), System.Drawing.Image)
-        GalleryItem54.Tag = "Summer 2008"
-        GalleryItem54.Value = "Summer"
-        GalleryItem55.Caption = "Valentine"
-        GalleryItem55.Hint = "Valentine"
-        GalleryItem55.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage29"), System.Drawing.Image)
-        GalleryItem55.ImageOptions.Image = CType(resources.GetObject("resource.Image29"), System.Drawing.Image)
-        GalleryItem55.Tag = "Valentine"
-        GalleryItem55.Value = "Valentine"
-        GalleryItem56.Caption = "Xmas (Blue)"
-        GalleryItem56.Hint = "Xmas (Blue)"
-        GalleryItem56.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage30"), System.Drawing.Image)
-        GalleryItem56.ImageOptions.Image = CType(resources.GetObject("resource.Image30"), System.Drawing.Image)
-        GalleryItem56.Tag = "Xmas 2008 Blue"
-        GalleryItem56.Value = "Xmas (Blue)"
-        GalleryItem57.Caption = "McSkin"
-        GalleryItem57.Hint = "McSkin"
-        GalleryItem57.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage31"), System.Drawing.Image)
-        GalleryItem57.ImageOptions.Image = CType(resources.GetObject("resource.Image31"), System.Drawing.Image)
-        GalleryItem57.Tag = "McSkin"
-        GalleryItem57.Value = "McSkin"
-        GalleryItem58.Caption = "Blueprint"
-        GalleryItem58.Hint = "Blueprint"
-        GalleryItem58.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage32"), System.Drawing.Image)
-        GalleryItem58.ImageOptions.Image = CType(resources.GetObject("resource.Image32"), System.Drawing.Image)
-        GalleryItem58.Tag = "Blueprint"
-        GalleryItem58.Value = "Blueprint"
-        GalleryItem59.Caption = "Whiteprint"
-        GalleryItem59.Hint = "Whiteprint"
-        GalleryItem59.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage33"), System.Drawing.Image)
-        GalleryItem59.ImageOptions.Image = CType(resources.GetObject("resource.Image33"), System.Drawing.Image)
-        GalleryItem59.Tag = "Whiteprint"
-        GalleryItem59.Value = "Whiteprint"
-        GalleryItemGroup3.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {GalleryItem52, GalleryItem53, GalleryItem54, GalleryItem55, GalleryItem56, GalleryItem57, GalleryItem58, GalleryItem59})
-        GalleryItemGroup4.Caption = "Custom Skins"
-        GalleryItemGroup4.Visible = False
-        Me.DashboardSkinsBarItem1.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {GalleryItemGroup1, GalleryItemGroup2, GalleryItemGroup3, GalleryItemGroup4})
+        GalleryItemGroup7.Caption = "Standard Skins"
+        GalleryItem61.Caption = "Basic"
+        GalleryItem61.Checked = True
+        GalleryItem61.Hint = "Basic"
+        GalleryItem61.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        GalleryItem61.Tag = "Basic"
+        GalleryItem61.Value = "Basic"
+        GalleryItem62.Caption = "The Bezier"
+        GalleryItem62.Hint = "The Bezier"
+        GalleryItem62.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage1"), DevExpress.Utils.Svg.SvgImage)
+        GalleryItem62.Tag = "The Bezier"
+        GalleryItem62.Value = "The Bezier"
+        GalleryItem63.Caption = "WXI"
+        GalleryItem63.Hint = "WXI"
+        GalleryItem63.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage2"), DevExpress.Utils.Svg.SvgImage)
+        GalleryItem63.Tag = "WXI"
+        GalleryItem63.Value = "WXI"
+        GalleryItem64.Caption = "WXI Compact"
+        GalleryItem64.Hint = "WXI Compact"
+        GalleryItem64.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage3"), DevExpress.Utils.Svg.SvgImage)
+        GalleryItem64.Tag = "WXI"
+        GalleryItem64.Value = "WXI Compact"
+        GalleryItem65.Caption = "Office 2019 Colorful"
+        GalleryItem65.Hint = "Office 2019 Colorful"
+        GalleryItem65.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage4"), DevExpress.Utils.Svg.SvgImage)
+        GalleryItem65.Tag = "Office 2019 Colorful"
+        GalleryItem65.Value = "Office 2019 Colorful"
+        GalleryItem66.Caption = "Office 2019 Black"
+        GalleryItem66.Hint = "Office 2019 Black"
+        GalleryItem66.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage5"), DevExpress.Utils.Svg.SvgImage)
+        GalleryItem66.Tag = "Office 2019 Black"
+        GalleryItem66.Value = "Office 2019 Black"
+        GalleryItem67.Caption = "Office 2019 White"
+        GalleryItem67.Hint = "Office 2019 White"
+        GalleryItem67.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage6"), DevExpress.Utils.Svg.SvgImage)
+        GalleryItem67.Tag = "Office 2019 White"
+        GalleryItem67.Value = "Office 2019 White"
+        GalleryItem68.Caption = "Office 2019 Dark"
+        GalleryItem68.Hint = "Office 2019 Dark"
+        GalleryItem68.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage7"), DevExpress.Utils.Svg.SvgImage)
+        GalleryItem68.Tag = "Office 2019 Dark Gray"
+        GalleryItem68.Value = "Office 2019 Dark"
+        GalleryItem69.Caption = "High Contrast"
+        GalleryItem69.Hint = "High Contrast"
+        GalleryItem69.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage8"), DevExpress.Utils.Svg.SvgImage)
+        GalleryItem69.Tag = "High Contrast"
+        GalleryItem69.Value = "High Contrast"
+        GalleryItem70.Caption = "DevExpress Style"
+        GalleryItem70.Hint = "DevExpress Style"
+        GalleryItem70.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage9"), DevExpress.Utils.Svg.SvgImage)
+        GalleryItem70.Tag = "DevExpress Style"
+        GalleryItem70.Value = "DevExpress Style"
+        GalleryItem71.Caption = "DevExpress Dark Style"
+        GalleryItem71.Hint = "DevExpress Dark Style"
+        GalleryItem71.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage10"), DevExpress.Utils.Svg.SvgImage)
+        GalleryItem71.Tag = "DevExpress Dark Style"
+        GalleryItem71.Value = "DevExpress Dark Style"
+        GalleryItem72.Caption = "Office 2016 Colorful"
+        GalleryItem72.Hint = "Office 2016 Colorful"
+        GalleryItem72.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage11"), DevExpress.Utils.Svg.SvgImage)
+        GalleryItem72.Tag = "Office 2016 Colorful"
+        GalleryItem72.Value = "Office 2016 Colorful"
+        GalleryItem73.Caption = "Office 2016 Dark"
+        GalleryItem73.Hint = "Office 2016 Dark"
+        GalleryItem73.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage12"), DevExpress.Utils.Svg.SvgImage)
+        GalleryItem73.Tag = "Office 2016 Dark"
+        GalleryItem73.Value = "Office 2016 Dark"
+        GalleryItem74.Caption = "Office 2016 Black"
+        GalleryItem74.Hint = "Office 2016 Black"
+        GalleryItem74.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage13"), DevExpress.Utils.Svg.SvgImage)
+        GalleryItem74.Tag = "Office 2016 Black"
+        GalleryItem74.Value = "Office 2016 Black"
+        GalleryItem75.Caption = "Office 2013 White"
+        GalleryItem75.Hint = "Office 2013 White"
+        GalleryItem75.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage14"), DevExpress.Utils.Svg.SvgImage)
+        GalleryItem75.Tag = "Office 2013"
+        GalleryItem75.Value = "Office 2013 White"
+        GalleryItem76.Caption = "Office 2013 Dark Gray"
+        GalleryItem76.Hint = "Office 2013 Dark Gray"
+        GalleryItem76.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage15"), DevExpress.Utils.Svg.SvgImage)
+        GalleryItem76.Tag = "Office 2013 Dark Gray"
+        GalleryItem76.Value = "Office 2013 Dark Gray"
+        GalleryItem77.Caption = "Office 2013 Light Gray"
+        GalleryItem77.Hint = "Office 2013 Light Gray"
+        GalleryItem77.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage16"), DevExpress.Utils.Svg.SvgImage)
+        GalleryItem77.Tag = "Office 2013 Light Gray"
+        GalleryItem77.Value = "Office 2013 Light Gray"
+        GalleryItem78.Caption = "Office 2010 Blue"
+        GalleryItem78.Hint = "Office 2010 Blue"
+        GalleryItem78.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage17"), DevExpress.Utils.Svg.SvgImage)
+        GalleryItem78.Tag = "Office 2010 Blue"
+        GalleryItem78.Value = "Office 2010 Blue"
+        GalleryItem79.Caption = "Office 2010 Black"
+        GalleryItem79.Hint = "Office 2010 Black"
+        GalleryItem79.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage18"), DevExpress.Utils.Svg.SvgImage)
+        GalleryItem79.Tag = "Office 2010 Black"
+        GalleryItem79.Value = "Office 2010 Black"
+        GalleryItem80.Caption = "Office 2010 Silver"
+        GalleryItem80.Hint = "Office 2010 Silver"
+        GalleryItem80.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage19"), DevExpress.Utils.Svg.SvgImage)
+        GalleryItem80.Tag = "Office 2010 Silver"
+        GalleryItem80.Value = "Office 2010 Silver"
+        GalleryItem81.Caption = "Visual Studio 2013 Blue"
+        GalleryItem81.Hint = "Visual Studio 2013 Blue"
+        GalleryItem81.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage20"), DevExpress.Utils.Svg.SvgImage)
+        GalleryItem81.Tag = "Visual Studio 2013 Blue"
+        GalleryItem81.Value = "Visual Studio 2013 Blue"
+        GalleryItem82.Caption = "Visual Studio 2013 Dark"
+        GalleryItem82.Hint = "Visual Studio 2013 Dark"
+        GalleryItem82.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage21"), DevExpress.Utils.Svg.SvgImage)
+        GalleryItem82.Tag = "Visual Studio 2013 Dark"
+        GalleryItem82.Value = "Visual Studio 2013 Dark"
+        GalleryItem83.Caption = "Visual Studio 2013 Light"
+        GalleryItem83.Hint = "Visual Studio 2013 Light"
+        GalleryItem83.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage22"), DevExpress.Utils.Svg.SvgImage)
+        GalleryItem83.Tag = "Visual Studio 2013 Light"
+        GalleryItem83.Value = "Visual Studio 2013 Light"
+        GalleryItem84.Caption = "Seven Classic"
+        GalleryItem84.Hint = "Seven Classic"
+        GalleryItem84.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage23"), DevExpress.Utils.Svg.SvgImage)
+        GalleryItem84.Tag = "Seven Classic"
+        GalleryItem84.Value = "Seven Classic"
+        GalleryItem85.Caption = "Visual Studio 2010"
+        GalleryItem85.Hint = "Visual Studio 2010"
+        GalleryItem85.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage24"), DevExpress.Utils.Svg.SvgImage)
+        GalleryItem85.Tag = "VS2010"
+        GalleryItem85.Value = "Visual Studio 2010"
+        GalleryItemGroup7.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {GalleryItem61, GalleryItem62, GalleryItem63, GalleryItem64, GalleryItem65, GalleryItem66, GalleryItem67, GalleryItem68, GalleryItem69, GalleryItem70, GalleryItem71, GalleryItem72, GalleryItem73, GalleryItem74, GalleryItem75, GalleryItem76, GalleryItem77, GalleryItem78, GalleryItem79, GalleryItem80, GalleryItem81, GalleryItem82, GalleryItem83, GalleryItem84, GalleryItem85})
+        GalleryItemGroup8.Caption = "Bonus Skins"
+        GalleryItem86.Caption = "Black"
+        GalleryItem86.Hint = "Black"
+        GalleryItem86.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage"), System.Drawing.Image)
+        GalleryItem86.ImageOptions.Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
+        GalleryItem86.Tag = "Black"
+        GalleryItem86.Value = "Black"
+        GalleryItem87.Caption = "Blue"
+        GalleryItem87.Hint = "Blue"
+        GalleryItem87.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage1"), System.Drawing.Image)
+        GalleryItem87.ImageOptions.Image = CType(resources.GetObject("resource.Image1"), System.Drawing.Image)
+        GalleryItem87.Tag = "Blue"
+        GalleryItem87.Value = "Blue"
+        GalleryItem88.Caption = "Caramel"
+        GalleryItem88.Hint = "Caramel"
+        GalleryItem88.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage2"), System.Drawing.Image)
+        GalleryItem88.ImageOptions.Image = CType(resources.GetObject("resource.Image2"), System.Drawing.Image)
+        GalleryItem88.Tag = "Caramel"
+        GalleryItem88.Value = "Caramel"
+        GalleryItem89.Caption = "Coffee"
+        GalleryItem89.Hint = "Coffee"
+        GalleryItem89.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage3"), System.Drawing.Image)
+        GalleryItem89.ImageOptions.Image = CType(resources.GetObject("resource.Image3"), System.Drawing.Image)
+        GalleryItem89.Tag = "Coffee"
+        GalleryItem89.Value = "Coffee"
+        GalleryItem90.Caption = "Dark Side"
+        GalleryItem90.Hint = "Dark Side"
+        GalleryItem90.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage4"), System.Drawing.Image)
+        GalleryItem90.ImageOptions.Image = CType(resources.GetObject("resource.Image4"), System.Drawing.Image)
+        GalleryItem90.Tag = "Dark Side"
+        GalleryItem90.Value = "Dark Side"
+        GalleryItem91.Caption = "Darkroom"
+        GalleryItem91.Hint = "Darkroom"
+        GalleryItem91.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage5"), System.Drawing.Image)
+        GalleryItem91.ImageOptions.Image = CType(resources.GetObject("resource.Image5"), System.Drawing.Image)
+        GalleryItem91.Tag = "Darkroom"
+        GalleryItem91.Value = "Darkroom"
+        GalleryItem92.Caption = "Foggy"
+        GalleryItem92.Hint = "Foggy"
+        GalleryItem92.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage6"), System.Drawing.Image)
+        GalleryItem92.ImageOptions.Image = CType(resources.GetObject("resource.Image6"), System.Drawing.Image)
+        GalleryItem92.Tag = "Foggy"
+        GalleryItem92.Value = "Foggy"
+        GalleryItem93.Caption = "Glass Oceans"
+        GalleryItem93.Hint = "Glass Oceans"
+        GalleryItem93.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage7"), System.Drawing.Image)
+        GalleryItem93.ImageOptions.Image = CType(resources.GetObject("resource.Image7"), System.Drawing.Image)
+        GalleryItem93.Tag = "Glass Oceans"
+        GalleryItem93.Value = "Glass Oceans"
+        GalleryItem94.Caption = "High Contrast (classic)"
+        GalleryItem94.Hint = "High Contrast (classic)"
+        GalleryItem94.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage8"), System.Drawing.Image)
+        GalleryItem94.ImageOptions.Image = CType(resources.GetObject("resource.Image8"), System.Drawing.Image)
+        GalleryItem94.Tag = "High Contrast Classic"
+        GalleryItem94.Value = "High Contrast (classic)"
+        GalleryItem95.Caption = "iMaginary"
+        GalleryItem95.Hint = "iMaginary"
+        GalleryItem95.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage9"), System.Drawing.Image)
+        GalleryItem95.ImageOptions.Image = CType(resources.GetObject("resource.Image9"), System.Drawing.Image)
+        GalleryItem95.Tag = "iMaginary"
+        GalleryItem95.Value = "iMaginary"
+        GalleryItem96.Caption = "Lilian"
+        GalleryItem96.Hint = "Lilian"
+        GalleryItem96.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage10"), System.Drawing.Image)
+        GalleryItem96.ImageOptions.Image = CType(resources.GetObject("resource.Image10"), System.Drawing.Image)
+        GalleryItem96.Tag = "Lilian"
+        GalleryItem96.Value = "Lilian"
+        GalleryItem97.Caption = "Liquid Sky"
+        GalleryItem97.Hint = "Liquid Sky"
+        GalleryItem97.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage11"), System.Drawing.Image)
+        GalleryItem97.ImageOptions.Image = CType(resources.GetObject("resource.Image11"), System.Drawing.Image)
+        GalleryItem97.Tag = "Liquid Sky"
+        GalleryItem97.Value = "Liquid Sky"
+        GalleryItem98.Caption = "London Liquid Sky"
+        GalleryItem98.Hint = "London Liquid Sky"
+        GalleryItem98.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage12"), System.Drawing.Image)
+        GalleryItem98.ImageOptions.Image = CType(resources.GetObject("resource.Image12"), System.Drawing.Image)
+        GalleryItem98.Tag = "London Liquid Sky"
+        GalleryItem98.Value = "London Liquid Sky"
+        GalleryItem99.Caption = "Metropolis"
+        GalleryItem99.Hint = "Metropolis"
+        GalleryItem99.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage13"), System.Drawing.Image)
+        GalleryItem99.ImageOptions.Image = CType(resources.GetObject("resource.Image13"), System.Drawing.Image)
+        GalleryItem99.Tag = "Metropolis"
+        GalleryItem99.Value = "Metropolis"
+        GalleryItem100.Caption = "Metropolis Dark"
+        GalleryItem100.Hint = "Metropolis Dark"
+        GalleryItem100.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage14"), System.Drawing.Image)
+        GalleryItem100.ImageOptions.Image = CType(resources.GetObject("resource.Image14"), System.Drawing.Image)
+        GalleryItem100.Tag = "Metropolis Dark"
+        GalleryItem100.Value = "Metropolis Dark"
+        GalleryItem101.Caption = "Money Twins"
+        GalleryItem101.Hint = "Money Twins"
+        GalleryItem101.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage15"), System.Drawing.Image)
+        GalleryItem101.ImageOptions.Image = CType(resources.GetObject("resource.Image15"), System.Drawing.Image)
+        GalleryItem101.Tag = "Money Twins"
+        GalleryItem101.Value = "Money Twins"
+        GalleryItem102.Caption = "Office 2007 Black"
+        GalleryItem102.Hint = "Office 2007 Black"
+        GalleryItem102.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage16"), System.Drawing.Image)
+        GalleryItem102.ImageOptions.Image = CType(resources.GetObject("resource.Image16"), System.Drawing.Image)
+        GalleryItem102.Tag = "Office 2007 Black"
+        GalleryItem102.Value = "Office 2007 Black"
+        GalleryItem103.Caption = "Office 2007 Blue"
+        GalleryItem103.Hint = "Office 2007 Blue"
+        GalleryItem103.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage17"), System.Drawing.Image)
+        GalleryItem103.ImageOptions.Image = CType(resources.GetObject("resource.Image17"), System.Drawing.Image)
+        GalleryItem103.Tag = "Office 2007 Blue"
+        GalleryItem103.Value = "Office 2007 Blue"
+        GalleryItem104.Caption = "Office 2007 Green"
+        GalleryItem104.Hint = "Office 2007 Green"
+        GalleryItem104.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage18"), System.Drawing.Image)
+        GalleryItem104.ImageOptions.Image = CType(resources.GetObject("resource.Image18"), System.Drawing.Image)
+        GalleryItem104.Tag = "Office 2007 Green"
+        GalleryItem104.Value = "Office 2007 Green"
+        GalleryItem105.Caption = "Office 2007 Pink"
+        GalleryItem105.Hint = "Office 2007 Pink"
+        GalleryItem105.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage19"), System.Drawing.Image)
+        GalleryItem105.ImageOptions.Image = CType(resources.GetObject("resource.Image19"), System.Drawing.Image)
+        GalleryItem105.Tag = "Office 2007 Pink"
+        GalleryItem105.Value = "Office 2007 Pink"
+        GalleryItem106.Caption = "Office 2007 Silver"
+        GalleryItem106.Hint = "Office 2007 Silver"
+        GalleryItem106.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage20"), System.Drawing.Image)
+        GalleryItem106.ImageOptions.Image = CType(resources.GetObject("resource.Image20"), System.Drawing.Image)
+        GalleryItem106.Tag = "Office 2007 Silver"
+        GalleryItem106.Value = "Office 2007 Silver"
+        GalleryItem107.Caption = "Seven"
+        GalleryItem107.Hint = "Seven"
+        GalleryItem107.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage21"), System.Drawing.Image)
+        GalleryItem107.ImageOptions.Image = CType(resources.GetObject("resource.Image21"), System.Drawing.Image)
+        GalleryItem107.Tag = "Seven"
+        GalleryItem107.Value = "Seven"
+        GalleryItem108.Caption = "Sharp"
+        GalleryItem108.Hint = "Sharp"
+        GalleryItem108.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage22"), System.Drawing.Image)
+        GalleryItem108.ImageOptions.Image = CType(resources.GetObject("resource.Image22"), System.Drawing.Image)
+        GalleryItem108.Tag = "Sharp"
+        GalleryItem108.Value = "Sharp"
+        GalleryItem109.Caption = "Sharp Plus"
+        GalleryItem109.Hint = "Sharp Plus"
+        GalleryItem109.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage23"), System.Drawing.Image)
+        GalleryItem109.ImageOptions.Image = CType(resources.GetObject("resource.Image23"), System.Drawing.Image)
+        GalleryItem109.Tag = "Sharp Plus"
+        GalleryItem109.Value = "Sharp Plus"
+        GalleryItem110.Caption = "Stardust"
+        GalleryItem110.Hint = "Stardust"
+        GalleryItem110.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage24"), System.Drawing.Image)
+        GalleryItem110.ImageOptions.Image = CType(resources.GetObject("resource.Image24"), System.Drawing.Image)
+        GalleryItem110.Tag = "Stardust"
+        GalleryItem110.Value = "Stardust"
+        GalleryItem111.Caption = "The Asphalt World"
+        GalleryItem111.Hint = "The Asphalt World"
+        GalleryItem111.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage25"), System.Drawing.Image)
+        GalleryItem111.ImageOptions.Image = CType(resources.GetObject("resource.Image25"), System.Drawing.Image)
+        GalleryItem111.Tag = "The Asphalt World"
+        GalleryItem111.Value = "The Asphalt World"
+        GalleryItemGroup8.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {GalleryItem86, GalleryItem87, GalleryItem88, GalleryItem89, GalleryItem90, GalleryItem91, GalleryItem92, GalleryItem93, GalleryItem94, GalleryItem95, GalleryItem96, GalleryItem97, GalleryItem98, GalleryItem99, GalleryItem100, GalleryItem101, GalleryItem102, GalleryItem103, GalleryItem104, GalleryItem105, GalleryItem106, GalleryItem107, GalleryItem108, GalleryItem109, GalleryItem110, GalleryItem111})
+        GalleryItemGroup9.Caption = "Theme Skins"
+        GalleryItem112.Caption = "Pumpkin"
+        GalleryItem112.Hint = "Pumpkin"
+        GalleryItem112.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage26"), System.Drawing.Image)
+        GalleryItem112.ImageOptions.Image = CType(resources.GetObject("resource.Image26"), System.Drawing.Image)
+        GalleryItem112.Tag = "Pumpkin"
+        GalleryItem112.Value = "Pumpkin"
+        GalleryItem113.Caption = "Springtime"
+        GalleryItem113.Hint = "Springtime"
+        GalleryItem113.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage27"), System.Drawing.Image)
+        GalleryItem113.ImageOptions.Image = CType(resources.GetObject("resource.Image27"), System.Drawing.Image)
+        GalleryItem113.Tag = "Springtime"
+        GalleryItem113.Value = "Springtime"
+        GalleryItem114.Caption = "Summer"
+        GalleryItem114.Hint = "Summer"
+        GalleryItem114.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage28"), System.Drawing.Image)
+        GalleryItem114.ImageOptions.Image = CType(resources.GetObject("resource.Image28"), System.Drawing.Image)
+        GalleryItem114.Tag = "Summer 2008"
+        GalleryItem114.Value = "Summer"
+        GalleryItem115.Caption = "Valentine"
+        GalleryItem115.Hint = "Valentine"
+        GalleryItem115.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage29"), System.Drawing.Image)
+        GalleryItem115.ImageOptions.Image = CType(resources.GetObject("resource.Image29"), System.Drawing.Image)
+        GalleryItem115.Tag = "Valentine"
+        GalleryItem115.Value = "Valentine"
+        GalleryItem116.Caption = "Xmas (Blue)"
+        GalleryItem116.Hint = "Xmas (Blue)"
+        GalleryItem116.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage30"), System.Drawing.Image)
+        GalleryItem116.ImageOptions.Image = CType(resources.GetObject("resource.Image30"), System.Drawing.Image)
+        GalleryItem116.Tag = "Xmas 2008 Blue"
+        GalleryItem116.Value = "Xmas (Blue)"
+        GalleryItem117.Caption = "McSkin"
+        GalleryItem117.Hint = "McSkin"
+        GalleryItem117.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage31"), System.Drawing.Image)
+        GalleryItem117.ImageOptions.Image = CType(resources.GetObject("resource.Image31"), System.Drawing.Image)
+        GalleryItem117.Tag = "McSkin"
+        GalleryItem117.Value = "McSkin"
+        GalleryItem118.Caption = "Blueprint"
+        GalleryItem118.Hint = "Blueprint"
+        GalleryItem118.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage32"), System.Drawing.Image)
+        GalleryItem118.ImageOptions.Image = CType(resources.GetObject("resource.Image32"), System.Drawing.Image)
+        GalleryItem118.Tag = "Blueprint"
+        GalleryItem118.Value = "Blueprint"
+        GalleryItem119.Caption = "Whiteprint"
+        GalleryItem119.Hint = "Whiteprint"
+        GalleryItem119.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage33"), System.Drawing.Image)
+        GalleryItem119.ImageOptions.Image = CType(resources.GetObject("resource.Image33"), System.Drawing.Image)
+        GalleryItem119.Tag = "Whiteprint"
+        GalleryItem119.Value = "Whiteprint"
+        GalleryItemGroup9.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {GalleryItem112, GalleryItem113, GalleryItem114, GalleryItem115, GalleryItem116, GalleryItem117, GalleryItem118, GalleryItem119})
+        GalleryItemGroup10.Caption = "Custom Skins"
+        GalleryItem120.Caption = "DevExpress Design"
+        GalleryItem120.Hint = "DevExpress Design"
+        GalleryItem120.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage25"), DevExpress.Utils.Svg.SvgImage)
+        GalleryItem120.Tag = "DevExpress Design"
+        GalleryItem120.Value = "DevExpress Design"
+        GalleryItemGroup10.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {GalleryItem120})
+        Me.DashboardSkinsBarItem1.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {GalleryItemGroup7, GalleryItemGroup8, GalleryItemGroup9, GalleryItemGroup10})
         Me.DashboardSkinsBarItem1.Gallery.ImageSize = New System.Drawing.Size(16, 16)
         Me.DashboardSkinsBarItem1.Gallery.ItemCheckMode = DevExpress.XtraBars.Ribbon.Gallery.ItemCheckMode.SingleRadio
         Me.DashboardSkinsBarItem1.Gallery.ItemImageLayout = DevExpress.Utils.Drawing.ImageLayoutMode.Squeeze
         Me.DashboardSkinsBarItem1.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Top
-        SkinPaddingEdges1.Left = 8
-        SkinPaddingEdges1.Right = 8
-        Me.DashboardSkinsBarItem1.Gallery.ItemImagePadding = SkinPaddingEdges1
-        Me.DashboardSkinsBarItem1.Id = 326
-        Me.DashboardSkinsBarItem1.ImageOptions.Image = CType(resources.GetObject("DashboardSkinsBarItem1.ImageOptions.Image"), System.Drawing.Image)
-        Me.DashboardSkinsBarItem1.ImageOptions.LargeImage = CType(resources.GetObject("DashboardSkinsBarItem1.ImageOptions.LargeImage"), System.Drawing.Image)
+        SkinPaddingEdges2.Left = 8
+        SkinPaddingEdges2.Right = 8
+        Me.DashboardSkinsBarItem1.Gallery.ItemImagePadding = SkinPaddingEdges2
+        Me.DashboardSkinsBarItem1.Id = 103
+        Me.DashboardSkinsBarItem1.ImageOptions.SvgImage = CType(resources.GetObject("DashboardSkinsBarItem1.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
         Me.DashboardSkinsBarItem1.Name = "DashboardSkinsBarItem1"
         Me.DashboardSkinsBarItem1.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
         '
         'DashboardSkinDropDownButtonItem1
         '
-        Me.DashboardSkinDropDownButtonItem1.Id = 327
+        Me.DashboardSkinDropDownButtonItem1.Id = 104
         Me.DashboardSkinDropDownButtonItem1.Name = "DashboardSkinDropDownButtonItem1"
         '
         'DashboardSkinPaletteRibbonGalleryBarItem1
         '
-        Me.DashboardSkinPaletteRibbonGalleryBarItem1.Id = 328
+        Me.DashboardSkinPaletteRibbonGalleryBarItem1.Id = 105
         Me.DashboardSkinPaletteRibbonGalleryBarItem1.Name = "DashboardSkinPaletteRibbonGalleryBarItem1"
         '
         'EditFilterBarItem1
         '
-        Me.EditFilterBarItem1.Id = 329
+        Me.EditFilterBarItem1.Id = 106
         Me.EditFilterBarItem1.Name = "EditFilterBarItem1"
         '
         'ClearFilterBarItem1
         '
-        Me.ClearFilterBarItem1.Id = 330
+        Me.ClearFilterBarItem1.Id = 107
         Me.ClearFilterBarItem1.Name = "ClearFilterBarItem1"
         '
         'EditVisibleDataFilterBarItem1
         '
-        Me.EditVisibleDataFilterBarItem1.Id = 331
+        Me.EditVisibleDataFilterBarItem1.Id = 108
         Me.EditVisibleDataFilterBarItem1.Name = "EditVisibleDataFilterBarItem1"
         '
         'IgnoreMasterFiltersBarItem1
         '
-        Me.IgnoreMasterFiltersBarItem1.Id = 332
+        Me.IgnoreMasterFiltersBarItem1.Id = 109
         Me.IgnoreMasterFiltersBarItem1.Name = "IgnoreMasterFiltersBarItem1"
         '
         'ShowItemCaptionBarItem1
         '
-        Me.ShowItemCaptionBarItem1.Id = 333
+        Me.ShowItemCaptionBarItem1.Id = 110
         Me.ShowItemCaptionBarItem1.Name = "ShowItemCaptionBarItem1"
         '
         'EditItemNamesBarItem1
         '
-        Me.EditItemNamesBarItem1.Id = 334
+        Me.EditItemNamesBarItem1.Id = 111
         Me.EditItemNamesBarItem1.Name = "EditItemNamesBarItem1"
         '
         'PivotInitialStateBarItem1
         '
-        Me.PivotInitialStateBarItem1.Id = 335
+        Me.PivotInitialStateBarItem1.Id = 112
         Me.PivotInitialStateBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.PivotAutoExpandColumnBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PivotAutoExpandRowBarItem1)})
         Me.PivotInitialStateBarItem1.Name = "PivotInitialStateBarItem1"
         Me.PivotInitialStateBarItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu
         '
         'PivotAutoExpandColumnBarItem1
         '
-        Me.PivotAutoExpandColumnBarItem1.Id = 336
+        Me.PivotAutoExpandColumnBarItem1.Id = 113
         Me.PivotAutoExpandColumnBarItem1.Name = "PivotAutoExpandColumnBarItem1"
         '
         'PivotAutoExpandRowBarItem1
         '
-        Me.PivotAutoExpandRowBarItem1.Id = 337
+        Me.PivotAutoExpandRowBarItem1.Id = 114
         Me.PivotAutoExpandRowBarItem1.Name = "PivotAutoExpandRowBarItem1"
         '
         'PivotShowTotalsBarItem1
         '
-        Me.PivotShowTotalsBarItem1.Id = 338
+        Me.PivotShowTotalsBarItem1.Id = 115
         Me.PivotShowTotalsBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.PivotShowColumnTotalsBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PivotShowRowTotalsBarItem1)})
         Me.PivotShowTotalsBarItem1.Name = "PivotShowTotalsBarItem1"
         Me.PivotShowTotalsBarItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu
         '
         'PivotShowColumnTotalsBarItem1
         '
-        Me.PivotShowColumnTotalsBarItem1.Id = 339
+        Me.PivotShowColumnTotalsBarItem1.Id = 116
         Me.PivotShowColumnTotalsBarItem1.Name = "PivotShowColumnTotalsBarItem1"
         '
         'PivotShowRowTotalsBarItem1
         '
-        Me.PivotShowRowTotalsBarItem1.Id = 340
+        Me.PivotShowRowTotalsBarItem1.Id = 117
         Me.PivotShowRowTotalsBarItem1.Name = "PivotShowRowTotalsBarItem1"
         '
         'PivotShowGrandTotalsBarItem1
         '
-        Me.PivotShowGrandTotalsBarItem1.Id = 341
+        Me.PivotShowGrandTotalsBarItem1.Id = 118
         Me.PivotShowGrandTotalsBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.PivotShowColumnGrandTotalsBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PivotShowRowGrandTotalsBarItem1)})
         Me.PivotShowGrandTotalsBarItem1.Name = "PivotShowGrandTotalsBarItem1"
         Me.PivotShowGrandTotalsBarItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu
         '
         'PivotShowColumnGrandTotalsBarItem1
         '
-        Me.PivotShowColumnGrandTotalsBarItem1.Id = 342
+        Me.PivotShowColumnGrandTotalsBarItem1.Id = 119
         Me.PivotShowColumnGrandTotalsBarItem1.Name = "PivotShowColumnGrandTotalsBarItem1"
         '
         'PivotShowRowGrandTotalsBarItem1
         '
-        Me.PivotShowRowGrandTotalsBarItem1.Id = 343
+        Me.PivotShowRowGrandTotalsBarItem1.Id = 120
         Me.PivotShowRowGrandTotalsBarItem1.Name = "PivotShowRowGrandTotalsBarItem1"
         '
         'PivotLayoutTypeBarItem1
         '
-        Me.PivotLayoutTypeBarItem1.Id = 344
+        Me.PivotLayoutTypeBarItem1.Id = 121
         Me.PivotLayoutTypeBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.PivotLayoutTypeCompactBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PivotLayoutTypeTabularBarItem1)})
         Me.PivotLayoutTypeBarItem1.Name = "PivotLayoutTypeBarItem1"
         Me.PivotLayoutTypeBarItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu
         '
         'PivotLayoutTypeCompactBarItem1
         '
-        Me.PivotLayoutTypeCompactBarItem1.Id = 345
+        Me.PivotLayoutTypeCompactBarItem1.Id = 122
         Me.PivotLayoutTypeCompactBarItem1.Name = "PivotLayoutTypeCompactBarItem1"
         '
         'PivotLayoutTypeTabularBarItem1
         '
-        Me.PivotLayoutTypeTabularBarItem1.Id = 346
+        Me.PivotLayoutTypeTabularBarItem1.Id = 123
         Me.PivotLayoutTypeTabularBarItem1.Name = "PivotLayoutTypeTabularBarItem1"
         '
         'PivotRowTotalsPositionBarItem1
         '
-        Me.PivotRowTotalsPositionBarItem1.Id = 347
+        Me.PivotRowTotalsPositionBarItem1.Id = 124
         Me.PivotRowTotalsPositionBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.PivotRowTotalsPositionTopBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PivotRowTotalsPositionBottomBarItem1)})
         Me.PivotRowTotalsPositionBarItem1.Name = "PivotRowTotalsPositionBarItem1"
         Me.PivotRowTotalsPositionBarItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu
         '
         'PivotRowTotalsPositionTopBarItem1
         '
-        Me.PivotRowTotalsPositionTopBarItem1.Id = 348
+        Me.PivotRowTotalsPositionTopBarItem1.Id = 125
         Me.PivotRowTotalsPositionTopBarItem1.Name = "PivotRowTotalsPositionTopBarItem1"
         '
         'PivotRowTotalsPositionBottomBarItem1
         '
-        Me.PivotRowTotalsPositionBottomBarItem1.Id = 349
+        Me.PivotRowTotalsPositionBottomBarItem1.Id = 126
         Me.PivotRowTotalsPositionBottomBarItem1.Name = "PivotRowTotalsPositionBottomBarItem1"
         '
         'PivotColumnTotalsPositionBarItem1
         '
-        Me.PivotColumnTotalsPositionBarItem1.Id = 350
+        Me.PivotColumnTotalsPositionBarItem1.Id = 127
         Me.PivotColumnTotalsPositionBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.PivotColumnTotalsPositionNearBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PivotColumnTotalsPositionFarBarItem1)})
         Me.PivotColumnTotalsPositionBarItem1.Name = "PivotColumnTotalsPositionBarItem1"
         Me.PivotColumnTotalsPositionBarItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu
         '
         'PivotColumnTotalsPositionNearBarItem1
         '
-        Me.PivotColumnTotalsPositionNearBarItem1.Id = 351
+        Me.PivotColumnTotalsPositionNearBarItem1.Id = 128
         Me.PivotColumnTotalsPositionNearBarItem1.Name = "PivotColumnTotalsPositionNearBarItem1"
         '
         'PivotColumnTotalsPositionFarBarItem1
         '
-        Me.PivotColumnTotalsPositionFarBarItem1.Id = 352
+        Me.PivotColumnTotalsPositionFarBarItem1.Id = 129
         Me.PivotColumnTotalsPositionFarBarItem1.Name = "PivotColumnTotalsPositionFarBarItem1"
         '
         'PivotValuesPositionBarItem1
         '
-        Me.PivotValuesPositionBarItem1.Id = 353
+        Me.PivotValuesPositionBarItem1.Id = 130
         Me.PivotValuesPositionBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.PivotValuesPositionColumnsBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PivotValuesPositionRowsBarItem1)})
         Me.PivotValuesPositionBarItem1.Name = "PivotValuesPositionBarItem1"
         Me.PivotValuesPositionBarItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu
         '
         'PivotValuesPositionColumnsBarItem1
         '
-        Me.PivotValuesPositionColumnsBarItem1.Id = 354
+        Me.PivotValuesPositionColumnsBarItem1.Id = 131
         Me.PivotValuesPositionColumnsBarItem1.Name = "PivotValuesPositionColumnsBarItem1"
         '
         'PivotValuesPositionRowsBarItem1
         '
-        Me.PivotValuesPositionRowsBarItem1.Id = 355
+        Me.PivotValuesPositionRowsBarItem1.Id = 132
         Me.PivotValuesPositionRowsBarItem1.Name = "PivotValuesPositionRowsBarItem1"
         '
         'PivotResetLayoutOptionsBarItem1
         '
-        Me.PivotResetLayoutOptionsBarItem1.Id = 356
+        Me.PivotResetLayoutOptionsBarItem1.Id = 133
         Me.PivotResetLayoutOptionsBarItem1.Name = "PivotResetLayoutOptionsBarItem1"
         '
         'MasterFilterBarItem1
         '
-        Me.MasterFilterBarItem1.Id = 357
+        Me.MasterFilterBarItem1.Id = 134
         Me.MasterFilterBarItem1.Name = "MasterFilterBarItem1"
         '
         'MultipleValuesMasterFilterBarItem1
         '
-        Me.MultipleValuesMasterFilterBarItem1.Id = 358
+        Me.MultipleValuesMasterFilterBarItem1.Id = 135
         Me.MultipleValuesMasterFilterBarItem1.Name = "MultipleValuesMasterFilterBarItem1"
         '
         'DrillDownBarItem1
         '
-        Me.DrillDownBarItem1.Id = 359
+        Me.DrillDownBarItem1.Id = 136
         Me.DrillDownBarItem1.Name = "DrillDownBarItem1"
         '
         'CrossDataSourceFilteringBarItem1
         '
-        Me.CrossDataSourceFilteringBarItem1.Id = 360
+        Me.CrossDataSourceFilteringBarItem1.Id = 137
         Me.CrossDataSourceFilteringBarItem1.Name = "CrossDataSourceFilteringBarItem1"
         '
         'GridHorizontalLinesBarItem1
         '
-        Me.GridHorizontalLinesBarItem1.Id = 361
+        Me.GridHorizontalLinesBarItem1.Id = 138
         Me.GridHorizontalLinesBarItem1.Name = "GridHorizontalLinesBarItem1"
         '
         'GridVerticalLinesBarItem1
         '
-        Me.GridVerticalLinesBarItem1.Id = 362
+        Me.GridVerticalLinesBarItem1.Id = 139
         Me.GridVerticalLinesBarItem1.Name = "GridVerticalLinesBarItem1"
         '
         'GridBandedRowsBarItem1
         '
-        Me.GridBandedRowsBarItem1.Id = 363
+        Me.GridBandedRowsBarItem1.Id = 140
         Me.GridBandedRowsBarItem1.Name = "GridBandedRowsBarItem1"
         '
         'GridMergeCellsBarItem1
         '
-        Me.GridMergeCellsBarItem1.Id = 364
+        Me.GridMergeCellsBarItem1.Id = 141
         Me.GridMergeCellsBarItem1.Name = "GridMergeCellsBarItem1"
         '
         'GridColumnHeadersBarItem1
         '
-        Me.GridColumnHeadersBarItem1.Id = 365
+        Me.GridColumnHeadersBarItem1.Id = 142
         Me.GridColumnHeadersBarItem1.Name = "GridColumnHeadersBarItem1"
         '
         'GridWordWrapBarItem1
         '
-        Me.GridWordWrapBarItem1.Id = 366
+        Me.GridWordWrapBarItem1.Id = 143
         Me.GridWordWrapBarItem1.Name = "GridWordWrapBarItem1"
         '
         'GridFilterRowBarItem1
         '
-        Me.GridFilterRowBarItem1.Id = 367
+        Me.GridFilterRowBarItem1.Id = 144
         Me.GridFilterRowBarItem1.Name = "GridFilterRowBarItem1"
         '
         'GridUpdateTotalsBarItem1
         '
-        Me.GridUpdateTotalsBarItem1.Id = 368
+        Me.GridUpdateTotalsBarItem1.Id = 145
         Me.GridUpdateTotalsBarItem1.Name = "GridUpdateTotalsBarItem1"
         '
         'GridAutoFitToContentsColumnWidthModeBarItem1
         '
-        Me.GridAutoFitToContentsColumnWidthModeBarItem1.Id = 369
+        Me.GridAutoFitToContentsColumnWidthModeBarItem1.Id = 146
         Me.GridAutoFitToContentsColumnWidthModeBarItem1.Name = "GridAutoFitToContentsColumnWidthModeBarItem1"
         '
         'GridAutoFitToGridColumnWidthModeBarItem1
         '
-        Me.GridAutoFitToGridColumnWidthModeBarItem1.Id = 370
+        Me.GridAutoFitToGridColumnWidthModeBarItem1.Id = 147
         Me.GridAutoFitToGridColumnWidthModeBarItem1.Name = "GridAutoFitToGridColumnWidthModeBarItem1"
         '
         'ManualGridColumnWidthModeBarItem1
         '
-        Me.ManualGridColumnWidthModeBarItem1.Id = 371
+        Me.ManualGridColumnWidthModeBarItem1.Id = 148
         Me.ManualGridColumnWidthModeBarItem1.Name = "ManualGridColumnWidthModeBarItem1"
         '
         'ChartTargetDimensionsArgumentsBarItem1
         '
-        Me.ChartTargetDimensionsArgumentsBarItem1.Id = 372
+        Me.ChartTargetDimensionsArgumentsBarItem1.Id = 149
         Me.ChartTargetDimensionsArgumentsBarItem1.Name = "ChartTargetDimensionsArgumentsBarItem1"
         '
         'ChartTargetDimensionsSeriesBarItem1
         '
-        Me.ChartTargetDimensionsSeriesBarItem1.Id = 373
+        Me.ChartTargetDimensionsSeriesBarItem1.Id = 150
         Me.ChartTargetDimensionsSeriesBarItem1.Name = "ChartTargetDimensionsSeriesBarItem1"
         '
         'ChartTargetDimensionsPointsBarItem1
         '
-        Me.ChartTargetDimensionsPointsBarItem1.Id = 374
+        Me.ChartTargetDimensionsPointsBarItem1.Id = 151
         Me.ChartTargetDimensionsPointsBarItem1.Name = "ChartTargetDimensionsPointsBarItem1"
         '
         'ChartRotateBarItem1
         '
-        Me.ChartRotateBarItem1.Id = 375
+        Me.ChartRotateBarItem1.Id = 152
         Me.ChartRotateBarItem1.Name = "ChartRotateBarItem1"
         '
         'ChartXAxisSettingsBarItem1
         '
-        Me.ChartXAxisSettingsBarItem1.Id = 376
+        Me.ChartXAxisSettingsBarItem1.Id = 153
         Me.ChartXAxisSettingsBarItem1.Name = "ChartXAxisSettingsBarItem1"
         '
         'ChartYAxisSettingsBarItem1
         '
-        Me.ChartYAxisSettingsBarItem1.Id = 377
+        Me.ChartYAxisSettingsBarItem1.Id = 154
         Me.ChartYAxisSettingsBarItem1.Name = "ChartYAxisSettingsBarItem1"
         '
         'ChartShowLegendBarItem1
         '
-        Me.ChartShowLegendBarItem1.Id = 378
+        Me.ChartShowLegendBarItem1.Id = 155
         Me.ChartShowLegendBarItem1.Name = "ChartShowLegendBarItem1"
         '
         'GalleryChartLegendPositionItem1
@@ -2233,36 +2132,36 @@ Partial Class frmDashboardDesigner
         '
         '
         Me.GalleryChartLegendPositionItem1.Gallery.ColumnCount = 3
-        ChartLegendInsideTopLeftHorizontalGalleryItem1.Caption = ""
-        ChartLegendInsideTopCenterHorizontalGalleryItem1.Caption = ""
-        ChartLegendInsideTopRightHorizontalGalleryItem1.Caption = ""
-        ChartLegendInsideBottomLeftHorizontalGalleryItem1.Caption = ""
-        ChartLegendInsideBottomCenterHorizontalGalleryItem1.Caption = ""
-        ChartLegendInsideBottomRightHorizontalGalleryItem1.Caption = ""
-        ChartInsideHorizontalLegendGalleryGroup1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {ChartLegendInsideTopLeftHorizontalGalleryItem1, ChartLegendInsideTopCenterHorizontalGalleryItem1, ChartLegendInsideTopRightHorizontalGalleryItem1, ChartLegendInsideBottomLeftHorizontalGalleryItem1, ChartLegendInsideBottomCenterHorizontalGalleryItem1, ChartLegendInsideBottomRightHorizontalGalleryItem1})
-        ChartLegendInsideTopLeftVerticalGalleryItem1.Caption = ""
-        ChartLegendInsideTopCenterVerticalGalleryItem1.Caption = ""
-        ChartLegendInsideTopRightVerticalGalleryItem1.Caption = ""
-        ChartLegendInsideBottomLeftVerticalGalleryItem1.Caption = ""
-        ChartLegendInsideBottomCenterVerticalGalleryItem1.Caption = ""
-        ChartLegendInsideBottomRightVerticalGalleryItem1.Caption = ""
-        ChartInsideVerticalLegendGalleryGroup1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {ChartLegendInsideTopLeftVerticalGalleryItem1, ChartLegendInsideTopCenterVerticalGalleryItem1, ChartLegendInsideTopRightVerticalGalleryItem1, ChartLegendInsideBottomLeftVerticalGalleryItem1, ChartLegendInsideBottomCenterVerticalGalleryItem1, ChartLegendInsideBottomRightVerticalGalleryItem1})
-        ChartLegendOutsideTopLeftHorizontalGalleryItem1.Caption = ""
-        ChartLegendOutsideTopCenterHorizontalGalleryItem1.Caption = ""
-        ChartLegendOutsideTopRightHorizontalGalleryItem1.Caption = ""
-        ChartLegendOutsideBottomLeftHorizontalGalleryItem1.Caption = ""
-        ChartLegendOutsideBottomCenterHorizontalGalleryItem1.Caption = ""
-        ChartLegendOutsideBottomRightHorizontalGalleryItem1.Caption = ""
-        ChartOutsideHorizontalLegendGalleryGroup1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {ChartLegendOutsideTopLeftHorizontalGalleryItem1, ChartLegendOutsideTopCenterHorizontalGalleryItem1, ChartLegendOutsideTopRightHorizontalGalleryItem1, ChartLegendOutsideBottomLeftHorizontalGalleryItem1, ChartLegendOutsideBottomCenterHorizontalGalleryItem1, ChartLegendOutsideBottomRightHorizontalGalleryItem1})
-        ChartLegendOutsideTopLeftVerticalGalleryItem1.Caption = ""
-        ChartLegendOutsideTopRightVerticalGalleryItem1.Caption = ""
-        ChartLegendOutsideBottomLeftVerticalGalleryItem1.Caption = ""
-        ChartLegendOutsideBottomRightVerticalGalleryItem1.Caption = ""
-        ChartOutsideVerticalLegendGalleryGroup1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {ChartLegendOutsideTopLeftVerticalGalleryItem1, ChartLegendOutsideTopRightVerticalGalleryItem1, ChartLegendOutsideBottomLeftVerticalGalleryItem1, ChartLegendOutsideBottomRightVerticalGalleryItem1})
-        Me.GalleryChartLegendPositionItem1.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {ChartInsideHorizontalLegendGalleryGroup1, ChartInsideVerticalLegendGalleryGroup1, ChartOutsideHorizontalLegendGalleryGroup1, ChartOutsideVerticalLegendGalleryGroup1})
+        ChartLegendInsideTopLeftHorizontalGalleryItem3.Caption = ""
+        ChartLegendInsideTopCenterHorizontalGalleryItem3.Caption = ""
+        ChartLegendInsideTopRightHorizontalGalleryItem3.Caption = ""
+        ChartLegendInsideBottomLeftHorizontalGalleryItem3.Caption = ""
+        ChartLegendInsideBottomCenterHorizontalGalleryItem3.Caption = ""
+        ChartLegendInsideBottomRightHorizontalGalleryItem3.Caption = ""
+        ChartInsideHorizontalLegendGalleryGroup3.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {ChartLegendInsideTopLeftHorizontalGalleryItem3, ChartLegendInsideTopCenterHorizontalGalleryItem3, ChartLegendInsideTopRightHorizontalGalleryItem3, ChartLegendInsideBottomLeftHorizontalGalleryItem3, ChartLegendInsideBottomCenterHorizontalGalleryItem3, ChartLegendInsideBottomRightHorizontalGalleryItem3})
+        ChartLegendInsideTopLeftVerticalGalleryItem3.Caption = ""
+        ChartLegendInsideTopCenterVerticalGalleryItem3.Caption = ""
+        ChartLegendInsideTopRightVerticalGalleryItem3.Caption = ""
+        ChartLegendInsideBottomLeftVerticalGalleryItem3.Caption = ""
+        ChartLegendInsideBottomCenterVerticalGalleryItem3.Caption = ""
+        ChartLegendInsideBottomRightVerticalGalleryItem3.Caption = ""
+        ChartInsideVerticalLegendGalleryGroup3.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {ChartLegendInsideTopLeftVerticalGalleryItem3, ChartLegendInsideTopCenterVerticalGalleryItem3, ChartLegendInsideTopRightVerticalGalleryItem3, ChartLegendInsideBottomLeftVerticalGalleryItem3, ChartLegendInsideBottomCenterVerticalGalleryItem3, ChartLegendInsideBottomRightVerticalGalleryItem3})
+        ChartLegendOutsideTopLeftHorizontalGalleryItem3.Caption = ""
+        ChartLegendOutsideTopCenterHorizontalGalleryItem3.Caption = ""
+        ChartLegendOutsideTopRightHorizontalGalleryItem3.Caption = ""
+        ChartLegendOutsideBottomLeftHorizontalGalleryItem3.Caption = ""
+        ChartLegendOutsideBottomCenterHorizontalGalleryItem3.Caption = ""
+        ChartLegendOutsideBottomRightHorizontalGalleryItem3.Caption = ""
+        ChartOutsideHorizontalLegendGalleryGroup3.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {ChartLegendOutsideTopLeftHorizontalGalleryItem3, ChartLegendOutsideTopCenterHorizontalGalleryItem3, ChartLegendOutsideTopRightHorizontalGalleryItem3, ChartLegendOutsideBottomLeftHorizontalGalleryItem3, ChartLegendOutsideBottomCenterHorizontalGalleryItem3, ChartLegendOutsideBottomRightHorizontalGalleryItem3})
+        ChartLegendOutsideTopLeftVerticalGalleryItem3.Caption = ""
+        ChartLegendOutsideTopRightVerticalGalleryItem3.Caption = ""
+        ChartLegendOutsideBottomLeftVerticalGalleryItem3.Caption = ""
+        ChartLegendOutsideBottomRightVerticalGalleryItem3.Caption = ""
+        ChartOutsideVerticalLegendGalleryGroup3.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {ChartLegendOutsideTopLeftVerticalGalleryItem3, ChartLegendOutsideTopRightVerticalGalleryItem3, ChartLegendOutsideBottomLeftVerticalGalleryItem3, ChartLegendOutsideBottomRightVerticalGalleryItem3})
+        Me.GalleryChartLegendPositionItem1.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {ChartInsideHorizontalLegendGalleryGroup3, ChartInsideVerticalLegendGalleryGroup3, ChartOutsideHorizontalLegendGalleryGroup3, ChartOutsideVerticalLegendGalleryGroup3})
         Me.GalleryChartLegendPositionItem1.Gallery.ImageSize = New System.Drawing.Size(32, 32)
         Me.GalleryChartLegendPositionItem1.Gallery.RowCount = 8
-        Me.GalleryChartLegendPositionItem1.Id = 379
+        Me.GalleryChartLegendPositionItem1.Id = 156
         Me.GalleryChartLegendPositionItem1.Name = "GalleryChartLegendPositionItem1"
         '
         'GalleryChartSeriesTypeItem1
@@ -2270,78 +2169,78 @@ Partial Class frmDashboardDesigner
         '
         '
         '
-        ChartBarSeriesGalleryItem1.Caption = ""
-        ChartStackedBarSeriesGalleryItem1.Caption = ""
-        ChartFullStackedBarSeriesGalleryItem1.Caption = ""
-        ChartBarSeriesGalleryGroup1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {ChartBarSeriesGalleryItem1, ChartStackedBarSeriesGalleryItem1, ChartFullStackedBarSeriesGalleryItem1})
-        ChartPointSeriesGalleryItem1.Caption = ""
-        ChartLineSeriesGalleryItem1.Caption = ""
-        ChartStackedLineSeriesGalleryItem1.Caption = ""
-        ChartFullStackedLineSeriesGalleryItem1.Caption = ""
-        ChartStepLineSeriesGalleryItem1.Caption = ""
-        ChartSplineSeriesGalleryItem1.Caption = ""
-        ChartPointLineSeriesGalleryGroup1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {ChartPointSeriesGalleryItem1, ChartLineSeriesGalleryItem1, ChartStackedLineSeriesGalleryItem1, ChartFullStackedLineSeriesGalleryItem1, ChartStepLineSeriesGalleryItem1, ChartSplineSeriesGalleryItem1})
-        ChartAreaSeriesGalleryItem1.Caption = ""
-        ChartStackedAreaSeriesGalleryItem1.Caption = ""
-        ChartFullStackedAreaSeriesGalleryItem1.Caption = ""
-        ChartStepAreaSeriesGalleryItem1.Caption = ""
-        ChartSplineAreaSeriesGalleryItem1.Caption = ""
-        ChartStackedSplineAreaSeriesGalleryItem1.Caption = ""
-        ChartFullStackedSplineAreaSeriesGalleryItem1.Caption = ""
-        ChartAreaSeriesGalleryGroup1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {ChartAreaSeriesGalleryItem1, ChartStackedAreaSeriesGalleryItem1, ChartFullStackedAreaSeriesGalleryItem1, ChartStepAreaSeriesGalleryItem1, ChartSplineAreaSeriesGalleryItem1, ChartStackedSplineAreaSeriesGalleryItem1, ChartFullStackedSplineAreaSeriesGalleryItem1})
-        ChartSideBySideRangeBarSeriesGalleryItem1.Caption = ""
-        ChartRangeAreaSeriesGalleryItem1.Caption = ""
-        ChartRangeSeriesGalleryGroup1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {ChartSideBySideRangeBarSeriesGalleryItem1, ChartRangeAreaSeriesGalleryItem1})
-        ChartWeightedSeriesGalleryItem1.Caption = ""
-        ChartBubbleSeriesGalleryGroup1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {ChartWeightedSeriesGalleryItem1})
-        ChartHighLowCloseSeriesGalleryItem1.Caption = ""
-        ChartCandleStickSeriesGalleryItem1.Caption = ""
-        ChartStockSeriesGalleryItem1.Caption = ""
-        ChartFinancialSeriesGalleryGroup1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {ChartHighLowCloseSeriesGalleryItem1, ChartCandleStickSeriesGalleryItem1, ChartStockSeriesGalleryItem1})
-        Me.GalleryChartSeriesTypeItem1.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {ChartBarSeriesGalleryGroup1, ChartPointLineSeriesGalleryGroup1, ChartAreaSeriesGalleryGroup1, ChartRangeSeriesGalleryGroup1, ChartBubbleSeriesGalleryGroup1, ChartFinancialSeriesGalleryGroup1})
+        ChartBarSeriesGalleryItem2.Caption = ""
+        ChartStackedBarSeriesGalleryItem2.Caption = ""
+        ChartFullStackedBarSeriesGalleryItem2.Caption = ""
+        ChartBarSeriesGalleryGroup2.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {ChartBarSeriesGalleryItem2, ChartStackedBarSeriesGalleryItem2, ChartFullStackedBarSeriesGalleryItem2})
+        ChartPointSeriesGalleryItem2.Caption = ""
+        ChartLineSeriesGalleryItem2.Caption = ""
+        ChartStackedLineSeriesGalleryItem2.Caption = ""
+        ChartFullStackedLineSeriesGalleryItem2.Caption = ""
+        ChartStepLineSeriesGalleryItem2.Caption = ""
+        ChartSplineSeriesGalleryItem2.Caption = ""
+        ChartPointLineSeriesGalleryGroup2.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {ChartPointSeriesGalleryItem2, ChartLineSeriesGalleryItem2, ChartStackedLineSeriesGalleryItem2, ChartFullStackedLineSeriesGalleryItem2, ChartStepLineSeriesGalleryItem2, ChartSplineSeriesGalleryItem2})
+        ChartAreaSeriesGalleryItem2.Caption = ""
+        ChartStackedAreaSeriesGalleryItem2.Caption = ""
+        ChartFullStackedAreaSeriesGalleryItem2.Caption = ""
+        ChartStepAreaSeriesGalleryItem2.Caption = ""
+        ChartSplineAreaSeriesGalleryItem2.Caption = ""
+        ChartStackedSplineAreaSeriesGalleryItem2.Caption = ""
+        ChartFullStackedSplineAreaSeriesGalleryItem2.Caption = ""
+        ChartAreaSeriesGalleryGroup2.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {ChartAreaSeriesGalleryItem2, ChartStackedAreaSeriesGalleryItem2, ChartFullStackedAreaSeriesGalleryItem2, ChartStepAreaSeriesGalleryItem2, ChartSplineAreaSeriesGalleryItem2, ChartStackedSplineAreaSeriesGalleryItem2, ChartFullStackedSplineAreaSeriesGalleryItem2})
+        ChartSideBySideRangeBarSeriesGalleryItem2.Caption = ""
+        ChartRangeAreaSeriesGalleryItem2.Caption = ""
+        ChartRangeSeriesGalleryGroup2.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {ChartSideBySideRangeBarSeriesGalleryItem2, ChartRangeAreaSeriesGalleryItem2})
+        ChartWeightedSeriesGalleryItem2.Caption = ""
+        ChartBubbleSeriesGalleryGroup2.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {ChartWeightedSeriesGalleryItem2})
+        ChartHighLowCloseSeriesGalleryItem2.Caption = ""
+        ChartCandleStickSeriesGalleryItem2.Caption = ""
+        ChartStockSeriesGalleryItem2.Caption = ""
+        ChartFinancialSeriesGalleryGroup2.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {ChartHighLowCloseSeriesGalleryItem2, ChartCandleStickSeriesGalleryItem2, ChartStockSeriesGalleryItem2})
+        Me.GalleryChartSeriesTypeItem1.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {ChartBarSeriesGalleryGroup2, ChartPointLineSeriesGalleryGroup2, ChartAreaSeriesGalleryGroup2, ChartRangeSeriesGalleryGroup2, ChartBubbleSeriesGalleryGroup2, ChartFinancialSeriesGalleryGroup2})
         Me.GalleryChartSeriesTypeItem1.Gallery.ImageSize = New System.Drawing.Size(32, 32)
         Me.GalleryChartSeriesTypeItem1.Gallery.RowCount = 8
-        Me.GalleryChartSeriesTypeItem1.Id = 380
+        Me.GalleryChartSeriesTypeItem1.Id = 157
         Me.GalleryChartSeriesTypeItem1.Name = "GalleryChartSeriesTypeItem1"
         '
         'UseGlobalColorsBarItem1
         '
-        Me.UseGlobalColorsBarItem1.Id = 381
+        Me.UseGlobalColorsBarItem1.Id = 158
         Me.UseGlobalColorsBarItem1.Name = "UseGlobalColorsBarItem1"
         '
         'UseLocalColorsBarItem1
         '
-        Me.UseLocalColorsBarItem1.Id = 382
+        Me.UseLocalColorsBarItem1.Id = 159
         Me.UseLocalColorsBarItem1.Name = "UseLocalColorsBarItem1"
         '
         'EditActualColorsBarItem1
         '
-        Me.EditActualColorsBarItem1.Id = 383
+        Me.EditActualColorsBarItem1.Id = 160
         Me.EditActualColorsBarItem1.Name = "EditActualColorsBarItem1"
         '
         'ScatterChartRotateBarItem1
         '
-        Me.ScatterChartRotateBarItem1.Id = 384
+        Me.ScatterChartRotateBarItem1.Id = 161
         Me.ScatterChartRotateBarItem1.Name = "ScatterChartRotateBarItem1"
         '
         'ScatterChartXAxisSettingsBarItem1
         '
-        Me.ScatterChartXAxisSettingsBarItem1.Id = 385
+        Me.ScatterChartXAxisSettingsBarItem1.Id = 162
         Me.ScatterChartXAxisSettingsBarItem1.Name = "ScatterChartXAxisSettingsBarItem1"
         '
         'ScatterChartYAxisSettingsBarItem1
         '
-        Me.ScatterChartYAxisSettingsBarItem1.Id = 386
+        Me.ScatterChartYAxisSettingsBarItem1.Id = 163
         Me.ScatterChartYAxisSettingsBarItem1.Name = "ScatterChartYAxisSettingsBarItem1"
         '
         'ScatterChartPointLabelOptionsBarItem1
         '
-        Me.ScatterChartPointLabelOptionsBarItem1.Id = 387
+        Me.ScatterChartPointLabelOptionsBarItem1.Id = 164
         Me.ScatterChartPointLabelOptionsBarItem1.Name = "ScatterChartPointLabelOptionsBarItem1"
         '
         'ScatterChartShowLegendBarItem1
         '
-        Me.ScatterChartShowLegendBarItem1.Id = 388
+        Me.ScatterChartShowLegendBarItem1.Id = 165
         Me.ScatterChartShowLegendBarItem1.Name = "ScatterChartShowLegendBarItem1"
         '
         'GalleryScatterChartLegendPositionItem1
@@ -2350,72 +2249,72 @@ Partial Class frmDashboardDesigner
         '
         '
         Me.GalleryScatterChartLegendPositionItem1.Gallery.ColumnCount = 3
-        ChartLegendInsideTopLeftHorizontalGalleryItem2.Caption = ""
-        ChartLegendInsideTopCenterHorizontalGalleryItem2.Caption = ""
-        ChartLegendInsideTopRightHorizontalGalleryItem2.Caption = ""
-        ChartLegendInsideBottomLeftHorizontalGalleryItem2.Caption = ""
-        ChartLegendInsideBottomCenterHorizontalGalleryItem2.Caption = ""
-        ChartLegendInsideBottomRightHorizontalGalleryItem2.Caption = ""
-        ChartInsideHorizontalLegendGalleryGroup2.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {ChartLegendInsideTopLeftHorizontalGalleryItem2, ChartLegendInsideTopCenterHorizontalGalleryItem2, ChartLegendInsideTopRightHorizontalGalleryItem2, ChartLegendInsideBottomLeftHorizontalGalleryItem2, ChartLegendInsideBottomCenterHorizontalGalleryItem2, ChartLegendInsideBottomRightHorizontalGalleryItem2})
-        ChartLegendInsideTopLeftVerticalGalleryItem2.Caption = ""
-        ChartLegendInsideTopCenterVerticalGalleryItem2.Caption = ""
-        ChartLegendInsideTopRightVerticalGalleryItem2.Caption = ""
-        ChartLegendInsideBottomLeftVerticalGalleryItem2.Caption = ""
-        ChartLegendInsideBottomCenterVerticalGalleryItem2.Caption = ""
-        ChartLegendInsideBottomRightVerticalGalleryItem2.Caption = ""
-        ChartInsideVerticalLegendGalleryGroup2.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {ChartLegendInsideTopLeftVerticalGalleryItem2, ChartLegendInsideTopCenterVerticalGalleryItem2, ChartLegendInsideTopRightVerticalGalleryItem2, ChartLegendInsideBottomLeftVerticalGalleryItem2, ChartLegendInsideBottomCenterVerticalGalleryItem2, ChartLegendInsideBottomRightVerticalGalleryItem2})
-        ChartLegendOutsideTopLeftHorizontalGalleryItem2.Caption = ""
-        ChartLegendOutsideTopCenterHorizontalGalleryItem2.Caption = ""
-        ChartLegendOutsideTopRightHorizontalGalleryItem2.Caption = ""
-        ChartLegendOutsideBottomLeftHorizontalGalleryItem2.Caption = ""
-        ChartLegendOutsideBottomCenterHorizontalGalleryItem2.Caption = ""
-        ChartLegendOutsideBottomRightHorizontalGalleryItem2.Caption = ""
-        ChartOutsideHorizontalLegendGalleryGroup2.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {ChartLegendOutsideTopLeftHorizontalGalleryItem2, ChartLegendOutsideTopCenterHorizontalGalleryItem2, ChartLegendOutsideTopRightHorizontalGalleryItem2, ChartLegendOutsideBottomLeftHorizontalGalleryItem2, ChartLegendOutsideBottomCenterHorizontalGalleryItem2, ChartLegendOutsideBottomRightHorizontalGalleryItem2})
-        ChartLegendOutsideTopLeftVerticalGalleryItem2.Caption = ""
-        ChartLegendOutsideTopRightVerticalGalleryItem2.Caption = ""
-        ChartLegendOutsideBottomLeftVerticalGalleryItem2.Caption = ""
-        ChartLegendOutsideBottomRightVerticalGalleryItem2.Caption = ""
-        ChartOutsideVerticalLegendGalleryGroup2.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {ChartLegendOutsideTopLeftVerticalGalleryItem2, ChartLegendOutsideTopRightVerticalGalleryItem2, ChartLegendOutsideBottomLeftVerticalGalleryItem2, ChartLegendOutsideBottomRightVerticalGalleryItem2})
-        Me.GalleryScatterChartLegendPositionItem1.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {ChartInsideHorizontalLegendGalleryGroup2, ChartInsideVerticalLegendGalleryGroup2, ChartOutsideHorizontalLegendGalleryGroup2, ChartOutsideVerticalLegendGalleryGroup2})
+        ChartLegendInsideTopLeftHorizontalGalleryItem4.Caption = ""
+        ChartLegendInsideTopCenterHorizontalGalleryItem4.Caption = ""
+        ChartLegendInsideTopRightHorizontalGalleryItem4.Caption = ""
+        ChartLegendInsideBottomLeftHorizontalGalleryItem4.Caption = ""
+        ChartLegendInsideBottomCenterHorizontalGalleryItem4.Caption = ""
+        ChartLegendInsideBottomRightHorizontalGalleryItem4.Caption = ""
+        ChartInsideHorizontalLegendGalleryGroup4.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {ChartLegendInsideTopLeftHorizontalGalleryItem4, ChartLegendInsideTopCenterHorizontalGalleryItem4, ChartLegendInsideTopRightHorizontalGalleryItem4, ChartLegendInsideBottomLeftHorizontalGalleryItem4, ChartLegendInsideBottomCenterHorizontalGalleryItem4, ChartLegendInsideBottomRightHorizontalGalleryItem4})
+        ChartLegendInsideTopLeftVerticalGalleryItem4.Caption = ""
+        ChartLegendInsideTopCenterVerticalGalleryItem4.Caption = ""
+        ChartLegendInsideTopRightVerticalGalleryItem4.Caption = ""
+        ChartLegendInsideBottomLeftVerticalGalleryItem4.Caption = ""
+        ChartLegendInsideBottomCenterVerticalGalleryItem4.Caption = ""
+        ChartLegendInsideBottomRightVerticalGalleryItem4.Caption = ""
+        ChartInsideVerticalLegendGalleryGroup4.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {ChartLegendInsideTopLeftVerticalGalleryItem4, ChartLegendInsideTopCenterVerticalGalleryItem4, ChartLegendInsideTopRightVerticalGalleryItem4, ChartLegendInsideBottomLeftVerticalGalleryItem4, ChartLegendInsideBottomCenterVerticalGalleryItem4, ChartLegendInsideBottomRightVerticalGalleryItem4})
+        ChartLegendOutsideTopLeftHorizontalGalleryItem4.Caption = ""
+        ChartLegendOutsideTopCenterHorizontalGalleryItem4.Caption = ""
+        ChartLegendOutsideTopRightHorizontalGalleryItem4.Caption = ""
+        ChartLegendOutsideBottomLeftHorizontalGalleryItem4.Caption = ""
+        ChartLegendOutsideBottomCenterHorizontalGalleryItem4.Caption = ""
+        ChartLegendOutsideBottomRightHorizontalGalleryItem4.Caption = ""
+        ChartOutsideHorizontalLegendGalleryGroup4.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {ChartLegendOutsideTopLeftHorizontalGalleryItem4, ChartLegendOutsideTopCenterHorizontalGalleryItem4, ChartLegendOutsideTopRightHorizontalGalleryItem4, ChartLegendOutsideBottomLeftHorizontalGalleryItem4, ChartLegendOutsideBottomCenterHorizontalGalleryItem4, ChartLegendOutsideBottomRightHorizontalGalleryItem4})
+        ChartLegendOutsideTopLeftVerticalGalleryItem4.Caption = ""
+        ChartLegendOutsideTopRightVerticalGalleryItem4.Caption = ""
+        ChartLegendOutsideBottomLeftVerticalGalleryItem4.Caption = ""
+        ChartLegendOutsideBottomRightVerticalGalleryItem4.Caption = ""
+        ChartOutsideVerticalLegendGalleryGroup4.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {ChartLegendOutsideTopLeftVerticalGalleryItem4, ChartLegendOutsideTopRightVerticalGalleryItem4, ChartLegendOutsideBottomLeftVerticalGalleryItem4, ChartLegendOutsideBottomRightVerticalGalleryItem4})
+        Me.GalleryScatterChartLegendPositionItem1.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {ChartInsideHorizontalLegendGalleryGroup4, ChartInsideVerticalLegendGalleryGroup4, ChartOutsideHorizontalLegendGalleryGroup4, ChartOutsideVerticalLegendGalleryGroup4})
         Me.GalleryScatterChartLegendPositionItem1.Gallery.ImageSize = New System.Drawing.Size(32, 32)
         Me.GalleryScatterChartLegendPositionItem1.Gallery.RowCount = 8
-        Me.GalleryScatterChartLegendPositionItem1.Id = 389
+        Me.GalleryScatterChartLegendPositionItem1.Id = 166
         Me.GalleryScatterChartLegendPositionItem1.Name = "GalleryScatterChartLegendPositionItem1"
         '
         'PieTargetDimensionsArgumentsBarItem1
         '
-        Me.PieTargetDimensionsArgumentsBarItem1.Id = 390
+        Me.PieTargetDimensionsArgumentsBarItem1.Id = 167
         Me.PieTargetDimensionsArgumentsBarItem1.Name = "PieTargetDimensionsArgumentsBarItem1"
         '
         'PieTargetDimensionsSeriesBarItem1
         '
-        Me.PieTargetDimensionsSeriesBarItem1.Id = 391
+        Me.PieTargetDimensionsSeriesBarItem1.Id = 168
         Me.PieTargetDimensionsSeriesBarItem1.Name = "PieTargetDimensionsSeriesBarItem1"
         '
         'PieTargetDimensionsPointsBarItem1
         '
-        Me.PieTargetDimensionsPointsBarItem1.Id = 392
+        Me.PieTargetDimensionsPointsBarItem1.Id = 169
         Me.PieTargetDimensionsPointsBarItem1.Name = "PieTargetDimensionsPointsBarItem1"
         '
         'ContentAutoArrangeBarItem1
         '
-        Me.ContentAutoArrangeBarItem1.Id = 393
+        Me.ContentAutoArrangeBarItem1.Id = 170
         Me.ContentAutoArrangeBarItem1.Name = "ContentAutoArrangeBarItem1"
         '
         'ContentArrangeInColumnsBarItem1
         '
-        Me.ContentArrangeInColumnsBarItem1.Id = 394
+        Me.ContentArrangeInColumnsBarItem1.Id = 171
         Me.ContentArrangeInColumnsBarItem1.Name = "ContentArrangeInColumnsBarItem1"
         '
         'ContentArrangeInRowsBarItem1
         '
-        Me.ContentArrangeInRowsBarItem1.Id = 395
+        Me.ContentArrangeInRowsBarItem1.Id = 172
         Me.ContentArrangeInRowsBarItem1.Name = "ContentArrangeInRowsBarItem1"
         '
         'ContentArrangementCountBarItem1
         '
         Me.ContentArrangementCountBarItem1.Edit = Me.RepositoryItemSpinEdit1
-        Me.ContentArrangementCountBarItem1.Id = 396
+        Me.ContentArrangementCountBarItem1.Id = 173
         Me.ContentArrangementCountBarItem1.Name = "ContentArrangementCountBarItem1"
         '
         'RepositoryItemSpinEdit1
@@ -2430,168 +2329,168 @@ Partial Class frmDashboardDesigner
         '
         'PieLabelsDataLabelsBarItem1
         '
-        Me.PieLabelsDataLabelsBarItem1.Id = 397
+        Me.PieLabelsDataLabelsBarItem1.Id = 174
         Me.PieLabelsDataLabelsBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.PieLabelsDataLabelsNoneBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PieLabelsDataLabelArgumentBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PieLabelsDataLabelsValueBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PieLabelsDataLabelsArgumentAndValueBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PieLabelsDataLabelsPercentBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PieLabelsDataLabelsValueAndPercentBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PieLabelsDataLabelsArgumentAndPercentBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PieLabelsDataLabelsArgumentValueAndPercentBarItem1)})
         Me.PieLabelsDataLabelsBarItem1.Name = "PieLabelsDataLabelsBarItem1"
         Me.PieLabelsDataLabelsBarItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu
         '
         'PieLabelsDataLabelsNoneBarItem1
         '
-        Me.PieLabelsDataLabelsNoneBarItem1.Id = 398
+        Me.PieLabelsDataLabelsNoneBarItem1.Id = 175
         Me.PieLabelsDataLabelsNoneBarItem1.Name = "PieLabelsDataLabelsNoneBarItem1"
         '
         'PieLabelsDataLabelArgumentBarItem1
         '
-        Me.PieLabelsDataLabelArgumentBarItem1.Id = 399
+        Me.PieLabelsDataLabelArgumentBarItem1.Id = 176
         Me.PieLabelsDataLabelArgumentBarItem1.Name = "PieLabelsDataLabelArgumentBarItem1"
         '
         'PieLabelsDataLabelsValueBarItem1
         '
-        Me.PieLabelsDataLabelsValueBarItem1.Id = 400
+        Me.PieLabelsDataLabelsValueBarItem1.Id = 177
         Me.PieLabelsDataLabelsValueBarItem1.Name = "PieLabelsDataLabelsValueBarItem1"
         '
         'PieLabelsDataLabelsArgumentAndValueBarItem1
         '
-        Me.PieLabelsDataLabelsArgumentAndValueBarItem1.Id = 401
+        Me.PieLabelsDataLabelsArgumentAndValueBarItem1.Id = 178
         Me.PieLabelsDataLabelsArgumentAndValueBarItem1.Name = "PieLabelsDataLabelsArgumentAndValueBarItem1"
         '
         'PieLabelsDataLabelsPercentBarItem1
         '
-        Me.PieLabelsDataLabelsPercentBarItem1.Id = 402
+        Me.PieLabelsDataLabelsPercentBarItem1.Id = 179
         Me.PieLabelsDataLabelsPercentBarItem1.Name = "PieLabelsDataLabelsPercentBarItem1"
         '
         'PieLabelsDataLabelsValueAndPercentBarItem1
         '
-        Me.PieLabelsDataLabelsValueAndPercentBarItem1.Id = 403
+        Me.PieLabelsDataLabelsValueAndPercentBarItem1.Id = 180
         Me.PieLabelsDataLabelsValueAndPercentBarItem1.Name = "PieLabelsDataLabelsValueAndPercentBarItem1"
         '
         'PieLabelsDataLabelsArgumentAndPercentBarItem1
         '
-        Me.PieLabelsDataLabelsArgumentAndPercentBarItem1.Id = 404
+        Me.PieLabelsDataLabelsArgumentAndPercentBarItem1.Id = 181
         Me.PieLabelsDataLabelsArgumentAndPercentBarItem1.Name = "PieLabelsDataLabelsArgumentAndPercentBarItem1"
         '
         'PieLabelsDataLabelsArgumentValueAndPercentBarItem1
         '
-        Me.PieLabelsDataLabelsArgumentValueAndPercentBarItem1.Id = 405
+        Me.PieLabelsDataLabelsArgumentValueAndPercentBarItem1.Id = 182
         Me.PieLabelsDataLabelsArgumentValueAndPercentBarItem1.Name = "PieLabelsDataLabelsArgumentValueAndPercentBarItem1"
         '
         'PieLabelPositionBarItem1
         '
-        Me.PieLabelPositionBarItem1.Id = 406
+        Me.PieLabelPositionBarItem1.Id = 183
         Me.PieLabelPositionBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.PieLabelPositionOutsideBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PieLabelPositionInsideBarItem1)})
         Me.PieLabelPositionBarItem1.Name = "PieLabelPositionBarItem1"
         Me.PieLabelPositionBarItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu
         '
         'PieLabelPositionOutsideBarItem1
         '
-        Me.PieLabelPositionOutsideBarItem1.Id = 407
+        Me.PieLabelPositionOutsideBarItem1.Id = 184
         Me.PieLabelPositionOutsideBarItem1.Name = "PieLabelPositionOutsideBarItem1"
         '
         'PieLabelPositionInsideBarItem1
         '
-        Me.PieLabelPositionInsideBarItem1.Id = 408
+        Me.PieLabelPositionInsideBarItem1.Id = 185
         Me.PieLabelPositionInsideBarItem1.Name = "PieLabelPositionInsideBarItem1"
         '
         'PieTooltipsBarItem1
         '
-        Me.PieTooltipsBarItem1.Id = 409
+        Me.PieTooltipsBarItem1.Id = 186
         Me.PieTooltipsBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.PieLabelsTooltipsNoneBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PieLabelsTooltipsArgumentBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PieLabelsTooltipsValueBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PieLabelsTooltipsArgumentAndValueBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PieLabelsTooltipsPercentBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PieLabelsTooltipsValueAndPercentBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PieLabelsTooltipsArgumentAndPercentBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PieLabelsTooltipsArgumentValueAndPercentBarItem1)})
         Me.PieTooltipsBarItem1.Name = "PieTooltipsBarItem1"
         Me.PieTooltipsBarItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu
         '
         'PieLabelsTooltipsNoneBarItem1
         '
-        Me.PieLabelsTooltipsNoneBarItem1.Id = 410
+        Me.PieLabelsTooltipsNoneBarItem1.Id = 187
         Me.PieLabelsTooltipsNoneBarItem1.Name = "PieLabelsTooltipsNoneBarItem1"
         '
         'PieLabelsTooltipsArgumentBarItem1
         '
-        Me.PieLabelsTooltipsArgumentBarItem1.Id = 411
+        Me.PieLabelsTooltipsArgumentBarItem1.Id = 188
         Me.PieLabelsTooltipsArgumentBarItem1.Name = "PieLabelsTooltipsArgumentBarItem1"
         '
         'PieLabelsTooltipsValueBarItem1
         '
-        Me.PieLabelsTooltipsValueBarItem1.Id = 412
+        Me.PieLabelsTooltipsValueBarItem1.Id = 189
         Me.PieLabelsTooltipsValueBarItem1.Name = "PieLabelsTooltipsValueBarItem1"
         '
         'PieLabelsTooltipsArgumentAndValueBarItem1
         '
-        Me.PieLabelsTooltipsArgumentAndValueBarItem1.Id = 413
+        Me.PieLabelsTooltipsArgumentAndValueBarItem1.Id = 190
         Me.PieLabelsTooltipsArgumentAndValueBarItem1.Name = "PieLabelsTooltipsArgumentAndValueBarItem1"
         '
         'PieLabelsTooltipsPercentBarItem1
         '
-        Me.PieLabelsTooltipsPercentBarItem1.Id = 414
+        Me.PieLabelsTooltipsPercentBarItem1.Id = 191
         Me.PieLabelsTooltipsPercentBarItem1.Name = "PieLabelsTooltipsPercentBarItem1"
         '
         'PieLabelsTooltipsValueAndPercentBarItem1
         '
-        Me.PieLabelsTooltipsValueAndPercentBarItem1.Id = 415
+        Me.PieLabelsTooltipsValueAndPercentBarItem1.Id = 192
         Me.PieLabelsTooltipsValueAndPercentBarItem1.Name = "PieLabelsTooltipsValueAndPercentBarItem1"
         '
         'PieLabelsTooltipsArgumentAndPercentBarItem1
         '
-        Me.PieLabelsTooltipsArgumentAndPercentBarItem1.Id = 416
+        Me.PieLabelsTooltipsArgumentAndPercentBarItem1.Id = 193
         Me.PieLabelsTooltipsArgumentAndPercentBarItem1.Name = "PieLabelsTooltipsArgumentAndPercentBarItem1"
         '
         'PieLabelsTooltipsArgumentValueAndPercentBarItem1
         '
-        Me.PieLabelsTooltipsArgumentValueAndPercentBarItem1.Id = 417
+        Me.PieLabelsTooltipsArgumentValueAndPercentBarItem1.Id = 194
         Me.PieLabelsTooltipsArgumentValueAndPercentBarItem1.Name = "PieLabelsTooltipsArgumentValueAndPercentBarItem1"
         '
         'PieStylePieBarItem1
         '
-        Me.PieStylePieBarItem1.Id = 418
+        Me.PieStylePieBarItem1.Id = 195
         Me.PieStylePieBarItem1.Name = "PieStylePieBarItem1"
         '
         'PieStyleDonutBarItem1
         '
-        Me.PieStyleDonutBarItem1.Id = 419
+        Me.PieStyleDonutBarItem1.Id = 196
         Me.PieStyleDonutBarItem1.Name = "PieStyleDonutBarItem1"
         '
         'PieShowCaptionsBarItem1
         '
-        Me.PieShowCaptionsBarItem1.Id = 420
+        Me.PieShowCaptionsBarItem1.Id = 197
         Me.PieShowCaptionsBarItem1.Name = "PieShowCaptionsBarItem1"
         '
         'GaugeStyleFullCircularBarItem1
         '
-        Me.GaugeStyleFullCircularBarItem1.Id = 421
+        Me.GaugeStyleFullCircularBarItem1.Id = 198
         Me.GaugeStyleFullCircularBarItem1.Name = "GaugeStyleFullCircularBarItem1"
         '
         'GaugeStyleHalfCircularBarItem1
         '
-        Me.GaugeStyleHalfCircularBarItem1.Id = 422
+        Me.GaugeStyleHalfCircularBarItem1.Id = 199
         Me.GaugeStyleHalfCircularBarItem1.Name = "GaugeStyleHalfCircularBarItem1"
         '
         'GaugeStyleLeftQuarterCircularBarItem1
         '
-        Me.GaugeStyleLeftQuarterCircularBarItem1.Id = 423
+        Me.GaugeStyleLeftQuarterCircularBarItem1.Id = 200
         Me.GaugeStyleLeftQuarterCircularBarItem1.Name = "GaugeStyleLeftQuarterCircularBarItem1"
         '
         'GaugeStyleRightQuarterCircularBarItem1
         '
-        Me.GaugeStyleRightQuarterCircularBarItem1.Id = 424
+        Me.GaugeStyleRightQuarterCircularBarItem1.Id = 201
         Me.GaugeStyleRightQuarterCircularBarItem1.Name = "GaugeStyleRightQuarterCircularBarItem1"
         '
         'GaugeStyleThreeForthCircularBarItem1
         '
-        Me.GaugeStyleThreeForthCircularBarItem1.Id = 425
+        Me.GaugeStyleThreeForthCircularBarItem1.Id = 202
         Me.GaugeStyleThreeForthCircularBarItem1.Name = "GaugeStyleThreeForthCircularBarItem1"
         '
         'GaugeStyleLinearHorizontalBarItem1
         '
-        Me.GaugeStyleLinearHorizontalBarItem1.Id = 426
+        Me.GaugeStyleLinearHorizontalBarItem1.Id = 203
         Me.GaugeStyleLinearHorizontalBarItem1.Name = "GaugeStyleLinearHorizontalBarItem1"
         '
         'GaugeStyleLinearVerticalBarItem1
         '
-        Me.GaugeStyleLinearVerticalBarItem1.Id = 427
+        Me.GaugeStyleLinearVerticalBarItem1.Id = 204
         Me.GaugeStyleLinearVerticalBarItem1.Name = "GaugeStyleLinearVerticalBarItem1"
         '
         'GaugeShowCaptionsBarItem1
         '
-        Me.GaugeShowCaptionsBarItem1.Id = 428
+        Me.GaugeShowCaptionsBarItem1.Id = 205
         Me.GaugeShowCaptionsBarItem1.Name = "GaugeShowCaptionsBarItem1"
         '
         'GalleryRangeFilterSeriesTypeItem1
@@ -2600,103 +2499,103 @@ Partial Class frmDashboardDesigner
         '
         '
         Me.GalleryRangeFilterSeriesTypeItem1.Gallery.ColumnCount = 3
-        RangeLineSeriesGalleryItem1.Caption = ""
-        RangeStackedLineSeriesGalleryItem1.Caption = ""
-        RangeFullStackedLineSeriesGalleryItem1.Caption = ""
-        RangePointLineSeriesGalleryGroup1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {RangeLineSeriesGalleryItem1, RangeStackedLineSeriesGalleryItem1, RangeFullStackedLineSeriesGalleryItem1})
-        RangeAreaSeriesGalleryItem1.Caption = ""
-        RangeStackedAreaSeriesGalleryItem1.Caption = ""
-        RangeFullStackedAreaSeriesGalleryItem1.Caption = ""
-        RangeAreaSeriesGalleryGroup1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {RangeAreaSeriesGalleryItem1, RangeStackedAreaSeriesGalleryItem1, RangeFullStackedAreaSeriesGalleryItem1})
-        RangeBarSeriesGalleryItem1.Caption = ""
-        RangeStackedBarSeriesGalleryItem1.Caption = ""
-        RangeFullStackedBarSeriesGalleryItem1.Caption = ""
-        RangeBarSeriesGalleryGroup1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {RangeBarSeriesGalleryItem1, RangeStackedBarSeriesGalleryItem1, RangeFullStackedBarSeriesGalleryItem1})
-        Me.GalleryRangeFilterSeriesTypeItem1.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {RangePointLineSeriesGalleryGroup1, RangeAreaSeriesGalleryGroup1, RangeBarSeriesGalleryGroup1})
+        RangeLineSeriesGalleryItem2.Caption = ""
+        RangeStackedLineSeriesGalleryItem2.Caption = ""
+        RangeFullStackedLineSeriesGalleryItem2.Caption = ""
+        RangePointLineSeriesGalleryGroup2.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {RangeLineSeriesGalleryItem2, RangeStackedLineSeriesGalleryItem2, RangeFullStackedLineSeriesGalleryItem2})
+        RangeAreaSeriesGalleryItem2.Caption = ""
+        RangeStackedAreaSeriesGalleryItem2.Caption = ""
+        RangeFullStackedAreaSeriesGalleryItem2.Caption = ""
+        RangeAreaSeriesGalleryGroup2.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {RangeAreaSeriesGalleryItem2, RangeStackedAreaSeriesGalleryItem2, RangeFullStackedAreaSeriesGalleryItem2})
+        RangeBarSeriesGalleryItem2.Caption = ""
+        RangeStackedBarSeriesGalleryItem2.Caption = ""
+        RangeFullStackedBarSeriesGalleryItem2.Caption = ""
+        RangeBarSeriesGalleryGroup2.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {RangeBarSeriesGalleryItem2, RangeStackedBarSeriesGalleryItem2, RangeFullStackedBarSeriesGalleryItem2})
+        Me.GalleryRangeFilterSeriesTypeItem1.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {RangePointLineSeriesGalleryGroup2, RangeAreaSeriesGalleryGroup2, RangeBarSeriesGalleryGroup2})
         Me.GalleryRangeFilterSeriesTypeItem1.Gallery.ImageSize = New System.Drawing.Size(32, 32)
-        Me.GalleryRangeFilterSeriesTypeItem1.Id = 429
+        Me.GalleryRangeFilterSeriesTypeItem1.Id = 206
         Me.GalleryRangeFilterSeriesTypeItem1.Name = "GalleryRangeFilterSeriesTypeItem1"
         '
         'RangeFilterEditDateTimePeriodsBarItem1
         '
-        Me.RangeFilterEditDateTimePeriodsBarItem1.Id = 430
+        Me.RangeFilterEditDateTimePeriodsBarItem1.Id = 207
         Me.RangeFilterEditDateTimePeriodsBarItem1.Name = "RangeFilterEditDateTimePeriodsBarItem1"
         '
         'MapLoadBarItem1
         '
-        Me.MapLoadBarItem1.Id = 431
+        Me.MapLoadBarItem1.Id = 208
         Me.MapLoadBarItem1.Name = "MapLoadBarItem1"
         '
         'MapImportBarItem1
         '
-        Me.MapImportBarItem1.Id = 432
+        Me.MapImportBarItem1.Id = 209
         Me.MapImportBarItem1.Name = "MapImportBarItem1"
         '
         'MapDefaultShapefileBarItem1
         '
-        Me.MapDefaultShapefileBarItem1.Id = 433
+        Me.MapDefaultShapefileBarItem1.Id = 210
         Me.MapDefaultShapefileBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.MapWorldCountriesBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.MapEuropeBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.MapAsiaBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.MapNorthAmericaBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.MapSouthAmericaBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.MapAfricaBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.MapUSABarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.MapCanadaBarItem1)})
         Me.MapDefaultShapefileBarItem1.Name = "MapDefaultShapefileBarItem1"
         Me.MapDefaultShapefileBarItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu
         '
         'MapWorldCountriesBarItem1
         '
-        Me.MapWorldCountriesBarItem1.Id = 434
+        Me.MapWorldCountriesBarItem1.Id = 211
         Me.MapWorldCountriesBarItem1.Name = "MapWorldCountriesBarItem1"
         '
         'MapEuropeBarItem1
         '
-        Me.MapEuropeBarItem1.Id = 435
+        Me.MapEuropeBarItem1.Id = 212
         Me.MapEuropeBarItem1.Name = "MapEuropeBarItem1"
         '
         'MapAsiaBarItem1
         '
-        Me.MapAsiaBarItem1.Id = 436
+        Me.MapAsiaBarItem1.Id = 213
         Me.MapAsiaBarItem1.Name = "MapAsiaBarItem1"
         '
         'MapNorthAmericaBarItem1
         '
-        Me.MapNorthAmericaBarItem1.Id = 437
+        Me.MapNorthAmericaBarItem1.Id = 214
         Me.MapNorthAmericaBarItem1.Name = "MapNorthAmericaBarItem1"
         '
         'MapSouthAmericaBarItem1
         '
-        Me.MapSouthAmericaBarItem1.Id = 438
+        Me.MapSouthAmericaBarItem1.Id = 215
         Me.MapSouthAmericaBarItem1.Name = "MapSouthAmericaBarItem1"
         '
         'MapAfricaBarItem1
         '
-        Me.MapAfricaBarItem1.Id = 439
+        Me.MapAfricaBarItem1.Id = 216
         Me.MapAfricaBarItem1.Name = "MapAfricaBarItem1"
         '
         'MapUSABarItem1
         '
-        Me.MapUSABarItem1.Id = 440
+        Me.MapUSABarItem1.Id = 217
         Me.MapUSABarItem1.Name = "MapUSABarItem1"
         '
         'MapCanadaBarItem1
         '
-        Me.MapCanadaBarItem1.Id = 441
+        Me.MapCanadaBarItem1.Id = 218
         Me.MapCanadaBarItem1.Name = "MapCanadaBarItem1"
         '
         'MapLockNavigationBarItem1
         '
-        Me.MapLockNavigationBarItem1.Id = 442
+        Me.MapLockNavigationBarItem1.Id = 219
         Me.MapLockNavigationBarItem1.Name = "MapLockNavigationBarItem1"
         '
         'MapFullExtentBarItem1
         '
-        Me.MapFullExtentBarItem1.Id = 443
+        Me.MapFullExtentBarItem1.Id = 220
         Me.MapFullExtentBarItem1.Name = "MapFullExtentBarItem1"
         '
         'ChoroplethMapShapeLabelsAttributeBarItem1
         '
-        Me.ChoroplethMapShapeLabelsAttributeBarItem1.Id = 444
+        Me.ChoroplethMapShapeLabelsAttributeBarItem1.Id = 221
         Me.ChoroplethMapShapeLabelsAttributeBarItem1.Name = "ChoroplethMapShapeLabelsAttributeBarItem1"
         '
         'MapShowLegendBarItem1
         '
-        Me.MapShowLegendBarItem1.Id = 445
+        Me.MapShowLegendBarItem1.Id = 222
         Me.MapShowLegendBarItem1.Name = "MapShowLegendBarItem1"
         '
         'GalleryMapLegendPositionItem1
@@ -2705,56 +2604,56 @@ Partial Class frmDashboardDesigner
         '
         '
         Me.GalleryMapLegendPositionItem1.Gallery.ColumnCount = 3
-        MapLegendTopLeftVerticalGalleryItem1.Caption = ""
-        MapLegendTopCenterVerticalGalleryItem1.Caption = ""
-        MapLegendTopRightVerticalGalleryItem1.Caption = ""
-        MapLegendBottomLeftVerticalGalleryItem1.Caption = ""
-        MapLegendBottomCenterVerticalGalleryItem1.Caption = ""
-        MapLegendBottomRightVerticalGalleryItem1.Caption = ""
-        MapVerticalLegendGalleryGroup1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {MapLegendTopLeftVerticalGalleryItem1, MapLegendTopCenterVerticalGalleryItem1, MapLegendTopRightVerticalGalleryItem1, MapLegendBottomLeftVerticalGalleryItem1, MapLegendBottomCenterVerticalGalleryItem1, MapLegendBottomRightVerticalGalleryItem1})
-        MapLegendTopLeftHorizontalGalleryItem1.Caption = ""
-        MapLegendTopCenterHorizontalGalleryItem1.Caption = ""
-        MapLegendTopRightHorizontalGalleryItem1.Caption = ""
-        MapLegendBottomLeftHorizontalGalleryItem1.Caption = ""
-        MapLegendBottomCenterHorizontalGalleryItem1.Caption = ""
-        MapLegendBottomRightHorizontalGalleryItem1.Caption = ""
-        MapHorizontalLegendGalleryGroup1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {MapLegendTopLeftHorizontalGalleryItem1, MapLegendTopCenterHorizontalGalleryItem1, MapLegendTopRightHorizontalGalleryItem1, MapLegendBottomLeftHorizontalGalleryItem1, MapLegendBottomCenterHorizontalGalleryItem1, MapLegendBottomRightHorizontalGalleryItem1})
-        Me.GalleryMapLegendPositionItem1.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {MapVerticalLegendGalleryGroup1, MapHorizontalLegendGalleryGroup1})
+        MapLegendTopLeftVerticalGalleryItem2.Caption = ""
+        MapLegendTopCenterVerticalGalleryItem2.Caption = ""
+        MapLegendTopRightVerticalGalleryItem2.Caption = ""
+        MapLegendBottomLeftVerticalGalleryItem2.Caption = ""
+        MapLegendBottomCenterVerticalGalleryItem2.Caption = ""
+        MapLegendBottomRightVerticalGalleryItem2.Caption = ""
+        MapVerticalLegendGalleryGroup2.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {MapLegendTopLeftVerticalGalleryItem2, MapLegendTopCenterVerticalGalleryItem2, MapLegendTopRightVerticalGalleryItem2, MapLegendBottomLeftVerticalGalleryItem2, MapLegendBottomCenterVerticalGalleryItem2, MapLegendBottomRightVerticalGalleryItem2})
+        MapLegendTopLeftHorizontalGalleryItem2.Caption = ""
+        MapLegendTopCenterHorizontalGalleryItem2.Caption = ""
+        MapLegendTopRightHorizontalGalleryItem2.Caption = ""
+        MapLegendBottomLeftHorizontalGalleryItem2.Caption = ""
+        MapLegendBottomCenterHorizontalGalleryItem2.Caption = ""
+        MapLegendBottomRightHorizontalGalleryItem2.Caption = ""
+        MapHorizontalLegendGalleryGroup2.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {MapLegendTopLeftHorizontalGalleryItem2, MapLegendTopCenterHorizontalGalleryItem2, MapLegendTopRightHorizontalGalleryItem2, MapLegendBottomLeftHorizontalGalleryItem2, MapLegendBottomCenterHorizontalGalleryItem2, MapLegendBottomRightHorizontalGalleryItem2})
+        Me.GalleryMapLegendPositionItem1.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {MapVerticalLegendGalleryGroup2, MapHorizontalLegendGalleryGroup2})
         Me.GalleryMapLegendPositionItem1.Gallery.ImageSize = New System.Drawing.Size(32, 32)
         Me.GalleryMapLegendPositionItem1.Gallery.RowCount = 4
-        Me.GalleryMapLegendPositionItem1.Id = 446
+        Me.GalleryMapLegendPositionItem1.Id = 223
         Me.GalleryMapLegendPositionItem1.Name = "GalleryMapLegendPositionItem1"
         '
         'GeoPointMapClusterizationBarItem1
         '
-        Me.GeoPointMapClusterizationBarItem1.Id = 447
+        Me.GeoPointMapClusterizationBarItem1.Id = 224
         Me.GeoPointMapClusterizationBarItem1.Name = "GeoPointMapClusterizationBarItem1"
         '
         'MapShapeTitleAttributeBarItem1
         '
-        Me.MapShapeTitleAttributeBarItem1.Id = 448
+        Me.MapShapeTitleAttributeBarItem1.Id = 225
         Me.MapShapeTitleAttributeBarItem1.Name = "MapShapeTitleAttributeBarItem1"
         '
         'ChangeWeightedLegendTypeBarItem1
         '
-        Me.ChangeWeightedLegendTypeBarItem1.Id = 449
+        Me.ChangeWeightedLegendTypeBarItem1.Id = 226
         Me.ChangeWeightedLegendTypeBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.WeightedLegendNoneBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.WeightedLegendLinearBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.WeightedLegendNestedBarItem1)})
         Me.ChangeWeightedLegendTypeBarItem1.Name = "ChangeWeightedLegendTypeBarItem1"
         Me.ChangeWeightedLegendTypeBarItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu
         '
         'WeightedLegendNoneBarItem1
         '
-        Me.WeightedLegendNoneBarItem1.Id = 450
+        Me.WeightedLegendNoneBarItem1.Id = 227
         Me.WeightedLegendNoneBarItem1.Name = "WeightedLegendNoneBarItem1"
         '
         'WeightedLegendLinearBarItem1
         '
-        Me.WeightedLegendLinearBarItem1.Id = 451
+        Me.WeightedLegendLinearBarItem1.Id = 228
         Me.WeightedLegendLinearBarItem1.Name = "WeightedLegendLinearBarItem1"
         '
         'WeightedLegendNestedBarItem1
         '
-        Me.WeightedLegendNestedBarItem1.Id = 452
+        Me.WeightedLegendNestedBarItem1.Id = 229
         Me.WeightedLegendNestedBarItem1.Name = "WeightedLegendNestedBarItem1"
         '
         'GalleryWeightedLegendPositionItem1
@@ -2763,474 +2662,474 @@ Partial Class frmDashboardDesigner
         '
         '
         Me.GalleryWeightedLegendPositionItem1.Gallery.ColumnCount = 3
-        MapWeightedLegendTopLeftGalleryItem1.Caption = ""
-        MapWeightedLegendTopCenterGalleryItem1.Caption = ""
-        MapWeightedLegendTopRightGalleryItem1.Caption = ""
-        MapWeightedLegendBottomLeftGalleryItem1.Caption = ""
-        MapWeightedLegendBottomCenterGalleryItem1.Caption = ""
-        MapWeightedLegendBottomRightGalleryItem1.Caption = ""
-        MapWeightedLegendGalleryGroup1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {MapWeightedLegendTopLeftGalleryItem1, MapWeightedLegendTopCenterGalleryItem1, MapWeightedLegendTopRightGalleryItem1, MapWeightedLegendBottomLeftGalleryItem1, MapWeightedLegendBottomCenterGalleryItem1, MapWeightedLegendBottomRightGalleryItem1})
-        Me.GalleryWeightedLegendPositionItem1.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {MapWeightedLegendGalleryGroup1})
+        MapWeightedLegendTopLeftGalleryItem2.Caption = ""
+        MapWeightedLegendTopCenterGalleryItem2.Caption = ""
+        MapWeightedLegendTopRightGalleryItem2.Caption = ""
+        MapWeightedLegendBottomLeftGalleryItem2.Caption = ""
+        MapWeightedLegendBottomCenterGalleryItem2.Caption = ""
+        MapWeightedLegendBottomRightGalleryItem2.Caption = ""
+        MapWeightedLegendGalleryGroup2.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {MapWeightedLegendTopLeftGalleryItem2, MapWeightedLegendTopCenterGalleryItem2, MapWeightedLegendTopRightGalleryItem2, MapWeightedLegendBottomLeftGalleryItem2, MapWeightedLegendBottomCenterGalleryItem2, MapWeightedLegendBottomRightGalleryItem2})
+        Me.GalleryWeightedLegendPositionItem1.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {MapWeightedLegendGalleryGroup2})
         Me.GalleryWeightedLegendPositionItem1.Gallery.ImageSize = New System.Drawing.Size(32, 32)
         Me.GalleryWeightedLegendPositionItem1.Gallery.RowCount = 2
-        Me.GalleryWeightedLegendPositionItem1.Id = 453
+        Me.GalleryWeightedLegendPositionItem1.Id = 230
         Me.GalleryWeightedLegendPositionItem1.Name = "GalleryWeightedLegendPositionItem1"
         '
         'PieMapIsWeightedBarItem1
         '
-        Me.PieMapIsWeightedBarItem1.Id = 454
+        Me.PieMapIsWeightedBarItem1.Id = 231
         Me.PieMapIsWeightedBarItem1.Name = "PieMapIsWeightedBarItem1"
         '
         'ComboBoxStandardTypeBarItem1
         '
-        Me.ComboBoxStandardTypeBarItem1.Id = 455
+        Me.ComboBoxStandardTypeBarItem1.Id = 232
         Me.ComboBoxStandardTypeBarItem1.Name = "ComboBoxStandardTypeBarItem1"
         '
         'ComboBoxCheckedTypeBarItem1
         '
-        Me.ComboBoxCheckedTypeBarItem1.Id = 456
+        Me.ComboBoxCheckedTypeBarItem1.Id = 233
         Me.ComboBoxCheckedTypeBarItem1.Name = "ComboBoxCheckedTypeBarItem1"
         '
         'ListBoxCheckedTypeBarItem1
         '
-        Me.ListBoxCheckedTypeBarItem1.Id = 457
+        Me.ListBoxCheckedTypeBarItem1.Id = 234
         Me.ListBoxCheckedTypeBarItem1.Name = "ListBoxCheckedTypeBarItem1"
         '
         'ListBoxRadioTypeBarItem1
         '
-        Me.ListBoxRadioTypeBarItem1.Id = 458
+        Me.ListBoxRadioTypeBarItem1.Id = 235
         Me.ListBoxRadioTypeBarItem1.Name = "ListBoxRadioTypeBarItem1"
         '
         'FilterElementShowAllValueBarItem1
         '
-        Me.FilterElementShowAllValueBarItem1.Id = 459
+        Me.FilterElementShowAllValueBarItem1.Id = 236
         Me.FilterElementShowAllValueBarItem1.Name = "FilterElementShowAllValueBarItem1"
         '
         'FilterElementEnableSearchBarItem1
         '
-        Me.FilterElementEnableSearchBarItem1.Id = 460
+        Me.FilterElementEnableSearchBarItem1.Id = 237
         Me.FilterElementEnableSearchBarItem1.Name = "FilterElementEnableSearchBarItem1"
         '
         'TreeViewAutoExpandBarItem1
         '
-        Me.TreeViewAutoExpandBarItem1.Id = 461
+        Me.TreeViewAutoExpandBarItem1.Id = 238
         Me.TreeViewAutoExpandBarItem1.Name = "TreeViewAutoExpandBarItem1"
         '
         'DateFilterTypeBarItem1
         '
-        Me.DateFilterTypeBarItem1.Id = 462
+        Me.DateFilterTypeBarItem1.Id = 239
         Me.DateFilterTypeBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.DateFilterExactTypeBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.DateFilterFromTypeBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.DateFilterToTypeBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.DateFilterRangeTypeBarItem1)})
         Me.DateFilterTypeBarItem1.Name = "DateFilterTypeBarItem1"
         Me.DateFilterTypeBarItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
         '
         'DateFilterExactTypeBarItem1
         '
-        Me.DateFilterExactTypeBarItem1.Id = 463
+        Me.DateFilterExactTypeBarItem1.Id = 240
         Me.DateFilterExactTypeBarItem1.Name = "DateFilterExactTypeBarItem1"
         '
         'DateFilterFromTypeBarItem1
         '
-        Me.DateFilterFromTypeBarItem1.Id = 464
+        Me.DateFilterFromTypeBarItem1.Id = 241
         Me.DateFilterFromTypeBarItem1.Name = "DateFilterFromTypeBarItem1"
         '
         'DateFilterToTypeBarItem1
         '
-        Me.DateFilterToTypeBarItem1.Id = 465
+        Me.DateFilterToTypeBarItem1.Id = 242
         Me.DateFilterToTypeBarItem1.Name = "DateFilterToTypeBarItem1"
         '
         'DateFilterRangeTypeBarItem1
         '
-        Me.DateFilterRangeTypeBarItem1.Id = 466
+        Me.DateFilterRangeTypeBarItem1.Id = 243
         Me.DateFilterRangeTypeBarItem1.Name = "DateFilterRangeTypeBarItem1"
         '
         'DateFilterArrangementModeBarItem1
         '
-        Me.DateFilterArrangementModeBarItem1.Id = 467
+        Me.DateFilterArrangementModeBarItem1.Id = 244
         Me.DateFilterArrangementModeBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.DateFilterAutoHeightArrangementModeBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.DateFilterHorizontalArrangementModeBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.DateFilterVerticalArrangementModeBarItem1)})
         Me.DateFilterArrangementModeBarItem1.Name = "DateFilterArrangementModeBarItem1"
         Me.DateFilterArrangementModeBarItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
         '
         'DateFilterAutoHeightArrangementModeBarItem1
         '
-        Me.DateFilterAutoHeightArrangementModeBarItem1.Id = 468
+        Me.DateFilterAutoHeightArrangementModeBarItem1.Id = 245
         Me.DateFilterAutoHeightArrangementModeBarItem1.Name = "DateFilterAutoHeightArrangementModeBarItem1"
         '
         'DateFilterHorizontalArrangementModeBarItem1
         '
-        Me.DateFilterHorizontalArrangementModeBarItem1.Id = 469
+        Me.DateFilterHorizontalArrangementModeBarItem1.Id = 246
         Me.DateFilterHorizontalArrangementModeBarItem1.Name = "DateFilterHorizontalArrangementModeBarItem1"
         '
         'DateFilterVerticalArrangementModeBarItem1
         '
-        Me.DateFilterVerticalArrangementModeBarItem1.Id = 470
+        Me.DateFilterVerticalArrangementModeBarItem1.Id = 247
         Me.DateFilterVerticalArrangementModeBarItem1.Name = "DateFilterVerticalArrangementModeBarItem1"
         '
         'DateFilterDatePickerLocationBarItem1
         '
-        Me.DateFilterDatePickerLocationBarItem1.Id = 471
+        Me.DateFilterDatePickerLocationBarItem1.Id = 248
         Me.DateFilterDatePickerLocationBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.DateFilterFarDatePickerLocationBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.DateFilterNearDatePickerLocationBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.DateFilterHiddenDatePickerLocationBarItem1)})
         Me.DateFilterDatePickerLocationBarItem1.Name = "DateFilterDatePickerLocationBarItem1"
         Me.DateFilterDatePickerLocationBarItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
         '
         'DateFilterFarDatePickerLocationBarItem1
         '
-        Me.DateFilterFarDatePickerLocationBarItem1.Id = 472
+        Me.DateFilterFarDatePickerLocationBarItem1.Id = 249
         Me.DateFilterFarDatePickerLocationBarItem1.Name = "DateFilterFarDatePickerLocationBarItem1"
         '
         'DateFilterNearDatePickerLocationBarItem1
         '
-        Me.DateFilterNearDatePickerLocationBarItem1.Id = 473
+        Me.DateFilterNearDatePickerLocationBarItem1.Id = 250
         Me.DateFilterNearDatePickerLocationBarItem1.Name = "DateFilterNearDatePickerLocationBarItem1"
         '
         'DateFilterHiddenDatePickerLocationBarItem1
         '
-        Me.DateFilterHiddenDatePickerLocationBarItem1.Id = 474
+        Me.DateFilterHiddenDatePickerLocationBarItem1.Id = 251
         Me.DateFilterHiddenDatePickerLocationBarItem1.Name = "DateFilterHiddenDatePickerLocationBarItem1"
         '
         'DateFilterEditDateTimePeriodsBarItem1
         '
-        Me.DateFilterEditDateTimePeriodsBarItem1.Id = 475
+        Me.DateFilterEditDateTimePeriodsBarItem1.Id = 252
         Me.DateFilterEditDateTimePeriodsBarItem1.Name = "DateFilterEditDateTimePeriodsBarItem1"
         '
         'ImageSizeModeClipBarItem1
         '
-        Me.ImageSizeModeClipBarItem1.Id = 476
+        Me.ImageSizeModeClipBarItem1.Id = 253
         Me.ImageSizeModeClipBarItem1.Name = "ImageSizeModeClipBarItem1"
         '
         'ImageSizeModeStretchBarItem1
         '
-        Me.ImageSizeModeStretchBarItem1.Id = 477
+        Me.ImageSizeModeStretchBarItem1.Id = 254
         Me.ImageSizeModeStretchBarItem1.Name = "ImageSizeModeStretchBarItem1"
         '
         'ImageSizeModeSqueezeBarItem1
         '
-        Me.ImageSizeModeSqueezeBarItem1.Id = 478
+        Me.ImageSizeModeSqueezeBarItem1.Id = 255
         Me.ImageSizeModeSqueezeBarItem1.Name = "ImageSizeModeSqueezeBarItem1"
         '
         'ImageSizeModeZoomBarItem1
         '
-        Me.ImageSizeModeZoomBarItem1.Id = 479
+        Me.ImageSizeModeZoomBarItem1.Id = 256
         Me.ImageSizeModeZoomBarItem1.Name = "ImageSizeModeZoomBarItem1"
         '
         'ImageAlignmentTopLeftBarItem1
         '
-        Me.ImageAlignmentTopLeftBarItem1.Id = 480
+        Me.ImageAlignmentTopLeftBarItem1.Id = 257
         Me.ImageAlignmentTopLeftBarItem1.Name = "ImageAlignmentTopLeftBarItem1"
         Me.ImageAlignmentTopLeftBarItem1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText
         '
         'ImageAlignmentCenterLeftBarItem1
         '
-        Me.ImageAlignmentCenterLeftBarItem1.Id = 481
+        Me.ImageAlignmentCenterLeftBarItem1.Id = 258
         Me.ImageAlignmentCenterLeftBarItem1.Name = "ImageAlignmentCenterLeftBarItem1"
         Me.ImageAlignmentCenterLeftBarItem1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText
         '
         'ImageAlignmentBottomLeftBarItem1
         '
-        Me.ImageAlignmentBottomLeftBarItem1.Id = 482
+        Me.ImageAlignmentBottomLeftBarItem1.Id = 259
         Me.ImageAlignmentBottomLeftBarItem1.Name = "ImageAlignmentBottomLeftBarItem1"
         Me.ImageAlignmentBottomLeftBarItem1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText
         '
         'ImageAlignmentTopCenterBarItem1
         '
-        Me.ImageAlignmentTopCenterBarItem1.Id = 483
+        Me.ImageAlignmentTopCenterBarItem1.Id = 260
         Me.ImageAlignmentTopCenterBarItem1.Name = "ImageAlignmentTopCenterBarItem1"
         Me.ImageAlignmentTopCenterBarItem1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText
         '
         'ImageAlignmentCenterCenterBarItem1
         '
-        Me.ImageAlignmentCenterCenterBarItem1.Id = 484
+        Me.ImageAlignmentCenterCenterBarItem1.Id = 261
         Me.ImageAlignmentCenterCenterBarItem1.Name = "ImageAlignmentCenterCenterBarItem1"
         Me.ImageAlignmentCenterCenterBarItem1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText
         '
         'ImageAlignmentBottomCenterBarItem1
         '
-        Me.ImageAlignmentBottomCenterBarItem1.Id = 485
+        Me.ImageAlignmentBottomCenterBarItem1.Id = 262
         Me.ImageAlignmentBottomCenterBarItem1.Name = "ImageAlignmentBottomCenterBarItem1"
         Me.ImageAlignmentBottomCenterBarItem1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText
         '
         'ImageAlignmentTopRightBarItem1
         '
-        Me.ImageAlignmentTopRightBarItem1.Id = 486
+        Me.ImageAlignmentTopRightBarItem1.Id = 263
         Me.ImageAlignmentTopRightBarItem1.Name = "ImageAlignmentTopRightBarItem1"
         Me.ImageAlignmentTopRightBarItem1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText
         '
         'ImageAlignmentCenterRightBarItem1
         '
-        Me.ImageAlignmentCenterRightBarItem1.Id = 487
+        Me.ImageAlignmentCenterRightBarItem1.Id = 264
         Me.ImageAlignmentCenterRightBarItem1.Name = "ImageAlignmentCenterRightBarItem1"
         Me.ImageAlignmentCenterRightBarItem1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText
         '
         'ImageAlignmentBottomRightBarItem1
         '
-        Me.ImageAlignmentBottomRightBarItem1.Id = 488
+        Me.ImageAlignmentBottomRightBarItem1.Id = 265
         Me.ImageAlignmentBottomRightBarItem1.Name = "ImageAlignmentBottomRightBarItem1"
         Me.ImageAlignmentBottomRightBarItem1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText
         '
         'TextBoxEditTextBarItem1
         '
-        Me.TextBoxEditTextBarItem1.Id = 489
+        Me.TextBoxEditTextBarItem1.Id = 266
         Me.TextBoxEditTextBarItem1.Name = "TextBoxEditTextBarItem1"
         '
         'TextBoxInsertFieldBarItem1
         '
-        Me.TextBoxInsertFieldBarItem1.Id = 490
+        Me.TextBoxInsertFieldBarItem1.Id = 267
         Me.TextBoxInsertFieldBarItem1.Name = "TextBoxInsertFieldBarItem1"
         '
         'TreemapSliceAndDiceLayoutAlgorithmBarItem1
         '
-        Me.TreemapSliceAndDiceLayoutAlgorithmBarItem1.Id = 491
+        Me.TreemapSliceAndDiceLayoutAlgorithmBarItem1.Id = 268
         Me.TreemapSliceAndDiceLayoutAlgorithmBarItem1.Name = "TreemapSliceAndDiceLayoutAlgorithmBarItem1"
         '
         'TreemapSquarifiedLayoutAlgorithmBarItem1
         '
-        Me.TreemapSquarifiedLayoutAlgorithmBarItem1.Id = 492
+        Me.TreemapSquarifiedLayoutAlgorithmBarItem1.Id = 269
         Me.TreemapSquarifiedLayoutAlgorithmBarItem1.Name = "TreemapSquarifiedLayoutAlgorithmBarItem1"
         '
         'TreemapStripedLayoutAlgorithmBarItem1
         '
-        Me.TreemapStripedLayoutAlgorithmBarItem1.Id = 493
+        Me.TreemapStripedLayoutAlgorithmBarItem1.Id = 270
         Me.TreemapStripedLayoutAlgorithmBarItem1.Name = "TreemapStripedLayoutAlgorithmBarItem1"
         '
         'TreemapLayoutDirectionBarItem1
         '
-        Me.TreemapLayoutDirectionBarItem1.Id = 494
+        Me.TreemapLayoutDirectionBarItem1.Id = 271
         Me.TreemapLayoutDirectionBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.TreemapBottomLeftToTopRightLayoutDirectionBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.TreemapBottomRightToTopLeftLayoutDirectionBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.TreemapTopLeftToBottomRightLayoutDirectionBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.TreemapTopRightToBottomLeftLayoutDirectionBarItem1)})
         Me.TreemapLayoutDirectionBarItem1.Name = "TreemapLayoutDirectionBarItem1"
         Me.TreemapLayoutDirectionBarItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
         '
         'TreemapBottomLeftToTopRightLayoutDirectionBarItem1
         '
-        Me.TreemapBottomLeftToTopRightLayoutDirectionBarItem1.Id = 495
+        Me.TreemapBottomLeftToTopRightLayoutDirectionBarItem1.Id = 272
         Me.TreemapBottomLeftToTopRightLayoutDirectionBarItem1.Name = "TreemapBottomLeftToTopRightLayoutDirectionBarItem1"
         '
         'TreemapBottomRightToTopLeftLayoutDirectionBarItem1
         '
-        Me.TreemapBottomRightToTopLeftLayoutDirectionBarItem1.Id = 496
+        Me.TreemapBottomRightToTopLeftLayoutDirectionBarItem1.Id = 273
         Me.TreemapBottomRightToTopLeftLayoutDirectionBarItem1.Name = "TreemapBottomRightToTopLeftLayoutDirectionBarItem1"
         '
         'TreemapTopLeftToBottomRightLayoutDirectionBarItem1
         '
-        Me.TreemapTopLeftToBottomRightLayoutDirectionBarItem1.Id = 497
+        Me.TreemapTopLeftToBottomRightLayoutDirectionBarItem1.Id = 274
         Me.TreemapTopLeftToBottomRightLayoutDirectionBarItem1.Name = "TreemapTopLeftToBottomRightLayoutDirectionBarItem1"
         '
         'TreemapTopRightToBottomLeftLayoutDirectionBarItem1
         '
-        Me.TreemapTopRightToBottomLeftLayoutDirectionBarItem1.Id = 498
+        Me.TreemapTopRightToBottomLeftLayoutDirectionBarItem1.Id = 275
         Me.TreemapTopRightToBottomLeftLayoutDirectionBarItem1.Name = "TreemapTopRightToBottomLeftLayoutDirectionBarItem1"
         '
         'TreemapTileLabelsBarItem1
         '
-        Me.TreemapTileLabelsBarItem1.Id = 499
+        Me.TreemapTileLabelsBarItem1.Id = 276
         Me.TreemapTileLabelsBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.TreemapTileLabelsNoneBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.TreemapTileLabelsArgumentBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.TreemapTileLabelsValueBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.TreemapTileLabelsArgumentAndValueBarItem1)})
         Me.TreemapTileLabelsBarItem1.Name = "TreemapTileLabelsBarItem1"
         Me.TreemapTileLabelsBarItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu
         '
         'TreemapTileLabelsNoneBarItem1
         '
-        Me.TreemapTileLabelsNoneBarItem1.Id = 500
+        Me.TreemapTileLabelsNoneBarItem1.Id = 277
         Me.TreemapTileLabelsNoneBarItem1.Name = "TreemapTileLabelsNoneBarItem1"
         '
         'TreemapTileLabelsArgumentBarItem1
         '
-        Me.TreemapTileLabelsArgumentBarItem1.Id = 501
+        Me.TreemapTileLabelsArgumentBarItem1.Id = 278
         Me.TreemapTileLabelsArgumentBarItem1.Name = "TreemapTileLabelsArgumentBarItem1"
         '
         'TreemapTileLabelsValueBarItem1
         '
-        Me.TreemapTileLabelsValueBarItem1.Id = 502
+        Me.TreemapTileLabelsValueBarItem1.Id = 279
         Me.TreemapTileLabelsValueBarItem1.Name = "TreemapTileLabelsValueBarItem1"
         '
         'TreemapTileLabelsArgumentAndValueBarItem1
         '
-        Me.TreemapTileLabelsArgumentAndValueBarItem1.Id = 503
+        Me.TreemapTileLabelsArgumentAndValueBarItem1.Id = 280
         Me.TreemapTileLabelsArgumentAndValueBarItem1.Name = "TreemapTileLabelsArgumentAndValueBarItem1"
         '
         'TreemapTileTooltipsBarItem1
         '
-        Me.TreemapTileTooltipsBarItem1.Id = 504
+        Me.TreemapTileTooltipsBarItem1.Id = 281
         Me.TreemapTileTooltipsBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.TreemapTileTooltipsNoneBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.TreemapTileTooltipsArgumentBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.TreemapTileTooltipsValueBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.TreemapTileTooltipsArgumentAndValueBarItem1)})
         Me.TreemapTileTooltipsBarItem1.Name = "TreemapTileTooltipsBarItem1"
         Me.TreemapTileTooltipsBarItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu
         '
         'TreemapTileTooltipsNoneBarItem1
         '
-        Me.TreemapTileTooltipsNoneBarItem1.Id = 505
+        Me.TreemapTileTooltipsNoneBarItem1.Id = 282
         Me.TreemapTileTooltipsNoneBarItem1.Name = "TreemapTileTooltipsNoneBarItem1"
         '
         'TreemapTileTooltipsArgumentBarItem1
         '
-        Me.TreemapTileTooltipsArgumentBarItem1.Id = 506
+        Me.TreemapTileTooltipsArgumentBarItem1.Id = 283
         Me.TreemapTileTooltipsArgumentBarItem1.Name = "TreemapTileTooltipsArgumentBarItem1"
         '
         'TreemapTileTooltipsValueBarItem1
         '
-        Me.TreemapTileTooltipsValueBarItem1.Id = 507
+        Me.TreemapTileTooltipsValueBarItem1.Id = 284
         Me.TreemapTileTooltipsValueBarItem1.Name = "TreemapTileTooltipsValueBarItem1"
         '
         'TreemapTileTooltipsArgumentAndValueBarItem1
         '
-        Me.TreemapTileTooltipsArgumentAndValueBarItem1.Id = 508
+        Me.TreemapTileTooltipsArgumentAndValueBarItem1.Id = 285
         Me.TreemapTileTooltipsArgumentAndValueBarItem1.Name = "TreemapTileTooltipsArgumentAndValueBarItem1"
         '
         'TreemapGroupLabelsBarItem1
         '
-        Me.TreemapGroupLabelsBarItem1.Id = 509
+        Me.TreemapGroupLabelsBarItem1.Id = 286
         Me.TreemapGroupLabelsBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.TreemapGroupLabelsNoneBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.TreemapGroupLabelsArgumentBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.TreemapGroupLabelsValueBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.TreemapGroupLabelsArgumentAndValueBarItem1)})
         Me.TreemapGroupLabelsBarItem1.Name = "TreemapGroupLabelsBarItem1"
         Me.TreemapGroupLabelsBarItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu
         '
         'TreemapGroupLabelsNoneBarItem1
         '
-        Me.TreemapGroupLabelsNoneBarItem1.Id = 510
+        Me.TreemapGroupLabelsNoneBarItem1.Id = 287
         Me.TreemapGroupLabelsNoneBarItem1.Name = "TreemapGroupLabelsNoneBarItem1"
         '
         'TreemapGroupLabelsArgumentBarItem1
         '
-        Me.TreemapGroupLabelsArgumentBarItem1.Id = 511
+        Me.TreemapGroupLabelsArgumentBarItem1.Id = 288
         Me.TreemapGroupLabelsArgumentBarItem1.Name = "TreemapGroupLabelsArgumentBarItem1"
         '
         'TreemapGroupLabelsValueBarItem1
         '
-        Me.TreemapGroupLabelsValueBarItem1.Id = 512
+        Me.TreemapGroupLabelsValueBarItem1.Id = 289
         Me.TreemapGroupLabelsValueBarItem1.Name = "TreemapGroupLabelsValueBarItem1"
         '
         'TreemapGroupLabelsArgumentAndValueBarItem1
         '
-        Me.TreemapGroupLabelsArgumentAndValueBarItem1.Id = 513
+        Me.TreemapGroupLabelsArgumentAndValueBarItem1.Id = 290
         Me.TreemapGroupLabelsArgumentAndValueBarItem1.Name = "TreemapGroupLabelsArgumentAndValueBarItem1"
         '
         'TreemapGroupTooltipsBarItem1
         '
-        Me.TreemapGroupTooltipsBarItem1.Id = 514
+        Me.TreemapGroupTooltipsBarItem1.Id = 291
         Me.TreemapGroupTooltipsBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.TreemapGroupTooltipsNoneBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.TreemapGroupTooltipsArgumentBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.TreemapGroupTooltipsValueBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.TreemapGroupTooltipsArgumentAndValueBarItem1)})
         Me.TreemapGroupTooltipsBarItem1.Name = "TreemapGroupTooltipsBarItem1"
         Me.TreemapGroupTooltipsBarItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu
         '
         'TreemapGroupTooltipsNoneBarItem1
         '
-        Me.TreemapGroupTooltipsNoneBarItem1.Id = 515
+        Me.TreemapGroupTooltipsNoneBarItem1.Id = 292
         Me.TreemapGroupTooltipsNoneBarItem1.Name = "TreemapGroupTooltipsNoneBarItem1"
         '
         'TreemapGroupTooltipsArgumentBarItem1
         '
-        Me.TreemapGroupTooltipsArgumentBarItem1.Id = 516
+        Me.TreemapGroupTooltipsArgumentBarItem1.Id = 293
         Me.TreemapGroupTooltipsArgumentBarItem1.Name = "TreemapGroupTooltipsArgumentBarItem1"
         '
         'TreemapGroupTooltipsValueBarItem1
         '
-        Me.TreemapGroupTooltipsValueBarItem1.Id = 517
+        Me.TreemapGroupTooltipsValueBarItem1.Id = 294
         Me.TreemapGroupTooltipsValueBarItem1.Name = "TreemapGroupTooltipsValueBarItem1"
         '
         'TreemapGroupTooltipsArgumentAndValueBarItem1
         '
-        Me.TreemapGroupTooltipsArgumentAndValueBarItem1.Id = 518
+        Me.TreemapGroupTooltipsArgumentAndValueBarItem1.Id = 295
         Me.TreemapGroupTooltipsArgumentAndValueBarItem1.Name = "TreemapGroupTooltipsArgumentAndValueBarItem1"
         '
         'ImageLoadBarItem1
         '
-        Me.ImageLoadBarItem1.Id = 519
+        Me.ImageLoadBarItem1.Id = 296
         Me.ImageLoadBarItem1.Name = "ImageLoadBarItem1"
         '
         'ImageImportBarItem1
         '
-        Me.ImageImportBarItem1.Id = 520
+        Me.ImageImportBarItem1.Id = 297
         Me.ImageImportBarItem1.Name = "ImageImportBarItem1"
         '
         'GroupMasterFilterBarItem1
         '
-        Me.GroupMasterFilterBarItem1.Id = 521
+        Me.GroupMasterFilterBarItem1.Id = 298
         Me.GroupMasterFilterBarItem1.Name = "GroupMasterFilterBarItem1"
         '
         'GroupIgnoreMasterFilterBarItem1
         '
-        Me.GroupIgnoreMasterFilterBarItem1.Id = 522
+        Me.GroupIgnoreMasterFilterBarItem1.Id = 299
         Me.GroupIgnoreMasterFilterBarItem1.Name = "GroupIgnoreMasterFilterBarItem1"
         '
         'ShowGroupCaptionBarItem1
         '
-        Me.ShowGroupCaptionBarItem1.Id = 523
+        Me.ShowGroupCaptionBarItem1.Id = 300
         Me.ShowGroupCaptionBarItem1.Name = "ShowGroupCaptionBarItem1"
         '
         'EditGroupNamesBarItem1
         '
-        Me.EditGroupNamesBarItem1.Id = 524
+        Me.EditGroupNamesBarItem1.Id = 301
         Me.EditGroupNamesBarItem1.Name = "EditGroupNamesBarItem1"
         '
         'TabPageMasterFilterBarItem1
         '
-        Me.TabPageMasterFilterBarItem1.Id = 525
+        Me.TabPageMasterFilterBarItem1.Id = 302
         Me.TabPageMasterFilterBarItem1.Name = "TabPageMasterFilterBarItem1"
         '
         'TabPageIgnoreMasterFilterBarItem1
         '
-        Me.TabPageIgnoreMasterFilterBarItem1.Id = 526
+        Me.TabPageIgnoreMasterFilterBarItem1.Id = 303
         Me.TabPageIgnoreMasterFilterBarItem1.Name = "TabPageIgnoreMasterFilterBarItem1"
         '
         'ShowTabPageCaptionBarItem1
         '
-        Me.ShowTabPageCaptionBarItem1.Id = 527
+        Me.ShowTabPageCaptionBarItem1.Id = 304
         Me.ShowTabPageCaptionBarItem1.Name = "ShowTabPageCaptionBarItem1"
         '
         'EditTabPageNamesBarItem1
         '
-        Me.EditTabPageNamesBarItem1.Id = 528
+        Me.EditTabPageNamesBarItem1.Id = 305
         Me.EditTabPageNamesBarItem1.Name = "EditTabPageNamesBarItem1"
         '
         'DisplayItemAsTabPageBarItem1
         '
-        Me.DisplayItemAsTabPageBarItem1.Id = 529
+        Me.DisplayItemAsTabPageBarItem1.Id = 306
         Me.DisplayItemAsTabPageBarItem1.Name = "DisplayItemAsTabPageBarItem1"
         '
         'ReorderTabsBarItem1
         '
-        Me.ReorderTabsBarItem1.Id = 530
+        Me.ReorderTabsBarItem1.Id = 307
         Me.ReorderTabsBarItem1.Name = "ReorderTabsBarItem1"
         '
         'UndoItem1
         '
         Me.UndoItem1.Enabled = False
-        Me.UndoItem1.Id = 538
+        Me.UndoItem1.Id = 315
         Me.UndoItem1.Name = "UndoItem1"
         '
         'RedoItem1
         '
         Me.RedoItem1.Enabled = False
-        Me.RedoItem1.Id = 539
+        Me.RedoItem1.Id = 316
         Me.RedoItem1.Name = "RedoItem1"
         '
         'FileOpenItem1
         '
         Me.FileOpenItem1.Enabled = False
-        Me.FileOpenItem1.Id = 540
+        Me.FileOpenItem1.Id = 317
         Me.FileOpenItem1.Name = "FileOpenItem1"
         '
         'PasteItem1
         '
         Me.PasteItem1.Enabled = False
-        Me.PasteItem1.Id = 541
+        Me.PasteItem1.Id = 318
         Me.PasteItem1.Name = "PasteItem1"
         '
         'CutItem1
         '
         Me.CutItem1.Enabled = False
-        Me.CutItem1.Id = 542
+        Me.CutItem1.Id = 319
         Me.CutItem1.Name = "CutItem1"
         '
         'CopyItem1
         '
         Me.CopyItem1.Enabled = False
-        Me.CopyItem1.Id = 543
+        Me.CopyItem1.Id = 320
         Me.CopyItem1.Name = "CopyItem1"
         '
         'PasteSpecialItem1
         '
         Me.PasteSpecialItem1.Enabled = False
-        Me.PasteSpecialItem1.Id = 544
+        Me.PasteSpecialItem1.Id = 321
         Me.PasteSpecialItem1.Name = "PasteSpecialItem1"
         '
         'BarButtonGroup1
         '
-        Me.BarButtonGroup1.Id = 531
+        Me.BarButtonGroup1.Id = 308
         Me.BarButtonGroup1.ItemLinks.Add(Me.ChangeFontNameItem1)
         Me.BarButtonGroup1.ItemLinks.Add(Me.ChangeFontSizeItem1)
         Me.BarButtonGroup1.ItemLinks.Add(Me.FontSizeIncreaseItem1)
@@ -3242,7 +3141,7 @@ Partial Class frmDashboardDesigner
         '
         Me.ChangeFontNameItem1.Edit = Me.RepositoryItemFontEdit1
         Me.ChangeFontNameItem1.Enabled = False
-        Me.ChangeFontNameItem1.Id = 545
+        Me.ChangeFontNameItem1.Id = 322
         Me.ChangeFontNameItem1.Name = "ChangeFontNameItem1"
         '
         'RepositoryItemFontEdit1
@@ -3255,7 +3154,7 @@ Partial Class frmDashboardDesigner
         '
         Me.ChangeFontSizeItem1.Edit = Me.RepositoryItemRichEditFontSizeEdit1
         Me.ChangeFontSizeItem1.Enabled = False
-        Me.ChangeFontSizeItem1.Id = 546
+        Me.ChangeFontSizeItem1.Id = 323
         Me.ChangeFontSizeItem1.Name = "ChangeFontSizeItem1"
         '
         'RepositoryItemRichEditFontSizeEdit1
@@ -3268,18 +3167,18 @@ Partial Class frmDashboardDesigner
         'FontSizeIncreaseItem1
         '
         Me.FontSizeIncreaseItem1.Enabled = False
-        Me.FontSizeIncreaseItem1.Id = 547
+        Me.FontSizeIncreaseItem1.Id = 324
         Me.FontSizeIncreaseItem1.Name = "FontSizeIncreaseItem1"
         '
         'FontSizeDecreaseItem1
         '
         Me.FontSizeDecreaseItem1.Enabled = False
-        Me.FontSizeDecreaseItem1.Id = 548
+        Me.FontSizeDecreaseItem1.Id = 325
         Me.FontSizeDecreaseItem1.Name = "FontSizeDecreaseItem1"
         '
         'BarButtonGroup2
         '
-        Me.BarButtonGroup2.Id = 532
+        Me.BarButtonGroup2.Id = 309
         Me.BarButtonGroup2.ItemLinks.Add(Me.ToggleFontBoldItem1)
         Me.BarButtonGroup2.ItemLinks.Add(Me.ToggleFontItalicItem1)
         Me.BarButtonGroup2.ItemLinks.Add(Me.ToggleFontUnderlineItem1)
@@ -3294,54 +3193,54 @@ Partial Class frmDashboardDesigner
         'ToggleFontBoldItem1
         '
         Me.ToggleFontBoldItem1.Enabled = False
-        Me.ToggleFontBoldItem1.Id = 549
+        Me.ToggleFontBoldItem1.Id = 326
         Me.ToggleFontBoldItem1.Name = "ToggleFontBoldItem1"
         '
         'ToggleFontItalicItem1
         '
         Me.ToggleFontItalicItem1.Enabled = False
-        Me.ToggleFontItalicItem1.Id = 550
+        Me.ToggleFontItalicItem1.Id = 327
         Me.ToggleFontItalicItem1.Name = "ToggleFontItalicItem1"
         '
         'ToggleFontUnderlineItem1
         '
         Me.ToggleFontUnderlineItem1.Enabled = False
-        Me.ToggleFontUnderlineItem1.Id = 551
+        Me.ToggleFontUnderlineItem1.Id = 328
         Me.ToggleFontUnderlineItem1.Name = "ToggleFontUnderlineItem1"
         '
         'ToggleFontDoubleUnderlineItem1
         '
         Me.ToggleFontDoubleUnderlineItem1.Enabled = False
-        Me.ToggleFontDoubleUnderlineItem1.Id = 552
+        Me.ToggleFontDoubleUnderlineItem1.Id = 329
         Me.ToggleFontDoubleUnderlineItem1.Name = "ToggleFontDoubleUnderlineItem1"
         '
         'ToggleFontStrikeoutItem1
         '
         Me.ToggleFontStrikeoutItem1.Enabled = False
-        Me.ToggleFontStrikeoutItem1.Id = 553
+        Me.ToggleFontStrikeoutItem1.Id = 330
         Me.ToggleFontStrikeoutItem1.Name = "ToggleFontStrikeoutItem1"
         '
         'ToggleFontDoubleStrikeoutItem1
         '
         Me.ToggleFontDoubleStrikeoutItem1.Enabled = False
-        Me.ToggleFontDoubleStrikeoutItem1.Id = 554
+        Me.ToggleFontDoubleStrikeoutItem1.Id = 331
         Me.ToggleFontDoubleStrikeoutItem1.Name = "ToggleFontDoubleStrikeoutItem1"
         '
         'ToggleFontSuperscriptItem1
         '
         Me.ToggleFontSuperscriptItem1.Enabled = False
-        Me.ToggleFontSuperscriptItem1.Id = 555
+        Me.ToggleFontSuperscriptItem1.Id = 332
         Me.ToggleFontSuperscriptItem1.Name = "ToggleFontSuperscriptItem1"
         '
         'ToggleFontSubscriptItem1
         '
         Me.ToggleFontSubscriptItem1.Enabled = False
-        Me.ToggleFontSubscriptItem1.Id = 556
+        Me.ToggleFontSubscriptItem1.Id = 333
         Me.ToggleFontSubscriptItem1.Name = "ToggleFontSubscriptItem1"
         '
         'BarButtonGroup3
         '
-        Me.BarButtonGroup3.Id = 533
+        Me.BarButtonGroup3.Id = 310
         Me.BarButtonGroup3.ItemLinks.Add(Me.ChangeFontColorItem1)
         Me.BarButtonGroup3.ItemLinks.Add(Me.ChangeFontHighlightColorItem1)
         Me.BarButtonGroup3.Name = "BarButtonGroup3"
@@ -3350,55 +3249,55 @@ Partial Class frmDashboardDesigner
         'ChangeFontColorItem1
         '
         Me.ChangeFontColorItem1.Enabled = False
-        Me.ChangeFontColorItem1.Id = 557
+        Me.ChangeFontColorItem1.Id = 334
         Me.ChangeFontColorItem1.Name = "ChangeFontColorItem1"
         '
         'ChangeFontHighlightColorItem1
         '
         Me.ChangeFontHighlightColorItem1.Enabled = False
-        Me.ChangeFontHighlightColorItem1.Id = 558
+        Me.ChangeFontHighlightColorItem1.Id = 335
         Me.ChangeFontHighlightColorItem1.Name = "ChangeFontHighlightColorItem1"
         '
         'ChangeTextCaseItem1
         '
         Me.ChangeTextCaseItem1.Enabled = False
-        Me.ChangeTextCaseItem1.Id = 559
+        Me.ChangeTextCaseItem1.Id = 336
         Me.ChangeTextCaseItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.MakeTextUpperCaseItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.MakeTextLowerCaseItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.CapitalizeEachWordCaseItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ToggleTextCaseItem1)})
         Me.ChangeTextCaseItem1.Name = "ChangeTextCaseItem1"
         '
         'MakeTextUpperCaseItem1
         '
         Me.MakeTextUpperCaseItem1.Enabled = False
-        Me.MakeTextUpperCaseItem1.Id = 560
+        Me.MakeTextUpperCaseItem1.Id = 337
         Me.MakeTextUpperCaseItem1.Name = "MakeTextUpperCaseItem1"
         '
         'MakeTextLowerCaseItem1
         '
         Me.MakeTextLowerCaseItem1.Enabled = False
-        Me.MakeTextLowerCaseItem1.Id = 561
+        Me.MakeTextLowerCaseItem1.Id = 338
         Me.MakeTextLowerCaseItem1.Name = "MakeTextLowerCaseItem1"
         '
         'CapitalizeEachWordCaseItem1
         '
         Me.CapitalizeEachWordCaseItem1.Enabled = False
-        Me.CapitalizeEachWordCaseItem1.Id = 562
+        Me.CapitalizeEachWordCaseItem1.Id = 339
         Me.CapitalizeEachWordCaseItem1.Name = "CapitalizeEachWordCaseItem1"
         '
         'ToggleTextCaseItem1
         '
         Me.ToggleTextCaseItem1.Enabled = False
-        Me.ToggleTextCaseItem1.Id = 563
+        Me.ToggleTextCaseItem1.Id = 340
         Me.ToggleTextCaseItem1.Name = "ToggleTextCaseItem1"
         '
         'ClearFormattingItem1
         '
         Me.ClearFormattingItem1.Enabled = False
-        Me.ClearFormattingItem1.Id = 564
+        Me.ClearFormattingItem1.Id = 341
         Me.ClearFormattingItem1.Name = "ClearFormattingItem1"
         '
         'BarButtonGroup4
         '
-        Me.BarButtonGroup4.Id = 534
+        Me.BarButtonGroup4.Id = 311
         Me.BarButtonGroup4.ItemLinks.Add(Me.ToggleBulletedListItem1)
         Me.BarButtonGroup4.ItemLinks.Add(Me.ToggleNumberingListItem1)
         Me.BarButtonGroup4.ItemLinks.Add(Me.ToggleMultiLevelListItem1)
@@ -3411,42 +3310,42 @@ Partial Class frmDashboardDesigner
         'ToggleBulletedListItem1
         '
         Me.ToggleBulletedListItem1.Enabled = False
-        Me.ToggleBulletedListItem1.Id = 565
+        Me.ToggleBulletedListItem1.Id = 342
         Me.ToggleBulletedListItem1.Name = "ToggleBulletedListItem1"
         '
         'ToggleNumberingListItem1
         '
         Me.ToggleNumberingListItem1.Enabled = False
-        Me.ToggleNumberingListItem1.Id = 566
+        Me.ToggleNumberingListItem1.Id = 343
         Me.ToggleNumberingListItem1.Name = "ToggleNumberingListItem1"
         '
         'ToggleMultiLevelListItem1
         '
         Me.ToggleMultiLevelListItem1.Enabled = False
-        Me.ToggleMultiLevelListItem1.Id = 567
+        Me.ToggleMultiLevelListItem1.Id = 344
         Me.ToggleMultiLevelListItem1.Name = "ToggleMultiLevelListItem1"
         '
         'RtlToggleBulletedListItem1
         '
         Me.RtlToggleBulletedListItem1.Enabled = False
-        Me.RtlToggleBulletedListItem1.Id = 570
+        Me.RtlToggleBulletedListItem1.Id = 347
         Me.RtlToggleBulletedListItem1.Name = "RtlToggleBulletedListItem1"
         '
         'RtlToggleNumberingListItem1
         '
         Me.RtlToggleNumberingListItem1.Enabled = False
-        Me.RtlToggleNumberingListItem1.Id = 571
+        Me.RtlToggleNumberingListItem1.Id = 348
         Me.RtlToggleNumberingListItem1.Name = "RtlToggleNumberingListItem1"
         '
         'RtlToggleMultiLevelListItem1
         '
         Me.RtlToggleMultiLevelListItem1.Enabled = False
-        Me.RtlToggleMultiLevelListItem1.Id = 572
+        Me.RtlToggleMultiLevelListItem1.Id = 349
         Me.RtlToggleMultiLevelListItem1.Name = "RtlToggleMultiLevelListItem1"
         '
         'BarButtonGroup5
         '
-        Me.BarButtonGroup5.Id = 535
+        Me.BarButtonGroup5.Id = 312
         Me.BarButtonGroup5.ItemLinks.Add(Me.DecreaseIndentItem1)
         Me.BarButtonGroup5.ItemLinks.Add(Me.IncreaseIndentItem1)
         Me.BarButtonGroup5.ItemLinks.Add(Me.RtlDecreaseIndentItem1)
@@ -3460,48 +3359,48 @@ Partial Class frmDashboardDesigner
         'DecreaseIndentItem1
         '
         Me.DecreaseIndentItem1.Enabled = False
-        Me.DecreaseIndentItem1.Id = 568
+        Me.DecreaseIndentItem1.Id = 345
         Me.DecreaseIndentItem1.Name = "DecreaseIndentItem1"
         '
         'IncreaseIndentItem1
         '
         Me.IncreaseIndentItem1.Enabled = False
-        Me.IncreaseIndentItem1.Id = 569
+        Me.IncreaseIndentItem1.Id = 346
         Me.IncreaseIndentItem1.Name = "IncreaseIndentItem1"
         '
         'RtlDecreaseIndentItem1
         '
         Me.RtlDecreaseIndentItem1.Enabled = False
-        Me.RtlDecreaseIndentItem1.Id = 573
+        Me.RtlDecreaseIndentItem1.Id = 350
         Me.RtlDecreaseIndentItem1.Name = "RtlDecreaseIndentItem1"
         '
         'RtlIncreaseIndentItem1
         '
         Me.RtlIncreaseIndentItem1.Enabled = False
-        Me.RtlIncreaseIndentItem1.Id = 574
+        Me.RtlIncreaseIndentItem1.Id = 351
         Me.RtlIncreaseIndentItem1.Name = "RtlIncreaseIndentItem1"
         '
         'ToggleParagraphLeftToRightItem1
         '
         Me.ToggleParagraphLeftToRightItem1.Enabled = False
-        Me.ToggleParagraphLeftToRightItem1.Id = 575
+        Me.ToggleParagraphLeftToRightItem1.Id = 352
         Me.ToggleParagraphLeftToRightItem1.Name = "ToggleParagraphLeftToRightItem1"
         '
         'ToggleParagraphRightToLeftItem1
         '
         Me.ToggleParagraphRightToLeftItem1.Enabled = False
-        Me.ToggleParagraphRightToLeftItem1.Id = 576
+        Me.ToggleParagraphRightToLeftItem1.Id = 353
         Me.ToggleParagraphRightToLeftItem1.Name = "ToggleParagraphRightToLeftItem1"
         '
         'ToggleShowWhitespaceItem1
         '
         Me.ToggleShowWhitespaceItem1.Enabled = False
-        Me.ToggleShowWhitespaceItem1.Id = 588
+        Me.ToggleShowWhitespaceItem1.Id = 365
         Me.ToggleShowWhitespaceItem1.Name = "ToggleShowWhitespaceItem1"
         '
         'BarButtonGroup6
         '
-        Me.BarButtonGroup6.Id = 536
+        Me.BarButtonGroup6.Id = 313
         Me.BarButtonGroup6.ItemLinks.Add(Me.ToggleParagraphAlignmentLeftItem1)
         Me.BarButtonGroup6.ItemLinks.Add(Me.ToggleParagraphAlignmentCenterItem1)
         Me.BarButtonGroup6.ItemLinks.Add(Me.ToggleParagraphAlignmentRightItem1)
@@ -3515,73 +3414,73 @@ Partial Class frmDashboardDesigner
         'ToggleParagraphAlignmentLeftItem1
         '
         Me.ToggleParagraphAlignmentLeftItem1.Enabled = False
-        Me.ToggleParagraphAlignmentLeftItem1.Id = 577
+        Me.ToggleParagraphAlignmentLeftItem1.Id = 354
         Me.ToggleParagraphAlignmentLeftItem1.Name = "ToggleParagraphAlignmentLeftItem1"
         '
         'ToggleParagraphAlignmentCenterItem1
         '
         Me.ToggleParagraphAlignmentCenterItem1.Enabled = False
-        Me.ToggleParagraphAlignmentCenterItem1.Id = 578
+        Me.ToggleParagraphAlignmentCenterItem1.Id = 355
         Me.ToggleParagraphAlignmentCenterItem1.Name = "ToggleParagraphAlignmentCenterItem1"
         '
         'ToggleParagraphAlignmentRightItem1
         '
         Me.ToggleParagraphAlignmentRightItem1.Enabled = False
-        Me.ToggleParagraphAlignmentRightItem1.Id = 579
+        Me.ToggleParagraphAlignmentRightItem1.Id = 356
         Me.ToggleParagraphAlignmentRightItem1.Name = "ToggleParagraphAlignmentRightItem1"
         '
         'ToggleParagraphAlignmentJustifyItem1
         '
         Me.ToggleParagraphAlignmentJustifyItem1.Enabled = False
-        Me.ToggleParagraphAlignmentJustifyItem1.Id = 580
+        Me.ToggleParagraphAlignmentJustifyItem1.Id = 357
         Me.ToggleParagraphAlignmentJustifyItem1.Name = "ToggleParagraphAlignmentJustifyItem1"
         '
         'ToggleParagraphAlignmentArabicJustifyGroupItem1
         '
         Me.ToggleParagraphAlignmentArabicJustifyGroupItem1.Enabled = False
-        Me.ToggleParagraphAlignmentArabicJustifyGroupItem1.Id = 581
+        Me.ToggleParagraphAlignmentArabicJustifyGroupItem1.Id = 358
         Me.ToggleParagraphAlignmentArabicJustifyGroupItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.ToggleParagraphAlignmentArabicJustifyItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ToggleParagraphAlignmentJustifyLowItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ToggleParagraphAlignmentJustifyMediumItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ToggleParagraphAlignmentJustifyHighItem1)})
         Me.ToggleParagraphAlignmentArabicJustifyGroupItem1.Name = "ToggleParagraphAlignmentArabicJustifyGroupItem1"
         '
         'ToggleParagraphAlignmentArabicJustifyItem1
         '
         Me.ToggleParagraphAlignmentArabicJustifyItem1.Enabled = False
-        Me.ToggleParagraphAlignmentArabicJustifyItem1.Id = 582
+        Me.ToggleParagraphAlignmentArabicJustifyItem1.Id = 359
         Me.ToggleParagraphAlignmentArabicJustifyItem1.Name = "ToggleParagraphAlignmentArabicJustifyItem1"
         '
         'ToggleParagraphAlignmentJustifyLowItem1
         '
         Me.ToggleParagraphAlignmentJustifyLowItem1.Enabled = False
-        Me.ToggleParagraphAlignmentJustifyLowItem1.Id = 583
+        Me.ToggleParagraphAlignmentJustifyLowItem1.Id = 360
         Me.ToggleParagraphAlignmentJustifyLowItem1.Name = "ToggleParagraphAlignmentJustifyLowItem1"
         '
         'ToggleParagraphAlignmentJustifyMediumItem1
         '
         Me.ToggleParagraphAlignmentJustifyMediumItem1.Enabled = False
-        Me.ToggleParagraphAlignmentJustifyMediumItem1.Id = 584
+        Me.ToggleParagraphAlignmentJustifyMediumItem1.Id = 361
         Me.ToggleParagraphAlignmentJustifyMediumItem1.Name = "ToggleParagraphAlignmentJustifyMediumItem1"
         '
         'ToggleParagraphAlignmentJustifyHighItem1
         '
         Me.ToggleParagraphAlignmentJustifyHighItem1.Enabled = False
-        Me.ToggleParagraphAlignmentJustifyHighItem1.Id = 585
+        Me.ToggleParagraphAlignmentJustifyHighItem1.Id = 362
         Me.ToggleParagraphAlignmentJustifyHighItem1.Name = "ToggleParagraphAlignmentJustifyHighItem1"
         '
         'ToggleParagraphAlignmentDistributeItem1
         '
         Me.ToggleParagraphAlignmentDistributeItem1.Enabled = False
-        Me.ToggleParagraphAlignmentDistributeItem1.Id = 586
+        Me.ToggleParagraphAlignmentDistributeItem1.Id = 363
         Me.ToggleParagraphAlignmentDistributeItem1.Name = "ToggleParagraphAlignmentDistributeItem1"
         '
         'ToggleParagraphAlignmentThaiDistributeItem1
         '
         Me.ToggleParagraphAlignmentThaiDistributeItem1.Enabled = False
-        Me.ToggleParagraphAlignmentThaiDistributeItem1.Id = 587
+        Me.ToggleParagraphAlignmentThaiDistributeItem1.Id = 364
         Me.ToggleParagraphAlignmentThaiDistributeItem1.Name = "ToggleParagraphAlignmentThaiDistributeItem1"
         '
         'BarButtonGroup7
         '
-        Me.BarButtonGroup7.Id = 537
+        Me.BarButtonGroup7.Id = 314
         Me.BarButtonGroup7.ItemLinks.Add(Me.ChangeParagraphLineSpacingItem1)
         Me.BarButtonGroup7.ItemLinks.Add(Me.ChangeParagraphBackColorItem1)
         Me.BarButtonGroup7.Name = "BarButtonGroup7"
@@ -3590,62 +3489,62 @@ Partial Class frmDashboardDesigner
         'ChangeParagraphLineSpacingItem1
         '
         Me.ChangeParagraphLineSpacingItem1.Enabled = False
-        Me.ChangeParagraphLineSpacingItem1.Id = 589
+        Me.ChangeParagraphLineSpacingItem1.Id = 366
         Me.ChangeParagraphLineSpacingItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.SetSingleParagraphSpacingItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.SetSesquialteralParagraphSpacingItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.SetDoubleParagraphSpacingItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ShowLineSpacingFormItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.AddSpacingBeforeParagraphItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.RemoveSpacingBeforeParagraphItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.AddSpacingAfterParagraphItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.RemoveSpacingAfterParagraphItem1)})
         Me.ChangeParagraphLineSpacingItem1.Name = "ChangeParagraphLineSpacingItem1"
         '
         'SetSingleParagraphSpacingItem1
         '
         Me.SetSingleParagraphSpacingItem1.Enabled = False
-        Me.SetSingleParagraphSpacingItem1.Id = 590
+        Me.SetSingleParagraphSpacingItem1.Id = 367
         Me.SetSingleParagraphSpacingItem1.Name = "SetSingleParagraphSpacingItem1"
         '
         'SetSesquialteralParagraphSpacingItem1
         '
         Me.SetSesquialteralParagraphSpacingItem1.Enabled = False
-        Me.SetSesquialteralParagraphSpacingItem1.Id = 591
+        Me.SetSesquialteralParagraphSpacingItem1.Id = 368
         Me.SetSesquialteralParagraphSpacingItem1.Name = "SetSesquialteralParagraphSpacingItem1"
         '
         'SetDoubleParagraphSpacingItem1
         '
         Me.SetDoubleParagraphSpacingItem1.Enabled = False
-        Me.SetDoubleParagraphSpacingItem1.Id = 592
+        Me.SetDoubleParagraphSpacingItem1.Id = 369
         Me.SetDoubleParagraphSpacingItem1.Name = "SetDoubleParagraphSpacingItem1"
         '
         'ShowLineSpacingFormItem1
         '
         Me.ShowLineSpacingFormItem1.Enabled = False
-        Me.ShowLineSpacingFormItem1.Id = 593
+        Me.ShowLineSpacingFormItem1.Id = 370
         Me.ShowLineSpacingFormItem1.Name = "ShowLineSpacingFormItem1"
         '
         'AddSpacingBeforeParagraphItem1
         '
         Me.AddSpacingBeforeParagraphItem1.Enabled = False
-        Me.AddSpacingBeforeParagraphItem1.Id = 594
+        Me.AddSpacingBeforeParagraphItem1.Id = 371
         Me.AddSpacingBeforeParagraphItem1.Name = "AddSpacingBeforeParagraphItem1"
         '
         'RemoveSpacingBeforeParagraphItem1
         '
         Me.RemoveSpacingBeforeParagraphItem1.Enabled = False
-        Me.RemoveSpacingBeforeParagraphItem1.Id = 595
+        Me.RemoveSpacingBeforeParagraphItem1.Id = 372
         Me.RemoveSpacingBeforeParagraphItem1.Name = "RemoveSpacingBeforeParagraphItem1"
         '
         'AddSpacingAfterParagraphItem1
         '
         Me.AddSpacingAfterParagraphItem1.Enabled = False
-        Me.AddSpacingAfterParagraphItem1.Id = 596
+        Me.AddSpacingAfterParagraphItem1.Id = 373
         Me.AddSpacingAfterParagraphItem1.Name = "AddSpacingAfterParagraphItem1"
         '
         'RemoveSpacingAfterParagraphItem1
         '
         Me.RemoveSpacingAfterParagraphItem1.Enabled = False
-        Me.RemoveSpacingAfterParagraphItem1.Id = 597
+        Me.RemoveSpacingAfterParagraphItem1.Id = 374
         Me.RemoveSpacingAfterParagraphItem1.Name = "RemoveSpacingAfterParagraphItem1"
         '
         'ChangeParagraphBackColorItem1
         '
         Me.ChangeParagraphBackColorItem1.Enabled = False
-        Me.ChangeParagraphBackColorItem1.Id = 598
+        Me.ChangeParagraphBackColorItem1.Id = 375
         Me.ChangeParagraphBackColorItem1.Name = "ChangeParagraphBackColorItem1"
         '
         'GalleryChangeStyleItem1
@@ -3655,111 +3554,111 @@ Partial Class frmDashboardDesigner
         '
         '
         Me.GalleryChangeStyleItem1.Gallery.ColumnCount = 10
-        Me.GalleryChangeStyleItem1.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {GalleryItemGroup5})
+        Me.GalleryChangeStyleItem1.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {GalleryItemGroup11})
         Me.GalleryChangeStyleItem1.Gallery.ImageSize = New System.Drawing.Size(81, 58)
-        Me.GalleryChangeStyleItem1.Id = 599
+        Me.GalleryChangeStyleItem1.Id = 376
         Me.GalleryChangeStyleItem1.Name = "GalleryChangeStyleItem1"
         '
         'FindItem1
         '
         Me.FindItem1.Enabled = False
-        Me.FindItem1.Id = 600
+        Me.FindItem1.Id = 377
         Me.FindItem1.Name = "FindItem1"
         '
         'ReplaceItem1
         '
         Me.ReplaceItem1.Enabled = False
-        Me.ReplaceItem1.Id = 601
+        Me.ReplaceItem1.Id = 378
         Me.ReplaceItem1.Name = "ReplaceItem1"
         '
         'InsertTableItem1
         '
         Me.InsertTableItem1.Enabled = False
-        Me.InsertTableItem1.Id = 602
+        Me.InsertTableItem1.Id = 379
         Me.InsertTableItem1.Name = "InsertTableItem1"
         '
         'InsertFloatingPictureItem1
         '
         Me.InsertFloatingPictureItem1.Enabled = False
-        Me.InsertFloatingPictureItem1.Id = 603
+        Me.InsertFloatingPictureItem1.Id = 380
         Me.InsertFloatingPictureItem1.Name = "InsertFloatingPictureItem1"
         '
         'InsertBookmarkItem1
         '
         Me.InsertBookmarkItem1.Enabled = False
-        Me.InsertBookmarkItem1.Id = 604
+        Me.InsertBookmarkItem1.Id = 381
         Me.InsertBookmarkItem1.Name = "InsertBookmarkItem1"
         '
         'InsertHyperlinkItem1
         '
         Me.InsertHyperlinkItem1.Enabled = False
-        Me.InsertHyperlinkItem1.Id = 605
+        Me.InsertHyperlinkItem1.Id = 382
         Me.InsertHyperlinkItem1.Name = "InsertHyperlinkItem1"
         '
         'InsertSymbolItem1
         '
         Me.InsertSymbolItem1.Enabled = False
-        Me.InsertSymbolItem1.Id = 606
+        Me.InsertSymbolItem1.Id = 383
         Me.InsertSymbolItem1.Name = "InsertSymbolItem1"
         '
         'ChangePageColorItem1
         '
         Me.ChangePageColorItem1.Enabled = False
-        Me.ChangePageColorItem1.Id = 607
+        Me.ChangePageColorItem1.Id = 384
         Me.ChangePageColorItem1.Name = "ChangePageColorItem1"
         '
         'WatermarkItem1
         '
         Me.WatermarkItem1.Enabled = False
-        Me.WatermarkItem1.Id = 608
+        Me.WatermarkItem1.Id = 385
         Me.WatermarkItem1.Name = "WatermarkItem1"
         '
         'DeleteWatermarkItem1
         '
         Me.DeleteWatermarkItem1.Enabled = False
-        Me.DeleteWatermarkItem1.Id = 609
+        Me.DeleteWatermarkItem1.Id = 386
         Me.DeleteWatermarkItem1.Name = "DeleteWatermarkItem1"
         '
         'ToggleFirstRowItem1
         '
         Me.ToggleFirstRowItem1.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
         Me.ToggleFirstRowItem1.Enabled = False
-        Me.ToggleFirstRowItem1.Id = 610
+        Me.ToggleFirstRowItem1.Id = 387
         Me.ToggleFirstRowItem1.Name = "ToggleFirstRowItem1"
         '
         'ToggleLastRowItem1
         '
         Me.ToggleLastRowItem1.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
         Me.ToggleLastRowItem1.Enabled = False
-        Me.ToggleLastRowItem1.Id = 611
+        Me.ToggleLastRowItem1.Id = 388
         Me.ToggleLastRowItem1.Name = "ToggleLastRowItem1"
         '
         'ToggleBandedRowsItem1
         '
         Me.ToggleBandedRowsItem1.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
         Me.ToggleBandedRowsItem1.Enabled = False
-        Me.ToggleBandedRowsItem1.Id = 612
+        Me.ToggleBandedRowsItem1.Id = 389
         Me.ToggleBandedRowsItem1.Name = "ToggleBandedRowsItem1"
         '
         'ToggleFirstColumnItem1
         '
         Me.ToggleFirstColumnItem1.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
         Me.ToggleFirstColumnItem1.Enabled = False
-        Me.ToggleFirstColumnItem1.Id = 613
+        Me.ToggleFirstColumnItem1.Id = 390
         Me.ToggleFirstColumnItem1.Name = "ToggleFirstColumnItem1"
         '
         'ToggleLastColumnItem1
         '
         Me.ToggleLastColumnItem1.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
         Me.ToggleLastColumnItem1.Enabled = False
-        Me.ToggleLastColumnItem1.Id = 614
+        Me.ToggleLastColumnItem1.Id = 391
         Me.ToggleLastColumnItem1.Name = "ToggleLastColumnItem1"
         '
         'ToggleBandedColumnsItem1
         '
         Me.ToggleBandedColumnsItem1.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
         Me.ToggleBandedColumnsItem1.Enabled = False
-        Me.ToggleBandedColumnsItem1.Id = 615
+        Me.ToggleBandedColumnsItem1.Id = 392
         Me.ToggleBandedColumnsItem1.Name = "ToggleBandedColumnsItem1"
         '
         'GalleryChangeTableStyleItem1
@@ -3771,9 +3670,9 @@ Partial Class frmDashboardDesigner
         '
         '
         Me.GalleryChangeTableStyleItem1.Gallery.ColumnCount = 3
-        Me.GalleryChangeTableStyleItem1.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {GalleryItemGroup6})
+        Me.GalleryChangeTableStyleItem1.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {GalleryItemGroup12})
         Me.GalleryChangeTableStyleItem1.Gallery.ImageSize = New System.Drawing.Size(81, 58)
-        Me.GalleryChangeTableStyleItem1.Id = 616
+        Me.GalleryChangeTableStyleItem1.Id = 393
         Me.GalleryChangeTableStyleItem1.ModifyItemLink = Nothing
         Me.GalleryChangeTableStyleItem1.Name = "GalleryChangeTableStyleItem1"
         Me.GalleryChangeTableStyleItem1.NewItemLink = Nothing
@@ -3784,7 +3683,7 @@ Partial Class frmDashboardDesigner
         Me.ChangeTableBorderLineStyleItem1.Edit = Me.RepositoryItemBorderLineStyle1
         Me.ChangeTableBorderLineStyleItem1.EditWidth = 130
         Me.ChangeTableBorderLineStyleItem1.Enabled = False
-        Me.ChangeTableBorderLineStyleItem1.Id = 617
+        Me.ChangeTableBorderLineStyleItem1.Id = 394
         Me.ChangeTableBorderLineStyleItem1.Name = "ChangeTableBorderLineStyleItem1"
         '
         'RepositoryItemBorderLineStyle1
@@ -3799,7 +3698,7 @@ Partial Class frmDashboardDesigner
         Me.ChangeTableBorderLineWeightItem1.Edit = Me.RepositoryItemBorderLineWeight1
         Me.ChangeTableBorderLineWeightItem1.EditWidth = 130
         Me.ChangeTableBorderLineWeightItem1.Enabled = False
-        Me.ChangeTableBorderLineWeightItem1.Id = 618
+        Me.ChangeTableBorderLineWeightItem1.Id = 395
         Me.ChangeTableBorderLineWeightItem1.Name = "ChangeTableBorderLineWeightItem1"
         '
         'RepositoryItemBorderLineWeight1
@@ -3812,300 +3711,300 @@ Partial Class frmDashboardDesigner
         'ChangeTableBorderColorItem1
         '
         Me.ChangeTableBorderColorItem1.Enabled = False
-        Me.ChangeTableBorderColorItem1.Id = 619
+        Me.ChangeTableBorderColorItem1.Id = 396
         Me.ChangeTableBorderColorItem1.Name = "ChangeTableBorderColorItem1"
         '
         'ChangeTableBordersItem1
         '
         Me.ChangeTableBordersItem1.Enabled = False
-        Me.ChangeTableBordersItem1.Id = 620
+        Me.ChangeTableBordersItem1.Id = 397
         Me.ChangeTableBordersItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.ToggleTableCellsBottomBorderItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ToggleTableCellsTopBorderItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ToggleTableCellsLeftBorderItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ToggleTableCellsRightBorderItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ResetTableCellsAllBordersItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ToggleTableCellsAllBordersItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ToggleTableCellsOutsideBorderItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ToggleTableCellsInsideBorderItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ToggleTableCellsInsideHorizontalBorderItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ToggleTableCellsInsideVerticalBorderItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ToggleShowTableGridLinesItem1)})
         Me.ChangeTableBordersItem1.Name = "ChangeTableBordersItem1"
         '
         'ToggleTableCellsBottomBorderItem1
         '
         Me.ToggleTableCellsBottomBorderItem1.Enabled = False
-        Me.ToggleTableCellsBottomBorderItem1.Id = 621
+        Me.ToggleTableCellsBottomBorderItem1.Id = 398
         Me.ToggleTableCellsBottomBorderItem1.Name = "ToggleTableCellsBottomBorderItem1"
         '
         'ToggleTableCellsTopBorderItem1
         '
         Me.ToggleTableCellsTopBorderItem1.Enabled = False
-        Me.ToggleTableCellsTopBorderItem1.Id = 622
+        Me.ToggleTableCellsTopBorderItem1.Id = 399
         Me.ToggleTableCellsTopBorderItem1.Name = "ToggleTableCellsTopBorderItem1"
         '
         'ToggleTableCellsLeftBorderItem1
         '
         Me.ToggleTableCellsLeftBorderItem1.Enabled = False
-        Me.ToggleTableCellsLeftBorderItem1.Id = 623
+        Me.ToggleTableCellsLeftBorderItem1.Id = 400
         Me.ToggleTableCellsLeftBorderItem1.Name = "ToggleTableCellsLeftBorderItem1"
         '
         'ToggleTableCellsRightBorderItem1
         '
         Me.ToggleTableCellsRightBorderItem1.Enabled = False
-        Me.ToggleTableCellsRightBorderItem1.Id = 624
+        Me.ToggleTableCellsRightBorderItem1.Id = 401
         Me.ToggleTableCellsRightBorderItem1.Name = "ToggleTableCellsRightBorderItem1"
         '
         'ResetTableCellsAllBordersItem1
         '
         Me.ResetTableCellsAllBordersItem1.Enabled = False
-        Me.ResetTableCellsAllBordersItem1.Id = 625
+        Me.ResetTableCellsAllBordersItem1.Id = 402
         Me.ResetTableCellsAllBordersItem1.Name = "ResetTableCellsAllBordersItem1"
         '
         'ToggleTableCellsAllBordersItem1
         '
         Me.ToggleTableCellsAllBordersItem1.Enabled = False
-        Me.ToggleTableCellsAllBordersItem1.Id = 626
+        Me.ToggleTableCellsAllBordersItem1.Id = 403
         Me.ToggleTableCellsAllBordersItem1.Name = "ToggleTableCellsAllBordersItem1"
         '
         'ToggleTableCellsOutsideBorderItem1
         '
         Me.ToggleTableCellsOutsideBorderItem1.Enabled = False
-        Me.ToggleTableCellsOutsideBorderItem1.Id = 627
+        Me.ToggleTableCellsOutsideBorderItem1.Id = 404
         Me.ToggleTableCellsOutsideBorderItem1.Name = "ToggleTableCellsOutsideBorderItem1"
         '
         'ToggleTableCellsInsideBorderItem1
         '
         Me.ToggleTableCellsInsideBorderItem1.Enabled = False
-        Me.ToggleTableCellsInsideBorderItem1.Id = 628
+        Me.ToggleTableCellsInsideBorderItem1.Id = 405
         Me.ToggleTableCellsInsideBorderItem1.Name = "ToggleTableCellsInsideBorderItem1"
         '
         'ToggleTableCellsInsideHorizontalBorderItem1
         '
         Me.ToggleTableCellsInsideHorizontalBorderItem1.Enabled = False
-        Me.ToggleTableCellsInsideHorizontalBorderItem1.Id = 629
+        Me.ToggleTableCellsInsideHorizontalBorderItem1.Id = 406
         Me.ToggleTableCellsInsideHorizontalBorderItem1.Name = "ToggleTableCellsInsideHorizontalBorderItem1"
         '
         'ToggleTableCellsInsideVerticalBorderItem1
         '
         Me.ToggleTableCellsInsideVerticalBorderItem1.Enabled = False
-        Me.ToggleTableCellsInsideVerticalBorderItem1.Id = 630
+        Me.ToggleTableCellsInsideVerticalBorderItem1.Id = 407
         Me.ToggleTableCellsInsideVerticalBorderItem1.Name = "ToggleTableCellsInsideVerticalBorderItem1"
         '
         'ToggleShowTableGridLinesItem1
         '
         Me.ToggleShowTableGridLinesItem1.Enabled = False
-        Me.ToggleShowTableGridLinesItem1.Id = 631
+        Me.ToggleShowTableGridLinesItem1.Id = 408
         Me.ToggleShowTableGridLinesItem1.Name = "ToggleShowTableGridLinesItem1"
         '
         'ChangeTableCellsShadingItem1
         '
         Me.ChangeTableCellsShadingItem1.Enabled = False
-        Me.ChangeTableCellsShadingItem1.Id = 632
+        Me.ChangeTableCellsShadingItem1.Id = 409
         Me.ChangeTableCellsShadingItem1.Name = "ChangeTableCellsShadingItem1"
         '
         'SelectTableElementsItem1
         '
         Me.SelectTableElementsItem1.Enabled = False
-        Me.SelectTableElementsItem1.Id = 633
+        Me.SelectTableElementsItem1.Id = 410
         Me.SelectTableElementsItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.SelectTableCellItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.SelectTableColumnItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.SelectTableRowItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.SelectTableItem1)})
         Me.SelectTableElementsItem1.Name = "SelectTableElementsItem1"
         '
         'SelectTableCellItem1
         '
         Me.SelectTableCellItem1.Enabled = False
-        Me.SelectTableCellItem1.Id = 634
+        Me.SelectTableCellItem1.Id = 411
         Me.SelectTableCellItem1.Name = "SelectTableCellItem1"
         '
         'SelectTableColumnItem1
         '
         Me.SelectTableColumnItem1.Enabled = False
-        Me.SelectTableColumnItem1.Id = 635
+        Me.SelectTableColumnItem1.Id = 412
         Me.SelectTableColumnItem1.Name = "SelectTableColumnItem1"
         '
         'SelectTableRowItem1
         '
         Me.SelectTableRowItem1.Enabled = False
-        Me.SelectTableRowItem1.Id = 636
+        Me.SelectTableRowItem1.Id = 413
         Me.SelectTableRowItem1.Name = "SelectTableRowItem1"
         '
         'SelectTableItem1
         '
         Me.SelectTableItem1.Enabled = False
-        Me.SelectTableItem1.Id = 637
+        Me.SelectTableItem1.Id = 414
         Me.SelectTableItem1.Name = "SelectTableItem1"
         '
         'ShowTablePropertiesFormItem1
         '
         Me.ShowTablePropertiesFormItem1.Enabled = False
-        Me.ShowTablePropertiesFormItem1.Id = 638
+        Me.ShowTablePropertiesFormItem1.Id = 415
         Me.ShowTablePropertiesFormItem1.Name = "ShowTablePropertiesFormItem1"
         '
         'DeleteTableElementsItem1
         '
         Me.DeleteTableElementsItem1.Enabled = False
-        Me.DeleteTableElementsItem1.Id = 639
+        Me.DeleteTableElementsItem1.Id = 416
         Me.DeleteTableElementsItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.ShowDeleteTableCellsFormItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.DeleteTableColumnsItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.DeleteTableRowsItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.DeleteTableItem1)})
         Me.DeleteTableElementsItem1.Name = "DeleteTableElementsItem1"
         '
         'ShowDeleteTableCellsFormItem1
         '
         Me.ShowDeleteTableCellsFormItem1.Enabled = False
-        Me.ShowDeleteTableCellsFormItem1.Id = 640
+        Me.ShowDeleteTableCellsFormItem1.Id = 417
         Me.ShowDeleteTableCellsFormItem1.Name = "ShowDeleteTableCellsFormItem1"
         '
         'DeleteTableColumnsItem1
         '
         Me.DeleteTableColumnsItem1.Enabled = False
-        Me.DeleteTableColumnsItem1.Id = 641
+        Me.DeleteTableColumnsItem1.Id = 418
         Me.DeleteTableColumnsItem1.Name = "DeleteTableColumnsItem1"
         '
         'DeleteTableRowsItem1
         '
         Me.DeleteTableRowsItem1.Enabled = False
-        Me.DeleteTableRowsItem1.Id = 642
+        Me.DeleteTableRowsItem1.Id = 419
         Me.DeleteTableRowsItem1.Name = "DeleteTableRowsItem1"
         '
         'DeleteTableItem1
         '
         Me.DeleteTableItem1.Enabled = False
-        Me.DeleteTableItem1.Id = 643
+        Me.DeleteTableItem1.Id = 420
         Me.DeleteTableItem1.Name = "DeleteTableItem1"
         '
         'InsertTableRowAboveItem1
         '
         Me.InsertTableRowAboveItem1.Enabled = False
-        Me.InsertTableRowAboveItem1.Id = 644
+        Me.InsertTableRowAboveItem1.Id = 421
         Me.InsertTableRowAboveItem1.Name = "InsertTableRowAboveItem1"
         '
         'InsertTableRowBelowItem1
         '
         Me.InsertTableRowBelowItem1.Enabled = False
-        Me.InsertTableRowBelowItem1.Id = 645
+        Me.InsertTableRowBelowItem1.Id = 422
         Me.InsertTableRowBelowItem1.Name = "InsertTableRowBelowItem1"
         '
         'InsertTableColumnToLeftItem1
         '
         Me.InsertTableColumnToLeftItem1.Enabled = False
-        Me.InsertTableColumnToLeftItem1.Id = 646
+        Me.InsertTableColumnToLeftItem1.Id = 423
         Me.InsertTableColumnToLeftItem1.Name = "InsertTableColumnToLeftItem1"
         '
         'InsertTableColumnToRightItem1
         '
         Me.InsertTableColumnToRightItem1.Enabled = False
-        Me.InsertTableColumnToRightItem1.Id = 647
+        Me.InsertTableColumnToRightItem1.Id = 424
         Me.InsertTableColumnToRightItem1.Name = "InsertTableColumnToRightItem1"
         '
         'MergeTableCellsItem1
         '
         Me.MergeTableCellsItem1.Enabled = False
-        Me.MergeTableCellsItem1.Id = 648
+        Me.MergeTableCellsItem1.Id = 425
         Me.MergeTableCellsItem1.Name = "MergeTableCellsItem1"
         '
         'ShowSplitTableCellsForm1
         '
         Me.ShowSplitTableCellsForm1.Enabled = False
-        Me.ShowSplitTableCellsForm1.Id = 649
+        Me.ShowSplitTableCellsForm1.Id = 426
         Me.ShowSplitTableCellsForm1.Name = "ShowSplitTableCellsForm1"
         '
         'SplitTableItem1
         '
         Me.SplitTableItem1.Enabled = False
-        Me.SplitTableItem1.Id = 650
+        Me.SplitTableItem1.Id = 427
         Me.SplitTableItem1.Name = "SplitTableItem1"
         '
         'ToggleTableAutoFitItem1
         '
         Me.ToggleTableAutoFitItem1.Enabled = False
-        Me.ToggleTableAutoFitItem1.Id = 651
+        Me.ToggleTableAutoFitItem1.Id = 428
         Me.ToggleTableAutoFitItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.ToggleTableAutoFitContentsItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ToggleTableAutoFitWindowItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ToggleTableFixedColumnWidthItem1)})
         Me.ToggleTableAutoFitItem1.Name = "ToggleTableAutoFitItem1"
         '
         'ToggleTableAutoFitContentsItem1
         '
         Me.ToggleTableAutoFitContentsItem1.Enabled = False
-        Me.ToggleTableAutoFitContentsItem1.Id = 652
+        Me.ToggleTableAutoFitContentsItem1.Id = 429
         Me.ToggleTableAutoFitContentsItem1.Name = "ToggleTableAutoFitContentsItem1"
         '
         'ToggleTableAutoFitWindowItem1
         '
         Me.ToggleTableAutoFitWindowItem1.Enabled = False
-        Me.ToggleTableAutoFitWindowItem1.Id = 653
+        Me.ToggleTableAutoFitWindowItem1.Id = 430
         Me.ToggleTableAutoFitWindowItem1.Name = "ToggleTableAutoFitWindowItem1"
         '
         'ToggleTableFixedColumnWidthItem1
         '
         Me.ToggleTableFixedColumnWidthItem1.Enabled = False
-        Me.ToggleTableFixedColumnWidthItem1.Id = 654
+        Me.ToggleTableFixedColumnWidthItem1.Id = 431
         Me.ToggleTableFixedColumnWidthItem1.Name = "ToggleTableFixedColumnWidthItem1"
         '
         'ToggleTableCellsTopLeftAlignmentItem1
         '
         Me.ToggleTableCellsTopLeftAlignmentItem1.Enabled = False
-        Me.ToggleTableCellsTopLeftAlignmentItem1.Id = 655
+        Me.ToggleTableCellsTopLeftAlignmentItem1.Id = 432
         Me.ToggleTableCellsTopLeftAlignmentItem1.Name = "ToggleTableCellsTopLeftAlignmentItem1"
         '
         'ToggleTableCellsMiddleLeftAlignmentItem1
         '
         Me.ToggleTableCellsMiddleLeftAlignmentItem1.Enabled = False
-        Me.ToggleTableCellsMiddleLeftAlignmentItem1.Id = 656
+        Me.ToggleTableCellsMiddleLeftAlignmentItem1.Id = 433
         Me.ToggleTableCellsMiddleLeftAlignmentItem1.Name = "ToggleTableCellsMiddleLeftAlignmentItem1"
         '
         'ToggleTableCellsBottomLeftAlignmentItem1
         '
         Me.ToggleTableCellsBottomLeftAlignmentItem1.Enabled = False
-        Me.ToggleTableCellsBottomLeftAlignmentItem1.Id = 657
+        Me.ToggleTableCellsBottomLeftAlignmentItem1.Id = 434
         Me.ToggleTableCellsBottomLeftAlignmentItem1.Name = "ToggleTableCellsBottomLeftAlignmentItem1"
         '
         'ToggleTableCellsTopCenterAlignmentItem1
         '
         Me.ToggleTableCellsTopCenterAlignmentItem1.Enabled = False
-        Me.ToggleTableCellsTopCenterAlignmentItem1.Id = 658
+        Me.ToggleTableCellsTopCenterAlignmentItem1.Id = 435
         Me.ToggleTableCellsTopCenterAlignmentItem1.Name = "ToggleTableCellsTopCenterAlignmentItem1"
         '
         'ToggleTableCellsMiddleCenterAlignmentItem1
         '
         Me.ToggleTableCellsMiddleCenterAlignmentItem1.Enabled = False
-        Me.ToggleTableCellsMiddleCenterAlignmentItem1.Id = 659
+        Me.ToggleTableCellsMiddleCenterAlignmentItem1.Id = 436
         Me.ToggleTableCellsMiddleCenterAlignmentItem1.Name = "ToggleTableCellsMiddleCenterAlignmentItem1"
         '
         'ToggleTableCellsBottomCenterAlignmentItem1
         '
         Me.ToggleTableCellsBottomCenterAlignmentItem1.Enabled = False
-        Me.ToggleTableCellsBottomCenterAlignmentItem1.Id = 660
+        Me.ToggleTableCellsBottomCenterAlignmentItem1.Id = 437
         Me.ToggleTableCellsBottomCenterAlignmentItem1.Name = "ToggleTableCellsBottomCenterAlignmentItem1"
         '
         'ToggleTableCellsTopRightAlignmentItem1
         '
         Me.ToggleTableCellsTopRightAlignmentItem1.Enabled = False
-        Me.ToggleTableCellsTopRightAlignmentItem1.Id = 661
+        Me.ToggleTableCellsTopRightAlignmentItem1.Id = 438
         Me.ToggleTableCellsTopRightAlignmentItem1.Name = "ToggleTableCellsTopRightAlignmentItem1"
         '
         'ToggleTableCellsMiddleRightAlignmentItem1
         '
         Me.ToggleTableCellsMiddleRightAlignmentItem1.Enabled = False
-        Me.ToggleTableCellsMiddleRightAlignmentItem1.Id = 662
+        Me.ToggleTableCellsMiddleRightAlignmentItem1.Id = 439
         Me.ToggleTableCellsMiddleRightAlignmentItem1.Name = "ToggleTableCellsMiddleRightAlignmentItem1"
         '
         'ToggleTableCellsBottomRightAlignmentItem1
         '
         Me.ToggleTableCellsBottomRightAlignmentItem1.Enabled = False
-        Me.ToggleTableCellsBottomRightAlignmentItem1.Id = 663
+        Me.ToggleTableCellsBottomRightAlignmentItem1.Id = 440
         Me.ToggleTableCellsBottomRightAlignmentItem1.Name = "ToggleTableCellsBottomRightAlignmentItem1"
         '
         'ShowTableOptionsFormItem1
         '
         Me.ShowTableOptionsFormItem1.Enabled = False
-        Me.ShowTableOptionsFormItem1.Id = 664
+        Me.ShowTableOptionsFormItem1.Id = 441
         Me.ShowTableOptionsFormItem1.Name = "ShowTableOptionsFormItem1"
         '
         'ChangeFloatingObjectFillColorItem1
         '
         Me.ChangeFloatingObjectFillColorItem1.Enabled = False
-        Me.ChangeFloatingObjectFillColorItem1.Id = 665
+        Me.ChangeFloatingObjectFillColorItem1.Id = 442
         Me.ChangeFloatingObjectFillColorItem1.Name = "ChangeFloatingObjectFillColorItem1"
         '
         'ChangeFloatingObjectOutlineColorItem1
         '
         Me.ChangeFloatingObjectOutlineColorItem1.Enabled = False
-        Me.ChangeFloatingObjectOutlineColorItem1.Id = 666
+        Me.ChangeFloatingObjectOutlineColorItem1.Id = 443
         Me.ChangeFloatingObjectOutlineColorItem1.Name = "ChangeFloatingObjectOutlineColorItem1"
         '
         'ChangeFloatingObjectOutlineWeightItem1
         '
         Me.ChangeFloatingObjectOutlineWeightItem1.Edit = Me.RepositoryItemFloatingObjectOutlineWeight1
         Me.ChangeFloatingObjectOutlineWeightItem1.Enabled = False
-        Me.ChangeFloatingObjectOutlineWeightItem1.Id = 667
+        Me.ChangeFloatingObjectOutlineWeightItem1.Id = 444
         Me.ChangeFloatingObjectOutlineWeightItem1.Name = "ChangeFloatingObjectOutlineWeightItem1"
         '
         'RepositoryItemFloatingObjectOutlineWeight1
@@ -4118,161 +4017,161 @@ Partial Class frmDashboardDesigner
         'ChangeFloatingObjectTextWrapTypeItem1
         '
         Me.ChangeFloatingObjectTextWrapTypeItem1.Enabled = False
-        Me.ChangeFloatingObjectTextWrapTypeItem1.Id = 668
+        Me.ChangeFloatingObjectTextWrapTypeItem1.Id = 445
         Me.ChangeFloatingObjectTextWrapTypeItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.SetFloatingObjectInlineTextWrapTypeItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.SetFloatingObjectSquareTextWrapTypeItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.SetFloatingObjectTightTextWrapTypeItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.SetFloatingObjectThroughTextWrapTypeItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.SetFloatingObjectTopAndBottomTextWrapTypeItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.SetFloatingObjectBehindTextWrapTypeItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.SetFloatingObjectInFrontOfTextWrapTypeItem1)})
         Me.ChangeFloatingObjectTextWrapTypeItem1.Name = "ChangeFloatingObjectTextWrapTypeItem1"
         '
         'SetFloatingObjectInlineTextWrapTypeItem1
         '
         Me.SetFloatingObjectInlineTextWrapTypeItem1.Enabled = False
-        Me.SetFloatingObjectInlineTextWrapTypeItem1.Id = 669
+        Me.SetFloatingObjectInlineTextWrapTypeItem1.Id = 446
         Me.SetFloatingObjectInlineTextWrapTypeItem1.Name = "SetFloatingObjectInlineTextWrapTypeItem1"
         '
         'SetFloatingObjectSquareTextWrapTypeItem1
         '
         Me.SetFloatingObjectSquareTextWrapTypeItem1.Enabled = False
-        Me.SetFloatingObjectSquareTextWrapTypeItem1.Id = 670
+        Me.SetFloatingObjectSquareTextWrapTypeItem1.Id = 447
         Me.SetFloatingObjectSquareTextWrapTypeItem1.Name = "SetFloatingObjectSquareTextWrapTypeItem1"
         '
         'SetFloatingObjectTightTextWrapTypeItem1
         '
         Me.SetFloatingObjectTightTextWrapTypeItem1.Enabled = False
-        Me.SetFloatingObjectTightTextWrapTypeItem1.Id = 671
+        Me.SetFloatingObjectTightTextWrapTypeItem1.Id = 448
         Me.SetFloatingObjectTightTextWrapTypeItem1.Name = "SetFloatingObjectTightTextWrapTypeItem1"
         '
         'SetFloatingObjectThroughTextWrapTypeItem1
         '
         Me.SetFloatingObjectThroughTextWrapTypeItem1.Enabled = False
-        Me.SetFloatingObjectThroughTextWrapTypeItem1.Id = 672
+        Me.SetFloatingObjectThroughTextWrapTypeItem1.Id = 449
         Me.SetFloatingObjectThroughTextWrapTypeItem1.Name = "SetFloatingObjectThroughTextWrapTypeItem1"
         '
         'SetFloatingObjectTopAndBottomTextWrapTypeItem1
         '
         Me.SetFloatingObjectTopAndBottomTextWrapTypeItem1.Enabled = False
-        Me.SetFloatingObjectTopAndBottomTextWrapTypeItem1.Id = 673
+        Me.SetFloatingObjectTopAndBottomTextWrapTypeItem1.Id = 450
         Me.SetFloatingObjectTopAndBottomTextWrapTypeItem1.Name = "SetFloatingObjectTopAndBottomTextWrapTypeItem1"
         '
         'SetFloatingObjectBehindTextWrapTypeItem1
         '
         Me.SetFloatingObjectBehindTextWrapTypeItem1.Enabled = False
-        Me.SetFloatingObjectBehindTextWrapTypeItem1.Id = 674
+        Me.SetFloatingObjectBehindTextWrapTypeItem1.Id = 451
         Me.SetFloatingObjectBehindTextWrapTypeItem1.Name = "SetFloatingObjectBehindTextWrapTypeItem1"
         '
         'SetFloatingObjectInFrontOfTextWrapTypeItem1
         '
         Me.SetFloatingObjectInFrontOfTextWrapTypeItem1.Enabled = False
-        Me.SetFloatingObjectInFrontOfTextWrapTypeItem1.Id = 675
+        Me.SetFloatingObjectInFrontOfTextWrapTypeItem1.Id = 452
         Me.SetFloatingObjectInFrontOfTextWrapTypeItem1.Name = "SetFloatingObjectInFrontOfTextWrapTypeItem1"
         '
         'ChangeFloatingObjectAlignmentItem1
         '
         Me.ChangeFloatingObjectAlignmentItem1.Enabled = False
-        Me.ChangeFloatingObjectAlignmentItem1.Id = 676
+        Me.ChangeFloatingObjectAlignmentItem1.Id = 453
         Me.ChangeFloatingObjectAlignmentItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.SetFloatingObjectTopLeftAlignmentItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.SetFloatingObjectTopCenterAlignmentItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.SetFloatingObjectTopRightAlignmentItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.SetFloatingObjectMiddleLeftAlignmentItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.SetFloatingObjectMiddleCenterAlignmentItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.SetFloatingObjectMiddleRightAlignmentItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.SetFloatingObjectBottomLeftAlignmentItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.SetFloatingObjectBottomCenterAlignmentItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.SetFloatingObjectBottomRightAlignmentItem1)})
         Me.ChangeFloatingObjectAlignmentItem1.Name = "ChangeFloatingObjectAlignmentItem1"
         '
         'SetFloatingObjectTopLeftAlignmentItem1
         '
         Me.SetFloatingObjectTopLeftAlignmentItem1.Enabled = False
-        Me.SetFloatingObjectTopLeftAlignmentItem1.Id = 677
+        Me.SetFloatingObjectTopLeftAlignmentItem1.Id = 454
         Me.SetFloatingObjectTopLeftAlignmentItem1.Name = "SetFloatingObjectTopLeftAlignmentItem1"
         '
         'SetFloatingObjectTopCenterAlignmentItem1
         '
         Me.SetFloatingObjectTopCenterAlignmentItem1.Enabled = False
-        Me.SetFloatingObjectTopCenterAlignmentItem1.Id = 678
+        Me.SetFloatingObjectTopCenterAlignmentItem1.Id = 455
         Me.SetFloatingObjectTopCenterAlignmentItem1.Name = "SetFloatingObjectTopCenterAlignmentItem1"
         '
         'SetFloatingObjectTopRightAlignmentItem1
         '
         Me.SetFloatingObjectTopRightAlignmentItem1.Enabled = False
-        Me.SetFloatingObjectTopRightAlignmentItem1.Id = 679
+        Me.SetFloatingObjectTopRightAlignmentItem1.Id = 456
         Me.SetFloatingObjectTopRightAlignmentItem1.Name = "SetFloatingObjectTopRightAlignmentItem1"
         '
         'SetFloatingObjectMiddleLeftAlignmentItem1
         '
         Me.SetFloatingObjectMiddleLeftAlignmentItem1.Enabled = False
-        Me.SetFloatingObjectMiddleLeftAlignmentItem1.Id = 680
+        Me.SetFloatingObjectMiddleLeftAlignmentItem1.Id = 457
         Me.SetFloatingObjectMiddleLeftAlignmentItem1.Name = "SetFloatingObjectMiddleLeftAlignmentItem1"
         '
         'SetFloatingObjectMiddleCenterAlignmentItem1
         '
         Me.SetFloatingObjectMiddleCenterAlignmentItem1.Enabled = False
-        Me.SetFloatingObjectMiddleCenterAlignmentItem1.Id = 681
+        Me.SetFloatingObjectMiddleCenterAlignmentItem1.Id = 458
         Me.SetFloatingObjectMiddleCenterAlignmentItem1.Name = "SetFloatingObjectMiddleCenterAlignmentItem1"
         '
         'SetFloatingObjectMiddleRightAlignmentItem1
         '
         Me.SetFloatingObjectMiddleRightAlignmentItem1.Enabled = False
-        Me.SetFloatingObjectMiddleRightAlignmentItem1.Id = 682
+        Me.SetFloatingObjectMiddleRightAlignmentItem1.Id = 459
         Me.SetFloatingObjectMiddleRightAlignmentItem1.Name = "SetFloatingObjectMiddleRightAlignmentItem1"
         '
         'SetFloatingObjectBottomLeftAlignmentItem1
         '
         Me.SetFloatingObjectBottomLeftAlignmentItem1.Enabled = False
-        Me.SetFloatingObjectBottomLeftAlignmentItem1.Id = 683
+        Me.SetFloatingObjectBottomLeftAlignmentItem1.Id = 460
         Me.SetFloatingObjectBottomLeftAlignmentItem1.Name = "SetFloatingObjectBottomLeftAlignmentItem1"
         '
         'SetFloatingObjectBottomCenterAlignmentItem1
         '
         Me.SetFloatingObjectBottomCenterAlignmentItem1.Enabled = False
-        Me.SetFloatingObjectBottomCenterAlignmentItem1.Id = 684
+        Me.SetFloatingObjectBottomCenterAlignmentItem1.Id = 461
         Me.SetFloatingObjectBottomCenterAlignmentItem1.Name = "SetFloatingObjectBottomCenterAlignmentItem1"
         '
         'SetFloatingObjectBottomRightAlignmentItem1
         '
         Me.SetFloatingObjectBottomRightAlignmentItem1.Enabled = False
-        Me.SetFloatingObjectBottomRightAlignmentItem1.Id = 685
+        Me.SetFloatingObjectBottomRightAlignmentItem1.Id = 462
         Me.SetFloatingObjectBottomRightAlignmentItem1.Name = "SetFloatingObjectBottomRightAlignmentItem1"
         '
         'FloatingObjectBringForwardSubItem1
         '
         Me.FloatingObjectBringForwardSubItem1.Enabled = False
-        Me.FloatingObjectBringForwardSubItem1.Id = 686
+        Me.FloatingObjectBringForwardSubItem1.Id = 463
         Me.FloatingObjectBringForwardSubItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.FloatingObjectBringForwardItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.FloatingObjectBringToFrontItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.FloatingObjectBringInFrontOfTextItem1)})
         Me.FloatingObjectBringForwardSubItem1.Name = "FloatingObjectBringForwardSubItem1"
         '
         'FloatingObjectBringForwardItem1
         '
         Me.FloatingObjectBringForwardItem1.Enabled = False
-        Me.FloatingObjectBringForwardItem1.Id = 687
+        Me.FloatingObjectBringForwardItem1.Id = 464
         Me.FloatingObjectBringForwardItem1.Name = "FloatingObjectBringForwardItem1"
         '
         'FloatingObjectBringToFrontItem1
         '
         Me.FloatingObjectBringToFrontItem1.Enabled = False
-        Me.FloatingObjectBringToFrontItem1.Id = 688
+        Me.FloatingObjectBringToFrontItem1.Id = 465
         Me.FloatingObjectBringToFrontItem1.Name = "FloatingObjectBringToFrontItem1"
         '
         'FloatingObjectBringInFrontOfTextItem1
         '
         Me.FloatingObjectBringInFrontOfTextItem1.Enabled = False
-        Me.FloatingObjectBringInFrontOfTextItem1.Id = 689
+        Me.FloatingObjectBringInFrontOfTextItem1.Id = 466
         Me.FloatingObjectBringInFrontOfTextItem1.Name = "FloatingObjectBringInFrontOfTextItem1"
         '
         'FloatingObjectSendBackwardSubItem1
         '
         Me.FloatingObjectSendBackwardSubItem1.Enabled = False
-        Me.FloatingObjectSendBackwardSubItem1.Id = 690
+        Me.FloatingObjectSendBackwardSubItem1.Id = 467
         Me.FloatingObjectSendBackwardSubItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.FloatingObjectSendBackwardItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.FloatingObjectSendToBackItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.FloatingObjectSendBehindTextItem1)})
         Me.FloatingObjectSendBackwardSubItem1.Name = "FloatingObjectSendBackwardSubItem1"
         '
         'FloatingObjectSendBackwardItem1
         '
         Me.FloatingObjectSendBackwardItem1.Enabled = False
-        Me.FloatingObjectSendBackwardItem1.Id = 691
+        Me.FloatingObjectSendBackwardItem1.Id = 468
         Me.FloatingObjectSendBackwardItem1.Name = "FloatingObjectSendBackwardItem1"
         '
         'FloatingObjectSendToBackItem1
         '
         Me.FloatingObjectSendToBackItem1.Enabled = False
-        Me.FloatingObjectSendToBackItem1.Id = 692
+        Me.FloatingObjectSendToBackItem1.Id = 469
         Me.FloatingObjectSendToBackItem1.Name = "FloatingObjectSendToBackItem1"
         '
         'FloatingObjectSendBehindTextItem1
         '
         Me.FloatingObjectSendBehindTextItem1.Enabled = False
-        Me.FloatingObjectSendBehindTextItem1.Id = 693
+        Me.FloatingObjectSendBehindTextItem1.Id = 470
         Me.FloatingObjectSendBehindTextItem1.Name = "FloatingObjectSendBehindTextItem1"
         '
         'PivotToolsRibbonPageCategory1
@@ -4281,6 +4180,50 @@ Partial Class frmDashboardDesigner
         Me.PivotToolsRibbonPageCategory1.Name = "PivotToolsRibbonPageCategory1"
         Me.PivotToolsRibbonPageCategory1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.DataRibbonPage1, Me.DashboardItemDesignRibbonPage1})
         Me.PivotToolsRibbonPageCategory1.Visible = False
+        '
+        'DashboardDesigner1
+        '
+        Me.DashboardDesigner1.AsyncMode = True
+        Me.DashboardDesigner1.BarAndDockingController = Me.DashboardBarAndDockingController1
+        Me.DashboardDesigner1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DashboardDesigner1.Location = New System.Drawing.Point(0, 193)
+        Me.DashboardDesigner1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DashboardDesigner1.MenuManager = Me.RibbonControl
+        Me.DashboardDesigner1.Name = "DashboardDesigner1"
+        Me.DashboardDesigner1.PopupMenu = Me.DashboardPopupMenu1
+        Me.DashboardDesigner1.Size = New System.Drawing.Size(958, 349)
+        Me.DashboardDesigner1.TabIndex = 4
+        '
+        'DashboardPopupMenu1
+        '
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.ShowItemCaptionBarItem1, True)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.DuplicateItemBarItem1, True)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.DeleteItemBarItem1)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.ConvertDashboardItemTypeBarItem1)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.RemoveDataItemsBarItem1)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.TransposeItemBarItem1)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.EditRulesBarItem1)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.EditItemNamesBarItem1, True)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.DeleteGroupBarItem1, True)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.DeleteTabContainerBarItem1, True)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.DeleteTabPageBarItem1, True)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.EditFilterBarItem1, True)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.ClearFilterBarItem1)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.EditVisibleDataFilterBarItem1)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.UpdateDataBarItem1, True)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.MapLoadBarItem1, True)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.MapImportBarItem1)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.MapDefaultShapefileBarItem1)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.MapFullExtentBarItem1, True)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.ImageLoadBarItem1, True)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.ImageImportBarItem1)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.TextBoxEditTextBarItem1, True)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.TextBoxInsertFieldBarItem1)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.RangeFilterEditDateTimePeriodsBarItem1, True)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.DateFilterEditDateTimePeriodsBarItem1)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.PivotResetLayoutOptionsBarItem1, True)
+        Me.DashboardPopupMenu1.Name = "DashboardPopupMenu1"
+        Me.DashboardPopupMenu1.Ribbon = Me.RibbonControl
         '
         'DataRibbonPage1
         '
@@ -5813,12 +5756,12 @@ Partial Class frmDashboardDesigner
         '
         Me.HomeRibbonPage2.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.ClipboardRibbonPageGroup1, Me.FontRibbonPageGroup1, Me.ParagraphRibbonPageGroup1, Me.StylesRibbonPageGroup1, Me.EditingRibbonPageGroup1})
         Me.HomeRibbonPage2.Name = "HomeRibbonPage2"
-        ReduceOperation1.Behavior = DevExpress.XtraBars.Ribbon.ReduceOperationBehavior.UntilAvailable
-        ReduceOperation1.GroupName = Nothing
-        ReduceOperation1.ItemLinkIndex = 0
-        ReduceOperation1.ItemLinksCount = 0
-        ReduceOperation1.Operation = DevExpress.XtraBars.Ribbon.ReduceOperationType.Gallery
-        Me.HomeRibbonPage2.ReduceOperations.Add(ReduceOperation1)
+        ReduceOperation2.Behavior = DevExpress.XtraBars.Ribbon.ReduceOperationBehavior.UntilAvailable
+        ReduceOperation2.GroupName = Nothing
+        ReduceOperation2.ItemLinkIndex = 0
+        ReduceOperation2.ItemLinksCount = 0
+        ReduceOperation2.Operation = DevExpress.XtraBars.Ribbon.ReduceOperationType.Gallery
+        Me.HomeRibbonPage2.ReduceOperations.Add(ReduceOperation2)
         Me.HomeRibbonPage2.Visible = False
         '
         'ClipboardRibbonPageGroup1
@@ -6221,44 +6164,6 @@ Partial Class frmDashboardDesigner
         Me.SkinPaletteGalleryRibbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.[False]
         Me.SkinPaletteGalleryRibbonPageGroup1.ItemLinks.Add(Me.DashboardSkinPaletteRibbonGalleryBarItem1)
         Me.SkinPaletteGalleryRibbonPageGroup1.Name = "SkinPaletteGalleryRibbonPageGroup1"
-        '
-        'RibbonStatusBar
-        '
-        Me.RibbonStatusBar.Location = New System.Drawing.Point(0, 624)
-        Me.RibbonStatusBar.Name = "RibbonStatusBar"
-        Me.RibbonStatusBar.Ribbon = Me.RibbonControl
-        Me.RibbonStatusBar.Size = New System.Drawing.Size(1003, 27)
-        '
-        'DashboardPopupMenu1
-        '
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.ShowItemCaptionBarItem1, True)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.DuplicateItemBarItem1, True)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.DeleteItemBarItem1)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.ConvertDashboardItemTypeBarItem1)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.RemoveDataItemsBarItem1)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.TransposeItemBarItem1)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.EditRulesBarItem1)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.EditItemNamesBarItem1, True)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.DeleteGroupBarItem1, True)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.DeleteTabContainerBarItem1, True)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.DeleteTabPageBarItem1, True)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.EditFilterBarItem1, True)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.ClearFilterBarItem1)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.EditVisibleDataFilterBarItem1)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.UpdateDataBarItem1, True)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.MapLoadBarItem1, True)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.MapImportBarItem1)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.MapDefaultShapefileBarItem1)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.MapFullExtentBarItem1, True)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.ImageLoadBarItem1, True)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.ImageImportBarItem1)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.TextBoxEditTextBarItem1, True)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.TextBoxInsertFieldBarItem1)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.RangeFilterEditDateTimePeriodsBarItem1, True)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.DateFilterEditDateTimePeriodsBarItem1)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.PivotResetLayoutOptionsBarItem1, True)
-        Me.DashboardPopupMenu1.Name = "DashboardPopupMenu1"
-        Me.DashboardPopupMenu1.Ribbon = Me.RibbonControl
         '
         'DashboardBarController1
         '
@@ -6731,32 +6636,28 @@ Partial Class frmDashboardDesigner
         Me.TextBoxEditorBarController1.BarItems.Add(Me.FloatingObjectSendBackwardSubItem1)
         Me.TextBoxEditorBarController1.Designer = Me.DashboardDesigner1
         '
-        'frmDashboardDesigner
+        'frmDiseñadorDashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1003, 651)
-        Me.Controls.Add(Me.Panel1)
+        Me.ClientSize = New System.Drawing.Size(958, 572)
+        Me.Controls.Add(Me.DashboardDesigner1)
         Me.Controls.Add(Me.RibbonStatusBar)
-        Me.Controls.Add(Me.DashboardBackstageViewControl1)
         Me.Controls.Add(Me.RibbonControl)
-        Me.Name = "frmDashboardDesigner"
+        Me.Name = "frmDiseñadorDashboard"
         Me.Ribbon = Me.RibbonControl
         Me.StatusBar = Me.RibbonStatusBar
-        Me.Text = "Dashboard"
-        Me.Panel1.ResumeLayout(False)
-        CType(Me.DashboardDesigner1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DashboardBarAndDockingController1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Text = "Diseñador de Dashboard"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DashboardBackstageViewControl1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.DashboardBackstageViewControl1.ResumeLayout(False)
-        Me.BackstageViewClientControl1.ResumeLayout(False)
+        CType(Me.DashboardBarAndDockingController1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemSpinEdit1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemFontEdit1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemRichEditFontSizeEdit1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemBorderLineStyle1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemBorderLineWeight1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemFloatingObjectOutlineWeight1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DashboardDesigner1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DashboardPopupMenu1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DashboardBarController1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TextBoxEditorBarController1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -6764,20 +6665,9 @@ Partial Class frmDashboardDesigner
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Panel1 As Panel
     Friend WithEvents RibbonStatusBar As DevExpress.XtraBars.Ribbon.RibbonStatusBar
-    Friend WithEvents DashboardDesigner1 As DevExpress.DashboardWin.DashboardDesigner
-    Friend WithEvents DashboardBarAndDockingController1 As DevExpress.DashboardWin.Native.DashboardBarAndDockingController
     Friend WithEvents RibbonControl As DevExpress.XtraBars.Ribbon.RibbonControl
-    Friend WithEvents DashboardBackstageViewControl1 As DevExpress.DashboardWin.Bars.DashboardBackstageViewControl
-    Friend WithEvents BackstageViewClientControl1 As DevExpress.XtraBars.Ribbon.BackstageViewClientControl
-    Friend WithEvents RecentDashboardsControl1 As DevExpress.DashboardWin.Bars.RecentDashboardsControl
-    Friend WithEvents DashboardBackstageRecentTab1 As DevExpress.DashboardWin.Bars.DashboardBackstageRecentTab
-    Friend WithEvents DashboardBackstageNewButton1 As DevExpress.DashboardWin.Bars.DashboardBackstageNewButton
-    Friend WithEvents DashboardBackstageOpenButton1 As DevExpress.DashboardWin.Bars.DashboardBackstageOpenButton
-    Friend WithEvents DashboardBackstageSaveButton1 As DevExpress.DashboardWin.Bars.DashboardBackstageSaveButton
-    Friend WithEvents DashboardBackstageSaveAsButton1 As DevExpress.DashboardWin.Bars.DashboardBackstageSaveAsButton
+    Friend WithEvents DashboardBarAndDockingController1 As DevExpress.DashboardWin.Native.DashboardBarAndDockingController
     Friend WithEvents FileNewBarItem1 As DevExpress.DashboardWin.Bars.FileNewBarItem
     Friend WithEvents FileOpenBarItem1 As DevExpress.DashboardWin.Bars.FileOpenBarItem
     Friend WithEvents FileSaveBarItem1 As DevExpress.DashboardWin.Bars.FileSaveBarItem
@@ -7255,6 +7145,8 @@ Partial Class frmDashboardDesigner
     Friend WithEvents FloatingObjectSendToBackItem1 As DevExpress.XtraRichEdit.UI.FloatingObjectSendToBackItem
     Friend WithEvents FloatingObjectSendBehindTextItem1 As DevExpress.XtraRichEdit.UI.FloatingObjectSendBehindTextItem
     Friend WithEvents PivotToolsRibbonPageCategory1 As DevExpress.DashboardWin.Bars.PivotToolsRibbonPageCategory
+    Friend WithEvents DashboardDesigner1 As DevExpress.DashboardWin.DashboardDesigner
+    Friend WithEvents DashboardPopupMenu1 As DevExpress.DashboardWin.DashboardPopupMenu
     Friend WithEvents DataRibbonPage1 As DevExpress.DashboardWin.Bars.DataRibbonPage
     Friend WithEvents FilteringRibbonPageGroup1 As DevExpress.DashboardWin.Bars.FilteringRibbonPageGroup
     Friend WithEvents InteractivitySettingsRibbonPageGroup1 As DevExpress.DashboardWin.Bars.InteractivitySettingsRibbonPageGroup
@@ -7497,7 +7389,6 @@ Partial Class frmDashboardDesigner
     Friend WithEvents ViewRibbonPage1 As DevExpress.DashboardWin.Bars.ViewRibbonPage
     Friend WithEvents SkinsRibbonPageGroup1 As DevExpress.DashboardWin.Bars.SkinsRibbonPageGroup
     Friend WithEvents SkinPaletteGalleryRibbonPageGroup1 As DevExpress.DashboardWin.Bars.SkinPaletteGalleryRibbonPageGroup
-    Friend WithEvents DashboardPopupMenu1 As DevExpress.DashboardWin.DashboardPopupMenu
     Friend WithEvents DashboardBarController1 As DevExpress.DashboardWin.Bars.DashboardBarController
     Friend WithEvents TextBoxEditorBarController1 As DevExpress.DashboardWin.Bars.TextBoxEditorBarController
 End Class

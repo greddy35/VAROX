@@ -169,12 +169,6 @@
     <Compile Include="Gestión_General\frmValvulas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dashboard\frmDashboardDesigner.Designer.vb">
-      <DependentUpon>frmDashboardDesigner.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Dashboard\frmDashboardDesigner.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Admin_Sistema\frmConfigClaveBloq.Designer.vb">
       <DependentUpon>frmConfigClaveBloq.vb</DependentUpon>
     </Compile>
@@ -185,12 +179,6 @@
       <DependentUpon>frmUsuariosPrivilegios.vb</DependentUpon>
     </Compile>
     <Compile Include="Admin_Sistema\frmUsuariosPrivilegios.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Dashboard\frmDashboardRapido.Designer.vb">
-      <DependentUpon>frmDashboardRapido.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Dashboard\frmDashboardRapido.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Gestión_General\frmValv_Loc_Cli.Designer.vb">
@@ -230,11 +218,35 @@
     <Compile Include="Reportería\frmCorteGeneral.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reportería\frmCortePorLocal.Designer.vb">
-      <DependentUpon>frmCortePorLocal.vb</DependentUpon>
+    <Compile Include="Reportería\frmDiseñadorReportes.Designer.vb">
+      <DependentUpon>frmDiseñadorReportes.vb</DependentUpon>
     </Compile>
-    <Compile Include="Reportería\frmCortePorLocal.vb">
+    <Compile Include="Reportería\frmDiseñadorReportes.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportería\frmDiseñadorDashboard.Designer.vb">
+      <DependentUpon>frmDiseñadorDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportería\frmDiseñadorDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportería\frmVisualizadorDashboard.Designer.vb">
+      <DependentUpon>frmVisualizadorDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportería\frmVisualizadorDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportería\frmVisualizadorReportes.Designer.vb">
+      <DependentUpon>frmVisualizadorReportes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportería\frmVisualizadorReportes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportería\rptCorteGeneral.Designer.vb">
+      <DependentUpon>rptCorteGeneral.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportería\rptCorteGeneral.vb">
+      <SubType>Component</SubType>
     </Compile>
     <EmbeddedResource Include="Admin_Sistema\frmClasesDispositivos.resx">
       <DependentUpon>frmClasesDispositivos.vb</DependentUpon>
@@ -257,17 +269,11 @@
     <EmbeddedResource Include="Gestión_General\frmValvulas.resx">
       <DependentUpon>frmValvulas.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dashboard\frmDashboardDesigner.resx">
-      <DependentUpon>frmDashboardDesigner.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Admin_Sistema\frmConfigClaveBloq.resx">
       <DependentUpon>frmConfigClaveBloq.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin_Sistema\frmUsuariosPrivilegios.resx">
       <DependentUpon>frmUsuariosPrivilegios.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Dashboard\frmDashboardRapido.resx">
-      <DependentUpon>frmDashboardRapido.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gestión_General\frmValv_Loc_Cli.resx">
       <DependentUpon>frmValv_Loc_Cli.vb</DependentUpon>
@@ -295,8 +301,20 @@
     <EmbeddedResource Include="Reportería\frmCorteGeneral.resx">
       <DependentUpon>frmCorteGeneral.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportería\frmCortePorLocal.resx">
-      <DependentUpon>frmCortePorLocal.vb</DependentUpon>
+    <EmbeddedResource Include="Reportería\frmDiseñadorReportes.resx">
+      <DependentUpon>frmDiseñadorReportes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportería\frmDiseñadorDashboard.resx">
+      <DependentUpon>frmDiseñadorDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportería\frmVisualizadorDashboard.resx">
+      <DependentUpon>frmVisualizadorDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportería\frmVisualizadorReportes.resx">
+      <DependentUpon>frmVisualizadorReportes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportería\rptCorteGeneral.resx">
+      <DependentUpon>rptCorteGeneral.vb</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="My Project\Settings.settings">

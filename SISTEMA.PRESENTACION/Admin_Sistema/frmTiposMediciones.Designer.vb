@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmTiposMediciones
     Inherits DevExpress.XtraBars.Ribbon.RibbonForm
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         If disposing AndAlso components IsNot Nothing Then
             components.Dispose()
@@ -17,7 +17,7 @@ Partial Class frmTiposMediciones
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmTiposMediciones))
         Me.RibbonControl = New DevExpress.XtraBars.Ribbon.RibbonControl()
@@ -35,6 +35,11 @@ Partial Class frmTiposMediciones
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.cboUnidadMedida = New System.Windows.Forms.ComboBox()
+        Me.txtMedida = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.txtDescripcion = New System.Windows.Forms.RichTextBox()
         Me.txtID = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtModificadoEl = New System.Windows.Forms.TextBox()
@@ -48,21 +53,24 @@ Partial Class frmTiposMediciones
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtNombreTipo = New System.Windows.Forms.TextBox()
+        Me.spValor = New DevExpress.XtraEditors.TextEdit()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.GridControlTiposMediciones = New DevExpress.XtraGrid.GridControl()
         Me.GridViewTiposMediciones = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.GridColumn1 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn2 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn4 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn5 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn3 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn9 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn10 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn11 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn12 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.txtDescripcion = New System.Windows.Forms.RichTextBox()
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        CType(Me.spValor.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
         CType(Me.GridControlTiposMediciones, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridViewTiposMediciones, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -76,7 +84,7 @@ Partial Class frmTiposMediciones
         Me.RibbonControl.MaxItemId = 8
         Me.RibbonControl.Name = "RibbonControl"
         Me.RibbonControl.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1})
-        Me.RibbonControl.Size = New System.Drawing.Size(1042, 182)
+        Me.RibbonControl.Size = New System.Drawing.Size(1114, 182)
         Me.RibbonControl.StatusBar = Me.RibbonStatusBar
         '
         'btnNuevo
@@ -205,7 +213,7 @@ Partial Class frmTiposMediciones
         Me.RibbonStatusBar.Location = New System.Drawing.Point(0, 590)
         Me.RibbonStatusBar.Name = "RibbonStatusBar"
         Me.RibbonStatusBar.Ribbon = Me.RibbonControl
-        Me.RibbonStatusBar.Size = New System.Drawing.Size(1042, 27)
+        Me.RibbonStatusBar.Size = New System.Drawing.Size(1114, 27)
         '
         'TableLayoutPanel1
         '
@@ -219,7 +227,7 @@ Partial Class frmTiposMediciones
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 150.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1042, 408)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1114, 408)
         Me.TableLayoutPanel1.TabIndex = 4
         '
         'Panel1
@@ -228,11 +236,15 @@ Partial Class frmTiposMediciones
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(3, 3)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1036, 144)
+        Me.Panel1.Size = New System.Drawing.Size(1108, 144)
         Me.Panel1.TabIndex = 0
         '
         'Panel2
         '
+        Me.Panel2.Controls.Add(Me.cboUnidadMedida)
+        Me.Panel2.Controls.Add(Me.txtMedida)
+        Me.Panel2.Controls.Add(Me.Label4)
+        Me.Panel2.Controls.Add(Me.Label5)
         Me.Panel2.Controls.Add(Me.txtDescripcion)
         Me.Panel2.Controls.Add(Me.txtID)
         Me.Panel2.Controls.Add(Me.Label1)
@@ -247,19 +259,79 @@ Partial Class frmTiposMediciones
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.txtNombreTipo)
+        Me.Panel2.Controls.Add(Me.spValor)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Font = New System.Drawing.Font("Tahoma", 10.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1036, 144)
+        Me.Panel2.Size = New System.Drawing.Size(1108, 144)
         Me.Panel2.TabIndex = 6
+        '
+        'cboUnidadMedida
+        '
+        Me.cboUnidadMedida.Cursor = System.Windows.Forms.Cursors.Default
+        Me.cboUnidadMedida.DropDownHeight = 150
+        Me.cboUnidadMedida.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboUnidadMedida.Enabled = False
+        Me.cboUnidadMedida.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboUnidadMedida.ForeColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.cboUnidadMedida.FormattingEnabled = True
+        Me.cboUnidadMedida.IntegralHeight = False
+        Me.cboUnidadMedida.Items.AddRange(New Object() {"m3", "und"})
+        Me.cboUnidadMedida.Location = New System.Drawing.Point(155, 76)
+        Me.cboUnidadMedida.Name = "cboUnidadMedida"
+        Me.cboUnidadMedida.Size = New System.Drawing.Size(61, 29)
+        Me.cboUnidadMedida.TabIndex = 34
+        '
+        'txtMedida
+        '
+        Me.txtMedida.BackColor = System.Drawing.SystemColors.Info
+        Me.txtMedida.Enabled = False
+        Me.txtMedida.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtMedida.ForeColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.txtMedida.Location = New System.Drawing.Point(222, 76)
+        Me.txtMedida.Name = "txtMedida"
+        Me.txtMedida.Size = New System.Drawing.Size(207, 28)
+        Me.txtMedida.TabIndex = 33
+        Me.txtMedida.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(5, 79)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(144, 21)
+        Me.Label4.TabIndex = 26
+        Me.Label4.Text = "Unidad Medida:"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(23, 115)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(126, 21)
+        Me.Label5.TabIndex = 25
+        Me.Label5.Text = "Valor Unidad:"
+        '
+        'txtDescripcion
+        '
+        Me.txtDescripcion.Font = New System.Drawing.Font("Tahoma", 10.2!)
+        Me.txtDescripcion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.txtDescripcion.Location = New System.Drawing.Point(575, 74)
+        Me.txtDescripcion.MaxLength = 100
+        Me.txtDescripcion.Name = "txtDescripcion"
+        Me.txtDescripcion.Size = New System.Drawing.Size(330, 62)
+        Me.txtDescripcion.TabIndex = 24
+        Me.txtDescripcion.Text = ""
         '
         'txtID
         '
         Me.txtID.Enabled = False
         Me.txtID.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtID.ForeColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(52, Byte), Integer))
-        Me.txtID.Location = New System.Drawing.Point(142, 5)
+        Me.txtID.Location = New System.Drawing.Point(155, 6)
         Me.txtID.Name = "txtID"
         Me.txtID.Size = New System.Drawing.Size(88, 28)
         Me.txtID.TabIndex = 23
@@ -269,7 +341,7 @@ Partial Class frmTiposMediciones
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(99, 12)
+        Me.Label1.Location = New System.Drawing.Point(112, 11)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(37, 21)
         Me.Label1.TabIndex = 22
@@ -281,7 +353,7 @@ Partial Class frmTiposMediciones
         Me.txtModificadoEl.Enabled = False
         Me.txtModificadoEl.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtModificadoEl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(52, Byte), Integer))
-        Me.txtModificadoEl.Location = New System.Drawing.Point(827, 34)
+        Me.txtModificadoEl.Location = New System.Drawing.Point(911, 39)
         Me.txtModificadoEl.Name = "txtModificadoEl"
         Me.txtModificadoEl.Size = New System.Drawing.Size(175, 28)
         Me.txtModificadoEl.TabIndex = 18
@@ -293,7 +365,7 @@ Partial Class frmTiposMediciones
         Me.txtModificadoPor.Enabled = False
         Me.txtModificadoPor.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtModificadoPor.ForeColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(52, Byte), Integer))
-        Me.txtModificadoPor.Location = New System.Drawing.Point(827, 3)
+        Me.txtModificadoPor.Location = New System.Drawing.Point(911, 8)
         Me.txtModificadoPor.Name = "txtModificadoPor"
         Me.txtModificadoPor.Size = New System.Drawing.Size(175, 28)
         Me.txtModificadoPor.TabIndex = 17
@@ -305,7 +377,7 @@ Partial Class frmTiposMediciones
         Me.txtCreadoEl.Enabled = False
         Me.txtCreadoEl.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCreadoEl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(52, Byte), Integer))
-        Me.txtCreadoEl.Location = New System.Drawing.Point(491, 35)
+        Me.txtCreadoEl.Location = New System.Drawing.Point(575, 40)
         Me.txtCreadoEl.Name = "txtCreadoEl"
         Me.txtCreadoEl.Size = New System.Drawing.Size(175, 28)
         Me.txtCreadoEl.TabIndex = 16
@@ -317,7 +389,7 @@ Partial Class frmTiposMediciones
         Me.txtCreadoPor.Enabled = False
         Me.txtCreadoPor.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCreadoPor.ForeColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(52, Byte), Integer))
-        Me.txtCreadoPor.Location = New System.Drawing.Point(491, 3)
+        Me.txtCreadoPor.Location = New System.Drawing.Point(575, 8)
         Me.txtCreadoPor.Name = "txtCreadoPor"
         Me.txtCreadoPor.Size = New System.Drawing.Size(175, 28)
         Me.txtCreadoPor.TabIndex = 15
@@ -327,7 +399,7 @@ Partial Class frmTiposMediciones
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Tahoma", 10.2!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(690, 38)
+        Me.Label8.Location = New System.Drawing.Point(774, 43)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(131, 21)
         Me.Label8.TabIndex = 14
@@ -337,7 +409,7 @@ Partial Class frmTiposMediciones
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Tahoma", 10.2!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(676, 10)
+        Me.Label9.Location = New System.Drawing.Point(760, 15)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(145, 21)
         Me.Label9.TabIndex = 13
@@ -347,7 +419,7 @@ Partial Class frmTiposMediciones
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Tahoma", 10.2!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(389, 41)
+        Me.Label7.Location = New System.Drawing.Point(473, 46)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(96, 21)
         Me.Label7.TabIndex = 12
@@ -357,7 +429,7 @@ Partial Class frmTiposMediciones
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Tahoma", 10.2!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(375, 10)
+        Me.Label6.Location = New System.Drawing.Point(459, 15)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(110, 21)
         Me.Label6.TabIndex = 11
@@ -367,7 +439,7 @@ Partial Class frmTiposMediciones
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(10, 43)
+        Me.Label2.Location = New System.Drawing.Point(23, 45)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(126, 21)
         Me.Label2.TabIndex = 2
@@ -377,7 +449,7 @@ Partial Class frmTiposMediciones
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(17, 74)
+        Me.Label3.Location = New System.Drawing.Point(453, 77)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(116, 21)
         Me.Label3.TabIndex = 4
@@ -388,12 +460,31 @@ Partial Class frmTiposMediciones
         Me.txtNombreTipo.Enabled = False
         Me.txtNombreTipo.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNombreTipo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(52, Byte), Integer))
-        Me.txtNombreTipo.Location = New System.Drawing.Point(142, 37)
+        Me.txtNombreTipo.Location = New System.Drawing.Point(155, 41)
         Me.txtNombreTipo.MaxLength = 50
         Me.txtNombreTipo.Name = "txtNombreTipo"
-        Me.txtNombreTipo.Size = New System.Drawing.Size(226, 28)
+        Me.txtNombreTipo.Size = New System.Drawing.Size(274, 28)
         Me.txtNombreTipo.TabIndex = 3
         Me.txtNombreTipo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'spValor
+        '
+        Me.spValor.EditValue = "$1.00"
+        Me.spValor.Location = New System.Drawing.Point(155, 112)
+        Me.spValor.MenuManager = Me.RibbonControl
+        Me.spValor.Name = "spValor"
+        Me.spValor.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.spValor.Properties.Appearance.Options.UseFont = True
+        Me.spValor.Properties.Appearance.Options.UseTextOptions = True
+        Me.spValor.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.spValor.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Buffered
+        Me.spValor.Properties.HideSelection = False
+        Me.spValor.Properties.MaskSettings.Set("mask", "c")
+        Me.spValor.Properties.MaskSettings.Set("MaskManagerType", GetType(DevExpress.Data.Mask.NumericMaskManager))
+        Me.spValor.Properties.MaxLength = 5
+        Me.spValor.Properties.UseMaskAsDisplayFormat = True
+        Me.spValor.Size = New System.Drawing.Size(88, 28)
+        Me.spValor.TabIndex = 35
         '
         'Panel4
         '
@@ -401,7 +492,7 @@ Partial Class frmTiposMediciones
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel4.Location = New System.Drawing.Point(3, 153)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(1036, 288)
+        Me.Panel4.Size = New System.Drawing.Size(1108, 288)
         Me.Panel4.TabIndex = 1
         '
         'GridControlTiposMediciones
@@ -411,7 +502,7 @@ Partial Class frmTiposMediciones
         Me.GridControlTiposMediciones.MainView = Me.GridViewTiposMediciones
         Me.GridControlTiposMediciones.MenuManager = Me.RibbonControl
         Me.GridControlTiposMediciones.Name = "GridControlTiposMediciones"
-        Me.GridControlTiposMediciones.Size = New System.Drawing.Size(1036, 288)
+        Me.GridControlTiposMediciones.Size = New System.Drawing.Size(1108, 288)
         Me.GridControlTiposMediciones.TabIndex = 1
         Me.GridControlTiposMediciones.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridViewTiposMediciones})
         '
@@ -435,112 +526,143 @@ Partial Class frmTiposMediciones
         Me.GridViewTiposMediciones.Appearance.SelectedRow.ForeColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(52, Byte), Integer))
         Me.GridViewTiposMediciones.Appearance.SelectedRow.Options.UseFont = True
         Me.GridViewTiposMediciones.Appearance.SelectedRow.Options.UseForeColor = True
-        Me.GridViewTiposMediciones.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn1, Me.GridColumn2, Me.GridColumn3, Me.GridColumn9, Me.GridColumn10, Me.GridColumn11, Me.GridColumn12})
+        Me.GridViewTiposMediciones.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn1, Me.GridColumn2, Me.GridColumn4, Me.GridColumn5, Me.GridColumn3, Me.GridColumn9, Me.GridColumn10, Me.GridColumn11, Me.GridColumn12})
         Me.GridViewTiposMediciones.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus
         Me.GridViewTiposMediciones.GridControl = Me.GridControlTiposMediciones
         Me.GridViewTiposMediciones.Name = "GridViewTiposMediciones"
+        Me.GridViewTiposMediciones.OptionsView.ColumnAutoWidth = False
+        Me.GridViewTiposMediciones.OptionsView.ShowAutoFilterRow = True
         '
         'GridColumn1
         '
+        Me.GridColumn1.AppearanceHeader.Options.UseTextOptions = True
+        Me.GridColumn1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
         Me.GridColumn1.Caption = "ID"
         Me.GridColumn1.FieldName = "ID_TIPO_MEDICION"
-        Me.GridColumn1.MinWidth = 25
+        Me.GridColumn1.MinWidth = 100
         Me.GridColumn1.Name = "GridColumn1"
         Me.GridColumn1.OptionsColumn.AllowEdit = False
         Me.GridColumn1.Visible = True
         Me.GridColumn1.VisibleIndex = 0
-        Me.GridColumn1.Width = 94
+        Me.GridColumn1.Width = 100
         '
         'GridColumn2
         '
+        Me.GridColumn2.AppearanceHeader.Options.UseTextOptions = True
+        Me.GridColumn2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
         Me.GridColumn2.Caption = "TIPO"
         Me.GridColumn2.FieldName = "TIPO_MEDICION"
-        Me.GridColumn2.MinWidth = 25
+        Me.GridColumn2.MinWidth = 150
         Me.GridColumn2.Name = "GridColumn2"
         Me.GridColumn2.OptionsColumn.AllowEdit = False
         Me.GridColumn2.Visible = True
         Me.GridColumn2.VisibleIndex = 1
-        Me.GridColumn2.Width = 94
+        Me.GridColumn2.Width = 150
+        '
+        'GridColumn4
+        '
+        Me.GridColumn4.AppearanceHeader.Options.UseTextOptions = True
+        Me.GridColumn4.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.GridColumn4.Caption = "UNIDAD MEDIDA"
+        Me.GridColumn4.FieldName = "UNIDAD"
+        Me.GridColumn4.MinWidth = 150
+        Me.GridColumn4.Name = "GridColumn4"
+        Me.GridColumn4.OptionsColumn.AllowEdit = False
+        Me.GridColumn4.Visible = True
+        Me.GridColumn4.VisibleIndex = 2
+        Me.GridColumn4.Width = 150
+        '
+        'GridColumn5
+        '
+        Me.GridColumn5.AppearanceHeader.Options.UseTextOptions = True
+        Me.GridColumn5.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.GridColumn5.Caption = "VALOR UNIDAD"
+        Me.GridColumn5.FieldName = "VALOR_UNIDAD"
+        Me.GridColumn5.MinWidth = 150
+        Me.GridColumn5.Name = "GridColumn5"
+        Me.GridColumn5.OptionsColumn.AllowEdit = False
+        Me.GridColumn5.Visible = True
+        Me.GridColumn5.VisibleIndex = 3
+        Me.GridColumn5.Width = 150
         '
         'GridColumn3
         '
+        Me.GridColumn3.AppearanceHeader.Options.UseTextOptions = True
+        Me.GridColumn3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
         Me.GridColumn3.Caption = "DESCRIPCIÓN"
         Me.GridColumn3.FieldName = "DESCRIPCION"
-        Me.GridColumn3.MinWidth = 25
+        Me.GridColumn3.MinWidth = 190
         Me.GridColumn3.Name = "GridColumn3"
         Me.GridColumn3.OptionsColumn.AllowEdit = False
         Me.GridColumn3.Visible = True
-        Me.GridColumn3.VisibleIndex = 2
-        Me.GridColumn3.Width = 94
+        Me.GridColumn3.VisibleIndex = 4
+        Me.GridColumn3.Width = 190
         '
         'GridColumn9
         '
         Me.GridColumn9.AppearanceCell.Font = New System.Drawing.Font("Tahoma", 7.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GridColumn9.AppearanceCell.Options.UseFont = True
+        Me.GridColumn9.AppearanceHeader.Options.UseTextOptions = True
+        Me.GridColumn9.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
         Me.GridColumn9.Caption = "CREADO POR"
         Me.GridColumn9.FieldName = "CREADO_POR"
-        Me.GridColumn9.MinWidth = 25
+        Me.GridColumn9.MinWidth = 110
         Me.GridColumn9.Name = "GridColumn9"
         Me.GridColumn9.OptionsColumn.AllowEdit = False
         Me.GridColumn9.Visible = True
-        Me.GridColumn9.VisibleIndex = 3
-        Me.GridColumn9.Width = 94
+        Me.GridColumn9.VisibleIndex = 5
+        Me.GridColumn9.Width = 110
         '
         'GridColumn10
         '
         Me.GridColumn10.AppearanceCell.Font = New System.Drawing.Font("Tahoma", 7.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GridColumn10.AppearanceCell.Options.UseFont = True
+        Me.GridColumn10.AppearanceHeader.Options.UseTextOptions = True
+        Me.GridColumn10.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
         Me.GridColumn10.Caption = "CREADO EL"
         Me.GridColumn10.FieldName = "CREADO_EL"
-        Me.GridColumn10.MinWidth = 25
+        Me.GridColumn10.MinWidth = 180
         Me.GridColumn10.Name = "GridColumn10"
         Me.GridColumn10.OptionsColumn.AllowEdit = False
         Me.GridColumn10.Visible = True
-        Me.GridColumn10.VisibleIndex = 4
-        Me.GridColumn10.Width = 94
+        Me.GridColumn10.VisibleIndex = 6
+        Me.GridColumn10.Width = 180
         '
         'GridColumn11
         '
         Me.GridColumn11.AppearanceCell.Font = New System.Drawing.Font("Tahoma", 7.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GridColumn11.AppearanceCell.Options.UseFont = True
+        Me.GridColumn11.AppearanceHeader.Options.UseTextOptions = True
+        Me.GridColumn11.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
         Me.GridColumn11.Caption = "MODIFICADO POR"
         Me.GridColumn11.FieldName = "MODIFICADO_POR"
-        Me.GridColumn11.MinWidth = 25
+        Me.GridColumn11.MinWidth = 110
         Me.GridColumn11.Name = "GridColumn11"
         Me.GridColumn11.OptionsColumn.AllowEdit = False
         Me.GridColumn11.Visible = True
-        Me.GridColumn11.VisibleIndex = 5
-        Me.GridColumn11.Width = 94
+        Me.GridColumn11.VisibleIndex = 7
+        Me.GridColumn11.Width = 110
         '
         'GridColumn12
         '
         Me.GridColumn12.AppearanceCell.Font = New System.Drawing.Font("Tahoma", 7.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GridColumn12.AppearanceCell.Options.UseFont = True
+        Me.GridColumn12.AppearanceHeader.Options.UseTextOptions = True
+        Me.GridColumn12.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
         Me.GridColumn12.Caption = "MODIFICADO EL"
         Me.GridColumn12.FieldName = "MODIFICADO_EL"
-        Me.GridColumn12.MinWidth = 25
+        Me.GridColumn12.MinWidth = 180
         Me.GridColumn12.Name = "GridColumn12"
         Me.GridColumn12.OptionsColumn.AllowEdit = False
         Me.GridColumn12.Visible = True
-        Me.GridColumn12.VisibleIndex = 6
-        Me.GridColumn12.Width = 94
-        '
-        'txtDescripcion
-        '
-        Me.txtDescripcion.Font = New System.Drawing.Font("Tahoma", 10.2!)
-        Me.txtDescripcion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(52, Byte), Integer))
-        Me.txtDescripcion.Location = New System.Drawing.Point(142, 72)
-        Me.txtDescripcion.MaxLength = 100
-        Me.txtDescripcion.Name = "txtDescripcion"
-        Me.txtDescripcion.Size = New System.Drawing.Size(343, 69)
-        Me.txtDescripcion.TabIndex = 24
-        Me.txtDescripcion.Text = ""
+        Me.GridColumn12.VisibleIndex = 8
+        Me.GridColumn12.Width = 180
         '
         'frmTiposMediciones
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1042, 617)
+        Me.ClientSize = New System.Drawing.Size(1114, 617)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.RibbonStatusBar)
         Me.Controls.Add(Me.RibbonControl)
@@ -554,6 +676,7 @@ Partial Class frmTiposMediciones
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.spValor.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         CType(Me.GridControlTiposMediciones, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridViewTiposMediciones, System.ComponentModel.ISupportInitialize).EndInit()
@@ -601,4 +724,11 @@ Partial Class frmTiposMediciones
     Friend WithEvents GridColumn12 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents btnCancelar As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents txtDescripcion As RichTextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents txtMedida As TextBox
+    Friend WithEvents cboUnidadMedida As ComboBox
+    Friend WithEvents GridColumn4 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn5 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents spValor As DevExpress.XtraEditors.TextEdit
 End Class

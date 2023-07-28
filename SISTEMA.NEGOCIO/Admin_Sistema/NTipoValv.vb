@@ -29,7 +29,7 @@ Public Class NTipoValv
         Dim msj As String = ""
         Try
             Dim Datos As New DTipoValv
-            Datos.Eliminar(valor)
+            msj = Datos.Eliminar(valor)
             Return msj
         Catch ex As Exception
             Return msj

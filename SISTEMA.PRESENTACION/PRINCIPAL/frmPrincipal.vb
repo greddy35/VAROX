@@ -326,9 +326,9 @@ Public Class frmPrincipal
             txtPassConfirma.PasswordChar = CChar("*")
             'ASIGNA COMO IDIOMA A LOS OBJETOS DE LA LIBRERIA DEVEXPRESS EL ESPAÑOL
             '----------------------------------------
-            System.Threading.Thread.CurrentThread.CurrentCulture = New System.Globalization.CultureInfo("en-US")
+            'System.Threading.Thread.CurrentThread.CurrentCulture = New System.Globalization.CultureInfo("en-US")
             System.Threading.Thread.CurrentThread.CurrentUICulture = New System.Globalization.CultureInfo("es-ES")
-            CultureInfo.DefaultThreadCurrentCulture = CultureInfo.CreateSpecificCulture("en-US")
+            'CultureInfo.DefaultThreadCurrentCulture = CultureInfo.CreateSpecificCulture("en-US")
             CultureInfo.DefaultThreadCurrentUICulture = CultureInfo.CreateSpecificCulture("es-ES")
             'HABILITA LOS MODULOS ASIGNADOS AL USUARIO
             'iniciarMenu()
@@ -367,20 +367,12 @@ Public Class frmPrincipal
         AbrirFormulario(frmUsuariosPrivilegios)
     End Sub
 
-    Private Sub AccordionControlDashboard_Click(sender As Object, e As EventArgs) Handles accDashboardDesigner.Click
-        AbrirFormulario(frmDashboardDesigner)
-    End Sub
-
-    Private Sub AccordionControlDashboardRapido_Click(sender As Object, e As EventArgs) Handles accDashboardRap.Click
-        AbrirFormulario(frmDashboardRapido)
-    End Sub
-
     Private Sub AccordionControlElement4_Click(sender As Object, e As EventArgs) Handles accCorteGeneral.Click
-        AbrirFormulario(frmCortePorLocal)
+        AbrirFormulario(frmReporteria)
     End Sub
 
-    Private Sub AccordionControlElement6_Click(sender As Object, e As EventArgs) Handles accCorte_X_Local.Click
-        AbrirFormulario(frmCortePorLocal)
+    Private Sub AccordionControlElement6_Click(sender As Object, e As EventArgs)
+
     End Sub
 
     Private Sub AccordionControlElement10_Click(sender As Object, e As EventArgs) Handles accValvulas.Click
@@ -413,6 +405,22 @@ Public Class frmPrincipal
 
     Private Sub accTiposMedicion_Click(sender As Object, e As EventArgs) Handles accTiposMedicion.Click
         AbrirFormulario(frmTiposMediciones)
+    End Sub
+
+    Private Sub accVisualizadorDashboard_Click(sender As Object, e As EventArgs) Handles accVisualizadorDashboard.Click
+        AbrirFormulario(frmVisualizadorDashboard)
+    End Sub
+
+    Private Sub accDiseñadorDashboard_Click(sender As Object, e As EventArgs) Handles accDiseñadorDashboard.Click
+        AbrirFormulario(frmDiseñadorDashboard)
+    End Sub
+
+    Private Sub accVisualizadorReportes_Click(sender As Object, e As EventArgs) Handles accVisualizadorReportes.Click
+        AbrirFormulario(frmVisualizadorReportes)
+    End Sub
+
+    Private Sub accDiseñadorReportes_Click(sender As Object, e As EventArgs) Handles accDiseñadorReportes.Click
+        AbrirFormulario(frmDiseñadorReportes)
     End Sub
 
 

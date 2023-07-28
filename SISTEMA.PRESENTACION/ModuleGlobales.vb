@@ -1,4 +1,5 @@
-﻿Imports SISTEMA.DATOS
+﻿Imports DevExpress.DataAccess.Sql
+Imports SISTEMA.DATOS
 
 Public Module ModuleGlobales
     Public pbRegistros As String
@@ -11,6 +12,12 @@ Public Module ModuleGlobales
     Public idRol As Integer
     Public idUsuario As Integer
     Public Privilegios As DataSet           'Almacena la informacion de privilegios del rol y de usuario
+
+    'Contenerdores
+    Public sql_DataSource As SqlDataSource = Nothing
+    Public sql_spQuery As StoredProcQuery = Nothing
+    Public fechI As String = ""
+    Public fechF As String = ""
 #End Region
 
 

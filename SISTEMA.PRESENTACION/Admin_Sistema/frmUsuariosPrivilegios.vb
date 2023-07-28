@@ -175,13 +175,15 @@ Public Class frmUsuariosPrivilegios
 #End Region
 
 #Region "Acciones Generales"
-    Private Sub GridViewUsuarios_RowCellClick(sender As Object, e As RowCellClickEventArgs)
+    Private Sub GridViewUsuarios_RowClick(sender As Object, e As RowClickEventArgs) Handles GridViewUsuarios.RowClick
         Try
-            txtUsuario.Text = GridViewUsuarios.GetRow(GridViewUsuarios.FocusedRowHandle)("usuario").ToString
-            txtNombre.Text = GridViewUsuarios.GetRow(GridViewUsuarios.FocusedRowHandle)("nombre").ToString
-            txtIdUsuario.Text = GridViewUsuarios.GetRow(GridViewUsuarios.FocusedRowHandle)("id_usuario").ToString
-            cboModulo.SelectedIndex = 0
-            cboModulo.Enabled = True
+            If GridViewUsuarios.GetSelectedRows.Count = 1 And GridViewUsuarios.IsFilterRow(e.RowHandle) = False Then
+                txtUsuario.Text = GridViewUsuarios.GetRowCellValue(GridViewUsuarios.FocusedRowHandle, "usuario").ToString
+                txtNombre.Text = GridViewUsuarios.GetRowCellValue(GridViewUsuarios.FocusedRowHandle, "nombre").ToString
+                txtIdUsuario.Text = GridViewUsuarios.GetRowCellValue(GridViewUsuarios.FocusedRowHandle, "id_usuario").ToString
+                cboModulo.SelectedIndex = 0
+                cboModulo.Enabled = True
+            End If
         Catch ex As Exception
             mensajeError(ex)
             'Encapsula cualquier error
@@ -382,6 +384,8 @@ Public Class frmUsuariosPrivilegios
         txtPassConfirma.Text = ""
         GroupBoxRestabPass.Visible = True
     End Sub
+
+
 
 #End Region
 End Class

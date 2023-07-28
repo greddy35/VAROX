@@ -98,8 +98,13 @@ Partial Class frmLocales
         Me.btnSalir.Id = 1
         Me.btnSalir.ImageOptions.Image = CType(resources.GetObject("btnSalir.ImageOptions.Image"), System.Drawing.Image)
         Me.btnSalir.ImageOptions.LargeImage = CType(resources.GetObject("btnSalir.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.btnSalir.LargeWidth = 55
+        Me.btnSalir.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSalir.ItemAppearance.Normal.Options.UseFont = True
+        Me.btnSalir.ItemShortcut = New DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Delete))
+        Me.btnSalir.LargeWidth = 65
         Me.btnSalir.Name = "btnSalir"
+        Me.btnSalir.ShortcutKeyDisplayString = "Ctrl+Supr"
+        Me.btnSalir.ShowItemShortcut = DevExpress.Utils.DefaultBoolean.[True]
         '
         'btnNuevo
         '
@@ -107,8 +112,13 @@ Partial Class frmLocales
         Me.btnNuevo.Id = 4
         Me.btnNuevo.ImageOptions.Image = CType(resources.GetObject("btnNuevo.ImageOptions.Image"), System.Drawing.Image)
         Me.btnNuevo.ImageOptions.LargeImage = CType(resources.GetObject("btnNuevo.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.btnNuevo.LargeWidth = 55
+        Me.btnNuevo.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNuevo.ItemAppearance.Normal.Options.UseFont = True
+        Me.btnNuevo.ItemShortcut = New DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.N))
+        Me.btnNuevo.LargeWidth = 65
         Me.btnNuevo.Name = "btnNuevo"
+        Me.btnNuevo.ShortcutKeyDisplayString = "Ctrl+N"
+        Me.btnNuevo.ShowItemShortcut = DevExpress.Utils.DefaultBoolean.[True]
         '
         'btnGuardar
         '
@@ -116,8 +126,13 @@ Partial Class frmLocales
         Me.btnGuardar.Id = 5
         Me.btnGuardar.ImageOptions.Image = CType(resources.GetObject("btnGuardar.ImageOptions.Image"), System.Drawing.Image)
         Me.btnGuardar.ImageOptions.LargeImage = CType(resources.GetObject("btnGuardar.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.btnGuardar.LargeWidth = 55
+        Me.btnGuardar.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGuardar.ItemAppearance.Normal.Options.UseFont = True
+        Me.btnGuardar.ItemShortcut = New DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.G))
+        Me.btnGuardar.LargeWidth = 65
         Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.ShortcutKeyDisplayString = "Ctrl+G"
+        Me.btnGuardar.ShowItemShortcut = DevExpress.Utils.DefaultBoolean.[True]
         '
         'btnModificar
         '
@@ -125,8 +140,13 @@ Partial Class frmLocales
         Me.btnModificar.Id = 6
         Me.btnModificar.ImageOptions.Image = CType(resources.GetObject("btnModificar.ImageOptions.Image"), System.Drawing.Image)
         Me.btnModificar.ImageOptions.LargeImage = CType(resources.GetObject("btnModificar.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.btnModificar.LargeWidth = 55
+        Me.btnModificar.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnModificar.ItemAppearance.Normal.Options.UseFont = True
+        Me.btnModificar.ItemShortcut = New DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.M))
+        Me.btnModificar.LargeWidth = 65
         Me.btnModificar.Name = "btnModificar"
+        Me.btnModificar.ShortcutKeyDisplayString = "Ctrl+M"
+        Me.btnModificar.ShowItemShortcut = DevExpress.Utils.DefaultBoolean.[True]
         '
         'btnEliminar
         '
@@ -134,8 +154,13 @@ Partial Class frmLocales
         Me.btnEliminar.Id = 7
         Me.btnEliminar.ImageOptions.Image = CType(resources.GetObject("btnEliminar.ImageOptions.Image"), System.Drawing.Image)
         Me.btnEliminar.ImageOptions.LargeImage = CType(resources.GetObject("btnEliminar.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.btnEliminar.LargeWidth = 55
+        Me.btnEliminar.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEliminar.ItemAppearance.Normal.Options.UseFont = True
+        Me.btnEliminar.ItemShortcut = New DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.Delete)
+        Me.btnEliminar.LargeWidth = 65
         Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.ShortcutKeyDisplayString = "Supr"
+        Me.btnEliminar.ShowItemShortcut = DevExpress.Utils.DefaultBoolean.[True]
         '
         'btnRefrescar
         '
@@ -143,8 +168,13 @@ Partial Class frmLocales
         Me.btnRefrescar.Id = 8
         Me.btnRefrescar.ImageOptions.Image = CType(resources.GetObject("btnRefrescar.ImageOptions.Image"), System.Drawing.Image)
         Me.btnRefrescar.ImageOptions.LargeImage = CType(resources.GetObject("btnRefrescar.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.btnRefrescar.LargeWidth = 55
+        Me.btnRefrescar.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRefrescar.ItemAppearance.Normal.Options.UseFont = True
+        Me.btnRefrescar.ItemShortcut = New DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.R))
+        Me.btnRefrescar.LargeWidth = 65
         Me.btnRefrescar.Name = "btnRefrescar"
+        Me.btnRefrescar.ShortcutKeyDisplayString = "Ctrl+R"
+        Me.btnRefrescar.ShowItemShortcut = DevExpress.Utils.DefaultBoolean.[True]
         '
         'btnCancelar
         '
@@ -152,7 +182,13 @@ Partial Class frmLocales
         Me.btnCancelar.Id = 9
         Me.btnCancelar.ImageOptions.Image = CType(resources.GetObject("btnCancelar.ImageOptions.Image"), System.Drawing.Image)
         Me.btnCancelar.ImageOptions.LargeImage = CType(resources.GetObject("btnCancelar.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.btnCancelar.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancelar.ItemAppearance.Normal.Options.UseFont = True
+        Me.btnCancelar.ItemShortcut = New DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Z))
+        Me.btnCancelar.LargeWidth = 65
         Me.btnCancelar.Name = "btnCancelar"
+        Me.btnCancelar.ShortcutKeyDisplayString = "Ctrl+Z"
+        Me.btnCancelar.ShowItemShortcut = DevExpress.Utils.DefaultBoolean.[True]
         '
         'RibbonPage1
         '
@@ -247,7 +283,7 @@ Partial Class frmLocales
         Me.chkEstado.Properties.Appearance.Options.UseFont = True
         Me.chkEstado.Properties.Caption = "Inactivo"
         Me.chkEstado.Size = New System.Drawing.Size(94, 22)
-        Me.chkEstado.TabIndex = 43
+        Me.chkEstado.TabIndex = 5
         '
         'Label11
         '
@@ -265,7 +301,7 @@ Partial Class frmLocales
         Me.txtDireccion.MaxLength = 250
         Me.txtDireccion.Name = "txtDireccion"
         Me.txtDireccion.Size = New System.Drawing.Size(276, 87)
-        Me.txtDireccion.TabIndex = 41
+        Me.txtDireccion.TabIndex = 7
         Me.txtDireccion.Text = ""
         '
         'Label5
@@ -285,7 +321,7 @@ Partial Class frmLocales
         Me.txtCodigo.Location = New System.Drawing.Point(93, 44)
         Me.txtCodigo.Name = "txtCodigo"
         Me.txtCodigo.Size = New System.Drawing.Size(135, 26)
-        Me.txtCodigo.TabIndex = 39
+        Me.txtCodigo.TabIndex = 2
         Me.txtCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label3
@@ -305,7 +341,7 @@ Partial Class frmLocales
         Me.txtNombre.Location = New System.Drawing.Point(93, 79)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(175, 26)
-        Me.txtNombre.TabIndex = 33
+        Me.txtNombre.TabIndex = 3
         Me.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label12
@@ -340,16 +376,17 @@ Partial Class frmLocales
         '
         'cboUbicacion
         '
+        Me.cboUbicacion.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.cboUbicacion.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cboUbicacion.DropDownHeight = 50
         Me.cboUbicacion.Enabled = False
         Me.cboUbicacion.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboUbicacion.FormattingEnabled = True
         Me.cboUbicacion.IntegralHeight = False
-        Me.cboUbicacion.Items.AddRange(New Object() {"Persona Física", "Persona Jurídica", "Persona Extranjera", "DIMEX", "DIDI"})
         Me.cboUbicacion.Location = New System.Drawing.Point(397, 9)
         Me.cboUbicacion.Name = "cboUbicacion"
         Me.cboUbicacion.Size = New System.Drawing.Size(210, 26)
-        Me.cboUbicacion.TabIndex = 24
+        Me.cboUbicacion.TabIndex = 6
         '
         'txtID
         '
@@ -358,7 +395,7 @@ Partial Class frmLocales
         Me.txtID.Location = New System.Drawing.Point(93, 9)
         Me.txtID.Name = "txtID"
         Me.txtID.Size = New System.Drawing.Size(88, 26)
-        Me.txtID.TabIndex = 23
+        Me.txtID.TabIndex = 1
         Me.txtID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label1
@@ -378,7 +415,7 @@ Partial Class frmLocales
         Me.txtModificadoEl.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtModificadoEl.Location = New System.Drawing.Point(809, 114)
         Me.txtModificadoEl.Name = "txtModificadoEl"
-        Me.txtModificadoEl.Size = New System.Drawing.Size(137, 26)
+        Me.txtModificadoEl.Size = New System.Drawing.Size(185, 26)
         Me.txtModificadoEl.TabIndex = 18
         Me.txtModificadoEl.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -389,7 +426,7 @@ Partial Class frmLocales
         Me.txtModificadoPor.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtModificadoPor.Location = New System.Drawing.Point(809, 79)
         Me.txtModificadoPor.Name = "txtModificadoPor"
-        Me.txtModificadoPor.Size = New System.Drawing.Size(137, 26)
+        Me.txtModificadoPor.Size = New System.Drawing.Size(185, 26)
         Me.txtModificadoPor.TabIndex = 17
         Me.txtModificadoPor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -400,7 +437,7 @@ Partial Class frmLocales
         Me.txtCreadoEl.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCreadoEl.Location = New System.Drawing.Point(809, 44)
         Me.txtCreadoEl.Name = "txtCreadoEl"
-        Me.txtCreadoEl.Size = New System.Drawing.Size(137, 26)
+        Me.txtCreadoEl.Size = New System.Drawing.Size(185, 26)
         Me.txtCreadoEl.TabIndex = 16
         Me.txtCreadoEl.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -411,7 +448,7 @@ Partial Class frmLocales
         Me.txtCreadoPor.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCreadoPor.Location = New System.Drawing.Point(809, 9)
         Me.txtCreadoPor.Name = "txtCreadoPor"
-        Me.txtCreadoPor.Size = New System.Drawing.Size(137, 26)
+        Me.txtCreadoPor.Size = New System.Drawing.Size(185, 26)
         Me.txtCreadoPor.TabIndex = 15
         Me.txtCreadoPor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -462,7 +499,7 @@ Partial Class frmLocales
         Me.txtAlias.Location = New System.Drawing.Point(93, 115)
         Me.txtAlias.Name = "txtAlias"
         Me.txtAlias.Size = New System.Drawing.Size(175, 26)
-        Me.txtAlias.TabIndex = 5
+        Me.txtAlias.TabIndex = 4
         Me.txtAlias.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Panel4
@@ -487,9 +524,28 @@ Partial Class frmLocales
         '
         'GridViewLocales
         '
+        Me.GridViewLocales.Appearance.Empty.BackColor = System.Drawing.Color.FromArgb(CType(CType(90, Byte), Integer), CType(CType(202, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.GridViewLocales.Appearance.Empty.Options.UseBackColor = True
+        Me.GridViewLocales.Appearance.GroupRow.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridViewLocales.Appearance.GroupRow.ForeColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.GridViewLocales.Appearance.GroupRow.Options.UseFont = True
+        Me.GridViewLocales.Appearance.GroupRow.Options.UseForeColor = True
+        Me.GridViewLocales.Appearance.HeaderPanel.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridViewLocales.Appearance.HeaderPanel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.GridViewLocales.Appearance.HeaderPanel.Options.UseFont = True
+        Me.GridViewLocales.Appearance.HeaderPanel.Options.UseForeColor = True
+        Me.GridViewLocales.Appearance.Row.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridViewLocales.Appearance.Row.ForeColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.GridViewLocales.Appearance.Row.Options.UseFont = True
+        Me.GridViewLocales.Appearance.Row.Options.UseForeColor = True
+        Me.GridViewLocales.Appearance.SelectedRow.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridViewLocales.Appearance.SelectedRow.ForeColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.GridViewLocales.Appearance.SelectedRow.Options.UseFont = True
+        Me.GridViewLocales.Appearance.SelectedRow.Options.UseForeColor = True
         Me.GridViewLocales.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn1, Me.GridColumn8, Me.GridColumn2, Me.GridColumn3, Me.GridColumn5, Me.GridColumn4, Me.GridColumn6, Me.GridColumn9, Me.GridColumn10, Me.GridColumn11, Me.GridColumn12})
         Me.GridViewLocales.GridControl = Me.GridControlLocales
         Me.GridViewLocales.Name = "GridViewLocales"
+        Me.GridViewLocales.OptionsView.ShowAutoFilterRow = True
         '
         'GridColumn1
         '
@@ -527,7 +583,7 @@ Partial Class frmLocales
         'GridColumn3
         '
         Me.GridColumn3.Caption = "ALIAS"
-        Me.GridColumn3.FieldName = "ALIAS_CLIENTE"
+        Me.GridColumn3.FieldName = "ALIAS"
         Me.GridColumn3.MinWidth = 25
         Me.GridColumn3.Name = "GridColumn3"
         Me.GridColumn3.OptionsColumn.AllowEdit = False
@@ -548,8 +604,8 @@ Partial Class frmLocales
         '
         'GridColumn4
         '
-        Me.GridColumn4.Caption = "CORREO"
-        Me.GridColumn4.FieldName = "CORREO"
+        Me.GridColumn4.Caption = "DIRECCIÓN"
+        Me.GridColumn4.FieldName = "DIRECCION"
         Me.GridColumn4.MinWidth = 25
         Me.GridColumn4.Name = "GridColumn4"
         Me.GridColumn4.OptionsColumn.AllowEdit = False
@@ -684,7 +740,6 @@ Partial Class frmLocales
     Friend WithEvents GridColumn2 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn3 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn5 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents GridColumn4 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn6 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn9 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn10 As DevExpress.XtraGrid.Columns.GridColumn
@@ -698,4 +753,5 @@ Partial Class frmLocales
     Friend WithEvents chkEstado As DevExpress.XtraEditors.CheckEdit
     Friend WithEvents Label11 As Label
     Friend WithEvents btnCancelar As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents GridColumn4 As DevExpress.XtraGrid.Columns.GridColumn
 End Class
