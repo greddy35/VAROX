@@ -202,7 +202,7 @@ Public Class frmClientes
     End Sub
     Private Sub GridViewClientes_RowClick(sender As Object, e As RowClickEventArgs) Handles GridViewClientes.RowClick
         Try
-            If GridViewClientes.GetSelectedRows.Count = 1 And GridViewClientes.IsFilterRow(e.RowHandle) = False Then
+            If GridViewClientes.GetSelectedRows.Count = 1 And GridViewClientes.IsFilterRow(e.RowHandle) = False And GridViewClientes.IsGroupRow(e.RowHandle) = False Then
                 'EXTRAE Y MUESTRA LA INFORMACION DE LA FILA SELECCIONADO DEL GRID FRANJAS
                 Dim id As String = GridViewClientes.GetRowCellValue(GridViewClientes.FocusedRowHandle, "ID_CLIENTE").ToString
                 Dim nombre As String = GridViewClientes.GetRowCellValue(GridViewClientes.FocusedRowHandle, "NOMBRE_CLIENTE").ToString

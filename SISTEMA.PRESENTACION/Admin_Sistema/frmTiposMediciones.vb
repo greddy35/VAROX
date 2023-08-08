@@ -258,7 +258,7 @@ Public Class frmTiposMediciones
 
     Private Sub GridViewTiposMediciones_RowClick(sender As Object, e As RowClickEventArgs) Handles GridViewTiposMediciones.RowClick
         Try
-            If GridViewTiposMediciones.GetSelectedRows.Count = 1 And GridViewTiposMediciones.IsFilterRow(e.RowHandle) = False Then
+            If GridViewTiposMediciones.GetSelectedRows.Count = 1 And GridViewTiposMediciones.IsFilterRow(e.RowHandle) = False And GridViewTiposMediciones.IsGroupRow(e.RowHandle) = False Then
                 'EXTRAE Y MUESTRA LA INFORMACION DE LA FILA SELECCIONADO DEL GRID FRANJAS
                 Dim id As String = GridViewTiposMediciones.GetRowCellValue(GridViewTiposMediciones.FocusedRowHandle, "ID_TIPO_MEDICION").ToString
                 Dim nombre As String = GridViewTiposMediciones.GetRowCellValue(GridViewTiposMediciones.FocusedRowHandle, "TIPO_MEDICION").ToString

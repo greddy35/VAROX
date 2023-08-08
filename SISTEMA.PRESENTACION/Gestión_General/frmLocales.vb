@@ -178,7 +178,7 @@ Public Class frmLocales
 #Region "Acciones de Botones"
     Private Sub GridViewLocales_RowClick(sender As Object, e As RowClickEventArgs) Handles GridViewLocales.RowClick
         Try
-            If GridViewLocales.GetSelectedRows.Count = 1 And GridViewLocales.IsFilterRow(e.RowHandle) = False Then
+            If GridViewLocales.GetSelectedRows.Count = 1 And GridViewLocales.IsFilterRow(e.RowHandle) = False And GridViewLocales.IsGroupRow(e.RowHandle) = False Then
                 'EXTRAE Y MUESTRA LA INFORMACION DE LA FILA SELECCIONADO DEL GRID FRANJAS
                 Dim id As String = GridViewLocales.GetRowCellValue(GridViewLocales.FocusedRowHandle, "ID_LOCAL").ToString
                 Dim nombre As String = GridViewLocales.GetRowCellValue(GridViewLocales.FocusedRowHandle, "NOMBRE_LOCAL").ToString

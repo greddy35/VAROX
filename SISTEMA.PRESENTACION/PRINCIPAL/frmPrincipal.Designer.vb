@@ -26,22 +26,8 @@ Partial Class frmPrincipal
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPrincipal))
-        Dim SuperToolTip1 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-        Dim ToolTipTitleItem1 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-        Dim ToolTipItem1 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
         Me.contenedor = New DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer()
         Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
-        Me.GroupBoxRestabPass = New System.Windows.Forms.GroupBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.txtPassActual = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtPassConfirma = New System.Windows.Forms.TextBox()
-        Me.txtPass = New System.Windows.Forms.TextBox()
-        Me.btnVerPass = New DevExpress.XtraEditors.SimpleButton()
-        Me.btnCambiarPass = New DevExpress.XtraEditors.SimpleButton()
-        Me.btnCancelarRestablecerPass = New DevExpress.XtraEditors.SimpleButton()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.FluentFormDefaultManager1 = New DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(Me.components)
         Me.BarStaticItem6 = New DevExpress.XtraBars.BarStaticItem()
@@ -138,8 +124,6 @@ Partial Class frmPrincipal
         Me.contenedor.SuspendLayout()
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl1.SuspendLayout()
-        Me.GroupBoxRestabPass.SuspendLayout()
-        Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FluentFormDefaultManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AccordionControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -161,7 +145,6 @@ Partial Class frmPrincipal
         '
         'PanelControl1
         '
-        Me.PanelControl1.Controls.Add(Me.GroupBoxRestabPass)
         Me.PanelControl1.Controls.Add(Me.PictureBox1)
         Me.PanelControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelControl1.Location = New System.Drawing.Point(0, 0)
@@ -169,154 +152,6 @@ Partial Class frmPrincipal
         Me.PanelControl1.Name = "PanelControl1"
         Me.PanelControl1.Size = New System.Drawing.Size(980, 638)
         Me.PanelControl1.TabIndex = 0
-        '
-        'GroupBoxRestabPass
-        '
-        Me.GroupBoxRestabPass.BackColor = System.Drawing.Color.IndianRed
-        Me.GroupBoxRestabPass.Controls.Add(Me.Panel1)
-        Me.GroupBoxRestabPass.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBoxRestabPass.Location = New System.Drawing.Point(321, 306)
-        Me.GroupBoxRestabPass.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
-        Me.GroupBoxRestabPass.Name = "GroupBoxRestabPass"
-        Me.GroupBoxRestabPass.Padding = New System.Windows.Forms.Padding(4, 2, 4, 2)
-        Me.GroupBoxRestabPass.Size = New System.Drawing.Size(485, 244)
-        Me.GroupBoxRestabPass.TabIndex = 0
-        Me.GroupBoxRestabPass.TabStop = False
-        Me.GroupBoxRestabPass.Text = "Cambio de Contraseña"
-        Me.GroupBoxRestabPass.Visible = False
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.Controls.Add(Me.txtPassActual)
-        Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.txtPassConfirma)
-        Me.Panel1.Controls.Add(Me.txtPass)
-        Me.Panel1.Controls.Add(Me.btnVerPass)
-        Me.Panel1.Controls.Add(Me.btnCambiarPass)
-        Me.Panel1.Controls.Add(Me.btnCancelarRestablecerPass)
-        Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(4, 21)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(477, 221)
-        Me.Panel1.TabIndex = 1
-        '
-        'txtPassActual
-        '
-        Me.txtPassActual.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPassActual.Location = New System.Drawing.Point(201, 14)
-        Me.txtPassActual.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
-        Me.txtPassActual.Name = "txtPassActual"
-        Me.txtPassActual.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPassActual.Size = New System.Drawing.Size(205, 32)
-        Me.txtPassActual.TabIndex = 10
-        Me.txtPassActual.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.txtPassActual.UseSystemPasswordChar = True
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(46, 22)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(149, 18)
-        Me.Label3.TabIndex = 9
-        Me.Label3.Text = "Contraseña Actual:"
-        '
-        'txtPassConfirma
-        '
-        Me.txtPassConfirma.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPassConfirma.Location = New System.Drawing.Point(201, 94)
-        Me.txtPassConfirma.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
-        Me.txtPassConfirma.Name = "txtPassConfirma"
-        Me.txtPassConfirma.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPassConfirma.Size = New System.Drawing.Size(205, 32)
-        Me.txtPassConfirma.TabIndex = 8
-        Me.txtPassConfirma.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.txtPassConfirma.UseSystemPasswordChar = True
-        '
-        'txtPass
-        '
-        Me.txtPass.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPass.Location = New System.Drawing.Point(201, 54)
-        Me.txtPass.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
-        Me.txtPass.Name = "txtPass"
-        Me.txtPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPass.Size = New System.Drawing.Size(205, 32)
-        Me.txtPass.TabIndex = 7
-        Me.txtPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.txtPass.UseSystemPasswordChar = True
-        '
-        'btnVerPass
-        '
-        Me.btnVerPass.AllowFocus = False
-        Me.btnVerPass.Appearance.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnVerPass.Appearance.Options.UseFont = True
-        Me.btnVerPass.ImageOptions.Image = CType(resources.GetObject("btnVerPass.ImageOptions.Image"), System.Drawing.Image)
-        Me.btnVerPass.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter
-        Me.btnVerPass.Location = New System.Drawing.Point(412, 94)
-        Me.btnVerPass.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
-        Me.btnVerPass.Name = "btnVerPass"
-        Me.btnVerPass.Size = New System.Drawing.Size(42, 32)
-        ToolTipTitleItem1.AllowHtmlText = DevExpress.Utils.DefaultBoolean.[True]
-        ToolTipTitleItem1.Text = "<b>Ver</b>"
-        ToolTipItem1.ImageOptions.Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
-        ToolTipItem1.Text = "Mostrar contraseñas ingresadas"
-        SuperToolTip1.Items.Add(ToolTipTitleItem1)
-        SuperToolTip1.Items.Add(ToolTipItem1)
-        Me.btnVerPass.SuperTip = SuperToolTip1
-        Me.btnVerPass.TabIndex = 6
-        '
-        'btnCambiarPass
-        '
-        Me.btnCambiarPass.AllowFocus = False
-        Me.btnCambiarPass.Appearance.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCambiarPass.Appearance.Options.UseFont = True
-        Me.btnCambiarPass.ImageOptions.Image = CType(resources.GetObject("btnCambiarPass.ImageOptions.Image"), System.Drawing.Image)
-        Me.btnCambiarPass.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight
-        Me.btnCambiarPass.Location = New System.Drawing.Point(201, 146)
-        Me.btnCambiarPass.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
-        Me.btnCambiarPass.Name = "btnCambiarPass"
-        Me.btnCambiarPass.Size = New System.Drawing.Size(112, 50)
-        Me.btnCambiarPass.TabIndex = 5
-        Me.btnCambiarPass.Text = "Cambiar"
-        '
-        'btnCancelarRestablecerPass
-        '
-        Me.btnCancelarRestablecerPass.AllowFocus = False
-        Me.btnCancelarRestablecerPass.Appearance.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancelarRestablecerPass.Appearance.Options.UseFont = True
-        Me.btnCancelarRestablecerPass.ImageOptions.Image = CType(resources.GetObject("btnCancelarRestablecerPass.ImageOptions.Image"), System.Drawing.Image)
-        Me.btnCancelarRestablecerPass.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight
-        Me.btnCancelarRestablecerPass.Location = New System.Drawing.Point(342, 146)
-        Me.btnCancelarRestablecerPass.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
-        Me.btnCancelarRestablecerPass.Name = "btnCancelarRestablecerPass"
-        Me.btnCancelarRestablecerPass.Size = New System.Drawing.Size(112, 50)
-        Me.btnCancelarRestablecerPass.TabIndex = 4
-        Me.btnCancelarRestablecerPass.Text = "Cancelar"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(18, 102)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(177, 18)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Confirmar Contraseña:"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(46, 62)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(150, 18)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Contraseña Nueva:"
         '
         'PictureBox1
         '
@@ -464,7 +299,6 @@ Partial Class frmPrincipal
         'AccordionControlElement2
         '
         Me.AccordionControlElement2.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeparator24, Me.AccordionControlElement8, Me.AccordionControlElement6, Me.AccordionControlElement5})
-        Me.AccordionControlElement2.Expanded = True
         Me.AccordionControlElement2.ImageOptions.Image = CType(resources.GetObject("AccordionControlElement2.ImageOptions.Image"), System.Drawing.Image)
         Me.AccordionControlElement2.Name = "AccordionControlElement2"
         Me.AccordionControlElement2.Text = "Reportería y Ánalisis"
@@ -476,7 +310,6 @@ Partial Class frmPrincipal
         'AccordionControlElement8
         '
         Me.AccordionControlElement8.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeparator13, Me.accCorteGeneral, Me.AccordionControlSeparator22})
-        Me.AccordionControlElement8.Expanded = True
         Me.AccordionControlElement8.Name = "AccordionControlElement8"
         Me.AccordionControlElement8.Text = "Ánalisis"
         '
@@ -499,7 +332,6 @@ Partial Class frmPrincipal
         'AccordionControlElement6
         '
         Me.AccordionControlElement6.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeparator16, Me.accDiseñadorReportes, Me.AccordionControlSeparator25, Me.accVisualizadorReportes, Me.AccordionControlSeparator23})
-        Me.AccordionControlElement6.Expanded = True
         Me.AccordionControlElement6.Name = "AccordionControlElement6"
         Me.AccordionControlElement6.Text = "Reportes"
         '
@@ -534,7 +366,6 @@ Partial Class frmPrincipal
         'AccordionControlElement5
         '
         Me.AccordionControlElement5.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeparator15, Me.accDiseñadorDashboard, Me.AccordionControlSeparator14, Me.accVisualizadorDashboard})
-        Me.AccordionControlElement5.Expanded = True
         Me.AccordionControlElement5.Name = "AccordionControlElement5"
         Me.AccordionControlElement5.Text = "Dashboard"
         '
@@ -576,6 +407,7 @@ Partial Class frmPrincipal
         'AccordionControlMantenimientos
         '
         Me.AccordionControlMantenimientos.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeparator9, Me.accValLocClien, Me.AccordionControlSeparator5})
+        Me.AccordionControlMantenimientos.Expanded = True
         Me.AccordionControlMantenimientos.Name = "AccordionControlMantenimientos"
         Me.AccordionControlMantenimientos.Text = "Gestión"
         '
@@ -1091,9 +923,6 @@ Partial Class frmPrincipal
         Me.contenedor.ResumeLayout(False)
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelControl1.ResumeLayout(False)
-        Me.GroupBoxRestabPass.ResumeLayout(False)
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FluentFormDefaultManager1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AccordionControl1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1121,15 +950,6 @@ Partial Class frmPrincipal
     Friend WithEvents barDockControlBottom As DevExpress.XtraBars.BarDockControl
     Friend WithEvents barDockControlRight As DevExpress.XtraBars.BarDockControl
     Friend WithEvents PanelControl1 As DevExpress.XtraEditors.PanelControl
-    Friend WithEvents GroupBoxRestabPass As GroupBox
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents btnVerPass As SimpleButton
-    Friend WithEvents btnCambiarPass As SimpleButton
-    Friend WithEvents btnCancelarRestablecerPass As SimpleButton
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents txtPassConfirma As TextBox
-    Friend WithEvents txtPass As TextBox
     Friend WithEvents BarStaticItem6 As DevExpress.XtraBars.BarStaticItem
     Friend WithEvents BarStaticItem7 As DevExpress.XtraBars.BarStaticItem
     Friend WithEvents BarStaticItem8 As DevExpress.XtraBars.BarStaticItem
@@ -1164,8 +984,6 @@ Partial Class frmPrincipal
     Friend WithEvents BarStaticItem5 As DevExpress.XtraBars.BarStaticItem
     Friend WithEvents bsiFecha As DevExpress.XtraBars.BarStaticItem
     Friend WithEvents Bar1 As DevExpress.XtraBars.Bar
-    Friend WithEvents txtPassActual As TextBox
-    Friend WithEvents Label3 As Label
     Friend WithEvents BarStaticItem3 As DevExpress.XtraBars.BarStaticItem
     Friend WithEvents lblCompañia As DevExpress.XtraBars.BarStaticItem
     Friend WithEvents accConfBloq As DevExpress.XtraBars.Navigation.AccordionControlElement

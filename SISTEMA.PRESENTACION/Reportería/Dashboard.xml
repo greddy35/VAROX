@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="es-CR">
+  <Title Text="Dashboard" />
+  <DataSources>
+    <SqlDataSource Name="Conexión Predeterminada" ComponentName="dashboardSqlDataSource1">
+      <Connection Name="connection" ProviderKey="MSSqlServer">
+        <Parameters>
+          <Parameter Name="server" Value="10.0.5.35" />
+          <Parameter Name="database" Value="VAROX" />
+          <Parameter Name="useIntegratedSecurity" Value="False" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+          <Parameter Name="userid" Value="sa" />
+          <Parameter Name="password" Value="$@QU@F00D5$*" />
+        </Parameters>
+      </Connection>
+      <Query Type="StoredProcQuery" Name="R_cargarVista">
+        <ProcName>R_cargarVista</ProcName>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="Conexión Predeterminada">
+          <View Name="R_cargarVista">
+            <Field Name="ID_VINC" Type="Int32" />
+            <Field Name="ESTADO_VINC" Type="String" />
+            <Field Name="VALVULA" Type="String" />
+            <Field Name="VALVULA_PADRE" Type="String" />
+            <Field Name="NOMBRE_CLIENTE" Type="String" />
+            <Field Name="NIT" Type="String" />
+            <Field Name="IVA" Type="Int32" />
+            <Field Name="VALOR_UNIDAD" Type="Double" />
+            <Field Name="UNIDAD" Type="String" />
+            <Field Name="TIPO_MEDICION" Type="String" />
+            <Field Name="TIPO_VALVULA" Type="String" />
+            <Field Name="ESTADO_CLIENTE" Type="String" />
+            <Field Name="ESTADO_LOCAL" Type="String" />
+            <Field Name="UBICACION" Type="String" />
+            <Field Name="FECHA_INICIO_RIGE" Type="DateTime" />
+            <Field Name="FECHA_FIN_RIGE" Type="DateTime" />
+            <Field Name="NOMBRE_LOCAL" Type="String" />
+            <Field Name="CODIGO_LOCAL" Type="String" />
+            <Field Name="LECT_ANT" Type="Double" />
+            <Field Name="VALUE" Type="Double" />
+            <Field Name="TIMESTAMP" Type="DateTime" />
+            <Field Name="CONSUMO" Type="Double" />
+            <Field Name="SUB_TOTAL" Type="Double" />
+            <Field Name="IMPUESTO" Type="Double" />
+            <Field Name="TOTAL" Type="Double" />
+            <Field Name="REVISION" Type="String" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+      <ConnectionOptions CloseConnection="true" />
+    </SqlDataSource>
+  </DataSources>
+  <Items>
+    <Chart ComponentName="chartDashboardItem1" Name="Chart 1" DataSource="dashboardSqlDataSource1" DataMember="R_cargarVista" Rotated="true">
+      <InteractivityOptions MasterFilterMode="Multiple" />
+      <DataItems>
+        <Dimension DataMember="NOMBRE_CLIENTE" DefaultId="DataItem0" />
+        <Measure DataMember="TOTAL" DefaultId="DataItem3" />
+        <Measure DataMember="IMPUESTO" DefaultId="DataItem4" />
+        <Measure DataMember="CONSUMO" DefaultId="DataItem1" />
+        <Measure DataMember="SUB_TOTAL" DefaultId="DataItem2" />
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem0" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple>
+              <Value DefaultId="DataItem1" />
+            </Simple>
+            <Simple>
+              <Value DefaultId="DataItem4" />
+            </Simple>
+            <Simple>
+              <Value DefaultId="DataItem2" />
+            </Simple>
+            <Simple>
+              <Value DefaultId="DataItem3" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend OutsidePosition="TopLeftHorizontal" />
+      <AxisX TitleVisible="true" EnableZooming="true" LimitVisiblePoints="true" VisiblePointsCount="100" />
+    </Chart>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutItem DashboardItem="chartDashboardItem1" Weight="0.5" />
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

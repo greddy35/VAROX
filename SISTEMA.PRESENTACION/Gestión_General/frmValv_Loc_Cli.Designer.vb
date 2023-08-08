@@ -139,6 +139,16 @@ Partial Class frmValv_Loc_Cli
         Me.GridColumn10 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn11 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn12 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.deVigenciaNueva = New DevExpress.XtraEditors.DateEdit()
+        Me.btnCambiarVigencia = New DevExpress.XtraEditors.SimpleButton()
+        Me.btnCancelarVigencia = New DevExpress.XtraEditors.SimpleButton()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.btnInfo = New DevExpress.XtraEditors.SimpleButton()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.txtObservVigencia = New System.Windows.Forms.RichTextBox()
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemComboBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemComboBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -163,6 +173,9 @@ Partial Class frmValv_Loc_Cli
         Me.Panel4.SuspendLayout()
         CType(Me.GridControlVinculacion, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridViewVinculacion, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
+        CType(Me.deVigenciaNueva.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.deVigenciaNueva.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GridColumn7
@@ -1230,8 +1243,6 @@ Partial Class frmValv_Loc_Cli
         Me.GridColumn18.MinWidth = 100
         Me.GridColumn18.Name = "GridColumn18"
         Me.GridColumn18.OptionsColumn.AllowEdit = False
-        Me.GridColumn18.Visible = True
-        Me.GridColumn18.VisibleIndex = 4
         Me.GridColumn18.Width = 100
         '
         'GridColumn1
@@ -1251,7 +1262,7 @@ Partial Class frmValv_Loc_Cli
         Me.GridColumn20.Name = "GridColumn20"
         Me.GridColumn20.OptionsColumn.AllowEdit = False
         Me.GridColumn20.Visible = True
-        Me.GridColumn20.VisibleIndex = 5
+        Me.GridColumn20.VisibleIndex = 4
         Me.GridColumn20.Width = 100
         '
         'GridColumn23
@@ -1261,8 +1272,6 @@ Partial Class frmValv_Loc_Cli
         Me.GridColumn23.MinWidth = 100
         Me.GridColumn23.Name = "GridColumn23"
         Me.GridColumn23.OptionsColumn.AllowEdit = False
-        Me.GridColumn23.Visible = True
-        Me.GridColumn23.VisibleIndex = 9
         Me.GridColumn23.Width = 100
         '
         'GridColumn5
@@ -1282,7 +1291,7 @@ Partial Class frmValv_Loc_Cli
         Me.GridColumn21.Name = "GridColumn21"
         Me.GridColumn21.OptionsColumn.AllowEdit = False
         Me.GridColumn21.Visible = True
-        Me.GridColumn21.VisibleIndex = 6
+        Me.GridColumn21.VisibleIndex = 5
         Me.GridColumn21.Width = 150
         '
         'GridColumn6
@@ -1302,7 +1311,7 @@ Partial Class frmValv_Loc_Cli
         Me.GridColumn2.Name = "GridColumn2"
         Me.GridColumn2.OptionsColumn.AllowEdit = False
         Me.GridColumn2.Visible = True
-        Me.GridColumn2.VisibleIndex = 7
+        Me.GridColumn2.VisibleIndex = 6
         Me.GridColumn2.Width = 100
         '
         'GridColumn4
@@ -1322,7 +1331,7 @@ Partial Class frmValv_Loc_Cli
         Me.GridColumn3.Name = "GridColumn3"
         Me.GridColumn3.OptionsColumn.AllowEdit = False
         Me.GridColumn3.Visible = True
-        Me.GridColumn3.VisibleIndex = 8
+        Me.GridColumn3.VisibleIndex = 7
         Me.GridColumn3.Width = 100
         '
         'GridColumn25
@@ -1332,7 +1341,9 @@ Partial Class frmValv_Loc_Cli
         Me.GridColumn25.MinWidth = 100
         Me.GridColumn25.Name = "GridColumn25"
         Me.GridColumn25.OptionsColumn.AllowEdit = False
-        Me.GridColumn25.Width = 94
+        Me.GridColumn25.Visible = True
+        Me.GridColumn25.VisibleIndex = 8
+        Me.GridColumn25.Width = 100
         '
         'GridColumn24
         '
@@ -1341,7 +1352,9 @@ Partial Class frmValv_Loc_Cli
         Me.GridColumn24.MinWidth = 100
         Me.GridColumn24.Name = "GridColumn24"
         Me.GridColumn24.OptionsColumn.AllowEdit = False
-        Me.GridColumn24.Width = 94
+        Me.GridColumn24.Visible = True
+        Me.GridColumn24.VisibleIndex = 9
+        Me.GridColumn24.Width = 100
         '
         'GridColumn22
         '
@@ -1354,7 +1367,7 @@ Partial Class frmValv_Loc_Cli
         '
         'GridColumn9
         '
-        Me.GridColumn9.AppearanceCell.Font = New System.Drawing.Font("Tahoma", 7.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridColumn9.AppearanceCell.Font = New System.Drawing.Font("Tahoma", 7.8!, System.Drawing.FontStyle.Italic)
         Me.GridColumn9.AppearanceCell.Options.UseFont = True
         Me.GridColumn9.Caption = "CREADO POR"
         Me.GridColumn9.FieldName = "CREADO_POR"
@@ -1365,7 +1378,7 @@ Partial Class frmValv_Loc_Cli
         '
         'GridColumn10
         '
-        Me.GridColumn10.AppearanceCell.Font = New System.Drawing.Font("Tahoma", 7.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridColumn10.AppearanceCell.Font = New System.Drawing.Font("Tahoma", 7.8!, System.Drawing.FontStyle.Italic)
         Me.GridColumn10.AppearanceCell.Options.UseFont = True
         Me.GridColumn10.Caption = "CREADO EL"
         Me.GridColumn10.FieldName = "CREADO_EL"
@@ -1376,18 +1389,20 @@ Partial Class frmValv_Loc_Cli
         '
         'GridColumn11
         '
-        Me.GridColumn11.AppearanceCell.Font = New System.Drawing.Font("Tahoma", 7.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridColumn11.AppearanceCell.Font = New System.Drawing.Font("Tahoma", 7.8!, System.Drawing.FontStyle.Italic)
         Me.GridColumn11.AppearanceCell.Options.UseFont = True
         Me.GridColumn11.Caption = "MODIFICADO POR"
         Me.GridColumn11.FieldName = "MODIFICADO_POR"
         Me.GridColumn11.MinWidth = 100
         Me.GridColumn11.Name = "GridColumn11"
         Me.GridColumn11.OptionsColumn.AllowEdit = False
-        Me.GridColumn11.Width = 94
+        Me.GridColumn11.Visible = True
+        Me.GridColumn11.VisibleIndex = 10
+        Me.GridColumn11.Width = 100
         '
         'GridColumn12
         '
-        Me.GridColumn12.AppearanceCell.Font = New System.Drawing.Font("Tahoma", 7.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridColumn12.AppearanceCell.Font = New System.Drawing.Font("Tahoma", 7.8!, System.Drawing.FontStyle.Italic)
         Me.GridColumn12.AppearanceCell.Options.UseFont = True
         Me.GridColumn12.Caption = "MODIFICADO EL"
         Me.GridColumn12.FieldName = "MODIFICADO_EL"
@@ -1396,11 +1411,131 @@ Partial Class frmValv_Loc_Cli
         Me.GridColumn12.OptionsColumn.AllowEdit = False
         Me.GridColumn12.Width = 94
         '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.ForeColor = System.Drawing.Color.Black
+        Me.Label28.Location = New System.Drawing.Point(22, 35)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(202, 21)
+        Me.Label28.TabIndex = 1
+        Me.Label28.Text = "Nueva Fecha Vigencia:"
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.GroupBox1.Controls.Add(Me.txtObservVigencia)
+        Me.GroupBox1.Controls.Add(Me.Label27)
+        Me.GroupBox1.Controls.Add(Me.btnInfo)
+        Me.GroupBox1.Controls.Add(Me.Label26)
+        Me.GroupBox1.Controls.Add(Me.btnCancelarVigencia)
+        Me.GroupBox1.Controls.Add(Me.btnCambiarVigencia)
+        Me.GroupBox1.Controls.Add(Me.deVigenciaNueva)
+        Me.GroupBox1.Controls.Add(Me.Label29)
+        Me.GroupBox1.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.ForeColor = System.Drawing.Color.Red
+        Me.GroupBox1.Location = New System.Drawing.Point(298, 308)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(372, 202)
+        Me.GroupBox1.TabIndex = 9
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Extensión de Vigencia"
+        Me.GroupBox1.Visible = False
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.ForeColor = System.Drawing.Color.Black
+        Me.Label29.Location = New System.Drawing.Point(6, 35)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(147, 21)
+        Me.Label29.TabIndex = 1
+        Me.Label29.Text = "Nueva Vigencia:"
+        '
+        'deVigenciaNueva
+        '
+        Me.deVigenciaNueva.EditValue = Nothing
+        Me.deVigenciaNueva.Location = New System.Drawing.Point(159, 32)
+        Me.deVigenciaNueva.MenuManager = Me.RibbonControl
+        Me.deVigenciaNueva.Name = "deVigenciaNueva"
+        Me.deVigenciaNueva.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.deVigenciaNueva.Properties.Appearance.Options.UseFont = True
+        Me.deVigenciaNueva.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.deVigenciaNueva.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.deVigenciaNueva.Size = New System.Drawing.Size(171, 28)
+        Me.deVigenciaNueva.TabIndex = 2
+        '
+        'btnCambiarVigencia
+        '
+        Me.btnCambiarVigencia.AllowFocus = False
+        Me.btnCambiarVigencia.ImageOptions.Image = CType(resources.GetObject("btnCambiarVigencia.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnCambiarVigencia.Location = New System.Drawing.Point(255, 157)
+        Me.btnCambiarVigencia.Name = "btnCambiarVigencia"
+        Me.btnCambiarVigencia.Size = New System.Drawing.Size(105, 39)
+        Me.btnCambiarVigencia.TabIndex = 3
+        Me.btnCambiarVigencia.Text = "Cambiar"
+        '
+        'btnCancelarVigencia
+        '
+        Me.btnCancelarVigencia.AllowFocus = False
+        Me.btnCancelarVigencia.ImageOptions.Image = CType(resources.GetObject("SimpleButton1.ImageOptions.Image1"), System.Drawing.Image)
+        Me.btnCancelarVigencia.Location = New System.Drawing.Point(144, 156)
+        Me.btnCancelarVigencia.Name = "btnCancelarVigencia"
+        Me.btnCancelarVigencia.Size = New System.Drawing.Size(105, 39)
+        Me.btnCancelarVigencia.TabIndex = 4
+        Me.btnCancelarVigencia.Text = "Cancelar"
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label26.Location = New System.Drawing.Point(6, 66)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(0, 21)
+        Me.Label26.TabIndex = 5
+        '
+        'btnInfo
+        '
+        Me.btnInfo.AllowFocus = False
+        Me.btnInfo.Appearance.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.btnInfo.Appearance.Options.UseBackColor = True
+        Me.btnInfo.AppearanceHovered.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.btnInfo.AppearanceHovered.Options.UseBackColor = True
+        Me.btnInfo.AppearancePressed.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.btnInfo.AppearancePressed.Options.UseBackColor = True
+        Me.btnInfo.ImageOptions.Image = CType(resources.GetObject("SimpleButton1.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnInfo.Location = New System.Drawing.Point(330, 32)
+        Me.btnInfo.Name = "btnInfo"
+        Me.btnInfo.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light
+        Me.btnInfo.Size = New System.Drawing.Size(36, 30)
+        Me.btnInfo.TabIndex = 6
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.ForeColor = System.Drawing.Color.Black
+        Me.Label27.Location = New System.Drawing.Point(6, 66)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(122, 21)
+        Me.Label27.TabIndex = 7
+        Me.Label27.Text = "Observación:"
+        '
+        'txtObservVigencia
+        '
+        Me.txtObservVigencia.Location = New System.Drawing.Point(14, 88)
+        Me.txtObservVigencia.MaxLength = 255
+        Me.txtObservVigencia.Name = "txtObservVigencia"
+        Me.txtObservVigencia.Size = New System.Drawing.Size(343, 60)
+        Me.txtObservVigencia.TabIndex = 8
+        Me.txtObservVigencia.Text = ""
+        '
         'frmValv_Loc_Cli
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1128, 779)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.RibbonStatusBar)
         Me.Controls.Add(Me.RibbonControl)
@@ -1442,6 +1577,10 @@ Partial Class frmValv_Loc_Cli
         Me.Panel4.ResumeLayout(False)
         CType(Me.GridControlVinculacion, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridViewVinculacion, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        CType(Me.deVigenciaNueva.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.deVigenciaNueva.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1560,4 +1699,18 @@ Partial Class frmValv_Loc_Cli
     Friend WithEvents chkApro As DevExpress.XtraBars.BarCheckItem
     Friend WithEvents chkAnul As DevExpress.XtraBars.BarCheckItem
     Friend WithEvents btnExtender As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents Label28 As Label
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents Label29 As Label
+    Friend WithEvents deVigenciaNueva As DevExpress.XtraEditors.DateEdit
+    Friend WithEvents btnCambiarVigencia As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents Label26 As Label
+    Friend WithEvents btnCancelarVigencia As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents txtObservVigencia As RichTextBox
+    Friend WithEvents Label27 As Label
+    Friend WithEvents btnInfo As DevExpress.XtraEditors.SimpleButton
+    'Friend WithEvents LabelControl1 As LabelControl
+    'Friend WithEvents deNuevaFecha As DateEdit
+    'Friend WithEvents btnCancelarCambio As SimpleButton
+    'Friend WithEvents btnCambiarVigencia As SimpleButton
 End Class

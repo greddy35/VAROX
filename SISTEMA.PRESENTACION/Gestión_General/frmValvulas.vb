@@ -2,12 +2,14 @@
 Imports DevExpress.XtraBars
 Imports DevExpress.XtraCharts
 Imports DevExpress.XtraGrid.Views.Grid
+Imports SISTEMA.DATOS
 Imports SISTEMA.ENTIDADES
 Imports SISTEMA.NEGOCIO
 
 Public Class frmValvulas
 #Region "Variables Globales"
     Dim gestor As New NValvulas
+    Dim gestorH As New NHistorico
     Dim clase As New Valvulas
 #End Region
 
@@ -174,12 +176,12 @@ Public Class frmValvulas
 
     Public Sub cargarListaValvulas(ByVal valor As String, ByVal valor2 As String, ByVal valor3 As String, ByVal valor4 As String, ByVal valor5 As String)
         Try
-            Dim datos As DataSet = gestor.NCargarListaValvulas(valor, valor2, valor3, valor4, valor5)    'Llenado del combo
+            Dim datos As DataTable = gestorH.NCargarListaValvulas(valor, valor2, valor3, valor4, valor5)    'Llenado del combo
             If Not datos Is Nothing Then
                 With cboValvula
                     .DisplayMember = "LOCAL_ACT" 'VALORES A MOSTRAR
                     .ValueMember = "LOCAL_ACT"       'VALORES DE ITEM SELECCIONADO 
-                    .DataSource = datos.Tables(0)
+                    .DataSource = datos
                 End With
                 cboValvula.SelectedIndex = -1
                 cboValvulaPadre.Text = ""
@@ -295,12 +297,17 @@ Public Class frmValvulas
     End Sub
 
     Private Sub btnNuevo_ItemClick(sender As Object, e As ItemClickEventArgs) Handles btnNuevo.ItemClick
-        Nuevo()
-        cargarTiposValvula()
-        cargarTiposMedicion()
-        cargarClases()
-        cargarValvulas()
-        cargarValvulasPadres()
+        If GlobalesConexiones.estadoExterno.Equals("SI") Then
+            Nuevo()
+            cargarTiposValvula()
+            cargarTiposMedicion()
+            cargarClases()
+            cargarValvulas()
+            cargarValvulasPadres()
+        Else
+            MessageBox.Show("La conexión a la base de datos externa está deshabilitada," &
+                            "contacte con el administrador de sistema, para modificar el archivo de conexión (confi.ini)", "Carga de Listado", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
     End Sub
 
     Private Sub btnGuardar_ItemClick(sender As Object, e As ItemClickEventArgs) Handles btnGuardar.ItemClick
@@ -377,7 +384,12 @@ Public Class frmValvulas
     End Sub
 
     Private Sub btnModificar_ItemClick(sender As Object, e As ItemClickEventArgs) Handles btnModificar.ItemClick
-        Modificar()
+        If GlobalesConexiones.estadoExterno.Equals("SI") Then
+            Modificar()
+        Else
+            MessageBox.Show("La conexión a la base de datos externa está deshabilitada," &
+                            "contacte con el administrador de sistema, para modificar el archivo de conexión (confi.ini)", "Carga de Listado", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
     End Sub
 
     Private Sub btnEliminar_ItemClick(sender As Object, e As ItemClickEventArgs) Handles btnEliminar.ItemClick
@@ -403,7 +415,7 @@ Public Class frmValvulas
 
     Private Sub GridViewValvulas_RowClick(sender As Object, e As RowClickEventArgs) Handles GridViewValvulas.RowClick
         Try
-            If GridViewValvulas.GetSelectedRows.Count = 1 And GridViewValvulas.IsFilterRow(e.RowHandle) = False Then
+            If GridViewValvulas.GetSelectedRows.Count = 1 And GridViewValvulas.IsFilterRow(e.RowHandle) = False And GridViewValvulas.IsGroupRow(e.RowHandle) = False Then
                 'EXTRAE Y MUESTRA LA INFORMACION DE LA FILA SELECCIONADO DEL GRID FRANJAS
                 Dim id As String = GridViewValvulas.GetRowCellValue(GridViewValvulas.FocusedRowHandle, "ID_VALVULA").ToString
                 Dim clase As String = GridViewValvulas.GetRowCellValue(GridViewValvulas.FocusedRowHandle, "CLASE").ToString

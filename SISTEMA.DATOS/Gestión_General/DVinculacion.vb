@@ -165,22 +165,6 @@ Public Class DVinculacion
         End Try
     End Function
 
-    Public Function CargarValvulas() As DataSet
-        Try
-            Dim Tabla As New DataSet
-            Dim Comando As New SqlCommand("GG_cargarValvulas", MyBase.conn)
-            Comando.CommandType = CommandType.StoredProcedure
-            MyBase.conn.Open()                                                              'Abrimos conexion a la BD
-            Dim adapter As New SqlDataAdapter(Comando)
-            adapter.Fill(Tabla)
-            MyBase.conn.Close()                                                             'Cerramos la conexion a BD
-            Return Tabla                                                                    'Retornamos el DataSet
-        Catch ex As Exception
-#Disable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
-            Throw ex
-#Enable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
-        End Try
-    End Function
     Public Function ConsultarDetalleCliente(ByVal valor As String) As DataSet
         Try
             Dim Tabla As New DataSet
@@ -250,6 +234,23 @@ Public Class DVinculacion
 #Disable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
             Throw ex
 #Enable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
+        End Try
+    End Function
+
+    Public Function Extender(id As String, fecha As String, observ As String, usuario As String) As String
+        Try
+            Dim Comando As New SqlCommand("GG_actualizarVigenciaVinculacion", MyBase.conn)
+            Comando.CommandType = CommandType.StoredProcedure
+            Comando.Parameters.Add("@id", SqlDbType.VarChar).Value = id
+            Comando.Parameters.Add("@fechaFin", SqlDbType.VarChar).Value = fecha
+            Comando.Parameters.Add("@observ", SqlDbType.VarChar).Value = observ
+            Comando.Parameters.Add("@usuario", SqlDbType.VarChar).Value = usuario
+            MyBase.conn.Open()
+            Comando.ExecuteNonQuery()
+            MyBase.conn.Close()
+            Return ""
+        Catch ex As Exception
+            Return ex.ToString
         End Try
     End Function
 End Class

@@ -65,6 +65,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin_Sistema\DHistorico.vb" />
     <Compile Include="Admin_Sistema\DTipoValv.vb" />
     <Compile Include="Admin_Sistema\DTipoMed.vb" />
     <Compile Include="Admin_Sistema\DClases.vb" />

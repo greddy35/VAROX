@@ -9,9 +9,6 @@ Public Class frmReporteria
 
 #Region "Variables Globales"
     Dim gestor As New NReportes
-    Dim SaveFiledialog As New SaveFileDialog
-    Dim OpenFiledialog As New OpenFileDialog
-    Dim filename As String
     'Dim UnidDisco As String = Mid(Environment.SystemDirectory.ToString, 1, 3)
     'VARIABLES PARA CONTROL DE LOS PROGRESBAR
     Dim Progreso As Integer = 0
@@ -111,41 +108,6 @@ Public Class frmReporteria
         deHasta.EditValue = UltimoDiaDelMes(Today)
         rideHasta.MaxValue = CDate(deDesde.EditValue).AddMonths(2)
         PivotGridControl1.SaveLayoutToStream(LayoutStream1)
-    End Sub
-    Private Sub AbrirPlantilla(ByVal pivotGrid As PivotGridControl)
-        filename = String.Empty
-        With OpenFiledialog
-            .Filter = "Archivo Plantilla VAROX (*.varox)|*.varox"
-            Try
-                If .ShowDialog = Windows.Forms.DialogResult.OK Then
-                    filename = OpenFiledialog.FileName.ToString
-                    pivotGrid.RestoreLayoutFromXml(filename)
-                Else
-                    MsgBox("Ha Cancelado la Importacion de la Plantilla", MsgBoxStyle.Exclamation)
-                End If
-            Catch ex As Exception
-                MsgBox("El sistema detecto un error y no puede proceder... Comuniquese con el administrador del sistema y muestrele este mensaje, puede enviarlo mediante el correo informatica@tilapia.com" & vbNewLine & vbNewLine & String.Empty +
-                    "-> Metodo:" & vbNewLine & ex.TargetSite.ToString & vbNewLine & vbNewLine & "-> Ubicacion y linea de código: " & vbNewLine & ex.StackTrace.ToString & vbNewLine & vbNewLine & "-> Información adicional: " & vbNewLine & ex.Message, MsgBoxStyle.Critical)
-            End Try
-        End With
-    End Sub
-    Private Sub GuardarPlantilla(ByVal pivotGrid As PivotGridControl)
-        filename = String.Empty
-        With SaveFiledialog
-            .Filter = "Archivo Plantilla VAROX (*.varox)|*.varox"
-            Try
-                If .ShowDialog = Windows.Forms.DialogResult.OK Then
-                    filename = SaveFiledialog.FileName.ToString
-                    pivotGrid.SaveLayoutToXml(filename)
-
-                Else
-                    MsgBox("Ha Cancelado la Exportación de la Plantilla", MsgBoxStyle.Exclamation)
-                End If
-            Catch ex As Exception
-                MsgBox("El sistema detecto un error y no puede proceder... Comuniquese con el administrador del sistema y muestrele este mensaje, puede enviarlo mediante el correo informatica@tilapia.com" & vbNewLine & vbNewLine & String.Empty +
-                     "-> Metodo:" & vbNewLine & ex.TargetSite.ToString & vbNewLine & vbNewLine & "-> Ubicacion y linea de código: " & vbNewLine & ex.StackTrace.ToString & vbNewLine & vbNewLine & "-> Información adicional: " & vbNewLine & ex.Message, MsgBoxStyle.Critical)
-            End Try
-        End With
     End Sub
 
 #End Region
@@ -378,20 +340,27 @@ Public Class frmReporteria
     Private Sub btnCorteGeneral_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnCorteGeneral.ItemClick
         ModuleGlobales.sql_DataSource = SqlDataSource1
         Dim report = New rptCorteGeneral()
-        report.Parameters("fechaInicio").Value = fechIni
-        report.Parameters("fechaInicio").Description = "Fecha Desde:"
-        report.Parameters("fechaInicio").Enabled = False
+        report.Parameters("fechaIni").Value = fechIni
+        report.Parameters("fechaIni").Description = "Fecha Desde:"
+        'report.Parameters("fechaIni").Enabled = False
         report.Parameters("fechaFin").Value = fechFin
         report.Parameters("fechaFin").Description = "Fecha Hasta:"
-        report.Parameters("fechaFin").Enabled = False
+        'report.Parameters("fechaFin").Enabled = False
 
         report.ShowRibbonPreview()
-
-        'VisualizadorReportes.ShowDialog()
     End Sub
 
     Private Sub btnCorteCliente_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnCorteCliente.ItemClick
-        PivotGridControl1.ShowRibbonPrintPreview()
+        ModuleGlobales.sql_DataSource = SqlDataSource1
+        Dim report = New rptCortePorCliente()
+        report.Parameters("fechaIni").Value = fechIni
+        report.Parameters("fechaIni").Description = "Fecha Desde:"
+        'report.Parameters("fechaIni").Enabled = False
+        report.Parameters("fechaFin").Value = fechFin
+        report.Parameters("fechaFin").Description = "Fecha Hasta:"
+        'report.Parameters("fechaFin").Enabled = False
+        'report.Parameters("cliente").Value = {"3-928-937367", "02-0710-0193"}
+        report.ShowRibbonPreview()
     End Sub
 
 

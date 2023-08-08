@@ -1,4 +1,6 @@
-﻿Imports DevExpress.Office
+﻿Imports System.Windows.Media
+Imports DevExpress.CodeParser
+Imports DevExpress.Office
 Imports DevExpress.XtraBars
 Imports DevExpress.XtraGrid.Views.Grid
 Imports SISTEMA.ENTIDADES
@@ -8,6 +10,7 @@ Public Class frmValv_Loc_Cli
 
 #Region "Variables Globales"
     Dim gestor As New NVinculacion
+    Dim gestorH As New NHistorico
     Dim clase As New Vinculacion
 #End Region
 
@@ -51,6 +54,7 @@ Public Class frmValv_Loc_Cli
         btnCancelar.Enabled = False
         btnAprobar.Enabled = False
         btnAnular.Enabled = False
+        btnExtender.Enabled = False
     End Sub
 
     Private Sub Limpiar()
@@ -175,7 +179,7 @@ Public Class frmValv_Loc_Cli
 
     Public Sub cargarValvulas()
         Try
-            Dim datos As DataSet = gestor.NCargarValvulas()    'Llenado del combo
+            Dim datos As DataSet = gestorH.NCargarValvulas()    'Llenado del combo
             If Not datos Is Nothing Then
                 With cboValvula
                     .DisplayMember = "VALVULA" 'VALORES A MOSTRAR
@@ -336,8 +340,8 @@ Public Class frmValv_Loc_Cli
             clase.IdLocal = txtIdLocal.Text.ToString
             clase.IdValvula = txtIdValvula.Text.ToString
             clase.Fecha = CDate(deFechaVinc.Text.ToString).ToString("yyyy-MM-dd HH:mm:ss")
-            clase.FechaIniRige = CDate(deDesde.Text.ToString).ToString("yyyy-MM-dd HH:mm:ss")
-            clase.FechaFinRige = CDate(deHasta.Text.ToString).ToString("yyyy-MM-dd HH:mm:ss")
+            clase.FechaIniRige = CDate(deDesde.Text.ToString).ToString("yyyy-MM-dd 00:00:00")
+            clase.FechaFinRige = CDate(deHasta.Text.ToString).ToString("yyyy-MM-dd 23:59:59")
             clase.Estado = CChar(Mid(txtEstado.Text, 1, 1)) 'PENDIENTE
             clase.Observ = txtObserv.Text.ToString
             clase.CreadoPor = ModuleGlobales.usuario
@@ -424,7 +428,7 @@ Public Class frmValv_Loc_Cli
                 MessageBox.Show("Las vinculaciones solo las puede eliminar el usuario que anuló el registro", "Acción inválida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             End If
         Else
-                MessageBox.Show("Solo es posible eliminar las vinculaciones en estado: ANULADO", "Acción inválida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            MessageBox.Show("Solo es posible eliminar las vinculaciones en estado: ANULADO", "Acción inválida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End If
 
     End Sub
@@ -474,7 +478,7 @@ Public Class frmValv_Loc_Cli
 
     Private Sub GridViewVinculacion_RowClick(sender As Object, e As RowClickEventArgs) Handles GridViewVinculacion.RowClick
         Try
-            If GridViewVinculacion.GetSelectedRows.Count = 1 And GridViewVinculacion.IsFilterRow(e.RowHandle) = False Then
+            If GridViewVinculacion.GetSelectedRows.Count = 1 And GridViewVinculacion.IsFilterRow(e.RowHandle) = False And GridViewVinculacion.IsGroupRow(e.RowHandle) = False Then
                 'EXTRAE Y MUESTRA LA INFORMACION DE LA FILA SELECCIONADO DEL GRID FRANJAS
                 Dim id As String = GridViewVinculacion.GetRowCellValue(GridViewVinculacion.FocusedRowHandle, "ID_VINC").ToString
                 Dim fecha As Date = CDate(GridViewVinculacion.GetRowCellValue(GridViewVinculacion.FocusedRowHandle, "FECHA_VINC").ToString)
@@ -535,6 +539,7 @@ Public Class frmValv_Loc_Cli
                 End If
                 If estado = "APROBADO" Then
                     btnAnular.Enabled = True
+                    btnExtender.Enabled = True
                 End If
             Else
                 Guardar_Cancelar_Eliminar_Refrescar()
@@ -606,6 +611,20 @@ Public Class frmValv_Loc_Cli
         End If
     End Sub
 
+    Private Sub btnExtender_ItemClick(sender As Object, e As ItemClickEventArgs) Handles btnExtender.ItemClick
+        If txtEstado.Text = "APROBADO" Then
+            If ModuleGlobales.usuario = GridViewVinculacion.GetRowCellValue(GridViewVinculacion.FocusedRowHandle, "MODIFICADO_POR").ToString Then
+                deVigenciaNueva.Properties.MinValue = CDate(deHasta.EditValue).AddDays(1)
+                deVigenciaNueva.EditValue = CDate(deHasta.EditValue).AddDays(1)
+                Centrar(GroupBox1)
+                GroupBox1.Visible = True
+            Else
+                MessageBox.Show("Solo el usuario que aprobó la vinculación tiene permitido extender la fecha de vigencia del registro", "Acción inválida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            End If
+        Else
+            MessageBox.Show("Solo es posible extender fechas de vigencia de las vinculaciones en estado: APROBADO", "Acción inválida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        End If
+    End Sub
     Private Sub chkAll_CheckedChanged(sender As Object, e As ItemClickEventArgs) Handles chkAll.CheckedChanged
         cargarVinculaciones()
     End Sub
@@ -622,8 +641,50 @@ Public Class frmValv_Loc_Cli
         cargarVinculaciones()
     End Sub
 
-    Private Sub RibbonControl_Click(sender As Object, e As EventArgs) Handles RibbonControl.Click
+    Private Sub btnCambiarVigencia_Click_1(sender As Object, e As EventArgs) Handles btnCambiarVigencia.Click
+        If deVigenciaNueva.Text IsNot "" And txtObservVigencia.Text IsNot "" Then
+            If MessageBox.Show("¿Desea extender la vigencia del registro seleccionado?" + vbCrLf + vbCrLf +
+                               "ID VINC: " & txtID.Text.ToString & vbCrLf &
+                               "CLIENTE: " & cboCliente.Text.ToString & vbCrLf &
+                               "LOCAL: " & cboLocal.Text.ToString & vbCrLf &
+                               "VÁLVULA: " & cboValvula.Text.ToString & vbCrLf & vbCrLf &
+                               "NUEVA VIGENCIA: " & CDate(deVigenciaNueva.EditValue).ToString("dd-MM-yyyy"), "Extender vigencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+                Try
+                    Dim id As String = txtID.Text.ToString
+                    Dim fecha As String = CDate(deVigenciaNueva.Text.ToString).ToString("yyyy-MM-dd 23:59:59")
+                    Dim observ As String = txtObservVigencia.Text.ToString
+                    Dim resp As String = gestor.NExtender(id, fecha, observ, ModuleGlobales.usuario)
+                    If resp = "" Then
+                        MessageBox.Show("La vigencia del registro se extendió con éxito", "Extender vigencia", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        Limpiar()
+                        Guardar_Cancelar_Eliminar_Refrescar()
+                        cargarVinculaciones()
+                        GroupBox1.Visible = False
+                        txtObservVigencia.Text = ""
+                        deVigenciaNueva.EditValue = CDate(Today)
+                    Else
+                        MessageBox.Show("Ocurrió un error inesperado, intente de nuevo:" & vbCrLf & resp, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    End If
+                Catch ex As Exception
+                    mensajeError(ex)
+                End Try
+            End If
+        Else
+            MessageBox.Show("Selecciona una nueva fecha de vigencia e indica una observación del porqué de la extensión", "Datos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning)
 
+        End If
     End Sub
+
+    Private Sub btnCancelarVigencia_Click(sender As Object, e As EventArgs) Handles btnCancelarVigencia.Click
+        GroupBox1.Visible = False
+        deVigenciaNueva.EditValue = CDate(Today)
+        txtObservVigencia.Text = ""
+    End Sub
+
+    Private Sub btnInfo_Click(sender As Object, e As EventArgs) Handles btnInfo.Click
+        MessageBox.Show("La fecha seleccionada, sustituye la fecha actual del registro" & vbCrLf &
+                        "extiende la vigencia de la vinculación hasta la nueva fecha seleccionada", "Fecha Vigencia", MessageBoxButtons.OK, MessageBoxIcon.Information)
+    End Sub
+
 #End Region
 End Class

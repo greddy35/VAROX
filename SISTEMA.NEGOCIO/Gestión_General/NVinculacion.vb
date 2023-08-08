@@ -97,16 +97,6 @@ Public Class NVinculacion
             Return Nothing
         End Try
     End Function
-    Public Function NCargarValvulas() As DataSet
-        Try
-            Dim Datos As New DVinculacion
-            Dim Tabla As New DataSet
-            Tabla = Datos.CargarValvulas()
-            Return Tabla
-        Catch ex As Exception
-            Return Nothing
-        End Try
-    End Function
 
     Public Function NConsultarDetalleCliente(ByVal valor As String) As DataSet
         Try
@@ -150,4 +140,14 @@ Public Class NVinculacion
         End Try
     End Function
 
+    Public Function NExtender(id As String, fecha As String, observ As String, usuario As String) As String
+        Dim msj As String = ""
+        Try
+            Dim Datos As New DVinculacion
+            msj = Datos.Extender(id, fecha, observ, usuario)
+            Return msj
+        Catch ex As Exception
+            Return msj
+        End Try
+    End Function
 End Class

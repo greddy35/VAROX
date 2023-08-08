@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Public Class rptCorteGeneral
+Partial Public Class rptCortePorCliente
     Inherits DevExpress.XtraReports.UI.XtraReport
 
     'XtraReport overrides dispose to clean up the component list.
@@ -36,13 +36,10 @@ Partial Public Class rptCorteGeneral
         Dim XrSummary14 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
         Dim XrSummary15 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
         Dim XrSummary16 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
-        Dim XrSummary17 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
-        Dim XrSummary18 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
-        Dim XrSummary19 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
-        Dim XrSummary20 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
         Dim MsSqlConnectionParameters1 As DevExpress.DataAccess.ConnectionParameters.MsSqlConnectionParameters = New DevExpress.DataAccess.ConnectionParameters.MsSqlConnectionParameters()
         Dim StoredProcQuery1 As DevExpress.DataAccess.Sql.StoredProcQuery = New DevExpress.DataAccess.Sql.StoredProcQuery()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(rptCorteGeneral))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(rptCortePorCliente))
+        Dim DynamicListLookUpSettings1 As DevExpress.XtraReports.Parameters.DynamicListLookUpSettings = New DevExpress.XtraReports.Parameters.DynamicListLookUpSettings()
         Me.TopMargin = New DevExpress.XtraReports.UI.TopMarginBand()
         Me.Detail = New DevExpress.XtraReports.UI.DetailBand()
         Me.BottomMargin = New DevExpress.XtraReports.UI.BottomMarginBand()
@@ -54,7 +51,6 @@ Partial Public Class rptCorteGeneral
         Me.GroupFooter2 = New DevExpress.XtraReports.UI.GroupFooterBand()
         Me.GroupFooter3 = New DevExpress.XtraReports.UI.GroupFooterBand()
         Me.GroupFooter4 = New DevExpress.XtraReports.UI.GroupFooterBand()
-        Me.GroupFooter5 = New DevExpress.XtraReports.UI.GroupFooterBand()
         Me.label21 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label20 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label11 = New DevExpress.XtraReports.UI.XRLabel()
@@ -123,20 +119,12 @@ Partial Public Class rptCorteGeneral
         Me.label51 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label7 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label8 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.label73 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.label25 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.label58 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.label59 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.label68 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.label69 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.label70 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.label71 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.label72 = New DevExpress.XtraReports.UI.XRLabel()
         Me.sqlDataSource1 = New DevExpress.DataAccess.Sql.SqlDataSource(Me.components)
         Me.Style1 = New DevExpress.XtraReports.UI.XRControlStyle()
         Me.Style2 = New DevExpress.XtraReports.UI.XRControlStyle()
         Me.fechaIni = New DevExpress.XtraReports.Parameters.Parameter()
         Me.fechaFin = New DevExpress.XtraReports.Parameters.Parameter()
+        Me.cliente = New DevExpress.XtraReports.Parameters.Parameter()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
         'TopMargin
@@ -218,15 +206,6 @@ Partial Public Class rptCorteGeneral
         Me.GroupFooter4.HeightF = 117.8613!
         Me.GroupFooter4.KeepTogether = True
         Me.GroupFooter4.Name = "GroupFooter4"
-        '
-        'GroupFooter5
-        '
-        Me.GroupFooter5.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.label73, Me.label25, Me.label58, Me.label59, Me.label68, Me.label69, Me.label70, Me.label71, Me.label72})
-        Me.GroupFooter5.HeightF = 131.6667!
-        Me.GroupFooter5.KeepTogether = True
-        Me.GroupFooter5.Level = 4
-        Me.GroupFooter5.Name = "GroupFooter5"
-        Me.GroupFooter5.PageBreak = DevExpress.XtraReports.UI.PageBreak.AfterBand
         '
         'label21
         '
@@ -312,7 +291,7 @@ Partial Public Class rptCorteGeneral
         Me.label9.StylePriority.UseBackColor = False
         Me.label9.StylePriority.UseFont = False
         Me.label9.StylePriority.UseTextAlignment = False
-        Me.label9.Text = "REPORTE GENERAL"
+        Me.label9.Text = "REPORTE GENERAL POR CLIENTE, LOCAL, VÁLVULA PADRE, VÁLVULA"
         Me.label9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
         '
         'label27
@@ -1330,140 +1309,6 @@ Partial Public Class rptCorteGeneral
         Me.label8.Text = "VÁLVULA HIJA:"
         Me.label8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
         '
-        'label73
-        '
-        Me.label73.BackColor = System.Drawing.Color.Plum
-        Me.label73.Borders = CType((((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
-            Or DevExpress.XtraPrinting.BorderSide.Right) _
-            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
-        Me.label73.Font = New DevExpress.Drawing.DXFont("Times New Roman", 15.75!, DevExpress.Drawing.DXFontStyle.Bold)
-        Me.label73.LocationFloat = New DevExpress.Utils.PointFloat(0!, 0!)
-        Me.label73.Multiline = True
-        Me.label73.Name = "label73"
-        Me.label73.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.label73.SizeF = New System.Drawing.SizeF(655.3333!, 28.97222!)
-        Me.label73.StylePriority.UseBackColor = False
-        Me.label73.StylePriority.UseBorders = False
-        Me.label73.StylePriority.UseFont = False
-        Me.label73.StylePriority.UseTextAlignment = False
-        Me.label73.Text = "-----------Resumen General-----------"
-        Me.label73.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
-        '
-        'label25
-        '
-        Me.label25.BackColor = System.Drawing.Color.Plum
-        Me.label25.LocationFloat = New DevExpress.Utils.PointFloat(382.5!, 62.6666!)
-        Me.label25.Multiline = True
-        Me.label25.Name = "label25"
-        Me.label25.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.label25.SizeF = New System.Drawing.SizeF(134.1667!, 23.0!)
-        Me.label25.StyleName = "Style1"
-        Me.label25.StylePriority.UseBackColor = False
-        Me.label25.Text = "IVA:"
-        '
-        'label58
-        '
-        Me.label58.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([IMPUESTO])")})
-        Me.label58.Font = New DevExpress.Drawing.DXFont("Times New Roman", 9.75!, DevExpress.Drawing.DXFontStyle.Bold)
-        Me.label58.LocationFloat = New DevExpress.Utils.PointFloat(516.6667!, 62.6667!)
-        Me.label58.Multiline = True
-        Me.label58.Name = "label58"
-        Me.label58.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.label58.SizeF = New System.Drawing.SizeF(134.1666!, 23.0!)
-        Me.label58.StyleName = "Style1"
-        Me.label58.StylePriority.UseFont = False
-        XrSummary17.Running = DevExpress.XtraReports.UI.SummaryRunning.Report
-        Me.label58.Summary = XrSummary17
-        Me.label58.Text = "label33"
-        Me.label58.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.label58.TextFormatString = "{0:$0.00}"
-        '
-        'label59
-        '
-        Me.label59.BackColor = System.Drawing.Color.Plum
-        Me.label59.LocationFloat = New DevExpress.Utils.PointFloat(382.5!, 108.6667!)
-        Me.label59.Multiline = True
-        Me.label59.Name = "label59"
-        Me.label59.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.label59.SizeF = New System.Drawing.SizeF(134.1667!, 23.0!)
-        Me.label59.StyleName = "Style1"
-        Me.label59.StylePriority.UseBackColor = False
-        Me.label59.Text = "TOTAL:"
-        '
-        'label68
-        '
-        Me.label68.BackColor = System.Drawing.Color.Plum
-        Me.label68.LocationFloat = New DevExpress.Utils.PointFloat(382.5!, 85.66668!)
-        Me.label68.Multiline = True
-        Me.label68.Name = "label68"
-        Me.label68.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.label68.SizeF = New System.Drawing.SizeF(134.1667!, 23.0!)
-        Me.label68.StyleName = "Style1"
-        Me.label68.StylePriority.UseBackColor = False
-        Me.label68.Text = "SUBTOTAL:"
-        '
-        'label69
-        '
-        Me.label69.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([TOTAL])")})
-        Me.label69.Font = New DevExpress.Drawing.DXFont("Times New Roman", 9.75!, DevExpress.Drawing.DXFontStyle.Bold)
-        Me.label69.LocationFloat = New DevExpress.Utils.PointFloat(516.6667!, 108.6667!)
-        Me.label69.Multiline = True
-        Me.label69.Name = "label69"
-        Me.label69.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.label69.SizeF = New System.Drawing.SizeF(134.1666!, 23.0!)
-        Me.label69.StyleName = "Style1"
-        Me.label69.StylePriority.UseFont = False
-        XrSummary18.Running = DevExpress.XtraReports.UI.SummaryRunning.Report
-        Me.label69.Summary = XrSummary18
-        Me.label69.Text = "label30"
-        Me.label69.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.label69.TextFormatString = "{0:$0.00}"
-        '
-        'label70
-        '
-        Me.label70.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([SUB_TOTAL])")})
-        Me.label70.Font = New DevExpress.Drawing.DXFont("Times New Roman", 9.75!, DevExpress.Drawing.DXFontStyle.Bold)
-        Me.label70.LocationFloat = New DevExpress.Utils.PointFloat(516.6667!, 85.66668!)
-        Me.label70.Multiline = True
-        Me.label70.Name = "label70"
-        Me.label70.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.label70.SizeF = New System.Drawing.SizeF(134.1666!, 23.0!)
-        Me.label70.StyleName = "Style1"
-        Me.label70.StylePriority.UseFont = False
-        XrSummary19.Running = DevExpress.XtraReports.UI.SummaryRunning.Report
-        Me.label70.Summary = XrSummary19
-        Me.label70.Text = "label29"
-        Me.label70.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.label70.TextFormatString = "{0:$0.00}"
-        '
-        'label71
-        '
-        Me.label71.BackColor = System.Drawing.Color.Plum
-        Me.label71.LocationFloat = New DevExpress.Utils.PointFloat(382.5!, 39.66672!)
-        Me.label71.Multiline = True
-        Me.label71.Name = "label71"
-        Me.label71.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.label71.SizeF = New System.Drawing.SizeF(134.1667!, 23.0!)
-        Me.label71.StyleName = "Style1"
-        Me.label71.StylePriority.UseBackColor = False
-        Me.label71.Text = "CONSUMO:"
-        '
-        'label72
-        '
-        Me.label72.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([CONSUMO])")})
-        Me.label72.Font = New DevExpress.Drawing.DXFont("Times New Roman", 9.75!, DevExpress.Drawing.DXFontStyle.Bold)
-        Me.label72.LocationFloat = New DevExpress.Utils.PointFloat(516.6667!, 39.66672!)
-        Me.label72.Multiline = True
-        Me.label72.Name = "label72"
-        Me.label72.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.label72.SizeF = New System.Drawing.SizeF(134.1667!, 23.0!)
-        Me.label72.StyleName = "Style1"
-        Me.label72.StylePriority.UseFont = False
-        XrSummary20.Running = DevExpress.XtraReports.UI.SummaryRunning.Report
-        Me.label72.Summary = XrSummary20
-        Me.label72.Text = "label14"
-        Me.label72.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        '
         'sqlDataSource1
         '
         Me.sqlDataSource1.ConnectionName = "Connection"
@@ -1514,16 +1359,27 @@ Partial Public Class rptCorteGeneral
         Me.fechaFin.Type = GetType(Date)
         Me.fechaFin.ValueInfo = "2023-07-07"
         '
-        'rptCorteGeneral
+        'cliente
         '
-        Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.TopMargin, Me.Detail, Me.BottomMargin, Me.GroupHeader1, Me.GroupHeader2, Me.GroupHeader3, Me.GroupHeader4, Me.GroupFooter1, Me.GroupFooter2, Me.GroupFooter3, Me.GroupFooter4, Me.GroupFooter5})
+        Me.cliente.Description = "Cliente:"
+        Me.cliente.MultiValue = True
+        Me.cliente.Name = "cliente"
+        DynamicListLookUpSettings1.DataMember = "R_cargarVista"
+        DynamicListLookUpSettings1.DataSource = Me.sqlDataSource1
+        DynamicListLookUpSettings1.DisplayMember = "NOMBRE_CLIENTE"
+        DynamicListLookUpSettings1.ValueMember = "NIT"
+        Me.cliente.ValueSourceSettings = DynamicListLookUpSettings1
+        '
+        'rptCortePorCliente
+        '
+        Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.TopMargin, Me.Detail, Me.BottomMargin, Me.GroupHeader1, Me.GroupHeader2, Me.GroupHeader3, Me.GroupHeader4, Me.GroupFooter1, Me.GroupFooter2, Me.GroupFooter3, Me.GroupFooter4})
         Me.ComponentStorage.AddRange(New System.ComponentModel.IComponent() {Me.sqlDataSource1})
         Me.DataMember = "R_cargarVista"
         Me.DataSource = Me.sqlDataSource1
-        Me.FilterString = "[TIMESTAMP] Between(?fechaIni, ?fechaFin)"
+        Me.FilterString = "[TIMESTAMP] Between(?fechaIni, ?fechaFin) And [NIT] In (?cliente)"
         Me.Margins = New DevExpress.Drawing.DXMargins(96.66666!, 98.0!, 75.97223!, 100.0!)
-        Me.Parameters.AddRange(New DevExpress.XtraReports.Parameters.Parameter() {Me.fechaIni, Me.fechaFin})
-        Me.RequestParameters = False
+        Me.ParameterPanelLayoutItems.AddRange(New DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem() {New DevExpress.XtraReports.Parameters.ParameterLayoutItem(Me.fechaIni, DevExpress.XtraReports.Parameters.Orientation.Horizontal), New DevExpress.XtraReports.Parameters.ParameterLayoutItem(Me.fechaFin, DevExpress.XtraReports.Parameters.Orientation.Horizontal), New DevExpress.XtraReports.Parameters.ParameterLayoutItem(Me.cliente, DevExpress.XtraReports.Parameters.Orientation.Horizontal)})
+        Me.Parameters.AddRange(New DevExpress.XtraReports.Parameters.Parameter() {Me.fechaIni, Me.fechaFin, Me.cliente})
         Me.StyleSheet.AddRange(New DevExpress.XtraReports.UI.XRControlStyle() {Me.Style1, Me.Style2})
         Me.Version = "22.2"
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1609,19 +1465,10 @@ Partial Public Class rptCorteGeneral
     Friend WithEvents label51 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents label7 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents label8 As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents GroupFooter5 As DevExpress.XtraReports.UI.GroupFooterBand
-    Friend WithEvents label73 As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents label25 As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents label58 As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents label59 As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents label68 As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents label69 As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents label70 As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents label71 As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents label72 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents sqlDataSource1 As DevExpress.DataAccess.Sql.SqlDataSource
     Friend WithEvents Style1 As DevExpress.XtraReports.UI.XRControlStyle
     Friend WithEvents Style2 As DevExpress.XtraReports.UI.XRControlStyle
     Friend WithEvents fechaIni As DevExpress.XtraReports.Parameters.Parameter
     Friend WithEvents fechaFin As DevExpress.XtraReports.Parameters.Parameter
+    Friend WithEvents cliente As DevExpress.XtraReports.Parameters.Parameter
 End Class

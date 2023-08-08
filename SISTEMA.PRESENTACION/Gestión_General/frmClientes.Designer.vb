@@ -98,7 +98,7 @@ Partial Class frmClientes
         Me.RibbonControl.MaxItemId = 11
         Me.RibbonControl.Name = "RibbonControl"
         Me.RibbonControl.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1})
-        Me.RibbonControl.Size = New System.Drawing.Size(1073, 182)
+        Me.RibbonControl.Size = New System.Drawing.Size(1073, 193)
         Me.RibbonControl.StatusBar = Me.RibbonStatusBar
         '
         'btnSalir
@@ -238,10 +238,10 @@ Partial Class frmClientes
         '
         'RibbonStatusBar
         '
-        Me.RibbonStatusBar.Location = New System.Drawing.Point(0, 649)
+        Me.RibbonStatusBar.Location = New System.Drawing.Point(0, 646)
         Me.RibbonStatusBar.Name = "RibbonStatusBar"
         Me.RibbonStatusBar.Ribbon = Me.RibbonControl
-        Me.RibbonStatusBar.Size = New System.Drawing.Size(1073, 27)
+        Me.RibbonStatusBar.Size = New System.Drawing.Size(1073, 30)
         '
         'TableLayoutPanel1
         '
@@ -250,12 +250,12 @@ Partial Class frmClientes
         Me.TableLayoutPanel1.Controls.Add(Me.Panel1, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Panel4, 0, 1)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 182)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 193)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 155.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1073, 467)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1073, 453)
         Me.TableLayoutPanel1.TabIndex = 6
         '
         'Panel1
@@ -366,7 +366,7 @@ Partial Class frmClientes
         Me.chkEstado.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chkEstado.Properties.Appearance.Options.UseFont = True
         Me.chkEstado.Properties.Caption = "Inactivo"
-        Me.chkEstado.Size = New System.Drawing.Size(94, 25)
+        Me.chkEstado.Size = New System.Drawing.Size(99, 25)
         Me.chkEstado.TabIndex = 4
         '
         'Label3

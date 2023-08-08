@@ -20,43 +20,43 @@ Partial Class frmReporteria
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataSourceColumnBinding1 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding2 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding24 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding25 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmReporteria))
-        Dim SuperToolTip1 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-        Dim ToolTipTitleItem1 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-        Dim ToolTipItem1 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-        Dim PivotGridFormatRule1 As DevExpress.XtraPivotGrid.PivotGridFormatRule = New DevExpress.XtraPivotGrid.PivotGridFormatRule()
-        Dim FormatConditionRuleValue1 As DevExpress.XtraEditors.FormatConditionRuleValue = New DevExpress.XtraEditors.FormatConditionRuleValue()
-        Dim FormatRuleTotalTypeSettings1 As DevExpress.XtraPivotGrid.FormatRuleTotalTypeSettings = New DevExpress.XtraPivotGrid.FormatRuleTotalTypeSettings()
-        Dim PivotGridFormatRule2 As DevExpress.XtraPivotGrid.PivotGridFormatRule = New DevExpress.XtraPivotGrid.PivotGridFormatRule()
-        Dim FormatConditionRuleValue2 As DevExpress.XtraEditors.FormatConditionRuleValue = New DevExpress.XtraEditors.FormatConditionRuleValue()
-        Dim FormatRuleTotalTypeSettings2 As DevExpress.XtraPivotGrid.FormatRuleTotalTypeSettings = New DevExpress.XtraPivotGrid.FormatRuleTotalTypeSettings()
-        Dim PivotGridFormatRule3 As DevExpress.XtraPivotGrid.PivotGridFormatRule = New DevExpress.XtraPivotGrid.PivotGridFormatRule()
-        Dim FormatConditionRuleValue3 As DevExpress.XtraEditors.FormatConditionRuleValue = New DevExpress.XtraEditors.FormatConditionRuleValue()
-        Dim FormatRuleTotalTypeSettings3 As DevExpress.XtraPivotGrid.FormatRuleTotalTypeSettings = New DevExpress.XtraPivotGrid.FormatRuleTotalTypeSettings()
-        Dim DataSourceColumnBinding3 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding4 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding5 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding6 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding7 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding8 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding9 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding10 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding11 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding12 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding13 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding14 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding15 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding16 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding17 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding18 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding19 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding20 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding21 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding22 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding23 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim CustomSqlQuery1 As DevExpress.DataAccess.Sql.CustomSqlQuery = New DevExpress.DataAccess.Sql.CustomSqlQuery()
+        Dim SuperToolTip2 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+        Dim ToolTipTitleItem2 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+        Dim ToolTipItem2 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+        Dim PivotGridFormatRule4 As DevExpress.XtraPivotGrid.PivotGridFormatRule = New DevExpress.XtraPivotGrid.PivotGridFormatRule()
+        Dim FormatConditionRuleValue4 As DevExpress.XtraEditors.FormatConditionRuleValue = New DevExpress.XtraEditors.FormatConditionRuleValue()
+        Dim FormatRuleTotalTypeSettings4 As DevExpress.XtraPivotGrid.FormatRuleTotalTypeSettings = New DevExpress.XtraPivotGrid.FormatRuleTotalTypeSettings()
+        Dim PivotGridFormatRule5 As DevExpress.XtraPivotGrid.PivotGridFormatRule = New DevExpress.XtraPivotGrid.PivotGridFormatRule()
+        Dim FormatConditionRuleValue5 As DevExpress.XtraEditors.FormatConditionRuleValue = New DevExpress.XtraEditors.FormatConditionRuleValue()
+        Dim FormatRuleTotalTypeSettings5 As DevExpress.XtraPivotGrid.FormatRuleTotalTypeSettings = New DevExpress.XtraPivotGrid.FormatRuleTotalTypeSettings()
+        Dim PivotGridFormatRule6 As DevExpress.XtraPivotGrid.PivotGridFormatRule = New DevExpress.XtraPivotGrid.PivotGridFormatRule()
+        Dim FormatConditionRuleValue6 As DevExpress.XtraEditors.FormatConditionRuleValue = New DevExpress.XtraEditors.FormatConditionRuleValue()
+        Dim FormatRuleTotalTypeSettings6 As DevExpress.XtraPivotGrid.FormatRuleTotalTypeSettings = New DevExpress.XtraPivotGrid.FormatRuleTotalTypeSettings()
+        Dim DataSourceColumnBinding26 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding27 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding28 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding29 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding30 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding31 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding32 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding33 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding34 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding35 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding36 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding37 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding38 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding39 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding40 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding41 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding42 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding43 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding44 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding45 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding46 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim CustomSqlQuery2 As DevExpress.DataAccess.Sql.CustomSqlQuery = New DevExpress.DataAccess.Sql.CustomSqlQuery()
         Me.PivotGridField13 = New DevExpress.XtraPivotGrid.PivotGridField()
         Me.PivotGridField14 = New DevExpress.XtraPivotGrid.PivotGridField()
         Me.RecentlyUsedItemsComboBox1 = New DevExpress.XtraReports.UserDesigner.RecentlyUsedItemsComboBox()
@@ -141,8 +141,8 @@ Partial Class frmReporteria
         Me.PivotGridField13.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea
         Me.PivotGridField13.AreaIndex = 0
         Me.PivotGridField13.Caption = "CONSUMO"
-        DataSourceColumnBinding1.ColumnName = "CONSUMO"
-        Me.PivotGridField13.DataBinding = DataSourceColumnBinding1
+        DataSourceColumnBinding24.ColumnName = "CONSUMO"
+        Me.PivotGridField13.DataBinding = DataSourceColumnBinding24
         Me.PivotGridField13.MinWidth = 100
         Me.PivotGridField13.Name = "PivotGridField13"
         Me.PivotGridField13.Width = 120
@@ -152,8 +152,8 @@ Partial Class frmReporteria
         Me.PivotGridField14.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea
         Me.PivotGridField14.AreaIndex = 7
         Me.PivotGridField14.Caption = "REVISIÓN"
-        DataSourceColumnBinding2.ColumnName = "REVISION"
-        Me.PivotGridField14.DataBinding = DataSourceColumnBinding2
+        DataSourceColumnBinding25.ColumnName = "REVISION"
+        Me.PivotGridField14.DataBinding = DataSourceColumnBinding25
         Me.PivotGridField14.MinWidth = 100
         Me.PivotGridField14.Name = "PivotGridField14"
         Me.PivotGridField14.SortOrder = DevExpress.XtraPivotGrid.PivotSortOrder.Descending
@@ -304,15 +304,15 @@ Partial Class frmReporteria
         Me.btnConstruir.ImageOptions.Image = CType(resources.GetObject("btnConstruir.ImageOptions.Image"), System.Drawing.Image)
         Me.btnConstruir.ImageOptions.LargeImage = CType(resources.GetObject("btnConstruir.ImageOptions.LargeImage"), System.Drawing.Image)
         Me.btnConstruir.Name = "btnConstruir"
-        ToolTipTitleItem1.AllowHtmlText = DevExpress.Utils.DefaultBoolean.[True]
-        ToolTipTitleItem1.ImageOptions.Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
-        ToolTipTitleItem1.Text = "<size=10><b>Construcción de información</b></size>"
-        ToolTipItem1.AllowHtmlText = DevExpress.Utils.DefaultBoolean.[True]
-        ToolTipItem1.Text = "<size=8>Realiza la construcción de la información necesaria para generar los cort" &
+        ToolTipTitleItem2.AllowHtmlText = DevExpress.Utils.DefaultBoolean.[True]
+        ToolTipTitleItem2.ImageOptions.Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
+        ToolTipTitleItem2.Text = "<size=10><b>Construcción de información</b></size>"
+        ToolTipItem2.AllowHtmlText = DevExpress.Utils.DefaultBoolean.[True]
+        ToolTipItem2.Text = "<size=8>Realiza la construcción de la información necesaria para generar los cort" &
     "es." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "La data que no haya sido construida no aparecerá en los cortes</size>"
-        SuperToolTip1.Items.Add(ToolTipTitleItem1)
-        SuperToolTip1.Items.Add(ToolTipItem1)
-        Me.btnConstruir.SuperTip = SuperToolTip1
+        SuperToolTip2.Items.Add(ToolTipTitleItem2)
+        SuperToolTip2.Items.Add(ToolTipItem2)
+        Me.btnConstruir.SuperTip = SuperToolTip2
         '
         'btnCorteGeneral
         '
@@ -394,7 +394,7 @@ Partial Class frmReporteria
         Me.GroupBox1.Controls.Add(Me.ProgressBar1)
         Me.GroupBox1.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.Red
-        Me.GroupBox1.Location = New System.Drawing.Point(415, 320)
+        Me.GroupBox1.Location = New System.Drawing.Point(415, 127)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(532, 162)
         Me.GroupBox1.TabIndex = 5
@@ -485,35 +485,35 @@ Partial Class frmReporteria
         Me.PivotGridControl1.Appearance.FieldValue.Options.UseFont = True
         Me.PivotGridControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PivotGridControl1.Fields.AddRange(New DevExpress.XtraPivotGrid.PivotGridField() {Me.PivotGridField1, Me.PivotGridField20, Me.PivotGridField2, Me.PivotGridField3, Me.PivotGridField4, Me.PivotGridField5, Me.PivotGridField15, Me.PivotGridField16, Me.PivotGridField17, Me.PivotGridField18, Me.PivotGridField6, Me.PivotGridField7, Me.PivotGridField8, Me.PivotGridField9, Me.PivotGridField19, Me.PivotGridField10, Me.PivotGridField11, Me.PivotGridField12, Me.PivotGridField13, Me.PivotGridField21, Me.PivotGridField22, Me.PivotGridField23, Me.PivotGridField14})
-        PivotGridFormatRule1.Measure = Me.PivotGridField13
-        PivotGridFormatRule1.Name = "MENOR"
-        FormatConditionRuleValue1.Appearance.BackColor = System.Drawing.Color.Red
-        FormatConditionRuleValue1.Appearance.ForeColor = System.Drawing.Color.White
-        FormatConditionRuleValue1.Appearance.Options.UseBackColor = True
-        FormatConditionRuleValue1.Appearance.Options.UseForeColor = True
-        FormatConditionRuleValue1.Condition = DevExpress.XtraEditors.FormatCondition.Less
-        FormatConditionRuleValue1.Value1 = New Decimal(New Integer() {0, 0, 0, 0})
-        PivotGridFormatRule1.Rule = FormatConditionRuleValue1
-        PivotGridFormatRule1.Settings = FormatRuleTotalTypeSettings1
-        PivotGridFormatRule2.Measure = Me.PivotGridField13
-        PivotGridFormatRule2.Name = "MAYOR"
-        FormatConditionRuleValue2.Appearance.BackColor = System.Drawing.Color.MediumSpringGreen
-        FormatConditionRuleValue2.Appearance.Options.UseBackColor = True
-        FormatConditionRuleValue2.Condition = DevExpress.XtraEditors.FormatCondition.Greater
-        FormatConditionRuleValue2.Value1 = New Decimal(New Integer() {0, 0, 0, 0})
-        PivotGridFormatRule2.Rule = FormatConditionRuleValue2
-        PivotGridFormatRule2.Settings = FormatRuleTotalTypeSettings2
-        PivotGridFormatRule3.Measure = Me.PivotGridField13
-        PivotGridFormatRule3.Name = "IGUAL"
-        FormatConditionRuleValue3.Appearance.BackColor = System.Drawing.Color.LightSkyBlue
-        FormatConditionRuleValue3.Appearance.Options.UseBackColor = True
-        FormatConditionRuleValue3.Condition = DevExpress.XtraEditors.FormatCondition.Equal
-        FormatConditionRuleValue3.Value1 = New Decimal(New Integer() {0, 0, 0, 0})
-        PivotGridFormatRule3.Rule = FormatConditionRuleValue3
-        PivotGridFormatRule3.Settings = FormatRuleTotalTypeSettings3
-        Me.PivotGridControl1.FormatRules.Add(PivotGridFormatRule1)
-        Me.PivotGridControl1.FormatRules.Add(PivotGridFormatRule2)
-        Me.PivotGridControl1.FormatRules.Add(PivotGridFormatRule3)
+        PivotGridFormatRule4.Measure = Me.PivotGridField13
+        PivotGridFormatRule4.Name = "MENOR"
+        FormatConditionRuleValue4.Appearance.BackColor = System.Drawing.Color.Red
+        FormatConditionRuleValue4.Appearance.ForeColor = System.Drawing.Color.White
+        FormatConditionRuleValue4.Appearance.Options.UseBackColor = True
+        FormatConditionRuleValue4.Appearance.Options.UseForeColor = True
+        FormatConditionRuleValue4.Condition = DevExpress.XtraEditors.FormatCondition.Less
+        FormatConditionRuleValue4.Value1 = New Decimal(New Integer() {0, 0, 0, 0})
+        PivotGridFormatRule4.Rule = FormatConditionRuleValue4
+        PivotGridFormatRule4.Settings = FormatRuleTotalTypeSettings4
+        PivotGridFormatRule5.Measure = Me.PivotGridField13
+        PivotGridFormatRule5.Name = "MAYOR"
+        FormatConditionRuleValue5.Appearance.BackColor = System.Drawing.Color.MediumSpringGreen
+        FormatConditionRuleValue5.Appearance.Options.UseBackColor = True
+        FormatConditionRuleValue5.Condition = DevExpress.XtraEditors.FormatCondition.Greater
+        FormatConditionRuleValue5.Value1 = New Decimal(New Integer() {0, 0, 0, 0})
+        PivotGridFormatRule5.Rule = FormatConditionRuleValue5
+        PivotGridFormatRule5.Settings = FormatRuleTotalTypeSettings5
+        PivotGridFormatRule6.Measure = Me.PivotGridField13
+        PivotGridFormatRule6.Name = "IGUAL"
+        FormatConditionRuleValue6.Appearance.BackColor = System.Drawing.Color.LightSkyBlue
+        FormatConditionRuleValue6.Appearance.Options.UseBackColor = True
+        FormatConditionRuleValue6.Condition = DevExpress.XtraEditors.FormatCondition.Equal
+        FormatConditionRuleValue6.Value1 = New Decimal(New Integer() {0, 0, 0, 0})
+        PivotGridFormatRule6.Rule = FormatConditionRuleValue6
+        PivotGridFormatRule6.Settings = FormatRuleTotalTypeSettings6
+        Me.PivotGridControl1.FormatRules.Add(PivotGridFormatRule4)
+        Me.PivotGridControl1.FormatRules.Add(PivotGridFormatRule5)
+        Me.PivotGridControl1.FormatRules.Add(PivotGridFormatRule6)
         Me.PivotGridControl1.Location = New System.Drawing.Point(0, 0)
         Me.PivotGridControl1.MenuManager = Me.RibbonControl
         Me.PivotGridControl1.Name = "PivotGridControl1"
@@ -538,16 +538,16 @@ Partial Class frmReporteria
         '
         Me.PivotGridField1.AreaIndex = 0
         Me.PivotGridField1.Caption = "ID_VINC"
-        DataSourceColumnBinding3.ColumnName = "ID_VINC"
-        Me.PivotGridField1.DataBinding = DataSourceColumnBinding3
+        DataSourceColumnBinding26.ColumnName = "ID_VINC"
+        Me.PivotGridField1.DataBinding = DataSourceColumnBinding26
         Me.PivotGridField1.Name = "PivotGridField1"
         '
         'PivotGridField20
         '
         Me.PivotGridField20.AreaIndex = 1
         Me.PivotGridField20.Caption = "ESTADO VINC"
-        DataSourceColumnBinding4.ColumnName = "ESTADO_VINC"
-        Me.PivotGridField20.DataBinding = DataSourceColumnBinding4
+        DataSourceColumnBinding27.ColumnName = "ESTADO_VINC"
+        Me.PivotGridField20.DataBinding = DataSourceColumnBinding27
         Me.PivotGridField20.Name = "PivotGridField20"
         Me.PivotGridField20.SortOrder = DevExpress.XtraPivotGrid.PivotSortOrder.Descending
         '
@@ -556,8 +556,8 @@ Partial Class frmReporteria
         Me.PivotGridField2.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea
         Me.PivotGridField2.AreaIndex = 3
         Me.PivotGridField2.Caption = "VALVULA"
-        DataSourceColumnBinding5.ColumnName = "VALVULA"
-        Me.PivotGridField2.DataBinding = DataSourceColumnBinding5
+        DataSourceColumnBinding28.ColumnName = "VALVULA"
+        Me.PivotGridField2.DataBinding = DataSourceColumnBinding28
         Me.PivotGridField2.MinWidth = 100
         Me.PivotGridField2.Name = "PivotGridField2"
         Me.PivotGridField2.SortOrder = DevExpress.XtraPivotGrid.PivotSortOrder.Descending
@@ -567,8 +567,8 @@ Partial Class frmReporteria
         Me.PivotGridField3.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea
         Me.PivotGridField3.AreaIndex = 2
         Me.PivotGridField3.Caption = "VALVULA_PADRE"
-        DataSourceColumnBinding6.ColumnName = "VALVULA_PADRE"
-        Me.PivotGridField3.DataBinding = DataSourceColumnBinding6
+        DataSourceColumnBinding29.ColumnName = "VALVULA_PADRE"
+        Me.PivotGridField3.DataBinding = DataSourceColumnBinding29
         Me.PivotGridField3.ExpandedInFieldsGroup = False
         Me.PivotGridField3.MinWidth = 100
         Me.PivotGridField3.Name = "PivotGridField3"
@@ -579,8 +579,8 @@ Partial Class frmReporteria
         Me.PivotGridField4.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea
         Me.PivotGridField4.AreaIndex = 0
         Me.PivotGridField4.Caption = "NOMBRE_CLIENTE"
-        DataSourceColumnBinding7.ColumnName = "NOMBRE_CLIENTE"
-        Me.PivotGridField4.DataBinding = DataSourceColumnBinding7
+        DataSourceColumnBinding30.ColumnName = "NOMBRE_CLIENTE"
+        Me.PivotGridField4.DataBinding = DataSourceColumnBinding30
         Me.PivotGridField4.MinWidth = 100
         Me.PivotGridField4.Name = "PivotGridField4"
         Me.PivotGridField4.Width = 140
@@ -589,8 +589,8 @@ Partial Class frmReporteria
         '
         Me.PivotGridField5.AreaIndex = 5
         Me.PivotGridField5.Caption = "NIT"
-        DataSourceColumnBinding8.ColumnName = "NIT"
-        Me.PivotGridField5.DataBinding = DataSourceColumnBinding8
+        DataSourceColumnBinding31.ColumnName = "NIT"
+        Me.PivotGridField5.DataBinding = DataSourceColumnBinding31
         Me.PivotGridField5.MinWidth = 100
         Me.PivotGridField5.Name = "PivotGridField5"
         Me.PivotGridField5.Width = 120
@@ -599,8 +599,8 @@ Partial Class frmReporteria
         '
         Me.PivotGridField15.AreaIndex = 6
         Me.PivotGridField15.Caption = "ESTADO CLIENTE"
-        DataSourceColumnBinding9.ColumnName = "ESTADO_LOCAL"
-        Me.PivotGridField15.DataBinding = DataSourceColumnBinding9
+        DataSourceColumnBinding32.ColumnName = "ESTADO_LOCAL"
+        Me.PivotGridField15.DataBinding = DataSourceColumnBinding32
         Me.PivotGridField15.Name = "PivotGridField15"
         Me.PivotGridField15.SortOrder = DevExpress.XtraPivotGrid.PivotSortOrder.Descending
         '
@@ -608,8 +608,8 @@ Partial Class frmReporteria
         '
         Me.PivotGridField16.AreaIndex = 7
         Me.PivotGridField16.Caption = "IVA(%)"
-        DataSourceColumnBinding10.ColumnName = "IVA"
-        Me.PivotGridField16.DataBinding = DataSourceColumnBinding10
+        DataSourceColumnBinding33.ColumnName = "IVA"
+        Me.PivotGridField16.DataBinding = DataSourceColumnBinding33
         Me.PivotGridField16.Name = "PivotGridField16"
         Me.PivotGridField16.SortOrder = DevExpress.XtraPivotGrid.PivotSortOrder.Descending
         '
@@ -617,8 +617,8 @@ Partial Class frmReporteria
         '
         Me.PivotGridField17.AreaIndex = 10
         Me.PivotGridField17.Caption = "VALOR UNIDAD"
-        DataSourceColumnBinding11.ColumnName = "VALOR_UNIDAD"
-        Me.PivotGridField17.DataBinding = DataSourceColumnBinding11
+        DataSourceColumnBinding34.ColumnName = "VALOR_UNIDAD"
+        Me.PivotGridField17.DataBinding = DataSourceColumnBinding34
         Me.PivotGridField17.Name = "PivotGridField17"
         Me.PivotGridField17.SortOrder = DevExpress.XtraPivotGrid.PivotSortOrder.Descending
         '
@@ -626,8 +626,8 @@ Partial Class frmReporteria
         '
         Me.PivotGridField18.AreaIndex = 9
         Me.PivotGridField18.Caption = "UNIDAD"
-        DataSourceColumnBinding12.ColumnName = "UNIDAD"
-        Me.PivotGridField18.DataBinding = DataSourceColumnBinding12
+        DataSourceColumnBinding35.ColumnName = "UNIDAD"
+        Me.PivotGridField18.DataBinding = DataSourceColumnBinding35
         Me.PivotGridField18.Name = "PivotGridField18"
         Me.PivotGridField18.SortOrder = DevExpress.XtraPivotGrid.PivotSortOrder.Descending
         '
@@ -635,8 +635,8 @@ Partial Class frmReporteria
         '
         Me.PivotGridField6.AreaIndex = 2
         Me.PivotGridField6.Caption = "FECHA_INICIO_RIGE"
-        DataSourceColumnBinding13.ColumnName = "FECHA_INICIO_RIGE"
-        Me.PivotGridField6.DataBinding = DataSourceColumnBinding13
+        DataSourceColumnBinding36.ColumnName = "FECHA_INICIO_RIGE"
+        Me.PivotGridField6.DataBinding = DataSourceColumnBinding36
         Me.PivotGridField6.MinWidth = 100
         Me.PivotGridField6.Name = "PivotGridField6"
         Me.PivotGridField6.Width = 140
@@ -645,8 +645,8 @@ Partial Class frmReporteria
         '
         Me.PivotGridField7.AreaIndex = 3
         Me.PivotGridField7.Caption = "FECHA_FIN_RIGE"
-        DataSourceColumnBinding14.ColumnName = "FECHA_FIN_RIGE"
-        Me.PivotGridField7.DataBinding = DataSourceColumnBinding14
+        DataSourceColumnBinding37.ColumnName = "FECHA_FIN_RIGE"
+        Me.PivotGridField7.DataBinding = DataSourceColumnBinding37
         Me.PivotGridField7.MinWidth = 100
         Me.PivotGridField7.Name = "PivotGridField7"
         Me.PivotGridField7.Width = 140
@@ -656,8 +656,8 @@ Partial Class frmReporteria
         Me.PivotGridField8.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea
         Me.PivotGridField8.AreaIndex = 1
         Me.PivotGridField8.Caption = "NOMBRE_LOCAL"
-        DataSourceColumnBinding15.ColumnName = "NOMBRE_LOCAL"
-        Me.PivotGridField8.DataBinding = DataSourceColumnBinding15
+        DataSourceColumnBinding38.ColumnName = "NOMBRE_LOCAL"
+        Me.PivotGridField8.DataBinding = DataSourceColumnBinding38
         Me.PivotGridField8.MinWidth = 100
         Me.PivotGridField8.Name = "PivotGridField8"
         Me.PivotGridField8.SortOrder = DevExpress.XtraPivotGrid.PivotSortOrder.Descending
@@ -667,16 +667,16 @@ Partial Class frmReporteria
         '
         Me.PivotGridField9.AreaIndex = 4
         Me.PivotGridField9.Caption = "CODIGO_LOCAL"
-        DataSourceColumnBinding16.ColumnName = "CODIGO_LOCAL"
-        Me.PivotGridField9.DataBinding = DataSourceColumnBinding16
+        DataSourceColumnBinding39.ColumnName = "CODIGO_LOCAL"
+        Me.PivotGridField9.DataBinding = DataSourceColumnBinding39
         Me.PivotGridField9.Name = "PivotGridField9"
         '
         'PivotGridField19
         '
         Me.PivotGridField19.AreaIndex = 8
         Me.PivotGridField19.Caption = "ESTADO LOCAL"
-        DataSourceColumnBinding17.ColumnName = "ESTADO_LOCAL"
-        Me.PivotGridField19.DataBinding = DataSourceColumnBinding17
+        DataSourceColumnBinding40.ColumnName = "ESTADO_LOCAL"
+        Me.PivotGridField19.DataBinding = DataSourceColumnBinding40
         Me.PivotGridField19.Name = "PivotGridField19"
         Me.PivotGridField19.SortOrder = DevExpress.XtraPivotGrid.PivotSortOrder.Descending
         '
@@ -687,8 +687,8 @@ Partial Class frmReporteria
         Me.PivotGridField10.Caption = "HORA TOMA"
         Me.PivotGridField10.CellFormat.FormatString = "dd-MM-yyyy HH:mm:ss.fff"
         Me.PivotGridField10.CellFormat.FormatType = DevExpress.Utils.FormatType.Custom
-        DataSourceColumnBinding18.ColumnName = "TIMESTAMP"
-        Me.PivotGridField10.DataBinding = DataSourceColumnBinding18
+        DataSourceColumnBinding41.ColumnName = "TIMESTAMP"
+        Me.PivotGridField10.DataBinding = DataSourceColumnBinding41
         Me.PivotGridField10.ExpandedInFieldsGroup = False
         Me.PivotGridField10.GrandTotalCellFormat.FormatString = "dd-MM-yyyy HH:mm:ss.fff"
         Me.PivotGridField10.GrandTotalCellFormat.FormatType = DevExpress.Utils.FormatType.Custom
@@ -708,8 +708,8 @@ Partial Class frmReporteria
         Me.PivotGridField11.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea
         Me.PivotGridField11.AreaIndex = 5
         Me.PivotGridField11.Caption = "LECT ANTERIOR"
-        DataSourceColumnBinding19.ColumnName = "LECT_ANT"
-        Me.PivotGridField11.DataBinding = DataSourceColumnBinding19
+        DataSourceColumnBinding42.ColumnName = "LECT_ANT"
+        Me.PivotGridField11.DataBinding = DataSourceColumnBinding42
         Me.PivotGridField11.MinWidth = 100
         Me.PivotGridField11.Name = "PivotGridField11"
         Me.PivotGridField11.SummaryType = DevExpress.Data.PivotGrid.PivotSummaryType.Min
@@ -720,8 +720,8 @@ Partial Class frmReporteria
         Me.PivotGridField12.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea
         Me.PivotGridField12.AreaIndex = 6
         Me.PivotGridField12.Caption = "LECT ACTUAL"
-        DataSourceColumnBinding20.ColumnName = "VALUE"
-        Me.PivotGridField12.DataBinding = DataSourceColumnBinding20
+        DataSourceColumnBinding43.ColumnName = "VALUE"
+        Me.PivotGridField12.DataBinding = DataSourceColumnBinding43
         Me.PivotGridField12.MinWidth = 100
         Me.PivotGridField12.Name = "PivotGridField12"
         Me.PivotGridField12.SummaryType = DevExpress.Data.PivotGrid.PivotSummaryType.Max
@@ -734,8 +734,8 @@ Partial Class frmReporteria
         Me.PivotGridField21.Caption = "SUBTOTAL($)"
         Me.PivotGridField21.CellFormat.FormatString = "c3"
         Me.PivotGridField21.CellFormat.FormatType = DevExpress.Utils.FormatType.Numeric
-        DataSourceColumnBinding21.ColumnName = "SUB_TOTAL"
-        Me.PivotGridField21.DataBinding = DataSourceColumnBinding21
+        DataSourceColumnBinding44.ColumnName = "SUB_TOTAL"
+        Me.PivotGridField21.DataBinding = DataSourceColumnBinding44
         Me.PivotGridField21.GrandTotalCellFormat.FormatString = "c3"
         Me.PivotGridField21.GrandTotalCellFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.PivotGridField21.Name = "PivotGridField21"
@@ -754,8 +754,8 @@ Partial Class frmReporteria
         Me.PivotGridField22.Caption = "MONTO IVA($)"
         Me.PivotGridField22.CellFormat.FormatString = "c3"
         Me.PivotGridField22.CellFormat.FormatType = DevExpress.Utils.FormatType.Numeric
-        DataSourceColumnBinding22.ColumnName = "IMPUESTO"
-        Me.PivotGridField22.DataBinding = DataSourceColumnBinding22
+        DataSourceColumnBinding45.ColumnName = "IMPUESTO"
+        Me.PivotGridField22.DataBinding = DataSourceColumnBinding45
         Me.PivotGridField22.GrandTotalCellFormat.FormatString = "c3"
         Me.PivotGridField22.GrandTotalCellFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.PivotGridField22.Name = "PivotGridField22"
@@ -774,8 +774,8 @@ Partial Class frmReporteria
         Me.PivotGridField23.Caption = "TOTAL($)"
         Me.PivotGridField23.CellFormat.FormatString = "c3"
         Me.PivotGridField23.CellFormat.FormatType = DevExpress.Utils.FormatType.Numeric
-        DataSourceColumnBinding23.ColumnName = "TOTAL"
-        Me.PivotGridField23.DataBinding = DataSourceColumnBinding23
+        DataSourceColumnBinding46.ColumnName = "TOTAL"
+        Me.PivotGridField23.DataBinding = DataSourceColumnBinding46
         Me.PivotGridField23.GrandTotalCellFormat.FormatString = "c3"
         Me.PivotGridField23.GrandTotalCellFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.PivotGridField23.Name = "PivotGridField23"
@@ -791,9 +791,9 @@ Partial Class frmReporteria
         '
         Me.SqlDataSource1.ConnectionName = "VAROXConnectionString"
         Me.SqlDataSource1.Name = "SqlDataSource1"
-        CustomSqlQuery1.Name = "Query"
-        CustomSqlQuery1.Sql = Nothing
-        Me.SqlDataSource1.Queries.AddRange(New DevExpress.DataAccess.Sql.SqlQuery() {CustomSqlQuery1})
+        CustomSqlQuery2.Name = "Query"
+        CustomSqlQuery2.Sql = Nothing
+        Me.SqlDataSource1.Queries.AddRange(New DevExpress.DataAccess.Sql.SqlQuery() {CustomSqlQuery2})
         Me.SqlDataSource1.ResultSchemaSerializable = resources.GetString("SqlDataSource1.ResultSchemaSerializable")
         '
         'GroupBox2
@@ -841,6 +841,7 @@ Partial Class frmReporteria
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.GroupBox1)
         Me.Panel1.Controls.Add(Me.PivotGridControl1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 193)
@@ -854,7 +855,6 @@ Partial Class frmReporteria
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(986, 570)
-        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.RibbonStatusBar)

@@ -3,13 +3,14 @@ Imports SISTEMA.ENTIDADES
 
 Public Class NClases
 
-    Public Function NInsertarClase(Obj As Clases) As Boolean
+    Public Function NInsertar(Obj As Clases) As String
+        Dim msj As String = ""
         Try
             Dim Datos As New DClases
-            Datos.InsertarClase(Obj)
-            Return True
+            msj = Datos.Insertar(Obj)
+            Return msj
         Catch ex As Exception
-            Return False                         'En caso de error o cero resultado, retornamos FALSE
+            Return msj                         'En caso de error o cero resultado, retornamos FALSE
         End Try
     End Function
 
@@ -24,16 +25,16 @@ Public Class NClases
     '    End Try
     'End Function
 
-    'Public Function NEliminarClasificacion(ByVal valor As String) As Boolean
-    '    Try
-    '        Dim Datos As New DClasificacion
-    '        Datos.EliminarClasificacion(valor)
-    '        Return True
-    '    Catch ex As Exception
-    '        MsgBox(ex.Message, "Error", MsgBoxStyle.Critical)
-    '        Return False                         'En caso de error o cero resultado, retornamos FALSE
-    '    End Try
-    'End Function
+    Public Function NEliminar(ByVal valor As String) As String
+        Dim msj As String = ""
+        Try
+            Dim Datos As New DClases
+            Datos.Eliminar(valor)
+            Return ""
+        Catch ex As Exception
+            Return msj                        'En caso de error o cero resultado, retornamos FALSE
+        End Try
+    End Function
 
     'Public Function NBuscarClasificacion(Valor As String) As DataTable
     '    Try
@@ -47,17 +48,17 @@ Public Class NClases
     '    End Try
     'End Function
 
-    'Public Function NBuscarClasificacionPorNombre(Valor As String) As String
-    '    Try
-    '        Dim Datos As New DClasificacion       'Se instancia la Clase Datos ConceptoHorario
-    '        Dim Result As String
-    '        Result = Datos.BuscarClasificacionPorNombre(Valor).ToString     'Se almacena el resultado del Metodo Buscar de la Capa Datos
-    '        Return Result                            'Se retorna la tabla resultado
-    '    Catch ex As Exception
-    '        MsgBox(ex.Message, "Error", MsgBoxStyle.Critical)
-    '        Return Nothing                          'En caso de error o cero resultado, retornamos Nothing
-    '    End Try
-    'End Function
+    Public Function NBuscar(Valor As String, Valor2 As String, Valor3 As String) As DataTable
+        Try
+            Dim Datos As New DClases       'Se instancia la Clase Datos ConceptoHorario
+            Dim Tabla As New DataTable
+            Tabla = Datos.Buscar(Valor, Valor2, Valor3)     'Se almacena el resultado del Metodo Buscar de la Capa Datos
+            Return Tabla                            'Se retorna la tabla resultado
+        Catch ex As Exception
+            MsgBox(ex.Message, "Error", MsgBoxStyle.Critical)
+            Return Nothing                          'En caso de error o cero resultado, retornamos Nothing
+        End Try
+    End Function
 
     Public Function NConsultarClases()
         Try
@@ -69,14 +70,16 @@ Public Class NClases
             Return Nothing
         End Try
     End Function
-    Public Function NCargarListado()
+
+    Public Function NBuscarRegistrosClase(ByVal valor As String) As DataSet
         Try
             Dim Datos As New DClases
-            Dim Tabla As New DataTable
-            Tabla = Datos.CargarListado()
+            Dim Tabla As New DataSet
+            Tabla = Datos.BuscarRegistrosClase(valor)
             Return Tabla
         Catch ex As Exception
             Return Nothing
         End Try
     End Function
+
 End Class

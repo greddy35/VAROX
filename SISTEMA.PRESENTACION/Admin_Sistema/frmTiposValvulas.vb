@@ -138,7 +138,7 @@ Public Class frmTiposValvulas
 
     Private Sub GridViewTiposValvulas_RowClick(sender As Object, e As RowClickEventArgs) Handles GridViewTiposValvulas.RowClick
         Try
-            If GridViewTiposValvulas.GetSelectedRows.Count = 1 And GridViewTiposValvulas.IsFilterRow(e.RowHandle) = False Then
+            If GridViewTiposValvulas.GetSelectedRows.Count = 1 And GridViewTiposValvulas.IsFilterRow(e.RowHandle) = False And GridViewTiposValvulas.IsGroupRow(e.RowHandle) = False Then
                 'EXTRAE Y MUESTRA LA INFORMACION DE LA FILA SELECCIONADO DEL GRID FRANJAS
                 Dim id As String = GridViewTiposValvulas.GetRowCellValue(GridViewTiposValvulas.FocusedRowHandle, "ID_TIPO_VALVULA").ToString
                 Dim nombre As String = GridViewTiposValvulas.GetRowCellValue(GridViewTiposValvulas.FocusedRowHandle, "TIPO_VALVULA").ToString
