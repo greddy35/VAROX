@@ -3,7 +3,7 @@ Imports SISTEMA.NEGOCIO
 
 Public Class frmCambioContraseña
 
-    Dim gsLogin As New NLogin
+    Dim gsUser As New NUsuarios
     Private Sub btnVerPass_Click(sender As Object, e As EventArgs) Handles btnVerPass.Click
         Try
             If txtPass.UseSystemPasswordChar = True Then
@@ -28,7 +28,7 @@ Public Class frmCambioContraseña
             If txtPass.Text.Trim.Equals(txtPassConfirma.Text.Trim) Then
                 If contraseña_actual.ToString = txtPassActual.Text.Trim Then
                     If ValidarPassword(txtPass.Text.Trim) = True Then
-                        If gsLogin.NRestablecerPass(idUsuario.ToString, txtPass.Text) = True Then
+                        If gsUser.NRestablecerPass(idUsuario.ToString, txtPass.Text) = True Then
                             MessageBox.Show("Contraseña restablecida correctamente", "Cambiar Contraseña", MessageBoxButtons.OK, MessageBoxIcon.Information)
                             contraseña_actual = txtPassActual.Text.ToString
                             Me.Close()

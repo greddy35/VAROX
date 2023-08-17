@@ -8,7 +8,8 @@ Imports SISTEMA.NEGOCIO
 Public Class Login
 
 #Region "Variables Globles"
-    Private gsLogin As New NLogin
+    'Private gsLogin As New NLogin
+    Private gsUsuario As New NUsuarios
     Private conexionL As New ConexionBD_Local
     Private conexionE As New ConexionBD_Externa
     Private comando As New SqlCommand
@@ -86,24 +87,28 @@ Public Class Login
 
                 Dim Tabla As New DataTable
 
-                Tabla = gsLogin.NLoginUsuario(user, contraseña)
+                Tabla = gsUsuario.NLoginUsuario(user, contraseña)
 
                 If (Tabla.Rows.Count > 0) Then
                     Dim fila As DataRow = Tabla.Rows(0)
                     'Console.WriteLine("Valida al usuario")
-                    usuario = user                  'Se almacena el usuario en una variable global
-                    contraseña_actual = contraseña
-                    nombreUsuario = fila("nombre").ToString  '
-                    idUsuario = CInt(fila("id_usuario"))  'Se almacena el id del usuario, homologo de la BD.BIOTIMEPRO = BD.BIOSOFT
-                    idRol = CInt(fila("id_rol"))          'Se almacena el id del rol, es administrado en el BIOSOFT'
-                    rol = fila("rol").ToString               'Se almacena el nombre de rol del usuario
-                    'company = cboCompañia.SelectedItem.ToString
-                    txtUsuario.Text = ""
-                    txtContraseña.Text = ""
-                    'SE CARGAN LOS PRIVILEGIOS AL DATASET GLOBAL PRIVILEGIOS
-                    Privilegios = gsLogin.NCargarPrivilegios(idRol.ToString, idUsuario.ToString)
-                    Me.Hide()
-                    frmPrincipal.Show()
+                    If fila("activo").ToString.Equals("S") Then
+                        usuario = user                  'Se almacena el usuario en una variable global
+                        contraseña_actual = contraseña
+                        nombreUsuario = fila("nombre").ToString  '
+                        idUsuario = CInt(fila("id_usuario"))  'Se almacena el id del usuario, homologo de la BD.BIOTIMEPRO = BD.BIOSOFT
+                        idRol = CInt(fila("id_rol"))          'Se almacena el id del rol, es administrado en el BIOSOFT'
+                        rol = fila("rol").ToString               'Se almacena el nombre de rol del usuario
+                        'company = cboCompañia.SelectedItem.ToString
+                        txtUsuario.Text = ""
+                        txtContraseña.Text = ""
+                        'SE CARGAN LOS PRIVILEGIOS AL DATASET GLOBAL PRIVILEGIOS
+                        Privilegios = gsUsuario.NCargarPrivilegios(idRol.ToString, idUsuario.ToString)
+                        Me.Hide()
+                        frmPrincipal.Show()
+                    Else
+                        MsgBox("USUARIO INACTIVO, CONSULTE AL ADMINISTRADOR DE SISTEMA", MsgBoxStyle.Critical, "Inicio de sesión")
+                    End If
                 Else
                     MsgBox("USUARIO Y/O CONTRASEÑA INCORRECTO/A", MsgBoxStyle.Critical, "Inicio de sesión")
                 End If

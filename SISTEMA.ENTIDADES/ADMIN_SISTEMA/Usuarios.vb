@@ -21,6 +21,9 @@
     Private _usuario As String
     Private _pass As String
     Private _nombreUsuario As String
+    Private _estado As String
+    Private _modificadoPor As String
+
 
     Public Property IdModulo As String
         Get
@@ -163,6 +166,24 @@
         End Get
         Set(value As String)
             _nombreUsuario = value
+        End Set
+    End Property
+
+    Public Property Estado As String
+        Get
+            Return _estado
+        End Get
+        Set(value As String)
+            _estado = value
+        End Set
+    End Property
+
+    Public Property ModificadoPor As String
+        Get
+            Return _modificadoPor
+        End Get
+        Set(value As String)
+            _modificadoPor = value
         End Set
     End Property
 End Class

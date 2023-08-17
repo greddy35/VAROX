@@ -39,38 +39,38 @@ Partial Class frmPrincipal
         Me.SkinDropDownButtonItem1 = New DevExpress.XtraBars.SkinDropDownButtonItem()
         Me.AccordionControl1 = New DevExpress.XtraBars.Navigation.AccordionControl()
         Me.AccordionControlSeparator31 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
-        Me.AccordionControlElement2 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.accModReportAnalisis = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AccordionControlSeparator24 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
-        Me.AccordionControlElement8 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.accSubModAnalisis = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AccordionControlSeparator13 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
-        Me.accCorteGeneral = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.accAnalisisCortes = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AccordionControlSeparator22 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
-        Me.AccordionControlElement6 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.accSubModReportes = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AccordionControlSeparator16 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
         Me.accDiseñadorReportes = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AccordionControlSeparator25 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
         Me.accVisualizadorReportes = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AccordionControlSeparator23 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
-        Me.AccordionControlElement5 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.accSubModDashboard = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AccordionControlSeparator15 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
         Me.accDiseñadorDashboard = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AccordionControlSeparator14 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
         Me.accVisualizadorDashboard = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AccordionControlSeparator30 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
-        Me.AccordionControlElement7 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
-        Me.AccordionControlMantenimientos = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.accModGestionGeneral = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.accSubModGestion = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AccordionControlSeparator9 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
         Me.accValLocClien = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AccordionControlSeparator5 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
-        Me.AccordionControlElement13 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.accSubModMantenimientos = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.accClientes = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AccordionControlSeparator18 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
         Me.accLocales = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AccordionControlSeparator17 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
         Me.accValvulas = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AccordionControlSeparator27 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
-        Me.AccordionControlAdminSistema = New DevExpress.XtraBars.Navigation.AccordionControlElement()
-        Me.AccordionControlSeguridad = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.accModAdmSistema = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.accSubModSeguridad = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AccordionControlSeparator4 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
         Me.accUsuariosPrivilegios = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AccordionControlSeparator10 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
@@ -78,7 +78,7 @@ Partial Class frmPrincipal
         Me.AccordionControlSeparator11 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
         Me.accConfBloq = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AccordionControlSeparator12 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
-        Me.AccordionControlElement3 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.accSubModParametros = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.accTiposMedicion = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AccordionControlSeparator6 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
         Me.accTiposValvulas = New DevExpress.XtraBars.Navigation.AccordionControlElement()
@@ -283,7 +283,7 @@ Partial Class frmPrincipal
         Me.AccordionControl1.Appearance.Item.Hovered.ForeColor = System.Drawing.Color.MediumBlue
         Me.AccordionControl1.Appearance.Item.Hovered.Options.UseForeColor = True
         Me.AccordionControl1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.AccordionControl1.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeparator31, Me.AccordionControlElement2, Me.AccordionControlSeparator30, Me.AccordionControlElement7, Me.AccordionControlSeparator27, Me.AccordionControlAdminSistema, Me.AccordionControlSeparator28, Me.AccordionControlElementSesion, Me.AccordionControlSeparator29})
+        Me.AccordionControl1.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeparator31, Me.accModReportAnalisis, Me.AccordionControlSeparator30, Me.accModGestionGeneral, Me.AccordionControlSeparator27, Me.accModAdmSistema, Me.AccordionControlSeparator28, Me.AccordionControlElementSesion, Me.AccordionControlSeparator29})
         Me.AccordionControl1.Location = New System.Drawing.Point(0, 39)
         Me.AccordionControl1.Margin = New System.Windows.Forms.Padding(2)
         Me.AccordionControl1.Name = "AccordionControl1"
@@ -296,44 +296,47 @@ Partial Class frmPrincipal
         '
         Me.AccordionControlSeparator31.Name = "AccordionControlSeparator31"
         '
-        'AccordionControlElement2
+        'accModReportAnalisis
         '
-        Me.AccordionControlElement2.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeparator24, Me.AccordionControlElement8, Me.AccordionControlElement6, Me.AccordionControlElement5})
-        Me.AccordionControlElement2.ImageOptions.Image = CType(resources.GetObject("AccordionControlElement2.ImageOptions.Image"), System.Drawing.Image)
-        Me.AccordionControlElement2.Name = "AccordionControlElement2"
-        Me.AccordionControlElement2.Text = "Reportería y Ánalisis"
+        Me.accModReportAnalisis.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeparator24, Me.accSubModAnalisis, Me.accSubModReportes, Me.accSubModDashboard})
+        Me.accModReportAnalisis.Expanded = True
+        Me.accModReportAnalisis.ImageOptions.Image = CType(resources.GetObject("AccordionControlElement2.ImageOptions.Image"), System.Drawing.Image)
+        Me.accModReportAnalisis.Name = "accModReportAnalisis"
+        Me.accModReportAnalisis.Text = "Reportería y Ánalisis"
         '
         'AccordionControlSeparator24
         '
         Me.AccordionControlSeparator24.Name = "AccordionControlSeparator24"
         '
-        'AccordionControlElement8
+        'accSubModAnalisis
         '
-        Me.AccordionControlElement8.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeparator13, Me.accCorteGeneral, Me.AccordionControlSeparator22})
-        Me.AccordionControlElement8.Name = "AccordionControlElement8"
-        Me.AccordionControlElement8.Text = "Ánalisis"
+        Me.accSubModAnalisis.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeparator13, Me.accAnalisisCortes, Me.AccordionControlSeparator22})
+        Me.accSubModAnalisis.Expanded = True
+        Me.accSubModAnalisis.Name = "accSubModAnalisis"
+        Me.accSubModAnalisis.Text = "Ánalisis"
         '
         'AccordionControlSeparator13
         '
         Me.AccordionControlSeparator13.Name = "AccordionControlSeparator13"
         '
-        'accCorteGeneral
+        'accAnalisisCortes
         '
-        Me.accCorteGeneral.ImageOptions.Image = CType(resources.GetObject("accCorteGeneral.ImageOptions.Image"), System.Drawing.Image)
-        Me.accCorteGeneral.ImageOptions.ImageLayoutMode = DevExpress.XtraBars.Navigation.ImageLayoutMode.Squeeze
-        Me.accCorteGeneral.Name = "accCorteGeneral"
-        Me.accCorteGeneral.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
-        Me.accCorteGeneral.Text = "Ánalisis y Cortes"
+        Me.accAnalisisCortes.ImageOptions.Image = CType(resources.GetObject("accCorteGeneral.ImageOptions.Image"), System.Drawing.Image)
+        Me.accAnalisisCortes.ImageOptions.ImageLayoutMode = DevExpress.XtraBars.Navigation.ImageLayoutMode.Squeeze
+        Me.accAnalisisCortes.Name = "accAnalisisCortes"
+        Me.accAnalisisCortes.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
+        Me.accAnalisisCortes.Text = "Ánalisis y Cortes"
         '
         'AccordionControlSeparator22
         '
         Me.AccordionControlSeparator22.Name = "AccordionControlSeparator22"
         '
-        'AccordionControlElement6
+        'accSubModReportes
         '
-        Me.AccordionControlElement6.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeparator16, Me.accDiseñadorReportes, Me.AccordionControlSeparator25, Me.accVisualizadorReportes, Me.AccordionControlSeparator23})
-        Me.AccordionControlElement6.Name = "AccordionControlElement6"
-        Me.AccordionControlElement6.Text = "Reportes"
+        Me.accSubModReportes.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeparator16, Me.accDiseñadorReportes, Me.AccordionControlSeparator25, Me.accVisualizadorReportes, Me.AccordionControlSeparator23})
+        Me.accSubModReportes.Expanded = True
+        Me.accSubModReportes.Name = "accSubModReportes"
+        Me.accSubModReportes.Text = "Reportes"
         '
         'AccordionControlSeparator16
         '
@@ -363,11 +366,12 @@ Partial Class frmPrincipal
         '
         Me.AccordionControlSeparator23.Name = "AccordionControlSeparator23"
         '
-        'AccordionControlElement5
+        'accSubModDashboard
         '
-        Me.AccordionControlElement5.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeparator15, Me.accDiseñadorDashboard, Me.AccordionControlSeparator14, Me.accVisualizadorDashboard})
-        Me.AccordionControlElement5.Name = "AccordionControlElement5"
-        Me.AccordionControlElement5.Text = "Dashboard"
+        Me.accSubModDashboard.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeparator15, Me.accDiseñadorDashboard, Me.AccordionControlSeparator14, Me.accVisualizadorDashboard})
+        Me.accSubModDashboard.Expanded = True
+        Me.accSubModDashboard.Name = "accSubModDashboard"
+        Me.accSubModDashboard.Text = "Dashboard"
         '
         'AccordionControlSeparator15
         '
@@ -397,19 +401,20 @@ Partial Class frmPrincipal
         '
         Me.AccordionControlSeparator30.Name = "AccordionControlSeparator30"
         '
-        'AccordionControlElement7
+        'accModGestionGeneral
         '
-        Me.AccordionControlElement7.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlMantenimientos, Me.AccordionControlElement13})
-        Me.AccordionControlElement7.ImageOptions.Image = CType(resources.GetObject("AccordionControlElement7.ImageOptions.Image"), System.Drawing.Image)
-        Me.AccordionControlElement7.Name = "AccordionControlElement7"
-        Me.AccordionControlElement7.Text = "Gestión General"
+        Me.accModGestionGeneral.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.accSubModGestion, Me.accSubModMantenimientos})
+        Me.accModGestionGeneral.Expanded = True
+        Me.accModGestionGeneral.ImageOptions.Image = CType(resources.GetObject("AccordionControlElement7.ImageOptions.Image"), System.Drawing.Image)
+        Me.accModGestionGeneral.Name = "accModGestionGeneral"
+        Me.accModGestionGeneral.Text = "Gestión General"
         '
-        'AccordionControlMantenimientos
+        'accSubModGestion
         '
-        Me.AccordionControlMantenimientos.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeparator9, Me.accValLocClien, Me.AccordionControlSeparator5})
-        Me.AccordionControlMantenimientos.Expanded = True
-        Me.AccordionControlMantenimientos.Name = "AccordionControlMantenimientos"
-        Me.AccordionControlMantenimientos.Text = "Gestión"
+        Me.accSubModGestion.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeparator9, Me.accValLocClien, Me.AccordionControlSeparator5})
+        Me.accSubModGestion.Expanded = True
+        Me.accSubModGestion.Name = "accSubModGestion"
+        Me.accSubModGestion.Text = "Gestión"
         '
         'AccordionControlSeparator9
         '
@@ -427,11 +432,12 @@ Partial Class frmPrincipal
         '
         Me.AccordionControlSeparator5.Name = "AccordionControlSeparator5"
         '
-        'AccordionControlElement13
+        'accSubModMantenimientos
         '
-        Me.AccordionControlElement13.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.accClientes, Me.AccordionControlSeparator18, Me.accLocales, Me.AccordionControlSeparator17, Me.accValvulas})
-        Me.AccordionControlElement13.Name = "AccordionControlElement13"
-        Me.AccordionControlElement13.Text = "Mantenimientos"
+        Me.accSubModMantenimientos.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.accClientes, Me.AccordionControlSeparator18, Me.accLocales, Me.AccordionControlSeparator17, Me.accValvulas})
+        Me.accSubModMantenimientos.Expanded = True
+        Me.accSubModMantenimientos.Name = "accSubModMantenimientos"
+        Me.accSubModMantenimientos.Text = "Mantenimientos"
         '
         'accClientes
         '
@@ -466,18 +472,20 @@ Partial Class frmPrincipal
         '
         Me.AccordionControlSeparator27.Name = "AccordionControlSeparator27"
         '
-        'AccordionControlAdminSistema
+        'accModAdmSistema
         '
-        Me.AccordionControlAdminSistema.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeguridad, Me.AccordionControlElement3})
-        Me.AccordionControlAdminSistema.ImageOptions.Image = CType(resources.GetObject("AccordionControlAdminSistema.ImageOptions.Image"), System.Drawing.Image)
-        Me.AccordionControlAdminSistema.Name = "AccordionControlAdminSistema"
-        Me.AccordionControlAdminSistema.Text = "Administración de Sistema"
+        Me.accModAdmSistema.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.accSubModSeguridad, Me.accSubModParametros})
+        Me.accModAdmSistema.Expanded = True
+        Me.accModAdmSistema.ImageOptions.Image = CType(resources.GetObject("AccordionControlAdminSistema.ImageOptions.Image"), System.Drawing.Image)
+        Me.accModAdmSistema.Name = "accModAdmSistema"
+        Me.accModAdmSistema.Text = "Administración de Sistema"
         '
-        'AccordionControlSeguridad
+        'accSubModSeguridad
         '
-        Me.AccordionControlSeguridad.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeparator4, Me.accUsuariosPrivilegios, Me.AccordionControlSeparator10, Me.accRoles, Me.AccordionControlSeparator11, Me.accConfBloq, Me.AccordionControlSeparator12})
-        Me.AccordionControlSeguridad.Name = "AccordionControlSeguridad"
-        Me.AccordionControlSeguridad.Text = "Seguridad"
+        Me.accSubModSeguridad.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeparator4, Me.accUsuariosPrivilegios, Me.AccordionControlSeparator10, Me.accRoles, Me.AccordionControlSeparator11, Me.accConfBloq, Me.AccordionControlSeparator12})
+        Me.accSubModSeguridad.Expanded = True
+        Me.accSubModSeguridad.Name = "accSubModSeguridad"
+        Me.accSubModSeguridad.Text = "Seguridad"
         '
         'AccordionControlSeparator4
         '
@@ -493,6 +501,7 @@ Partial Class frmPrincipal
         'AccordionControlSeparator10
         '
         Me.AccordionControlSeparator10.Name = "AccordionControlSeparator10"
+        Me.AccordionControlSeparator10.Visible = False
         '
         'accRoles
         '
@@ -501,10 +510,12 @@ Partial Class frmPrincipal
         Me.accRoles.Name = "accRoles"
         Me.accRoles.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
         Me.accRoles.Text = "Roles"
+        Me.accRoles.Visible = False
         '
         'AccordionControlSeparator11
         '
         Me.AccordionControlSeparator11.Name = "AccordionControlSeparator11"
+        Me.AccordionControlSeparator11.Visible = False
         '
         'accConfBloq
         '
@@ -512,16 +523,18 @@ Partial Class frmPrincipal
         Me.accConfBloq.Name = "accConfBloq"
         Me.accConfBloq.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
         Me.accConfBloq.Text = "Config. de Clave y Bloqueo"
+        Me.accConfBloq.Visible = False
         '
         'AccordionControlSeparator12
         '
         Me.AccordionControlSeparator12.Name = "AccordionControlSeparator12"
         '
-        'AccordionControlElement3
+        'accSubModParametros
         '
-        Me.AccordionControlElement3.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.accTiposMedicion, Me.AccordionControlSeparator6, Me.accTiposValvulas, Me.AccordionControlSeparator7, Me.accClasesDispo})
-        Me.AccordionControlElement3.Name = "AccordionControlElement3"
-        Me.AccordionControlElement3.Text = "Parámetros del Sistema"
+        Me.accSubModParametros.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.accTiposMedicion, Me.AccordionControlSeparator6, Me.accTiposValvulas, Me.AccordionControlSeparator7, Me.accClasesDispo})
+        Me.accSubModParametros.Expanded = True
+        Me.accSubModParametros.Name = "accSubModParametros"
+        Me.accSubModParametros.Text = "Parámetros del Sistema"
         '
         'accTiposMedicion
         '
@@ -957,19 +970,19 @@ Partial Class frmPrincipal
     Friend WithEvents lblUser As DevExpress.XtraBars.BarStaticItem
     Friend WithEvents lblNombre As DevExpress.XtraBars.BarStaticItem
     Friend WithEvents BarStaticItem4 As DevExpress.XtraBars.BarStaticItem
-    Friend WithEvents AccordionControlElement2 As DevExpress.XtraBars.Navigation.AccordionControlElement
-    Friend WithEvents AccordionControlAdminSistema As DevExpress.XtraBars.Navigation.AccordionControlElement
-    Friend WithEvents AccordionControlSeguridad As DevExpress.XtraBars.Navigation.AccordionControlElement
+    Friend WithEvents accModReportAnalisis As DevExpress.XtraBars.Navigation.AccordionControlElement
+    Friend WithEvents accModAdmSistema As DevExpress.XtraBars.Navigation.AccordionControlElement
+    Friend WithEvents accSubModSeguridad As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents AccordionControlSeparator4 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
     Friend WithEvents accUsuariosPrivilegios As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents AccordionControlSeparator10 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
     Friend WithEvents accRoles As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents AccordionControlSeparator11 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
-    Friend WithEvents AccordionControlMantenimientos As DevExpress.XtraBars.Navigation.AccordionControlElement
+    Friend WithEvents accSubModGestion As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents AccordionControlSeparator9 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
     Friend WithEvents accValLocClien As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents AccordionControlSeparator5 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
-    Friend WithEvents AccordionControlElement3 As DevExpress.XtraBars.Navigation.AccordionControlElement
+    Friend WithEvents accSubModParametros As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents accTiposMedicion As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents AccordionControlSeparator6 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
     Friend WithEvents accTiposValvulas As DevExpress.XtraBars.Navigation.AccordionControlElement
@@ -989,10 +1002,10 @@ Partial Class frmPrincipal
     Friend WithEvents accConfBloq As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents AccordionControlSeparator12 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
     Friend WithEvents AccordionControlSeparator13 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
-    Friend WithEvents accCorteGeneral As DevExpress.XtraBars.Navigation.AccordionControlElement
+    Friend WithEvents accAnalisisCortes As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents AccordionControlSeparator16 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
-    Friend WithEvents AccordionControlElement7 As DevExpress.XtraBars.Navigation.AccordionControlElement
-    Friend WithEvents AccordionControlElement13 As DevExpress.XtraBars.Navigation.AccordionControlElement
+    Friend WithEvents accModGestionGeneral As DevExpress.XtraBars.Navigation.AccordionControlElement
+    Friend WithEvents accSubModMantenimientos As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents accClientes As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents AccordionControlSeparator18 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
     Friend WithEvents accLocales As DevExpress.XtraBars.Navigation.AccordionControlElement
@@ -1012,13 +1025,13 @@ Partial Class frmPrincipal
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents AccordionControlSeparator31 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
     Friend WithEvents AccordionControlSeparator24 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
-    Friend WithEvents AccordionControlElement8 As DevExpress.XtraBars.Navigation.AccordionControlElement
-    Friend WithEvents AccordionControlElement6 As DevExpress.XtraBars.Navigation.AccordionControlElement
+    Friend WithEvents accSubModAnalisis As DevExpress.XtraBars.Navigation.AccordionControlElement
+    Friend WithEvents accSubModReportes As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents accDiseñadorReportes As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents AccordionControlSeparator25 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
     Friend WithEvents accVisualizadorReportes As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents AccordionControlSeparator23 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
-    Friend WithEvents AccordionControlElement5 As DevExpress.XtraBars.Navigation.AccordionControlElement
+    Friend WithEvents accSubModDashboard As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents AccordionControlSeparator15 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
     Friend WithEvents accDiseñadorDashboard As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents AccordionControlSeparator14 As DevExpress.XtraBars.Navigation.AccordionControlSeparator

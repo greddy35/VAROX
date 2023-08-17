@@ -4,6 +4,48 @@ Imports System.Data
 
 Public Class NUsuarios
 #Region "Funciones de Usuarios"
+    Public Function NInsertar(Obj As Usuarios) As String
+        Dim msj As String = ""
+        Try
+            Dim Datos As New DUsuarios
+            msj = Datos.Insertar(Obj)
+            Return msj
+        Catch ex As Exception
+            Return msj
+        End Try
+    End Function
+
+    Public Function NModificar(Obj As Usuarios) As String
+        Dim msj As String = ""
+        Try
+            Dim Datos As New DUsuarios
+            msj = Datos.Modificar(Obj)
+            Return msj
+        Catch ex As Exception
+            Return msj
+        End Try
+    End Function
+    Public Function NBuscar(ByVal valor As String) As DataTable
+        Try
+            Dim Datos As New DUsuarios
+            Dim Tabla As New DataTable
+            Tabla = Datos.Buscar(valor)
+            Return Tabla
+        Catch ex As Exception
+            Return Nothing
+        End Try
+    End Function
+    Public Function NLoginUsuario(ByVal usuario As String, ByVal contraseña As String) As DataTable
+        Try
+            Dim Datos As New DUsuarios       'Se instancia la Clase Datos ConceptoHorario
+            Dim Tabla As New DataTable              'Se crea un objeto DataTable para encapsular el resultado
+            Tabla = Datos.cargarCredenciales(usuario, contraseña)     'Se almacena el resultado del Metodo Buscar de la Capa Datos
+            Return Tabla                            'Se retorna la tabla resultado
+        Catch ex As Exception
+            MsgBox(ex.Message, "Error", MsgBoxStyle.Critical)
+            Return Nothing                          'En caso de error o cero resultado, retornamos Nothing
+        End Try
+    End Function
     Public Function NRestablecerPass(ByVal id As String, ByVal pass As String) As Boolean
         Try
             Dim Datos As New DUsuarios
@@ -14,52 +56,6 @@ Public Class NUsuarios
             Return False                         'En caso de error o cero resultado, retornamos FALSE
         End Try
     End Function
-
-    'Public Function NActualizarClasificacion(Obj As Clasificacion) As Boolean
-    '    Try
-    '        Dim Datos As New DClasificacion
-    '        Datos.ActualizarClasificacion(Obj)
-    '        Return True
-    '    Catch ex As Exception
-    '        ''MsgBox(ex.Message, "Error", MsgBoxStyle.Critical)
-    '        Return False                         'En caso de error o cero resultado, retornamos FALSE
-    '    End Try
-    'End Function
-
-    'Public Function NEliminarClasificacion(ByVal valor As String) As Boolean
-    '    Try
-    '        Dim Datos As New DClasificacion
-    '        Datos.EliminarClasificacion(valor)
-    '        Return True
-    '    Catch ex As Exception
-    '        MsgBox(ex.Message, "Error", MsgBoxStyle.Critical)
-    '        Return False                         'En caso de error o cero resultado, retornamos FALSE
-    '    End Try
-    'End Function
-
-    'Public Function NBuscarClasificacion(Valor As String) As DataTable
-    '    Try
-    '        Dim Datos As New DClasificacion       'Se instancia la Clase Datos ConceptoHorario
-    '        Dim Tabla As New DataTable              'Se crea un objeto DataTable para encapsular el resultado
-    '        Tabla = Datos.BuscarClasificacion(Valor)     'Se almacena el resultado del Metodo Buscar de la Capa Datos
-    '        Return Tabla                            'Se retorna la tabla resultado
-    '    Catch ex As Exception
-    '        MsgBox(ex.Message, "Error", MsgBoxStyle.Critical)
-    '        Return Nothing                          'En caso de error o cero resultado, retornamos Nothing
-    '    End Try
-    'End Function
-
-    'Public Function NBuscarClasificacionPorNombre(Valor As String) As String
-    '    Try
-    '        Dim Datos As New DClasificacion       'Se instancia la Clase Datos ConceptoHorario
-    '        Dim Result As String
-    '        Result = Datos.BuscarClasificacionPorNombre(Valor).ToString     'Se almacena el resultado del Metodo Buscar de la Capa Datos
-    '        Return Result                            'Se retorna la tabla resultado
-    '    Catch ex As Exception
-    '        MsgBox(ex.Message, "Error", MsgBoxStyle.Critical)
-    '        Return Nothing                          'En caso de error o cero resultado, retornamos Nothing
-    '    End Try
-    'End Function
 
     Public Function NConsultarUsuarios()
         Try
@@ -72,91 +68,11 @@ Public Class NUsuarios
             Return Nothing
         End Try
     End Function
-
-    'Public Function NSincronizarUsuarios() As Boolean
-    '    Try
-    '        Dim Datos As New DUsuarios
-    '        Datos.SincronizarUsuarios()
-    '        Return True
-    '    Catch ex As Exception
-    '        MsgBox(ex.Message, "Error", MsgBoxStyle.Critical)
-    '        Return False
-    '    End Try
-    'End Function
 #End Region
 
 #Region "Funciones de Roles"
-    '    Public Function NInsertarClasificacion(Obj As Clasificacion) As Boolean
-    '        Try
-    '            Dim Datos As New DClasificacion
-    '            Datos.InsertarClasificacion(Obj)
-    '            Return True
-    '        Catch ex As Exception
-    '            ''MsgBox(ex.Message, "Error", MsgBoxStyle.Critical)
-    '            Return False                         'En caso de error o cero resultado, retornamos FALSE
-    '        End Try
-    '    End Function
 
-    '    Public Function NActualizarClasificacion(Obj As Clasificacion) As Boolean
-    '        Try
-    '            Dim Datos As New DClasificacion
-    '            Datos.ActualizarClasificacion(Obj)
-    '            Return True
-    '        Catch ex As Exception
-    '            ''MsgBox(ex.Message, "Error", MsgBoxStyle.Critical)
-    '            Return False                         'En caso de error o cero resultado, retornamos FALSE
-    '        End Try
-    '    End Function
-
-    '    Public Function NEliminarClasificacion(ByVal valor As String) As Boolean
-    '        Try
-    '            Dim Datos As New DClasificacion
-    '            Datos.EliminarClasificacion(valor)
-    '            Return True
-    '        Catch ex As Exception
-    '            MsgBox(ex.Message, "Error", MsgBoxStyle.Critical)
-    '            Return False                         'En caso de error o cero resultado, retornamos FALSE
-    '        End Try
-    '    End Function
-
-    '    Public Function NBuscarClasificacion(Valor As String) As DataTable
-    '        Try
-    '            Dim Datos As New DClasificacion       'Se instancia la Clase Datos ConceptoHorario
-    '            Dim Tabla As New DataTable              'Se crea un objeto DataTable para encapsular el resultado
-    '            Tabla = Datos.BuscarClasificacion(Valor)     'Se almacena el resultado del Metodo Buscar de la Capa Datos
-    '            Return Tabla                            'Se retorna la tabla resultado
-    '        Catch ex As Exception
-    '            MsgBox(ex.Message, "Error", MsgBoxStyle.Critical)
-    '            Return Nothing                          'En caso de error o cero resultado, retornamos Nothing
-    '        End Try
-    '    End Function
-
-    '    Public Function NBuscarClasificacionPorNombre(Valor As String) As String
-    '        Try
-    '            Dim Datos As New DClasificacion       'Se instancia la Clase Datos ConceptoHorario
-    '            Dim Result As String
-    '            Result = Datos.BuscarClasificacionPorNombre(Valor).ToString     'Se almacena el resultado del Metodo Buscar de la Capa Datos
-    '            Return Result                            'Se retorna la tabla resultado
-    '        Catch ex As Exception
-    '            MsgBox(ex.Message, "Error", MsgBoxStyle.Critical)
-    '            Return Nothing                          'En caso de error o cero resultado, retornamos Nothing
-    '        End Try
-    '    End Function
-
-    '    Public Function NConsultarClasificacion()
-    '        Try
-    '            Dim Datos As New DClasificacion
-    '            Dim Tabla As New DataTable
-    '            Tabla = Datos.ConsultarClasificacion()
-    '            Return Tabla
-    '        Catch ex As Exception
-    '            MsgBox(ex.Message, "Error", MsgBoxStyle.Critical)
-    '            Return Nothing
-    '        End Try
-    '    End Function
-
-
-    Public Function NCargarRoles()
+    Public Function NCargarRoles() As DataSet
         Try
             Dim Datos As New DUsuarios
             Dim Tabla As New DataSet
@@ -192,17 +108,6 @@ Public Class NUsuarios
         End Try
     End Function
 
-    '    Public Function NEliminarClasificacion(ByVal valor As String) As Boolean
-    '        Try
-    '            Dim Datos As New DClasificacion
-    '            Datos.EliminarClasificacion(valor)
-    '            Return True
-    '        Catch ex As Exception
-    '            MsgBox(ex.Message, "Error", MsgBoxStyle.Critical)
-    '            Return False                         'En caso de error o cero resultado, retornamos FALSE
-    '        End Try
-    '    End Function
-
     Public Function NBuscarSiglasModulo(Valor As String) As DataTable
         Try
             Dim Datos As New DUsuarios              'Se instancia la Clase
@@ -214,31 +119,7 @@ Public Class NUsuarios
             Return Nothing                          'En caso de error o cero resultado, retornamos Nothing
         End Try
     End Function
-
-    '    Public Function NBuscarClasificacionPorNombre(Valor As String) As String
-    '        Try
-    '            Dim Datos As New DClasificacion       'Se instancia la Clase Datos ConceptoHorario
-    '            Dim Result As String
-    '            Result = Datos.BuscarClasificacionPorNombre(Valor).ToString     'Se almacena el resultado del Metodo Buscar de la Capa Datos
-    '            Return Result                            'Se retorna la tabla resultado
-    '        Catch ex As Exception
-    '            MsgBox(ex.Message, "Error", MsgBoxStyle.Critical)
-    '            Return Nothing                          'En caso de error o cero resultado, retornamos Nothing
-    '        End Try
-    '    End Function
-
-    'Public Function NConsultarClasificacion()
-    '    Try
-    '        Dim Datos As New DClasificacion
-    '        Dim Tabla As New DataTable
-    '        Tabla = Datos.ConsultarClasificacion()
-    '        Return Tabla
-    '    Catch ex As Exception
-    '        MsgBox(ex.Message, "Error", MsgBoxStyle.Critical)
-    '        Return Nothing
-    '    End Try
-    'End Function
-    Public Function NCargarModulos()
+    Public Function NCargarModulos() As DataSet
         Try
             Dim Datos As New DUsuarios
             Dim Tabla As New DataSet
@@ -250,7 +131,7 @@ Public Class NUsuarios
         End Try
     End Function
 
-    Public Function NCargarAcciones()
+    Public Function NCargarAcciones() As DataSet
         Try
             Dim Datos As New DUsuarios
             Dim Tabla As New DataSet
@@ -259,6 +140,31 @@ Public Class NUsuarios
         Catch ex As Exception
             MsgBox(ex.Message, "Error", MsgBoxStyle.Critical)
             Return Nothing
+        End Try
+    End Function
+
+
+    Public Function NCargarPrivilegios(ByVal id_rol As String, ByVal id_usuario As String) As DataSet
+        Try
+            Dim Datos As New DUsuarios       'Se instancia la Clase Datos ConceptoHorario
+            Dim Tabla As New DataSet              'Se crea un objeto DataSet para encapsular el resultado
+            Tabla = Datos.cargarPrivilegios(id_rol, id_usuario)     'Se almacena el resultado del Metodo Buscar de la Capa Datos
+            Return Tabla                            'Se retorna la tabla resultado
+        Catch ex As Exception
+            MsgBox(ex.Message, "Error", MsgBoxStyle.Critical)
+            Return Nothing                          'En caso de error o cero resultado, retornamos Nothing
+        End Try
+    End Function
+
+    Public Function NCargarPrivilegiosTodos(ByVal id_modulo As String) As DataSet
+        Try
+            Dim Datos As New DUsuarios       'Se instancia la Clase Datos ConceptoHorario
+            Dim Tabla As New DataSet              'Se crea un objeto DataSet para encapsular el resultado
+            Tabla = Datos.cargarPrivilegiosTodos(id_modulo)     'Se almacena el resultado del Metodo Buscar de la Capa Datos
+            Return Tabla                            'Se retorna la tabla resultado
+        Catch ex As Exception
+            MsgBox(ex.Message, "Error", MsgBoxStyle.Critical)
+            Return Nothing                          'En caso de error o cero resultado, retornamos Nothing
         End Try
     End Function
 #End Region

@@ -24,6 +24,8 @@ Partial Class frmUsuariosPrivilegios
         Dim SuperToolTip1 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
         Dim ToolTipTitleItem1 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
         Dim ToolTipItem1 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+        Dim GridFormatRule1 As DevExpress.XtraGrid.GridFormatRule = New DevExpress.XtraGrid.GridFormatRule()
+        Dim FormatConditionRuleValue1 As DevExpress.XtraEditors.FormatConditionRuleValue = New DevExpress.XtraEditors.FormatConditionRuleValue()
         Dim EditorButtonImageOptions1 As DevExpress.XtraEditors.Controls.EditorButtonImageOptions = New DevExpress.XtraEditors.Controls.EditorButtonImageOptions()
         Dim SerializableAppearanceObject1 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
         Dim SerializableAppearanceObject2 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
@@ -39,6 +41,11 @@ Partial Class frmUsuariosPrivilegios
         Dim ToolTipItem2 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
         Me.RibbonControl = New DevExpress.XtraBars.Ribbon.RibbonControl()
         Me.btnCerrar = New DevExpress.XtraBars.BarButtonItem()
+        Me.btnNuevo = New DevExpress.XtraBars.BarButtonItem()
+        Me.btnCancelar = New DevExpress.XtraBars.BarButtonItem()
+        Me.btnGuardar = New DevExpress.XtraBars.BarButtonItem()
+        Me.btnRefrescar = New DevExpress.XtraBars.BarButtonItem()
+        Me.btnModificar = New DevExpress.XtraBars.BarButtonItem()
         Me.RibbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonStatusBar = New DevExpress.XtraBars.Ribbon.RibbonStatusBar()
@@ -52,6 +59,8 @@ Partial Class frmUsuariosPrivilegios
         Me.LabelControl8 = New DevExpress.XtraEditors.LabelControl()
         Me.btnGuardarPrivilegios = New DevExpress.XtraEditors.SimpleButton()
         Me.PanelControl6 = New DevExpress.XtraEditors.PanelControl()
+        Me.chkEstado = New DevExpress.XtraEditors.CheckEdit()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.txtIdUsuario = New DevExpress.XtraEditors.TextEdit()
         Me.txtNombre = New DevExpress.XtraEditors.TextEdit()
         Me.LabelControl5 = New DevExpress.XtraEditors.LabelControl()
@@ -76,12 +85,11 @@ Partial Class frmUsuariosPrivilegios
         Me.GridColumn5 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn6 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn7 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn8 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
         Me.LabelControl1 = New DevExpress.XtraEditors.LabelControl()
         Me.GroupBoxRestabPass = New System.Windows.Forms.GroupBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.txtPassActual = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.txtPassConfirma = New System.Windows.Forms.TextBox()
         Me.txtPass = New System.Windows.Forms.TextBox()
         Me.btnVerPass = New DevExpress.XtraEditors.SimpleButton()
@@ -113,6 +121,7 @@ Partial Class frmUsuariosPrivilegios
         Me.PanelControl9.SuspendLayout()
         CType(Me.PanelControl6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl6.SuspendLayout()
+        CType(Me.chkEstado.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtIdUsuario.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtNombre.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtUsuario.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -142,14 +151,14 @@ Partial Class frmUsuariosPrivilegios
         '
         Me.RibbonControl.EmptyAreaImageOptions.ImagePadding = New System.Windows.Forms.Padding(35, 37, 35, 37)
         Me.RibbonControl.ExpandCollapseItem.Id = 0
-        Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.RibbonControl.SearchEditItem, Me.btnCerrar})
+        Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.RibbonControl.SearchEditItem, Me.btnCerrar, Me.btnNuevo, Me.btnCancelar, Me.btnGuardar, Me.btnRefrescar, Me.btnModificar})
         Me.RibbonControl.Location = New System.Drawing.Point(0, 0)
         Me.RibbonControl.Margin = New System.Windows.Forms.Padding(4)
-        Me.RibbonControl.MaxItemId = 4
+        Me.RibbonControl.MaxItemId = 9
         Me.RibbonControl.Name = "RibbonControl"
         Me.RibbonControl.OptionsMenuMinWidth = 385
         Me.RibbonControl.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1})
-        Me.RibbonControl.Size = New System.Drawing.Size(1113, 182)
+        Me.RibbonControl.Size = New System.Drawing.Size(1113, 193)
         Me.RibbonControl.StatusBar = Me.RibbonStatusBar
         '
         'btnCerrar
@@ -164,14 +173,69 @@ Partial Class frmUsuariosPrivilegios
         Me.btnCerrar.ItemAppearance.Hovered.Font = New System.Drawing.Font("Tahoma", 10.8!, System.Drawing.FontStyle.Bold)
         Me.btnCerrar.ItemAppearance.Hovered.Options.UseBackColor = True
         Me.btnCerrar.ItemAppearance.Hovered.Options.UseFont = True
-        Me.btnCerrar.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 10.8!)
+        Me.btnCerrar.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCerrar.ItemAppearance.Normal.Options.UseFont = True
         Me.btnCerrar.ItemAppearance.Pressed.BackColor = System.Drawing.Color.SkyBlue
         Me.btnCerrar.ItemAppearance.Pressed.Font = New System.Drawing.Font("Tahoma", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCerrar.ItemAppearance.Pressed.Options.UseBackColor = True
         Me.btnCerrar.ItemAppearance.Pressed.Options.UseFont = True
-        Me.btnCerrar.LargeWidth = 100
+        Me.btnCerrar.LargeWidth = 65
         Me.btnCerrar.Name = "btnCerrar"
+        '
+        'btnNuevo
+        '
+        Me.btnNuevo.Caption = "Nuevo"
+        Me.btnNuevo.Id = 4
+        Me.btnNuevo.ImageOptions.Image = CType(resources.GetObject("btnNuevo.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnNuevo.ImageOptions.LargeImage = CType(resources.GetObject("btnNuevo.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.btnNuevo.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNuevo.ItemAppearance.Normal.Options.UseFont = True
+        Me.btnNuevo.LargeWidth = 65
+        Me.btnNuevo.Name = "btnNuevo"
+        '
+        'btnCancelar
+        '
+        Me.btnCancelar.Caption = "Cancelar"
+        Me.btnCancelar.Id = 5
+        Me.btnCancelar.ImageOptions.Image = CType(resources.GetObject("btnCancelar.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnCancelar.ImageOptions.LargeImage = CType(resources.GetObject("btnCancelar.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.btnCancelar.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancelar.ItemAppearance.Normal.Options.UseFont = True
+        Me.btnCancelar.LargeWidth = 65
+        Me.btnCancelar.Name = "btnCancelar"
+        '
+        'btnGuardar
+        '
+        Me.btnGuardar.Caption = "Guardar"
+        Me.btnGuardar.Id = 6
+        Me.btnGuardar.ImageOptions.Image = CType(resources.GetObject("btnGuardar.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnGuardar.ImageOptions.LargeImage = CType(resources.GetObject("btnGuardar.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.btnGuardar.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGuardar.ItemAppearance.Normal.Options.UseFont = True
+        Me.btnGuardar.LargeWidth = 65
+        Me.btnGuardar.Name = "btnGuardar"
+        '
+        'btnRefrescar
+        '
+        Me.btnRefrescar.Caption = "Refrescar"
+        Me.btnRefrescar.Id = 7
+        Me.btnRefrescar.ImageOptions.Image = CType(resources.GetObject("btnRefrescar.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnRefrescar.ImageOptions.LargeImage = CType(resources.GetObject("btnRefrescar.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.btnRefrescar.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRefrescar.ItemAppearance.Normal.Options.UseFont = True
+        Me.btnRefrescar.LargeWidth = 65
+        Me.btnRefrescar.Name = "btnRefrescar"
+        '
+        'btnModificar
+        '
+        Me.btnModificar.Caption = "Modificar"
+        Me.btnModificar.Id = 8
+        Me.btnModificar.ImageOptions.Image = CType(resources.GetObject("btnModificar.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnModificar.ImageOptions.LargeImage = CType(resources.GetObject("btnModificar.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.btnModificar.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnModificar.ItemAppearance.Normal.Options.UseFont = True
+        Me.btnModificar.LargeWidth = 65
+        Me.btnModificar.Name = "btnModificar"
         '
         'RibbonPage1
         '
@@ -181,17 +245,22 @@ Partial Class frmUsuariosPrivilegios
         '
         'RibbonPageGroup1
         '
+        Me.RibbonPageGroup1.ItemLinks.Add(Me.btnNuevo)
+        Me.RibbonPageGroup1.ItemLinks.Add(Me.btnCancelar)
+        Me.RibbonPageGroup1.ItemLinks.Add(Me.btnGuardar)
+        Me.RibbonPageGroup1.ItemLinks.Add(Me.btnModificar)
+        Me.RibbonPageGroup1.ItemLinks.Add(Me.btnRefrescar)
         Me.RibbonPageGroup1.ItemLinks.Add(Me.btnCerrar)
         Me.RibbonPageGroup1.Name = "RibbonPageGroup1"
         Me.RibbonPageGroup1.Text = "General"
         '
         'RibbonStatusBar
         '
-        Me.RibbonStatusBar.Location = New System.Drawing.Point(0, 697)
+        Me.RibbonStatusBar.Location = New System.Drawing.Point(0, 694)
         Me.RibbonStatusBar.Margin = New System.Windows.Forms.Padding(4)
         Me.RibbonStatusBar.Name = "RibbonStatusBar"
         Me.RibbonStatusBar.Ribbon = Me.RibbonControl
-        Me.RibbonStatusBar.Size = New System.Drawing.Size(1113, 27)
+        Me.RibbonStatusBar.Size = New System.Drawing.Size(1113, 30)
         '
         'BackgroundWorkerDepartamentos
         '
@@ -206,11 +275,11 @@ Partial Class frmUsuariosPrivilegios
         Me.TablePanel1.Controls.Add(Me.PanelControl2)
         Me.TablePanel1.Controls.Add(Me.PanelControl1)
         Me.TablePanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TablePanel1.Location = New System.Drawing.Point(0, 182)
+        Me.TablePanel1.Location = New System.Drawing.Point(0, 193)
         Me.TablePanel1.Margin = New System.Windows.Forms.Padding(4)
         Me.TablePanel1.Name = "TablePanel1"
         Me.TablePanel1.Rows.AddRange(New DevExpress.Utils.Layout.TablePanelRow() {New DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 38.19999!), New DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 26.0!)})
-        Me.TablePanel1.Size = New System.Drawing.Size(1113, 515)
+        Me.TablePanel1.Size = New System.Drawing.Size(1113, 501)
         Me.TablePanel1.TabIndex = 8
         '
         'PanelControl4
@@ -223,7 +292,7 @@ Partial Class frmUsuariosPrivilegios
         Me.PanelControl4.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelControl4.Name = "PanelControl4"
         Me.TablePanel1.SetRow(Me.PanelControl4, 1)
-        Me.PanelControl4.Size = New System.Drawing.Size(652, 469)
+        Me.PanelControl4.Size = New System.Drawing.Size(652, 455)
         Me.PanelControl4.TabIndex = 6
         '
         'TablePanel2
@@ -236,8 +305,8 @@ Partial Class frmUsuariosPrivilegios
         Me.TablePanel2.Location = New System.Drawing.Point(2, 2)
         Me.TablePanel2.Margin = New System.Windows.Forms.Padding(4)
         Me.TablePanel2.Name = "TablePanel2"
-        Me.TablePanel2.Rows.AddRange(New DevExpress.Utils.Layout.TablePanelRow() {New DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 150.6001!), New DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 201.0!)})
-        Me.TablePanel2.Size = New System.Drawing.Size(648, 465)
+        Me.TablePanel2.Rows.AddRange(New DevExpress.Utils.Layout.TablePanelRow() {New DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 230.6003!), New DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 201.0!)})
+        Me.TablePanel2.Size = New System.Drawing.Size(648, 451)
         Me.TablePanel2.TabIndex = 0
         '
         'chkLstPrivilegios
@@ -255,14 +324,14 @@ Partial Class frmUsuariosPrivilegios
         Me.chkLstPrivilegios.ContextButtonOptions.ItemCursor = System.Windows.Forms.Cursors.Hand
         Me.chkLstPrivilegios.ContextButtonOptions.PanelCursor = System.Windows.Forms.Cursors.Arrow
         Me.chkLstPrivilegios.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.chkLstPrivilegios.Location = New System.Drawing.Point(4, 155)
+        Me.chkLstPrivilegios.Location = New System.Drawing.Point(4, 235)
         Me.chkLstPrivilegios.Margin = New System.Windows.Forms.Padding(4)
         Me.chkLstPrivilegios.MinimumSize = New System.Drawing.Size(233, 0)
         Me.chkLstPrivilegios.Name = "chkLstPrivilegios"
         Me.chkLstPrivilegios.PictureChecked = CType(resources.GetObject("chkLstPrivilegios.PictureChecked"), System.Drawing.Image)
         Me.chkLstPrivilegios.PictureUnchecked = CType(resources.GetObject("chkLstPrivilegios.PictureUnchecked"), System.Drawing.Image)
         Me.TablePanel2.SetRow(Me.chkLstPrivilegios, 1)
-        Me.chkLstPrivilegios.Size = New System.Drawing.Size(640, 306)
+        Me.chkLstPrivilegios.Size = New System.Drawing.Size(640, 212)
         Me.chkLstPrivilegios.TabIndex = 4
         '
         'PanelControl7
@@ -276,7 +345,7 @@ Partial Class frmUsuariosPrivilegios
         Me.PanelControl7.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelControl7.Name = "PanelControl7"
         Me.TablePanel2.SetRow(Me.PanelControl7, 0)
-        Me.PanelControl7.Size = New System.Drawing.Size(640, 143)
+        Me.PanelControl7.Size = New System.Drawing.Size(640, 223)
         Me.PanelControl7.TabIndex = 3
         '
         'PanelControl9
@@ -284,7 +353,7 @@ Partial Class frmUsuariosPrivilegios
         Me.PanelControl9.Controls.Add(Me.LabelControl8)
         Me.PanelControl9.Controls.Add(Me.btnGuardarPrivilegios)
         Me.PanelControl9.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.PanelControl9.Location = New System.Drawing.Point(2, 84)
+        Me.PanelControl9.Location = New System.Drawing.Point(2, 164)
         Me.PanelControl9.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelControl9.Name = "PanelControl9"
         Me.PanelControl9.Size = New System.Drawing.Size(636, 57)
@@ -311,6 +380,7 @@ Partial Class frmUsuariosPrivilegios
         Me.btnGuardarPrivilegios.Appearance.Options.UseFont = True
         Me.btnGuardarPrivilegios.Appearance.Options.UseForeColor = True
         Me.btnGuardarPrivilegios.Dock = System.Windows.Forms.DockStyle.Right
+        Me.btnGuardarPrivilegios.Enabled = False
         Me.btnGuardarPrivilegios.ImageOptions.Image = CType(resources.GetObject("btnGuardarPrivilegios.ImageOptions.Image"), System.Drawing.Image)
         Me.btnGuardarPrivilegios.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightCenter
         Me.btnGuardarPrivilegios.Location = New System.Drawing.Point(434, 2)
@@ -332,22 +402,48 @@ Partial Class frmUsuariosPrivilegios
         '
         Me.PanelControl6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PanelControl6.Controls.Add(Me.chkEstado)
+        Me.PanelControl6.Controls.Add(Me.Label4)
         Me.PanelControl6.Controls.Add(Me.txtIdUsuario)
         Me.PanelControl6.Controls.Add(Me.txtNombre)
         Me.PanelControl6.Controls.Add(Me.LabelControl5)
         Me.PanelControl6.Controls.Add(Me.txtUsuario)
         Me.PanelControl6.Controls.Add(Me.LabelControl4)
-        Me.PanelControl6.Location = New System.Drawing.Point(344, 2)
+        Me.PanelControl6.Location = New System.Drawing.Point(4, 0)
         Me.PanelControl6.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelControl6.Name = "PanelControl6"
-        Me.PanelControl6.Size = New System.Drawing.Size(295, 78)
+        Me.PanelControl6.Size = New System.Drawing.Size(630, 78)
         Me.PanelControl6.TabIndex = 1
+        '
+        'chkEstado
+        '
+        Me.chkEstado.Enabled = False
+        Me.chkEstado.Location = New System.Drawing.Point(420, 6)
+        Me.chkEstado.MenuManager = Me.RibbonControl
+        Me.chkEstado.Name = "chkEstado"
+        Me.chkEstado.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkEstado.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.chkEstado.Properties.Appearance.Options.UseFont = True
+        Me.chkEstado.Properties.Appearance.Options.UseForeColor = True
+        Me.chkEstado.Properties.Caption = "Inactivo"
+        Me.chkEstado.Size = New System.Drawing.Size(99, 25)
+        Me.chkEstado.TabIndex = 2
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(344, 6)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(70, 21)
+        Me.Label4.TabIndex = 39
+        Me.Label4.Text = "Activo:"
         '
         'txtIdUsuario
         '
         Me.txtIdUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtIdUsuario.Enabled = False
-        Me.txtIdUsuario.Location = New System.Drawing.Point(260, 4)
+        Me.txtIdUsuario.Location = New System.Drawing.Point(595, 4)
         Me.txtIdUsuario.Margin = New System.Windows.Forms.Padding(4)
         Me.txtIdUsuario.MenuManager = Me.RibbonControl
         Me.txtIdUsuario.Name = "txtIdUsuario"
@@ -363,13 +459,21 @@ Partial Class frmUsuariosPrivilegios
         '
         Me.txtNombre.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtNombre.Enabled = False
-        Me.txtNombre.Location = New System.Drawing.Point(85, 37)
+        Me.txtNombre.EnterMoveNextControl = True
+        Me.txtNombre.Location = New System.Drawing.Point(85, 38)
         Me.txtNombre.Margin = New System.Windows.Forms.Padding(4)
         Me.txtNombre.MenuManager = Me.RibbonControl
         Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Properties.Appearance.BackColor = System.Drawing.SystemColors.Info
         Me.txtNombre.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.txtNombre.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.txtNombre.Properties.Appearance.Options.UseBackColor = True
         Me.txtNombre.Properties.Appearance.Options.UseFont = True
-        Me.txtNombre.Size = New System.Drawing.Size(205, 30)
+        Me.txtNombre.Properties.Appearance.Options.UseForeColor = True
+        Me.txtNombre.Properties.Appearance.Options.UseTextOptions = True
+        Me.txtNombre.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near
+        Me.txtNombre.Properties.MaxLength = 150
+        Me.txtNombre.Size = New System.Drawing.Size(460, 30)
         Me.txtNombre.TabIndex = 3
         '
         'LabelControl5
@@ -387,14 +491,22 @@ Partial Class frmUsuariosPrivilegios
         '
         Me.txtUsuario.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.txtUsuario.Enabled = False
-        Me.txtUsuario.Location = New System.Drawing.Point(85, 2)
+        Me.txtUsuario.Location = New System.Drawing.Point(85, 4)
         Me.txtUsuario.Margin = New System.Windows.Forms.Padding(4)
         Me.txtUsuario.MenuManager = Me.RibbonControl
         Me.txtUsuario.MinimumSize = New System.Drawing.Size(175, 0)
         Me.txtUsuario.Name = "txtUsuario"
+        Me.txtUsuario.Properties.Appearance.BackColor = System.Drawing.SystemColors.Info
         Me.txtUsuario.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.txtUsuario.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.txtUsuario.Properties.Appearance.Options.UseBackColor = True
         Me.txtUsuario.Properties.Appearance.Options.UseFont = True
-        Me.txtUsuario.Size = New System.Drawing.Size(202, 30)
+        Me.txtUsuario.Properties.Appearance.Options.UseForeColor = True
+        Me.txtUsuario.Properties.Appearance.Options.UseTextOptions = True
+        Me.txtUsuario.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.txtUsuario.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txtUsuario.Properties.MaxLength = 50
+        Me.txtUsuario.Size = New System.Drawing.Size(236, 30)
         Me.txtUsuario.TabIndex = 1
         '
         'LabelControl4
@@ -414,18 +526,18 @@ Partial Class frmUsuariosPrivilegios
         Me.PanelControl5.Controls.Add(Me.cboModulo)
         Me.PanelControl5.Controls.Add(Me.txtidModulo)
         Me.PanelControl5.Controls.Add(Me.LabelControl3)
-        Me.PanelControl5.Location = New System.Drawing.Point(2, 2)
+        Me.PanelControl5.Location = New System.Drawing.Point(4, 80)
         Me.PanelControl5.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelControl5.MinimumSize = New System.Drawing.Size(303, 78)
         Me.PanelControl5.Name = "PanelControl5"
-        Me.PanelControl5.Size = New System.Drawing.Size(342, 78)
+        Me.PanelControl5.Size = New System.Drawing.Size(630, 78)
         Me.PanelControl5.TabIndex = 0
         '
         'txtSiglasModulo
         '
         Me.txtSiglasModulo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtSiglasModulo.Enabled = False
-        Me.txtSiglasModulo.Location = New System.Drawing.Point(270, 6)
+        Me.txtSiglasModulo.Location = New System.Drawing.Point(161, 6)
         Me.txtSiglasModulo.Margin = New System.Windows.Forms.Padding(4)
         Me.txtSiglasModulo.MenuManager = Me.RibbonControl
         Me.txtSiglasModulo.Name = "txtSiglasModulo"
@@ -438,23 +550,25 @@ Partial Class frmUsuariosPrivilegios
         '
         'cboModulo
         '
+        Me.cboModulo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
+        Me.cboModulo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cboModulo.DisplayMember = "-1"
         Me.cboModulo.Enabled = False
         Me.cboModulo.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold)
         Me.cboModulo.ForeColor = System.Drawing.Color.Blue
         Me.cboModulo.FormattingEnabled = True
         Me.cboModulo.Items.AddRange(New Object() {"SELECCIONE..."})
-        Me.cboModulo.Location = New System.Drawing.Point(6, 41)
+        Me.cboModulo.Location = New System.Drawing.Point(9, 41)
         Me.cboModulo.Margin = New System.Windows.Forms.Padding(4)
         Me.cboModulo.Name = "cboModulo"
         Me.cboModulo.Size = New System.Drawing.Size(330, 31)
-        Me.cboModulo.TabIndex = 3
+        Me.cboModulo.TabIndex = 4
         '
         'txtidModulo
         '
         Me.txtidModulo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtidModulo.Enabled = False
-        Me.txtidModulo.Location = New System.Drawing.Point(196, 6)
+        Me.txtidModulo.Location = New System.Drawing.Point(87, 6)
         Me.txtidModulo.Margin = New System.Windows.Forms.Padding(4)
         Me.txtidModulo.MenuManager = Me.RibbonControl
         Me.txtidModulo.Name = "txtidModulo"
@@ -469,7 +583,7 @@ Partial Class frmUsuariosPrivilegios
         '
         Me.LabelControl3.Appearance.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelControl3.Appearance.Options.UseFont = True
-        Me.LabelControl3.Location = New System.Drawing.Point(6, 6)
+        Me.LabelControl3.Location = New System.Drawing.Point(9, 11)
         Me.LabelControl3.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelControl3.Name = "LabelControl3"
         Me.LabelControl3.Size = New System.Drawing.Size(70, 21)
@@ -496,9 +610,9 @@ Partial Class frmUsuariosPrivilegios
         Me.LabelControl2.Location = New System.Drawing.Point(2, 2)
         Me.LabelControl2.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelControl2.Name = "LabelControl2"
-        Me.LabelControl2.Size = New System.Drawing.Size(262, 21)
+        Me.LabelControl2.Size = New System.Drawing.Size(190, 21)
         Me.LabelControl2.TabIndex = 0
-        Me.LabelControl2.Text = "Selección de Módulo y Usuario"
+        Me.LabelControl2.Text = "Privilegios de usuario:"
         '
         'PanelControl2
         '
@@ -509,7 +623,7 @@ Partial Class frmUsuariosPrivilegios
         Me.PanelControl2.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelControl2.Name = "PanelControl2"
         Me.TablePanel1.SetRow(Me.PanelControl2, 1)
-        Me.PanelControl2.Size = New System.Drawing.Size(445, 469)
+        Me.PanelControl2.Size = New System.Drawing.Size(445, 455)
         Me.PanelControl2.TabIndex = 4
         '
         'GridControlUsuarios
@@ -520,14 +634,23 @@ Partial Class frmUsuariosPrivilegios
         Me.GridControlUsuarios.MenuManager = Me.RibbonControl
         Me.GridControlUsuarios.Name = "GridControlUsuarios"
         Me.GridControlUsuarios.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemButtonEditAsigRol, Me.RepositoryItemButtonEditCambPass})
-        Me.GridControlUsuarios.Size = New System.Drawing.Size(441, 465)
+        Me.GridControlUsuarios.Size = New System.Drawing.Size(441, 451)
         Me.GridControlUsuarios.TabIndex = 0
         Me.GridControlUsuarios.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridViewUsuarios})
         '
         'GridViewUsuarios
         '
-        Me.GridViewUsuarios.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn1, Me.GridColumn2, Me.GridColumn3, Me.GridColumn4, Me.GridColumn5, Me.GridColumn6, Me.GridColumn7})
+        Me.GridViewUsuarios.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn1, Me.GridColumn2, Me.GridColumn3, Me.GridColumn4, Me.GridColumn5, Me.GridColumn6, Me.GridColumn7, Me.GridColumn8})
         Me.GridViewUsuarios.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus
+        GridFormatRule1.ApplyToRow = True
+        GridFormatRule1.ColumnApplyTo = Me.GridColumn8
+        GridFormatRule1.Name = "INACTIVOS"
+        FormatConditionRuleValue1.Appearance.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        FormatConditionRuleValue1.Appearance.Options.UseBackColor = True
+        FormatConditionRuleValue1.Condition = DevExpress.XtraEditors.FormatCondition.Equal
+        FormatConditionRuleValue1.Value1 = "N"
+        GridFormatRule1.Rule = FormatConditionRuleValue1
+        Me.GridViewUsuarios.FormatRules.Add(GridFormatRule1)
         Me.GridViewUsuarios.GridControl = Me.GridControlUsuarios
         Me.GridViewUsuarios.Name = "GridViewUsuarios"
         Me.GridViewUsuarios.OptionsView.ColumnAutoWidth = False
@@ -620,6 +743,17 @@ Partial Class frmUsuariosPrivilegios
         Me.GridColumn7.VisibleIndex = 4
         Me.GridColumn7.Width = 200
         '
+        'GridColumn8
+        '
+        Me.GridColumn8.Caption = "ESTADO"
+        Me.GridColumn8.FieldName = "activo"
+        Me.GridColumn8.MinWidth = 25
+        Me.GridColumn8.Name = "GridColumn8"
+        Me.GridColumn8.OptionsColumn.AllowEdit = False
+        Me.GridColumn8.Visible = True
+        Me.GridColumn8.VisibleIndex = 5
+        Me.GridColumn8.Width = 94
+        '
         'PanelControl1
         '
         Me.TablePanel1.SetColumn(Me.PanelControl1, 0)
@@ -649,11 +783,11 @@ Partial Class frmUsuariosPrivilegios
         Me.GroupBoxRestabPass.BackColor = System.Drawing.Color.IndianRed
         Me.GroupBoxRestabPass.Controls.Add(Me.Panel1)
         Me.GroupBoxRestabPass.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBoxRestabPass.Location = New System.Drawing.Point(0, 500)
+        Me.GroupBoxRestabPass.Location = New System.Drawing.Point(20, 500)
         Me.GroupBoxRestabPass.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.GroupBoxRestabPass.Name = "GroupBoxRestabPass"
         Me.GroupBoxRestabPass.Padding = New System.Windows.Forms.Padding(4, 2, 4, 2)
-        Me.GroupBoxRestabPass.Size = New System.Drawing.Size(485, 244)
+        Me.GroupBoxRestabPass.Size = New System.Drawing.Size(472, 187)
         Me.GroupBoxRestabPass.TabIndex = 14
         Me.GroupBoxRestabPass.TabStop = False
         Me.GroupBoxRestabPass.Text = "Cambio de Contraseña"
@@ -662,8 +796,6 @@ Partial Class frmUsuariosPrivilegios
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.Controls.Add(Me.txtPassActual)
-        Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.txtPassConfirma)
         Me.Panel1.Controls.Add(Me.txtPass)
         Me.Panel1.Controls.Add(Me.btnVerPass)
@@ -675,35 +807,13 @@ Partial Class frmUsuariosPrivilegios
         Me.Panel1.Location = New System.Drawing.Point(4, 21)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(477, 221)
+        Me.Panel1.Size = New System.Drawing.Size(464, 164)
         Me.Panel1.TabIndex = 1
-        '
-        'txtPassActual
-        '
-        Me.txtPassActual.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPassActual.Location = New System.Drawing.Point(201, 14)
-        Me.txtPassActual.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
-        Me.txtPassActual.Name = "txtPassActual"
-        Me.txtPassActual.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPassActual.Size = New System.Drawing.Size(205, 32)
-        Me.txtPassActual.TabIndex = 10
-        Me.txtPassActual.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.txtPassActual.UseSystemPasswordChar = True
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(46, 22)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(149, 18)
-        Me.Label3.TabIndex = 9
-        Me.Label3.Text = "Contraseña Actual:"
         '
         'txtPassConfirma
         '
         Me.txtPassConfirma.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPassConfirma.Location = New System.Drawing.Point(201, 94)
+        Me.txtPassConfirma.Location = New System.Drawing.Point(198, 53)
         Me.txtPassConfirma.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.txtPassConfirma.Name = "txtPassConfirma"
         Me.txtPassConfirma.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
@@ -715,7 +825,7 @@ Partial Class frmUsuariosPrivilegios
         'txtPass
         '
         Me.txtPass.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPass.Location = New System.Drawing.Point(201, 54)
+        Me.txtPass.Location = New System.Drawing.Point(198, 13)
         Me.txtPass.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.txtPass.Name = "txtPass"
         Me.txtPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
@@ -731,7 +841,7 @@ Partial Class frmUsuariosPrivilegios
         Me.btnVerPass.Appearance.Options.UseFont = True
         Me.btnVerPass.ImageOptions.Image = CType(resources.GetObject("btnVerPass.ImageOptions.Image"), System.Drawing.Image)
         Me.btnVerPass.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter
-        Me.btnVerPass.Location = New System.Drawing.Point(412, 94)
+        Me.btnVerPass.Location = New System.Drawing.Point(409, 53)
         Me.btnVerPass.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.btnVerPass.Name = "btnVerPass"
         Me.btnVerPass.Size = New System.Drawing.Size(42, 32)
@@ -751,7 +861,7 @@ Partial Class frmUsuariosPrivilegios
         Me.btnCambiarPass.Appearance.Options.UseFont = True
         Me.btnCambiarPass.ImageOptions.Image = CType(resources.GetObject("btnCambiarPass.ImageOptions.Image"), System.Drawing.Image)
         Me.btnCambiarPass.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight
-        Me.btnCambiarPass.Location = New System.Drawing.Point(201, 146)
+        Me.btnCambiarPass.Location = New System.Drawing.Point(198, 105)
         Me.btnCambiarPass.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.btnCambiarPass.Name = "btnCambiarPass"
         Me.btnCambiarPass.Size = New System.Drawing.Size(112, 50)
@@ -765,7 +875,7 @@ Partial Class frmUsuariosPrivilegios
         Me.btnCancelarRestablecerPass.Appearance.Options.UseFont = True
         Me.btnCancelarRestablecerPass.ImageOptions.Image = CType(resources.GetObject("btnCancelarRestablecerPass.ImageOptions.Image"), System.Drawing.Image)
         Me.btnCancelarRestablecerPass.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight
-        Me.btnCancelarRestablecerPass.Location = New System.Drawing.Point(342, 146)
+        Me.btnCancelarRestablecerPass.Location = New System.Drawing.Point(339, 105)
         Me.btnCancelarRestablecerPass.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.btnCancelarRestablecerPass.Name = "btnCancelarRestablecerPass"
         Me.btnCancelarRestablecerPass.Size = New System.Drawing.Size(112, 50)
@@ -775,7 +885,7 @@ Partial Class frmUsuariosPrivilegios
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(18, 102)
+        Me.Label2.Location = New System.Drawing.Point(15, 61)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(177, 18)
@@ -785,7 +895,7 @@ Partial Class frmUsuariosPrivilegios
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(46, 62)
+        Me.Label1.Location = New System.Drawing.Point(43, 21)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(150, 18)
@@ -957,6 +1067,7 @@ Partial Class frmUsuariosPrivilegios
         CType(Me.PanelControl6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelControl6.ResumeLayout(False)
         Me.PanelControl6.PerformLayout()
+        CType(Me.chkEstado.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtIdUsuario.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtNombre.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtUsuario.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1032,8 +1143,6 @@ Partial Class frmUsuariosPrivilegios
     Friend WithEvents chkLstPrivilegios As DevExpress.XtraEditors.CheckedListBoxControl
     Friend WithEvents GroupBoxRestabPass As GroupBox
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents txtPassActual As TextBox
-    Friend WithEvents Label3 As Label
     Friend WithEvents txtPassConfirma As TextBox
     Friend WithEvents txtPass As TextBox
     Friend WithEvents btnVerPass As DevExpress.XtraEditors.SimpleButton
@@ -1052,4 +1161,12 @@ Partial Class frmUsuariosPrivilegios
     Friend WithEvents GridColumn6 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn7 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn1 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents btnNuevo As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents btnCancelar As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents btnGuardar As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents chkEstado As DevExpress.XtraEditors.CheckEdit
+    Friend WithEvents Label4 As Label
+    Friend WithEvents GridColumn8 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents btnRefrescar As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents btnModificar As DevExpress.XtraBars.BarButtonItem
 End Class

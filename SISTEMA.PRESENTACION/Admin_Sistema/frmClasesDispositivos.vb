@@ -8,7 +8,7 @@ Imports SISTEMA.NEGOCIO
 
 Public Class frmClasesDispositivos
 
-#Region "Globales"
+#Region "Variables Globales"
     'Clases
     Dim clases As New Clases
     Dim gsClases As New NClases
@@ -18,7 +18,7 @@ Public Class frmClasesDispositivos
 #End Region
 
 
-#Region "Metodos"
+#Region "Funciones y Metodos"
 
     Private Sub Nuevo()
         Limpiar()
@@ -73,27 +73,6 @@ Public Class frmClasesDispositivos
         txtModificadoEl.Text = ""
     End Sub
 
-    'Private Sub inhabilitarEditables()
-    '    txtNombre.Enabled = False
-    '    txtAlias.Enabled = False
-    '    cboTipoNIT.Enabled = False
-    '    txtCorreo.Enabled = False
-    '    txtNIT.Enabled = False
-    '    txtCorreo.Enabled = False
-    '    chkEstado.Enabled = False
-    '    nudIVA.Enabled = False
-    'End Sub
-    'Private Sub habilitarEditables()
-    '    txtNombre.Enabled = True
-    '    txtAlias.Enabled = True
-    '    cboTipoNIT.Enabled = True
-    '    txtCorreo.Enabled = True
-    '    chkEstado.Enabled = True
-    '    txtCorreo.Enabled = True
-    '    txtNIT.Enabled = True
-    '    nudIVA.Enabled = True
-    'End Sub
-
     Function ValidarCampos() As String
         Try
             Dim mensaje As String = "INFORMACIÓN INCOMPLETA:" + vbCrLf + vbCrLf
@@ -118,7 +97,6 @@ Public Class frmClasesDispositivos
             Return Nothing
         End Try
     End Function
-
 
     Private Sub inicializarModulo()
         btnNuevo.Visibility = BarItemVisibility.Never
@@ -189,30 +167,6 @@ Public Class frmClasesDispositivos
             mensajeError(ex)
         End Try
     End Sub
-#End Region
-    Private Sub btnNuevaClase_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnNuevo.ItemClick
-        'Preparar el listado - Barra de progreso
-        Nuevo()
-
-        If GlobalesConexiones.estadoExterno.Equals("SI") Then
-            btnAceptar.Enabled = False
-            limpiarGroup()
-            txtCadena.Text = ""
-            cargarListado()
-        Else
-            MessageBox.Show("La conexión a la base de datos externa está deshabilitada," &
-                            "contacte con el administrador de sistema, para modificar el archivo de conexión (confi.ini)", "Carga de Listado", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        End If
-
-    End Sub
-
-    Private Sub frmClasesDispositivos_Load(sender As Object, e As EventArgs) Handles Me.Load
-        cargarClases()
-    End Sub
-
-    Private Sub btnCerrarExtraer_Click(sender As Object, e As EventArgs) Handles btnCerrarExtraer.Click
-        GroupBoxExtraer.Visible = False
-    End Sub
 
     Private Sub BackgroundWorkerListado_DoWork(sender As Object, e As DoWorkEventArgs) Handles BackgroundWorkerListado.DoWork
         Try
@@ -240,8 +194,17 @@ Public Class frmClasesDispositivos
             mensajeError(ex)
         End Try
     End Sub
+#End Region
 
+#Region "Acciones Generales"
+    Private Sub frmClasesDispositivos_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Guardar_Cancelar_Eliminar_Refrescar()
+        Limpiar()
+        cargarClases()
+    End Sub
+#End Region
 
+#Region "Acciones de Botones"
     Private Sub GridViewClases_RowClick(sender As Object, e As RowClickEventArgs) Handles GridViewClases.RowClick
         If GridViewClases.GetSelectedRows.Count = 1 And GridViewClases.IsFilterRow(e.RowHandle) = False And GridViewClases.IsGroupRow(e.RowHandle) = False Then
             txtID.Text = GridViewClases.GetRowCellValue(GridViewClases.FocusedRowHandle, "ID_CLASE").ToString
@@ -250,6 +213,11 @@ Public Class frmClasesDispositivos
             txtPalabraClave.Text = GridViewClases.GetRowCellValue(GridViewClases.FocusedRowHandle, "CHAR_DISPOSITIVO_INICIO").ToString
             txtAjuste.Text = GridViewClases.GetRowCellValue(GridViewClases.FocusedRowHandle, "AJUSTE_CHAR_DISP_INICIO").ToString
             txtCaractExtr.Text = GridViewClases.GetRowCellValue(GridViewClases.FocusedRowHandle, "CARACTERES_EXTRACCION").ToString
+            txtCreadoPor.Text = GridViewClases.GetRowCellValue(GridViewClases.FocusedRowHandle, "CREADO_POR").ToString
+            txtCreadoEl.Text = GridViewClases.GetRowCellValue(GridViewClases.FocusedRowHandle, "CREADO_EL").ToString
+            txtModificadoPor.Text = GridViewClases.GetRowCellValue(GridViewClases.FocusedRowHandle, "MODIFICADO_POR").ToString
+            txtModificadoEl.Text = GridViewClases.GetRowCellValue(GridViewClases.FocusedRowHandle, "MODIFICADO_EL").ToString
+            ClicGrid()
         End If
     End Sub
     Private Sub GridViewListado_RowClick(sender As Object, e As RowClickEventArgs) Handles GridViewListado.RowClick
@@ -263,13 +231,29 @@ Public Class frmClasesDispositivos
     Private Sub btnSalir_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnSalir.ItemClick
         Me.Close()
     End Sub
+    Private Sub btnNuevaClase_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnNuevo.ItemClick
+        'Preparar el listado - Barra de progreso
+        Nuevo()
 
-    Private Sub btnRefrescar_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnRefrescar.ItemClick
+        If GlobalesConexiones.estadoExterno.Equals("SI") Then
+            btnAceptar.Enabled = False
+            limpiarGroup()
+            txtCadena.Text = ""
+            cargarListado()
+        Else
+            MessageBox.Show("La conexión a la base de datos externa está deshabilitada," &
+                            "contacte con el administrador de sistema, para modificar el archivo de conexión (confi.ini)", "Carga de Listado", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
 
     End Sub
 
-    Private Sub RibbonControl_Click(sender As Object, e As EventArgs) Handles RibbonControl.Click
-
+    Private Sub btnCerrarExtraer_Click(sender As Object, e As EventArgs) Handles btnCerrarExtraer.Click
+        GroupBoxExtraer.Visible = False
+        Guardar_Cancelar_Eliminar_Refrescar()
+    End Sub
+    Private Sub btnRefrescar_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnRefrescar.ItemClick
+        Guardar_Cancelar_Eliminar_Refrescar()
+        cargarClases()
     End Sub
 
     Private Sub btnGuardar_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnGuardar.ItemClick
@@ -366,6 +350,7 @@ Public Class frmClasesDispositivos
 
     Private Sub btnCancelar_ItemClick(sender As Object, e As ItemClickEventArgs) Handles btnCancelar.ItemClick
         Guardar_Cancelar_Eliminar_Refrescar()
+        Limpiar()
     End Sub
 
     Private Sub btnEliminar_ItemClick_1(sender As Object, e As ItemClickEventArgs) Handles btnEliminar.ItemClick
@@ -400,4 +385,17 @@ Public Class frmClasesDispositivos
             End Try
         End If
     End Sub
+
+    Private Sub chkEstado_CheckedChanged(sender As Object, e As EventArgs) Handles chkEstado.CheckedChanged
+        Try
+            If chkEstado.CheckState = CheckState.Checked Then
+                chkEstado.Text = "Activo"
+            Else
+                chkEstado.Text = "Inactivo"
+            End If
+        Catch ex As Exception
+
+        End Try
+    End Sub
+#End Region
 End Class

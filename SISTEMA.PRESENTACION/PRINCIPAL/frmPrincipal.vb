@@ -116,6 +116,135 @@ Public Class frmPrincipal
         frmCambioContraseña.ShowDialog()
     End Sub
 
+    Private Sub iniciarMenu()
+        'PRINCIPALES
+        accModReportAnalisis.Visible = False
+        accModGestionGeneral.Visible = False
+        accModAdmSistema.Visible = False
+        'SECUNDARIOS
+        accSubModAnalisis.Visible = False
+        accSubModReportes.Visible = False
+        accSubModDashboard.Visible = False
+        accSubModGestion.Visible = False
+        accSubModMantenimientos.Visible = False
+        accSubModSeguridad.Visible = False
+        accSubModParametros.Visible = False
+        'BOTONES DE MODULOS
+        accAnalisisCortes.Visible = False
+        accDiseñadorDashboard.Visible = False
+        accVisualizadorDashboard.Visible = False
+        accDiseñadorReportes.Visible = False
+        accVisualizadorReportes.Visible = False
+        accValLocClien.Visible = False
+        accClientes.Visible = False
+        accLocales.Visible = False
+        accValvulas.Visible = False
+        accUsuariosPrivilegios.Visible = False
+        accTiposMedicion.Visible = False
+        accTiposValvulas.Visible = False
+        accClasesDispo.Visible = False
+    End Sub
+
+    Private Sub cargarModulos()
+        Try
+            If Privilegios Is Nothing Then
+                MessageBox.Show("Usuario sin privilegios", "VAROX", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Return
+            End If
+            'MODULO REPORTERIA Y ANALISIS
+            If Privilegios.Tables(0).Select("id_modulo='1'").Count > 0 Or Privilegios.Tables(0).Select("id_modulo='2'").Count > 0 Or Privilegios.Tables(0).Select("id_modulo='3'").Count > 0 Or Privilegios.Tables(0).Select("id_modulo='4'").Count > 0 Or Privilegios.Tables(0).Select("id_modulo='5'").Count > 0 Then
+                accModReportAnalisis.Visible = True
+                'Modulo Analisis
+                If Privilegios.Tables(0).Select("id_modulo='1'").Count > 0 Then
+                    'Ventana Analisis y Cortes
+                    accSubModAnalisis.Visible = True
+                    accAnalisisCortes.Visible = True
+                End If
+                'Modulo Reportes
+                If Privilegios.Tables(0).Select("id_modulo='2'").Count > 0 Or Privilegios.Tables(0).Select("id_modulo='3'").Count > 0 Then
+                    accSubModReportes.Visible = True
+                    'Ventana Creacion Reportes 
+                    If Privilegios.Tables(0).Select("id_modulo='2'").Count > 0 Then
+                        accDiseñadorReportes.Visible = True
+                    End If
+                    'Ventana Visualizacion Reportes
+                    If Privilegios.Tables(0).Select("id_modulo='3'").Count > 0 Then
+                        accVisualizadorReportes.Visible = True
+                    End If
+                End If
+                'Modulo Dashboard
+                If Privilegios.Tables(0).Select("id_modulo='4'").Count > 0 Or Privilegios.Tables(0).Select("id_modulo='5'").Count > 0 Then
+                    accSubModDashboard.Visible = True
+                    'Ventana Creacion Reportes 
+                    If Privilegios.Tables(0).Select("id_modulo='4'").Count > 0 Then
+                        accDiseñadorDashboard.Visible = True
+                    End If
+                    'Ventana Visualizacion Reportes
+                    If Privilegios.Tables(0).Select("id_modulo='5'").Count > 0 Then
+                        accVisualizadorDashboard.Visible = True
+                    End If
+                End If
+            End If
+            '--------------------------------------------------------------------------------------
+            'MODULO GESTION GENERAL
+            If Privilegios.Tables(0).Select("id_modulo='20'").Count > 0 Or Privilegios.Tables(0).Select("id_modulo='21'").Count > 0 Or Privilegios.Tables(0).Select("id_modulo='22'").Count > 0 Or Privilegios.Tables(0).Select("id_modulo='23'").Count > 0 Then
+                accModGestionGeneral.Visible = True
+                'Modulo Gestion
+                If Privilegios.Tables(0).Select("id_modulo='20'").Count > 0 Then
+                    'Ventana Valvulas-Local-Cliente
+                    accSubModGestion.Visible = True
+                    accValLocClien.Visible = True
+                End If
+                'Modulo Mantenimientos
+                If Privilegios.Tables(0).Select("id_modulo='21'").Count > 0 Or Privilegios.Tables(0).Select("id_modulo='22'").Count > 0 Or Privilegios.Tables(0).Select("id_modulo='23'").Count > 0 Then
+                    accSubModMantenimientos.Visible = True
+                    'Ventana Clientes 
+                    If Privilegios.Tables(0).Select("id_modulo='21'").Count > 0 Then
+                        accClientes.Visible = True
+                    End If
+                    'Ventana Locales
+                    If Privilegios.Tables(0).Select("id_modulo='22'").Count > 0 Then
+                        accLocales.Visible = True
+                    End If
+                    'Ventana Valvulas
+                    If Privilegios.Tables(0).Select("id_modulo='23'").Count > 0 Then
+                        accValvulas.Visible = True
+                    End If
+                End If
+            End If
+            '-------------------------------------------------------------------------------
+            'MODULO ADMINISTRACION DE SISTEMA
+            If Privilegios.Tables(0).Select("id_modulo='90'").Count > 0 Or Privilegios.Tables(0).Select("id_modulo='91'").Count > 0 Or Privilegios.Tables(0).Select("id_modulo='92'").Count > 0 Or Privilegios.Tables(0).Select("id_modulo='93'").Count > 0 Then
+                accModAdmSistema.Visible = True
+                'Modulo Seguridad
+                If Privilegios.Tables(0).Select("id_modulo='90'").Count > 0 Then
+                    'Ventana Usuarios y Privilegios
+                    accSubModSeguridad.Visible = True
+                    accUsuariosPrivilegios.Visible = True
+                End If
+                'Modulo Parametros
+                If Privilegios.Tables(0).Select("id_modulo='91'").Count > 0 Or Privilegios.Tables(0).Select("id_modulo='92'").Count > 0 Or Privilegios.Tables(0).Select("id_modulo='93'").Count > 0 Then
+                    accSubModParametros.Visible = True
+                    'Ventana Tipos Medicion
+                    If Privilegios.Tables(0).Select("id_modulo='91'").Count > 0 Then
+                        accTiposMedicion.Visible = True
+                    End If
+                    'Ventana Tipo Valvula
+                    If Privilegios.Tables(0).Select("id_modulo='92'").Count > 0 Then
+                        accTiposValvulas.Visible = True
+                    End If
+                    'Ventana Clases Dispositivos
+                    If Privilegios.Tables(0).Select("id_modulo='93'").Count > 0 Then
+                        accClasesDispo.Visible = True
+                    End If
+                End If
+            End If
+            Refresh()
+        Catch ex As Exception
+            mensajeError(ex)
+        End Try
+    End Sub
+
 #End Region
 
 #Region "Acciones Generales"
@@ -132,8 +261,8 @@ Public Class frmPrincipal
             'CultureInfo.DefaultThreadCurrentCulture = CultureInfo.CreateSpecificCulture("en-US")
             CultureInfo.DefaultThreadCurrentUICulture = CultureInfo.CreateSpecificCulture("es-ES")
             'HABILITA LOS MODULOS ASIGNADOS AL USUARIO
-            'iniciarMenu()
-            'cargarModulos()
+            iniciarMenu()
+            cargarModulos()
             Dim respuesta As Integer
             respuesta = MessageBox.Show("¿Desea visualizar el Dashboard de Inicio?", "Dashboard Inicio", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
             If (respuesta = DialogResult.Yes) Then
@@ -173,7 +302,7 @@ Public Class frmPrincipal
         AbrirFormulario(frmUsuariosPrivilegios)
     End Sub
 
-    Private Sub AccordionControlElement4_Click(sender As Object, e As EventArgs) Handles accCorteGeneral.Click
+    Private Sub AccordionControlElement4_Click(sender As Object, e As EventArgs) Handles accAnalisisCortes.Click
         AbrirFormulario(frmReporteria)
     End Sub
 
