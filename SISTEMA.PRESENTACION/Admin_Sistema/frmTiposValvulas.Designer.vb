@@ -87,8 +87,13 @@ Partial Class frmTiposValvulas
         Me.btnNuevo.Id = 3
         Me.btnNuevo.ImageOptions.Image = CType(resources.GetObject("btnNuevo.ImageOptions.Image"), System.Drawing.Image)
         Me.btnNuevo.ImageOptions.LargeImage = CType(resources.GetObject("btnNuevo.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.btnNuevo.LargeWidth = 55
+        Me.btnNuevo.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNuevo.ItemAppearance.Normal.Options.UseFont = True
+        Me.btnNuevo.ItemShortcut = New DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.N))
+        Me.btnNuevo.LargeWidth = 65
         Me.btnNuevo.Name = "btnNuevo"
+        Me.btnNuevo.ShortcutKeyDisplayString = "Ctrl+N"
+        Me.btnNuevo.ShowItemShortcut = DevExpress.Utils.DefaultBoolean.[True]
         '
         'btnSalir
         '
@@ -96,8 +101,13 @@ Partial Class frmTiposValvulas
         Me.btnSalir.Id = 4
         Me.btnSalir.ImageOptions.Image = CType(resources.GetObject("btnSalir.ImageOptions.Image"), System.Drawing.Image)
         Me.btnSalir.ImageOptions.LargeImage = CType(resources.GetObject("btnSalir.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.btnSalir.LargeWidth = 55
+        Me.btnSalir.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSalir.ItemAppearance.Normal.Options.UseFont = True
+        Me.btnSalir.ItemShortcut = New DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Delete))
+        Me.btnSalir.LargeWidth = 65
         Me.btnSalir.Name = "btnSalir"
+        Me.btnSalir.ShortcutKeyDisplayString = "Ctrl+Supr"
+        Me.btnSalir.ShowItemShortcut = DevExpress.Utils.DefaultBoolean.[True]
         '
         'btnGuardar
         '
@@ -105,8 +115,13 @@ Partial Class frmTiposValvulas
         Me.btnGuardar.Id = 5
         Me.btnGuardar.ImageOptions.Image = CType(resources.GetObject("btnGuardar.ImageOptions.Image"), System.Drawing.Image)
         Me.btnGuardar.ImageOptions.LargeImage = CType(resources.GetObject("btnGuardar.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.btnGuardar.LargeWidth = 55
+        Me.btnGuardar.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGuardar.ItemAppearance.Normal.Options.UseFont = True
+        Me.btnGuardar.ItemShortcut = New DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.G))
+        Me.btnGuardar.LargeWidth = 65
         Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.ShortcutKeyDisplayString = "Ctrl+G"
+        Me.btnGuardar.ShowItemShortcut = DevExpress.Utils.DefaultBoolean.[True]
         '
         'btnModificar
         '
@@ -114,8 +129,13 @@ Partial Class frmTiposValvulas
         Me.btnModificar.Id = 6
         Me.btnModificar.ImageOptions.Image = CType(resources.GetObject("btnModificar.ImageOptions.Image"), System.Drawing.Image)
         Me.btnModificar.ImageOptions.LargeImage = CType(resources.GetObject("btnModificar.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.btnModificar.LargeWidth = 55
+        Me.btnModificar.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnModificar.ItemAppearance.Normal.Options.UseFont = True
+        Me.btnModificar.ItemShortcut = New DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.M))
+        Me.btnModificar.LargeWidth = 65
         Me.btnModificar.Name = "btnModificar"
+        Me.btnModificar.ShortcutKeyDisplayString = "Ctrl+M"
+        Me.btnModificar.ShowItemShortcut = DevExpress.Utils.DefaultBoolean.[True]
         '
         'btnEliminar
         '
@@ -123,8 +143,13 @@ Partial Class frmTiposValvulas
         Me.btnEliminar.Id = 7
         Me.btnEliminar.ImageOptions.Image = CType(resources.GetObject("btnEliminar.ImageOptions.Image"), System.Drawing.Image)
         Me.btnEliminar.ImageOptions.LargeImage = CType(resources.GetObject("btnEliminar.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.btnEliminar.LargeWidth = 55
+        Me.btnEliminar.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEliminar.ItemAppearance.Normal.Options.UseFont = True
+        Me.btnEliminar.ItemShortcut = New DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.Delete)
+        Me.btnEliminar.LargeWidth = 65
         Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.ShortcutKeyDisplayString = "Supr"
+        Me.btnEliminar.ShowItemShortcut = DevExpress.Utils.DefaultBoolean.[True]
         '
         'btnRefrescar
         '
@@ -132,8 +157,13 @@ Partial Class frmTiposValvulas
         Me.btnRefrescar.Id = 8
         Me.btnRefrescar.ImageOptions.Image = CType(resources.GetObject("btnRefrescar.ImageOptions.Image"), System.Drawing.Image)
         Me.btnRefrescar.ImageOptions.LargeImage = CType(resources.GetObject("btnRefrescar.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.btnRefrescar.LargeWidth = 55
+        Me.btnRefrescar.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRefrescar.ItemAppearance.Normal.Options.UseFont = True
+        Me.btnRefrescar.ItemShortcut = New DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.R))
+        Me.btnRefrescar.LargeWidth = 65
         Me.btnRefrescar.Name = "btnRefrescar"
+        Me.btnRefrescar.ShortcutKeyDisplayString = "Ctrl+R"
+        Me.btnRefrescar.ShowItemShortcut = DevExpress.Utils.DefaultBoolean.[True]
         '
         'btnCancelar
         '
@@ -141,8 +171,13 @@ Partial Class frmTiposValvulas
         Me.btnCancelar.Id = 9
         Me.btnCancelar.ImageOptions.Image = CType(resources.GetObject("btnCancelar.ImageOptions.Image"), System.Drawing.Image)
         Me.btnCancelar.ImageOptions.LargeImage = CType(resources.GetObject("btnCancelar.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.btnCancelar.LargeWidth = 55
+        Me.btnCancelar.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancelar.ItemAppearance.Normal.Options.UseFont = True
+        Me.btnCancelar.ItemShortcut = New DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Z))
+        Me.btnCancelar.LargeWidth = 65
         Me.btnCancelar.Name = "btnCancelar"
+        Me.btnCancelar.ShortcutKeyDisplayString = "Ctrl+Z"
+        Me.btnCancelar.ShowItemShortcut = DevExpress.Utils.DefaultBoolean.[True]
         '
         'RibbonPage1
         '
@@ -215,6 +250,7 @@ Partial Class frmTiposValvulas
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.txtNombreTipo)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel2.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(963, 109)
@@ -223,20 +259,20 @@ Partial Class frmTiposValvulas
         'txtID
         '
         Me.txtID.Enabled = False
-        Me.txtID.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtID.Location = New System.Drawing.Point(124, 7)
+        Me.txtID.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtID.Location = New System.Drawing.Point(139, 8)
         Me.txtID.Name = "txtID"
-        Me.txtID.Size = New System.Drawing.Size(88, 26)
+        Me.txtID.Size = New System.Drawing.Size(88, 28)
         Me.txtID.TabIndex = 23
         Me.txtID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(87, 12)
+        Me.Label1.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(96, 13)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(31, 18)
+        Me.Label1.Size = New System.Drawing.Size(37, 21)
         Me.Label1.TabIndex = 22
         Me.Label1.Text = "ID:"
         '
@@ -244,10 +280,10 @@ Partial Class frmTiposValvulas
         '
         Me.txtModificadoEl.BackColor = System.Drawing.SystemColors.Info
         Me.txtModificadoEl.Enabled = False
-        Me.txtModificadoEl.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtModificadoEl.Location = New System.Drawing.Point(706, 41)
+        Me.txtModificadoEl.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtModificadoEl.Location = New System.Drawing.Point(770, 40)
         Me.txtModificadoEl.Name = "txtModificadoEl"
-        Me.txtModificadoEl.Size = New System.Drawing.Size(137, 26)
+        Me.txtModificadoEl.Size = New System.Drawing.Size(175, 28)
         Me.txtModificadoEl.TabIndex = 18
         Me.txtModificadoEl.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -255,10 +291,10 @@ Partial Class frmTiposValvulas
         '
         Me.txtModificadoPor.BackColor = System.Drawing.SystemColors.Info
         Me.txtModificadoPor.Enabled = False
-        Me.txtModificadoPor.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtModificadoPor.Location = New System.Drawing.Point(706, 9)
+        Me.txtModificadoPor.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtModificadoPor.Location = New System.Drawing.Point(770, 8)
         Me.txtModificadoPor.Name = "txtModificadoPor"
-        Me.txtModificadoPor.Size = New System.Drawing.Size(137, 26)
+        Me.txtModificadoPor.Size = New System.Drawing.Size(175, 28)
         Me.txtModificadoPor.TabIndex = 17
         Me.txtModificadoPor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -266,10 +302,10 @@ Partial Class frmTiposValvulas
         '
         Me.txtCreadoEl.BackColor = System.Drawing.SystemColors.Info
         Me.txtCreadoEl.Enabled = False
-        Me.txtCreadoEl.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCreadoEl.Location = New System.Drawing.Point(423, 41)
+        Me.txtCreadoEl.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCreadoEl.Location = New System.Drawing.Point(438, 40)
         Me.txtCreadoEl.Name = "txtCreadoEl"
-        Me.txtCreadoEl.Size = New System.Drawing.Size(137, 26)
+        Me.txtCreadoEl.Size = New System.Drawing.Size(175, 28)
         Me.txtCreadoEl.TabIndex = 16
         Me.txtCreadoEl.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -277,90 +313,90 @@ Partial Class frmTiposValvulas
         '
         Me.txtCreadoPor.BackColor = System.Drawing.SystemColors.Info
         Me.txtCreadoPor.Enabled = False
-        Me.txtCreadoPor.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCreadoPor.Location = New System.Drawing.Point(423, 9)
+        Me.txtCreadoPor.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCreadoPor.Location = New System.Drawing.Point(438, 8)
         Me.txtCreadoPor.Name = "txtCreadoPor"
-        Me.txtCreadoPor.Size = New System.Drawing.Size(137, 26)
+        Me.txtCreadoPor.Size = New System.Drawing.Size(175, 28)
         Me.txtCreadoPor.TabIndex = 15
         Me.txtCreadoPor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Tahoma", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(587, 44)
+        Me.Label8.Font = New System.Drawing.Font("Tahoma", 10.2!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(630, 42)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(113, 18)
+        Me.Label8.Size = New System.Drawing.Size(131, 21)
         Me.Label8.TabIndex = 14
         Me.Label8.Text = "Modificado el:"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Tahoma", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(576, 17)
+        Me.Label9.Font = New System.Drawing.Font("Tahoma", 10.2!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(619, 15)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(124, 18)
+        Me.Label9.Size = New System.Drawing.Size(145, 21)
         Me.Label9.TabIndex = 13
         Me.Label9.Text = "Modificado por:"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Tahoma", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Font = New System.Drawing.Font("Tahoma", 10.2!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Location = New System.Drawing.Point(333, 45)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(84, 18)
+        Me.Label7.Size = New System.Drawing.Size(96, 21)
         Me.Label7.TabIndex = 12
         Me.Label7.Text = "Creado el:"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Tahoma", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Font = New System.Drawing.Font("Tahoma", 10.2!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(322, 15)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(95, 18)
+        Me.Label6.Size = New System.Drawing.Size(110, 21)
         Me.Label6.TabIndex = 11
         Me.Label6.Text = "Creado por:"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(10, 42)
+        Me.Label2.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(7, 43)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(108, 18)
+        Me.Label2.Size = New System.Drawing.Size(126, 21)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Nombre Tipo:"
         '
         'txtDescripcion
         '
         Me.txtDescripcion.Enabled = False
-        Me.txtDescripcion.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDescripcion.Location = New System.Drawing.Point(124, 71)
+        Me.txtDescripcion.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDescripcion.Location = New System.Drawing.Point(139, 72)
         Me.txtDescripcion.Name = "txtDescripcion"
-        Me.txtDescripcion.Size = New System.Drawing.Size(175, 26)
+        Me.txtDescripcion.Size = New System.Drawing.Size(474, 28)
         Me.txtDescripcion.TabIndex = 5
         Me.txtDescripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(17, 74)
+        Me.Label3.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(17, 75)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(101, 18)
+        Me.Label3.Size = New System.Drawing.Size(116, 21)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Descripción:"
         '
         'txtNombreTipo
         '
         Me.txtNombreTipo.Enabled = False
-        Me.txtNombreTipo.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNombreTipo.Location = New System.Drawing.Point(124, 39)
+        Me.txtNombreTipo.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNombreTipo.Location = New System.Drawing.Point(139, 40)
         Me.txtNombreTipo.Name = "txtNombreTipo"
-        Me.txtNombreTipo.Size = New System.Drawing.Size(175, 26)
+        Me.txtNombreTipo.Size = New System.Drawing.Size(175, 28)
         Me.txtNombreTipo.TabIndex = 3
         Me.txtNombreTipo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -386,9 +422,28 @@ Partial Class frmTiposValvulas
         '
         'GridViewTiposValvulas
         '
+        Me.GridViewTiposValvulas.Appearance.Empty.BackColor = System.Drawing.Color.FromArgb(CType(CType(90, Byte), Integer), CType(CType(202, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.GridViewTiposValvulas.Appearance.Empty.Options.UseBackColor = True
+        Me.GridViewTiposValvulas.Appearance.GroupRow.Font = New System.Drawing.Font("Tahoma", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridViewTiposValvulas.Appearance.GroupRow.ForeColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.GridViewTiposValvulas.Appearance.GroupRow.Options.UseFont = True
+        Me.GridViewTiposValvulas.Appearance.GroupRow.Options.UseForeColor = True
+        Me.GridViewTiposValvulas.Appearance.HeaderPanel.Font = New System.Drawing.Font("Tahoma", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridViewTiposValvulas.Appearance.HeaderPanel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.GridViewTiposValvulas.Appearance.HeaderPanel.Options.UseFont = True
+        Me.GridViewTiposValvulas.Appearance.HeaderPanel.Options.UseForeColor = True
+        Me.GridViewTiposValvulas.Appearance.Row.Font = New System.Drawing.Font("Tahoma", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridViewTiposValvulas.Appearance.Row.ForeColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.GridViewTiposValvulas.Appearance.Row.Options.UseFont = True
+        Me.GridViewTiposValvulas.Appearance.Row.Options.UseForeColor = True
+        Me.GridViewTiposValvulas.Appearance.SelectedRow.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridViewTiposValvulas.Appearance.SelectedRow.ForeColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.GridViewTiposValvulas.Appearance.SelectedRow.Options.UseFont = True
+        Me.GridViewTiposValvulas.Appearance.SelectedRow.Options.UseForeColor = True
         Me.GridViewTiposValvulas.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn1, Me.GridColumn2, Me.GridColumn3, Me.GridColumn9, Me.GridColumn10, Me.GridColumn11, Me.GridColumn12})
         Me.GridViewTiposValvulas.GridControl = Me.GridControlTiposValvulas
         Me.GridViewTiposValvulas.Name = "GridViewTiposValvulas"
+        Me.GridViewTiposValvulas.OptionsView.ShowAutoFilterRow = True
         '
         'GridColumn1
         '

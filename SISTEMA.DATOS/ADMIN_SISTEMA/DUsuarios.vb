@@ -6,7 +6,75 @@ Public Class DUsuarios
     Inherits ConexionBD_Local
 
 #Region "METODOS DE USUARIOS"
+    Public Function Insertar(ByVal Obj As Usuarios) As String
+        Try
+            Dim Comando As New SqlCommand("insertarUsuario", MyBase.conn)
+            Comando.CommandType = CommandType.StoredProcedure
+            Comando.Parameters.Add("@usuario", SqlDbType.VarChar).Value = Obj.Usuario
+            Comando.Parameters.Add("@nombre", SqlDbType.VarChar).Value = Obj.NombreUsuario
+            Comando.Parameters.Add("@estado", SqlDbType.VarChar).Value = Obj.Estado
+            Comando.Parameters.Add("@modificado", SqlDbType.VarChar).Value = Obj.ModificadoPor
+            MyBase.conn.Open()
+            Comando.ExecuteNonQuery()
+            MyBase.conn.Close()
+            Return ""
+        Catch ex As Exception
+            Return ex.ToString
+        End Try
+    End Function
 
+    Public Function Modificar(ByVal Obj As Usuarios) As String
+        Try
+            Dim Comando As New SqlCommand("actualizarUsuario", MyBase.conn)
+            Comando.CommandType = CommandType.StoredProcedure
+            Comando.Parameters.Add("@id", SqlDbType.VarChar).Value = Obj.IdUsuario
+            Comando.Parameters.Add("@nombre", SqlDbType.VarChar).Value = Obj.NombreUsuario
+            Comando.Parameters.Add("@estado", SqlDbType.VarChar).Value = Obj.Estado
+            Comando.Parameters.Add("@modificado", SqlDbType.VarChar).Value = Obj.ModificadoPor
+            MyBase.conn.Open()
+            Comando.ExecuteNonQuery()
+            MyBase.conn.Close()
+            Return ""
+        Catch ex As Exception
+            Return ex.ToString
+        End Try
+    End Function
+    Public Function Buscar(ByVal valor As String) As DataTable
+        Try
+            Dim Resultado As SqlDataReader
+            Dim Tabla As New DataTable
+            Dim Comando As New SqlCommand("buscarUsuarios", MyBase.conn)
+            Comando.CommandType = CommandType.StoredProcedure
+            Comando.Parameters.Add("@usuario", SqlDbType.VarChar).Value = valor
+            MyBase.conn.Open()                                                              'Abrimos conexion a la BD
+            Resultado = Comando.ExecuteReader()
+            Tabla.Load(Resultado)                                                            'Se llena el DataSet con la consulta guardada en el adaptador
+            MyBase.conn.Close()                                                             'Cerramos la conexion a BD
+            Return Tabla
+        Catch ex As Exception
+#Disable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
+            Throw ex
+#Enable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
+        End Try
+    End Function
+
+    Public Function cargarCredenciales(ByVal usuario As String, ByVal contraseña As String) As DataTable
+        Try
+            Dim Resultado As SqlDataReader
+            Dim Tabla As New DataTable
+            Dim Comando As New SqlCommand("cargarCredenciales", MyBase.conn)
+            Comando.CommandType = CommandType.StoredProcedure
+            Comando.Parameters.Add("@usuario", SqlDbType.VarChar).Value = usuario
+            Comando.Parameters.Add("@contraseña", SqlDbType.VarChar).Value = contraseña
+            MyBase.conn.Open()
+            Resultado = Comando.ExecuteReader()
+            Tabla.Load(Resultado)
+            MyBase.conn.Close()
+            Return Tabla
+        Catch ex As Exception
+            Throw
+        End Try
+    End Function
     Public Sub RestablecerPass(ByVal id As String, ByVal pass As String)
         Try
             Dim Comando As New SqlCommand("restablecerPass", MyBase.conn)
@@ -22,65 +90,6 @@ Public Class DUsuarios
 #Enable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
         End Try
     End Sub
-
-    '    Public Sub ActualizarClasificacion(ByVal Obj As Clasificacion)
-    '        Try
-    '            Dim Comando As New SqlCommand("actualizarClasificacion", MyBase.conn)
-    '            Comando.CommandType = CommandType.StoredProcedure
-    '            Comando.Parameters.Add("@id", SqlDbType.VarChar).Value = Obj.IdClasificacion
-    '            Comando.Parameters.Add("@tipo", SqlDbType.VarChar).Value = Obj.Tipo
-    '            Comando.Parameters.Add("@clasificacion", SqlDbType.VarChar).Value = Obj.Clasificacion
-    '            Comando.Parameters.Add("@descripcion", SqlDbType.VarChar).Value = Obj.Descripcion
-    '            Comando.Parameters.Add("@modificado_por", SqlDbType.VarChar).Value = Obj.ModificadoPor
-    '            MyBase.conn.Open()
-    '            Comando.ExecuteNonQuery()
-    '            MyBase.conn.Close()
-    '        Catch ex As Exception
-    '#Disable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
-    '            Throw ex
-    '#Enable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
-    '        End Try
-    '    End Sub
-
-    '    Public Function BuscarClasificacion(ByVal valor As String) As DataTable
-    '        Try
-    '            Dim Resultado As SqlDataReader
-    '            Dim Tabla As New DataTable
-    '            Dim Comando As New SqlCommand("buscarClasificacion", MyBase.conn)
-    '            Comando.CommandType = CommandType.StoredProcedure
-    '            Comando.Parameters.Add("@id", SqlDbType.VarChar).Value = valor
-    '            MyBase.conn.Open()                                                              'Abrimos conexion a la BD
-    '            Resultado = Comando.ExecuteReader()
-    '            Tabla.Load(Resultado)                                                            'Se llena el DataSet con la consulta guardada en el adaptador
-    '            MyBase.conn.Close()                                                             'Cerramos la conexion a BD
-    '            Return Tabla
-    '        Catch ex As Exception
-    '#Disable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
-    '            Throw ex
-    '#Enable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
-    '        End Try
-    '    End Function
-
-    '    Public Function BuscarClasificacionPorNombre(ByVal valor As String) As String
-    '        Try
-    '            Dim Resultado As SqlDataReader
-    '            Dim Tabla As New DataTable
-    '            Dim Comando As New SqlCommand("buscarClasificacionPorNombre", MyBase.conn)
-    '            Comando.CommandType = CommandType.StoredProcedure
-    '            Comando.Parameters.Add("@valor", SqlDbType.VarChar).Value = valor
-    '            MyBase.conn.Open()                                                              'Abrimos conexion a la BD
-    '            Resultado = Comando.ExecuteReader()
-    '            'Tabla.Load(Resultado)                                                            'Se llena el DataSet con la consulta guardada en el adaptador
-    '            Resultado.Read()
-    '            Dim resul As String = Resultado(0)
-    '            MyBase.conn.Close()  'Cerramos la conexion a BD
-    '            Return resul
-    '        Catch ex As Exception
-    '#Disable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
-    '            Throw ex
-    '#Enable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
-    '        End Try
-    '    End Function
 
     Public Function ConsultarUsuarios() As DataTable
         Try
@@ -100,153 +109,10 @@ Public Class DUsuarios
 #Enable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
         End Try
     End Function
-
-    '    Public Sub SincronizarUsuarios()
-    '        Try
-    '            Dim Comando As New SqlCommand("sincronizarUsuariosBTP", MyBase.conn)
-    '            Comando.CommandType = CommandType.StoredProcedure
-    '            MyBase.conn.Open()
-    '            Comando.ExecuteNonQuery()
-    '            MyBase.conn.Close()                                                              'Retornamos el DataSet
-    '        Catch ex As Exception
-    '            Console.WriteLine("Error en Function")
-    '#Disable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
-    '            Throw ex
-    '#Enable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
-    '        End Try
-    '    End Sub
-
-    '    Public Sub EliminarClasificacion(ByVal valor As String)
-    '        Try
-    '            Dim Comando As New SqlCommand("eliminarClasificacion", MyBase.conn)
-    '            Comando.CommandType = CommandType.StoredProcedure
-    '            Comando.Parameters.Add("@id", SqlDbType.VarChar).Value = valor
-    '            MyBase.conn.Open()
-    '            Comando.ExecuteNonQuery()
-    '            MyBase.conn.Close()
-    '        Catch ex As Exception
-    '#Disable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
-    '            Throw ex
-    '#Enable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
-    '        End Try
-    '    End Sub
 #End Region
 
 #Region "METODOS DE ROLES"
 
-    '    Public Sub InsertarClasificacion(ByVal Obj As Clasificacion)
-    '        Try
-    '            Dim Comando As New SqlCommand("insertarClasificacion", MyBase.conn)
-    '            Comando.CommandType = CommandType.StoredProcedure
-    '            Comando.Parameters.Add("@tipo", SqlDbType.VarChar).Value = Obj.Tipo
-    '            Comando.Parameters.Add("@clasificacion", SqlDbType.VarChar).Value = Obj.Clasificacion
-    '            Comando.Parameters.Add("@descripcion", SqlDbType.VarChar).Value = Obj.Descripcion
-    '            Comando.Parameters.Add("@modificado_por", SqlDbType.VarChar).Value = Obj.ModificadoPor
-    '            MyBase.conn.Open()
-    '            Comando.ExecuteNonQuery()
-    '            MyBase.conn.Close()
-    '        Catch ex As Exception
-    '#Disable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
-    '            Throw ex
-    '#Enable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
-    '        End Try
-    '    End Sub
-
-    '    Public Sub ActualizarClasificacion(ByVal Obj As Clasificacion)
-    '        Try
-    '            Dim Comando As New SqlCommand("actualizarClasificacion", MyBase.conn)
-    '            Comando.CommandType = CommandType.StoredProcedure
-    '            Comando.Parameters.Add("@id", SqlDbType.VarChar).Value = Obj.IdClasificacion
-    '            Comando.Parameters.Add("@tipo", SqlDbType.VarChar).Value = Obj.Tipo
-    '            Comando.Parameters.Add("@clasificacion", SqlDbType.VarChar).Value = Obj.Clasificacion
-    '            Comando.Parameters.Add("@descripcion", SqlDbType.VarChar).Value = Obj.Descripcion
-    '            Comando.Parameters.Add("@modificado_por", SqlDbType.VarChar).Value = Obj.ModificadoPor
-    '            MyBase.conn.Open()
-    '            Comando.ExecuteNonQuery()
-    '            MyBase.conn.Close()
-    '        Catch ex As Exception
-    '#Disable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
-    '            Throw ex
-    '#Enable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
-    '        End Try
-    '    End Sub
-
-    '    Public Function BuscarClasificacion(ByVal valor As String) As DataTable
-    '        Try
-    '            Dim Resultado As SqlDataReader
-    '            Dim Tabla As New DataTable
-    '            Dim Comando As New SqlCommand("buscarClasificacion", MyBase.conn)
-    '            Comando.CommandType = CommandType.StoredProcedure
-    '            Comando.Parameters.Add("@id", SqlDbType.VarChar).Value = valor
-    '            MyBase.conn.Open()                                                              'Abrimos conexion a la BD
-    '            Resultado = Comando.ExecuteReader()
-    '            Tabla.Load(Resultado)                                                            'Se llena el DataSet con la consulta guardada en el adaptador
-    '            MyBase.conn.Close()                                                             'Cerramos la conexion a BD
-    '            Return Tabla
-    '        Catch ex As Exception
-    '#Disable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
-    '            Throw ex
-    '#Enable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
-    '        End Try
-    '    End Function
-
-    '    Public Function BuscarClasificacionPorNombre(ByVal valor As String) As String
-    '        Try
-    '            Dim Resultado As SqlDataReader
-    '            Dim Tabla As New DataTable
-    '            Dim Comando As New SqlCommand("buscarClasificacionPorNombre", MyBase.conn)
-    '            Comando.CommandType = CommandType.StoredProcedure
-    '            Comando.Parameters.Add("@valor", SqlDbType.VarChar).Value = valor
-    '            MyBase.conn.Open()                                                              'Abrimos conexion a la BD
-    '            Resultado = Comando.ExecuteReader()
-    '            'Tabla.Load(Resultado)                                                            'Se llena el DataSet con la consulta guardada en el adaptador
-    '            Resultado.Read()
-    '            Dim resul As String = Resultado(0)
-    '            MyBase.conn.Close()  'Cerramos la conexion a BD
-    '            Return resul
-    '        Catch ex As Exception
-    '#Disable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
-    '            Throw ex
-    '#Enable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
-    '        End Try
-    '    End Function
-
-
-    '    Public Function ConsultarClasificacion() As DataTable
-    '        Try
-    '            Dim Resultado As SqlDataReader
-    '            Dim Tabla As New DataTable
-    '            Dim Comando As New SqlCommand("consultarClasificacion", MyBase.conn)
-    '            Comando.CommandType = CommandType.StoredProcedure
-    '            MyBase.conn.Open()                                                              'Abrimos conexion a la BD
-    '            Resultado = Comando.ExecuteReader()
-    '            Tabla.Load(Resultado)
-    '            'Dim adapter As New SqlDataAdapter(Comando)                                      'Almacenamos la consulta en un adaptador para luego llenar el DataSet
-    '            'adapter.Fill(DATOS)                                                             'Se llena el DataSet con la consulta guardada en el adaptador
-    '            MyBase.conn.Close()                                                             'Cerramos la conexion a BD
-    '            Return Tabla                                                                    'Retornamos el DataSet
-    '        Catch ex As Exception
-    '            Console.WriteLine("Error en Function")
-    '#Disable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
-    '            Throw ex
-    '#Enable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
-    '        End Try
-    '    End Function
-
-    '    Public Sub EliminarClasificacion(ByVal valor As String)
-    '        Try
-    '            Dim Comando As New SqlCommand("eliminarClasificacion", MyBase.conn)
-    '            Comando.CommandType = CommandType.StoredProcedure
-    '            Comando.Parameters.Add("@id", SqlDbType.VarChar).Value = valor
-    '            MyBase.conn.Open()
-    '            Comando.ExecuteNonQuery()
-    '            MyBase.conn.Close()
-    '        Catch ex As Exception
-    '#Disable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
-    '            Throw ex
-    '#Enable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
-    '        End Try
-    '    End Sub
     Public Function CargarRoles() As DataSet
         Try
             Dim Datos As New DataSet
@@ -328,63 +194,6 @@ Public Class DUsuarios
         End Try
     End Function
 
-    '    Public Function BuscarClasificacionPorNombre(ByVal valor As String) As String
-    '        Try
-    '            Dim Resultado As SqlDataReader
-    '            Dim Tabla As New DataTable
-    '            Dim Comando As New SqlCommand("buscarClasificacionPorNombre", MyBase.conn)
-    '            Comando.CommandType = CommandType.StoredProcedure
-    '            Comando.Parameters.Add("@valor", SqlDbType.VarChar).Value = valor
-    '            MyBase.conn.Open()                                                              'Abrimos conexion a la BD
-    '            Resultado = Comando.ExecuteReader()
-    '            'Tabla.Load(Resultado)                                                            'Se llena el DataSet con la consulta guardada en el adaptador
-    '            Resultado.Read()
-    '            Dim resul As String = Resultado(0)
-    '            MyBase.conn.Close()  'Cerramos la conexion a BD
-    '            Return resul
-    '        Catch ex As Exception
-    '#Disable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
-    '            Throw ex
-    '#Enable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
-    '        End Try
-    '    End Function
-
-
-    '    Public Function ConsultarClasificacion() As DataTable
-    '        Try
-    '            Dim Resultado As SqlDataReader
-    '            Dim Tabla As New DataTable
-    '            Dim Comando As New SqlCommand("consultarClasificacion", MyBase.conn)
-    '            Comando.CommandType = CommandType.StoredProcedure
-    '            MyBase.conn.Open()                                                              'Abrimos conexion a la BD
-    '            Resultado = Comando.ExecuteReader()
-    '            Tabla.Load(Resultado)
-    '            'Dim adapter As New SqlDataAdapter(Comando)                                      'Almacenamos la consulta en un adaptador para luego llenar el DataSet
-    '            'adapter.Fill(DATOS)                                                             'Se llena el DataSet con la consulta guardada en el adaptador
-    '            MyBase.conn.Close()                                                             'Cerramos la conexion a BD
-    '            Return Tabla                                                                    'Retornamos el DataSet
-    '        Catch ex As Exception
-    '            Console.WriteLine("Error en Function")
-    '#Disable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
-    '            Throw ex
-    '#Enable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
-    '        End Try
-    '    End Function
-
-    '    Public Sub EliminarClasificacion(ByVal valor As String)
-    '        Try
-    '            Dim Comando As New SqlCommand("eliminarClasificacion", MyBase.conn)
-    '            Comando.CommandType = CommandType.StoredProcedure
-    '            Comando.Parameters.Add("@id", SqlDbType.VarChar).Value = valor
-    '            MyBase.conn.Open()
-    '            Comando.ExecuteNonQuery()
-    '            MyBase.conn.Close()
-    '        Catch ex As Exception
-    '#Disable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
-    '            Throw ex
-    '#Enable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
-    '        End Try
-    '    End Sub
     Public Function CargarModulos() As DataSet
         Try
             Dim Datos As New DataSet
@@ -396,6 +205,46 @@ Public Class DUsuarios
             adapter.Fill(Datos)
             'Resultado = Comando.ExecuteReader()
             'Tabla.Load(Resultado)
+            MyBase.conn.Close()                                                             'Cerramos la conexion a BD
+            Return Datos                                                                    'Retornamos el DataSet
+        Catch ex As Exception
+#Disable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
+            Throw ex
+#Enable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
+        End Try
+    End Function
+    Public Function cargarPrivilegios(ByVal id_rol As String, ByVal id_usuario As String) As DataSet
+        Try
+            Dim Datos As New DataSet
+            'Dim Resultado As SqlDataReader
+            Dim Tabla As New DataSet
+            Dim Comando As New SqlCommand("cargarPrivilegios", MyBase.conn)
+            Comando.CommandType = CommandType.StoredProcedure
+            Comando.Parameters.Add("@id_usuario", SqlDbType.VarChar).Value = id_usuario
+            Comando.Parameters.Add("@id_rol", SqlDbType.VarChar).Value = id_rol
+            MyBase.conn.Open()
+            Dim adapter As New SqlDataAdapter(Comando)
+            adapter.Fill(Datos)
+            MyBase.conn.Close()                                                             'Cerramos la conexion a BD
+            Return Datos                                                                    'Retornamos el DataSet
+        Catch ex As Exception
+#Disable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
+            Throw ex
+#Enable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
+        End Try
+    End Function
+
+    Public Function cargarPrivilegiosTodos(ByVal id_modulo As String) As DataSet
+        Try
+            Dim Datos As New DataSet
+            'Dim Resultado As SqlDataReader
+            Dim Tabla As New DataSet
+            Dim Comando As New SqlCommand("cargarPrivilegiosTodos", MyBase.conn)
+            Comando.CommandType = CommandType.StoredProcedure
+            Comando.Parameters.Add("@id_modulo", SqlDbType.VarChar).Value = id_modulo
+            MyBase.conn.Open()
+            Dim adapter As New SqlDataAdapter(Comando)
+            adapter.Fill(Datos)
             MyBase.conn.Close()                                                             'Cerramos la conexion a BD
             Return Datos                                                                    'Retornamos el DataSet
         Catch ex As Exception

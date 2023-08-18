@@ -69,6 +69,8 @@
     <Compile Include="Admin_Sistema\Usuarios.vb" />
     <Compile Include="Gestión_General\Clientes.vb" />
     <Compile Include="Gestión_General\Locales.vb" />
+    <Compile Include="Gestión_General\Valvulas.vb" />
+    <Compile Include="Gestión_General\Vinculacion.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

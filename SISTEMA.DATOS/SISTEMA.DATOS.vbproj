@@ -44,6 +44,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.DataAccess.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -64,6 +65,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin_Sistema\DHistorico.vb" />
     <Compile Include="Admin_Sistema\DTipoValv.vb" />
     <Compile Include="Admin_Sistema\DTipoMed.vb" />
     <Compile Include="Admin_Sistema\DClases.vb" />
@@ -73,6 +75,9 @@
     <Compile Include="ConexionesBD\GlobalesConexiones.vb" />
     <Compile Include="Gestión_General\DClientes.vb" />
     <Compile Include="Gestión_General\DLocales.vb" />
+    <Compile Include="Gestión_General\DReportes.vb" />
+    <Compile Include="Gestión_General\DValvulas.vb" />
+    <Compile Include="Gestión_General\DVinculacion.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

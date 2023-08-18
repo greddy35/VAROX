@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="es-CR">
+  <Title Text="Dashboard" />
+  <DataSources>
+    <SqlDataSource Name="SQL Data Source 1" ComponentName="dashboardSqlDataSource1">
+      <Connection Name="localhost_VAROX_Connection" ProviderKey="MSSqlServer">
+        <Parameters>
+          <Parameter Name="server" Value="10.0.5.35" />
+          <Parameter Name="database" Value="VAROX" />
+          <Parameter Name="useIntegratedSecurity" Value="False" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+        </Parameters>
+      </Connection>
+      <Query Type="StoredProcQuery" Name="R_consultarHistorico">
+        <Parameter Name="@fechaIni" Type="System.DateTime">638132256000000000</Parameter>
+        <Parameter Name="@fechaFin" Type="System.DateTime">638263584000000000</Parameter>
+        <ProcName>R_consultarHistorico</ProcName>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="SQL Data Source 1">
+          <View Name="R_consultarHistorico">
+            <Field Name="ID_VINC" Type="Int32" />
+            <Field Name="ESTADO_VINC" Type="String" />
+            <Field Name="VALVULA" Type="String" />
+            <Field Name="VALVULA_PADRE" Type="String" />
+            <Field Name="NOMBRE_CLIENTE" Type="String" />
+            <Field Name="NIT" Type="String" />
+            <Field Name="IVA" Type="Int32" />
+            <Field Name="VALOR_UNIDAD" Type="Double" />
+            <Field Name="UNIDAD" Type="String" />
+            <Field Name="ESTADO_CLIENTE" Type="String" />
+            <Field Name="ESTADO_LOCAL" Type="String" />
+            <Field Name="UBICACION" Type="String" />
+            <Field Name="FECHA_INICIO_RIGE" Type="DateTime" />
+            <Field Name="FECHA_FIN_RIGE" Type="DateTime" />
+            <Field Name="NOMBRE_LOCAL" Type="String" />
+            <Field Name="CODIGO_LOCAL" Type="String" />
+            <Field Name="LECT_ANT" Type="Double" />
+            <Field Name="VALUE" Type="Double" />
+            <Field Name="TIMESTAMP" Type="DateTime" />
+            <Field Name="CONSUMO" Type="Double" />
+            <Field Name="SUB_TOTAL" Type="Double" />
+            <Field Name="IMPUESTO" Type="Double" />
+            <Field Name="TOTAL" Type="Double" />
+            <Field Name="REVISION" Type="String" />
+            <Field Name="Column1" Type="String" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+      <ConnectionOptions CloseConnection="true" />
+    </SqlDataSource>
+  </DataSources>
+</Dashboard>

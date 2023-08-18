@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmDashboardDesigner
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class frmDiseñadorDashboard
     Inherits DevExpress.XtraBars.Ribbon.RibbonForm
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         If disposing AndAlso components IsNot Nothing Then
             components.Dispose()
@@ -17,12 +17,12 @@ Partial Class frmDashboardDesigner
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDashboardDesigner))
         Dim GalleryItemGroup1 As DevExpress.XtraBars.Ribbon.GalleryItemGroup = New DevExpress.XtraBars.Ribbon.GalleryItemGroup()
         Dim GalleryItem1 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDiseñadorDashboard))
         Dim GalleryItem2 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
         Dim GalleryItem3 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
         Dim GalleryItem4 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
@@ -84,6 +84,7 @@ Partial Class frmDashboardDesigner
         Dim GalleryItem58 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
         Dim GalleryItem59 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
         Dim GalleryItemGroup4 As DevExpress.XtraBars.Ribbon.GalleryItemGroup = New DevExpress.XtraBars.Ribbon.GalleryItemGroup()
+        Dim GalleryItem60 As DevExpress.XtraBars.Ribbon.GalleryItem = New DevExpress.XtraBars.Ribbon.GalleryItem()
         Dim SkinPaddingEdges1 As DevExpress.Skins.SkinPaddingEdges = New DevExpress.Skins.SkinPaddingEdges()
         Dim ChartInsideHorizontalLegendGalleryGroup1 As DevExpress.DashboardWin.Bars.ChartInsideHorizontalLegendGalleryGroup = New DevExpress.DashboardWin.Bars.ChartInsideHorizontalLegendGalleryGroup()
         Dim ChartLegendInsideTopLeftHorizontalGalleryItem1 As DevExpress.DashboardWin.Bars.ChartLegendInsideTopLeftHorizontalGalleryItem = New DevExpress.DashboardWin.Bars.ChartLegendInsideTopLeftHorizontalGalleryItem()
@@ -201,18 +202,9 @@ Partial Class frmDashboardDesigner
         Dim GalleryItemGroup5 As DevExpress.XtraBars.Ribbon.GalleryItemGroup = New DevExpress.XtraBars.Ribbon.GalleryItemGroup()
         Dim GalleryItemGroup6 As DevExpress.XtraBars.Ribbon.GalleryItemGroup = New DevExpress.XtraBars.Ribbon.GalleryItemGroup()
         Dim ReduceOperation1 As DevExpress.XtraBars.Ribbon.ReduceOperation = New DevExpress.XtraBars.Ribbon.ReduceOperation()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.DashboardDesigner1 = New DevExpress.DashboardWin.DashboardDesigner()
-        Me.DashboardBarAndDockingController1 = New DevExpress.DashboardWin.Native.DashboardBarAndDockingController(Me.components)
+        Me.RibbonStatusBar = New DevExpress.XtraBars.Ribbon.RibbonStatusBar()
         Me.RibbonControl = New DevExpress.XtraBars.Ribbon.RibbonControl()
-        Me.DashboardBackstageViewControl1 = New DevExpress.DashboardWin.Bars.DashboardBackstageViewControl()
-        Me.BackstageViewClientControl1 = New DevExpress.XtraBars.Ribbon.BackstageViewClientControl()
-        Me.RecentDashboardsControl1 = New DevExpress.DashboardWin.Bars.RecentDashboardsControl()
-        Me.DashboardBackstageRecentTab1 = New DevExpress.DashboardWin.Bars.DashboardBackstageRecentTab()
-        Me.DashboardBackstageNewButton1 = New DevExpress.DashboardWin.Bars.DashboardBackstageNewButton()
-        Me.DashboardBackstageOpenButton1 = New DevExpress.DashboardWin.Bars.DashboardBackstageOpenButton()
-        Me.DashboardBackstageSaveButton1 = New DevExpress.DashboardWin.Bars.DashboardBackstageSaveButton()
-        Me.DashboardBackstageSaveAsButton1 = New DevExpress.DashboardWin.Bars.DashboardBackstageSaveAsButton()
+        Me.DashboardBarAndDockingController1 = New DevExpress.DashboardWin.Native.DashboardBarAndDockingController(Me.components)
         Me.FileNewBarItem1 = New DevExpress.DashboardWin.Bars.FileNewBarItem()
         Me.FileOpenBarItem1 = New DevExpress.DashboardWin.Bars.FileOpenBarItem()
         Me.FileSaveBarItem1 = New DevExpress.DashboardWin.Bars.FileSaveBarItem()
@@ -690,6 +682,8 @@ Partial Class frmDashboardDesigner
         Me.FloatingObjectSendToBackItem1 = New DevExpress.XtraRichEdit.UI.FloatingObjectSendToBackItem()
         Me.FloatingObjectSendBehindTextItem1 = New DevExpress.XtraRichEdit.UI.FloatingObjectSendBehindTextItem()
         Me.PivotToolsRibbonPageCategory1 = New DevExpress.DashboardWin.Bars.PivotToolsRibbonPageCategory()
+        Me.DashboardDesigner1 = New DevExpress.DashboardWin.DashboardDesigner()
+        Me.DashboardPopupMenu1 = New DevExpress.DashboardWin.DashboardPopupMenu(Me.components)
         Me.DataRibbonPage1 = New DevExpress.DashboardWin.Bars.DataRibbonPage()
         Me.FilteringRibbonPageGroup1 = New DevExpress.DashboardWin.Bars.FilteringRibbonPageGroup()
         Me.InteractivitySettingsRibbonPageGroup1 = New DevExpress.DashboardWin.Bars.InteractivitySettingsRibbonPageGroup()
@@ -932,61 +926,37 @@ Partial Class frmDashboardDesigner
         Me.ViewRibbonPage1 = New DevExpress.DashboardWin.Bars.ViewRibbonPage()
         Me.SkinsRibbonPageGroup1 = New DevExpress.DashboardWin.Bars.SkinsRibbonPageGroup()
         Me.SkinPaletteGalleryRibbonPageGroup1 = New DevExpress.DashboardWin.Bars.SkinPaletteGalleryRibbonPageGroup()
-        Me.RibbonStatusBar = New DevExpress.XtraBars.Ribbon.RibbonStatusBar()
-        Me.DashboardPopupMenu1 = New DevExpress.DashboardWin.DashboardPopupMenu(Me.components)
         Me.DashboardBarController1 = New DevExpress.DashboardWin.Bars.DashboardBarController(Me.components)
         Me.TextBoxEditorBarController1 = New DevExpress.DashboardWin.Bars.TextBoxEditorBarController(Me.components)
-        Me.Panel1.SuspendLayout()
-        CType(Me.DashboardDesigner1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DashboardBarAndDockingController1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DashboardBackstageViewControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.DashboardBackstageViewControl1.SuspendLayout()
-        Me.BackstageViewClientControl1.SuspendLayout()
+        CType(Me.DashboardBarAndDockingController1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemSpinEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemFontEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemRichEditFontSizeEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemBorderLineStyle1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemBorderLineWeight1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemFloatingObjectOutlineWeight1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DashboardDesigner1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DashboardPopupMenu1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DashboardBarController1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TextBoxEditorBarController1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Panel1
+        'RibbonStatusBar
         '
-        Me.Panel1.Controls.Add(Me.DashboardDesigner1)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(0, 182)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1003, 442)
-        Me.Panel1.TabIndex = 2
-        '
-        'DashboardDesigner1
-        '
-        Me.DashboardDesigner1.AsyncMode = True
-        Me.DashboardDesigner1.BarAndDockingController = Me.DashboardBarAndDockingController1
-        Me.DashboardDesigner1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DashboardDesigner1.Location = New System.Drawing.Point(0, 0)
-        Me.DashboardDesigner1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.DashboardDesigner1.MenuManager = Me.RibbonControl
-        Me.DashboardDesigner1.Name = "DashboardDesigner1"
-        Me.DashboardDesigner1.PopupMenu = Me.DashboardPopupMenu1
-        Me.DashboardDesigner1.Size = New System.Drawing.Size(1003, 442)
-        Me.DashboardDesigner1.TabIndex = 0
+        Me.RibbonStatusBar.Location = New System.Drawing.Point(0, 542)
+        Me.RibbonStatusBar.Name = "RibbonStatusBar"
+        Me.RibbonStatusBar.Ribbon = Me.RibbonControl
+        Me.RibbonStatusBar.Size = New System.Drawing.Size(958, 30)
         '
         'RibbonControl
         '
-        Me.RibbonControl.ApplicationButtonDropDownControl = Me.DashboardBackstageViewControl1
-        Me.RibbonControl.AutoHideEmptyItems = True
-        Me.RibbonControl.AutoSizeItems = True
         Me.RibbonControl.Controller = Me.DashboardBarAndDockingController1
         Me.RibbonControl.ExpandCollapseItem.Id = 0
         Me.RibbonControl.ItemPanelStyle = DevExpress.XtraBars.Ribbon.RibbonItemPanelStyle.Classic
         Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.RibbonControl.SearchEditItem, Me.FileNewBarItem1, Me.FileOpenBarItem1, Me.FileSaveBarItem1, Me.FileSaveAsBarItem1, Me.QuickAccessUndoBarItem1, Me.QuickAccessRedoBarItem1, Me.UndoBarItem1, Me.RedoBarItem1, Me.InsertPivotBarItem1, Me.InsertGridBarItem1, Me.InsertChartBarItem1, Me.InsertScatterChartBarItem1, Me.InsertPiesBarItem1, Me.InsertGaugesBarItem1, Me.InsertCardsBarItem1, Me.InsertTreemapBarItem1, Me.InsertChoroplethMapBarItem1, Me.InsertGeoPointMapBarSubItem1, Me.InsertGeoPointMapBarItem1, Me.InsertBubbleMapBarItem1, Me.InsertPieMapBarItem1, Me.InsertRangeFilterBarItem1, Me.InsertFilterElementSubItem1, Me.InsertComboBoxBarItem1, Me.InsertListBoxBarItem1, Me.InsertTreeViewBarItem1, Me.InsertDateFilterBarItem1, Me.InsertImagesBarSubItem1, Me.InsertImageBarItem1, Me.InsertBoundImageBarItem1, Me.InsertTextBoxBarItem1, Me.InsertGroupBarItem1, Me.InsertTabContainerBarItem1, Me.DuplicateItemBarItem1, Me.DeleteItemBarItem1, Me.ConvertDashboardItemTypeBarItem1, Me.ConvertToPivotBarItem1, Me.ConvertToGridBarItem1, Me.ConvertToChartBarItem1, Me.ConvertToScatterChartBarItem1, Me.ConvertToPieBarItem1, Me.ConvertToGaugeBarItem1, Me.ConvertToCardBarItem1, Me.ConvertToTreemapBarItem1, Me.ConvertToChoroplethMapBarItem1, Me.ConvertToGeoPointMapBarItem1, Me.ConvertToBubbleMapBarItem1, Me.ConvertToPieMapBarItem1, Me.ConvertGeoPointMapBaseBarItem1, Me.ConvertToRangeFilterBarItem1, Me.ConvertToComboBoxBarItem1, Me.ConvertToListBoxBarItem1, Me.ConvertToTreeViewBarItem1, Me.ConvertToDateFilterBarItem1, Me.ConvertToFilterElementsBaseBarItem1, Me.ConvertToBoundImageBarItem1, Me.ConvertToTextBoxBarItem1, Me.RemoveDataItemsBarItem1, Me.TransposeItemBarItem1, Me.EditRulesBarItem1, Me.DeleteGroupBarItem1, Me.DeleteTabContainerBarItem1, Me.DeleteTabPageBarItem1, Me.DashboardTitleBarItem1, Me.SetCurrencyCultureBarItem1, Me.DashboardColorSchemeBarItem1, Me.DashboardParametersBarItem1, Me.LayoutOptionsBarItem1, Me.DashboardAutomaticUpdatesBarItem1, Me.UpdateDataBarItem1, Me.NewDataSourceBarItem1, Me.EditSqlConnectionBarItem1, Me.EditMongoDBConnectionBarItem1, Me.EditXpoConnectionBarItem1, Me.EditOlapConnectionBarItem1, Me.EditObjectDataSourceBarItem1, Me.EditExcelDataSourceBarItem1, Me.EditEFDataSourceBarItem1, Me.EditExtractOptionsBarItem1, Me.RenameDataSourceBarItem1, Me.DeleteDataSourceBarItem1, Me.ServerModeBarItem1, Me.UpateDataExtractBarItem1, Me.AddCalculatedFieldBarItem1, Me.EditJsonDataSourceBarItem1, Me.AddQueryBarItem1, Me.EditQueryBarItem1, Me.RenameQueryBarItem1, Me.EditQueryFilterBarItem1, Me.DeleteQueryBarItem1, Me.EditExtractSourceConnectionBarItem1, Me.EditExtractSourceBarItem1, Me.EditExtractSourceQueryBarItem1, Me.AddFederationQueryBarItem1, Me.EditFederationQueryBarItem1, Me.RenameFederationQueryBarItem1, Me.DeleteFederationQueryBarItem1, Me.ManageMongoDBQueriesBarItem1, Me.RenameMongoDBQueryBarItem1, Me.DeleteMongoDBQueryBarItem1, Me.EditDataSourceFilterBarItem1, Me.ClearDataSourceFilterBarItem1, Me.DashboardSkinsBarItem1, Me.DashboardSkinDropDownButtonItem1, Me.DashboardSkinPaletteRibbonGalleryBarItem1, Me.EditFilterBarItem1, Me.ClearFilterBarItem1, Me.EditVisibleDataFilterBarItem1, Me.IgnoreMasterFiltersBarItem1, Me.ShowItemCaptionBarItem1, Me.EditItemNamesBarItem1, Me.PivotInitialStateBarItem1, Me.PivotAutoExpandColumnBarItem1, Me.PivotAutoExpandRowBarItem1, Me.PivotShowTotalsBarItem1, Me.PivotShowColumnTotalsBarItem1, Me.PivotShowRowTotalsBarItem1, Me.PivotShowGrandTotalsBarItem1, Me.PivotShowColumnGrandTotalsBarItem1, Me.PivotShowRowGrandTotalsBarItem1, Me.PivotLayoutTypeBarItem1, Me.PivotLayoutTypeCompactBarItem1, Me.PivotLayoutTypeTabularBarItem1, Me.PivotRowTotalsPositionBarItem1, Me.PivotRowTotalsPositionTopBarItem1, Me.PivotRowTotalsPositionBottomBarItem1, Me.PivotColumnTotalsPositionBarItem1, Me.PivotColumnTotalsPositionNearBarItem1, Me.PivotColumnTotalsPositionFarBarItem1, Me.PivotValuesPositionBarItem1, Me.PivotValuesPositionColumnsBarItem1, Me.PivotValuesPositionRowsBarItem1, Me.PivotResetLayoutOptionsBarItem1, Me.MasterFilterBarItem1, Me.MultipleValuesMasterFilterBarItem1, Me.DrillDownBarItem1, Me.CrossDataSourceFilteringBarItem1, Me.GridHorizontalLinesBarItem1, Me.GridVerticalLinesBarItem1, Me.GridBandedRowsBarItem1, Me.GridMergeCellsBarItem1, Me.GridColumnHeadersBarItem1, Me.GridWordWrapBarItem1, Me.GridFilterRowBarItem1, Me.GridUpdateTotalsBarItem1, Me.GridAutoFitToContentsColumnWidthModeBarItem1, Me.GridAutoFitToGridColumnWidthModeBarItem1, Me.ManualGridColumnWidthModeBarItem1, Me.ChartTargetDimensionsArgumentsBarItem1, Me.ChartTargetDimensionsSeriesBarItem1, Me.ChartTargetDimensionsPointsBarItem1, Me.ChartRotateBarItem1, Me.ChartXAxisSettingsBarItem1, Me.ChartYAxisSettingsBarItem1, Me.ChartShowLegendBarItem1, Me.GalleryChartLegendPositionItem1, Me.GalleryChartSeriesTypeItem1, Me.UseGlobalColorsBarItem1, Me.UseLocalColorsBarItem1, Me.EditActualColorsBarItem1, Me.ScatterChartRotateBarItem1, Me.ScatterChartXAxisSettingsBarItem1, Me.ScatterChartYAxisSettingsBarItem1, Me.ScatterChartPointLabelOptionsBarItem1, Me.ScatterChartShowLegendBarItem1, Me.GalleryScatterChartLegendPositionItem1, Me.PieTargetDimensionsArgumentsBarItem1, Me.PieTargetDimensionsSeriesBarItem1, Me.PieTargetDimensionsPointsBarItem1, Me.ContentAutoArrangeBarItem1, Me.ContentArrangeInColumnsBarItem1, Me.ContentArrangeInRowsBarItem1, Me.ContentArrangementCountBarItem1, Me.PieLabelsDataLabelsBarItem1, Me.PieLabelsDataLabelsNoneBarItem1, Me.PieLabelsDataLabelArgumentBarItem1, Me.PieLabelsDataLabelsValueBarItem1, Me.PieLabelsDataLabelsArgumentAndValueBarItem1, Me.PieLabelsDataLabelsPercentBarItem1, Me.PieLabelsDataLabelsValueAndPercentBarItem1, Me.PieLabelsDataLabelsArgumentAndPercentBarItem1, Me.PieLabelsDataLabelsArgumentValueAndPercentBarItem1, Me.PieLabelPositionBarItem1, Me.PieLabelPositionOutsideBarItem1, Me.PieLabelPositionInsideBarItem1, Me.PieTooltipsBarItem1, Me.PieLabelsTooltipsNoneBarItem1, Me.PieLabelsTooltipsArgumentBarItem1, Me.PieLabelsTooltipsValueBarItem1, Me.PieLabelsTooltipsArgumentAndValueBarItem1, Me.PieLabelsTooltipsPercentBarItem1, Me.PieLabelsTooltipsValueAndPercentBarItem1, Me.PieLabelsTooltipsArgumentAndPercentBarItem1, Me.PieLabelsTooltipsArgumentValueAndPercentBarItem1, Me.PieStylePieBarItem1, Me.PieStyleDonutBarItem1, Me.PieShowCaptionsBarItem1, Me.GaugeStyleFullCircularBarItem1, Me.GaugeStyleHalfCircularBarItem1, Me.GaugeStyleLeftQuarterCircularBarItem1, Me.GaugeStyleRightQuarterCircularBarItem1, Me.GaugeStyleThreeForthCircularBarItem1, Me.GaugeStyleLinearHorizontalBarItem1, Me.GaugeStyleLinearVerticalBarItem1, Me.GaugeShowCaptionsBarItem1, Me.GalleryRangeFilterSeriesTypeItem1, Me.RangeFilterEditDateTimePeriodsBarItem1, Me.MapLoadBarItem1, Me.MapImportBarItem1, Me.MapDefaultShapefileBarItem1, Me.MapWorldCountriesBarItem1, Me.MapEuropeBarItem1, Me.MapAsiaBarItem1, Me.MapNorthAmericaBarItem1, Me.MapSouthAmericaBarItem1, Me.MapAfricaBarItem1, Me.MapUSABarItem1, Me.MapCanadaBarItem1, Me.MapLockNavigationBarItem1, Me.MapFullExtentBarItem1, Me.ChoroplethMapShapeLabelsAttributeBarItem1, Me.MapShowLegendBarItem1, Me.GalleryMapLegendPositionItem1, Me.GeoPointMapClusterizationBarItem1, Me.MapShapeTitleAttributeBarItem1, Me.ChangeWeightedLegendTypeBarItem1, Me.WeightedLegendNoneBarItem1, Me.WeightedLegendLinearBarItem1, Me.WeightedLegendNestedBarItem1, Me.GalleryWeightedLegendPositionItem1, Me.PieMapIsWeightedBarItem1, Me.ComboBoxStandardTypeBarItem1, Me.ComboBoxCheckedTypeBarItem1, Me.ListBoxCheckedTypeBarItem1, Me.ListBoxRadioTypeBarItem1, Me.FilterElementShowAllValueBarItem1, Me.FilterElementEnableSearchBarItem1, Me.TreeViewAutoExpandBarItem1, Me.DateFilterTypeBarItem1, Me.DateFilterExactTypeBarItem1, Me.DateFilterFromTypeBarItem1, Me.DateFilterToTypeBarItem1, Me.DateFilterRangeTypeBarItem1, Me.DateFilterArrangementModeBarItem1, Me.DateFilterAutoHeightArrangementModeBarItem1, Me.DateFilterHorizontalArrangementModeBarItem1, Me.DateFilterVerticalArrangementModeBarItem1, Me.DateFilterDatePickerLocationBarItem1, Me.DateFilterFarDatePickerLocationBarItem1, Me.DateFilterNearDatePickerLocationBarItem1, Me.DateFilterHiddenDatePickerLocationBarItem1, Me.DateFilterEditDateTimePeriodsBarItem1, Me.ImageSizeModeClipBarItem1, Me.ImageSizeModeStretchBarItem1, Me.ImageSizeModeSqueezeBarItem1, Me.ImageSizeModeZoomBarItem1, Me.ImageAlignmentTopLeftBarItem1, Me.ImageAlignmentCenterLeftBarItem1, Me.ImageAlignmentBottomLeftBarItem1, Me.ImageAlignmentTopCenterBarItem1, Me.ImageAlignmentCenterCenterBarItem1, Me.ImageAlignmentBottomCenterBarItem1, Me.ImageAlignmentTopRightBarItem1, Me.ImageAlignmentCenterRightBarItem1, Me.ImageAlignmentBottomRightBarItem1, Me.TextBoxEditTextBarItem1, Me.TextBoxInsertFieldBarItem1, Me.TreemapSliceAndDiceLayoutAlgorithmBarItem1, Me.TreemapSquarifiedLayoutAlgorithmBarItem1, Me.TreemapStripedLayoutAlgorithmBarItem1, Me.TreemapLayoutDirectionBarItem1, Me.TreemapBottomLeftToTopRightLayoutDirectionBarItem1, Me.TreemapBottomRightToTopLeftLayoutDirectionBarItem1, Me.TreemapTopLeftToBottomRightLayoutDirectionBarItem1, Me.TreemapTopRightToBottomLeftLayoutDirectionBarItem1, Me.TreemapTileLabelsBarItem1, Me.TreemapTileLabelsNoneBarItem1, Me.TreemapTileLabelsArgumentBarItem1, Me.TreemapTileLabelsValueBarItem1, Me.TreemapTileLabelsArgumentAndValueBarItem1, Me.TreemapTileTooltipsBarItem1, Me.TreemapTileTooltipsNoneBarItem1, Me.TreemapTileTooltipsArgumentBarItem1, Me.TreemapTileTooltipsValueBarItem1, Me.TreemapTileTooltipsArgumentAndValueBarItem1, Me.TreemapGroupLabelsBarItem1, Me.TreemapGroupLabelsNoneBarItem1, Me.TreemapGroupLabelsArgumentBarItem1, Me.TreemapGroupLabelsValueBarItem1, Me.TreemapGroupLabelsArgumentAndValueBarItem1, Me.TreemapGroupTooltipsBarItem1, Me.TreemapGroupTooltipsNoneBarItem1, Me.TreemapGroupTooltipsArgumentBarItem1, Me.TreemapGroupTooltipsValueBarItem1, Me.TreemapGroupTooltipsArgumentAndValueBarItem1, Me.ImageLoadBarItem1, Me.ImageImportBarItem1, Me.GroupMasterFilterBarItem1, Me.GroupIgnoreMasterFilterBarItem1, Me.ShowGroupCaptionBarItem1, Me.EditGroupNamesBarItem1, Me.TabPageMasterFilterBarItem1, Me.TabPageIgnoreMasterFilterBarItem1, Me.ShowTabPageCaptionBarItem1, Me.EditTabPageNamesBarItem1, Me.DisplayItemAsTabPageBarItem1, Me.ReorderTabsBarItem1, Me.UndoItem1, Me.RedoItem1, Me.FileOpenItem1, Me.PasteItem1, Me.CutItem1, Me.CopyItem1, Me.PasteSpecialItem1, Me.BarButtonGroup1, Me.ChangeFontNameItem1, Me.ChangeFontSizeItem1, Me.FontSizeIncreaseItem1, Me.FontSizeDecreaseItem1, Me.BarButtonGroup2, Me.ToggleFontBoldItem1, Me.ToggleFontItalicItem1, Me.ToggleFontUnderlineItem1, Me.ToggleFontDoubleUnderlineItem1, Me.ToggleFontStrikeoutItem1, Me.ToggleFontDoubleStrikeoutItem1, Me.ToggleFontSuperscriptItem1, Me.ToggleFontSubscriptItem1, Me.BarButtonGroup3, Me.ChangeFontColorItem1, Me.ChangeFontHighlightColorItem1, Me.ChangeTextCaseItem1, Me.MakeTextUpperCaseItem1, Me.MakeTextLowerCaseItem1, Me.CapitalizeEachWordCaseItem1, Me.ToggleTextCaseItem1, Me.ClearFormattingItem1, Me.BarButtonGroup4, Me.ToggleBulletedListItem1, Me.ToggleNumberingListItem1, Me.ToggleMultiLevelListItem1, Me.BarButtonGroup5, Me.DecreaseIndentItem1, Me.IncreaseIndentItem1, Me.RtlToggleBulletedListItem1, Me.RtlToggleNumberingListItem1, Me.RtlToggleMultiLevelListItem1, Me.RtlDecreaseIndentItem1, Me.RtlIncreaseIndentItem1, Me.ToggleParagraphLeftToRightItem1, Me.ToggleParagraphRightToLeftItem1, Me.BarButtonGroup6, Me.ToggleParagraphAlignmentLeftItem1, Me.ToggleParagraphAlignmentCenterItem1, Me.ToggleParagraphAlignmentRightItem1, Me.ToggleParagraphAlignmentJustifyItem1, Me.ToggleParagraphAlignmentArabicJustifyGroupItem1, Me.ToggleParagraphAlignmentArabicJustifyItem1, Me.ToggleParagraphAlignmentJustifyLowItem1, Me.ToggleParagraphAlignmentJustifyMediumItem1, Me.ToggleParagraphAlignmentJustifyHighItem1, Me.ToggleParagraphAlignmentDistributeItem1, Me.ToggleParagraphAlignmentThaiDistributeItem1, Me.ToggleShowWhitespaceItem1, Me.BarButtonGroup7, Me.ChangeParagraphLineSpacingItem1, Me.SetSingleParagraphSpacingItem1, Me.SetSesquialteralParagraphSpacingItem1, Me.SetDoubleParagraphSpacingItem1, Me.ShowLineSpacingFormItem1, Me.AddSpacingBeforeParagraphItem1, Me.RemoveSpacingBeforeParagraphItem1, Me.AddSpacingAfterParagraphItem1, Me.RemoveSpacingAfterParagraphItem1, Me.ChangeParagraphBackColorItem1, Me.GalleryChangeStyleItem1, Me.FindItem1, Me.ReplaceItem1, Me.InsertTableItem1, Me.InsertFloatingPictureItem1, Me.InsertBookmarkItem1, Me.InsertHyperlinkItem1, Me.InsertSymbolItem1, Me.ChangePageColorItem1, Me.WatermarkItem1, Me.DeleteWatermarkItem1, Me.ToggleFirstRowItem1, Me.ToggleLastRowItem1, Me.ToggleBandedRowsItem1, Me.ToggleFirstColumnItem1, Me.ToggleLastColumnItem1, Me.ToggleBandedColumnsItem1, Me.GalleryChangeTableStyleItem1, Me.ChangeTableBorderLineStyleItem1, Me.ChangeTableBorderLineWeightItem1, Me.ChangeTableBorderColorItem1, Me.ChangeTableBordersItem1, Me.ToggleTableCellsBottomBorderItem1, Me.ToggleTableCellsTopBorderItem1, Me.ToggleTableCellsLeftBorderItem1, Me.ToggleTableCellsRightBorderItem1, Me.ResetTableCellsAllBordersItem1, Me.ToggleTableCellsAllBordersItem1, Me.ToggleTableCellsOutsideBorderItem1, Me.ToggleTableCellsInsideBorderItem1, Me.ToggleTableCellsInsideHorizontalBorderItem1, Me.ToggleTableCellsInsideVerticalBorderItem1, Me.ToggleShowTableGridLinesItem1, Me.ChangeTableCellsShadingItem1, Me.SelectTableElementsItem1, Me.SelectTableCellItem1, Me.SelectTableColumnItem1, Me.SelectTableRowItem1, Me.SelectTableItem1, Me.ShowTablePropertiesFormItem1, Me.DeleteTableElementsItem1, Me.ShowDeleteTableCellsFormItem1, Me.DeleteTableColumnsItem1, Me.DeleteTableRowsItem1, Me.DeleteTableItem1, Me.InsertTableRowAboveItem1, Me.InsertTableRowBelowItem1, Me.InsertTableColumnToLeftItem1, Me.InsertTableColumnToRightItem1, Me.MergeTableCellsItem1, Me.ShowSplitTableCellsForm1, Me.SplitTableItem1, Me.ToggleTableAutoFitItem1, Me.ToggleTableAutoFitContentsItem1, Me.ToggleTableAutoFitWindowItem1, Me.ToggleTableFixedColumnWidthItem1, Me.ToggleTableCellsTopLeftAlignmentItem1, Me.ToggleTableCellsMiddleLeftAlignmentItem1, Me.ToggleTableCellsBottomLeftAlignmentItem1, Me.ToggleTableCellsTopCenterAlignmentItem1, Me.ToggleTableCellsMiddleCenterAlignmentItem1, Me.ToggleTableCellsBottomCenterAlignmentItem1, Me.ToggleTableCellsTopRightAlignmentItem1, Me.ToggleTableCellsMiddleRightAlignmentItem1, Me.ToggleTableCellsBottomRightAlignmentItem1, Me.ShowTableOptionsFormItem1, Me.ChangeFloatingObjectFillColorItem1, Me.ChangeFloatingObjectOutlineColorItem1, Me.ChangeFloatingObjectOutlineWeightItem1, Me.ChangeFloatingObjectTextWrapTypeItem1, Me.SetFloatingObjectInlineTextWrapTypeItem1, Me.SetFloatingObjectSquareTextWrapTypeItem1, Me.SetFloatingObjectTightTextWrapTypeItem1, Me.SetFloatingObjectThroughTextWrapTypeItem1, Me.SetFloatingObjectTopAndBottomTextWrapTypeItem1, Me.SetFloatingObjectBehindTextWrapTypeItem1, Me.SetFloatingObjectInFrontOfTextWrapTypeItem1, Me.ChangeFloatingObjectAlignmentItem1, Me.SetFloatingObjectTopLeftAlignmentItem1, Me.SetFloatingObjectTopCenterAlignmentItem1, Me.SetFloatingObjectTopRightAlignmentItem1, Me.SetFloatingObjectMiddleLeftAlignmentItem1, Me.SetFloatingObjectMiddleCenterAlignmentItem1, Me.SetFloatingObjectMiddleRightAlignmentItem1, Me.SetFloatingObjectBottomLeftAlignmentItem1, Me.SetFloatingObjectBottomCenterAlignmentItem1, Me.SetFloatingObjectBottomRightAlignmentItem1, Me.FloatingObjectBringForwardSubItem1, Me.FloatingObjectBringForwardItem1, Me.FloatingObjectBringToFrontItem1, Me.FloatingObjectBringInFrontOfTextItem1, Me.FloatingObjectSendBackwardSubItem1, Me.FloatingObjectSendBackwardItem1, Me.FloatingObjectSendToBackItem1, Me.FloatingObjectSendBehindTextItem1})
         Me.RibbonControl.Location = New System.Drawing.Point(0, 0)
-        Me.RibbonControl.MaxItemId = 694
+        Me.RibbonControl.MaxItemId = 471
         Me.RibbonControl.Name = "RibbonControl"
         Me.RibbonControl.OptionsPageCategories.AutoCorrectForeColor = DevExpress.Utils.DefaultBoolean.[True]
         Me.RibbonControl.PageCategories.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageCategory() {Me.PivotToolsRibbonPageCategory1, Me.GridToolsRibbonPageCategory1, Me.ChartToolsRibbonPageCategory1, Me.ScatterChartToolsRibbonPageCategory1, Me.PiesToolsRibbonPageCategory1, Me.GaugesToolsRibbonPageCategory1, Me.CardsToolsRibbonPageCategory1, Me.RangeFilterToolsRibbonPageCategory1, Me.ChoroplethMapToolsRibbonPageCategory1, Me.GeoPointMapToolsRibbonPageCategory1, Me.BubbleMapToolsRibbonPageCategory1, Me.PieMapToolsRibbonPageCategory1, Me.FilterElementToolsRibbonPageCategory1, Me.DateFilterToolsRibbonPageCategory1, Me.BoundImageToolsRibbonPageCategory1, Me.TextBoxToolsRibbonPageCategory1, Me.TreemapToolsRibbonPageCategory1, Me.ImageToolsRibbonPageCategory1, Me.GroupToolsRibbonPageCategory1, Me.TabPageToolsRibbonPageCategory1, Me.TabContainerToolsRibbonPageCategory1, Me.TextBoxEditorRibbonPageCategory1})
@@ -996,601 +966,526 @@ Partial Class frmDashboardDesigner
         Me.RibbonControl.QuickToolbarItemLinks.Add(Me.QuickAccessRedoBarItem1)
         Me.RibbonControl.QuickToolbarItemLinks.Add(Me.UpdateDataBarItem1)
         Me.RibbonControl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemSpinEdit1, Me.RepositoryItemFontEdit1, Me.RepositoryItemRichEditFontSizeEdit1, Me.RepositoryItemBorderLineStyle1, Me.RepositoryItemBorderLineWeight1, Me.RepositoryItemFloatingObjectOutlineWeight1})
-        Me.RibbonControl.ShowItemCaptionsInPageHeader = True
-        Me.RibbonControl.Size = New System.Drawing.Size(1003, 182)
+        Me.RibbonControl.Size = New System.Drawing.Size(958, 193)
         Me.RibbonControl.StatusBar = Me.RibbonStatusBar
-        Me.RibbonControl.TransparentEditorsMode = DevExpress.Utils.DefaultBoolean.[True]
-        '
-        'DashboardBackstageViewControl1
-        '
-        Me.DashboardBackstageViewControl1.Controls.Add(Me.BackstageViewClientControl1)
-        Me.DashboardBackstageViewControl1.DashboardRecentTab = Me.DashboardBackstageRecentTab1
-        Me.DashboardBackstageViewControl1.Items.Add(Me.DashboardBackstageNewButton1)
-        Me.DashboardBackstageViewControl1.Items.Add(Me.DashboardBackstageOpenButton1)
-        Me.DashboardBackstageViewControl1.Items.Add(Me.DashboardBackstageSaveButton1)
-        Me.DashboardBackstageViewControl1.Items.Add(Me.DashboardBackstageSaveAsButton1)
-        Me.DashboardBackstageViewControl1.Items.Add(Me.DashboardBackstageRecentTab1)
-        Me.DashboardBackstageViewControl1.Location = New System.Drawing.Point(0, 0)
-        Me.DashboardBackstageViewControl1.Name = "DashboardBackstageViewControl1"
-        Me.DashboardBackstageViewControl1.OwnerControl = Me.RibbonControl
-        Me.DashboardBackstageViewControl1.SelectedTab = Me.DashboardBackstageRecentTab1
-        Me.DashboardBackstageViewControl1.SelectedTabIndex = 4
-        Me.DashboardBackstageViewControl1.Size = New System.Drawing.Size(240, 150)
-        Me.DashboardBackstageViewControl1.TabIndex = 5
-        Me.DashboardBackstageViewControl1.VisibleInDesignTime = True
-        '
-        'BackstageViewClientControl1
-        '
-        Me.BackstageViewClientControl1.Controls.Add(Me.RecentDashboardsControl1)
-        Me.BackstageViewClientControl1.Location = New System.Drawing.Point(132, 78)
-        Me.BackstageViewClientControl1.Name = "BackstageViewClientControl1"
-        Me.BackstageViewClientControl1.Size = New System.Drawing.Size(86, 71)
-        Me.BackstageViewClientControl1.TabIndex = 1
-        '
-        'RecentDashboardsControl1
-        '
-        Me.RecentDashboardsControl1.Appearance.ForeColor = System.Drawing.Color.Transparent
-        Me.RecentDashboardsControl1.Appearance.Options.UseForeColor = True
-        Me.RecentDashboardsControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RecentDashboardsControl1.Location = New System.Drawing.Point(0, 0)
-        Me.RecentDashboardsControl1.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.RecentDashboardsControl1.Name = "RecentDashboardsControl1"
-        Me.RecentDashboardsControl1.ServiceProvider = Me.DashboardDesigner1
-        Me.RecentDashboardsControl1.Size = New System.Drawing.Size(86, 71)
-        Me.RecentDashboardsControl1.TabIndex = 0
-        '
-        'DashboardBackstageRecentTab1
-        '
-        Me.DashboardBackstageRecentTab1.ContentControl = Me.BackstageViewClientControl1
-        Me.DashboardBackstageRecentTab1.Name = "DashboardBackstageRecentTab1"
-        Me.DashboardBackstageRecentTab1.RecentDashboardsControl = Me.RecentDashboardsControl1
-        Me.DashboardBackstageRecentTab1.Selected = True
-        '
-        'DashboardBackstageNewButton1
-        '
-        Me.DashboardBackstageNewButton1.ImageOptions.ItemNormal.SvgImage = CType(resources.GetObject("DashboardBackstageNewButton1.ImageOptions.ItemNormal.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.DashboardBackstageNewButton1.ImageOptions.ItemNormal.SvgImageSize = New System.Drawing.Size(16, 16)
-        Me.DashboardBackstageNewButton1.Name = "DashboardBackstageNewButton1"
-        Me.DashboardBackstageNewButton1.ServiceProvider = Me.DashboardDesigner1
-        '
-        'DashboardBackstageOpenButton1
-        '
-        Me.DashboardBackstageOpenButton1.ImageOptions.ItemNormal.SvgImage = CType(resources.GetObject("DashboardBackstageOpenButton1.ImageOptions.ItemNormal.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.DashboardBackstageOpenButton1.ImageOptions.ItemNormal.SvgImageSize = New System.Drawing.Size(16, 16)
-        Me.DashboardBackstageOpenButton1.Name = "DashboardBackstageOpenButton1"
-        Me.DashboardBackstageOpenButton1.ServiceProvider = Me.DashboardDesigner1
-        '
-        'DashboardBackstageSaveButton1
-        '
-        Me.DashboardBackstageSaveButton1.ImageOptions.ItemNormal.SvgImage = CType(resources.GetObject("DashboardBackstageSaveButton1.ImageOptions.ItemNormal.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.DashboardBackstageSaveButton1.ImageOptions.ItemNormal.SvgImageSize = New System.Drawing.Size(16, 16)
-        Me.DashboardBackstageSaveButton1.Name = "DashboardBackstageSaveButton1"
-        Me.DashboardBackstageSaveButton1.ServiceProvider = Me.DashboardDesigner1
-        '
-        'DashboardBackstageSaveAsButton1
-        '
-        Me.DashboardBackstageSaveAsButton1.ImageOptions.ItemNormal.SvgImage = CType(resources.GetObject("DashboardBackstageSaveAsButton1.ImageOptions.ItemNormal.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.DashboardBackstageSaveAsButton1.ImageOptions.ItemNormal.SvgImageSize = New System.Drawing.Size(16, 16)
-        Me.DashboardBackstageSaveAsButton1.Name = "DashboardBackstageSaveAsButton1"
-        Me.DashboardBackstageSaveAsButton1.ServiceProvider = Me.DashboardDesigner1
         '
         'FileNewBarItem1
         '
-        Me.FileNewBarItem1.Id = 224
+        Me.FileNewBarItem1.Id = 1
         Me.FileNewBarItem1.Name = "FileNewBarItem1"
         '
         'FileOpenBarItem1
         '
-        Me.FileOpenBarItem1.Id = 225
+        Me.FileOpenBarItem1.Id = 2
         Me.FileOpenBarItem1.Name = "FileOpenBarItem1"
         '
         'FileSaveBarItem1
         '
-        Me.FileSaveBarItem1.Id = 226
+        Me.FileSaveBarItem1.Id = 3
         Me.FileSaveBarItem1.Name = "FileSaveBarItem1"
         '
         'FileSaveAsBarItem1
         '
-        Me.FileSaveAsBarItem1.Id = 227
+        Me.FileSaveAsBarItem1.Id = 4
         Me.FileSaveAsBarItem1.Name = "FileSaveAsBarItem1"
         '
         'QuickAccessUndoBarItem1
         '
-        Me.QuickAccessUndoBarItem1.Id = 228
+        Me.QuickAccessUndoBarItem1.Id = 5
         Me.QuickAccessUndoBarItem1.Name = "QuickAccessUndoBarItem1"
         '
         'QuickAccessRedoBarItem1
         '
-        Me.QuickAccessRedoBarItem1.Id = 229
+        Me.QuickAccessRedoBarItem1.Id = 6
         Me.QuickAccessRedoBarItem1.Name = "QuickAccessRedoBarItem1"
         '
         'UndoBarItem1
         '
-        Me.UndoBarItem1.Id = 230
+        Me.UndoBarItem1.Id = 7
         Me.UndoBarItem1.Name = "UndoBarItem1"
         '
         'RedoBarItem1
         '
-        Me.RedoBarItem1.Id = 231
+        Me.RedoBarItem1.Id = 8
         Me.RedoBarItem1.Name = "RedoBarItem1"
         '
         'InsertPivotBarItem1
         '
-        Me.InsertPivotBarItem1.Id = 232
+        Me.InsertPivotBarItem1.Id = 9
         Me.InsertPivotBarItem1.Name = "InsertPivotBarItem1"
         '
         'InsertGridBarItem1
         '
-        Me.InsertGridBarItem1.Id = 233
+        Me.InsertGridBarItem1.Id = 10
         Me.InsertGridBarItem1.Name = "InsertGridBarItem1"
         '
         'InsertChartBarItem1
         '
-        Me.InsertChartBarItem1.Id = 234
+        Me.InsertChartBarItem1.Id = 11
         Me.InsertChartBarItem1.Name = "InsertChartBarItem1"
         '
         'InsertScatterChartBarItem1
         '
-        Me.InsertScatterChartBarItem1.Id = 235
+        Me.InsertScatterChartBarItem1.Id = 12
         Me.InsertScatterChartBarItem1.Name = "InsertScatterChartBarItem1"
         '
         'InsertPiesBarItem1
         '
-        Me.InsertPiesBarItem1.Id = 236
+        Me.InsertPiesBarItem1.Id = 13
         Me.InsertPiesBarItem1.Name = "InsertPiesBarItem1"
         '
         'InsertGaugesBarItem1
         '
-        Me.InsertGaugesBarItem1.Id = 237
+        Me.InsertGaugesBarItem1.Id = 14
         Me.InsertGaugesBarItem1.Name = "InsertGaugesBarItem1"
         '
         'InsertCardsBarItem1
         '
-        Me.InsertCardsBarItem1.Id = 238
+        Me.InsertCardsBarItem1.Id = 15
         Me.InsertCardsBarItem1.Name = "InsertCardsBarItem1"
         '
         'InsertTreemapBarItem1
         '
-        Me.InsertTreemapBarItem1.Id = 239
+        Me.InsertTreemapBarItem1.Id = 16
         Me.InsertTreemapBarItem1.Name = "InsertTreemapBarItem1"
         '
         'InsertChoroplethMapBarItem1
         '
-        Me.InsertChoroplethMapBarItem1.Id = 240
+        Me.InsertChoroplethMapBarItem1.Id = 17
         Me.InsertChoroplethMapBarItem1.Name = "InsertChoroplethMapBarItem1"
         '
         'InsertGeoPointMapBarSubItem1
         '
-        Me.InsertGeoPointMapBarSubItem1.Id = 241
+        Me.InsertGeoPointMapBarSubItem1.Id = 18
         Me.InsertGeoPointMapBarSubItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.InsertGeoPointMapBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.InsertBubbleMapBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.InsertPieMapBarItem1)})
         Me.InsertGeoPointMapBarSubItem1.Name = "InsertGeoPointMapBarSubItem1"
         Me.InsertGeoPointMapBarSubItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu
         '
         'InsertGeoPointMapBarItem1
         '
-        Me.InsertGeoPointMapBarItem1.Id = 242
+        Me.InsertGeoPointMapBarItem1.Id = 19
         Me.InsertGeoPointMapBarItem1.Name = "InsertGeoPointMapBarItem1"
         '
         'InsertBubbleMapBarItem1
         '
-        Me.InsertBubbleMapBarItem1.Id = 243
+        Me.InsertBubbleMapBarItem1.Id = 20
         Me.InsertBubbleMapBarItem1.Name = "InsertBubbleMapBarItem1"
         '
         'InsertPieMapBarItem1
         '
-        Me.InsertPieMapBarItem1.Id = 244
+        Me.InsertPieMapBarItem1.Id = 21
         Me.InsertPieMapBarItem1.Name = "InsertPieMapBarItem1"
         '
         'InsertRangeFilterBarItem1
         '
-        Me.InsertRangeFilterBarItem1.Id = 245
+        Me.InsertRangeFilterBarItem1.Id = 22
         Me.InsertRangeFilterBarItem1.Name = "InsertRangeFilterBarItem1"
         '
         'InsertFilterElementSubItem1
         '
-        Me.InsertFilterElementSubItem1.Id = 246
+        Me.InsertFilterElementSubItem1.Id = 23
         Me.InsertFilterElementSubItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.InsertComboBoxBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.InsertListBoxBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.InsertTreeViewBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.InsertDateFilterBarItem1)})
         Me.InsertFilterElementSubItem1.Name = "InsertFilterElementSubItem1"
         Me.InsertFilterElementSubItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu
         '
         'InsertComboBoxBarItem1
         '
-        Me.InsertComboBoxBarItem1.Id = 247
+        Me.InsertComboBoxBarItem1.Id = 24
         Me.InsertComboBoxBarItem1.Name = "InsertComboBoxBarItem1"
         '
         'InsertListBoxBarItem1
         '
-        Me.InsertListBoxBarItem1.Id = 248
+        Me.InsertListBoxBarItem1.Id = 25
         Me.InsertListBoxBarItem1.Name = "InsertListBoxBarItem1"
         '
         'InsertTreeViewBarItem1
         '
-        Me.InsertTreeViewBarItem1.Id = 249
+        Me.InsertTreeViewBarItem1.Id = 26
         Me.InsertTreeViewBarItem1.Name = "InsertTreeViewBarItem1"
         '
         'InsertDateFilterBarItem1
         '
-        Me.InsertDateFilterBarItem1.Id = 250
+        Me.InsertDateFilterBarItem1.Id = 27
         Me.InsertDateFilterBarItem1.Name = "InsertDateFilterBarItem1"
         '
         'InsertImagesBarSubItem1
         '
-        Me.InsertImagesBarSubItem1.Id = 251
+        Me.InsertImagesBarSubItem1.Id = 28
         Me.InsertImagesBarSubItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.InsertImageBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.InsertBoundImageBarItem1)})
         Me.InsertImagesBarSubItem1.Name = "InsertImagesBarSubItem1"
         Me.InsertImagesBarSubItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu
         '
         'InsertImageBarItem1
         '
-        Me.InsertImageBarItem1.Id = 252
+        Me.InsertImageBarItem1.Id = 29
         Me.InsertImageBarItem1.Name = "InsertImageBarItem1"
         '
         'InsertBoundImageBarItem1
         '
-        Me.InsertBoundImageBarItem1.Id = 253
+        Me.InsertBoundImageBarItem1.Id = 30
         Me.InsertBoundImageBarItem1.Name = "InsertBoundImageBarItem1"
         '
         'InsertTextBoxBarItem1
         '
-        Me.InsertTextBoxBarItem1.Id = 254
+        Me.InsertTextBoxBarItem1.Id = 31
         Me.InsertTextBoxBarItem1.Name = "InsertTextBoxBarItem1"
         '
         'InsertGroupBarItem1
         '
-        Me.InsertGroupBarItem1.Id = 255
+        Me.InsertGroupBarItem1.Id = 32
         Me.InsertGroupBarItem1.Name = "InsertGroupBarItem1"
         '
         'InsertTabContainerBarItem1
         '
-        Me.InsertTabContainerBarItem1.Id = 256
+        Me.InsertTabContainerBarItem1.Id = 33
         Me.InsertTabContainerBarItem1.Name = "InsertTabContainerBarItem1"
         '
         'DuplicateItemBarItem1
         '
-        Me.DuplicateItemBarItem1.Id = 257
+        Me.DuplicateItemBarItem1.Id = 34
         Me.DuplicateItemBarItem1.Name = "DuplicateItemBarItem1"
         '
         'DeleteItemBarItem1
         '
-        Me.DeleteItemBarItem1.Id = 258
+        Me.DeleteItemBarItem1.Id = 35
         Me.DeleteItemBarItem1.Name = "DeleteItemBarItem1"
         '
         'ConvertDashboardItemTypeBarItem1
         '
-        Me.ConvertDashboardItemTypeBarItem1.Id = 259
+        Me.ConvertDashboardItemTypeBarItem1.Id = 36
         Me.ConvertDashboardItemTypeBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.ConvertToPivotBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ConvertToGridBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ConvertToChartBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ConvertToScatterChartBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ConvertToPieBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ConvertToGaugeBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ConvertToCardBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ConvertToTreemapBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ConvertToChoroplethMapBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ConvertGeoPointMapBaseBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ConvertToRangeFilterBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ConvertToFilterElementsBaseBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ConvertToBoundImageBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ConvertToTextBoxBarItem1)})
         Me.ConvertDashboardItemTypeBarItem1.Name = "ConvertDashboardItemTypeBarItem1"
         '
         'ConvertToPivotBarItem1
         '
-        Me.ConvertToPivotBarItem1.Id = 260
+        Me.ConvertToPivotBarItem1.Id = 37
         Me.ConvertToPivotBarItem1.Name = "ConvertToPivotBarItem1"
         '
         'ConvertToGridBarItem1
         '
-        Me.ConvertToGridBarItem1.Id = 261
+        Me.ConvertToGridBarItem1.Id = 38
         Me.ConvertToGridBarItem1.Name = "ConvertToGridBarItem1"
         '
         'ConvertToChartBarItem1
         '
-        Me.ConvertToChartBarItem1.Id = 262
+        Me.ConvertToChartBarItem1.Id = 39
         Me.ConvertToChartBarItem1.Name = "ConvertToChartBarItem1"
         '
         'ConvertToScatterChartBarItem1
         '
-        Me.ConvertToScatterChartBarItem1.Id = 263
+        Me.ConvertToScatterChartBarItem1.Id = 40
         Me.ConvertToScatterChartBarItem1.Name = "ConvertToScatterChartBarItem1"
         '
         'ConvertToPieBarItem1
         '
-        Me.ConvertToPieBarItem1.Id = 264
+        Me.ConvertToPieBarItem1.Id = 41
         Me.ConvertToPieBarItem1.Name = "ConvertToPieBarItem1"
         '
         'ConvertToGaugeBarItem1
         '
-        Me.ConvertToGaugeBarItem1.Id = 265
+        Me.ConvertToGaugeBarItem1.Id = 42
         Me.ConvertToGaugeBarItem1.Name = "ConvertToGaugeBarItem1"
         '
         'ConvertToCardBarItem1
         '
-        Me.ConvertToCardBarItem1.Id = 266
+        Me.ConvertToCardBarItem1.Id = 43
         Me.ConvertToCardBarItem1.Name = "ConvertToCardBarItem1"
         '
         'ConvertToTreemapBarItem1
         '
-        Me.ConvertToTreemapBarItem1.Id = 267
+        Me.ConvertToTreemapBarItem1.Id = 44
         Me.ConvertToTreemapBarItem1.Name = "ConvertToTreemapBarItem1"
         '
         'ConvertToChoroplethMapBarItem1
         '
-        Me.ConvertToChoroplethMapBarItem1.Id = 268
+        Me.ConvertToChoroplethMapBarItem1.Id = 45
         Me.ConvertToChoroplethMapBarItem1.Name = "ConvertToChoroplethMapBarItem1"
         '
         'ConvertGeoPointMapBaseBarItem1
         '
-        Me.ConvertGeoPointMapBaseBarItem1.Id = 272
+        Me.ConvertGeoPointMapBaseBarItem1.Id = 49
         Me.ConvertGeoPointMapBaseBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.ConvertToGeoPointMapBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ConvertToBubbleMapBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ConvertToPieMapBarItem1)})
         Me.ConvertGeoPointMapBaseBarItem1.Name = "ConvertGeoPointMapBaseBarItem1"
         '
         'ConvertToGeoPointMapBarItem1
         '
-        Me.ConvertToGeoPointMapBarItem1.Id = 269
+        Me.ConvertToGeoPointMapBarItem1.Id = 46
         Me.ConvertToGeoPointMapBarItem1.Name = "ConvertToGeoPointMapBarItem1"
         '
         'ConvertToBubbleMapBarItem1
         '
-        Me.ConvertToBubbleMapBarItem1.Id = 270
+        Me.ConvertToBubbleMapBarItem1.Id = 47
         Me.ConvertToBubbleMapBarItem1.Name = "ConvertToBubbleMapBarItem1"
         '
         'ConvertToPieMapBarItem1
         '
-        Me.ConvertToPieMapBarItem1.Id = 271
+        Me.ConvertToPieMapBarItem1.Id = 48
         Me.ConvertToPieMapBarItem1.Name = "ConvertToPieMapBarItem1"
         '
         'ConvertToRangeFilterBarItem1
         '
-        Me.ConvertToRangeFilterBarItem1.Id = 273
+        Me.ConvertToRangeFilterBarItem1.Id = 50
         Me.ConvertToRangeFilterBarItem1.Name = "ConvertToRangeFilterBarItem1"
         '
         'ConvertToFilterElementsBaseBarItem1
         '
-        Me.ConvertToFilterElementsBaseBarItem1.Id = 278
+        Me.ConvertToFilterElementsBaseBarItem1.Id = 55
         Me.ConvertToFilterElementsBaseBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.ConvertToComboBoxBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ConvertToListBoxBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ConvertToTreeViewBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ConvertToDateFilterBarItem1)})
         Me.ConvertToFilterElementsBaseBarItem1.Name = "ConvertToFilterElementsBaseBarItem1"
         '
         'ConvertToComboBoxBarItem1
         '
-        Me.ConvertToComboBoxBarItem1.Id = 274
+        Me.ConvertToComboBoxBarItem1.Id = 51
         Me.ConvertToComboBoxBarItem1.Name = "ConvertToComboBoxBarItem1"
         '
         'ConvertToListBoxBarItem1
         '
-        Me.ConvertToListBoxBarItem1.Id = 275
+        Me.ConvertToListBoxBarItem1.Id = 52
         Me.ConvertToListBoxBarItem1.Name = "ConvertToListBoxBarItem1"
         '
         'ConvertToTreeViewBarItem1
         '
-        Me.ConvertToTreeViewBarItem1.Id = 276
+        Me.ConvertToTreeViewBarItem1.Id = 53
         Me.ConvertToTreeViewBarItem1.Name = "ConvertToTreeViewBarItem1"
         '
         'ConvertToDateFilterBarItem1
         '
-        Me.ConvertToDateFilterBarItem1.Id = 277
+        Me.ConvertToDateFilterBarItem1.Id = 54
         Me.ConvertToDateFilterBarItem1.Name = "ConvertToDateFilterBarItem1"
         '
         'ConvertToBoundImageBarItem1
         '
-        Me.ConvertToBoundImageBarItem1.Id = 279
+        Me.ConvertToBoundImageBarItem1.Id = 56
         Me.ConvertToBoundImageBarItem1.Name = "ConvertToBoundImageBarItem1"
         '
         'ConvertToTextBoxBarItem1
         '
-        Me.ConvertToTextBoxBarItem1.Id = 280
+        Me.ConvertToTextBoxBarItem1.Id = 57
         Me.ConvertToTextBoxBarItem1.Name = "ConvertToTextBoxBarItem1"
         '
         'RemoveDataItemsBarItem1
         '
-        Me.RemoveDataItemsBarItem1.Id = 281
+        Me.RemoveDataItemsBarItem1.Id = 58
         Me.RemoveDataItemsBarItem1.Name = "RemoveDataItemsBarItem1"
         '
         'TransposeItemBarItem1
         '
-        Me.TransposeItemBarItem1.Id = 282
+        Me.TransposeItemBarItem1.Id = 59
         Me.TransposeItemBarItem1.Name = "TransposeItemBarItem1"
         '
         'EditRulesBarItem1
         '
-        Me.EditRulesBarItem1.Id = 283
+        Me.EditRulesBarItem1.Id = 60
         Me.EditRulesBarItem1.Name = "EditRulesBarItem1"
         '
         'DeleteGroupBarItem1
         '
-        Me.DeleteGroupBarItem1.Id = 284
+        Me.DeleteGroupBarItem1.Id = 61
         Me.DeleteGroupBarItem1.Name = "DeleteGroupBarItem1"
         '
         'DeleteTabContainerBarItem1
         '
-        Me.DeleteTabContainerBarItem1.Id = 285
+        Me.DeleteTabContainerBarItem1.Id = 62
         Me.DeleteTabContainerBarItem1.Name = "DeleteTabContainerBarItem1"
         '
         'DeleteTabPageBarItem1
         '
-        Me.DeleteTabPageBarItem1.Id = 286
+        Me.DeleteTabPageBarItem1.Id = 63
         Me.DeleteTabPageBarItem1.Name = "DeleteTabPageBarItem1"
         '
         'DashboardTitleBarItem1
         '
-        Me.DashboardTitleBarItem1.Id = 287
+        Me.DashboardTitleBarItem1.Id = 64
         Me.DashboardTitleBarItem1.Name = "DashboardTitleBarItem1"
         '
         'SetCurrencyCultureBarItem1
         '
-        Me.SetCurrencyCultureBarItem1.Id = 288
+        Me.SetCurrencyCultureBarItem1.Id = 65
         Me.SetCurrencyCultureBarItem1.Name = "SetCurrencyCultureBarItem1"
         '
         'DashboardColorSchemeBarItem1
         '
-        Me.DashboardColorSchemeBarItem1.Id = 289
+        Me.DashboardColorSchemeBarItem1.Id = 66
         Me.DashboardColorSchemeBarItem1.Name = "DashboardColorSchemeBarItem1"
         '
         'DashboardParametersBarItem1
         '
-        Me.DashboardParametersBarItem1.Id = 290
+        Me.DashboardParametersBarItem1.Id = 67
         Me.DashboardParametersBarItem1.Name = "DashboardParametersBarItem1"
         '
         'LayoutOptionsBarItem1
         '
-        Me.LayoutOptionsBarItem1.Id = 291
+        Me.LayoutOptionsBarItem1.Id = 68
         Me.LayoutOptionsBarItem1.Name = "LayoutOptionsBarItem1"
         '
         'DashboardAutomaticUpdatesBarItem1
         '
-        Me.DashboardAutomaticUpdatesBarItem1.Id = 292
+        Me.DashboardAutomaticUpdatesBarItem1.Id = 69
         Me.DashboardAutomaticUpdatesBarItem1.Name = "DashboardAutomaticUpdatesBarItem1"
         '
         'UpdateDataBarItem1
         '
-        Me.UpdateDataBarItem1.Id = 293
+        Me.UpdateDataBarItem1.Id = 70
         Me.UpdateDataBarItem1.Name = "UpdateDataBarItem1"
         '
         'NewDataSourceBarItem1
         '
-        Me.NewDataSourceBarItem1.Id = 294
+        Me.NewDataSourceBarItem1.Id = 71
         Me.NewDataSourceBarItem1.Name = "NewDataSourceBarItem1"
         '
         'EditSqlConnectionBarItem1
         '
-        Me.EditSqlConnectionBarItem1.Id = 295
+        Me.EditSqlConnectionBarItem1.Id = 72
         Me.EditSqlConnectionBarItem1.Name = "EditSqlConnectionBarItem1"
         '
         'EditMongoDBConnectionBarItem1
         '
-        Me.EditMongoDBConnectionBarItem1.Id = 296
+        Me.EditMongoDBConnectionBarItem1.Id = 73
         Me.EditMongoDBConnectionBarItem1.Name = "EditMongoDBConnectionBarItem1"
         '
         'EditXpoConnectionBarItem1
         '
-        Me.EditXpoConnectionBarItem1.Id = 297
+        Me.EditXpoConnectionBarItem1.Id = 74
         Me.EditXpoConnectionBarItem1.Name = "EditXpoConnectionBarItem1"
         '
         'EditOlapConnectionBarItem1
         '
-        Me.EditOlapConnectionBarItem1.Id = 298
+        Me.EditOlapConnectionBarItem1.Id = 75
         Me.EditOlapConnectionBarItem1.Name = "EditOlapConnectionBarItem1"
         '
         'EditObjectDataSourceBarItem1
         '
-        Me.EditObjectDataSourceBarItem1.Id = 299
+        Me.EditObjectDataSourceBarItem1.Id = 76
         Me.EditObjectDataSourceBarItem1.Name = "EditObjectDataSourceBarItem1"
         '
         'EditExcelDataSourceBarItem1
         '
-        Me.EditExcelDataSourceBarItem1.Id = 300
+        Me.EditExcelDataSourceBarItem1.Id = 77
         Me.EditExcelDataSourceBarItem1.Name = "EditExcelDataSourceBarItem1"
         '
         'EditEFDataSourceBarItem1
         '
-        Me.EditEFDataSourceBarItem1.Id = 301
+        Me.EditEFDataSourceBarItem1.Id = 78
         Me.EditEFDataSourceBarItem1.Name = "EditEFDataSourceBarItem1"
         '
         'EditExtractOptionsBarItem1
         '
-        Me.EditExtractOptionsBarItem1.Id = 302
+        Me.EditExtractOptionsBarItem1.Id = 79
         Me.EditExtractOptionsBarItem1.Name = "EditExtractOptionsBarItem1"
         '
         'RenameDataSourceBarItem1
         '
-        Me.RenameDataSourceBarItem1.Id = 303
+        Me.RenameDataSourceBarItem1.Id = 80
         Me.RenameDataSourceBarItem1.Name = "RenameDataSourceBarItem1"
         '
         'DeleteDataSourceBarItem1
         '
-        Me.DeleteDataSourceBarItem1.Id = 304
+        Me.DeleteDataSourceBarItem1.Id = 81
         Me.DeleteDataSourceBarItem1.Name = "DeleteDataSourceBarItem1"
         '
         'ServerModeBarItem1
         '
-        Me.ServerModeBarItem1.Id = 305
+        Me.ServerModeBarItem1.Id = 82
         Me.ServerModeBarItem1.Name = "ServerModeBarItem1"
         '
         'UpateDataExtractBarItem1
         '
-        Me.UpateDataExtractBarItem1.Id = 306
+        Me.UpateDataExtractBarItem1.Id = 83
         Me.UpateDataExtractBarItem1.Name = "UpateDataExtractBarItem1"
         '
         'AddCalculatedFieldBarItem1
         '
-        Me.AddCalculatedFieldBarItem1.Id = 307
+        Me.AddCalculatedFieldBarItem1.Id = 84
         Me.AddCalculatedFieldBarItem1.Name = "AddCalculatedFieldBarItem1"
         '
         'EditJsonDataSourceBarItem1
         '
-        Me.EditJsonDataSourceBarItem1.Id = 308
+        Me.EditJsonDataSourceBarItem1.Id = 85
         Me.EditJsonDataSourceBarItem1.Name = "EditJsonDataSourceBarItem1"
         '
         'AddQueryBarItem1
         '
-        Me.AddQueryBarItem1.Id = 309
+        Me.AddQueryBarItem1.Id = 86
         Me.AddQueryBarItem1.Name = "AddQueryBarItem1"
         '
         'EditQueryBarItem1
         '
-        Me.EditQueryBarItem1.Id = 310
+        Me.EditQueryBarItem1.Id = 87
         Me.EditQueryBarItem1.Name = "EditQueryBarItem1"
         '
         'RenameQueryBarItem1
         '
-        Me.RenameQueryBarItem1.Id = 311
+        Me.RenameQueryBarItem1.Id = 88
         Me.RenameQueryBarItem1.Name = "RenameQueryBarItem1"
         '
         'EditQueryFilterBarItem1
         '
-        Me.EditQueryFilterBarItem1.Id = 312
+        Me.EditQueryFilterBarItem1.Id = 89
         Me.EditQueryFilterBarItem1.Name = "EditQueryFilterBarItem1"
         '
         'DeleteQueryBarItem1
         '
-        Me.DeleteQueryBarItem1.Id = 313
+        Me.DeleteQueryBarItem1.Id = 90
         Me.DeleteQueryBarItem1.Name = "DeleteQueryBarItem1"
         '
         'EditExtractSourceConnectionBarItem1
         '
-        Me.EditExtractSourceConnectionBarItem1.Id = 314
+        Me.EditExtractSourceConnectionBarItem1.Id = 91
         Me.EditExtractSourceConnectionBarItem1.Name = "EditExtractSourceConnectionBarItem1"
         '
         'EditExtractSourceBarItem1
         '
-        Me.EditExtractSourceBarItem1.Id = 315
+        Me.EditExtractSourceBarItem1.Id = 92
         Me.EditExtractSourceBarItem1.Name = "EditExtractSourceBarItem1"
         '
         'EditExtractSourceQueryBarItem1
         '
-        Me.EditExtractSourceQueryBarItem1.Id = 316
+        Me.EditExtractSourceQueryBarItem1.Id = 93
         Me.EditExtractSourceQueryBarItem1.Name = "EditExtractSourceQueryBarItem1"
         '
         'AddFederationQueryBarItem1
         '
-        Me.AddFederationQueryBarItem1.Id = 317
+        Me.AddFederationQueryBarItem1.Id = 94
         Me.AddFederationQueryBarItem1.Name = "AddFederationQueryBarItem1"
         '
         'EditFederationQueryBarItem1
         '
-        Me.EditFederationQueryBarItem1.Id = 318
+        Me.EditFederationQueryBarItem1.Id = 95
         Me.EditFederationQueryBarItem1.Name = "EditFederationQueryBarItem1"
         '
         'RenameFederationQueryBarItem1
         '
-        Me.RenameFederationQueryBarItem1.Id = 319
+        Me.RenameFederationQueryBarItem1.Id = 96
         Me.RenameFederationQueryBarItem1.Name = "RenameFederationQueryBarItem1"
         '
         'DeleteFederationQueryBarItem1
         '
-        Me.DeleteFederationQueryBarItem1.Id = 320
+        Me.DeleteFederationQueryBarItem1.Id = 97
         Me.DeleteFederationQueryBarItem1.Name = "DeleteFederationQueryBarItem1"
         '
         'ManageMongoDBQueriesBarItem1
         '
-        Me.ManageMongoDBQueriesBarItem1.Id = 321
+        Me.ManageMongoDBQueriesBarItem1.Id = 98
         Me.ManageMongoDBQueriesBarItem1.Name = "ManageMongoDBQueriesBarItem1"
         '
         'RenameMongoDBQueryBarItem1
         '
-        Me.RenameMongoDBQueryBarItem1.Id = 322
+        Me.RenameMongoDBQueryBarItem1.Id = 99
         Me.RenameMongoDBQueryBarItem1.Name = "RenameMongoDBQueryBarItem1"
         '
         'DeleteMongoDBQueryBarItem1
         '
-        Me.DeleteMongoDBQueryBarItem1.Id = 323
+        Me.DeleteMongoDBQueryBarItem1.Id = 100
         Me.DeleteMongoDBQueryBarItem1.Name = "DeleteMongoDBQueryBarItem1"
         '
         'EditDataSourceFilterBarItem1
         '
-        Me.EditDataSourceFilterBarItem1.Id = 324
+        Me.EditDataSourceFilterBarItem1.Id = 101
         Me.EditDataSourceFilterBarItem1.Name = "EditDataSourceFilterBarItem1"
         '
         'ClearDataSourceFilterBarItem1
         '
-        Me.ClearDataSourceFilterBarItem1.Id = 325
+        Me.ClearDataSourceFilterBarItem1.Id = 102
         Me.ClearDataSourceFilterBarItem1.Name = "ClearDataSourceFilterBarItem1"
         '
         'DashboardSkinsBarItem1
@@ -1603,6 +1498,7 @@ Partial Class frmDashboardDesigner
         Me.DashboardSkinsBarItem1.Gallery.FixedHoverImageSize = False
         GalleryItemGroup1.Caption = "Standard Skins"
         GalleryItem1.Caption = "Basic"
+        GalleryItem1.Checked = True
         GalleryItem1.Hint = "Basic"
         GalleryItem1.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage"), DevExpress.Utils.Svg.SvgImage)
         GalleryItem1.Tag = "Basic"
@@ -1736,7 +1632,6 @@ Partial Class frmDashboardDesigner
         GalleryItem26.Tag = "Black"
         GalleryItem26.Value = "Black"
         GalleryItem27.Caption = "Blue"
-        GalleryItem27.Checked = True
         GalleryItem27.Hint = "Blue"
         GalleryItem27.ImageOptions.HoverImage = CType(resources.GetObject("resource.HoverImage1"), System.Drawing.Image)
         GalleryItem27.ImageOptions.Image = CType(resources.GetObject("resource.Image1"), System.Drawing.Image)
@@ -1938,7 +1833,12 @@ Partial Class frmDashboardDesigner
         GalleryItem59.Value = "Whiteprint"
         GalleryItemGroup3.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {GalleryItem52, GalleryItem53, GalleryItem54, GalleryItem55, GalleryItem56, GalleryItem57, GalleryItem58, GalleryItem59})
         GalleryItemGroup4.Caption = "Custom Skins"
-        GalleryItemGroup4.Visible = False
+        GalleryItem60.Caption = "DevExpress Design"
+        GalleryItem60.Hint = "DevExpress Design"
+        GalleryItem60.ImageOptions.SvgImage = CType(resources.GetObject("resource.SvgImage25"), DevExpress.Utils.Svg.SvgImage)
+        GalleryItem60.Tag = "DevExpress Design"
+        GalleryItem60.Value = "DevExpress Design"
+        GalleryItemGroup4.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {GalleryItem60})
         Me.DashboardSkinsBarItem1.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {GalleryItemGroup1, GalleryItemGroup2, GalleryItemGroup3, GalleryItemGroup4})
         Me.DashboardSkinsBarItem1.Gallery.ImageSize = New System.Drawing.Size(16, 16)
         Me.DashboardSkinsBarItem1.Gallery.ItemCheckMode = DevExpress.XtraBars.Ribbon.Gallery.ItemCheckMode.SingleRadio
@@ -1947,284 +1847,283 @@ Partial Class frmDashboardDesigner
         SkinPaddingEdges1.Left = 8
         SkinPaddingEdges1.Right = 8
         Me.DashboardSkinsBarItem1.Gallery.ItemImagePadding = SkinPaddingEdges1
-        Me.DashboardSkinsBarItem1.Id = 326
-        Me.DashboardSkinsBarItem1.ImageOptions.Image = CType(resources.GetObject("DashboardSkinsBarItem1.ImageOptions.Image"), System.Drawing.Image)
-        Me.DashboardSkinsBarItem1.ImageOptions.LargeImage = CType(resources.GetObject("DashboardSkinsBarItem1.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.DashboardSkinsBarItem1.Id = 103
+        Me.DashboardSkinsBarItem1.ImageOptions.SvgImage = CType(resources.GetObject("DashboardSkinsBarItem1.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
         Me.DashboardSkinsBarItem1.Name = "DashboardSkinsBarItem1"
         Me.DashboardSkinsBarItem1.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
         '
         'DashboardSkinDropDownButtonItem1
         '
-        Me.DashboardSkinDropDownButtonItem1.Id = 327
+        Me.DashboardSkinDropDownButtonItem1.Id = 104
         Me.DashboardSkinDropDownButtonItem1.Name = "DashboardSkinDropDownButtonItem1"
         '
         'DashboardSkinPaletteRibbonGalleryBarItem1
         '
-        Me.DashboardSkinPaletteRibbonGalleryBarItem1.Id = 328
+        Me.DashboardSkinPaletteRibbonGalleryBarItem1.Id = 105
         Me.DashboardSkinPaletteRibbonGalleryBarItem1.Name = "DashboardSkinPaletteRibbonGalleryBarItem1"
         '
         'EditFilterBarItem1
         '
-        Me.EditFilterBarItem1.Id = 329
+        Me.EditFilterBarItem1.Id = 106
         Me.EditFilterBarItem1.Name = "EditFilterBarItem1"
         '
         'ClearFilterBarItem1
         '
-        Me.ClearFilterBarItem1.Id = 330
+        Me.ClearFilterBarItem1.Id = 107
         Me.ClearFilterBarItem1.Name = "ClearFilterBarItem1"
         '
         'EditVisibleDataFilterBarItem1
         '
-        Me.EditVisibleDataFilterBarItem1.Id = 331
+        Me.EditVisibleDataFilterBarItem1.Id = 108
         Me.EditVisibleDataFilterBarItem1.Name = "EditVisibleDataFilterBarItem1"
         '
         'IgnoreMasterFiltersBarItem1
         '
-        Me.IgnoreMasterFiltersBarItem1.Id = 332
+        Me.IgnoreMasterFiltersBarItem1.Id = 109
         Me.IgnoreMasterFiltersBarItem1.Name = "IgnoreMasterFiltersBarItem1"
         '
         'ShowItemCaptionBarItem1
         '
-        Me.ShowItemCaptionBarItem1.Id = 333
+        Me.ShowItemCaptionBarItem1.Id = 110
         Me.ShowItemCaptionBarItem1.Name = "ShowItemCaptionBarItem1"
         '
         'EditItemNamesBarItem1
         '
-        Me.EditItemNamesBarItem1.Id = 334
+        Me.EditItemNamesBarItem1.Id = 111
         Me.EditItemNamesBarItem1.Name = "EditItemNamesBarItem1"
         '
         'PivotInitialStateBarItem1
         '
-        Me.PivotInitialStateBarItem1.Id = 335
+        Me.PivotInitialStateBarItem1.Id = 112
         Me.PivotInitialStateBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.PivotAutoExpandColumnBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PivotAutoExpandRowBarItem1)})
         Me.PivotInitialStateBarItem1.Name = "PivotInitialStateBarItem1"
         Me.PivotInitialStateBarItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu
         '
         'PivotAutoExpandColumnBarItem1
         '
-        Me.PivotAutoExpandColumnBarItem1.Id = 336
+        Me.PivotAutoExpandColumnBarItem1.Id = 113
         Me.PivotAutoExpandColumnBarItem1.Name = "PivotAutoExpandColumnBarItem1"
         '
         'PivotAutoExpandRowBarItem1
         '
-        Me.PivotAutoExpandRowBarItem1.Id = 337
+        Me.PivotAutoExpandRowBarItem1.Id = 114
         Me.PivotAutoExpandRowBarItem1.Name = "PivotAutoExpandRowBarItem1"
         '
         'PivotShowTotalsBarItem1
         '
-        Me.PivotShowTotalsBarItem1.Id = 338
+        Me.PivotShowTotalsBarItem1.Id = 115
         Me.PivotShowTotalsBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.PivotShowColumnTotalsBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PivotShowRowTotalsBarItem1)})
         Me.PivotShowTotalsBarItem1.Name = "PivotShowTotalsBarItem1"
         Me.PivotShowTotalsBarItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu
         '
         'PivotShowColumnTotalsBarItem1
         '
-        Me.PivotShowColumnTotalsBarItem1.Id = 339
+        Me.PivotShowColumnTotalsBarItem1.Id = 116
         Me.PivotShowColumnTotalsBarItem1.Name = "PivotShowColumnTotalsBarItem1"
         '
         'PivotShowRowTotalsBarItem1
         '
-        Me.PivotShowRowTotalsBarItem1.Id = 340
+        Me.PivotShowRowTotalsBarItem1.Id = 117
         Me.PivotShowRowTotalsBarItem1.Name = "PivotShowRowTotalsBarItem1"
         '
         'PivotShowGrandTotalsBarItem1
         '
-        Me.PivotShowGrandTotalsBarItem1.Id = 341
+        Me.PivotShowGrandTotalsBarItem1.Id = 118
         Me.PivotShowGrandTotalsBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.PivotShowColumnGrandTotalsBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PivotShowRowGrandTotalsBarItem1)})
         Me.PivotShowGrandTotalsBarItem1.Name = "PivotShowGrandTotalsBarItem1"
         Me.PivotShowGrandTotalsBarItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu
         '
         'PivotShowColumnGrandTotalsBarItem1
         '
-        Me.PivotShowColumnGrandTotalsBarItem1.Id = 342
+        Me.PivotShowColumnGrandTotalsBarItem1.Id = 119
         Me.PivotShowColumnGrandTotalsBarItem1.Name = "PivotShowColumnGrandTotalsBarItem1"
         '
         'PivotShowRowGrandTotalsBarItem1
         '
-        Me.PivotShowRowGrandTotalsBarItem1.Id = 343
+        Me.PivotShowRowGrandTotalsBarItem1.Id = 120
         Me.PivotShowRowGrandTotalsBarItem1.Name = "PivotShowRowGrandTotalsBarItem1"
         '
         'PivotLayoutTypeBarItem1
         '
-        Me.PivotLayoutTypeBarItem1.Id = 344
+        Me.PivotLayoutTypeBarItem1.Id = 121
         Me.PivotLayoutTypeBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.PivotLayoutTypeCompactBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PivotLayoutTypeTabularBarItem1)})
         Me.PivotLayoutTypeBarItem1.Name = "PivotLayoutTypeBarItem1"
         Me.PivotLayoutTypeBarItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu
         '
         'PivotLayoutTypeCompactBarItem1
         '
-        Me.PivotLayoutTypeCompactBarItem1.Id = 345
+        Me.PivotLayoutTypeCompactBarItem1.Id = 122
         Me.PivotLayoutTypeCompactBarItem1.Name = "PivotLayoutTypeCompactBarItem1"
         '
         'PivotLayoutTypeTabularBarItem1
         '
-        Me.PivotLayoutTypeTabularBarItem1.Id = 346
+        Me.PivotLayoutTypeTabularBarItem1.Id = 123
         Me.PivotLayoutTypeTabularBarItem1.Name = "PivotLayoutTypeTabularBarItem1"
         '
         'PivotRowTotalsPositionBarItem1
         '
-        Me.PivotRowTotalsPositionBarItem1.Id = 347
+        Me.PivotRowTotalsPositionBarItem1.Id = 124
         Me.PivotRowTotalsPositionBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.PivotRowTotalsPositionTopBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PivotRowTotalsPositionBottomBarItem1)})
         Me.PivotRowTotalsPositionBarItem1.Name = "PivotRowTotalsPositionBarItem1"
         Me.PivotRowTotalsPositionBarItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu
         '
         'PivotRowTotalsPositionTopBarItem1
         '
-        Me.PivotRowTotalsPositionTopBarItem1.Id = 348
+        Me.PivotRowTotalsPositionTopBarItem1.Id = 125
         Me.PivotRowTotalsPositionTopBarItem1.Name = "PivotRowTotalsPositionTopBarItem1"
         '
         'PivotRowTotalsPositionBottomBarItem1
         '
-        Me.PivotRowTotalsPositionBottomBarItem1.Id = 349
+        Me.PivotRowTotalsPositionBottomBarItem1.Id = 126
         Me.PivotRowTotalsPositionBottomBarItem1.Name = "PivotRowTotalsPositionBottomBarItem1"
         '
         'PivotColumnTotalsPositionBarItem1
         '
-        Me.PivotColumnTotalsPositionBarItem1.Id = 350
+        Me.PivotColumnTotalsPositionBarItem1.Id = 127
         Me.PivotColumnTotalsPositionBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.PivotColumnTotalsPositionNearBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PivotColumnTotalsPositionFarBarItem1)})
         Me.PivotColumnTotalsPositionBarItem1.Name = "PivotColumnTotalsPositionBarItem1"
         Me.PivotColumnTotalsPositionBarItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu
         '
         'PivotColumnTotalsPositionNearBarItem1
         '
-        Me.PivotColumnTotalsPositionNearBarItem1.Id = 351
+        Me.PivotColumnTotalsPositionNearBarItem1.Id = 128
         Me.PivotColumnTotalsPositionNearBarItem1.Name = "PivotColumnTotalsPositionNearBarItem1"
         '
         'PivotColumnTotalsPositionFarBarItem1
         '
-        Me.PivotColumnTotalsPositionFarBarItem1.Id = 352
+        Me.PivotColumnTotalsPositionFarBarItem1.Id = 129
         Me.PivotColumnTotalsPositionFarBarItem1.Name = "PivotColumnTotalsPositionFarBarItem1"
         '
         'PivotValuesPositionBarItem1
         '
-        Me.PivotValuesPositionBarItem1.Id = 353
+        Me.PivotValuesPositionBarItem1.Id = 130
         Me.PivotValuesPositionBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.PivotValuesPositionColumnsBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PivotValuesPositionRowsBarItem1)})
         Me.PivotValuesPositionBarItem1.Name = "PivotValuesPositionBarItem1"
         Me.PivotValuesPositionBarItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu
         '
         'PivotValuesPositionColumnsBarItem1
         '
-        Me.PivotValuesPositionColumnsBarItem1.Id = 354
+        Me.PivotValuesPositionColumnsBarItem1.Id = 131
         Me.PivotValuesPositionColumnsBarItem1.Name = "PivotValuesPositionColumnsBarItem1"
         '
         'PivotValuesPositionRowsBarItem1
         '
-        Me.PivotValuesPositionRowsBarItem1.Id = 355
+        Me.PivotValuesPositionRowsBarItem1.Id = 132
         Me.PivotValuesPositionRowsBarItem1.Name = "PivotValuesPositionRowsBarItem1"
         '
         'PivotResetLayoutOptionsBarItem1
         '
-        Me.PivotResetLayoutOptionsBarItem1.Id = 356
+        Me.PivotResetLayoutOptionsBarItem1.Id = 133
         Me.PivotResetLayoutOptionsBarItem1.Name = "PivotResetLayoutOptionsBarItem1"
         '
         'MasterFilterBarItem1
         '
-        Me.MasterFilterBarItem1.Id = 357
+        Me.MasterFilterBarItem1.Id = 134
         Me.MasterFilterBarItem1.Name = "MasterFilterBarItem1"
         '
         'MultipleValuesMasterFilterBarItem1
         '
-        Me.MultipleValuesMasterFilterBarItem1.Id = 358
+        Me.MultipleValuesMasterFilterBarItem1.Id = 135
         Me.MultipleValuesMasterFilterBarItem1.Name = "MultipleValuesMasterFilterBarItem1"
         '
         'DrillDownBarItem1
         '
-        Me.DrillDownBarItem1.Id = 359
+        Me.DrillDownBarItem1.Id = 136
         Me.DrillDownBarItem1.Name = "DrillDownBarItem1"
         '
         'CrossDataSourceFilteringBarItem1
         '
-        Me.CrossDataSourceFilteringBarItem1.Id = 360
+        Me.CrossDataSourceFilteringBarItem1.Id = 137
         Me.CrossDataSourceFilteringBarItem1.Name = "CrossDataSourceFilteringBarItem1"
         '
         'GridHorizontalLinesBarItem1
         '
-        Me.GridHorizontalLinesBarItem1.Id = 361
+        Me.GridHorizontalLinesBarItem1.Id = 138
         Me.GridHorizontalLinesBarItem1.Name = "GridHorizontalLinesBarItem1"
         '
         'GridVerticalLinesBarItem1
         '
-        Me.GridVerticalLinesBarItem1.Id = 362
+        Me.GridVerticalLinesBarItem1.Id = 139
         Me.GridVerticalLinesBarItem1.Name = "GridVerticalLinesBarItem1"
         '
         'GridBandedRowsBarItem1
         '
-        Me.GridBandedRowsBarItem1.Id = 363
+        Me.GridBandedRowsBarItem1.Id = 140
         Me.GridBandedRowsBarItem1.Name = "GridBandedRowsBarItem1"
         '
         'GridMergeCellsBarItem1
         '
-        Me.GridMergeCellsBarItem1.Id = 364
+        Me.GridMergeCellsBarItem1.Id = 141
         Me.GridMergeCellsBarItem1.Name = "GridMergeCellsBarItem1"
         '
         'GridColumnHeadersBarItem1
         '
-        Me.GridColumnHeadersBarItem1.Id = 365
+        Me.GridColumnHeadersBarItem1.Id = 142
         Me.GridColumnHeadersBarItem1.Name = "GridColumnHeadersBarItem1"
         '
         'GridWordWrapBarItem1
         '
-        Me.GridWordWrapBarItem1.Id = 366
+        Me.GridWordWrapBarItem1.Id = 143
         Me.GridWordWrapBarItem1.Name = "GridWordWrapBarItem1"
         '
         'GridFilterRowBarItem1
         '
-        Me.GridFilterRowBarItem1.Id = 367
+        Me.GridFilterRowBarItem1.Id = 144
         Me.GridFilterRowBarItem1.Name = "GridFilterRowBarItem1"
         '
         'GridUpdateTotalsBarItem1
         '
-        Me.GridUpdateTotalsBarItem1.Id = 368
+        Me.GridUpdateTotalsBarItem1.Id = 145
         Me.GridUpdateTotalsBarItem1.Name = "GridUpdateTotalsBarItem1"
         '
         'GridAutoFitToContentsColumnWidthModeBarItem1
         '
-        Me.GridAutoFitToContentsColumnWidthModeBarItem1.Id = 369
+        Me.GridAutoFitToContentsColumnWidthModeBarItem1.Id = 146
         Me.GridAutoFitToContentsColumnWidthModeBarItem1.Name = "GridAutoFitToContentsColumnWidthModeBarItem1"
         '
         'GridAutoFitToGridColumnWidthModeBarItem1
         '
-        Me.GridAutoFitToGridColumnWidthModeBarItem1.Id = 370
+        Me.GridAutoFitToGridColumnWidthModeBarItem1.Id = 147
         Me.GridAutoFitToGridColumnWidthModeBarItem1.Name = "GridAutoFitToGridColumnWidthModeBarItem1"
         '
         'ManualGridColumnWidthModeBarItem1
         '
-        Me.ManualGridColumnWidthModeBarItem1.Id = 371
+        Me.ManualGridColumnWidthModeBarItem1.Id = 148
         Me.ManualGridColumnWidthModeBarItem1.Name = "ManualGridColumnWidthModeBarItem1"
         '
         'ChartTargetDimensionsArgumentsBarItem1
         '
-        Me.ChartTargetDimensionsArgumentsBarItem1.Id = 372
+        Me.ChartTargetDimensionsArgumentsBarItem1.Id = 149
         Me.ChartTargetDimensionsArgumentsBarItem1.Name = "ChartTargetDimensionsArgumentsBarItem1"
         '
         'ChartTargetDimensionsSeriesBarItem1
         '
-        Me.ChartTargetDimensionsSeriesBarItem1.Id = 373
+        Me.ChartTargetDimensionsSeriesBarItem1.Id = 150
         Me.ChartTargetDimensionsSeriesBarItem1.Name = "ChartTargetDimensionsSeriesBarItem1"
         '
         'ChartTargetDimensionsPointsBarItem1
         '
-        Me.ChartTargetDimensionsPointsBarItem1.Id = 374
+        Me.ChartTargetDimensionsPointsBarItem1.Id = 151
         Me.ChartTargetDimensionsPointsBarItem1.Name = "ChartTargetDimensionsPointsBarItem1"
         '
         'ChartRotateBarItem1
         '
-        Me.ChartRotateBarItem1.Id = 375
+        Me.ChartRotateBarItem1.Id = 152
         Me.ChartRotateBarItem1.Name = "ChartRotateBarItem1"
         '
         'ChartXAxisSettingsBarItem1
         '
-        Me.ChartXAxisSettingsBarItem1.Id = 376
+        Me.ChartXAxisSettingsBarItem1.Id = 153
         Me.ChartXAxisSettingsBarItem1.Name = "ChartXAxisSettingsBarItem1"
         '
         'ChartYAxisSettingsBarItem1
         '
-        Me.ChartYAxisSettingsBarItem1.Id = 377
+        Me.ChartYAxisSettingsBarItem1.Id = 154
         Me.ChartYAxisSettingsBarItem1.Name = "ChartYAxisSettingsBarItem1"
         '
         'ChartShowLegendBarItem1
         '
-        Me.ChartShowLegendBarItem1.Id = 378
+        Me.ChartShowLegendBarItem1.Id = 155
         Me.ChartShowLegendBarItem1.Name = "ChartShowLegendBarItem1"
         '
         'GalleryChartLegendPositionItem1
@@ -2262,7 +2161,7 @@ Partial Class frmDashboardDesigner
         Me.GalleryChartLegendPositionItem1.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {ChartInsideHorizontalLegendGalleryGroup1, ChartInsideVerticalLegendGalleryGroup1, ChartOutsideHorizontalLegendGalleryGroup1, ChartOutsideVerticalLegendGalleryGroup1})
         Me.GalleryChartLegendPositionItem1.Gallery.ImageSize = New System.Drawing.Size(32, 32)
         Me.GalleryChartLegendPositionItem1.Gallery.RowCount = 8
-        Me.GalleryChartLegendPositionItem1.Id = 379
+        Me.GalleryChartLegendPositionItem1.Id = 156
         Me.GalleryChartLegendPositionItem1.Name = "GalleryChartLegendPositionItem1"
         '
         'GalleryChartSeriesTypeItem1
@@ -2301,47 +2200,47 @@ Partial Class frmDashboardDesigner
         Me.GalleryChartSeriesTypeItem1.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {ChartBarSeriesGalleryGroup1, ChartPointLineSeriesGalleryGroup1, ChartAreaSeriesGalleryGroup1, ChartRangeSeriesGalleryGroup1, ChartBubbleSeriesGalleryGroup1, ChartFinancialSeriesGalleryGroup1})
         Me.GalleryChartSeriesTypeItem1.Gallery.ImageSize = New System.Drawing.Size(32, 32)
         Me.GalleryChartSeriesTypeItem1.Gallery.RowCount = 8
-        Me.GalleryChartSeriesTypeItem1.Id = 380
+        Me.GalleryChartSeriesTypeItem1.Id = 157
         Me.GalleryChartSeriesTypeItem1.Name = "GalleryChartSeriesTypeItem1"
         '
         'UseGlobalColorsBarItem1
         '
-        Me.UseGlobalColorsBarItem1.Id = 381
+        Me.UseGlobalColorsBarItem1.Id = 158
         Me.UseGlobalColorsBarItem1.Name = "UseGlobalColorsBarItem1"
         '
         'UseLocalColorsBarItem1
         '
-        Me.UseLocalColorsBarItem1.Id = 382
+        Me.UseLocalColorsBarItem1.Id = 159
         Me.UseLocalColorsBarItem1.Name = "UseLocalColorsBarItem1"
         '
         'EditActualColorsBarItem1
         '
-        Me.EditActualColorsBarItem1.Id = 383
+        Me.EditActualColorsBarItem1.Id = 160
         Me.EditActualColorsBarItem1.Name = "EditActualColorsBarItem1"
         '
         'ScatterChartRotateBarItem1
         '
-        Me.ScatterChartRotateBarItem1.Id = 384
+        Me.ScatterChartRotateBarItem1.Id = 161
         Me.ScatterChartRotateBarItem1.Name = "ScatterChartRotateBarItem1"
         '
         'ScatterChartXAxisSettingsBarItem1
         '
-        Me.ScatterChartXAxisSettingsBarItem1.Id = 385
+        Me.ScatterChartXAxisSettingsBarItem1.Id = 162
         Me.ScatterChartXAxisSettingsBarItem1.Name = "ScatterChartXAxisSettingsBarItem1"
         '
         'ScatterChartYAxisSettingsBarItem1
         '
-        Me.ScatterChartYAxisSettingsBarItem1.Id = 386
+        Me.ScatterChartYAxisSettingsBarItem1.Id = 163
         Me.ScatterChartYAxisSettingsBarItem1.Name = "ScatterChartYAxisSettingsBarItem1"
         '
         'ScatterChartPointLabelOptionsBarItem1
         '
-        Me.ScatterChartPointLabelOptionsBarItem1.Id = 387
+        Me.ScatterChartPointLabelOptionsBarItem1.Id = 164
         Me.ScatterChartPointLabelOptionsBarItem1.Name = "ScatterChartPointLabelOptionsBarItem1"
         '
         'ScatterChartShowLegendBarItem1
         '
-        Me.ScatterChartShowLegendBarItem1.Id = 388
+        Me.ScatterChartShowLegendBarItem1.Id = 165
         Me.ScatterChartShowLegendBarItem1.Name = "ScatterChartShowLegendBarItem1"
         '
         'GalleryScatterChartLegendPositionItem1
@@ -2379,43 +2278,43 @@ Partial Class frmDashboardDesigner
         Me.GalleryScatterChartLegendPositionItem1.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {ChartInsideHorizontalLegendGalleryGroup2, ChartInsideVerticalLegendGalleryGroup2, ChartOutsideHorizontalLegendGalleryGroup2, ChartOutsideVerticalLegendGalleryGroup2})
         Me.GalleryScatterChartLegendPositionItem1.Gallery.ImageSize = New System.Drawing.Size(32, 32)
         Me.GalleryScatterChartLegendPositionItem1.Gallery.RowCount = 8
-        Me.GalleryScatterChartLegendPositionItem1.Id = 389
+        Me.GalleryScatterChartLegendPositionItem1.Id = 166
         Me.GalleryScatterChartLegendPositionItem1.Name = "GalleryScatterChartLegendPositionItem1"
         '
         'PieTargetDimensionsArgumentsBarItem1
         '
-        Me.PieTargetDimensionsArgumentsBarItem1.Id = 390
+        Me.PieTargetDimensionsArgumentsBarItem1.Id = 167
         Me.PieTargetDimensionsArgumentsBarItem1.Name = "PieTargetDimensionsArgumentsBarItem1"
         '
         'PieTargetDimensionsSeriesBarItem1
         '
-        Me.PieTargetDimensionsSeriesBarItem1.Id = 391
+        Me.PieTargetDimensionsSeriesBarItem1.Id = 168
         Me.PieTargetDimensionsSeriesBarItem1.Name = "PieTargetDimensionsSeriesBarItem1"
         '
         'PieTargetDimensionsPointsBarItem1
         '
-        Me.PieTargetDimensionsPointsBarItem1.Id = 392
+        Me.PieTargetDimensionsPointsBarItem1.Id = 169
         Me.PieTargetDimensionsPointsBarItem1.Name = "PieTargetDimensionsPointsBarItem1"
         '
         'ContentAutoArrangeBarItem1
         '
-        Me.ContentAutoArrangeBarItem1.Id = 393
+        Me.ContentAutoArrangeBarItem1.Id = 170
         Me.ContentAutoArrangeBarItem1.Name = "ContentAutoArrangeBarItem1"
         '
         'ContentArrangeInColumnsBarItem1
         '
-        Me.ContentArrangeInColumnsBarItem1.Id = 394
+        Me.ContentArrangeInColumnsBarItem1.Id = 171
         Me.ContentArrangeInColumnsBarItem1.Name = "ContentArrangeInColumnsBarItem1"
         '
         'ContentArrangeInRowsBarItem1
         '
-        Me.ContentArrangeInRowsBarItem1.Id = 395
+        Me.ContentArrangeInRowsBarItem1.Id = 172
         Me.ContentArrangeInRowsBarItem1.Name = "ContentArrangeInRowsBarItem1"
         '
         'ContentArrangementCountBarItem1
         '
         Me.ContentArrangementCountBarItem1.Edit = Me.RepositoryItemSpinEdit1
-        Me.ContentArrangementCountBarItem1.Id = 396
+        Me.ContentArrangementCountBarItem1.Id = 173
         Me.ContentArrangementCountBarItem1.Name = "ContentArrangementCountBarItem1"
         '
         'RepositoryItemSpinEdit1
@@ -2430,168 +2329,168 @@ Partial Class frmDashboardDesigner
         '
         'PieLabelsDataLabelsBarItem1
         '
-        Me.PieLabelsDataLabelsBarItem1.Id = 397
+        Me.PieLabelsDataLabelsBarItem1.Id = 174
         Me.PieLabelsDataLabelsBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.PieLabelsDataLabelsNoneBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PieLabelsDataLabelArgumentBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PieLabelsDataLabelsValueBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PieLabelsDataLabelsArgumentAndValueBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PieLabelsDataLabelsPercentBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PieLabelsDataLabelsValueAndPercentBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PieLabelsDataLabelsArgumentAndPercentBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PieLabelsDataLabelsArgumentValueAndPercentBarItem1)})
         Me.PieLabelsDataLabelsBarItem1.Name = "PieLabelsDataLabelsBarItem1"
         Me.PieLabelsDataLabelsBarItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu
         '
         'PieLabelsDataLabelsNoneBarItem1
         '
-        Me.PieLabelsDataLabelsNoneBarItem1.Id = 398
+        Me.PieLabelsDataLabelsNoneBarItem1.Id = 175
         Me.PieLabelsDataLabelsNoneBarItem1.Name = "PieLabelsDataLabelsNoneBarItem1"
         '
         'PieLabelsDataLabelArgumentBarItem1
         '
-        Me.PieLabelsDataLabelArgumentBarItem1.Id = 399
+        Me.PieLabelsDataLabelArgumentBarItem1.Id = 176
         Me.PieLabelsDataLabelArgumentBarItem1.Name = "PieLabelsDataLabelArgumentBarItem1"
         '
         'PieLabelsDataLabelsValueBarItem1
         '
-        Me.PieLabelsDataLabelsValueBarItem1.Id = 400
+        Me.PieLabelsDataLabelsValueBarItem1.Id = 177
         Me.PieLabelsDataLabelsValueBarItem1.Name = "PieLabelsDataLabelsValueBarItem1"
         '
         'PieLabelsDataLabelsArgumentAndValueBarItem1
         '
-        Me.PieLabelsDataLabelsArgumentAndValueBarItem1.Id = 401
+        Me.PieLabelsDataLabelsArgumentAndValueBarItem1.Id = 178
         Me.PieLabelsDataLabelsArgumentAndValueBarItem1.Name = "PieLabelsDataLabelsArgumentAndValueBarItem1"
         '
         'PieLabelsDataLabelsPercentBarItem1
         '
-        Me.PieLabelsDataLabelsPercentBarItem1.Id = 402
+        Me.PieLabelsDataLabelsPercentBarItem1.Id = 179
         Me.PieLabelsDataLabelsPercentBarItem1.Name = "PieLabelsDataLabelsPercentBarItem1"
         '
         'PieLabelsDataLabelsValueAndPercentBarItem1
         '
-        Me.PieLabelsDataLabelsValueAndPercentBarItem1.Id = 403
+        Me.PieLabelsDataLabelsValueAndPercentBarItem1.Id = 180
         Me.PieLabelsDataLabelsValueAndPercentBarItem1.Name = "PieLabelsDataLabelsValueAndPercentBarItem1"
         '
         'PieLabelsDataLabelsArgumentAndPercentBarItem1
         '
-        Me.PieLabelsDataLabelsArgumentAndPercentBarItem1.Id = 404
+        Me.PieLabelsDataLabelsArgumentAndPercentBarItem1.Id = 181
         Me.PieLabelsDataLabelsArgumentAndPercentBarItem1.Name = "PieLabelsDataLabelsArgumentAndPercentBarItem1"
         '
         'PieLabelsDataLabelsArgumentValueAndPercentBarItem1
         '
-        Me.PieLabelsDataLabelsArgumentValueAndPercentBarItem1.Id = 405
+        Me.PieLabelsDataLabelsArgumentValueAndPercentBarItem1.Id = 182
         Me.PieLabelsDataLabelsArgumentValueAndPercentBarItem1.Name = "PieLabelsDataLabelsArgumentValueAndPercentBarItem1"
         '
         'PieLabelPositionBarItem1
         '
-        Me.PieLabelPositionBarItem1.Id = 406
+        Me.PieLabelPositionBarItem1.Id = 183
         Me.PieLabelPositionBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.PieLabelPositionOutsideBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PieLabelPositionInsideBarItem1)})
         Me.PieLabelPositionBarItem1.Name = "PieLabelPositionBarItem1"
         Me.PieLabelPositionBarItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu
         '
         'PieLabelPositionOutsideBarItem1
         '
-        Me.PieLabelPositionOutsideBarItem1.Id = 407
+        Me.PieLabelPositionOutsideBarItem1.Id = 184
         Me.PieLabelPositionOutsideBarItem1.Name = "PieLabelPositionOutsideBarItem1"
         '
         'PieLabelPositionInsideBarItem1
         '
-        Me.PieLabelPositionInsideBarItem1.Id = 408
+        Me.PieLabelPositionInsideBarItem1.Id = 185
         Me.PieLabelPositionInsideBarItem1.Name = "PieLabelPositionInsideBarItem1"
         '
         'PieTooltipsBarItem1
         '
-        Me.PieTooltipsBarItem1.Id = 409
+        Me.PieTooltipsBarItem1.Id = 186
         Me.PieTooltipsBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.PieLabelsTooltipsNoneBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PieLabelsTooltipsArgumentBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PieLabelsTooltipsValueBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PieLabelsTooltipsArgumentAndValueBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PieLabelsTooltipsPercentBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PieLabelsTooltipsValueAndPercentBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PieLabelsTooltipsArgumentAndPercentBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PieLabelsTooltipsArgumentValueAndPercentBarItem1)})
         Me.PieTooltipsBarItem1.Name = "PieTooltipsBarItem1"
         Me.PieTooltipsBarItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu
         '
         'PieLabelsTooltipsNoneBarItem1
         '
-        Me.PieLabelsTooltipsNoneBarItem1.Id = 410
+        Me.PieLabelsTooltipsNoneBarItem1.Id = 187
         Me.PieLabelsTooltipsNoneBarItem1.Name = "PieLabelsTooltipsNoneBarItem1"
         '
         'PieLabelsTooltipsArgumentBarItem1
         '
-        Me.PieLabelsTooltipsArgumentBarItem1.Id = 411
+        Me.PieLabelsTooltipsArgumentBarItem1.Id = 188
         Me.PieLabelsTooltipsArgumentBarItem1.Name = "PieLabelsTooltipsArgumentBarItem1"
         '
         'PieLabelsTooltipsValueBarItem1
         '
-        Me.PieLabelsTooltipsValueBarItem1.Id = 412
+        Me.PieLabelsTooltipsValueBarItem1.Id = 189
         Me.PieLabelsTooltipsValueBarItem1.Name = "PieLabelsTooltipsValueBarItem1"
         '
         'PieLabelsTooltipsArgumentAndValueBarItem1
         '
-        Me.PieLabelsTooltipsArgumentAndValueBarItem1.Id = 413
+        Me.PieLabelsTooltipsArgumentAndValueBarItem1.Id = 190
         Me.PieLabelsTooltipsArgumentAndValueBarItem1.Name = "PieLabelsTooltipsArgumentAndValueBarItem1"
         '
         'PieLabelsTooltipsPercentBarItem1
         '
-        Me.PieLabelsTooltipsPercentBarItem1.Id = 414
+        Me.PieLabelsTooltipsPercentBarItem1.Id = 191
         Me.PieLabelsTooltipsPercentBarItem1.Name = "PieLabelsTooltipsPercentBarItem1"
         '
         'PieLabelsTooltipsValueAndPercentBarItem1
         '
-        Me.PieLabelsTooltipsValueAndPercentBarItem1.Id = 415
+        Me.PieLabelsTooltipsValueAndPercentBarItem1.Id = 192
         Me.PieLabelsTooltipsValueAndPercentBarItem1.Name = "PieLabelsTooltipsValueAndPercentBarItem1"
         '
         'PieLabelsTooltipsArgumentAndPercentBarItem1
         '
-        Me.PieLabelsTooltipsArgumentAndPercentBarItem1.Id = 416
+        Me.PieLabelsTooltipsArgumentAndPercentBarItem1.Id = 193
         Me.PieLabelsTooltipsArgumentAndPercentBarItem1.Name = "PieLabelsTooltipsArgumentAndPercentBarItem1"
         '
         'PieLabelsTooltipsArgumentValueAndPercentBarItem1
         '
-        Me.PieLabelsTooltipsArgumentValueAndPercentBarItem1.Id = 417
+        Me.PieLabelsTooltipsArgumentValueAndPercentBarItem1.Id = 194
         Me.PieLabelsTooltipsArgumentValueAndPercentBarItem1.Name = "PieLabelsTooltipsArgumentValueAndPercentBarItem1"
         '
         'PieStylePieBarItem1
         '
-        Me.PieStylePieBarItem1.Id = 418
+        Me.PieStylePieBarItem1.Id = 195
         Me.PieStylePieBarItem1.Name = "PieStylePieBarItem1"
         '
         'PieStyleDonutBarItem1
         '
-        Me.PieStyleDonutBarItem1.Id = 419
+        Me.PieStyleDonutBarItem1.Id = 196
         Me.PieStyleDonutBarItem1.Name = "PieStyleDonutBarItem1"
         '
         'PieShowCaptionsBarItem1
         '
-        Me.PieShowCaptionsBarItem1.Id = 420
+        Me.PieShowCaptionsBarItem1.Id = 197
         Me.PieShowCaptionsBarItem1.Name = "PieShowCaptionsBarItem1"
         '
         'GaugeStyleFullCircularBarItem1
         '
-        Me.GaugeStyleFullCircularBarItem1.Id = 421
+        Me.GaugeStyleFullCircularBarItem1.Id = 198
         Me.GaugeStyleFullCircularBarItem1.Name = "GaugeStyleFullCircularBarItem1"
         '
         'GaugeStyleHalfCircularBarItem1
         '
-        Me.GaugeStyleHalfCircularBarItem1.Id = 422
+        Me.GaugeStyleHalfCircularBarItem1.Id = 199
         Me.GaugeStyleHalfCircularBarItem1.Name = "GaugeStyleHalfCircularBarItem1"
         '
         'GaugeStyleLeftQuarterCircularBarItem1
         '
-        Me.GaugeStyleLeftQuarterCircularBarItem1.Id = 423
+        Me.GaugeStyleLeftQuarterCircularBarItem1.Id = 200
         Me.GaugeStyleLeftQuarterCircularBarItem1.Name = "GaugeStyleLeftQuarterCircularBarItem1"
         '
         'GaugeStyleRightQuarterCircularBarItem1
         '
-        Me.GaugeStyleRightQuarterCircularBarItem1.Id = 424
+        Me.GaugeStyleRightQuarterCircularBarItem1.Id = 201
         Me.GaugeStyleRightQuarterCircularBarItem1.Name = "GaugeStyleRightQuarterCircularBarItem1"
         '
         'GaugeStyleThreeForthCircularBarItem1
         '
-        Me.GaugeStyleThreeForthCircularBarItem1.Id = 425
+        Me.GaugeStyleThreeForthCircularBarItem1.Id = 202
         Me.GaugeStyleThreeForthCircularBarItem1.Name = "GaugeStyleThreeForthCircularBarItem1"
         '
         'GaugeStyleLinearHorizontalBarItem1
         '
-        Me.GaugeStyleLinearHorizontalBarItem1.Id = 426
+        Me.GaugeStyleLinearHorizontalBarItem1.Id = 203
         Me.GaugeStyleLinearHorizontalBarItem1.Name = "GaugeStyleLinearHorizontalBarItem1"
         '
         'GaugeStyleLinearVerticalBarItem1
         '
-        Me.GaugeStyleLinearVerticalBarItem1.Id = 427
+        Me.GaugeStyleLinearVerticalBarItem1.Id = 204
         Me.GaugeStyleLinearVerticalBarItem1.Name = "GaugeStyleLinearVerticalBarItem1"
         '
         'GaugeShowCaptionsBarItem1
         '
-        Me.GaugeShowCaptionsBarItem1.Id = 428
+        Me.GaugeShowCaptionsBarItem1.Id = 205
         Me.GaugeShowCaptionsBarItem1.Name = "GaugeShowCaptionsBarItem1"
         '
         'GalleryRangeFilterSeriesTypeItem1
@@ -2614,89 +2513,89 @@ Partial Class frmDashboardDesigner
         RangeBarSeriesGalleryGroup1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {RangeBarSeriesGalleryItem1, RangeStackedBarSeriesGalleryItem1, RangeFullStackedBarSeriesGalleryItem1})
         Me.GalleryRangeFilterSeriesTypeItem1.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {RangePointLineSeriesGalleryGroup1, RangeAreaSeriesGalleryGroup1, RangeBarSeriesGalleryGroup1})
         Me.GalleryRangeFilterSeriesTypeItem1.Gallery.ImageSize = New System.Drawing.Size(32, 32)
-        Me.GalleryRangeFilterSeriesTypeItem1.Id = 429
+        Me.GalleryRangeFilterSeriesTypeItem1.Id = 206
         Me.GalleryRangeFilterSeriesTypeItem1.Name = "GalleryRangeFilterSeriesTypeItem1"
         '
         'RangeFilterEditDateTimePeriodsBarItem1
         '
-        Me.RangeFilterEditDateTimePeriodsBarItem1.Id = 430
+        Me.RangeFilterEditDateTimePeriodsBarItem1.Id = 207
         Me.RangeFilterEditDateTimePeriodsBarItem1.Name = "RangeFilterEditDateTimePeriodsBarItem1"
         '
         'MapLoadBarItem1
         '
-        Me.MapLoadBarItem1.Id = 431
+        Me.MapLoadBarItem1.Id = 208
         Me.MapLoadBarItem1.Name = "MapLoadBarItem1"
         '
         'MapImportBarItem1
         '
-        Me.MapImportBarItem1.Id = 432
+        Me.MapImportBarItem1.Id = 209
         Me.MapImportBarItem1.Name = "MapImportBarItem1"
         '
         'MapDefaultShapefileBarItem1
         '
-        Me.MapDefaultShapefileBarItem1.Id = 433
+        Me.MapDefaultShapefileBarItem1.Id = 210
         Me.MapDefaultShapefileBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.MapWorldCountriesBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.MapEuropeBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.MapAsiaBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.MapNorthAmericaBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.MapSouthAmericaBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.MapAfricaBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.MapUSABarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.MapCanadaBarItem1)})
         Me.MapDefaultShapefileBarItem1.Name = "MapDefaultShapefileBarItem1"
         Me.MapDefaultShapefileBarItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu
         '
         'MapWorldCountriesBarItem1
         '
-        Me.MapWorldCountriesBarItem1.Id = 434
+        Me.MapWorldCountriesBarItem1.Id = 211
         Me.MapWorldCountriesBarItem1.Name = "MapWorldCountriesBarItem1"
         '
         'MapEuropeBarItem1
         '
-        Me.MapEuropeBarItem1.Id = 435
+        Me.MapEuropeBarItem1.Id = 212
         Me.MapEuropeBarItem1.Name = "MapEuropeBarItem1"
         '
         'MapAsiaBarItem1
         '
-        Me.MapAsiaBarItem1.Id = 436
+        Me.MapAsiaBarItem1.Id = 213
         Me.MapAsiaBarItem1.Name = "MapAsiaBarItem1"
         '
         'MapNorthAmericaBarItem1
         '
-        Me.MapNorthAmericaBarItem1.Id = 437
+        Me.MapNorthAmericaBarItem1.Id = 214
         Me.MapNorthAmericaBarItem1.Name = "MapNorthAmericaBarItem1"
         '
         'MapSouthAmericaBarItem1
         '
-        Me.MapSouthAmericaBarItem1.Id = 438
+        Me.MapSouthAmericaBarItem1.Id = 215
         Me.MapSouthAmericaBarItem1.Name = "MapSouthAmericaBarItem1"
         '
         'MapAfricaBarItem1
         '
-        Me.MapAfricaBarItem1.Id = 439
+        Me.MapAfricaBarItem1.Id = 216
         Me.MapAfricaBarItem1.Name = "MapAfricaBarItem1"
         '
         'MapUSABarItem1
         '
-        Me.MapUSABarItem1.Id = 440
+        Me.MapUSABarItem1.Id = 217
         Me.MapUSABarItem1.Name = "MapUSABarItem1"
         '
         'MapCanadaBarItem1
         '
-        Me.MapCanadaBarItem1.Id = 441
+        Me.MapCanadaBarItem1.Id = 218
         Me.MapCanadaBarItem1.Name = "MapCanadaBarItem1"
         '
         'MapLockNavigationBarItem1
         '
-        Me.MapLockNavigationBarItem1.Id = 442
+        Me.MapLockNavigationBarItem1.Id = 219
         Me.MapLockNavigationBarItem1.Name = "MapLockNavigationBarItem1"
         '
         'MapFullExtentBarItem1
         '
-        Me.MapFullExtentBarItem1.Id = 443
+        Me.MapFullExtentBarItem1.Id = 220
         Me.MapFullExtentBarItem1.Name = "MapFullExtentBarItem1"
         '
         'ChoroplethMapShapeLabelsAttributeBarItem1
         '
-        Me.ChoroplethMapShapeLabelsAttributeBarItem1.Id = 444
+        Me.ChoroplethMapShapeLabelsAttributeBarItem1.Id = 221
         Me.ChoroplethMapShapeLabelsAttributeBarItem1.Name = "ChoroplethMapShapeLabelsAttributeBarItem1"
         '
         'MapShowLegendBarItem1
         '
-        Me.MapShowLegendBarItem1.Id = 445
+        Me.MapShowLegendBarItem1.Id = 222
         Me.MapShowLegendBarItem1.Name = "MapShowLegendBarItem1"
         '
         'GalleryMapLegendPositionItem1
@@ -2722,39 +2621,39 @@ Partial Class frmDashboardDesigner
         Me.GalleryMapLegendPositionItem1.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {MapVerticalLegendGalleryGroup1, MapHorizontalLegendGalleryGroup1})
         Me.GalleryMapLegendPositionItem1.Gallery.ImageSize = New System.Drawing.Size(32, 32)
         Me.GalleryMapLegendPositionItem1.Gallery.RowCount = 4
-        Me.GalleryMapLegendPositionItem1.Id = 446
+        Me.GalleryMapLegendPositionItem1.Id = 223
         Me.GalleryMapLegendPositionItem1.Name = "GalleryMapLegendPositionItem1"
         '
         'GeoPointMapClusterizationBarItem1
         '
-        Me.GeoPointMapClusterizationBarItem1.Id = 447
+        Me.GeoPointMapClusterizationBarItem1.Id = 224
         Me.GeoPointMapClusterizationBarItem1.Name = "GeoPointMapClusterizationBarItem1"
         '
         'MapShapeTitleAttributeBarItem1
         '
-        Me.MapShapeTitleAttributeBarItem1.Id = 448
+        Me.MapShapeTitleAttributeBarItem1.Id = 225
         Me.MapShapeTitleAttributeBarItem1.Name = "MapShapeTitleAttributeBarItem1"
         '
         'ChangeWeightedLegendTypeBarItem1
         '
-        Me.ChangeWeightedLegendTypeBarItem1.Id = 449
+        Me.ChangeWeightedLegendTypeBarItem1.Id = 226
         Me.ChangeWeightedLegendTypeBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.WeightedLegendNoneBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.WeightedLegendLinearBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.WeightedLegendNestedBarItem1)})
         Me.ChangeWeightedLegendTypeBarItem1.Name = "ChangeWeightedLegendTypeBarItem1"
         Me.ChangeWeightedLegendTypeBarItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu
         '
         'WeightedLegendNoneBarItem1
         '
-        Me.WeightedLegendNoneBarItem1.Id = 450
+        Me.WeightedLegendNoneBarItem1.Id = 227
         Me.WeightedLegendNoneBarItem1.Name = "WeightedLegendNoneBarItem1"
         '
         'WeightedLegendLinearBarItem1
         '
-        Me.WeightedLegendLinearBarItem1.Id = 451
+        Me.WeightedLegendLinearBarItem1.Id = 228
         Me.WeightedLegendLinearBarItem1.Name = "WeightedLegendLinearBarItem1"
         '
         'WeightedLegendNestedBarItem1
         '
-        Me.WeightedLegendNestedBarItem1.Id = 452
+        Me.WeightedLegendNestedBarItem1.Id = 229
         Me.WeightedLegendNestedBarItem1.Name = "WeightedLegendNestedBarItem1"
         '
         'GalleryWeightedLegendPositionItem1
@@ -2773,464 +2672,464 @@ Partial Class frmDashboardDesigner
         Me.GalleryWeightedLegendPositionItem1.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {MapWeightedLegendGalleryGroup1})
         Me.GalleryWeightedLegendPositionItem1.Gallery.ImageSize = New System.Drawing.Size(32, 32)
         Me.GalleryWeightedLegendPositionItem1.Gallery.RowCount = 2
-        Me.GalleryWeightedLegendPositionItem1.Id = 453
+        Me.GalleryWeightedLegendPositionItem1.Id = 230
         Me.GalleryWeightedLegendPositionItem1.Name = "GalleryWeightedLegendPositionItem1"
         '
         'PieMapIsWeightedBarItem1
         '
-        Me.PieMapIsWeightedBarItem1.Id = 454
+        Me.PieMapIsWeightedBarItem1.Id = 231
         Me.PieMapIsWeightedBarItem1.Name = "PieMapIsWeightedBarItem1"
         '
         'ComboBoxStandardTypeBarItem1
         '
-        Me.ComboBoxStandardTypeBarItem1.Id = 455
+        Me.ComboBoxStandardTypeBarItem1.Id = 232
         Me.ComboBoxStandardTypeBarItem1.Name = "ComboBoxStandardTypeBarItem1"
         '
         'ComboBoxCheckedTypeBarItem1
         '
-        Me.ComboBoxCheckedTypeBarItem1.Id = 456
+        Me.ComboBoxCheckedTypeBarItem1.Id = 233
         Me.ComboBoxCheckedTypeBarItem1.Name = "ComboBoxCheckedTypeBarItem1"
         '
         'ListBoxCheckedTypeBarItem1
         '
-        Me.ListBoxCheckedTypeBarItem1.Id = 457
+        Me.ListBoxCheckedTypeBarItem1.Id = 234
         Me.ListBoxCheckedTypeBarItem1.Name = "ListBoxCheckedTypeBarItem1"
         '
         'ListBoxRadioTypeBarItem1
         '
-        Me.ListBoxRadioTypeBarItem1.Id = 458
+        Me.ListBoxRadioTypeBarItem1.Id = 235
         Me.ListBoxRadioTypeBarItem1.Name = "ListBoxRadioTypeBarItem1"
         '
         'FilterElementShowAllValueBarItem1
         '
-        Me.FilterElementShowAllValueBarItem1.Id = 459
+        Me.FilterElementShowAllValueBarItem1.Id = 236
         Me.FilterElementShowAllValueBarItem1.Name = "FilterElementShowAllValueBarItem1"
         '
         'FilterElementEnableSearchBarItem1
         '
-        Me.FilterElementEnableSearchBarItem1.Id = 460
+        Me.FilterElementEnableSearchBarItem1.Id = 237
         Me.FilterElementEnableSearchBarItem1.Name = "FilterElementEnableSearchBarItem1"
         '
         'TreeViewAutoExpandBarItem1
         '
-        Me.TreeViewAutoExpandBarItem1.Id = 461
+        Me.TreeViewAutoExpandBarItem1.Id = 238
         Me.TreeViewAutoExpandBarItem1.Name = "TreeViewAutoExpandBarItem1"
         '
         'DateFilterTypeBarItem1
         '
-        Me.DateFilterTypeBarItem1.Id = 462
+        Me.DateFilterTypeBarItem1.Id = 239
         Me.DateFilterTypeBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.DateFilterExactTypeBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.DateFilterFromTypeBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.DateFilterToTypeBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.DateFilterRangeTypeBarItem1)})
         Me.DateFilterTypeBarItem1.Name = "DateFilterTypeBarItem1"
         Me.DateFilterTypeBarItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
         '
         'DateFilterExactTypeBarItem1
         '
-        Me.DateFilterExactTypeBarItem1.Id = 463
+        Me.DateFilterExactTypeBarItem1.Id = 240
         Me.DateFilterExactTypeBarItem1.Name = "DateFilterExactTypeBarItem1"
         '
         'DateFilterFromTypeBarItem1
         '
-        Me.DateFilterFromTypeBarItem1.Id = 464
+        Me.DateFilterFromTypeBarItem1.Id = 241
         Me.DateFilterFromTypeBarItem1.Name = "DateFilterFromTypeBarItem1"
         '
         'DateFilterToTypeBarItem1
         '
-        Me.DateFilterToTypeBarItem1.Id = 465
+        Me.DateFilterToTypeBarItem1.Id = 242
         Me.DateFilterToTypeBarItem1.Name = "DateFilterToTypeBarItem1"
         '
         'DateFilterRangeTypeBarItem1
         '
-        Me.DateFilterRangeTypeBarItem1.Id = 466
+        Me.DateFilterRangeTypeBarItem1.Id = 243
         Me.DateFilterRangeTypeBarItem1.Name = "DateFilterRangeTypeBarItem1"
         '
         'DateFilterArrangementModeBarItem1
         '
-        Me.DateFilterArrangementModeBarItem1.Id = 467
+        Me.DateFilterArrangementModeBarItem1.Id = 244
         Me.DateFilterArrangementModeBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.DateFilterAutoHeightArrangementModeBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.DateFilterHorizontalArrangementModeBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.DateFilterVerticalArrangementModeBarItem1)})
         Me.DateFilterArrangementModeBarItem1.Name = "DateFilterArrangementModeBarItem1"
         Me.DateFilterArrangementModeBarItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
         '
         'DateFilterAutoHeightArrangementModeBarItem1
         '
-        Me.DateFilterAutoHeightArrangementModeBarItem1.Id = 468
+        Me.DateFilterAutoHeightArrangementModeBarItem1.Id = 245
         Me.DateFilterAutoHeightArrangementModeBarItem1.Name = "DateFilterAutoHeightArrangementModeBarItem1"
         '
         'DateFilterHorizontalArrangementModeBarItem1
         '
-        Me.DateFilterHorizontalArrangementModeBarItem1.Id = 469
+        Me.DateFilterHorizontalArrangementModeBarItem1.Id = 246
         Me.DateFilterHorizontalArrangementModeBarItem1.Name = "DateFilterHorizontalArrangementModeBarItem1"
         '
         'DateFilterVerticalArrangementModeBarItem1
         '
-        Me.DateFilterVerticalArrangementModeBarItem1.Id = 470
+        Me.DateFilterVerticalArrangementModeBarItem1.Id = 247
         Me.DateFilterVerticalArrangementModeBarItem1.Name = "DateFilterVerticalArrangementModeBarItem1"
         '
         'DateFilterDatePickerLocationBarItem1
         '
-        Me.DateFilterDatePickerLocationBarItem1.Id = 471
+        Me.DateFilterDatePickerLocationBarItem1.Id = 248
         Me.DateFilterDatePickerLocationBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.DateFilterFarDatePickerLocationBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.DateFilterNearDatePickerLocationBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.DateFilterHiddenDatePickerLocationBarItem1)})
         Me.DateFilterDatePickerLocationBarItem1.Name = "DateFilterDatePickerLocationBarItem1"
         Me.DateFilterDatePickerLocationBarItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
         '
         'DateFilterFarDatePickerLocationBarItem1
         '
-        Me.DateFilterFarDatePickerLocationBarItem1.Id = 472
+        Me.DateFilterFarDatePickerLocationBarItem1.Id = 249
         Me.DateFilterFarDatePickerLocationBarItem1.Name = "DateFilterFarDatePickerLocationBarItem1"
         '
         'DateFilterNearDatePickerLocationBarItem1
         '
-        Me.DateFilterNearDatePickerLocationBarItem1.Id = 473
+        Me.DateFilterNearDatePickerLocationBarItem1.Id = 250
         Me.DateFilterNearDatePickerLocationBarItem1.Name = "DateFilterNearDatePickerLocationBarItem1"
         '
         'DateFilterHiddenDatePickerLocationBarItem1
         '
-        Me.DateFilterHiddenDatePickerLocationBarItem1.Id = 474
+        Me.DateFilterHiddenDatePickerLocationBarItem1.Id = 251
         Me.DateFilterHiddenDatePickerLocationBarItem1.Name = "DateFilterHiddenDatePickerLocationBarItem1"
         '
         'DateFilterEditDateTimePeriodsBarItem1
         '
-        Me.DateFilterEditDateTimePeriodsBarItem1.Id = 475
+        Me.DateFilterEditDateTimePeriodsBarItem1.Id = 252
         Me.DateFilterEditDateTimePeriodsBarItem1.Name = "DateFilterEditDateTimePeriodsBarItem1"
         '
         'ImageSizeModeClipBarItem1
         '
-        Me.ImageSizeModeClipBarItem1.Id = 476
+        Me.ImageSizeModeClipBarItem1.Id = 253
         Me.ImageSizeModeClipBarItem1.Name = "ImageSizeModeClipBarItem1"
         '
         'ImageSizeModeStretchBarItem1
         '
-        Me.ImageSizeModeStretchBarItem1.Id = 477
+        Me.ImageSizeModeStretchBarItem1.Id = 254
         Me.ImageSizeModeStretchBarItem1.Name = "ImageSizeModeStretchBarItem1"
         '
         'ImageSizeModeSqueezeBarItem1
         '
-        Me.ImageSizeModeSqueezeBarItem1.Id = 478
+        Me.ImageSizeModeSqueezeBarItem1.Id = 255
         Me.ImageSizeModeSqueezeBarItem1.Name = "ImageSizeModeSqueezeBarItem1"
         '
         'ImageSizeModeZoomBarItem1
         '
-        Me.ImageSizeModeZoomBarItem1.Id = 479
+        Me.ImageSizeModeZoomBarItem1.Id = 256
         Me.ImageSizeModeZoomBarItem1.Name = "ImageSizeModeZoomBarItem1"
         '
         'ImageAlignmentTopLeftBarItem1
         '
-        Me.ImageAlignmentTopLeftBarItem1.Id = 480
+        Me.ImageAlignmentTopLeftBarItem1.Id = 257
         Me.ImageAlignmentTopLeftBarItem1.Name = "ImageAlignmentTopLeftBarItem1"
         Me.ImageAlignmentTopLeftBarItem1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText
         '
         'ImageAlignmentCenterLeftBarItem1
         '
-        Me.ImageAlignmentCenterLeftBarItem1.Id = 481
+        Me.ImageAlignmentCenterLeftBarItem1.Id = 258
         Me.ImageAlignmentCenterLeftBarItem1.Name = "ImageAlignmentCenterLeftBarItem1"
         Me.ImageAlignmentCenterLeftBarItem1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText
         '
         'ImageAlignmentBottomLeftBarItem1
         '
-        Me.ImageAlignmentBottomLeftBarItem1.Id = 482
+        Me.ImageAlignmentBottomLeftBarItem1.Id = 259
         Me.ImageAlignmentBottomLeftBarItem1.Name = "ImageAlignmentBottomLeftBarItem1"
         Me.ImageAlignmentBottomLeftBarItem1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText
         '
         'ImageAlignmentTopCenterBarItem1
         '
-        Me.ImageAlignmentTopCenterBarItem1.Id = 483
+        Me.ImageAlignmentTopCenterBarItem1.Id = 260
         Me.ImageAlignmentTopCenterBarItem1.Name = "ImageAlignmentTopCenterBarItem1"
         Me.ImageAlignmentTopCenterBarItem1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText
         '
         'ImageAlignmentCenterCenterBarItem1
         '
-        Me.ImageAlignmentCenterCenterBarItem1.Id = 484
+        Me.ImageAlignmentCenterCenterBarItem1.Id = 261
         Me.ImageAlignmentCenterCenterBarItem1.Name = "ImageAlignmentCenterCenterBarItem1"
         Me.ImageAlignmentCenterCenterBarItem1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText
         '
         'ImageAlignmentBottomCenterBarItem1
         '
-        Me.ImageAlignmentBottomCenterBarItem1.Id = 485
+        Me.ImageAlignmentBottomCenterBarItem1.Id = 262
         Me.ImageAlignmentBottomCenterBarItem1.Name = "ImageAlignmentBottomCenterBarItem1"
         Me.ImageAlignmentBottomCenterBarItem1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText
         '
         'ImageAlignmentTopRightBarItem1
         '
-        Me.ImageAlignmentTopRightBarItem1.Id = 486
+        Me.ImageAlignmentTopRightBarItem1.Id = 263
         Me.ImageAlignmentTopRightBarItem1.Name = "ImageAlignmentTopRightBarItem1"
         Me.ImageAlignmentTopRightBarItem1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText
         '
         'ImageAlignmentCenterRightBarItem1
         '
-        Me.ImageAlignmentCenterRightBarItem1.Id = 487
+        Me.ImageAlignmentCenterRightBarItem1.Id = 264
         Me.ImageAlignmentCenterRightBarItem1.Name = "ImageAlignmentCenterRightBarItem1"
         Me.ImageAlignmentCenterRightBarItem1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText
         '
         'ImageAlignmentBottomRightBarItem1
         '
-        Me.ImageAlignmentBottomRightBarItem1.Id = 488
+        Me.ImageAlignmentBottomRightBarItem1.Id = 265
         Me.ImageAlignmentBottomRightBarItem1.Name = "ImageAlignmentBottomRightBarItem1"
         Me.ImageAlignmentBottomRightBarItem1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText
         '
         'TextBoxEditTextBarItem1
         '
-        Me.TextBoxEditTextBarItem1.Id = 489
+        Me.TextBoxEditTextBarItem1.Id = 266
         Me.TextBoxEditTextBarItem1.Name = "TextBoxEditTextBarItem1"
         '
         'TextBoxInsertFieldBarItem1
         '
-        Me.TextBoxInsertFieldBarItem1.Id = 490
+        Me.TextBoxInsertFieldBarItem1.Id = 267
         Me.TextBoxInsertFieldBarItem1.Name = "TextBoxInsertFieldBarItem1"
         '
         'TreemapSliceAndDiceLayoutAlgorithmBarItem1
         '
-        Me.TreemapSliceAndDiceLayoutAlgorithmBarItem1.Id = 491
+        Me.TreemapSliceAndDiceLayoutAlgorithmBarItem1.Id = 268
         Me.TreemapSliceAndDiceLayoutAlgorithmBarItem1.Name = "TreemapSliceAndDiceLayoutAlgorithmBarItem1"
         '
         'TreemapSquarifiedLayoutAlgorithmBarItem1
         '
-        Me.TreemapSquarifiedLayoutAlgorithmBarItem1.Id = 492
+        Me.TreemapSquarifiedLayoutAlgorithmBarItem1.Id = 269
         Me.TreemapSquarifiedLayoutAlgorithmBarItem1.Name = "TreemapSquarifiedLayoutAlgorithmBarItem1"
         '
         'TreemapStripedLayoutAlgorithmBarItem1
         '
-        Me.TreemapStripedLayoutAlgorithmBarItem1.Id = 493
+        Me.TreemapStripedLayoutAlgorithmBarItem1.Id = 270
         Me.TreemapStripedLayoutAlgorithmBarItem1.Name = "TreemapStripedLayoutAlgorithmBarItem1"
         '
         'TreemapLayoutDirectionBarItem1
         '
-        Me.TreemapLayoutDirectionBarItem1.Id = 494
+        Me.TreemapLayoutDirectionBarItem1.Id = 271
         Me.TreemapLayoutDirectionBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.TreemapBottomLeftToTopRightLayoutDirectionBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.TreemapBottomRightToTopLeftLayoutDirectionBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.TreemapTopLeftToBottomRightLayoutDirectionBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.TreemapTopRightToBottomLeftLayoutDirectionBarItem1)})
         Me.TreemapLayoutDirectionBarItem1.Name = "TreemapLayoutDirectionBarItem1"
         Me.TreemapLayoutDirectionBarItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
         '
         'TreemapBottomLeftToTopRightLayoutDirectionBarItem1
         '
-        Me.TreemapBottomLeftToTopRightLayoutDirectionBarItem1.Id = 495
+        Me.TreemapBottomLeftToTopRightLayoutDirectionBarItem1.Id = 272
         Me.TreemapBottomLeftToTopRightLayoutDirectionBarItem1.Name = "TreemapBottomLeftToTopRightLayoutDirectionBarItem1"
         '
         'TreemapBottomRightToTopLeftLayoutDirectionBarItem1
         '
-        Me.TreemapBottomRightToTopLeftLayoutDirectionBarItem1.Id = 496
+        Me.TreemapBottomRightToTopLeftLayoutDirectionBarItem1.Id = 273
         Me.TreemapBottomRightToTopLeftLayoutDirectionBarItem1.Name = "TreemapBottomRightToTopLeftLayoutDirectionBarItem1"
         '
         'TreemapTopLeftToBottomRightLayoutDirectionBarItem1
         '
-        Me.TreemapTopLeftToBottomRightLayoutDirectionBarItem1.Id = 497
+        Me.TreemapTopLeftToBottomRightLayoutDirectionBarItem1.Id = 274
         Me.TreemapTopLeftToBottomRightLayoutDirectionBarItem1.Name = "TreemapTopLeftToBottomRightLayoutDirectionBarItem1"
         '
         'TreemapTopRightToBottomLeftLayoutDirectionBarItem1
         '
-        Me.TreemapTopRightToBottomLeftLayoutDirectionBarItem1.Id = 498
+        Me.TreemapTopRightToBottomLeftLayoutDirectionBarItem1.Id = 275
         Me.TreemapTopRightToBottomLeftLayoutDirectionBarItem1.Name = "TreemapTopRightToBottomLeftLayoutDirectionBarItem1"
         '
         'TreemapTileLabelsBarItem1
         '
-        Me.TreemapTileLabelsBarItem1.Id = 499
+        Me.TreemapTileLabelsBarItem1.Id = 276
         Me.TreemapTileLabelsBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.TreemapTileLabelsNoneBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.TreemapTileLabelsArgumentBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.TreemapTileLabelsValueBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.TreemapTileLabelsArgumentAndValueBarItem1)})
         Me.TreemapTileLabelsBarItem1.Name = "TreemapTileLabelsBarItem1"
         Me.TreemapTileLabelsBarItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu
         '
         'TreemapTileLabelsNoneBarItem1
         '
-        Me.TreemapTileLabelsNoneBarItem1.Id = 500
+        Me.TreemapTileLabelsNoneBarItem1.Id = 277
         Me.TreemapTileLabelsNoneBarItem1.Name = "TreemapTileLabelsNoneBarItem1"
         '
         'TreemapTileLabelsArgumentBarItem1
         '
-        Me.TreemapTileLabelsArgumentBarItem1.Id = 501
+        Me.TreemapTileLabelsArgumentBarItem1.Id = 278
         Me.TreemapTileLabelsArgumentBarItem1.Name = "TreemapTileLabelsArgumentBarItem1"
         '
         'TreemapTileLabelsValueBarItem1
         '
-        Me.TreemapTileLabelsValueBarItem1.Id = 502
+        Me.TreemapTileLabelsValueBarItem1.Id = 279
         Me.TreemapTileLabelsValueBarItem1.Name = "TreemapTileLabelsValueBarItem1"
         '
         'TreemapTileLabelsArgumentAndValueBarItem1
         '
-        Me.TreemapTileLabelsArgumentAndValueBarItem1.Id = 503
+        Me.TreemapTileLabelsArgumentAndValueBarItem1.Id = 280
         Me.TreemapTileLabelsArgumentAndValueBarItem1.Name = "TreemapTileLabelsArgumentAndValueBarItem1"
         '
         'TreemapTileTooltipsBarItem1
         '
-        Me.TreemapTileTooltipsBarItem1.Id = 504
+        Me.TreemapTileTooltipsBarItem1.Id = 281
         Me.TreemapTileTooltipsBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.TreemapTileTooltipsNoneBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.TreemapTileTooltipsArgumentBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.TreemapTileTooltipsValueBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.TreemapTileTooltipsArgumentAndValueBarItem1)})
         Me.TreemapTileTooltipsBarItem1.Name = "TreemapTileTooltipsBarItem1"
         Me.TreemapTileTooltipsBarItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu
         '
         'TreemapTileTooltipsNoneBarItem1
         '
-        Me.TreemapTileTooltipsNoneBarItem1.Id = 505
+        Me.TreemapTileTooltipsNoneBarItem1.Id = 282
         Me.TreemapTileTooltipsNoneBarItem1.Name = "TreemapTileTooltipsNoneBarItem1"
         '
         'TreemapTileTooltipsArgumentBarItem1
         '
-        Me.TreemapTileTooltipsArgumentBarItem1.Id = 506
+        Me.TreemapTileTooltipsArgumentBarItem1.Id = 283
         Me.TreemapTileTooltipsArgumentBarItem1.Name = "TreemapTileTooltipsArgumentBarItem1"
         '
         'TreemapTileTooltipsValueBarItem1
         '
-        Me.TreemapTileTooltipsValueBarItem1.Id = 507
+        Me.TreemapTileTooltipsValueBarItem1.Id = 284
         Me.TreemapTileTooltipsValueBarItem1.Name = "TreemapTileTooltipsValueBarItem1"
         '
         'TreemapTileTooltipsArgumentAndValueBarItem1
         '
-        Me.TreemapTileTooltipsArgumentAndValueBarItem1.Id = 508
+        Me.TreemapTileTooltipsArgumentAndValueBarItem1.Id = 285
         Me.TreemapTileTooltipsArgumentAndValueBarItem1.Name = "TreemapTileTooltipsArgumentAndValueBarItem1"
         '
         'TreemapGroupLabelsBarItem1
         '
-        Me.TreemapGroupLabelsBarItem1.Id = 509
+        Me.TreemapGroupLabelsBarItem1.Id = 286
         Me.TreemapGroupLabelsBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.TreemapGroupLabelsNoneBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.TreemapGroupLabelsArgumentBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.TreemapGroupLabelsValueBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.TreemapGroupLabelsArgumentAndValueBarItem1)})
         Me.TreemapGroupLabelsBarItem1.Name = "TreemapGroupLabelsBarItem1"
         Me.TreemapGroupLabelsBarItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu
         '
         'TreemapGroupLabelsNoneBarItem1
         '
-        Me.TreemapGroupLabelsNoneBarItem1.Id = 510
+        Me.TreemapGroupLabelsNoneBarItem1.Id = 287
         Me.TreemapGroupLabelsNoneBarItem1.Name = "TreemapGroupLabelsNoneBarItem1"
         '
         'TreemapGroupLabelsArgumentBarItem1
         '
-        Me.TreemapGroupLabelsArgumentBarItem1.Id = 511
+        Me.TreemapGroupLabelsArgumentBarItem1.Id = 288
         Me.TreemapGroupLabelsArgumentBarItem1.Name = "TreemapGroupLabelsArgumentBarItem1"
         '
         'TreemapGroupLabelsValueBarItem1
         '
-        Me.TreemapGroupLabelsValueBarItem1.Id = 512
+        Me.TreemapGroupLabelsValueBarItem1.Id = 289
         Me.TreemapGroupLabelsValueBarItem1.Name = "TreemapGroupLabelsValueBarItem1"
         '
         'TreemapGroupLabelsArgumentAndValueBarItem1
         '
-        Me.TreemapGroupLabelsArgumentAndValueBarItem1.Id = 513
+        Me.TreemapGroupLabelsArgumentAndValueBarItem1.Id = 290
         Me.TreemapGroupLabelsArgumentAndValueBarItem1.Name = "TreemapGroupLabelsArgumentAndValueBarItem1"
         '
         'TreemapGroupTooltipsBarItem1
         '
-        Me.TreemapGroupTooltipsBarItem1.Id = 514
+        Me.TreemapGroupTooltipsBarItem1.Id = 291
         Me.TreemapGroupTooltipsBarItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.TreemapGroupTooltipsNoneBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.TreemapGroupTooltipsArgumentBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.TreemapGroupTooltipsValueBarItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.TreemapGroupTooltipsArgumentAndValueBarItem1)})
         Me.TreemapGroupTooltipsBarItem1.Name = "TreemapGroupTooltipsBarItem1"
         Me.TreemapGroupTooltipsBarItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu
         '
         'TreemapGroupTooltipsNoneBarItem1
         '
-        Me.TreemapGroupTooltipsNoneBarItem1.Id = 515
+        Me.TreemapGroupTooltipsNoneBarItem1.Id = 292
         Me.TreemapGroupTooltipsNoneBarItem1.Name = "TreemapGroupTooltipsNoneBarItem1"
         '
         'TreemapGroupTooltipsArgumentBarItem1
         '
-        Me.TreemapGroupTooltipsArgumentBarItem1.Id = 516
+        Me.TreemapGroupTooltipsArgumentBarItem1.Id = 293
         Me.TreemapGroupTooltipsArgumentBarItem1.Name = "TreemapGroupTooltipsArgumentBarItem1"
         '
         'TreemapGroupTooltipsValueBarItem1
         '
-        Me.TreemapGroupTooltipsValueBarItem1.Id = 517
+        Me.TreemapGroupTooltipsValueBarItem1.Id = 294
         Me.TreemapGroupTooltipsValueBarItem1.Name = "TreemapGroupTooltipsValueBarItem1"
         '
         'TreemapGroupTooltipsArgumentAndValueBarItem1
         '
-        Me.TreemapGroupTooltipsArgumentAndValueBarItem1.Id = 518
+        Me.TreemapGroupTooltipsArgumentAndValueBarItem1.Id = 295
         Me.TreemapGroupTooltipsArgumentAndValueBarItem1.Name = "TreemapGroupTooltipsArgumentAndValueBarItem1"
         '
         'ImageLoadBarItem1
         '
-        Me.ImageLoadBarItem1.Id = 519
+        Me.ImageLoadBarItem1.Id = 296
         Me.ImageLoadBarItem1.Name = "ImageLoadBarItem1"
         '
         'ImageImportBarItem1
         '
-        Me.ImageImportBarItem1.Id = 520
+        Me.ImageImportBarItem1.Id = 297
         Me.ImageImportBarItem1.Name = "ImageImportBarItem1"
         '
         'GroupMasterFilterBarItem1
         '
-        Me.GroupMasterFilterBarItem1.Id = 521
+        Me.GroupMasterFilterBarItem1.Id = 298
         Me.GroupMasterFilterBarItem1.Name = "GroupMasterFilterBarItem1"
         '
         'GroupIgnoreMasterFilterBarItem1
         '
-        Me.GroupIgnoreMasterFilterBarItem1.Id = 522
+        Me.GroupIgnoreMasterFilterBarItem1.Id = 299
         Me.GroupIgnoreMasterFilterBarItem1.Name = "GroupIgnoreMasterFilterBarItem1"
         '
         'ShowGroupCaptionBarItem1
         '
-        Me.ShowGroupCaptionBarItem1.Id = 523
+        Me.ShowGroupCaptionBarItem1.Id = 300
         Me.ShowGroupCaptionBarItem1.Name = "ShowGroupCaptionBarItem1"
         '
         'EditGroupNamesBarItem1
         '
-        Me.EditGroupNamesBarItem1.Id = 524
+        Me.EditGroupNamesBarItem1.Id = 301
         Me.EditGroupNamesBarItem1.Name = "EditGroupNamesBarItem1"
         '
         'TabPageMasterFilterBarItem1
         '
-        Me.TabPageMasterFilterBarItem1.Id = 525
+        Me.TabPageMasterFilterBarItem1.Id = 302
         Me.TabPageMasterFilterBarItem1.Name = "TabPageMasterFilterBarItem1"
         '
         'TabPageIgnoreMasterFilterBarItem1
         '
-        Me.TabPageIgnoreMasterFilterBarItem1.Id = 526
+        Me.TabPageIgnoreMasterFilterBarItem1.Id = 303
         Me.TabPageIgnoreMasterFilterBarItem1.Name = "TabPageIgnoreMasterFilterBarItem1"
         '
         'ShowTabPageCaptionBarItem1
         '
-        Me.ShowTabPageCaptionBarItem1.Id = 527
+        Me.ShowTabPageCaptionBarItem1.Id = 304
         Me.ShowTabPageCaptionBarItem1.Name = "ShowTabPageCaptionBarItem1"
         '
         'EditTabPageNamesBarItem1
         '
-        Me.EditTabPageNamesBarItem1.Id = 528
+        Me.EditTabPageNamesBarItem1.Id = 305
         Me.EditTabPageNamesBarItem1.Name = "EditTabPageNamesBarItem1"
         '
         'DisplayItemAsTabPageBarItem1
         '
-        Me.DisplayItemAsTabPageBarItem1.Id = 529
+        Me.DisplayItemAsTabPageBarItem1.Id = 306
         Me.DisplayItemAsTabPageBarItem1.Name = "DisplayItemAsTabPageBarItem1"
         '
         'ReorderTabsBarItem1
         '
-        Me.ReorderTabsBarItem1.Id = 530
+        Me.ReorderTabsBarItem1.Id = 307
         Me.ReorderTabsBarItem1.Name = "ReorderTabsBarItem1"
         '
         'UndoItem1
         '
         Me.UndoItem1.Enabled = False
-        Me.UndoItem1.Id = 538
+        Me.UndoItem1.Id = 315
         Me.UndoItem1.Name = "UndoItem1"
         '
         'RedoItem1
         '
         Me.RedoItem1.Enabled = False
-        Me.RedoItem1.Id = 539
+        Me.RedoItem1.Id = 316
         Me.RedoItem1.Name = "RedoItem1"
         '
         'FileOpenItem1
         '
         Me.FileOpenItem1.Enabled = False
-        Me.FileOpenItem1.Id = 540
+        Me.FileOpenItem1.Id = 317
         Me.FileOpenItem1.Name = "FileOpenItem1"
         '
         'PasteItem1
         '
         Me.PasteItem1.Enabled = False
-        Me.PasteItem1.Id = 541
+        Me.PasteItem1.Id = 318
         Me.PasteItem1.Name = "PasteItem1"
         '
         'CutItem1
         '
         Me.CutItem1.Enabled = False
-        Me.CutItem1.Id = 542
+        Me.CutItem1.Id = 319
         Me.CutItem1.Name = "CutItem1"
         '
         'CopyItem1
         '
         Me.CopyItem1.Enabled = False
-        Me.CopyItem1.Id = 543
+        Me.CopyItem1.Id = 320
         Me.CopyItem1.Name = "CopyItem1"
         '
         'PasteSpecialItem1
         '
         Me.PasteSpecialItem1.Enabled = False
-        Me.PasteSpecialItem1.Id = 544
+        Me.PasteSpecialItem1.Id = 321
         Me.PasteSpecialItem1.Name = "PasteSpecialItem1"
         '
         'BarButtonGroup1
         '
-        Me.BarButtonGroup1.Id = 531
+        Me.BarButtonGroup1.Id = 308
         Me.BarButtonGroup1.ItemLinks.Add(Me.ChangeFontNameItem1)
         Me.BarButtonGroup1.ItemLinks.Add(Me.ChangeFontSizeItem1)
         Me.BarButtonGroup1.ItemLinks.Add(Me.FontSizeIncreaseItem1)
@@ -3242,7 +3141,7 @@ Partial Class frmDashboardDesigner
         '
         Me.ChangeFontNameItem1.Edit = Me.RepositoryItemFontEdit1
         Me.ChangeFontNameItem1.Enabled = False
-        Me.ChangeFontNameItem1.Id = 545
+        Me.ChangeFontNameItem1.Id = 322
         Me.ChangeFontNameItem1.Name = "ChangeFontNameItem1"
         '
         'RepositoryItemFontEdit1
@@ -3255,7 +3154,7 @@ Partial Class frmDashboardDesigner
         '
         Me.ChangeFontSizeItem1.Edit = Me.RepositoryItemRichEditFontSizeEdit1
         Me.ChangeFontSizeItem1.Enabled = False
-        Me.ChangeFontSizeItem1.Id = 546
+        Me.ChangeFontSizeItem1.Id = 323
         Me.ChangeFontSizeItem1.Name = "ChangeFontSizeItem1"
         '
         'RepositoryItemRichEditFontSizeEdit1
@@ -3268,18 +3167,20 @@ Partial Class frmDashboardDesigner
         'FontSizeIncreaseItem1
         '
         Me.FontSizeIncreaseItem1.Enabled = False
-        Me.FontSizeIncreaseItem1.Id = 547
+        Me.FontSizeIncreaseItem1.Id = 324
+        Me.FontSizeIncreaseItem1.ImageOptions.Image = CType(resources.GetObject("FontSizeIncreaseItem1.ImageOptions.Image"), System.Drawing.Image)
+        Me.FontSizeIncreaseItem1.ImageOptions.LargeImage = CType(resources.GetObject("FontSizeIncreaseItem1.ImageOptions.LargeImage"), System.Drawing.Image)
         Me.FontSizeIncreaseItem1.Name = "FontSizeIncreaseItem1"
         '
         'FontSizeDecreaseItem1
         '
         Me.FontSizeDecreaseItem1.Enabled = False
-        Me.FontSizeDecreaseItem1.Id = 548
+        Me.FontSizeDecreaseItem1.Id = 325
         Me.FontSizeDecreaseItem1.Name = "FontSizeDecreaseItem1"
         '
         'BarButtonGroup2
         '
-        Me.BarButtonGroup2.Id = 532
+        Me.BarButtonGroup2.Id = 309
         Me.BarButtonGroup2.ItemLinks.Add(Me.ToggleFontBoldItem1)
         Me.BarButtonGroup2.ItemLinks.Add(Me.ToggleFontItalicItem1)
         Me.BarButtonGroup2.ItemLinks.Add(Me.ToggleFontUnderlineItem1)
@@ -3294,54 +3195,54 @@ Partial Class frmDashboardDesigner
         'ToggleFontBoldItem1
         '
         Me.ToggleFontBoldItem1.Enabled = False
-        Me.ToggleFontBoldItem1.Id = 549
+        Me.ToggleFontBoldItem1.Id = 326
         Me.ToggleFontBoldItem1.Name = "ToggleFontBoldItem1"
         '
         'ToggleFontItalicItem1
         '
         Me.ToggleFontItalicItem1.Enabled = False
-        Me.ToggleFontItalicItem1.Id = 550
+        Me.ToggleFontItalicItem1.Id = 327
         Me.ToggleFontItalicItem1.Name = "ToggleFontItalicItem1"
         '
         'ToggleFontUnderlineItem1
         '
         Me.ToggleFontUnderlineItem1.Enabled = False
-        Me.ToggleFontUnderlineItem1.Id = 551
+        Me.ToggleFontUnderlineItem1.Id = 328
         Me.ToggleFontUnderlineItem1.Name = "ToggleFontUnderlineItem1"
         '
         'ToggleFontDoubleUnderlineItem1
         '
         Me.ToggleFontDoubleUnderlineItem1.Enabled = False
-        Me.ToggleFontDoubleUnderlineItem1.Id = 552
+        Me.ToggleFontDoubleUnderlineItem1.Id = 329
         Me.ToggleFontDoubleUnderlineItem1.Name = "ToggleFontDoubleUnderlineItem1"
         '
         'ToggleFontStrikeoutItem1
         '
         Me.ToggleFontStrikeoutItem1.Enabled = False
-        Me.ToggleFontStrikeoutItem1.Id = 553
+        Me.ToggleFontStrikeoutItem1.Id = 330
         Me.ToggleFontStrikeoutItem1.Name = "ToggleFontStrikeoutItem1"
         '
         'ToggleFontDoubleStrikeoutItem1
         '
         Me.ToggleFontDoubleStrikeoutItem1.Enabled = False
-        Me.ToggleFontDoubleStrikeoutItem1.Id = 554
+        Me.ToggleFontDoubleStrikeoutItem1.Id = 331
         Me.ToggleFontDoubleStrikeoutItem1.Name = "ToggleFontDoubleStrikeoutItem1"
         '
         'ToggleFontSuperscriptItem1
         '
         Me.ToggleFontSuperscriptItem1.Enabled = False
-        Me.ToggleFontSuperscriptItem1.Id = 555
+        Me.ToggleFontSuperscriptItem1.Id = 332
         Me.ToggleFontSuperscriptItem1.Name = "ToggleFontSuperscriptItem1"
         '
         'ToggleFontSubscriptItem1
         '
         Me.ToggleFontSubscriptItem1.Enabled = False
-        Me.ToggleFontSubscriptItem1.Id = 556
+        Me.ToggleFontSubscriptItem1.Id = 333
         Me.ToggleFontSubscriptItem1.Name = "ToggleFontSubscriptItem1"
         '
         'BarButtonGroup3
         '
-        Me.BarButtonGroup3.Id = 533
+        Me.BarButtonGroup3.Id = 310
         Me.BarButtonGroup3.ItemLinks.Add(Me.ChangeFontColorItem1)
         Me.BarButtonGroup3.ItemLinks.Add(Me.ChangeFontHighlightColorItem1)
         Me.BarButtonGroup3.Name = "BarButtonGroup3"
@@ -3350,55 +3251,55 @@ Partial Class frmDashboardDesigner
         'ChangeFontColorItem1
         '
         Me.ChangeFontColorItem1.Enabled = False
-        Me.ChangeFontColorItem1.Id = 557
+        Me.ChangeFontColorItem1.Id = 334
         Me.ChangeFontColorItem1.Name = "ChangeFontColorItem1"
         '
         'ChangeFontHighlightColorItem1
         '
         Me.ChangeFontHighlightColorItem1.Enabled = False
-        Me.ChangeFontHighlightColorItem1.Id = 558
+        Me.ChangeFontHighlightColorItem1.Id = 335
         Me.ChangeFontHighlightColorItem1.Name = "ChangeFontHighlightColorItem1"
         '
         'ChangeTextCaseItem1
         '
         Me.ChangeTextCaseItem1.Enabled = False
-        Me.ChangeTextCaseItem1.Id = 559
+        Me.ChangeTextCaseItem1.Id = 336
         Me.ChangeTextCaseItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.MakeTextUpperCaseItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.MakeTextLowerCaseItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.CapitalizeEachWordCaseItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ToggleTextCaseItem1)})
         Me.ChangeTextCaseItem1.Name = "ChangeTextCaseItem1"
         '
         'MakeTextUpperCaseItem1
         '
         Me.MakeTextUpperCaseItem1.Enabled = False
-        Me.MakeTextUpperCaseItem1.Id = 560
+        Me.MakeTextUpperCaseItem1.Id = 337
         Me.MakeTextUpperCaseItem1.Name = "MakeTextUpperCaseItem1"
         '
         'MakeTextLowerCaseItem1
         '
         Me.MakeTextLowerCaseItem1.Enabled = False
-        Me.MakeTextLowerCaseItem1.Id = 561
+        Me.MakeTextLowerCaseItem1.Id = 338
         Me.MakeTextLowerCaseItem1.Name = "MakeTextLowerCaseItem1"
         '
         'CapitalizeEachWordCaseItem1
         '
         Me.CapitalizeEachWordCaseItem1.Enabled = False
-        Me.CapitalizeEachWordCaseItem1.Id = 562
+        Me.CapitalizeEachWordCaseItem1.Id = 339
         Me.CapitalizeEachWordCaseItem1.Name = "CapitalizeEachWordCaseItem1"
         '
         'ToggleTextCaseItem1
         '
         Me.ToggleTextCaseItem1.Enabled = False
-        Me.ToggleTextCaseItem1.Id = 563
+        Me.ToggleTextCaseItem1.Id = 340
         Me.ToggleTextCaseItem1.Name = "ToggleTextCaseItem1"
         '
         'ClearFormattingItem1
         '
         Me.ClearFormattingItem1.Enabled = False
-        Me.ClearFormattingItem1.Id = 564
+        Me.ClearFormattingItem1.Id = 341
         Me.ClearFormattingItem1.Name = "ClearFormattingItem1"
         '
         'BarButtonGroup4
         '
-        Me.BarButtonGroup4.Id = 534
+        Me.BarButtonGroup4.Id = 311
         Me.BarButtonGroup4.ItemLinks.Add(Me.ToggleBulletedListItem1)
         Me.BarButtonGroup4.ItemLinks.Add(Me.ToggleNumberingListItem1)
         Me.BarButtonGroup4.ItemLinks.Add(Me.ToggleMultiLevelListItem1)
@@ -3411,42 +3312,42 @@ Partial Class frmDashboardDesigner
         'ToggleBulletedListItem1
         '
         Me.ToggleBulletedListItem1.Enabled = False
-        Me.ToggleBulletedListItem1.Id = 565
+        Me.ToggleBulletedListItem1.Id = 342
         Me.ToggleBulletedListItem1.Name = "ToggleBulletedListItem1"
         '
         'ToggleNumberingListItem1
         '
         Me.ToggleNumberingListItem1.Enabled = False
-        Me.ToggleNumberingListItem1.Id = 566
+        Me.ToggleNumberingListItem1.Id = 343
         Me.ToggleNumberingListItem1.Name = "ToggleNumberingListItem1"
         '
         'ToggleMultiLevelListItem1
         '
         Me.ToggleMultiLevelListItem1.Enabled = False
-        Me.ToggleMultiLevelListItem1.Id = 567
+        Me.ToggleMultiLevelListItem1.Id = 344
         Me.ToggleMultiLevelListItem1.Name = "ToggleMultiLevelListItem1"
         '
         'RtlToggleBulletedListItem1
         '
         Me.RtlToggleBulletedListItem1.Enabled = False
-        Me.RtlToggleBulletedListItem1.Id = 570
+        Me.RtlToggleBulletedListItem1.Id = 347
         Me.RtlToggleBulletedListItem1.Name = "RtlToggleBulletedListItem1"
         '
         'RtlToggleNumberingListItem1
         '
         Me.RtlToggleNumberingListItem1.Enabled = False
-        Me.RtlToggleNumberingListItem1.Id = 571
+        Me.RtlToggleNumberingListItem1.Id = 348
         Me.RtlToggleNumberingListItem1.Name = "RtlToggleNumberingListItem1"
         '
         'RtlToggleMultiLevelListItem1
         '
         Me.RtlToggleMultiLevelListItem1.Enabled = False
-        Me.RtlToggleMultiLevelListItem1.Id = 572
+        Me.RtlToggleMultiLevelListItem1.Id = 349
         Me.RtlToggleMultiLevelListItem1.Name = "RtlToggleMultiLevelListItem1"
         '
         'BarButtonGroup5
         '
-        Me.BarButtonGroup5.Id = 535
+        Me.BarButtonGroup5.Id = 312
         Me.BarButtonGroup5.ItemLinks.Add(Me.DecreaseIndentItem1)
         Me.BarButtonGroup5.ItemLinks.Add(Me.IncreaseIndentItem1)
         Me.BarButtonGroup5.ItemLinks.Add(Me.RtlDecreaseIndentItem1)
@@ -3460,48 +3361,48 @@ Partial Class frmDashboardDesigner
         'DecreaseIndentItem1
         '
         Me.DecreaseIndentItem1.Enabled = False
-        Me.DecreaseIndentItem1.Id = 568
+        Me.DecreaseIndentItem1.Id = 345
         Me.DecreaseIndentItem1.Name = "DecreaseIndentItem1"
         '
         'IncreaseIndentItem1
         '
         Me.IncreaseIndentItem1.Enabled = False
-        Me.IncreaseIndentItem1.Id = 569
+        Me.IncreaseIndentItem1.Id = 346
         Me.IncreaseIndentItem1.Name = "IncreaseIndentItem1"
         '
         'RtlDecreaseIndentItem1
         '
         Me.RtlDecreaseIndentItem1.Enabled = False
-        Me.RtlDecreaseIndentItem1.Id = 573
+        Me.RtlDecreaseIndentItem1.Id = 350
         Me.RtlDecreaseIndentItem1.Name = "RtlDecreaseIndentItem1"
         '
         'RtlIncreaseIndentItem1
         '
         Me.RtlIncreaseIndentItem1.Enabled = False
-        Me.RtlIncreaseIndentItem1.Id = 574
+        Me.RtlIncreaseIndentItem1.Id = 351
         Me.RtlIncreaseIndentItem1.Name = "RtlIncreaseIndentItem1"
         '
         'ToggleParagraphLeftToRightItem1
         '
         Me.ToggleParagraphLeftToRightItem1.Enabled = False
-        Me.ToggleParagraphLeftToRightItem1.Id = 575
+        Me.ToggleParagraphLeftToRightItem1.Id = 352
         Me.ToggleParagraphLeftToRightItem1.Name = "ToggleParagraphLeftToRightItem1"
         '
         'ToggleParagraphRightToLeftItem1
         '
         Me.ToggleParagraphRightToLeftItem1.Enabled = False
-        Me.ToggleParagraphRightToLeftItem1.Id = 576
+        Me.ToggleParagraphRightToLeftItem1.Id = 353
         Me.ToggleParagraphRightToLeftItem1.Name = "ToggleParagraphRightToLeftItem1"
         '
         'ToggleShowWhitespaceItem1
         '
         Me.ToggleShowWhitespaceItem1.Enabled = False
-        Me.ToggleShowWhitespaceItem1.Id = 588
+        Me.ToggleShowWhitespaceItem1.Id = 365
         Me.ToggleShowWhitespaceItem1.Name = "ToggleShowWhitespaceItem1"
         '
         'BarButtonGroup6
         '
-        Me.BarButtonGroup6.Id = 536
+        Me.BarButtonGroup6.Id = 313
         Me.BarButtonGroup6.ItemLinks.Add(Me.ToggleParagraphAlignmentLeftItem1)
         Me.BarButtonGroup6.ItemLinks.Add(Me.ToggleParagraphAlignmentCenterItem1)
         Me.BarButtonGroup6.ItemLinks.Add(Me.ToggleParagraphAlignmentRightItem1)
@@ -3515,73 +3416,73 @@ Partial Class frmDashboardDesigner
         'ToggleParagraphAlignmentLeftItem1
         '
         Me.ToggleParagraphAlignmentLeftItem1.Enabled = False
-        Me.ToggleParagraphAlignmentLeftItem1.Id = 577
+        Me.ToggleParagraphAlignmentLeftItem1.Id = 354
         Me.ToggleParagraphAlignmentLeftItem1.Name = "ToggleParagraphAlignmentLeftItem1"
         '
         'ToggleParagraphAlignmentCenterItem1
         '
         Me.ToggleParagraphAlignmentCenterItem1.Enabled = False
-        Me.ToggleParagraphAlignmentCenterItem1.Id = 578
+        Me.ToggleParagraphAlignmentCenterItem1.Id = 355
         Me.ToggleParagraphAlignmentCenterItem1.Name = "ToggleParagraphAlignmentCenterItem1"
         '
         'ToggleParagraphAlignmentRightItem1
         '
         Me.ToggleParagraphAlignmentRightItem1.Enabled = False
-        Me.ToggleParagraphAlignmentRightItem1.Id = 579
+        Me.ToggleParagraphAlignmentRightItem1.Id = 356
         Me.ToggleParagraphAlignmentRightItem1.Name = "ToggleParagraphAlignmentRightItem1"
         '
         'ToggleParagraphAlignmentJustifyItem1
         '
         Me.ToggleParagraphAlignmentJustifyItem1.Enabled = False
-        Me.ToggleParagraphAlignmentJustifyItem1.Id = 580
+        Me.ToggleParagraphAlignmentJustifyItem1.Id = 357
         Me.ToggleParagraphAlignmentJustifyItem1.Name = "ToggleParagraphAlignmentJustifyItem1"
         '
         'ToggleParagraphAlignmentArabicJustifyGroupItem1
         '
         Me.ToggleParagraphAlignmentArabicJustifyGroupItem1.Enabled = False
-        Me.ToggleParagraphAlignmentArabicJustifyGroupItem1.Id = 581
+        Me.ToggleParagraphAlignmentArabicJustifyGroupItem1.Id = 358
         Me.ToggleParagraphAlignmentArabicJustifyGroupItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.ToggleParagraphAlignmentArabicJustifyItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ToggleParagraphAlignmentJustifyLowItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ToggleParagraphAlignmentJustifyMediumItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ToggleParagraphAlignmentJustifyHighItem1)})
         Me.ToggleParagraphAlignmentArabicJustifyGroupItem1.Name = "ToggleParagraphAlignmentArabicJustifyGroupItem1"
         '
         'ToggleParagraphAlignmentArabicJustifyItem1
         '
         Me.ToggleParagraphAlignmentArabicJustifyItem1.Enabled = False
-        Me.ToggleParagraphAlignmentArabicJustifyItem1.Id = 582
+        Me.ToggleParagraphAlignmentArabicJustifyItem1.Id = 359
         Me.ToggleParagraphAlignmentArabicJustifyItem1.Name = "ToggleParagraphAlignmentArabicJustifyItem1"
         '
         'ToggleParagraphAlignmentJustifyLowItem1
         '
         Me.ToggleParagraphAlignmentJustifyLowItem1.Enabled = False
-        Me.ToggleParagraphAlignmentJustifyLowItem1.Id = 583
+        Me.ToggleParagraphAlignmentJustifyLowItem1.Id = 360
         Me.ToggleParagraphAlignmentJustifyLowItem1.Name = "ToggleParagraphAlignmentJustifyLowItem1"
         '
         'ToggleParagraphAlignmentJustifyMediumItem1
         '
         Me.ToggleParagraphAlignmentJustifyMediumItem1.Enabled = False
-        Me.ToggleParagraphAlignmentJustifyMediumItem1.Id = 584
+        Me.ToggleParagraphAlignmentJustifyMediumItem1.Id = 361
         Me.ToggleParagraphAlignmentJustifyMediumItem1.Name = "ToggleParagraphAlignmentJustifyMediumItem1"
         '
         'ToggleParagraphAlignmentJustifyHighItem1
         '
         Me.ToggleParagraphAlignmentJustifyHighItem1.Enabled = False
-        Me.ToggleParagraphAlignmentJustifyHighItem1.Id = 585
+        Me.ToggleParagraphAlignmentJustifyHighItem1.Id = 362
         Me.ToggleParagraphAlignmentJustifyHighItem1.Name = "ToggleParagraphAlignmentJustifyHighItem1"
         '
         'ToggleParagraphAlignmentDistributeItem1
         '
         Me.ToggleParagraphAlignmentDistributeItem1.Enabled = False
-        Me.ToggleParagraphAlignmentDistributeItem1.Id = 586
+        Me.ToggleParagraphAlignmentDistributeItem1.Id = 363
         Me.ToggleParagraphAlignmentDistributeItem1.Name = "ToggleParagraphAlignmentDistributeItem1"
         '
         'ToggleParagraphAlignmentThaiDistributeItem1
         '
         Me.ToggleParagraphAlignmentThaiDistributeItem1.Enabled = False
-        Me.ToggleParagraphAlignmentThaiDistributeItem1.Id = 587
+        Me.ToggleParagraphAlignmentThaiDistributeItem1.Id = 364
         Me.ToggleParagraphAlignmentThaiDistributeItem1.Name = "ToggleParagraphAlignmentThaiDistributeItem1"
         '
         'BarButtonGroup7
         '
-        Me.BarButtonGroup7.Id = 537
+        Me.BarButtonGroup7.Id = 314
         Me.BarButtonGroup7.ItemLinks.Add(Me.ChangeParagraphLineSpacingItem1)
         Me.BarButtonGroup7.ItemLinks.Add(Me.ChangeParagraphBackColorItem1)
         Me.BarButtonGroup7.Name = "BarButtonGroup7"
@@ -3590,62 +3491,62 @@ Partial Class frmDashboardDesigner
         'ChangeParagraphLineSpacingItem1
         '
         Me.ChangeParagraphLineSpacingItem1.Enabled = False
-        Me.ChangeParagraphLineSpacingItem1.Id = 589
+        Me.ChangeParagraphLineSpacingItem1.Id = 366
         Me.ChangeParagraphLineSpacingItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.SetSingleParagraphSpacingItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.SetSesquialteralParagraphSpacingItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.SetDoubleParagraphSpacingItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ShowLineSpacingFormItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.AddSpacingBeforeParagraphItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.RemoveSpacingBeforeParagraphItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.AddSpacingAfterParagraphItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.RemoveSpacingAfterParagraphItem1)})
         Me.ChangeParagraphLineSpacingItem1.Name = "ChangeParagraphLineSpacingItem1"
         '
         'SetSingleParagraphSpacingItem1
         '
         Me.SetSingleParagraphSpacingItem1.Enabled = False
-        Me.SetSingleParagraphSpacingItem1.Id = 590
+        Me.SetSingleParagraphSpacingItem1.Id = 367
         Me.SetSingleParagraphSpacingItem1.Name = "SetSingleParagraphSpacingItem1"
         '
         'SetSesquialteralParagraphSpacingItem1
         '
         Me.SetSesquialteralParagraphSpacingItem1.Enabled = False
-        Me.SetSesquialteralParagraphSpacingItem1.Id = 591
+        Me.SetSesquialteralParagraphSpacingItem1.Id = 368
         Me.SetSesquialteralParagraphSpacingItem1.Name = "SetSesquialteralParagraphSpacingItem1"
         '
         'SetDoubleParagraphSpacingItem1
         '
         Me.SetDoubleParagraphSpacingItem1.Enabled = False
-        Me.SetDoubleParagraphSpacingItem1.Id = 592
+        Me.SetDoubleParagraphSpacingItem1.Id = 369
         Me.SetDoubleParagraphSpacingItem1.Name = "SetDoubleParagraphSpacingItem1"
         '
         'ShowLineSpacingFormItem1
         '
         Me.ShowLineSpacingFormItem1.Enabled = False
-        Me.ShowLineSpacingFormItem1.Id = 593
+        Me.ShowLineSpacingFormItem1.Id = 370
         Me.ShowLineSpacingFormItem1.Name = "ShowLineSpacingFormItem1"
         '
         'AddSpacingBeforeParagraphItem1
         '
         Me.AddSpacingBeforeParagraphItem1.Enabled = False
-        Me.AddSpacingBeforeParagraphItem1.Id = 594
+        Me.AddSpacingBeforeParagraphItem1.Id = 371
         Me.AddSpacingBeforeParagraphItem1.Name = "AddSpacingBeforeParagraphItem1"
         '
         'RemoveSpacingBeforeParagraphItem1
         '
         Me.RemoveSpacingBeforeParagraphItem1.Enabled = False
-        Me.RemoveSpacingBeforeParagraphItem1.Id = 595
+        Me.RemoveSpacingBeforeParagraphItem1.Id = 372
         Me.RemoveSpacingBeforeParagraphItem1.Name = "RemoveSpacingBeforeParagraphItem1"
         '
         'AddSpacingAfterParagraphItem1
         '
         Me.AddSpacingAfterParagraphItem1.Enabled = False
-        Me.AddSpacingAfterParagraphItem1.Id = 596
+        Me.AddSpacingAfterParagraphItem1.Id = 373
         Me.AddSpacingAfterParagraphItem1.Name = "AddSpacingAfterParagraphItem1"
         '
         'RemoveSpacingAfterParagraphItem1
         '
         Me.RemoveSpacingAfterParagraphItem1.Enabled = False
-        Me.RemoveSpacingAfterParagraphItem1.Id = 597
+        Me.RemoveSpacingAfterParagraphItem1.Id = 374
         Me.RemoveSpacingAfterParagraphItem1.Name = "RemoveSpacingAfterParagraphItem1"
         '
         'ChangeParagraphBackColorItem1
         '
         Me.ChangeParagraphBackColorItem1.Enabled = False
-        Me.ChangeParagraphBackColorItem1.Id = 598
+        Me.ChangeParagraphBackColorItem1.Id = 375
         Me.ChangeParagraphBackColorItem1.Name = "ChangeParagraphBackColorItem1"
         '
         'GalleryChangeStyleItem1
@@ -3657,109 +3558,109 @@ Partial Class frmDashboardDesigner
         Me.GalleryChangeStyleItem1.Gallery.ColumnCount = 10
         Me.GalleryChangeStyleItem1.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {GalleryItemGroup5})
         Me.GalleryChangeStyleItem1.Gallery.ImageSize = New System.Drawing.Size(81, 58)
-        Me.GalleryChangeStyleItem1.Id = 599
+        Me.GalleryChangeStyleItem1.Id = 376
         Me.GalleryChangeStyleItem1.Name = "GalleryChangeStyleItem1"
         '
         'FindItem1
         '
         Me.FindItem1.Enabled = False
-        Me.FindItem1.Id = 600
+        Me.FindItem1.Id = 377
         Me.FindItem1.Name = "FindItem1"
         '
         'ReplaceItem1
         '
         Me.ReplaceItem1.Enabled = False
-        Me.ReplaceItem1.Id = 601
+        Me.ReplaceItem1.Id = 378
         Me.ReplaceItem1.Name = "ReplaceItem1"
         '
         'InsertTableItem1
         '
         Me.InsertTableItem1.Enabled = False
-        Me.InsertTableItem1.Id = 602
+        Me.InsertTableItem1.Id = 379
         Me.InsertTableItem1.Name = "InsertTableItem1"
         '
         'InsertFloatingPictureItem1
         '
         Me.InsertFloatingPictureItem1.Enabled = False
-        Me.InsertFloatingPictureItem1.Id = 603
+        Me.InsertFloatingPictureItem1.Id = 380
         Me.InsertFloatingPictureItem1.Name = "InsertFloatingPictureItem1"
         '
         'InsertBookmarkItem1
         '
         Me.InsertBookmarkItem1.Enabled = False
-        Me.InsertBookmarkItem1.Id = 604
+        Me.InsertBookmarkItem1.Id = 381
         Me.InsertBookmarkItem1.Name = "InsertBookmarkItem1"
         '
         'InsertHyperlinkItem1
         '
         Me.InsertHyperlinkItem1.Enabled = False
-        Me.InsertHyperlinkItem1.Id = 605
+        Me.InsertHyperlinkItem1.Id = 382
         Me.InsertHyperlinkItem1.Name = "InsertHyperlinkItem1"
         '
         'InsertSymbolItem1
         '
         Me.InsertSymbolItem1.Enabled = False
-        Me.InsertSymbolItem1.Id = 606
+        Me.InsertSymbolItem1.Id = 383
         Me.InsertSymbolItem1.Name = "InsertSymbolItem1"
         '
         'ChangePageColorItem1
         '
         Me.ChangePageColorItem1.Enabled = False
-        Me.ChangePageColorItem1.Id = 607
+        Me.ChangePageColorItem1.Id = 384
         Me.ChangePageColorItem1.Name = "ChangePageColorItem1"
         '
         'WatermarkItem1
         '
         Me.WatermarkItem1.Enabled = False
-        Me.WatermarkItem1.Id = 608
+        Me.WatermarkItem1.Id = 385
         Me.WatermarkItem1.Name = "WatermarkItem1"
         '
         'DeleteWatermarkItem1
         '
         Me.DeleteWatermarkItem1.Enabled = False
-        Me.DeleteWatermarkItem1.Id = 609
+        Me.DeleteWatermarkItem1.Id = 386
         Me.DeleteWatermarkItem1.Name = "DeleteWatermarkItem1"
         '
         'ToggleFirstRowItem1
         '
         Me.ToggleFirstRowItem1.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
         Me.ToggleFirstRowItem1.Enabled = False
-        Me.ToggleFirstRowItem1.Id = 610
+        Me.ToggleFirstRowItem1.Id = 387
         Me.ToggleFirstRowItem1.Name = "ToggleFirstRowItem1"
         '
         'ToggleLastRowItem1
         '
         Me.ToggleLastRowItem1.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
         Me.ToggleLastRowItem1.Enabled = False
-        Me.ToggleLastRowItem1.Id = 611
+        Me.ToggleLastRowItem1.Id = 388
         Me.ToggleLastRowItem1.Name = "ToggleLastRowItem1"
         '
         'ToggleBandedRowsItem1
         '
         Me.ToggleBandedRowsItem1.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
         Me.ToggleBandedRowsItem1.Enabled = False
-        Me.ToggleBandedRowsItem1.Id = 612
+        Me.ToggleBandedRowsItem1.Id = 389
         Me.ToggleBandedRowsItem1.Name = "ToggleBandedRowsItem1"
         '
         'ToggleFirstColumnItem1
         '
         Me.ToggleFirstColumnItem1.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
         Me.ToggleFirstColumnItem1.Enabled = False
-        Me.ToggleFirstColumnItem1.Id = 613
+        Me.ToggleFirstColumnItem1.Id = 390
         Me.ToggleFirstColumnItem1.Name = "ToggleFirstColumnItem1"
         '
         'ToggleLastColumnItem1
         '
         Me.ToggleLastColumnItem1.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
         Me.ToggleLastColumnItem1.Enabled = False
-        Me.ToggleLastColumnItem1.Id = 614
+        Me.ToggleLastColumnItem1.Id = 391
         Me.ToggleLastColumnItem1.Name = "ToggleLastColumnItem1"
         '
         'ToggleBandedColumnsItem1
         '
         Me.ToggleBandedColumnsItem1.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
         Me.ToggleBandedColumnsItem1.Enabled = False
-        Me.ToggleBandedColumnsItem1.Id = 615
+        Me.ToggleBandedColumnsItem1.Id = 392
         Me.ToggleBandedColumnsItem1.Name = "ToggleBandedColumnsItem1"
         '
         'GalleryChangeTableStyleItem1
@@ -3773,7 +3674,7 @@ Partial Class frmDashboardDesigner
         Me.GalleryChangeTableStyleItem1.Gallery.ColumnCount = 3
         Me.GalleryChangeTableStyleItem1.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {GalleryItemGroup6})
         Me.GalleryChangeTableStyleItem1.Gallery.ImageSize = New System.Drawing.Size(81, 58)
-        Me.GalleryChangeTableStyleItem1.Id = 616
+        Me.GalleryChangeTableStyleItem1.Id = 393
         Me.GalleryChangeTableStyleItem1.ModifyItemLink = Nothing
         Me.GalleryChangeTableStyleItem1.Name = "GalleryChangeTableStyleItem1"
         Me.GalleryChangeTableStyleItem1.NewItemLink = Nothing
@@ -3784,7 +3685,7 @@ Partial Class frmDashboardDesigner
         Me.ChangeTableBorderLineStyleItem1.Edit = Me.RepositoryItemBorderLineStyle1
         Me.ChangeTableBorderLineStyleItem1.EditWidth = 130
         Me.ChangeTableBorderLineStyleItem1.Enabled = False
-        Me.ChangeTableBorderLineStyleItem1.Id = 617
+        Me.ChangeTableBorderLineStyleItem1.Id = 394
         Me.ChangeTableBorderLineStyleItem1.Name = "ChangeTableBorderLineStyleItem1"
         '
         'RepositoryItemBorderLineStyle1
@@ -3799,7 +3700,7 @@ Partial Class frmDashboardDesigner
         Me.ChangeTableBorderLineWeightItem1.Edit = Me.RepositoryItemBorderLineWeight1
         Me.ChangeTableBorderLineWeightItem1.EditWidth = 130
         Me.ChangeTableBorderLineWeightItem1.Enabled = False
-        Me.ChangeTableBorderLineWeightItem1.Id = 618
+        Me.ChangeTableBorderLineWeightItem1.Id = 395
         Me.ChangeTableBorderLineWeightItem1.Name = "ChangeTableBorderLineWeightItem1"
         '
         'RepositoryItemBorderLineWeight1
@@ -3812,300 +3713,300 @@ Partial Class frmDashboardDesigner
         'ChangeTableBorderColorItem1
         '
         Me.ChangeTableBorderColorItem1.Enabled = False
-        Me.ChangeTableBorderColorItem1.Id = 619
+        Me.ChangeTableBorderColorItem1.Id = 396
         Me.ChangeTableBorderColorItem1.Name = "ChangeTableBorderColorItem1"
         '
         'ChangeTableBordersItem1
         '
         Me.ChangeTableBordersItem1.Enabled = False
-        Me.ChangeTableBordersItem1.Id = 620
+        Me.ChangeTableBordersItem1.Id = 397
         Me.ChangeTableBordersItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.ToggleTableCellsBottomBorderItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ToggleTableCellsTopBorderItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ToggleTableCellsLeftBorderItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ToggleTableCellsRightBorderItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ResetTableCellsAllBordersItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ToggleTableCellsAllBordersItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ToggleTableCellsOutsideBorderItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ToggleTableCellsInsideBorderItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ToggleTableCellsInsideHorizontalBorderItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ToggleTableCellsInsideVerticalBorderItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ToggleShowTableGridLinesItem1)})
         Me.ChangeTableBordersItem1.Name = "ChangeTableBordersItem1"
         '
         'ToggleTableCellsBottomBorderItem1
         '
         Me.ToggleTableCellsBottomBorderItem1.Enabled = False
-        Me.ToggleTableCellsBottomBorderItem1.Id = 621
+        Me.ToggleTableCellsBottomBorderItem1.Id = 398
         Me.ToggleTableCellsBottomBorderItem1.Name = "ToggleTableCellsBottomBorderItem1"
         '
         'ToggleTableCellsTopBorderItem1
         '
         Me.ToggleTableCellsTopBorderItem1.Enabled = False
-        Me.ToggleTableCellsTopBorderItem1.Id = 622
+        Me.ToggleTableCellsTopBorderItem1.Id = 399
         Me.ToggleTableCellsTopBorderItem1.Name = "ToggleTableCellsTopBorderItem1"
         '
         'ToggleTableCellsLeftBorderItem1
         '
         Me.ToggleTableCellsLeftBorderItem1.Enabled = False
-        Me.ToggleTableCellsLeftBorderItem1.Id = 623
+        Me.ToggleTableCellsLeftBorderItem1.Id = 400
         Me.ToggleTableCellsLeftBorderItem1.Name = "ToggleTableCellsLeftBorderItem1"
         '
         'ToggleTableCellsRightBorderItem1
         '
         Me.ToggleTableCellsRightBorderItem1.Enabled = False
-        Me.ToggleTableCellsRightBorderItem1.Id = 624
+        Me.ToggleTableCellsRightBorderItem1.Id = 401
         Me.ToggleTableCellsRightBorderItem1.Name = "ToggleTableCellsRightBorderItem1"
         '
         'ResetTableCellsAllBordersItem1
         '
         Me.ResetTableCellsAllBordersItem1.Enabled = False
-        Me.ResetTableCellsAllBordersItem1.Id = 625
+        Me.ResetTableCellsAllBordersItem1.Id = 402
         Me.ResetTableCellsAllBordersItem1.Name = "ResetTableCellsAllBordersItem1"
         '
         'ToggleTableCellsAllBordersItem1
         '
         Me.ToggleTableCellsAllBordersItem1.Enabled = False
-        Me.ToggleTableCellsAllBordersItem1.Id = 626
+        Me.ToggleTableCellsAllBordersItem1.Id = 403
         Me.ToggleTableCellsAllBordersItem1.Name = "ToggleTableCellsAllBordersItem1"
         '
         'ToggleTableCellsOutsideBorderItem1
         '
         Me.ToggleTableCellsOutsideBorderItem1.Enabled = False
-        Me.ToggleTableCellsOutsideBorderItem1.Id = 627
+        Me.ToggleTableCellsOutsideBorderItem1.Id = 404
         Me.ToggleTableCellsOutsideBorderItem1.Name = "ToggleTableCellsOutsideBorderItem1"
         '
         'ToggleTableCellsInsideBorderItem1
         '
         Me.ToggleTableCellsInsideBorderItem1.Enabled = False
-        Me.ToggleTableCellsInsideBorderItem1.Id = 628
+        Me.ToggleTableCellsInsideBorderItem1.Id = 405
         Me.ToggleTableCellsInsideBorderItem1.Name = "ToggleTableCellsInsideBorderItem1"
         '
         'ToggleTableCellsInsideHorizontalBorderItem1
         '
         Me.ToggleTableCellsInsideHorizontalBorderItem1.Enabled = False
-        Me.ToggleTableCellsInsideHorizontalBorderItem1.Id = 629
+        Me.ToggleTableCellsInsideHorizontalBorderItem1.Id = 406
         Me.ToggleTableCellsInsideHorizontalBorderItem1.Name = "ToggleTableCellsInsideHorizontalBorderItem1"
         '
         'ToggleTableCellsInsideVerticalBorderItem1
         '
         Me.ToggleTableCellsInsideVerticalBorderItem1.Enabled = False
-        Me.ToggleTableCellsInsideVerticalBorderItem1.Id = 630
+        Me.ToggleTableCellsInsideVerticalBorderItem1.Id = 407
         Me.ToggleTableCellsInsideVerticalBorderItem1.Name = "ToggleTableCellsInsideVerticalBorderItem1"
         '
         'ToggleShowTableGridLinesItem1
         '
         Me.ToggleShowTableGridLinesItem1.Enabled = False
-        Me.ToggleShowTableGridLinesItem1.Id = 631
+        Me.ToggleShowTableGridLinesItem1.Id = 408
         Me.ToggleShowTableGridLinesItem1.Name = "ToggleShowTableGridLinesItem1"
         '
         'ChangeTableCellsShadingItem1
         '
         Me.ChangeTableCellsShadingItem1.Enabled = False
-        Me.ChangeTableCellsShadingItem1.Id = 632
+        Me.ChangeTableCellsShadingItem1.Id = 409
         Me.ChangeTableCellsShadingItem1.Name = "ChangeTableCellsShadingItem1"
         '
         'SelectTableElementsItem1
         '
         Me.SelectTableElementsItem1.Enabled = False
-        Me.SelectTableElementsItem1.Id = 633
+        Me.SelectTableElementsItem1.Id = 410
         Me.SelectTableElementsItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.SelectTableCellItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.SelectTableColumnItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.SelectTableRowItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.SelectTableItem1)})
         Me.SelectTableElementsItem1.Name = "SelectTableElementsItem1"
         '
         'SelectTableCellItem1
         '
         Me.SelectTableCellItem1.Enabled = False
-        Me.SelectTableCellItem1.Id = 634
+        Me.SelectTableCellItem1.Id = 411
         Me.SelectTableCellItem1.Name = "SelectTableCellItem1"
         '
         'SelectTableColumnItem1
         '
         Me.SelectTableColumnItem1.Enabled = False
-        Me.SelectTableColumnItem1.Id = 635
+        Me.SelectTableColumnItem1.Id = 412
         Me.SelectTableColumnItem1.Name = "SelectTableColumnItem1"
         '
         'SelectTableRowItem1
         '
         Me.SelectTableRowItem1.Enabled = False
-        Me.SelectTableRowItem1.Id = 636
+        Me.SelectTableRowItem1.Id = 413
         Me.SelectTableRowItem1.Name = "SelectTableRowItem1"
         '
         'SelectTableItem1
         '
         Me.SelectTableItem1.Enabled = False
-        Me.SelectTableItem1.Id = 637
+        Me.SelectTableItem1.Id = 414
         Me.SelectTableItem1.Name = "SelectTableItem1"
         '
         'ShowTablePropertiesFormItem1
         '
         Me.ShowTablePropertiesFormItem1.Enabled = False
-        Me.ShowTablePropertiesFormItem1.Id = 638
+        Me.ShowTablePropertiesFormItem1.Id = 415
         Me.ShowTablePropertiesFormItem1.Name = "ShowTablePropertiesFormItem1"
         '
         'DeleteTableElementsItem1
         '
         Me.DeleteTableElementsItem1.Enabled = False
-        Me.DeleteTableElementsItem1.Id = 639
+        Me.DeleteTableElementsItem1.Id = 416
         Me.DeleteTableElementsItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.ShowDeleteTableCellsFormItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.DeleteTableColumnsItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.DeleteTableRowsItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.DeleteTableItem1)})
         Me.DeleteTableElementsItem1.Name = "DeleteTableElementsItem1"
         '
         'ShowDeleteTableCellsFormItem1
         '
         Me.ShowDeleteTableCellsFormItem1.Enabled = False
-        Me.ShowDeleteTableCellsFormItem1.Id = 640
+        Me.ShowDeleteTableCellsFormItem1.Id = 417
         Me.ShowDeleteTableCellsFormItem1.Name = "ShowDeleteTableCellsFormItem1"
         '
         'DeleteTableColumnsItem1
         '
         Me.DeleteTableColumnsItem1.Enabled = False
-        Me.DeleteTableColumnsItem1.Id = 641
+        Me.DeleteTableColumnsItem1.Id = 418
         Me.DeleteTableColumnsItem1.Name = "DeleteTableColumnsItem1"
         '
         'DeleteTableRowsItem1
         '
         Me.DeleteTableRowsItem1.Enabled = False
-        Me.DeleteTableRowsItem1.Id = 642
+        Me.DeleteTableRowsItem1.Id = 419
         Me.DeleteTableRowsItem1.Name = "DeleteTableRowsItem1"
         '
         'DeleteTableItem1
         '
         Me.DeleteTableItem1.Enabled = False
-        Me.DeleteTableItem1.Id = 643
+        Me.DeleteTableItem1.Id = 420
         Me.DeleteTableItem1.Name = "DeleteTableItem1"
         '
         'InsertTableRowAboveItem1
         '
         Me.InsertTableRowAboveItem1.Enabled = False
-        Me.InsertTableRowAboveItem1.Id = 644
+        Me.InsertTableRowAboveItem1.Id = 421
         Me.InsertTableRowAboveItem1.Name = "InsertTableRowAboveItem1"
         '
         'InsertTableRowBelowItem1
         '
         Me.InsertTableRowBelowItem1.Enabled = False
-        Me.InsertTableRowBelowItem1.Id = 645
+        Me.InsertTableRowBelowItem1.Id = 422
         Me.InsertTableRowBelowItem1.Name = "InsertTableRowBelowItem1"
         '
         'InsertTableColumnToLeftItem1
         '
         Me.InsertTableColumnToLeftItem1.Enabled = False
-        Me.InsertTableColumnToLeftItem1.Id = 646
+        Me.InsertTableColumnToLeftItem1.Id = 423
         Me.InsertTableColumnToLeftItem1.Name = "InsertTableColumnToLeftItem1"
         '
         'InsertTableColumnToRightItem1
         '
         Me.InsertTableColumnToRightItem1.Enabled = False
-        Me.InsertTableColumnToRightItem1.Id = 647
+        Me.InsertTableColumnToRightItem1.Id = 424
         Me.InsertTableColumnToRightItem1.Name = "InsertTableColumnToRightItem1"
         '
         'MergeTableCellsItem1
         '
         Me.MergeTableCellsItem1.Enabled = False
-        Me.MergeTableCellsItem1.Id = 648
+        Me.MergeTableCellsItem1.Id = 425
         Me.MergeTableCellsItem1.Name = "MergeTableCellsItem1"
         '
         'ShowSplitTableCellsForm1
         '
         Me.ShowSplitTableCellsForm1.Enabled = False
-        Me.ShowSplitTableCellsForm1.Id = 649
+        Me.ShowSplitTableCellsForm1.Id = 426
         Me.ShowSplitTableCellsForm1.Name = "ShowSplitTableCellsForm1"
         '
         'SplitTableItem1
         '
         Me.SplitTableItem1.Enabled = False
-        Me.SplitTableItem1.Id = 650
+        Me.SplitTableItem1.Id = 427
         Me.SplitTableItem1.Name = "SplitTableItem1"
         '
         'ToggleTableAutoFitItem1
         '
         Me.ToggleTableAutoFitItem1.Enabled = False
-        Me.ToggleTableAutoFitItem1.Id = 651
+        Me.ToggleTableAutoFitItem1.Id = 428
         Me.ToggleTableAutoFitItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.ToggleTableAutoFitContentsItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ToggleTableAutoFitWindowItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.ToggleTableFixedColumnWidthItem1)})
         Me.ToggleTableAutoFitItem1.Name = "ToggleTableAutoFitItem1"
         '
         'ToggleTableAutoFitContentsItem1
         '
         Me.ToggleTableAutoFitContentsItem1.Enabled = False
-        Me.ToggleTableAutoFitContentsItem1.Id = 652
+        Me.ToggleTableAutoFitContentsItem1.Id = 429
         Me.ToggleTableAutoFitContentsItem1.Name = "ToggleTableAutoFitContentsItem1"
         '
         'ToggleTableAutoFitWindowItem1
         '
         Me.ToggleTableAutoFitWindowItem1.Enabled = False
-        Me.ToggleTableAutoFitWindowItem1.Id = 653
+        Me.ToggleTableAutoFitWindowItem1.Id = 430
         Me.ToggleTableAutoFitWindowItem1.Name = "ToggleTableAutoFitWindowItem1"
         '
         'ToggleTableFixedColumnWidthItem1
         '
         Me.ToggleTableFixedColumnWidthItem1.Enabled = False
-        Me.ToggleTableFixedColumnWidthItem1.Id = 654
+        Me.ToggleTableFixedColumnWidthItem1.Id = 431
         Me.ToggleTableFixedColumnWidthItem1.Name = "ToggleTableFixedColumnWidthItem1"
         '
         'ToggleTableCellsTopLeftAlignmentItem1
         '
         Me.ToggleTableCellsTopLeftAlignmentItem1.Enabled = False
-        Me.ToggleTableCellsTopLeftAlignmentItem1.Id = 655
+        Me.ToggleTableCellsTopLeftAlignmentItem1.Id = 432
         Me.ToggleTableCellsTopLeftAlignmentItem1.Name = "ToggleTableCellsTopLeftAlignmentItem1"
         '
         'ToggleTableCellsMiddleLeftAlignmentItem1
         '
         Me.ToggleTableCellsMiddleLeftAlignmentItem1.Enabled = False
-        Me.ToggleTableCellsMiddleLeftAlignmentItem1.Id = 656
+        Me.ToggleTableCellsMiddleLeftAlignmentItem1.Id = 433
         Me.ToggleTableCellsMiddleLeftAlignmentItem1.Name = "ToggleTableCellsMiddleLeftAlignmentItem1"
         '
         'ToggleTableCellsBottomLeftAlignmentItem1
         '
         Me.ToggleTableCellsBottomLeftAlignmentItem1.Enabled = False
-        Me.ToggleTableCellsBottomLeftAlignmentItem1.Id = 657
+        Me.ToggleTableCellsBottomLeftAlignmentItem1.Id = 434
         Me.ToggleTableCellsBottomLeftAlignmentItem1.Name = "ToggleTableCellsBottomLeftAlignmentItem1"
         '
         'ToggleTableCellsTopCenterAlignmentItem1
         '
         Me.ToggleTableCellsTopCenterAlignmentItem1.Enabled = False
-        Me.ToggleTableCellsTopCenterAlignmentItem1.Id = 658
+        Me.ToggleTableCellsTopCenterAlignmentItem1.Id = 435
         Me.ToggleTableCellsTopCenterAlignmentItem1.Name = "ToggleTableCellsTopCenterAlignmentItem1"
         '
         'ToggleTableCellsMiddleCenterAlignmentItem1
         '
         Me.ToggleTableCellsMiddleCenterAlignmentItem1.Enabled = False
-        Me.ToggleTableCellsMiddleCenterAlignmentItem1.Id = 659
+        Me.ToggleTableCellsMiddleCenterAlignmentItem1.Id = 436
         Me.ToggleTableCellsMiddleCenterAlignmentItem1.Name = "ToggleTableCellsMiddleCenterAlignmentItem1"
         '
         'ToggleTableCellsBottomCenterAlignmentItem1
         '
         Me.ToggleTableCellsBottomCenterAlignmentItem1.Enabled = False
-        Me.ToggleTableCellsBottomCenterAlignmentItem1.Id = 660
+        Me.ToggleTableCellsBottomCenterAlignmentItem1.Id = 437
         Me.ToggleTableCellsBottomCenterAlignmentItem1.Name = "ToggleTableCellsBottomCenterAlignmentItem1"
         '
         'ToggleTableCellsTopRightAlignmentItem1
         '
         Me.ToggleTableCellsTopRightAlignmentItem1.Enabled = False
-        Me.ToggleTableCellsTopRightAlignmentItem1.Id = 661
+        Me.ToggleTableCellsTopRightAlignmentItem1.Id = 438
         Me.ToggleTableCellsTopRightAlignmentItem1.Name = "ToggleTableCellsTopRightAlignmentItem1"
         '
         'ToggleTableCellsMiddleRightAlignmentItem1
         '
         Me.ToggleTableCellsMiddleRightAlignmentItem1.Enabled = False
-        Me.ToggleTableCellsMiddleRightAlignmentItem1.Id = 662
+        Me.ToggleTableCellsMiddleRightAlignmentItem1.Id = 439
         Me.ToggleTableCellsMiddleRightAlignmentItem1.Name = "ToggleTableCellsMiddleRightAlignmentItem1"
         '
         'ToggleTableCellsBottomRightAlignmentItem1
         '
         Me.ToggleTableCellsBottomRightAlignmentItem1.Enabled = False
-        Me.ToggleTableCellsBottomRightAlignmentItem1.Id = 663
+        Me.ToggleTableCellsBottomRightAlignmentItem1.Id = 440
         Me.ToggleTableCellsBottomRightAlignmentItem1.Name = "ToggleTableCellsBottomRightAlignmentItem1"
         '
         'ShowTableOptionsFormItem1
         '
         Me.ShowTableOptionsFormItem1.Enabled = False
-        Me.ShowTableOptionsFormItem1.Id = 664
+        Me.ShowTableOptionsFormItem1.Id = 441
         Me.ShowTableOptionsFormItem1.Name = "ShowTableOptionsFormItem1"
         '
         'ChangeFloatingObjectFillColorItem1
         '
         Me.ChangeFloatingObjectFillColorItem1.Enabled = False
-        Me.ChangeFloatingObjectFillColorItem1.Id = 665
+        Me.ChangeFloatingObjectFillColorItem1.Id = 442
         Me.ChangeFloatingObjectFillColorItem1.Name = "ChangeFloatingObjectFillColorItem1"
         '
         'ChangeFloatingObjectOutlineColorItem1
         '
         Me.ChangeFloatingObjectOutlineColorItem1.Enabled = False
-        Me.ChangeFloatingObjectOutlineColorItem1.Id = 666
+        Me.ChangeFloatingObjectOutlineColorItem1.Id = 443
         Me.ChangeFloatingObjectOutlineColorItem1.Name = "ChangeFloatingObjectOutlineColorItem1"
         '
         'ChangeFloatingObjectOutlineWeightItem1
         '
         Me.ChangeFloatingObjectOutlineWeightItem1.Edit = Me.RepositoryItemFloatingObjectOutlineWeight1
         Me.ChangeFloatingObjectOutlineWeightItem1.Enabled = False
-        Me.ChangeFloatingObjectOutlineWeightItem1.Id = 667
+        Me.ChangeFloatingObjectOutlineWeightItem1.Id = 444
         Me.ChangeFloatingObjectOutlineWeightItem1.Name = "ChangeFloatingObjectOutlineWeightItem1"
         '
         'RepositoryItemFloatingObjectOutlineWeight1
@@ -4118,161 +4019,161 @@ Partial Class frmDashboardDesigner
         'ChangeFloatingObjectTextWrapTypeItem1
         '
         Me.ChangeFloatingObjectTextWrapTypeItem1.Enabled = False
-        Me.ChangeFloatingObjectTextWrapTypeItem1.Id = 668
+        Me.ChangeFloatingObjectTextWrapTypeItem1.Id = 445
         Me.ChangeFloatingObjectTextWrapTypeItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.SetFloatingObjectInlineTextWrapTypeItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.SetFloatingObjectSquareTextWrapTypeItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.SetFloatingObjectTightTextWrapTypeItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.SetFloatingObjectThroughTextWrapTypeItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.SetFloatingObjectTopAndBottomTextWrapTypeItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.SetFloatingObjectBehindTextWrapTypeItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.SetFloatingObjectInFrontOfTextWrapTypeItem1)})
         Me.ChangeFloatingObjectTextWrapTypeItem1.Name = "ChangeFloatingObjectTextWrapTypeItem1"
         '
         'SetFloatingObjectInlineTextWrapTypeItem1
         '
         Me.SetFloatingObjectInlineTextWrapTypeItem1.Enabled = False
-        Me.SetFloatingObjectInlineTextWrapTypeItem1.Id = 669
+        Me.SetFloatingObjectInlineTextWrapTypeItem1.Id = 446
         Me.SetFloatingObjectInlineTextWrapTypeItem1.Name = "SetFloatingObjectInlineTextWrapTypeItem1"
         '
         'SetFloatingObjectSquareTextWrapTypeItem1
         '
         Me.SetFloatingObjectSquareTextWrapTypeItem1.Enabled = False
-        Me.SetFloatingObjectSquareTextWrapTypeItem1.Id = 670
+        Me.SetFloatingObjectSquareTextWrapTypeItem1.Id = 447
         Me.SetFloatingObjectSquareTextWrapTypeItem1.Name = "SetFloatingObjectSquareTextWrapTypeItem1"
         '
         'SetFloatingObjectTightTextWrapTypeItem1
         '
         Me.SetFloatingObjectTightTextWrapTypeItem1.Enabled = False
-        Me.SetFloatingObjectTightTextWrapTypeItem1.Id = 671
+        Me.SetFloatingObjectTightTextWrapTypeItem1.Id = 448
         Me.SetFloatingObjectTightTextWrapTypeItem1.Name = "SetFloatingObjectTightTextWrapTypeItem1"
         '
         'SetFloatingObjectThroughTextWrapTypeItem1
         '
         Me.SetFloatingObjectThroughTextWrapTypeItem1.Enabled = False
-        Me.SetFloatingObjectThroughTextWrapTypeItem1.Id = 672
+        Me.SetFloatingObjectThroughTextWrapTypeItem1.Id = 449
         Me.SetFloatingObjectThroughTextWrapTypeItem1.Name = "SetFloatingObjectThroughTextWrapTypeItem1"
         '
         'SetFloatingObjectTopAndBottomTextWrapTypeItem1
         '
         Me.SetFloatingObjectTopAndBottomTextWrapTypeItem1.Enabled = False
-        Me.SetFloatingObjectTopAndBottomTextWrapTypeItem1.Id = 673
+        Me.SetFloatingObjectTopAndBottomTextWrapTypeItem1.Id = 450
         Me.SetFloatingObjectTopAndBottomTextWrapTypeItem1.Name = "SetFloatingObjectTopAndBottomTextWrapTypeItem1"
         '
         'SetFloatingObjectBehindTextWrapTypeItem1
         '
         Me.SetFloatingObjectBehindTextWrapTypeItem1.Enabled = False
-        Me.SetFloatingObjectBehindTextWrapTypeItem1.Id = 674
+        Me.SetFloatingObjectBehindTextWrapTypeItem1.Id = 451
         Me.SetFloatingObjectBehindTextWrapTypeItem1.Name = "SetFloatingObjectBehindTextWrapTypeItem1"
         '
         'SetFloatingObjectInFrontOfTextWrapTypeItem1
         '
         Me.SetFloatingObjectInFrontOfTextWrapTypeItem1.Enabled = False
-        Me.SetFloatingObjectInFrontOfTextWrapTypeItem1.Id = 675
+        Me.SetFloatingObjectInFrontOfTextWrapTypeItem1.Id = 452
         Me.SetFloatingObjectInFrontOfTextWrapTypeItem1.Name = "SetFloatingObjectInFrontOfTextWrapTypeItem1"
         '
         'ChangeFloatingObjectAlignmentItem1
         '
         Me.ChangeFloatingObjectAlignmentItem1.Enabled = False
-        Me.ChangeFloatingObjectAlignmentItem1.Id = 676
+        Me.ChangeFloatingObjectAlignmentItem1.Id = 453
         Me.ChangeFloatingObjectAlignmentItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.SetFloatingObjectTopLeftAlignmentItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.SetFloatingObjectTopCenterAlignmentItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.SetFloatingObjectTopRightAlignmentItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.SetFloatingObjectMiddleLeftAlignmentItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.SetFloatingObjectMiddleCenterAlignmentItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.SetFloatingObjectMiddleRightAlignmentItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.SetFloatingObjectBottomLeftAlignmentItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.SetFloatingObjectBottomCenterAlignmentItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.SetFloatingObjectBottomRightAlignmentItem1)})
         Me.ChangeFloatingObjectAlignmentItem1.Name = "ChangeFloatingObjectAlignmentItem1"
         '
         'SetFloatingObjectTopLeftAlignmentItem1
         '
         Me.SetFloatingObjectTopLeftAlignmentItem1.Enabled = False
-        Me.SetFloatingObjectTopLeftAlignmentItem1.Id = 677
+        Me.SetFloatingObjectTopLeftAlignmentItem1.Id = 454
         Me.SetFloatingObjectTopLeftAlignmentItem1.Name = "SetFloatingObjectTopLeftAlignmentItem1"
         '
         'SetFloatingObjectTopCenterAlignmentItem1
         '
         Me.SetFloatingObjectTopCenterAlignmentItem1.Enabled = False
-        Me.SetFloatingObjectTopCenterAlignmentItem1.Id = 678
+        Me.SetFloatingObjectTopCenterAlignmentItem1.Id = 455
         Me.SetFloatingObjectTopCenterAlignmentItem1.Name = "SetFloatingObjectTopCenterAlignmentItem1"
         '
         'SetFloatingObjectTopRightAlignmentItem1
         '
         Me.SetFloatingObjectTopRightAlignmentItem1.Enabled = False
-        Me.SetFloatingObjectTopRightAlignmentItem1.Id = 679
+        Me.SetFloatingObjectTopRightAlignmentItem1.Id = 456
         Me.SetFloatingObjectTopRightAlignmentItem1.Name = "SetFloatingObjectTopRightAlignmentItem1"
         '
         'SetFloatingObjectMiddleLeftAlignmentItem1
         '
         Me.SetFloatingObjectMiddleLeftAlignmentItem1.Enabled = False
-        Me.SetFloatingObjectMiddleLeftAlignmentItem1.Id = 680
+        Me.SetFloatingObjectMiddleLeftAlignmentItem1.Id = 457
         Me.SetFloatingObjectMiddleLeftAlignmentItem1.Name = "SetFloatingObjectMiddleLeftAlignmentItem1"
         '
         'SetFloatingObjectMiddleCenterAlignmentItem1
         '
         Me.SetFloatingObjectMiddleCenterAlignmentItem1.Enabled = False
-        Me.SetFloatingObjectMiddleCenterAlignmentItem1.Id = 681
+        Me.SetFloatingObjectMiddleCenterAlignmentItem1.Id = 458
         Me.SetFloatingObjectMiddleCenterAlignmentItem1.Name = "SetFloatingObjectMiddleCenterAlignmentItem1"
         '
         'SetFloatingObjectMiddleRightAlignmentItem1
         '
         Me.SetFloatingObjectMiddleRightAlignmentItem1.Enabled = False
-        Me.SetFloatingObjectMiddleRightAlignmentItem1.Id = 682
+        Me.SetFloatingObjectMiddleRightAlignmentItem1.Id = 459
         Me.SetFloatingObjectMiddleRightAlignmentItem1.Name = "SetFloatingObjectMiddleRightAlignmentItem1"
         '
         'SetFloatingObjectBottomLeftAlignmentItem1
         '
         Me.SetFloatingObjectBottomLeftAlignmentItem1.Enabled = False
-        Me.SetFloatingObjectBottomLeftAlignmentItem1.Id = 683
+        Me.SetFloatingObjectBottomLeftAlignmentItem1.Id = 460
         Me.SetFloatingObjectBottomLeftAlignmentItem1.Name = "SetFloatingObjectBottomLeftAlignmentItem1"
         '
         'SetFloatingObjectBottomCenterAlignmentItem1
         '
         Me.SetFloatingObjectBottomCenterAlignmentItem1.Enabled = False
-        Me.SetFloatingObjectBottomCenterAlignmentItem1.Id = 684
+        Me.SetFloatingObjectBottomCenterAlignmentItem1.Id = 461
         Me.SetFloatingObjectBottomCenterAlignmentItem1.Name = "SetFloatingObjectBottomCenterAlignmentItem1"
         '
         'SetFloatingObjectBottomRightAlignmentItem1
         '
         Me.SetFloatingObjectBottomRightAlignmentItem1.Enabled = False
-        Me.SetFloatingObjectBottomRightAlignmentItem1.Id = 685
+        Me.SetFloatingObjectBottomRightAlignmentItem1.Id = 462
         Me.SetFloatingObjectBottomRightAlignmentItem1.Name = "SetFloatingObjectBottomRightAlignmentItem1"
         '
         'FloatingObjectBringForwardSubItem1
         '
         Me.FloatingObjectBringForwardSubItem1.Enabled = False
-        Me.FloatingObjectBringForwardSubItem1.Id = 686
+        Me.FloatingObjectBringForwardSubItem1.Id = 463
         Me.FloatingObjectBringForwardSubItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.FloatingObjectBringForwardItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.FloatingObjectBringToFrontItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.FloatingObjectBringInFrontOfTextItem1)})
         Me.FloatingObjectBringForwardSubItem1.Name = "FloatingObjectBringForwardSubItem1"
         '
         'FloatingObjectBringForwardItem1
         '
         Me.FloatingObjectBringForwardItem1.Enabled = False
-        Me.FloatingObjectBringForwardItem1.Id = 687
+        Me.FloatingObjectBringForwardItem1.Id = 464
         Me.FloatingObjectBringForwardItem1.Name = "FloatingObjectBringForwardItem1"
         '
         'FloatingObjectBringToFrontItem1
         '
         Me.FloatingObjectBringToFrontItem1.Enabled = False
-        Me.FloatingObjectBringToFrontItem1.Id = 688
+        Me.FloatingObjectBringToFrontItem1.Id = 465
         Me.FloatingObjectBringToFrontItem1.Name = "FloatingObjectBringToFrontItem1"
         '
         'FloatingObjectBringInFrontOfTextItem1
         '
         Me.FloatingObjectBringInFrontOfTextItem1.Enabled = False
-        Me.FloatingObjectBringInFrontOfTextItem1.Id = 689
+        Me.FloatingObjectBringInFrontOfTextItem1.Id = 466
         Me.FloatingObjectBringInFrontOfTextItem1.Name = "FloatingObjectBringInFrontOfTextItem1"
         '
         'FloatingObjectSendBackwardSubItem1
         '
         Me.FloatingObjectSendBackwardSubItem1.Enabled = False
-        Me.FloatingObjectSendBackwardSubItem1.Id = 690
+        Me.FloatingObjectSendBackwardSubItem1.Id = 467
         Me.FloatingObjectSendBackwardSubItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.FloatingObjectSendBackwardItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.FloatingObjectSendToBackItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.FloatingObjectSendBehindTextItem1)})
         Me.FloatingObjectSendBackwardSubItem1.Name = "FloatingObjectSendBackwardSubItem1"
         '
         'FloatingObjectSendBackwardItem1
         '
         Me.FloatingObjectSendBackwardItem1.Enabled = False
-        Me.FloatingObjectSendBackwardItem1.Id = 691
+        Me.FloatingObjectSendBackwardItem1.Id = 468
         Me.FloatingObjectSendBackwardItem1.Name = "FloatingObjectSendBackwardItem1"
         '
         'FloatingObjectSendToBackItem1
         '
         Me.FloatingObjectSendToBackItem1.Enabled = False
-        Me.FloatingObjectSendToBackItem1.Id = 692
+        Me.FloatingObjectSendToBackItem1.Id = 469
         Me.FloatingObjectSendToBackItem1.Name = "FloatingObjectSendToBackItem1"
         '
         'FloatingObjectSendBehindTextItem1
         '
         Me.FloatingObjectSendBehindTextItem1.Enabled = False
-        Me.FloatingObjectSendBehindTextItem1.Id = 693
+        Me.FloatingObjectSendBehindTextItem1.Id = 470
         Me.FloatingObjectSendBehindTextItem1.Name = "FloatingObjectSendBehindTextItem1"
         '
         'PivotToolsRibbonPageCategory1
@@ -4281,6 +4182,50 @@ Partial Class frmDashboardDesigner
         Me.PivotToolsRibbonPageCategory1.Name = "PivotToolsRibbonPageCategory1"
         Me.PivotToolsRibbonPageCategory1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.DataRibbonPage1, Me.DashboardItemDesignRibbonPage1})
         Me.PivotToolsRibbonPageCategory1.Visible = False
+        '
+        'DashboardDesigner1
+        '
+        Me.DashboardDesigner1.AsyncMode = True
+        Me.DashboardDesigner1.BarAndDockingController = Me.DashboardBarAndDockingController1
+        Me.DashboardDesigner1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DashboardDesigner1.Location = New System.Drawing.Point(0, 193)
+        Me.DashboardDesigner1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DashboardDesigner1.MenuManager = Me.RibbonControl
+        Me.DashboardDesigner1.Name = "DashboardDesigner1"
+        Me.DashboardDesigner1.PopupMenu = Me.DashboardPopupMenu1
+        Me.DashboardDesigner1.Size = New System.Drawing.Size(958, 349)
+        Me.DashboardDesigner1.TabIndex = 4
+        '
+        'DashboardPopupMenu1
+        '
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.ShowItemCaptionBarItem1, True)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.DuplicateItemBarItem1, True)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.DeleteItemBarItem1)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.ConvertDashboardItemTypeBarItem1)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.RemoveDataItemsBarItem1)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.TransposeItemBarItem1)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.EditRulesBarItem1)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.EditItemNamesBarItem1, True)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.DeleteGroupBarItem1, True)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.DeleteTabContainerBarItem1, True)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.DeleteTabPageBarItem1, True)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.EditFilterBarItem1, True)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.ClearFilterBarItem1)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.EditVisibleDataFilterBarItem1)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.UpdateDataBarItem1, True)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.MapLoadBarItem1, True)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.MapImportBarItem1)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.MapDefaultShapefileBarItem1)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.MapFullExtentBarItem1, True)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.ImageLoadBarItem1, True)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.ImageImportBarItem1)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.TextBoxEditTextBarItem1, True)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.TextBoxInsertFieldBarItem1)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.RangeFilterEditDateTimePeriodsBarItem1, True)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.DateFilterEditDateTimePeriodsBarItem1)
+        Me.DashboardPopupMenu1.ItemLinks.Add(Me.PivotResetLayoutOptionsBarItem1, True)
+        Me.DashboardPopupMenu1.Name = "DashboardPopupMenu1"
+        Me.DashboardPopupMenu1.Ribbon = Me.RibbonControl
         '
         'DataRibbonPage1
         '
@@ -6222,44 +6167,6 @@ Partial Class frmDashboardDesigner
         Me.SkinPaletteGalleryRibbonPageGroup1.ItemLinks.Add(Me.DashboardSkinPaletteRibbonGalleryBarItem1)
         Me.SkinPaletteGalleryRibbonPageGroup1.Name = "SkinPaletteGalleryRibbonPageGroup1"
         '
-        'RibbonStatusBar
-        '
-        Me.RibbonStatusBar.Location = New System.Drawing.Point(0, 624)
-        Me.RibbonStatusBar.Name = "RibbonStatusBar"
-        Me.RibbonStatusBar.Ribbon = Me.RibbonControl
-        Me.RibbonStatusBar.Size = New System.Drawing.Size(1003, 27)
-        '
-        'DashboardPopupMenu1
-        '
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.ShowItemCaptionBarItem1, True)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.DuplicateItemBarItem1, True)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.DeleteItemBarItem1)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.ConvertDashboardItemTypeBarItem1)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.RemoveDataItemsBarItem1)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.TransposeItemBarItem1)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.EditRulesBarItem1)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.EditItemNamesBarItem1, True)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.DeleteGroupBarItem1, True)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.DeleteTabContainerBarItem1, True)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.DeleteTabPageBarItem1, True)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.EditFilterBarItem1, True)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.ClearFilterBarItem1)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.EditVisibleDataFilterBarItem1)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.UpdateDataBarItem1, True)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.MapLoadBarItem1, True)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.MapImportBarItem1)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.MapDefaultShapefileBarItem1)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.MapFullExtentBarItem1, True)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.ImageLoadBarItem1, True)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.ImageImportBarItem1)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.TextBoxEditTextBarItem1, True)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.TextBoxInsertFieldBarItem1)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.RangeFilterEditDateTimePeriodsBarItem1, True)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.DateFilterEditDateTimePeriodsBarItem1)
-        Me.DashboardPopupMenu1.ItemLinks.Add(Me.PivotResetLayoutOptionsBarItem1, True)
-        Me.DashboardPopupMenu1.Name = "DashboardPopupMenu1"
-        Me.DashboardPopupMenu1.Ribbon = Me.RibbonControl
-        '
         'DashboardBarController1
         '
         Me.DashboardBarController1.BarItems.Add(Me.FileNewBarItem1)
@@ -6731,32 +6638,29 @@ Partial Class frmDashboardDesigner
         Me.TextBoxEditorBarController1.BarItems.Add(Me.FloatingObjectSendBackwardSubItem1)
         Me.TextBoxEditorBarController1.Designer = Me.DashboardDesigner1
         '
-        'frmDashboardDesigner
+        'frmDiseñadorDashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1003, 651)
-        Me.Controls.Add(Me.Panel1)
+        Me.ClientSize = New System.Drawing.Size(958, 572)
+        Me.Controls.Add(Me.DashboardDesigner1)
         Me.Controls.Add(Me.RibbonStatusBar)
-        Me.Controls.Add(Me.DashboardBackstageViewControl1)
         Me.Controls.Add(Me.RibbonControl)
-        Me.Name = "frmDashboardDesigner"
+        Me.IconOptions.LargeImage = CType(resources.GetObject("frmDiseñadorDashboard.IconOptions.LargeImage"), System.Drawing.Image)
+        Me.Name = "frmDiseñadorDashboard"
         Me.Ribbon = Me.RibbonControl
         Me.StatusBar = Me.RibbonStatusBar
-        Me.Text = "Dashboard"
-        Me.Panel1.ResumeLayout(False)
-        CType(Me.DashboardDesigner1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DashboardBarAndDockingController1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Text = "Diseñador de Dashboard"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DashboardBackstageViewControl1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.DashboardBackstageViewControl1.ResumeLayout(False)
-        Me.BackstageViewClientControl1.ResumeLayout(False)
+        CType(Me.DashboardBarAndDockingController1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemSpinEdit1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemFontEdit1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemRichEditFontSizeEdit1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemBorderLineStyle1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemBorderLineWeight1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemFloatingObjectOutlineWeight1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DashboardDesigner1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DashboardPopupMenu1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DashboardBarController1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TextBoxEditorBarController1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -6764,20 +6668,9 @@ Partial Class frmDashboardDesigner
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Panel1 As Panel
     Friend WithEvents RibbonStatusBar As DevExpress.XtraBars.Ribbon.RibbonStatusBar
-    Friend WithEvents DashboardDesigner1 As DevExpress.DashboardWin.DashboardDesigner
-    Friend WithEvents DashboardBarAndDockingController1 As DevExpress.DashboardWin.Native.DashboardBarAndDockingController
     Friend WithEvents RibbonControl As DevExpress.XtraBars.Ribbon.RibbonControl
-    Friend WithEvents DashboardBackstageViewControl1 As DevExpress.DashboardWin.Bars.DashboardBackstageViewControl
-    Friend WithEvents BackstageViewClientControl1 As DevExpress.XtraBars.Ribbon.BackstageViewClientControl
-    Friend WithEvents RecentDashboardsControl1 As DevExpress.DashboardWin.Bars.RecentDashboardsControl
-    Friend WithEvents DashboardBackstageRecentTab1 As DevExpress.DashboardWin.Bars.DashboardBackstageRecentTab
-    Friend WithEvents DashboardBackstageNewButton1 As DevExpress.DashboardWin.Bars.DashboardBackstageNewButton
-    Friend WithEvents DashboardBackstageOpenButton1 As DevExpress.DashboardWin.Bars.DashboardBackstageOpenButton
-    Friend WithEvents DashboardBackstageSaveButton1 As DevExpress.DashboardWin.Bars.DashboardBackstageSaveButton
-    Friend WithEvents DashboardBackstageSaveAsButton1 As DevExpress.DashboardWin.Bars.DashboardBackstageSaveAsButton
+    Friend WithEvents DashboardBarAndDockingController1 As DevExpress.DashboardWin.Native.DashboardBarAndDockingController
     Friend WithEvents FileNewBarItem1 As DevExpress.DashboardWin.Bars.FileNewBarItem
     Friend WithEvents FileOpenBarItem1 As DevExpress.DashboardWin.Bars.FileOpenBarItem
     Friend WithEvents FileSaveBarItem1 As DevExpress.DashboardWin.Bars.FileSaveBarItem
@@ -7255,6 +7148,8 @@ Partial Class frmDashboardDesigner
     Friend WithEvents FloatingObjectSendToBackItem1 As DevExpress.XtraRichEdit.UI.FloatingObjectSendToBackItem
     Friend WithEvents FloatingObjectSendBehindTextItem1 As DevExpress.XtraRichEdit.UI.FloatingObjectSendBehindTextItem
     Friend WithEvents PivotToolsRibbonPageCategory1 As DevExpress.DashboardWin.Bars.PivotToolsRibbonPageCategory
+    Friend WithEvents DashboardDesigner1 As DevExpress.DashboardWin.DashboardDesigner
+    Friend WithEvents DashboardPopupMenu1 As DevExpress.DashboardWin.DashboardPopupMenu
     Friend WithEvents DataRibbonPage1 As DevExpress.DashboardWin.Bars.DataRibbonPage
     Friend WithEvents FilteringRibbonPageGroup1 As DevExpress.DashboardWin.Bars.FilteringRibbonPageGroup
     Friend WithEvents InteractivitySettingsRibbonPageGroup1 As DevExpress.DashboardWin.Bars.InteractivitySettingsRibbonPageGroup
@@ -7497,7 +7392,6 @@ Partial Class frmDashboardDesigner
     Friend WithEvents ViewRibbonPage1 As DevExpress.DashboardWin.Bars.ViewRibbonPage
     Friend WithEvents SkinsRibbonPageGroup1 As DevExpress.DashboardWin.Bars.SkinsRibbonPageGroup
     Friend WithEvents SkinPaletteGalleryRibbonPageGroup1 As DevExpress.DashboardWin.Bars.SkinPaletteGalleryRibbonPageGroup
-    Friend WithEvents DashboardPopupMenu1 As DevExpress.DashboardWin.DashboardPopupMenu
     Friend WithEvents DashboardBarController1 As DevExpress.DashboardWin.Bars.DashboardBarController
     Friend WithEvents TextBoxEditorBarController1 As DevExpress.DashboardWin.Bars.TextBoxEditorBarController
 End Class

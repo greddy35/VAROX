@@ -1,0 +1,12 @@
+﻿<XtraSerializer version="1.0" application="Appearances">
+  <property name="Item" isnull="true" iskey="true">
+    <property name="Hovered" iskey="true" value="Hovered">
+      <property name="Options" isnull="true" iskey="true">
+        <property name="UseForeColor">true</property>
+      </property>
+      <property name="ForeColor">MediumBlue</property>
+    </property>
+  </property>
+  <property name="Group" isnull="true" iskey="true" />
+  <property name="ItemWithContainer" isnull="true" iskey="true" />
+</XtraSerializer>

@@ -3,8 +3,9 @@
     Private _clase As String
     Private _concepto As String
     Private _activo As Char
-    Private _charInicioD As Char
-    Private _charFinD As Char
+    Private _charInicioD As String
+    Private _ajuste As String
+    Private _numCaractExt As String
     Private _creadoEl As String
     Private _creadoPor As String
     Private _modificadoEl As String
@@ -46,21 +47,12 @@
         End Set
     End Property
 
-    Public Property CharInicioD As Char
+    Public Property CharInicioD As String
         Get
             Return _charInicioD
         End Get
-        Set(value As Char)
+        Set(value As String)
             _charInicioD = value
-        End Set
-    End Property
-
-    Public Property CharFinD As Char
-        Get
-            Return _charFinD
-        End Get
-        Set(value As Char)
-            _charFinD = value
         End Set
     End Property
 
@@ -97,6 +89,24 @@
         End Get
         Set(value As String)
             _modificadoPor = value
+        End Set
+    End Property
+
+    Public Property Ajuste As String
+        Get
+            Return _ajuste
+        End Get
+        Set(value As String)
+            _ajuste = value
+        End Set
+    End Property
+
+    Public Property NumCaractExt As String
+        Get
+            Return _numCaractExt
+        End Get
+        Set(value As String)
+            _numCaractExt = value
         End Set
     End Property
 End Class

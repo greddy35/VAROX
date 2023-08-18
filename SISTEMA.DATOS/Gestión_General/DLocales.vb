@@ -5,10 +5,14 @@ Public Class DLocales
     Inherits ConexionBD_Local
     Public Function Insertar(ByVal Obj As Locales) As String
         Try
-            Dim Comando As New SqlCommand("AS_insertarTipoMed", MyBase.conn)
+            Dim Comando As New SqlCommand("GG_insertarLocal", MyBase.conn)
             Comando.CommandType = CommandType.StoredProcedure
+            Comando.Parameters.Add("@codigo", SqlDbType.VarChar).Value = Obj.Codigo
             Comando.Parameters.Add("@nombre", SqlDbType.VarChar).Value = Obj.Nombre
-            Comando.Parameters.Add("@descripcion", SqlDbType.VarChar).Value = Obj.Codigo
+            Comando.Parameters.Add("@alias", SqlDbType.VarChar).Value = Obj.Alias
+            Comando.Parameters.Add("@activo", SqlDbType.Char).Value = Obj.Estado
+            Comando.Parameters.Add("@ubicacion", SqlDbType.VarChar).Value = Obj.Ubicacion
+            Comando.Parameters.Add("@direccion", SqlDbType.VarChar).Value = Obj.Direccion
             Comando.Parameters.Add("@usuario", SqlDbType.VarChar).Value = Obj.CreadoPor
             MyBase.conn.Open()
             Comando.ExecuteNonQuery()
@@ -21,10 +25,15 @@ Public Class DLocales
 
     Public Function Modificar(ByVal Obj As Locales) As String
         Try
-            Dim Comando As New SqlCommand("AS_actualizarTipoMed", MyBase.conn)
+            Dim Comando As New SqlCommand("GG_actualizarLocal", MyBase.conn)
             Comando.CommandType = CommandType.StoredProcedure
+            Comando.Parameters.Add("@id", SqlDbType.VarChar).Value = Obj.Id
+            Comando.Parameters.Add("@codigo", SqlDbType.VarChar).Value = Obj.Codigo
             Comando.Parameters.Add("@nombre", SqlDbType.VarChar).Value = Obj.Nombre
-            Comando.Parameters.Add("@descripcion", SqlDbType.VarChar).Value = Obj.Codigo
+            Comando.Parameters.Add("@alias", SqlDbType.VarChar).Value = Obj.Alias
+            Comando.Parameters.Add("@activo", SqlDbType.Char).Value = Obj.Estado
+            Comando.Parameters.Add("@ubicacion", SqlDbType.VarChar).Value = Obj.Ubicacion
+            Comando.Parameters.Add("@direccion", SqlDbType.VarChar).Value = Obj.Direccion
             Comando.Parameters.Add("@usuario", SqlDbType.VarChar).Value = Obj.ModificadoPor
             MyBase.conn.Open()
             Comando.ExecuteNonQuery()
@@ -37,7 +46,7 @@ Public Class DLocales
 
     Public Function Eliminar(ByVal valor As String) As String
         Try
-            Dim Comando As New SqlCommand("AS_eliminarTipoMed", MyBase.conn)
+            Dim Comando As New SqlCommand("GG_eliminarLocal", MyBase.conn)
             Comando.CommandType = CommandType.StoredProcedure
             Comando.Parameters.Add("@id", SqlDbType.VarChar).Value = valor
             MyBase.conn.Open()
@@ -56,7 +65,7 @@ Public Class DLocales
         Try
             Dim Resultado As SqlDataReader
             Dim Tabla As New DataTable
-            Dim Comando As New SqlCommand("AS_consultarTipoMed", MyBase.conn)
+            Dim Comando As New SqlCommand("GG_consultarLocales", MyBase.conn)
             Comando.CommandType = CommandType.StoredProcedure
             MyBase.conn.Open()                                                              'Abrimos conexion a la BD
             Resultado = Comando.ExecuteReader()
@@ -74,7 +83,7 @@ Public Class DLocales
         Try
             Dim Resultado As SqlDataReader
             Dim Tabla As New DataTable
-            Dim Comando As New SqlCommand("AS_buscarTipoMed", MyBase.conn)
+            Dim Comando As New SqlCommand("GG_buscarLocal", MyBase.conn)
             Comando.CommandType = CommandType.StoredProcedure
             Comando.Parameters.Add("@id", SqlDbType.VarChar).Value = valor
             MyBase.conn.Open()                                                              'Abrimos conexion a la BD
@@ -82,6 +91,40 @@ Public Class DLocales
             Tabla.Load(Resultado)                                                            'Se llena el DataSet con la consulta guardada en el adaptador
             MyBase.conn.Close()                                                             'Cerramos la conexion a BD
             Return Tabla
+        Catch ex As Exception
+#Disable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
+            Throw ex
+#Enable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
+        End Try
+    End Function
+    Public Function Buscar2(ByVal valor As String) As DataTable
+        Try
+            Dim Resultado As SqlDataReader
+            Dim Tabla As New DataTable
+            Dim Comando As New SqlCommand("GG_buscarLocal2", MyBase.conn)
+            Comando.CommandType = CommandType.StoredProcedure
+            Comando.Parameters.Add("@codigo", SqlDbType.VarChar).Value = valor
+            MyBase.conn.Open()                                                              'Abrimos conexion a la BD
+            Resultado = Comando.ExecuteReader()
+            Tabla.Load(Resultado)                                                            'Se llena el DataSet con la consulta guardada en el adaptador
+            MyBase.conn.Close()                                                             'Cerramos la conexion a BD
+            Return Tabla
+        Catch ex As Exception
+#Disable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
+            Throw ex
+#Enable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
+        End Try
+    End Function
+    Public Function CargarUbicaciones() As DataSet
+        Try
+            Dim Tabla As New DataSet
+            Dim Comando As New SqlCommand("GG_cargarUbicaciones", MyBase.conn)
+            Comando.CommandType = CommandType.StoredProcedure
+            MyBase.conn.Open()                                                              'Abrimos conexion a la BD
+            Dim adapter As New SqlDataAdapter(Comando)
+            adapter.Fill(Tabla)
+            MyBase.conn.Close()                                                             'Cerramos la conexion a BD
+            Return Tabla                                                                    'Retornamos el DataSet
         Catch ex As Exception
 #Disable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
             Throw ex

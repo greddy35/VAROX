@@ -1,4 +1,10 @@
-﻿Imports DevExpress.XtraEditors
+﻿Imports DevExpress.DashboardCommon
+Imports DevExpress.DashboardWin
+Imports DevExpress.DataAccess.ConnectionParameters
+Imports DevExpress.DataAccess.Sql
+Imports DevExpress.LookAndFeel
+Imports DevExpress.XtraEditors
+Imports DevExpress.XtraReports.UI
 Imports Microsoft.SqlServer
 Imports SISTEMA.DATOS
 Imports SISTEMA.NEGOCIO
@@ -9,9 +15,13 @@ Public Class frmPrincipal
 
     'Variables globales
     Dim gsLogin As New NLogin
-    'Dim biosoft As New ConexionBD_BioSoft
 
     Dim estadoConexión As Boolean = False
+
+    Dim activeSkinName As String = UserLookAndFeel.Default.ActiveSkinName
+#Region "datasource"
+    Private Property DataSource() As SqlDataSource
+#End Region
 
 #Region "Funciones y Metodos"
     Private Sub TimerConexión_Tick(sender As Object, e As EventArgs) Handles TimerConexión.Tick
@@ -86,51 +96,6 @@ Public Class frmPrincipal
     End Sub
 
 
-
-    Function ValidarPassword(ByVal pass As String,
-    Optional ByVal minLength As Integer = 8,
-    Optional ByVal numUpper As Integer = 1,
-    Optional ByVal numLower As Integer = 2,
-    Optional ByVal numNumbers As Integer = 2,
-    Optional ByVal numSpecial As Integer = 2) As Boolean
-
-        ' Replace [A-Z] with \p{Lu}, to allow for Unicode uppercase letters.
-        Dim upper As New System.Text.RegularExpressions.Regex("[A-Z]")
-        Dim lower As New System.Text.RegularExpressions.Regex("[a-z]")
-        Dim number As New System.Text.RegularExpressions.Regex("[0-9]")
-        ' Special is "none of the above".
-        Dim special As New System.Text.RegularExpressions.Regex("[^a-zA-Z0-9]")
-
-        ' Check the length.
-        If Len(pass) < minLength Then Return False
-        ' Check for minimum number of occurrences.
-        If upper.Matches(pass).Count < numUpper Then Return False
-        If lower.Matches(pass).Count < numLower Then Return False
-        If number.Matches(pass).Count < numNumbers Then Return False
-        If special.Matches(pass).Count < numSpecial Then Return False
-
-        ' Passed all checks.
-        Return True
-    End Function
-
-    Private Sub btnVerPass_Click(sender As Object, e As EventArgs) Handles btnVerPass.Click
-        Try
-            If txtPass.UseSystemPasswordChar = True Then
-                txtPass.PasswordChar = CChar("")
-                txtPassConfirma.PasswordChar = CChar("")
-                txtPass.UseSystemPasswordChar = False
-                txtPassConfirma.UseSystemPasswordChar = False
-            Else
-                txtPass.PasswordChar = CChar("●")
-                txtPassConfirma.PasswordChar = CChar("●")
-                txtPass.UseSystemPasswordChar = True
-                txtPassConfirma.UseSystemPasswordChar = True
-            End If
-        Catch ex As Exception
-            MsgBox(ex)
-        End Try
-    End Sub
-
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles accSalir.Click
         Dim respuesta As Integer
         respuesta = MessageBox.Show("¿Seguro que desea salir? " & vbLf & " Al salir perderá cualquier cambio que no haya guardado", "Cierre de Sesión", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
@@ -144,174 +109,144 @@ Public Class frmPrincipal
         Dim respuesta As Integer
         respuesta = MessageBox.Show("¿Seguro que desea cerrar la sesión actual?", "Cierre de Sesión", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
         If (respuesta = DialogResult.OK) Then
+            Login.cargarArchivoIni() 'Recarga las opciones de los campos de texto
             Login.Show()
             Me.Dispose()
         End If
     End Sub
 
     Private Sub btnCambiarContraseña_Click(sender As Object, e As EventArgs) Handles accCambiarContraseña.Click
-        Centrar(GroupBoxRestabPass)
-        txtPass.PasswordChar = CChar("*")
-        txtPassConfirma.PasswordChar = CChar("*")
-        txtPassActual.Text = ""
-        txtPass.Text = ""
-        txtPassConfirma.Text = ""
-        GroupBoxRestabPass.Visible = True
+        frmCambioContraseña.ShowDialog()
     End Sub
 
-    Private Sub btnCambiarPass_Click(sender As Object, e As EventArgs) Handles btnCambiarPass.Click
-        Try
-            'AGREGAR VALIDACION DE CONTRASEÑA ACTUAL
-            If txtPass.Text.Trim.Equals(txtPassConfirma.Text.Trim) Then
-                If contraseña_actual.ToString = txtPassActual.Text.Trim Then
-                    If ValidarPassword(txtPass.Text.Trim) = True Then
-                        If gsLogin.NRestablecerPass(idUsuario.ToString, txtPass.Text) = True Then
-                            MessageBox.Show("Contraseña restablecida correctamente", "Cambiar Contraseña", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                            contraseña_actual = txtPassActual.Text.ToString
-                            GroupBoxRestabPass.Visible = False
-                        Else
-                            MessageBox.Show("La contraseña no se logró cambiar", "Cambiar Contraseña", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                        End If
-                    Else
-                        MessageBox.Show("La contraseña no cumple con los requisitos mínimos de complejidad:" & vbLf &
-                                        vbLf & "Mínimo: 8 caracteres" &
-                                        vbLf & "Contener: 1 Mayúscula" &
-                                        vbLf & "Contener: 2 Minúsculas" &
-                                        vbLf & "Contener: 2 Números" &
-                                        vbLf & "Contener: 2 caracteres especiales", "Formato inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                    End If
-                Else
-                    txtPassActual.Text = ""
-                    MessageBox.Show("La contraseña actual no es correcta, intente de nuevo", "Cambiar Contraseña", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                End If
-            Else
-                MessageBox.Show("Las contraseñas no coinciden", "Cambiar Contraseña", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End If
+    Private Sub iniciarMenu()
+        'PRINCIPALES
+        accModReportAnalisis.Visible = False
+        accModGestionGeneral.Visible = False
+        accModAdmSistema.Visible = False
+        'SECUNDARIOS
+        accSubModAnalisis.Visible = False
+        accSubModReportes.Visible = False
+        accSubModDashboard.Visible = False
+        accSubModGestion.Visible = False
+        accSubModMantenimientos.Visible = False
+        accSubModSeguridad.Visible = False
+        accSubModParametros.Visible = False
+        'BOTONES DE MODULOS
+        accAnalisisCortes.Visible = False
+        accDiseñadorDashboard.Visible = False
+        accVisualizadorDashboard.Visible = False
+        accDiseñadorReportes.Visible = False
+        accVisualizadorReportes.Visible = False
+        accValLocClien.Visible = False
+        accClientes.Visible = False
+        accLocales.Visible = False
+        accValvulas.Visible = False
+        accUsuariosPrivilegios.Visible = False
+        accTiposMedicion.Visible = False
+        accTiposValvulas.Visible = False
+        accClasesDispo.Visible = False
+    End Sub
 
+    Private Sub cargarModulos()
+        Try
+            If Privilegios Is Nothing Then
+                MessageBox.Show("Usuario sin privilegios", "VAROX", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Return
+            End If
+            'MODULO REPORTERIA Y ANALISIS
+            If Privilegios.Tables(0).Select("id_modulo='1'").Count > 0 Or Privilegios.Tables(0).Select("id_modulo='2'").Count > 0 Or Privilegios.Tables(0).Select("id_modulo='3'").Count > 0 Or Privilegios.Tables(0).Select("id_modulo='4'").Count > 0 Or Privilegios.Tables(0).Select("id_modulo='5'").Count > 0 Then
+                accModReportAnalisis.Visible = True
+                'Modulo Analisis
+                If Privilegios.Tables(0).Select("id_modulo='1'").Count > 0 Then
+                    'Ventana Analisis y Cortes
+                    accSubModAnalisis.Visible = True
+                    accAnalisisCortes.Visible = True
+                End If
+                'Modulo Reportes
+                If Privilegios.Tables(0).Select("id_modulo='2'").Count > 0 Or Privilegios.Tables(0).Select("id_modulo='3'").Count > 0 Then
+                    accSubModReportes.Visible = True
+                    'Ventana Creacion Reportes 
+                    If Privilegios.Tables(0).Select("id_modulo='2'").Count > 0 Then
+                        accDiseñadorReportes.Visible = True
+                    End If
+                    'Ventana Visualizacion Reportes
+                    If Privilegios.Tables(0).Select("id_modulo='3'").Count > 0 Then
+                        accVisualizadorReportes.Visible = True
+                    End If
+                End If
+                'Modulo Dashboard
+                If Privilegios.Tables(0).Select("id_modulo='4'").Count > 0 Or Privilegios.Tables(0).Select("id_modulo='5'").Count > 0 Then
+                    accSubModDashboard.Visible = True
+                    'Ventana Creacion Reportes 
+                    If Privilegios.Tables(0).Select("id_modulo='4'").Count > 0 Then
+                        accDiseñadorDashboard.Visible = True
+                    End If
+                    'Ventana Visualizacion Reportes
+                    If Privilegios.Tables(0).Select("id_modulo='5'").Count > 0 Then
+                        accVisualizadorDashboard.Visible = True
+                    End If
+                End If
+            End If
+            '--------------------------------------------------------------------------------------
+            'MODULO GESTION GENERAL
+            If Privilegios.Tables(0).Select("id_modulo='20'").Count > 0 Or Privilegios.Tables(0).Select("id_modulo='21'").Count > 0 Or Privilegios.Tables(0).Select("id_modulo='22'").Count > 0 Or Privilegios.Tables(0).Select("id_modulo='23'").Count > 0 Then
+                accModGestionGeneral.Visible = True
+                'Modulo Gestion
+                If Privilegios.Tables(0).Select("id_modulo='20'").Count > 0 Then
+                    'Ventana Valvulas-Local-Cliente
+                    accSubModGestion.Visible = True
+                    accValLocClien.Visible = True
+                End If
+                'Modulo Mantenimientos
+                If Privilegios.Tables(0).Select("id_modulo='21'").Count > 0 Or Privilegios.Tables(0).Select("id_modulo='22'").Count > 0 Or Privilegios.Tables(0).Select("id_modulo='23'").Count > 0 Then
+                    accSubModMantenimientos.Visible = True
+                    'Ventana Clientes 
+                    If Privilegios.Tables(0).Select("id_modulo='21'").Count > 0 Then
+                        accClientes.Visible = True
+                    End If
+                    'Ventana Locales
+                    If Privilegios.Tables(0).Select("id_modulo='22'").Count > 0 Then
+                        accLocales.Visible = True
+                    End If
+                    'Ventana Valvulas
+                    If Privilegios.Tables(0).Select("id_modulo='23'").Count > 0 Then
+                        accValvulas.Visible = True
+                    End If
+                End If
+            End If
+            '-------------------------------------------------------------------------------
+            'MODULO ADMINISTRACION DE SISTEMA
+            If Privilegios.Tables(0).Select("id_modulo='90'").Count > 0 Or Privilegios.Tables(0).Select("id_modulo='91'").Count > 0 Or Privilegios.Tables(0).Select("id_modulo='92'").Count > 0 Or Privilegios.Tables(0).Select("id_modulo='93'").Count > 0 Then
+                accModAdmSistema.Visible = True
+                'Modulo Seguridad
+                If Privilegios.Tables(0).Select("id_modulo='90'").Count > 0 Then
+                    'Ventana Usuarios y Privilegios
+                    accSubModSeguridad.Visible = True
+                    accUsuariosPrivilegios.Visible = True
+                End If
+                'Modulo Parametros
+                If Privilegios.Tables(0).Select("id_modulo='91'").Count > 0 Or Privilegios.Tables(0).Select("id_modulo='92'").Count > 0 Or Privilegios.Tables(0).Select("id_modulo='93'").Count > 0 Then
+                    accSubModParametros.Visible = True
+                    'Ventana Tipos Medicion
+                    If Privilegios.Tables(0).Select("id_modulo='91'").Count > 0 Then
+                        accTiposMedicion.Visible = True
+                    End If
+                    'Ventana Tipo Valvula
+                    If Privilegios.Tables(0).Select("id_modulo='92'").Count > 0 Then
+                        accTiposValvulas.Visible = True
+                    End If
+                    'Ventana Clases Dispositivos
+                    If Privilegios.Tables(0).Select("id_modulo='93'").Count > 0 Then
+                        accClasesDispo.Visible = True
+                    End If
+                End If
+            End If
+            Refresh()
         Catch ex As Exception
             mensajeError(ex)
         End Try
     End Sub
-
-    Private Sub btnCancelarRestablecerPass_Click(sender As Object, e As EventArgs) Handles btnCancelarRestablecerPass.Click
-        GroupBoxRestabPass.Visible = False
-        txtPassActual.Text = ""
-        txtPass.Text = ""
-        txtPassConfirma.Text = ""
-    End Sub
-
-    '    Private Sub iniciarMenu()
-    '        'PRINCIPALES
-    '        AccordionControlElementPlanillas.Visible = False
-    '        AccordionControlElementAdministracion.Visible = False
-    '        AccordionControlElementSistema.Visible = False
-    '        AccordionControlElementSesion.Visible = False
-    '        'SECUNDARIOS
-    '        AccordionControlElementFranjas.Visible = False
-    '        AccordionControlElementJornadas.Visible = False
-    '        AccordionControlElementConceptos.Visible = False
-    '        AccordionControlElementVinculacion.Visible = False
-    '        AccordionControlElementFechasEspeciales.Visible = False
-    '        'BOTONES DE MODULOS
-    '        btnModuloPlanilla.Visible = False
-    '        btnModuloCargaERP.Visible = False
-    '        btnModuloFranjasHorarias.Visible = False
-    '        btnModuloJornadasxDepartamento.Visible = False
-    '        btnModuloClasificacionConceptos.Visible = False
-    '        btnModuloConceptos.Visible = False
-    '        btnModuloConceptosHorarios.Visible = False
-    '        btnModuloConceptosHorariosGenerales.Visible = False
-    '        btnModuloUsuariosPrivilegios.Visible = False
-    '        btnModuloAjustes.Visible = False
-    '        btnCambiarContraseña.Visible = False
-    '    End Sub
-
-    '    Private Sub cargarModulos()
-    '        Try
-    '            If Privilegios Is Nothing Then
-    '                MessageBox.Show("Usuario sin privilegios", "BIOSOFT", MessageBoxButtons.OK, MessageBoxIcon.Error)
-    '                Return
-    '            End If
-    '            'MODULO PLANILLAS
-    '            If Privilegios.Tables(0).Select("id_modulo='1'").Count > 0 Or Privilegios.Tables(0).Select("id_modulo='2'").Count > 0 Then
-    '                AccordionControlElementPlanillas.Visible = True
-    '                'Modulo Planillas
-    '                If Privilegios.Tables(0).Select("id_modulo='1'").Count > 0 Then
-    '                    btnModuloPlanilla.Visible = True
-    '                End If
-    '                'Modulo Carga ERP
-    '                If Privilegios.Tables(0).Select("id_modulo='2'").Count > 0 Then
-    '                    btnModuloCargaERP.Visible = True
-    '                End If
-    '            End If
-    '            'MODULO ADMINISTRACION - GENERAL
-    '            If Privilegios.Tables(0).Select("id_modulo='3'").Count > 0 Or Privilegios.Tables(0).Select("id_modulo='4'").Count > 0 Or Privilegios.Tables(0).Select("id_modulo='5'").Count > 0 Or Privilegios.Tables(0).Select("id_modulo='6'").Count > 0 Then
-    '                AccordionControlElementAdministracion.Visible = True
-    '                'Modulo Franjas
-    '                If Privilegios.Tables(0).Select("id_modulo='3'").Count > 0 Then
-    '                    AccordionControlElementFranjas.Visible = True
-    '                    btnModuloFranjasHorarias.Visible = True
-    '                End If
-    '                'Modulo Jornadas por Departamento
-    '                If Privilegios.Tables(0).Select("id_modulo='4'").Count > 0 Then
-    '                    AccordionControlElementJornadas.Visible = True
-    '                    btnModuloJornadasxDepartamento.Visible = True
-    '                End If
-    '                'MODULO CONCEPTOS
-    '                If Privilegios.Tables(0).Select("id_modulo='5'").Count > 0 Or Privilegios.Tables(0).Select("id_modulo='6'").Count > 0 Then
-    '                    AccordionControlElementConceptos.Visible = True
-    '                    'Modulo Clasificacion de Conceptos
-    '                    If Privilegios.Tables(0).Select("id_modulo='5'").Count > 0 Then
-    '                        btnModuloClasificacionConceptos.Visible = True
-    '                    End If
-    '                    'Modulo Conceptos
-    '                    If Privilegios.Tables(0).Select("id_modulo='6'").Count > 0 Then
-    '                        btnModuloConceptos.Visible = True
-    '                    End If
-    '                End If
-    '            End If
-    '            'MODULO VINCULACION - VINCULACION
-    '            If Privilegios.Tables(0).Select("id_modulo='7'").Count > 0 Or Privilegios.Tables(0).Select("id_modulo='8'").Count > 0 Then
-    '                AccordionControlElementVinculacion.Visible = True
-    '                'Modulo Conceptos y Horarios Generales
-    '                If Privilegios.Tables(0).Select("id_modulo='7'").Count > 0 Then
-    '                    btnModuloConceptosHorariosGenerales.Visible = True
-    '                End If
-    '                'Modulo Conceptos y Horarios de Asignacion
-    '                If Privilegios.Tables(0).Select("id_modulo='8'").Count > 0 Then
-    '                    btnModuloConceptosHorarios.Visible = True
-    '                End If
-    '            End If
-    '            'MODULO FECHAS ESPECIALES
-    '            If Privilegios.Tables(0).Select("id_modulo='11'").Count > 0 Then
-    '                AccordionControlElementFechasEspeciales.Visible = True
-    '                'Modulo Fechas Especiales
-    '                If Privilegios.Tables(0).Select("id_modulo='11'").Count > 0 Then
-    '                    btnModuloFechasEspeciales.Visible = True
-    '                End If
-    '            End If
-    '            'MODULO DE SISTEMA
-    '            If Privilegios.Tables(0).Select("id_modulo='9'").Count > 0 Or Privilegios.Tables(0).Select("id_modulo='10'").Count > 0 Then
-    '                AccordionControlElementSistema.Visible = True
-    '                'Modulo de Privilegios de Usuario
-    '                If Privilegios.Tables(0).Select("id_modulo='9'").Count > 0 Then
-    '                    btnModuloUsuariosPrivilegios.Visible = True
-    '                End If
-    '                'Modulo de Ajustes de Sistema
-    '                If Privilegios.Tables(0).Select("id_modulo='10'").Count > 0 Then
-    '                    'btnModuloAjustes.Visible = True
-    '                End If
-    '            End If
-    '            'MODULO DE SESIONES (SIEMPRE HABILITADO POR LOS ROLES POR DEFECTO)
-    '            If Privilegios.Tables(0).Select("id_modulo='20'").Count > 0 Then
-    '                AccordionControlElementSesion.Visible = True
-    '                btnCambiarContraseña.Visible = True
-    '            End If
-    '            Refresh()
-    '        Catch ex As Exception
-    '            mensajeError(ex)
-    '        End Try
-    '    End Sub
 
 #End Region
 
@@ -322,17 +257,23 @@ Public Class frmPrincipal
             Me.lblRol.Caption = rol
             Me.lblNombre.Caption = nombreUsuario
             Me.lblCompañia.Caption = company
-            txtPass.PasswordChar = CChar("*")
-            txtPassConfirma.PasswordChar = CChar("*")
             'ASIGNA COMO IDIOMA A LOS OBJETOS DE LA LIBRERIA DEVEXPRESS EL ESPAÑOL
             '----------------------------------------
-            System.Threading.Thread.CurrentThread.CurrentCulture = New System.Globalization.CultureInfo("en-US")
+            'Cambio de SKIN
+            'UserLookAndFeel.Default.SetSkinStyle(SkinStyle.WXI)
+            '----------------------------------------
+            'System.Threading.Thread.CurrentThread.CurrentCulture = New System.Globalization.CultureInfo("en-US")
             System.Threading.Thread.CurrentThread.CurrentUICulture = New System.Globalization.CultureInfo("es-ES")
-            CultureInfo.DefaultThreadCurrentCulture = CultureInfo.CreateSpecificCulture("en-US")
+            'CultureInfo.DefaultThreadCurrentCulture = CultureInfo.CreateSpecificCulture("en-US")
             CultureInfo.DefaultThreadCurrentUICulture = CultureInfo.CreateSpecificCulture("es-ES")
             'HABILITA LOS MODULOS ASIGNADOS AL USUARIO
-            'iniciarMenu()
-            'cargarModulos()
+            iniciarMenu()
+            cargarModulos()
+            Dim respuesta As Integer
+            respuesta = MessageBox.Show("¿Desea visualizar el Dashboard de Inicio?", "Dashboard Inicio", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            If (respuesta = DialogResult.Yes) Then
+                AbrirFormulario(DashboardP)
+            End If
         Catch ex As Exception
             mensajeError(ex)
         End Try
@@ -367,20 +308,8 @@ Public Class frmPrincipal
         AbrirFormulario(frmUsuariosPrivilegios)
     End Sub
 
-    Private Sub AccordionControlDashboard_Click(sender As Object, e As EventArgs) Handles accDashboardDesigner.Click
-        AbrirFormulario(frmDashboardDesigner)
-    End Sub
-
-    Private Sub AccordionControlDashboardRapido_Click(sender As Object, e As EventArgs) Handles accDashboardRap.Click
-        AbrirFormulario(frmDashboardRapido)
-    End Sub
-
-    Private Sub AccordionControlElement4_Click(sender As Object, e As EventArgs) Handles accCorteGeneral.Click
-        AbrirFormulario(frmCortePorLocal)
-    End Sub
-
-    Private Sub AccordionControlElement6_Click(sender As Object, e As EventArgs) Handles accCorte_X_Local.Click
-        AbrirFormulario(frmCortePorLocal)
+    Private Sub AccordionControlElement4_Click(sender As Object, e As EventArgs) Handles accAnalisisCortes.Click
+        AbrirFormulario(frmReporteria)
     End Sub
 
     Private Sub AccordionControlElement10_Click(sender As Object, e As EventArgs) Handles accValvulas.Click
@@ -415,7 +344,83 @@ Public Class frmPrincipal
         AbrirFormulario(frmTiposMediciones)
     End Sub
 
+    Private Sub accVisualizadorDashboard_Click(sender As Object, e As EventArgs) Handles accVisualizadorDashboard.Click
+        AbrirFormulario(frmDashboardViewer)
+    End Sub
 
+    Private Sub accDiseñadorDashboard_Click(sender As Object, e As EventArgs) Handles accDiseñadorDashboard.Click
+        frmDiseñadorDashboard.Show()
+    End Sub
+
+    Private Sub accVisualizadorReportes_Click(sender As Object, e As EventArgs) Handles accVisualizadorReportes.Click
+        AbrirReporte()
+    End Sub
+
+    Private Sub accDiseñadorReportes_Click(sender As Object, e As EventArgs) Handles accDiseñadorReportes.Click
+        OpenReportDesigner()
+    End Sub
+
+#Region "CREACIÓN DE DISEÑADOR DE REPORTERÍA y DISEÑADOR DE DASHBOARD"
+    'METODOS PARA CARGAR EL DISEÑADOR DE REPORTES
+    Private Sub OpenReportDesigner()
+        CreateSqlDataSource() 'Crea el sqlDatSource
+        Dim rep As XtraReport = CreateReport(DataSource) 'Crea el reporte vacío
+        Dim designer As New ReportDesignTool(rep)
+        designer.ShowRibbonDesigner()
+    End Sub
+    '-----------------GENERADOR DEL REPORTE Y SOURCE----------------------
+    Public Sub CreateSqlDataSource()
+        InitializeSqlDataSource()
+        DataSource.Queries.Add(CreateStoredProcedureQuery())
+        'Refresca el datasource y actualiza
+        DataSource.RebuildResultSchema()
+    End Sub
+    '-----------------SE INICIALIZA LA CONEXIÓN-----------------------
+    Private Sub InitializeSqlDataSource()
+        CreateConnectionFromParameters()
+    End Sub
+    '------------------SE CREA LA CONEXIÓN CON LA BASE DE DATOS----------------------
+    Private Sub CreateConnectionFromParameters()
+        Dim connectionParameters As New MsSqlConnectionParameters() With
+        {
+        .ServerName = GlobalesConexiones.servLocal,
+        .DatabaseName = GlobalesConexiones.bdLocal,
+        .UserName = GlobalesConexiones.usuarioLocal,
+        .Password = GlobalesConexiones.claveLocal,
+        .AuthorizationType = MsSqlAuthorizationType.SqlServer}
+        DataSource = New SqlDataSource(connectionParameters)
+    End Sub
+
+    '-------------------PRECARGAR EL PROCEDIMIENTO ALMACENADO---------------------
+    Public Shared Function CreateStoredProcedureQuery() As SqlQuery
+        Dim spQuery As New StoredProcQuery("R_cargarVista", "R_cargarVista")
+        Return spQuery
+    End Function
+    '------------------CREAR EL REPORTE-----------------------------
+    Public Shared Function CreateReport(ByVal dataSource As Object) As XtraReport
+        Dim ds As SqlDataSource = TryCast(dataSource, SqlDataSource)
+        If ds Is Nothing Then
+            Return New XtraReport()
+        End If
+        ' Create an empty report.
+        Dim report As New XtraReport()
+        ' Bind the report to a data source.
+        report.DataSource = ds
+        report.DataMember = ds.Queries(0).Name
+        report.Name = "Mi reporte"
+        Return report
+    End Function
+
+    Private Sub btnGuardarTema_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnGuardarTema.ItemClick
+        activeSkinName = UserLookAndFeel.Default.ActiveSkinName
+        Console.WriteLine("Tema: " & activeSkinName)
+        If saveINIkey(My.Application.Info.DirectoryPath & "\config.ini", "PERSONALIZACION", "Tema", activeSkinName) = True Then
+            MsgBox("Se ha guardado el tema actual", MsgBoxStyle.Information, "Tema de Sistema")
+        Else
+            MsgBox("No se logró guardar el tema actual", MsgBoxStyle.Exclamation, "Tema de Sistema")
+        End If
+    End Sub
+#End Region
 
 #End Region
 End Class

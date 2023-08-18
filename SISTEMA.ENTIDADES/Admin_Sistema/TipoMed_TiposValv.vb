@@ -1,17 +1,19 @@
 ﻿Public Class TipoMed_TiposValv
-    Private _id As Integer
+    Private _id As String
     Private _nombre As String
+    Private _unidad As String
+    Private _valor As Decimal
     Private _descripcion As String
     Private _creadoPor As String
     Private _creadoEl As String
     Private _modificadoPor As String
     Private _modificadoEl As String
 
-    Public Property Id As Integer
+    Public Property Id As String
         Get
             Return _id
         End Get
-        Set(value As Integer)
+        Set(value As String)
             _id = value
         End Set
     End Property
@@ -67,6 +69,24 @@
         End Get
         Set(value As String)
             _modificadoEl = value
+        End Set
+    End Property
+
+    Public Property Unidad As String
+        Get
+            Return _unidad
+        End Get
+        Set(value As String)
+            _unidad = value
+        End Set
+    End Property
+
+    Public Property Valor As Decimal
+        Get
+            Return _valor
+        End Get
+        Set(value As Decimal)
+            _valor = value
         End Set
     End Property
 End Class

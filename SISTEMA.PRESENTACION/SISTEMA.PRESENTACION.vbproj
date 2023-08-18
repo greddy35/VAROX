@@ -6,8 +6,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{EDA2849C-54A1-4394-9914-E42365E748E5}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>SISTEMA.PRESENTACION</RootNamespace>
-    <AssemblyName>SISTEMA.PRESENTACION</AssemblyName>
+    <RootNamespace>Varox</RootNamespace>
+    <AssemblyName>Varox</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <StartupObject>SISTEMA.PRESENTACION.Program</StartupObject>
     <FileAlignment>512</FileAlignment>
@@ -39,7 +39,10 @@
     <MyType>WindowsForms</MyType>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>SISTEMA.PRESENTACION.My.MyApplication</StartupObject>
+    <StartupObject>Varox.My.MyApplication</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>IconoVarox.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.BonusSkins.v22.2" />
@@ -52,6 +55,7 @@
     <Reference Include="DevExpress.DataAccess.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.DataAccess.v22.2.UI, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Diagram.v22.2.Core, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dialogs.v22.2.Core, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Images.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Map.v22.2.Core, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Office.v22.2.Core, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -72,6 +76,7 @@
     <Reference Include="DevExpress.XtraCharts.v22.2.UI, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraCharts.v22.2.Wizard, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraDiagram.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraDialogs.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v22.2" />
     <Reference Include="DevExpress.Drawing.v22.2" />
     <Reference Include="DevExpress.XtraGauges.v22.2.Core, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -127,6 +132,12 @@
     <Import Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin_Sistema\frmCambioContraseña.Designer.vb">
+      <DependentUpon>frmCambioContraseña.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Sistema\frmCambioContraseña.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Admin_Sistema\frmClasesDispositivos.Designer.vb">
       <DependentUpon>frmClasesDispositivos.vb</DependentUpon>
     </Compile>
@@ -169,12 +180,6 @@
     <Compile Include="Gestión_General\frmValvulas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dashboard\frmDashboardDesigner.Designer.vb">
-      <DependentUpon>frmDashboardDesigner.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Dashboard\frmDashboardDesigner.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Admin_Sistema\frmConfigClaveBloq.Designer.vb">
       <DependentUpon>frmConfigClaveBloq.vb</DependentUpon>
     </Compile>
@@ -185,12 +190,6 @@
       <DependentUpon>frmUsuariosPrivilegios.vb</DependentUpon>
     </Compile>
     <Compile Include="Admin_Sistema\frmUsuariosPrivilegios.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Dashboard\frmDashboardRapido.Designer.vb">
-      <DependentUpon>frmDashboardRapido.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Dashboard\frmDashboardRapido.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Gestión_General\frmValv_Loc_Cli.Designer.vb">
@@ -224,18 +223,45 @@
     <Compile Include="Principal\SplashScreen.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reportería\DashboardP.Designer.vb">
+      <DependentUpon>DashboardP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportería\DashboardP.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reportería\frmCorteGeneral.Designer.vb">
       <DependentUpon>frmCorteGeneral.vb</DependentUpon>
     </Compile>
     <Compile Include="Reportería\frmCorteGeneral.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reportería\frmCortePorLocal.Designer.vb">
-      <DependentUpon>frmCortePorLocal.vb</DependentUpon>
+    <Compile Include="Reportería\frmDashboardViewer.Designer.vb">
+      <DependentUpon>frmDashboardViewer.vb</DependentUpon>
     </Compile>
-    <Compile Include="Reportería\frmCortePorLocal.vb">
+    <Compile Include="Reportería\frmDashboardViewer.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reportería\frmDiseñadorDashboard.Designer.vb">
+      <DependentUpon>frmDiseñadorDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportería\frmDiseñadorDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportería\rptCorteGeneral.Designer.vb">
+      <DependentUpon>rptCorteGeneral.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportería\rptCorteGeneral.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportería\rptCortePorCliente.Designer.vb">
+      <DependentUpon>rptCortePorCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportería\rptCortePorCliente.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="Admin_Sistema\frmCambioContraseña.resx">
+      <DependentUpon>frmCambioContraseña.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin_Sistema\frmClasesDispositivos.resx">
       <DependentUpon>frmClasesDispositivos.vb</DependentUpon>
     </EmbeddedResource>
@@ -257,17 +283,11 @@
     <EmbeddedResource Include="Gestión_General\frmValvulas.resx">
       <DependentUpon>frmValvulas.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dashboard\frmDashboardDesigner.resx">
-      <DependentUpon>frmDashboardDesigner.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Admin_Sistema\frmConfigClaveBloq.resx">
       <DependentUpon>frmConfigClaveBloq.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin_Sistema\frmUsuariosPrivilegios.resx">
       <DependentUpon>frmUsuariosPrivilegios.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Dashboard\frmDashboardRapido.resx">
-      <DependentUpon>frmDashboardRapido.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gestión_General\frmValv_Loc_Cli.resx">
       <DependentUpon>frmValv_Loc_Cli.vb</DependentUpon>
@@ -282,6 +302,7 @@
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Principal\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.vb</DependentUpon>
@@ -292,11 +313,23 @@
     <EmbeddedResource Include="Principal\SplashScreen.resx">
       <DependentUpon>SplashScreen.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportería\DashboardP.resx">
+      <DependentUpon>DashboardP.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportería\frmCorteGeneral.resx">
       <DependentUpon>frmCorteGeneral.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportería\frmCortePorLocal.resx">
-      <DependentUpon>frmCortePorLocal.vb</DependentUpon>
+    <EmbeddedResource Include="Reportería\frmDashboardViewer.resx">
+      <DependentUpon>frmDashboardViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportería\frmDiseñadorDashboard.resx">
+      <DependentUpon>frmDiseñadorDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportería\rptCorteGeneral.resx">
+      <DependentUpon>rptCorteGeneral.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportería\rptCortePorCliente.resx">
+      <DependentUpon>rptCortePorCliente.vb</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="My Project\Settings.settings">
@@ -328,6 +361,10 @@
       <Project>{9b90d3c8-6dab-4653-8941-24adb5440cdd}</Project>
       <Name>SISTEMA.NEGOCIO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="IconoVarox.ico" />
+    <Content Include="Reportería\Dashboard.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

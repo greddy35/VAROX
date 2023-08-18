@@ -1,5 +1,7 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Globalization
 Imports System.Threading
+Imports DevExpress.LookAndFeel
 Imports Microsoft.SqlServer
 Imports SISTEMA.DATOS
 Imports SISTEMA.NEGOCIO
@@ -7,13 +9,14 @@ Imports SISTEMA.NEGOCIO
 Public Class Login
 
 #Region "Variables Globles"
-    Private gsLogin As New NLogin
+    'Private gsLogin As New NLogin
+    Private gsUsuario As New NUsuarios
     Private conexionL As New ConexionBD_Local
     Private conexionE As New ConexionBD_Externa
     Private comando As New SqlCommand
 
-    Friend Config As Globalization.CultureInfo
     Dim estadoConexión As Boolean = False
+    Dim iniCargado As Boolean = False
 
 #End Region
 
@@ -22,9 +25,16 @@ Public Class Login
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             cargarArchivoIni()
+            iniCargado = True
+            If Not tema.Equals("") Then
+                UserLookAndFeel.Default.SetSkinStyle(skinName:=CStr(tema))
+            Else
+                UserLookAndFeel.Default.SetSkinStyle(SkinStyle.Basic)
+            End If
             Timer1.Start()
             Label1.Parent = PictureBox1
             Label2.Parent = PictureBox1
+            Label3.Parent = PictureBox1
         Catch ex As Exception
             mensajeError(ex)
         End Try
@@ -32,32 +42,49 @@ Public Class Login
 #End Region
 
 #Region "Funciones y Metodos"
-    Private Sub cargarArchivoIni()
+    Public Sub cargarArchivoIni()
         Try
-            If GlobalesConexiones.GetIniValue("GENERAL", "Company", My.Application.Info.DirectoryPath & "\config.ini") <> "" Then
+            If GlobalesConexiones.GetIniValue("SESION", "Company", My.Application.Info.DirectoryPath & "\config.ini") <> "" Then
                 'GENERAL
-                company = GetIniValue("GENERAL", "Company", My.Application.Info.DirectoryPath & "\config.ini").Trim.ToString
                 correo = GetIniValue("GENERAL", "Correo", My.Application.Info.DirectoryPath & "\config.ini").Trim.ToString
+                'SESION
                 user_sesion = GetIniValue("SESION", "Usuario", My.Application.Info.DirectoryPath & "\config.ini").Trim.ToString
-                ''SERVER
-                'REGISTRA EN SISTEMA QUE SERVIDORES ESTAN ACTIVOS
-                estadoLocal = GetIniValue("LOCAL", "Activo", My.Application.Info.DirectoryPath & "\config.ini").ToString
-                estadoExterno = GetIniValue("EXTERNO", "Activo", My.Application.Info.DirectoryPath & "\config.ini").ToString
-
+                company = GetIniValue("SESION", "Company", My.Application.Info.DirectoryPath & "\config.ini").Trim.ToString
+                'PERSONALIZACION
+                tema = GetIniValue("PERSONALIZACION", "Tema", My.Application.Info.DirectoryPath & "\config.ini").Trim.ToString
+                'PARAMETROS
+                compañias = GetIniValue("PARAMETROS", "Companies", My.Application.Info.DirectoryPath & "\config.ini").Trim.ToString
+                'LOCAL
                 servLocal = GetIniValue("LOCAL", "Servidor", My.Application.Info.DirectoryPath & "\config.ini")
                 bdLocal = GetIniValue("LOCAL", "BD", My.Application.Info.DirectoryPath & "\config.ini")
                 usuarioLocal = GetIniValue("LOCAL", "Usuario", My.Application.Info.DirectoryPath & "\config.ini")
                 claveLocal = GetIniValue("LOCAL", "Clave", My.Application.Info.DirectoryPath & "\config.ini")
+                '---------------REGISTRA EN SISTEMA QUE SERVIDORES ESTAN ACTIVOS-------------------
+                estadoLocal = GetIniValue("LOCAL", "Activo", My.Application.Info.DirectoryPath & "\config.ini").ToString
 
+                'EXTERNO
                 servExterno = GetIniValue("EXTERNO", "Servidor", My.Application.Info.DirectoryPath & "\config.ini")
                 bdExterno = GetIniValue("EXTERNO", "BD", My.Application.Info.DirectoryPath & "\config.ini")
                 usuarioExterno = GetIniValue("EXTERNO", "Usuario", My.Application.Info.DirectoryPath & "\config.ini")
                 claveExterno = GetIniValue("EXTERNO", "Clave", My.Application.Info.DirectoryPath & "\config.ini")
-
+                '---------------REGISTRA EN SISTEMA QUE SERVIDORES ESTAN ACTIVOS-------------------
+                estadoExterno = GetIniValue("EXTERNO", "Activo", My.Application.Info.DirectoryPath & "\config.ini").ToString
+                'Se carga el usuario de la última sesión
                 If user_sesion.ToString <> "" Then
                     txtUsuario.Text = user_sesion.ToString
                     txtContraseña.Focus()
                 End If
+                cboCompañia.Items.Clear()
+                If Not compañias.Equals("") And CStr(compañias).Contains(",") Then
+                    compañiasList = Split(CStr(compañias), ",")
+                    For i = 0 To compañiasList.Length - 1
+                        cboCompañia.Items.Add(compañiasList(i))
+                    Next
+                Else
+                    compañiasList(0) = CStr(compañias)
+                    cboCompañia.Items.Add(compañiasList(0))
+                End If
+                cboCompañia.SelectedItem = company
                 btnIngresar.Enabled = True
             Else
                 MsgBox("¡¡¡EL ARCHIVO DE CONFIGURACIÓN NO EXISTE O NO FUE ENCONTRADO!!!" + vbLf + "Contacte al encargado de Sistemas", MsgBoxStyle.Critical, "Configuración")
@@ -86,24 +113,35 @@ Public Class Login
 
                 Dim Tabla As New DataTable
 
-                Tabla = gsLogin.NLoginUsuario(user, contraseña)
+                Tabla = gsUsuario.NLoginUsuario(user, contraseña)
 
                 If (Tabla.Rows.Count > 0) Then
                     Dim fila As DataRow = Tabla.Rows(0)
                     'Console.WriteLine("Valida al usuario")
-                    usuario = user                  'Se almacena el usuario en una variable global
-                    contraseña_actual = contraseña
-                    nombreUsuario = fila("nombre").ToString  '
-                    idUsuario = CInt(fila("id_usuario"))  'Se almacena el id del usuario, homologo de la BD.BIOTIMEPRO = BD.BIOSOFT
-                    idRol = CInt(fila("id_rol"))          'Se almacena el id del rol, es administrado en el BIOSOFT'
-                    rol = fila("rol").ToString               'Se almacena el nombre de rol del usuario
-                    'company = cboCompañia.SelectedItem.ToString
-                    txtUsuario.Text = ""
-                    txtContraseña.Text = ""
-                    'SE CARGAN LOS PRIVILEGIOS AL DATASET GLOBAL PRIVILEGIOS
-                    Privilegios = gsLogin.NCargarPrivilegios(idRol.ToString, idUsuario.ToString)
-                    Me.Hide()
-                    frmPrincipal.Show()
+                    If fila("activo").ToString.Equals("S") Then
+                        usuario = user                  'Se almacena el usuario en una variable global
+                        contraseña_actual = contraseña
+                        nombreUsuario = fila("nombre").ToString  '
+                        idUsuario = CInt(fila("id_usuario"))  'Se almacena el id del usuario, homologo de la BD.BIOTIMEPRO = BD.BIOSOFT
+                        idRol = CInt(fila("id_rol"))          'Se almacena el id del rol, es administrado en el BIOSOFT'
+                        rol = fila("rol").ToString               'Se almacena el nombre de rol del usuario
+                        company = "LOCAL" 'cboCompañia.SelectedItem.ToString
+                        txtUsuario.Text = ""
+                        txtContraseña.Text = ""
+                        'Se guarda el último usuario utilizado
+                        Try
+                            saveINIkey(My.Application.Info.DirectoryPath & "\config.ini", "SESION", "Usuario", usuario)
+                            saveINIkey(My.Application.Info.DirectoryPath & "\config.ini", "GENERAL", "Company", company)
+                        Catch ex As Exception
+
+                        End Try
+                        'SE CARGAN LOS PRIVILEGIOS AL DATASET GLOBAL PRIVILEGIOS
+                        Privilegios = gsUsuario.NCargarPrivilegios(idRol.ToString, idUsuario.ToString)
+                        Me.Hide()
+                        frmPrincipal.Show()
+                    Else
+                        MsgBox("USUARIO INACTIVO, CONSULTE AL ADMINISTRADOR DE SISTEMA", MsgBoxStyle.Critical, "Inicio de sesión")
+                    End If
                 Else
                     MsgBox("USUARIO Y/O CONTRASEÑA INCORRECTO/A", MsgBoxStyle.Critical, "Inicio de sesión")
                 End If
@@ -126,7 +164,11 @@ Public Class Login
     End Sub
 
     Private Sub btnIngresar_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click
-        If estadoConexión = True Then 'CAMBIAR A TRUE
+        If iniCargado = False Then
+            MsgBox("Ocurrió un error al cargar el archivo de configuración:" + vbLf + vbLf +
+                "Cerrar el Sistema y volver a intentar, puede solucionar el problema, si no se resuelve " +
+                "contacte al Administrador de Sistema para recibir ayuda", MsgBoxStyle.Critical, "Error confi.ini")
+        ElseIf iniCargado = True And estadoConexión = True Then 'CAMBIAR A TRUE
             cargarCredenciales()
         Else
             MsgBox("NO HAY CONEXIÓN AL SERVIDOR DE BASE DE DATOS:" + vbLf + vbLf +
