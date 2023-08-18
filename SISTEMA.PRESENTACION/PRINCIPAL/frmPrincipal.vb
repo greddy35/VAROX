@@ -2,6 +2,7 @@
 Imports DevExpress.DashboardWin
 Imports DevExpress.DataAccess.ConnectionParameters
 Imports DevExpress.DataAccess.Sql
+Imports DevExpress.LookAndFeel
 Imports DevExpress.XtraEditors
 Imports DevExpress.XtraReports.UI
 Imports Microsoft.SqlServer
@@ -17,6 +18,7 @@ Public Class frmPrincipal
 
     Dim estadoConexión As Boolean = False
 
+    Dim activeSkinName As String = UserLookAndFeel.Default.ActiveSkinName
 #Region "datasource"
     Private Property DataSource() As SqlDataSource
 #End Region
@@ -107,6 +109,7 @@ Public Class frmPrincipal
         Dim respuesta As Integer
         respuesta = MessageBox.Show("¿Seguro que desea cerrar la sesión actual?", "Cierre de Sesión", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
         If (respuesta = DialogResult.OK) Then
+            Login.cargarArchivoIni() 'Recarga las opciones de los campos de texto
             Login.Show()
             Me.Dispose()
         End If
@@ -256,6 +259,9 @@ Public Class frmPrincipal
             Me.lblCompañia.Caption = company
             'ASIGNA COMO IDIOMA A LOS OBJETOS DE LA LIBRERIA DEVEXPRESS EL ESPAÑOL
             '----------------------------------------
+            'Cambio de SKIN
+            'UserLookAndFeel.Default.SetSkinStyle(SkinStyle.WXI)
+            '----------------------------------------
             'System.Threading.Thread.CurrentThread.CurrentCulture = New System.Globalization.CultureInfo("en-US")
             System.Threading.Thread.CurrentThread.CurrentUICulture = New System.Globalization.CultureInfo("es-ES")
             'CultureInfo.DefaultThreadCurrentCulture = CultureInfo.CreateSpecificCulture("en-US")
@@ -404,6 +410,16 @@ Public Class frmPrincipal
         report.Name = "Mi reporte"
         Return report
     End Function
+
+    Private Sub btnGuardarTema_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnGuardarTema.ItemClick
+        activeSkinName = UserLookAndFeel.Default.ActiveSkinName
+        Console.WriteLine("Tema: " & activeSkinName)
+        If saveINIkey(My.Application.Info.DirectoryPath & "\config.ini", "PERSONALIZACION", "Tema", activeSkinName) = True Then
+            MsgBox("Se ha guardado el tema actual", MsgBoxStyle.Information, "Tema de Sistema")
+        Else
+            MsgBox("No se logró guardar el tema actual", MsgBoxStyle.Exclamation, "Tema de Sistema")
+        End If
+    End Sub
 #End Region
 
 #End Region

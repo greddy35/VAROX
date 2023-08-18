@@ -44,7 +44,7 @@ Partial Class frmValv_Loc_Cli
         Me.btnExtender = New DevExpress.XtraBars.BarButtonItem()
         Me.RibbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
-        Me.RibbonPageGroup3 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+        Me.RibbonPageEstado = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup2 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RepositoryItemComboBox1 = New DevExpress.XtraEditors.Repository.RepositoryItemComboBox()
         Me.RepositoryItemComboBox2 = New DevExpress.XtraEditors.Repository.RepositoryItemComboBox()
@@ -141,14 +141,14 @@ Partial Class frmValv_Loc_Cli
         Me.GridColumn12 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label29 = New System.Windows.Forms.Label()
-        Me.deVigenciaNueva = New DevExpress.XtraEditors.DateEdit()
-        Me.btnCambiarVigencia = New DevExpress.XtraEditors.SimpleButton()
-        Me.btnCancelarVigencia = New DevExpress.XtraEditors.SimpleButton()
-        Me.Label26 = New System.Windows.Forms.Label()
-        Me.btnInfo = New DevExpress.XtraEditors.SimpleButton()
-        Me.Label27 = New System.Windows.Forms.Label()
         Me.txtObservVigencia = New System.Windows.Forms.RichTextBox()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.btnInfo = New DevExpress.XtraEditors.SimpleButton()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.btnCancelarVigencia = New DevExpress.XtraEditors.SimpleButton()
+        Me.btnCambiarVigencia = New DevExpress.XtraEditors.SimpleButton()
+        Me.deVigenciaNueva = New DevExpress.XtraEditors.DateEdit()
+        Me.Label29 = New System.Windows.Forms.Label()
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemComboBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemComboBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -327,7 +327,7 @@ Partial Class frmValv_Loc_Cli
         '
         'RibbonPage1
         '
-        Me.RibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup1, Me.RibbonPageGroup3, Me.RibbonPageGroup2})
+        Me.RibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup1, Me.RibbonPageEstado, Me.RibbonPageGroup2})
         Me.RibbonPage1.Name = "RibbonPage1"
         Me.RibbonPage1.Text = "Inicio"
         '
@@ -345,14 +345,14 @@ Partial Class frmValv_Loc_Cli
         Me.RibbonPageGroup1.Name = "RibbonPageGroup1"
         Me.RibbonPageGroup1.Text = "Acciones"
         '
-        'RibbonPageGroup3
+        'RibbonPageEstado
         '
-        Me.RibbonPageGroup3.ItemLinks.Add(Me.chkAll)
-        Me.RibbonPageGroup3.ItemLinks.Add(Me.chkPend)
-        Me.RibbonPageGroup3.ItemLinks.Add(Me.chkApro)
-        Me.RibbonPageGroup3.ItemLinks.Add(Me.chkAnul)
-        Me.RibbonPageGroup3.Name = "RibbonPageGroup3"
-        Me.RibbonPageGroup3.Text = "Estado"
+        Me.RibbonPageEstado.ItemLinks.Add(Me.chkAll)
+        Me.RibbonPageEstado.ItemLinks.Add(Me.chkPend)
+        Me.RibbonPageEstado.ItemLinks.Add(Me.chkApro)
+        Me.RibbonPageEstado.ItemLinks.Add(Me.chkAnul)
+        Me.RibbonPageEstado.Name = "RibbonPageEstado"
+        Me.RibbonPageEstado.Text = "Estado"
         '
         'RibbonPageGroup2
         '
@@ -1442,15 +1442,70 @@ Partial Class frmValv_Loc_Cli
         Me.GroupBox1.Text = "Extensión de Vigencia"
         Me.GroupBox1.Visible = False
         '
-        'Label29
+        'txtObservVigencia
         '
-        Me.Label29.AutoSize = True
-        Me.Label29.ForeColor = System.Drawing.Color.Black
-        Me.Label29.Location = New System.Drawing.Point(6, 35)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(147, 21)
-        Me.Label29.TabIndex = 1
-        Me.Label29.Text = "Nueva Vigencia:"
+        Me.txtObservVigencia.Location = New System.Drawing.Point(14, 88)
+        Me.txtObservVigencia.MaxLength = 255
+        Me.txtObservVigencia.Name = "txtObservVigencia"
+        Me.txtObservVigencia.Size = New System.Drawing.Size(343, 60)
+        Me.txtObservVigencia.TabIndex = 8
+        Me.txtObservVigencia.Text = ""
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.ForeColor = System.Drawing.Color.Black
+        Me.Label27.Location = New System.Drawing.Point(6, 66)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(122, 21)
+        Me.Label27.TabIndex = 7
+        Me.Label27.Text = "Observación:"
+        '
+        'btnInfo
+        '
+        Me.btnInfo.AllowFocus = False
+        Me.btnInfo.Appearance.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.btnInfo.Appearance.Options.UseBackColor = True
+        Me.btnInfo.AppearanceHovered.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.btnInfo.AppearanceHovered.Options.UseBackColor = True
+        Me.btnInfo.AppearancePressed.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.btnInfo.AppearancePressed.Options.UseBackColor = True
+        Me.btnInfo.ImageOptions.Image = CType(resources.GetObject("btnInfo.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnInfo.Location = New System.Drawing.Point(330, 32)
+        Me.btnInfo.Name = "btnInfo"
+        Me.btnInfo.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light
+        Me.btnInfo.Size = New System.Drawing.Size(36, 30)
+        Me.btnInfo.TabIndex = 6
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label26.Location = New System.Drawing.Point(6, 66)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(0, 21)
+        Me.Label26.TabIndex = 5
+        '
+        'btnCancelarVigencia
+        '
+        Me.btnCancelarVigencia.AllowFocus = False
+        Me.btnCancelarVigencia.ImageOptions.Image = CType(resources.GetObject("btnCancelarVigencia.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnCancelarVigencia.Location = New System.Drawing.Point(144, 156)
+        Me.btnCancelarVigencia.Name = "btnCancelarVigencia"
+        Me.btnCancelarVigencia.Size = New System.Drawing.Size(105, 39)
+        Me.btnCancelarVigencia.TabIndex = 4
+        Me.btnCancelarVigencia.Text = "Cancelar"
+        '
+        'btnCambiarVigencia
+        '
+        Me.btnCambiarVigencia.AllowFocus = False
+        Me.btnCambiarVigencia.ImageOptions.Image = CType(resources.GetObject("btnCambiarVigencia.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnCambiarVigencia.Location = New System.Drawing.Point(255, 157)
+        Me.btnCambiarVigencia.Name = "btnCambiarVigencia"
+        Me.btnCambiarVigencia.Size = New System.Drawing.Size(105, 39)
+        Me.btnCambiarVigencia.TabIndex = 3
+        Me.btnCambiarVigencia.Text = "Cambiar"
         '
         'deVigenciaNueva
         '
@@ -1465,70 +1520,15 @@ Partial Class frmValv_Loc_Cli
         Me.deVigenciaNueva.Size = New System.Drawing.Size(171, 28)
         Me.deVigenciaNueva.TabIndex = 2
         '
-        'btnCambiarVigencia
+        'Label29
         '
-        Me.btnCambiarVigencia.AllowFocus = False
-        Me.btnCambiarVigencia.ImageOptions.Image = CType(resources.GetObject("btnCambiarVigencia.ImageOptions.Image"), System.Drawing.Image)
-        Me.btnCambiarVigencia.Location = New System.Drawing.Point(255, 157)
-        Me.btnCambiarVigencia.Name = "btnCambiarVigencia"
-        Me.btnCambiarVigencia.Size = New System.Drawing.Size(105, 39)
-        Me.btnCambiarVigencia.TabIndex = 3
-        Me.btnCambiarVigencia.Text = "Cambiar"
-        '
-        'btnCancelarVigencia
-        '
-        Me.btnCancelarVigencia.AllowFocus = False
-        Me.btnCancelarVigencia.ImageOptions.Image = CType(resources.GetObject("SimpleButton1.ImageOptions.Image1"), System.Drawing.Image)
-        Me.btnCancelarVigencia.Location = New System.Drawing.Point(144, 156)
-        Me.btnCancelarVigencia.Name = "btnCancelarVigencia"
-        Me.btnCancelarVigencia.Size = New System.Drawing.Size(105, 39)
-        Me.btnCancelarVigencia.TabIndex = 4
-        Me.btnCancelarVigencia.Text = "Cancelar"
-        '
-        'Label26
-        '
-        Me.Label26.AutoSize = True
-        Me.Label26.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label26.Location = New System.Drawing.Point(6, 66)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(0, 21)
-        Me.Label26.TabIndex = 5
-        '
-        'btnInfo
-        '
-        Me.btnInfo.AllowFocus = False
-        Me.btnInfo.Appearance.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.btnInfo.Appearance.Options.UseBackColor = True
-        Me.btnInfo.AppearanceHovered.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.btnInfo.AppearanceHovered.Options.UseBackColor = True
-        Me.btnInfo.AppearancePressed.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.btnInfo.AppearancePressed.Options.UseBackColor = True
-        Me.btnInfo.ImageOptions.Image = CType(resources.GetObject("SimpleButton1.ImageOptions.Image"), System.Drawing.Image)
-        Me.btnInfo.Location = New System.Drawing.Point(330, 32)
-        Me.btnInfo.Name = "btnInfo"
-        Me.btnInfo.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light
-        Me.btnInfo.Size = New System.Drawing.Size(36, 30)
-        Me.btnInfo.TabIndex = 6
-        '
-        'Label27
-        '
-        Me.Label27.AutoSize = True
-        Me.Label27.ForeColor = System.Drawing.Color.Black
-        Me.Label27.Location = New System.Drawing.Point(6, 66)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(122, 21)
-        Me.Label27.TabIndex = 7
-        Me.Label27.Text = "Observación:"
-        '
-        'txtObservVigencia
-        '
-        Me.txtObservVigencia.Location = New System.Drawing.Point(14, 88)
-        Me.txtObservVigencia.MaxLength = 255
-        Me.txtObservVigencia.Name = "txtObservVigencia"
-        Me.txtObservVigencia.Size = New System.Drawing.Size(343, 60)
-        Me.txtObservVigencia.TabIndex = 8
-        Me.txtObservVigencia.Text = ""
+        Me.Label29.AutoSize = True
+        Me.Label29.ForeColor = System.Drawing.Color.Black
+        Me.Label29.Location = New System.Drawing.Point(6, 35)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(147, 21)
+        Me.Label29.TabIndex = 1
+        Me.Label29.Text = "Nueva Vigencia:"
         '
         'frmValv_Loc_Cli
         '
@@ -1691,7 +1691,7 @@ Partial Class frmValv_Loc_Cli
     Friend WithEvents GridColumn24 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents txtClase As TextBox
     Friend WithEvents btnAnular As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents RibbonPageGroup3 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
+    Friend WithEvents RibbonPageEstado As DevExpress.XtraBars.Ribbon.RibbonPageGroup
     Friend WithEvents RepositoryItemComboBox1 As DevExpress.XtraEditors.Repository.RepositoryItemComboBox
     Friend WithEvents RepositoryItemComboBox2 As DevExpress.XtraEditors.Repository.RepositoryItemComboBox
     Friend WithEvents chkAll As DevExpress.XtraBars.BarCheckItem

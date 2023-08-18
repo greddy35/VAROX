@@ -99,24 +99,24 @@ Public Class frmClasesDispositivos
     End Function
 
     Private Sub inicializarModulo()
+        'Botones
         btnNuevo.Visibility = BarItemVisibility.Never
+        btnRefrescar.Visibility = BarItemVisibility.Never
         btnGuardar.Visibility = BarItemVisibility.Never
         btnEliminar.Visibility = BarItemVisibility.Never
-        btnRefrescar.Visibility = BarItemVisibility.Never
     End Sub
-
     Private Sub cargarMenu()
         Try
             For Each accion As DataRow In Privilegios.Tables(0).Rows()
-                If accion(1).ToString = "3" And accion(4).ToString = "1" Then 'Refrescar
-                    btnRefrescar.Visibility = BarItemVisibility.Always
-                End If
-                If accion(1).ToString = "3" And accion(4).ToString = "2" Then 'Nuevo / Guardar
+                If accion(1).ToString.Equals("93") And accion(4).ToString.Equals("1") Then 'Nuevo/Guardar
                     btnNuevo.Visibility = BarItemVisibility.Always
                     btnGuardar.Visibility = BarItemVisibility.Always
                 End If
-                If accion(1).ToString = "3" And accion(4).ToString = "4" Then 'Eliminar
+                If accion(1).ToString.Equals("93") And accion(4).ToString.Equals("3") Then 'Eliminar
                     btnEliminar.Visibility = BarItemVisibility.Always
+                End If
+                If accion(1).ToString.Equals("93") And accion(4).ToString.Equals("14") Then 'Consultar
+                    btnRefrescar.Visibility = BarItemVisibility.Always
                 End If
             Next
         Catch ex As Exception
@@ -198,6 +198,8 @@ Public Class frmClasesDispositivos
 
 #Region "Acciones Generales"
     Private Sub frmClasesDispositivos_Load(sender As Object, e As EventArgs) Handles Me.Load
+        inicializarModulo()
+        cargarMenu()
         Guardar_Cancelar_Eliminar_Refrescar()
         Limpiar()
         cargarClases()

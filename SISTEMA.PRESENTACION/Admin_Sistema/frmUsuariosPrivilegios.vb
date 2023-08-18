@@ -368,9 +368,14 @@ Public Class frmUsuariosPrivilegios
             'txtIdUsuarioRol.Text = GridViewUsuarios.GetRow(GridViewUsuarios.FocusedRowHandle)("id_usuario").ToString
             txtUsuarioRol.Text = GridViewUsuarios.GetRowCellValue(GridViewUsuarios.FocusedRowHandle, "usuario").ToString
             txtIdUsuarioRol.Text = GridViewUsuarios.GetRowCellValue(GridViewUsuarios.FocusedRowHandle, "id_usuario").ToString
-            cboRol.SelectedIndex = 0
-            Centrar(GroupBox2)
-            GroupBox2.Visible = True
+
+            If Not txtUsuarioRol.Text.Equals("ADMINISTRADOR") Then
+                cboRol.SelectedIndex = 0
+                Centrar(GroupBox2)
+                GroupBox2.Visible = True
+            Else
+                MessageBox.Show("No se permite cambiar el Rol al usuario ADMINISTRADOR", "Acción inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            End If
 
         Catch ex As Exception
             mensajeError(ex)
@@ -524,8 +529,9 @@ Public Class frmUsuariosPrivilegios
                     If resp = "" Then       'Si se realiza la inserción nos retorna TRUE, e informamos al usuario
                         MessageBox.Show("Registro almacenado con éxito" & vbCrLf & vbCrLf &
                                         "Credenciales: " & vbCrLf &
-                                        "Usuario:" & vbCrLf & txtUsuario.Text & vbCrLf &
-                                        "Contraseña: ex" & vbCrLf & txtUsuario.Text.ToLower, "Nuevo Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                                        "Rol: DEFAULT" & vbCrLf &
+                                        "Usuario: " & txtUsuario.Text & vbCrLf &
+                                        "Contraseña: ex" & txtUsuario.Text.ToLower, "Nuevo Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
                         Guardar_Cancelar_Eliminar_Refrescar()
                         mostrarUsuarios()
                     Else

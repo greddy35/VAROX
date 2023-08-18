@@ -39,6 +39,7 @@ Partial Class frmUsuariosPrivilegios
         Dim SuperToolTip2 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
         Dim ToolTipTitleItem2 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
         Dim ToolTipItem2 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+        Me.GridColumn8 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.RibbonControl = New DevExpress.XtraBars.Ribbon.RibbonControl()
         Me.btnCerrar = New DevExpress.XtraBars.BarButtonItem()
         Me.btnNuevo = New DevExpress.XtraBars.BarButtonItem()
@@ -85,7 +86,6 @@ Partial Class frmUsuariosPrivilegios
         Me.GridColumn5 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn6 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn7 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.GridColumn8 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
         Me.LabelControl1 = New DevExpress.XtraEditors.LabelControl()
         Me.GroupBoxRestabPass = New System.Windows.Forms.GroupBox()
@@ -147,6 +147,17 @@ Partial Class frmUsuariosPrivilegios
         CType(Me.txtUsuarioRol.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
+        'GridColumn8
+        '
+        Me.GridColumn8.Caption = "ESTADO"
+        Me.GridColumn8.FieldName = "activo"
+        Me.GridColumn8.MinWidth = 25
+        Me.GridColumn8.Name = "GridColumn8"
+        Me.GridColumn8.OptionsColumn.AllowEdit = False
+        Me.GridColumn8.Visible = True
+        Me.GridColumn8.VisibleIndex = 5
+        Me.GridColumn8.Width = 94
+        '
         'RibbonControl
         '
         Me.RibbonControl.EmptyAreaImageOptions.ImagePadding = New System.Windows.Forms.Padding(35, 37, 35, 37)
@@ -158,7 +169,7 @@ Partial Class frmUsuariosPrivilegios
         Me.RibbonControl.Name = "RibbonControl"
         Me.RibbonControl.OptionsMenuMinWidth = 385
         Me.RibbonControl.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1})
-        Me.RibbonControl.Size = New System.Drawing.Size(1113, 193)
+        Me.RibbonControl.Size = New System.Drawing.Size(1113, 178)
         Me.RibbonControl.StatusBar = Me.RibbonStatusBar
         '
         'btnCerrar
@@ -256,11 +267,11 @@ Partial Class frmUsuariosPrivilegios
         '
         'RibbonStatusBar
         '
-        Me.RibbonStatusBar.Location = New System.Drawing.Point(0, 694)
+        Me.RibbonStatusBar.Location = New System.Drawing.Point(0, 689)
         Me.RibbonStatusBar.Margin = New System.Windows.Forms.Padding(4)
         Me.RibbonStatusBar.Name = "RibbonStatusBar"
         Me.RibbonStatusBar.Ribbon = Me.RibbonControl
-        Me.RibbonStatusBar.Size = New System.Drawing.Size(1113, 30)
+        Me.RibbonStatusBar.Size = New System.Drawing.Size(1113, 35)
         '
         'BackgroundWorkerDepartamentos
         '
@@ -275,11 +286,11 @@ Partial Class frmUsuariosPrivilegios
         Me.TablePanel1.Controls.Add(Me.PanelControl2)
         Me.TablePanel1.Controls.Add(Me.PanelControl1)
         Me.TablePanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TablePanel1.Location = New System.Drawing.Point(0, 193)
+        Me.TablePanel1.Location = New System.Drawing.Point(0, 178)
         Me.TablePanel1.Margin = New System.Windows.Forms.Padding(4)
         Me.TablePanel1.Name = "TablePanel1"
         Me.TablePanel1.Rows.AddRange(New DevExpress.Utils.Layout.TablePanelRow() {New DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 38.19999!), New DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 26.0!)})
-        Me.TablePanel1.Size = New System.Drawing.Size(1113, 501)
+        Me.TablePanel1.Size = New System.Drawing.Size(1113, 511)
         Me.TablePanel1.TabIndex = 8
         '
         'PanelControl4
@@ -292,7 +303,7 @@ Partial Class frmUsuariosPrivilegios
         Me.PanelControl4.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelControl4.Name = "PanelControl4"
         Me.TablePanel1.SetRow(Me.PanelControl4, 1)
-        Me.PanelControl4.Size = New System.Drawing.Size(652, 455)
+        Me.PanelControl4.Size = New System.Drawing.Size(652, 465)
         Me.PanelControl4.TabIndex = 6
         '
         'TablePanel2
@@ -306,7 +317,7 @@ Partial Class frmUsuariosPrivilegios
         Me.TablePanel2.Margin = New System.Windows.Forms.Padding(4)
         Me.TablePanel2.Name = "TablePanel2"
         Me.TablePanel2.Rows.AddRange(New DevExpress.Utils.Layout.TablePanelRow() {New DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 230.6003!), New DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 201.0!)})
-        Me.TablePanel2.Size = New System.Drawing.Size(648, 451)
+        Me.TablePanel2.Size = New System.Drawing.Size(648, 461)
         Me.TablePanel2.TabIndex = 0
         '
         'chkLstPrivilegios
@@ -331,7 +342,7 @@ Partial Class frmUsuariosPrivilegios
         Me.chkLstPrivilegios.PictureChecked = CType(resources.GetObject("chkLstPrivilegios.PictureChecked"), System.Drawing.Image)
         Me.chkLstPrivilegios.PictureUnchecked = CType(resources.GetObject("chkLstPrivilegios.PictureUnchecked"), System.Drawing.Image)
         Me.TablePanel2.SetRow(Me.chkLstPrivilegios, 1)
-        Me.chkLstPrivilegios.Size = New System.Drawing.Size(640, 212)
+        Me.chkLstPrivilegios.Size = New System.Drawing.Size(640, 222)
         Me.chkLstPrivilegios.TabIndex = 4
         '
         'PanelControl7
@@ -623,7 +634,7 @@ Partial Class frmUsuariosPrivilegios
         Me.PanelControl2.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelControl2.Name = "PanelControl2"
         Me.TablePanel1.SetRow(Me.PanelControl2, 1)
-        Me.PanelControl2.Size = New System.Drawing.Size(445, 455)
+        Me.PanelControl2.Size = New System.Drawing.Size(445, 465)
         Me.PanelControl2.TabIndex = 4
         '
         'GridControlUsuarios
@@ -634,7 +645,7 @@ Partial Class frmUsuariosPrivilegios
         Me.GridControlUsuarios.MenuManager = Me.RibbonControl
         Me.GridControlUsuarios.Name = "GridControlUsuarios"
         Me.GridControlUsuarios.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemButtonEditAsigRol, Me.RepositoryItemButtonEditCambPass})
-        Me.GridControlUsuarios.Size = New System.Drawing.Size(441, 451)
+        Me.GridControlUsuarios.Size = New System.Drawing.Size(441, 461)
         Me.GridControlUsuarios.TabIndex = 0
         Me.GridControlUsuarios.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridViewUsuarios})
         '
@@ -742,17 +753,6 @@ Partial Class frmUsuariosPrivilegios
         Me.GridColumn7.Visible = True
         Me.GridColumn7.VisibleIndex = 4
         Me.GridColumn7.Width = 200
-        '
-        'GridColumn8
-        '
-        Me.GridColumn8.Caption = "ESTADO"
-        Me.GridColumn8.FieldName = "activo"
-        Me.GridColumn8.MinWidth = 25
-        Me.GridColumn8.Name = "GridColumn8"
-        Me.GridColumn8.OptionsColumn.AllowEdit = False
-        Me.GridColumn8.Visible = True
-        Me.GridColumn8.VisibleIndex = 5
-        Me.GridColumn8.Width = 94
         '
         'PanelControl1
         '
@@ -912,7 +912,7 @@ Partial Class frmUsuariosPrivilegios
         Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox2.Size = New System.Drawing.Size(306, 170)
+        Me.GroupBox2.Size = New System.Drawing.Size(342, 170)
         Me.GroupBox2.TabIndex = 6
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Asignación de Rol"
@@ -931,7 +931,7 @@ Partial Class frmUsuariosPrivilegios
         Me.Panel2.Location = New System.Drawing.Point(7, 27)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(292, 135)
+        Me.Panel2.Size = New System.Drawing.Size(327, 135)
         Me.Panel2.TabIndex = 0
         '
         'btnCancelarAsignarRol
@@ -957,7 +957,7 @@ Partial Class frmUsuariosPrivilegios
         Me.btnAsignarRol.Appearance.Options.UseFont = True
         Me.btnAsignarRol.Appearance.Options.UseForeColor = True
         Me.btnAsignarRol.ImageOptions.Image = CType(resources.GetObject("btnAsignarRol.ImageOptions.Image"), System.Drawing.Image)
-        Me.btnAsignarRol.Location = New System.Drawing.Point(141, 78)
+        Me.btnAsignarRol.Location = New System.Drawing.Point(173, 78)
         Me.btnAsignarRol.Margin = New System.Windows.Forms.Padding(4)
         Me.btnAsignarRol.Name = "btnAsignarRol"
         Me.btnAsignarRol.Size = New System.Drawing.Size(139, 42)
@@ -968,7 +968,7 @@ Partial Class frmUsuariosPrivilegios
         '
         Me.txtIdUsuarioRol.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtIdUsuarioRol.Enabled = False
-        Me.txtIdUsuarioRol.Location = New System.Drawing.Point(4, 105)
+        Me.txtIdUsuarioRol.Location = New System.Drawing.Point(39, 105)
         Me.txtIdUsuarioRol.Margin = New System.Windows.Forms.Padding(4)
         Me.txtIdUsuarioRol.MenuManager = Me.RibbonControl
         Me.txtIdUsuarioRol.Name = "txtIdUsuarioRol"
@@ -989,7 +989,7 @@ Partial Class frmUsuariosPrivilegios
         Me.cboRol.Location = New System.Drawing.Point(113, 41)
         Me.cboRol.Margin = New System.Windows.Forms.Padding(4)
         Me.cboRol.Name = "cboRol"
-        Me.cboRol.Size = New System.Drawing.Size(164, 27)
+        Me.cboRol.Size = New System.Drawing.Size(199, 27)
         Me.cboRol.TabIndex = 7
         '
         'txtUsuarioRol
@@ -1004,13 +1004,15 @@ Partial Class frmUsuariosPrivilegios
         Me.txtUsuarioRol.Properties.Appearance.Options.UseFont = True
         Me.txtUsuarioRol.Properties.Appearance.Options.UseTextOptions = True
         Me.txtUsuarioRol.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
-        Me.txtUsuarioRol.Size = New System.Drawing.Size(164, 26)
+        Me.txtUsuarioRol.Size = New System.Drawing.Size(199, 26)
         Me.txtUsuarioRol.TabIndex = 5
         '
         'LabelControl7
         '
         Me.LabelControl7.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.LabelControl7.Appearance.ForeColor = System.Drawing.Color.DimGray
         Me.LabelControl7.Appearance.Options.UseFont = True
+        Me.LabelControl7.Appearance.Options.UseForeColor = True
         Me.LabelControl7.Location = New System.Drawing.Point(56, 42)
         Me.LabelControl7.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelControl7.Name = "LabelControl7"
@@ -1021,7 +1023,9 @@ Partial Class frmUsuariosPrivilegios
         'LabelControl6
         '
         Me.LabelControl6.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.LabelControl6.Appearance.ForeColor = System.Drawing.Color.DimGray
         Me.LabelControl6.Appearance.Options.UseFont = True
+        Me.LabelControl6.Appearance.Options.UseForeColor = True
         Me.LabelControl6.Location = New System.Drawing.Point(18, 7)
         Me.LabelControl6.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelControl6.Name = "LabelControl6"

@@ -1196,7 +1196,7 @@ Partial Class frmClasesDispositivos
         Me.Name = "frmClasesDispositivos"
         Me.Ribbon = Me.RibbonControl
         Me.StatusBar = Me.RibbonStatusBar
-        Me.Text = "W"
+        Me.Text = "Clases de Dispositivos"
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)

@@ -160,18 +160,19 @@ Public Class frmClientes
     Private Sub cargarMenu()
         Try
             For Each accion As DataRow In Privilegios.Tables(0).Rows()
-                If accion(1).ToString = "3" And accion(4).ToString = "1" Then 'Refrescar
-                    btnRefrescar.Visibility = BarItemVisibility.Always
-                End If
-                If accion(1).ToString = "3" And accion(4).ToString = "2" Then 'Nuevo / Guardar
+                If accion(1).ToString = "21" And accion(4).ToString = "1" Then 'Nuevo / Guardar
                     btnNuevo.Visibility = BarItemVisibility.Always
                     btnGuardar.Visibility = BarItemVisibility.Always
                 End If
-                If accion(1).ToString = "3" And accion(4).ToString = "3" Then 'Modificar
+                If accion(1).ToString = "21" And accion(4).ToString = "2" Then 'Modificar
                     btnModificar.Visibility = BarItemVisibility.Always
+                    btnGuardar.Visibility = BarItemVisibility.Always
                 End If
-                If accion(1).ToString = "3" And accion(4).ToString = "4" Then 'Eliminar
+                If accion(1).ToString = "21" And accion(4).ToString = "3" Then 'Eliminar
                     btnEliminar.Visibility = BarItemVisibility.Always
+                End If
+                If accion(1).ToString = "21" And accion(4).ToString = "14" Then 'Refrescar
+                    btnRefrescar.Visibility = BarItemVisibility.Always
                 End If
             Next
         Catch ex As Exception
@@ -182,8 +183,8 @@ Public Class frmClientes
 
 #Region "Acciones Generales"
     Private Sub frmClientes_Load(sender As Object, e As EventArgs) Handles Me.Load
-        'inicializarModulo()
-        'cargarMenu()
+        inicializarModulo()
+        cargarMenu()
         Guardar_Cancelar_Eliminar_Refrescar()
         cargarTiposNIT()
         cargarClientes()
@@ -311,6 +312,8 @@ Public Class frmClientes
                     Limpiar()
                     Guardar_Cancelar_Eliminar_Refrescar()
                     cargarClientes()
+                ElseIf resp.Contains("0x80131904") Then
+                    MessageBox.Show("Existen registros ligados a este cliente, no se puede eliminar", "Eliminar registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Else
                     MessageBox.Show("Ocurrió un error inesperado, intente de nuevo:" & vbCrLf & resp, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If

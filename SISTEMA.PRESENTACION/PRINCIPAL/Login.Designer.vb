@@ -33,6 +33,8 @@ Partial Class Login
         Me.btnVerPass = New DevExpress.XtraEditors.SimpleButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.cboCompañia = New System.Windows.Forms.ComboBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -47,9 +49,10 @@ Partial Class Login
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Tahoma", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(61, 211)
+        Me.Label1.Location = New System.Drawing.Point(50, 211)
+        Me.Label1.MinimumSize = New System.Drawing.Size(0, 25)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(86, 22)
+        Me.Label1.Size = New System.Drawing.Size(86, 25)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Usuario:"
         '
@@ -59,9 +62,10 @@ Partial Class Login
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Tahoma", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(26, 251)
+        Me.Label2.Location = New System.Drawing.Point(15, 251)
+        Me.Label2.MinimumSize = New System.Drawing.Size(0, 25)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(121, 22)
+        Me.Label2.Size = New System.Drawing.Size(121, 25)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Contraseña:"
         '
@@ -70,7 +74,7 @@ Partial Class Login
         Me.txtUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtUsuario.Font = New System.Drawing.Font("Tahoma", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtUsuario.ForeColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(52, Byte), Integer))
-        Me.txtUsuario.Location = New System.Drawing.Point(153, 208)
+        Me.txtUsuario.Location = New System.Drawing.Point(142, 208)
         Me.txtUsuario.Name = "txtUsuario"
         Me.txtUsuario.Size = New System.Drawing.Size(180, 29)
         Me.txtUsuario.TabIndex = 2
@@ -80,11 +84,11 @@ Partial Class Login
         '
         Me.txtContraseña.Font = New System.Drawing.Font("Tahoma", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtContraseña.ForeColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(52, Byte), Integer))
-        Me.txtContraseña.Location = New System.Drawing.Point(153, 248)
+        Me.txtContraseña.Location = New System.Drawing.Point(142, 248)
         Me.txtContraseña.Name = "txtContraseña"
         Me.txtContraseña.Size = New System.Drawing.Size(180, 29)
         Me.txtContraseña.TabIndex = 3
-        Me.txtContraseña.Text = "1234"
+        Me.txtContraseña.Text = "Aqua2023**"
         Me.txtContraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.txtContraseña.UseSystemPasswordChar = True
         '
@@ -143,17 +147,19 @@ Partial Class Login
         Me.btnVerPass.Appearance.Options.UseFont = True
         Me.btnVerPass.ImageOptions.Image = CType(resources.GetObject("btnVerPass.ImageOptions.Image"), System.Drawing.Image)
         Me.btnVerPass.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter
-        Me.btnVerPass.Location = New System.Drawing.Point(339, 248)
+        Me.btnVerPass.Location = New System.Drawing.Point(328, 248)
         Me.btnVerPass.MaximumSize = New System.Drawing.Size(43, 29)
         Me.btnVerPass.MinimumSize = New System.Drawing.Size(35, 25)
         Me.btnVerPass.Name = "btnVerPass"
         Me.btnVerPass.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.[False]
-        Me.btnVerPass.Size = New System.Drawing.Size(40, 27)
+        Me.btnVerPass.Size = New System.Drawing.Size(40, 29)
         Me.btnVerPass.TabIndex = 6
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.cboCompañia)
+        Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.btnVerPass)
         Me.Panel1.Controls.Add(Me.btnSalir)
@@ -178,6 +184,29 @@ Partial Class Login
         Me.PictureBox1.Size = New System.Drawing.Size(545, 345)
         Me.PictureBox1.TabIndex = 7
         Me.PictureBox1.TabStop = False
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Tahoma", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(324, 211)
+        Me.Label3.MinimumSize = New System.Drawing.Size(0, 25)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(107, 25)
+        Me.Label3.TabIndex = 8
+        Me.Label3.Text = "Compañia:"
+        '
+        'cboCompañia
+        '
+        Me.cboCompañia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboCompañia.Font = New System.Drawing.Font("Tahoma", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboCompañia.FormattingEnabled = True
+        Me.cboCompañia.Location = New System.Drawing.Point(438, 208)
+        Me.cboCompañia.Name = "cboCompañia"
+        Me.cboCompañia.Size = New System.Drawing.Size(95, 30)
+        Me.cboCompañia.TabIndex = 9
         '
         'Login
         '
@@ -208,4 +237,6 @@ Partial Class Login
     Friend WithEvents btnVerPass As SimpleButton
     Friend WithEvents Panel1 As Panel
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents cboCompañia As Windows.Forms.ComboBox
+    Friend WithEvents Label3 As Label
 End Class

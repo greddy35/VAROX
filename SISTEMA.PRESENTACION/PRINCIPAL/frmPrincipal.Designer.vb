@@ -5,7 +5,7 @@ Partial Class frmPrincipal
     Inherits DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -37,6 +37,7 @@ Partial Class frmPrincipal
         Me.lblUser = New DevExpress.XtraBars.BarStaticItem()
         Me.lblNombre = New DevExpress.XtraBars.BarStaticItem()
         Me.SkinDropDownButtonItem1 = New DevExpress.XtraBars.SkinDropDownButtonItem()
+        Me.btnGuardarTema = New DevExpress.XtraBars.BarButtonItem()
         Me.AccordionControl1 = New DevExpress.XtraBars.Navigation.AccordionControl()
         Me.AccordionControlSeparator31 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
         Me.accModReportAnalisis = New DevExpress.XtraBars.Navigation.AccordionControlElement()
@@ -137,10 +138,10 @@ Partial Class frmPrincipal
         '
         Me.contenedor.Controls.Add(Me.PanelControl1)
         Me.contenedor.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.contenedor.Location = New System.Drawing.Point(292, 39)
+        Me.contenedor.Location = New System.Drawing.Point(292, 37)
         Me.contenedor.Margin = New System.Windows.Forms.Padding(2)
         Me.contenedor.Name = "contenedor"
-        Me.contenedor.Size = New System.Drawing.Size(980, 638)
+        Me.contenedor.Size = New System.Drawing.Size(970, 634)
         Me.contenedor.TabIndex = 0
         '
         'PanelControl1
@@ -150,7 +151,7 @@ Partial Class frmPrincipal
         Me.PanelControl1.Location = New System.Drawing.Point(0, 0)
         Me.PanelControl1.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.PanelControl1.Name = "PanelControl1"
-        Me.PanelControl1.Size = New System.Drawing.Size(980, 638)
+        Me.PanelControl1.Size = New System.Drawing.Size(970, 634)
         Me.PanelControl1.TabIndex = 0
         '
         'PictureBox1
@@ -160,15 +161,15 @@ Partial Class frmPrincipal
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PictureBox1.Location = New System.Drawing.Point(2, 2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(976, 634)
+        Me.PictureBox1.Size = New System.Drawing.Size(966, 630)
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
         '
         'FluentFormDefaultManager1
         '
         Me.FluentFormDefaultManager1.Form = Me
-        Me.FluentFormDefaultManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.BarStaticItem6, Me.BarStaticItem7, Me.BarStaticItem8, Me.lblRol, Me.lblUser, Me.lblNombre, Me.SkinDropDownButtonItem1})
-        Me.FluentFormDefaultManager1.MaxItemId = 11
+        Me.FluentFormDefaultManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.BarStaticItem6, Me.BarStaticItem7, Me.BarStaticItem8, Me.lblRol, Me.lblUser, Me.lblNombre, Me.SkinDropDownButtonItem1, Me.btnGuardarTema})
+        Me.FluentFormDefaultManager1.MaxItemId = 21
         '
         'BarStaticItem6
         '
@@ -278,17 +279,27 @@ Partial Class frmPrincipal
         Me.SkinDropDownButtonItem1.Name = "SkinDropDownButtonItem1"
         Me.SkinDropDownButtonItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
         '
+        'btnGuardarTema
+        '
+        Me.btnGuardarTema.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right
+        Me.btnGuardarTema.Caption = "Guardar"
+        Me.btnGuardarTema.Id = 20
+        Me.btnGuardarTema.ImageOptions.Image = CType(resources.GetObject("btnGuardarTema.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnGuardarTema.ImageOptions.LargeImage = CType(resources.GetObject("btnGuardarTema.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.btnGuardarTema.Name = "btnGuardarTema"
+        Me.btnGuardarTema.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
+        '
         'AccordionControl1
         '
         Me.AccordionControl1.Appearance.Item.Hovered.ForeColor = System.Drawing.Color.MediumBlue
         Me.AccordionControl1.Appearance.Item.Hovered.Options.UseForeColor = True
         Me.AccordionControl1.Dock = System.Windows.Forms.DockStyle.Left
         Me.AccordionControl1.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeparator31, Me.accModReportAnalisis, Me.AccordionControlSeparator30, Me.accModGestionGeneral, Me.AccordionControlSeparator27, Me.accModAdmSistema, Me.AccordionControlSeparator28, Me.AccordionControlElementSesion, Me.AccordionControlSeparator29})
-        Me.AccordionControl1.Location = New System.Drawing.Point(0, 39)
+        Me.AccordionControl1.Location = New System.Drawing.Point(0, 37)
         Me.AccordionControl1.Margin = New System.Windows.Forms.Padding(2)
         Me.AccordionControl1.Name = "AccordionControl1"
         Me.AccordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch
-        Me.AccordionControl1.Size = New System.Drawing.Size(292, 638)
+        Me.AccordionControl1.Size = New System.Drawing.Size(292, 634)
         Me.AccordionControl1.TabIndex = 1
         Me.AccordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu
         '
@@ -300,7 +311,7 @@ Partial Class frmPrincipal
         '
         Me.accModReportAnalisis.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeparator24, Me.accSubModAnalisis, Me.accSubModReportes, Me.accSubModDashboard})
         Me.accModReportAnalisis.Expanded = True
-        Me.accModReportAnalisis.ImageOptions.Image = CType(resources.GetObject("AccordionControlElement2.ImageOptions.Image"), System.Drawing.Image)
+        Me.accModReportAnalisis.ImageOptions.Image = CType(resources.GetObject("accModReportAnalisis.ImageOptions.Image"), System.Drawing.Image)
         Me.accModReportAnalisis.Name = "accModReportAnalisis"
         Me.accModReportAnalisis.Text = "Reportería y Ánalisis"
         '
@@ -321,7 +332,7 @@ Partial Class frmPrincipal
         '
         'accAnalisisCortes
         '
-        Me.accAnalisisCortes.ImageOptions.Image = CType(resources.GetObject("accCorteGeneral.ImageOptions.Image"), System.Drawing.Image)
+        Me.accAnalisisCortes.ImageOptions.Image = CType(resources.GetObject("accAnalisisCortes.ImageOptions.Image"), System.Drawing.Image)
         Me.accAnalisisCortes.ImageOptions.ImageLayoutMode = DevExpress.XtraBars.Navigation.ImageLayoutMode.Squeeze
         Me.accAnalisisCortes.Name = "accAnalisisCortes"
         Me.accAnalisisCortes.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
@@ -405,7 +416,7 @@ Partial Class frmPrincipal
         '
         Me.accModGestionGeneral.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.accSubModGestion, Me.accSubModMantenimientos})
         Me.accModGestionGeneral.Expanded = True
-        Me.accModGestionGeneral.ImageOptions.Image = CType(resources.GetObject("AccordionControlElement7.ImageOptions.Image"), System.Drawing.Image)
+        Me.accModGestionGeneral.ImageOptions.Image = CType(resources.GetObject("accModGestionGeneral.ImageOptions.Image"), System.Drawing.Image)
         Me.accModGestionGeneral.Name = "accModGestionGeneral"
         Me.accModGestionGeneral.Text = "Gestión General"
         '
@@ -476,7 +487,7 @@ Partial Class frmPrincipal
         '
         Me.accModAdmSistema.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.accSubModSeguridad, Me.accSubModParametros})
         Me.accModAdmSistema.Expanded = True
-        Me.accModAdmSistema.ImageOptions.Image = CType(resources.GetObject("AccordionControlAdminSistema.ImageOptions.Image"), System.Drawing.Image)
+        Me.accModAdmSistema.ImageOptions.Image = CType(resources.GetObject("accModAdmSistema.ImageOptions.Image"), System.Drawing.Image)
         Me.accModAdmSistema.Name = "accModAdmSistema"
         Me.accModAdmSistema.Text = "Administración de Sistema"
         '
@@ -621,12 +632,12 @@ Partial Class frmPrincipal
         'FluentDesignFormControl1
         '
         Me.FluentDesignFormControl1.FluentDesignForm = Me
-        Me.FluentDesignFormControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.BarStaticItem6, Me.BarStaticItem7, Me.BarStaticItem8, Me.lblRol, Me.lblUser, Me.lblNombre, Me.SkinDropDownButtonItem1})
+        Me.FluentDesignFormControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.BarStaticItem6, Me.BarStaticItem7, Me.BarStaticItem8, Me.lblRol, Me.lblUser, Me.lblNombre, Me.SkinDropDownButtonItem1, Me.btnGuardarTema})
         Me.FluentDesignFormControl1.Location = New System.Drawing.Point(0, 0)
         Me.FluentDesignFormControl1.Manager = Me.FluentFormDefaultManager1
         Me.FluentDesignFormControl1.Margin = New System.Windows.Forms.Padding(2)
         Me.FluentDesignFormControl1.Name = "FluentDesignFormControl1"
-        Me.FluentDesignFormControl1.Size = New System.Drawing.Size(1272, 39)
+        Me.FluentDesignFormControl1.Size = New System.Drawing.Size(1262, 37)
         Me.FluentDesignFormControl1.TabIndex = 2
         Me.FluentDesignFormControl1.TabStop = False
         Me.FluentDesignFormControl1.TitleItemLinks.Add(Me.BarStaticItem6)
@@ -635,6 +646,7 @@ Partial Class frmPrincipal
         Me.FluentDesignFormControl1.TitleItemLinks.Add(Me.lblNombre)
         Me.FluentDesignFormControl1.TitleItemLinks.Add(Me.BarStaticItem7)
         Me.FluentDesignFormControl1.TitleItemLinks.Add(Me.lblRol)
+        Me.FluentDesignFormControl1.TitleItemLinks.Add(Me.btnGuardarTema)
         Me.FluentDesignFormControl1.TitleItemLinks.Add(Me.SkinDropDownButtonItem1)
         '
         'TimerConexión
@@ -651,7 +663,7 @@ Partial Class frmPrincipal
         Me.BarManager1.DockControls.Add(Me.barDockControlRight)
         Me.BarManager1.Form = Me
         Me.BarManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.BarStaticItem1, Me.bsiServidores, Me.BarStaticItem2, Me.bsiConexión, Me.BarStaticItem5, Me.bsiFecha, Me.BarStaticItem3, Me.lblCompañia})
-        Me.BarManager1.MaxItemId = 12
+        Me.BarManager1.MaxItemId = 13
         Me.BarManager1.StatusBar = Me.Bar3
         '
         'Bar3
@@ -742,7 +754,7 @@ Partial Class frmPrincipal
         Me.bsiFecha.Caption = "---"
         Me.bsiFecha.Id = 9
         Me.bsiFecha.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.bsiFecha.ItemAppearance.Normal.ForeColor = System.Drawing.Color.Firebrick
+        Me.bsiFecha.ItemAppearance.Normal.ForeColor = System.Drawing.Color.Red
         Me.bsiFecha.ItemAppearance.Normal.Options.UseFont = True
         Me.bsiFecha.ItemAppearance.Normal.Options.UseForeColor = True
         Me.bsiFecha.Name = "bsiFecha"
@@ -772,37 +784,37 @@ Partial Class frmPrincipal
         '
         Me.barDockControlTop.CausesValidation = False
         Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
-        Me.barDockControlTop.Location = New System.Drawing.Point(0, 39)
+        Me.barDockControlTop.Location = New System.Drawing.Point(0, 37)
         Me.barDockControlTop.Manager = Me.BarManager1
         Me.barDockControlTop.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
-        Me.barDockControlTop.Size = New System.Drawing.Size(1272, 0)
+        Me.barDockControlTop.Size = New System.Drawing.Size(1262, 0)
         '
         'barDockControlBottom
         '
         Me.barDockControlBottom.CausesValidation = False
         Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 677)
+        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 671)
         Me.barDockControlBottom.Manager = Me.BarManager1
         Me.barDockControlBottom.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
-        Me.barDockControlBottom.Size = New System.Drawing.Size(1272, 39)
+        Me.barDockControlBottom.Size = New System.Drawing.Size(1262, 40)
         '
         'barDockControlLeft
         '
         Me.barDockControlLeft.CausesValidation = False
         Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
-        Me.barDockControlLeft.Location = New System.Drawing.Point(0, 39)
+        Me.barDockControlLeft.Location = New System.Drawing.Point(0, 37)
         Me.barDockControlLeft.Manager = Me.BarManager1
         Me.barDockControlLeft.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
-        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 638)
+        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 634)
         '
         'barDockControlRight
         '
         Me.barDockControlRight.CausesValidation = False
         Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
-        Me.barDockControlRight.Location = New System.Drawing.Point(1272, 39)
+        Me.barDockControlRight.Location = New System.Drawing.Point(1262, 37)
         Me.barDockControlRight.Manager = Me.BarManager1
         Me.barDockControlRight.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
-        Me.barDockControlRight.Size = New System.Drawing.Size(0, 638)
+        Me.barDockControlRight.Size = New System.Drawing.Size(0, 634)
         '
         'BarStaticItem4
         '
@@ -835,33 +847,33 @@ Partial Class frmPrincipal
         '
         Me.BarDockControl1.CausesValidation = False
         Me.BarDockControl1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BarDockControl1.Location = New System.Drawing.Point(0, 39)
+        Me.BarDockControl1.Location = New System.Drawing.Point(0, 37)
         Me.BarDockControl1.Manager = Me.BarManager2
-        Me.BarDockControl1.Size = New System.Drawing.Size(1272, 0)
+        Me.BarDockControl1.Size = New System.Drawing.Size(1262, 0)
         '
         'BarDockControl2
         '
         Me.BarDockControl2.CausesValidation = False
         Me.BarDockControl2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.BarDockControl2.Location = New System.Drawing.Point(0, 716)
+        Me.BarDockControl2.Location = New System.Drawing.Point(0, 711)
         Me.BarDockControl2.Manager = Me.BarManager2
-        Me.BarDockControl2.Size = New System.Drawing.Size(1272, 0)
+        Me.BarDockControl2.Size = New System.Drawing.Size(1262, 0)
         '
         'BarDockControl3
         '
         Me.BarDockControl3.CausesValidation = False
         Me.BarDockControl3.Dock = System.Windows.Forms.DockStyle.Left
-        Me.BarDockControl3.Location = New System.Drawing.Point(0, 39)
+        Me.BarDockControl3.Location = New System.Drawing.Point(0, 37)
         Me.BarDockControl3.Manager = Me.BarManager2
-        Me.BarDockControl3.Size = New System.Drawing.Size(0, 677)
+        Me.BarDockControl3.Size = New System.Drawing.Size(0, 674)
         '
         'BarDockControl4
         '
         Me.BarDockControl4.CausesValidation = False
         Me.BarDockControl4.Dock = System.Windows.Forms.DockStyle.Right
-        Me.BarDockControl4.Location = New System.Drawing.Point(1272, 39)
+        Me.BarDockControl4.Location = New System.Drawing.Point(1262, 37)
         Me.BarDockControl4.Manager = Me.BarManager2
-        Me.BarDockControl4.Size = New System.Drawing.Size(0, 677)
+        Me.BarDockControl4.Size = New System.Drawing.Size(0, 674)
         '
         'BarManager3
         '
@@ -875,39 +887,39 @@ Partial Class frmPrincipal
         '
         Me.BarDockControl5.CausesValidation = False
         Me.BarDockControl5.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BarDockControl5.Location = New System.Drawing.Point(0, 39)
+        Me.BarDockControl5.Location = New System.Drawing.Point(0, 37)
         Me.BarDockControl5.Manager = Me.BarManager3
-        Me.BarDockControl5.Size = New System.Drawing.Size(1272, 0)
+        Me.BarDockControl5.Size = New System.Drawing.Size(1262, 0)
         '
         'BarDockControl6
         '
         Me.BarDockControl6.CausesValidation = False
         Me.BarDockControl6.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.BarDockControl6.Location = New System.Drawing.Point(0, 716)
+        Me.BarDockControl6.Location = New System.Drawing.Point(0, 711)
         Me.BarDockControl6.Manager = Me.BarManager3
-        Me.BarDockControl6.Size = New System.Drawing.Size(1272, 0)
+        Me.BarDockControl6.Size = New System.Drawing.Size(1262, 0)
         '
         'BarDockControl7
         '
         Me.BarDockControl7.CausesValidation = False
         Me.BarDockControl7.Dock = System.Windows.Forms.DockStyle.Left
-        Me.BarDockControl7.Location = New System.Drawing.Point(0, 39)
+        Me.BarDockControl7.Location = New System.Drawing.Point(0, 37)
         Me.BarDockControl7.Manager = Me.BarManager3
-        Me.BarDockControl7.Size = New System.Drawing.Size(0, 677)
+        Me.BarDockControl7.Size = New System.Drawing.Size(0, 674)
         '
         'BarDockControl8
         '
         Me.BarDockControl8.CausesValidation = False
         Me.BarDockControl8.Dock = System.Windows.Forms.DockStyle.Right
-        Me.BarDockControl8.Location = New System.Drawing.Point(1272, 39)
+        Me.BarDockControl8.Location = New System.Drawing.Point(1262, 37)
         Me.BarDockControl8.Manager = Me.BarManager3
-        Me.BarDockControl8.Size = New System.Drawing.Size(0, 677)
+        Me.BarDockControl8.Size = New System.Drawing.Size(0, 674)
         '
         'frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1272, 716)
+        Me.ClientSize = New System.Drawing.Size(1262, 711)
         Me.ControlContainer = Me.contenedor
         Me.Controls.Add(Me.contenedor)
         Me.Controls.Add(Me.AccordionControl1)
@@ -1042,4 +1054,5 @@ Partial Class frmPrincipal
     Friend WithEvents AccordionControlSeparator29 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
     Friend WithEvents SkinDropDownButtonItem1 As DevExpress.XtraBars.SkinDropDownButtonItem
     Friend WithEvents AccordionControlSeparator22 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
+    Friend WithEvents btnGuardarTema As DevExpress.XtraBars.BarButtonItem
 End Class

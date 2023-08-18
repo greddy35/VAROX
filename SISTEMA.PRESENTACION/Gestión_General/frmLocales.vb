@@ -144,18 +144,19 @@ Public Class frmLocales
     Private Sub cargarMenu()
         Try
             For Each accion As DataRow In Privilegios.Tables(0).Rows()
-                If accion(1).ToString = "3" And accion(4).ToString = "1" Then 'Refrescar
-                    btnRefrescar.Visibility = BarItemVisibility.Always
-                End If
-                If accion(1).ToString = "3" And accion(4).ToString = "2" Then 'Nuevo / Guardar
+                If accion(1).ToString = "22" And accion(4).ToString = "1" Then 'Nuevo / Guardar
                     btnNuevo.Visibility = BarItemVisibility.Always
                     btnGuardar.Visibility = BarItemVisibility.Always
                 End If
-                If accion(1).ToString = "3" And accion(4).ToString = "3" Then 'Modificar
+                If accion(1).ToString = "22" And accion(4).ToString = "2" Then 'Modificar
                     btnModificar.Visibility = BarItemVisibility.Always
+                    btnGuardar.Visibility = BarItemVisibility.Always
                 End If
-                If accion(1).ToString = "3" And accion(4).ToString = "4" Then 'Eliminar
+                If accion(1).ToString = "22" And accion(4).ToString = "3" Then 'Eliminar
                     btnEliminar.Visibility = BarItemVisibility.Always
+                End If
+                If accion(1).ToString = "22" And accion(4).ToString = "14" Then 'Refrescar
+                    btnRefrescar.Visibility = BarItemVisibility.Always
                 End If
             Next
         Catch ex As Exception
@@ -166,8 +167,8 @@ Public Class frmLocales
 
 #Region "Acciones Generales"
     Private Sub frmLocales_Load(sender As Object, e As EventArgs) Handles Me.Load
-        'inicializarModulo()
-        'cargarMenu()
+        inicializarModulo()
+        cargarMenu()
         Guardar_Cancelar_Eliminar_Refrescar()
         cargarUbicaciones()
         cargarLocales()
@@ -301,6 +302,8 @@ Public Class frmLocales
                     Limpiar()
                     Guardar_Cancelar_Eliminar_Refrescar()
                     cargarLocales()
+                ElseIf resp.Contains("0x80131904") Then
+                    MessageBox.Show("Existen registros ligados a este Local, no se puede eliminar", "Eliminar registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Else
                     MessageBox.Show("Ocurrió un error inesperado, intente de nuevo:" & vbCrLf & resp, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If

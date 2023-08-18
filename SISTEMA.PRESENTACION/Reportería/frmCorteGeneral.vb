@@ -1,4 +1,5 @@
 ﻿Imports DevExpress.DataAccess.Sql
+Imports DevExpress.XtraBars
 Imports DevExpress.XtraPivotGrid
 Imports DevExpress.XtraReports.UI
 Imports SISTEMA.NEGOCIO
@@ -21,6 +22,51 @@ Public Class frmReporteria
     Private LayoutStream1 As System.IO.Stream = New System.IO.MemoryStream()
 #End Region
 #Region "Funciones y Metodos"
+    Private Sub inicializarModulo()
+        'Ribbone
+        RibbonPageDatos.Visible = False
+        RibbonPagePersonalizacion.Visible = False
+        'Botones
+        btnConstruir.Visibility = BarItemVisibility.Never
+        btnRefrescar.Visibility = BarItemVisibility.Never
+        btnImprimir.Visibility = BarItemVisibility.Never
+        btnExportar.Visibility = BarItemVisibility.Never
+        deDesde.Enabled = False
+        deHasta.Enabled = False
+        btnCorteGeneral.Visibility = BarItemVisibility.Never
+        btnCorteCliente.Visibility = BarItemVisibility.Never
+    End Sub
+    Private Sub cargarMenu()
+        Try
+            For Each accion As DataRow In Privilegios.Tables(0).Rows()
+                If accion(1).ToString.Equals("1") And accion(4).ToString.Equals("7") Then 'Construir/Procesar
+                    btnConstruir.Visibility = BarItemVisibility.Always
+                    deDesde.Enabled = True
+                    deHasta.Enabled = True
+                End If
+                If accion(1).ToString.Equals("1") And accion(4).ToString.Equals("8") Then 'Imprimir
+                    RibbonPageDatos.Visible = True
+                    RibbonPagePersonalizacion.Visible = True
+                    btnImprimir.Visibility = BarItemVisibility.Always
+                End If
+                If accion(1).ToString.Equals("1") And accion(4).ToString.Equals("9") Then 'Exportar
+                    RibbonPageDatos.Visible = True
+                    RibbonPagePersonalizacion.Visible = True
+                    btnExportar.Visibility = BarItemVisibility.Always
+                End If
+                If accion(1).ToString.Equals("1") And accion(4).ToString.Equals("14") Then 'Consultar
+                    RibbonPageDatos.Visible = True
+                    btnRefrescar.Visibility = BarItemVisibility.Always
+                    btnCorteCliente.Visibility = BarItemVisibility.Always
+                    btnCorteGeneral.Visibility = BarItemVisibility.Always
+                    deDesde.Enabled = True
+                    deHasta.Enabled = True
+                End If
+            Next
+        Catch ex As Exception
+            mensajeError(ex)
+        End Try
+    End Sub
     Private Function UltimoDiaDelMes(ByVal dtmFecha As Date) As Date
         UltimoDiaDelMes = DateSerial(Year(dtmFecha), Month(dtmFecha) + 1, 0)
     End Function
@@ -37,22 +83,6 @@ Public Class frmReporteria
             Return False
         End If
     End Function
-
-    'Private Function llenarPivot() As DataSet
-    '    Try
-    '        Dim fechIni As String = CDate(deDesde.EditValue).ToString("yyyy-MM-dd 00:00:00.000")
-    '        Dim fechFin As String = CDate(deHasta.EditValue).ToString("yyyy-MM-dd 23:59:59.000")
-    '        Dim ds As DataSet = gestor.NConsultar2(fechIni, fechFin)
-    '        'PivotGridControl1.DataSource = ds   'Llenado del grid
-
-
-    '        SqlDataSource1.Fill()
-    '        Return ds
-    '    Catch ex As Exception
-    '        Return Nothing
-    '        mensajeError(ex)
-    '    End Try
-    'End Function
     Private Function consultarHistorico() As SqlDataSource
         Dim dsc As New SqlDataSource
         dsc = gestor.NConsultarHistorico_sqlds(fechIni, fechFin)
@@ -103,6 +133,9 @@ Public Class frmReporteria
 
 #Region "Acciones Generales"
     Private Sub frmCorteGeneral_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        inicializarModulo()
+        cargarMenu()
+
         deDesde.EditValue = PrimerDiaDelMes(Today)
         rideHasta.MinValue = PrimerDiaDelMes(Today)
         deHasta.EditValue = UltimoDiaDelMes(Today)

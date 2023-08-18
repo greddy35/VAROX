@@ -139,6 +139,7 @@ Public Class frmValv_Loc_Cli
             ElseIf chkAnul.Checked Then
                 filtro = "E"
             End If
+            Guardar_Cancelar_Eliminar_Refrescar()
             GridControlVinculacion.DataSource = gestor.NConsultar(filtro)   'Llenado del grid
             'GridViewVinculacion.BestFitColumns()
         Catch ex As Exception
@@ -263,6 +264,9 @@ Public Class frmValv_Loc_Cli
     End Function
 
     Private Sub inicializarModulo()
+        'Ribbone
+        RibbonPageEstado.Visible = False
+        'Botones
         btnNuevo.Visibility = BarItemVisibility.Never
         btnGuardar.Visibility = BarItemVisibility.Never
         btnModificar.Visibility = BarItemVisibility.Never
@@ -273,18 +277,29 @@ Public Class frmValv_Loc_Cli
     Private Sub cargarMenu()
         Try
             For Each accion As DataRow In Privilegios.Tables(0).Rows()
-                If accion(1).ToString = "3" And accion(4).ToString = "1" Then 'Refrescar
-                    btnRefrescar.Visibility = BarItemVisibility.Always
-                End If
-                If accion(1).ToString = "3" And accion(4).ToString = "2" Then 'Nuevo / Guardar
+                If accion(1).ToString = "20" And accion(4).ToString = "1" Then 'Nuevo / Guardar
                     btnNuevo.Visibility = BarItemVisibility.Always
                     btnGuardar.Visibility = BarItemVisibility.Always
                 End If
-                If accion(1).ToString = "3" And accion(4).ToString = "3" Then 'Modificar
+                If accion(1).ToString = "20" And accion(4).ToString = "2" Then 'Modificar
                     btnModificar.Visibility = BarItemVisibility.Always
+                    btnGuardar.Visibility = BarItemVisibility.Always
                 End If
-                If accion(1).ToString = "3" And accion(4).ToString = "4" Then 'Eliminar
+                If accion(1).ToString = "20" And accion(4).ToString = "3" Then 'Eliminar
                     btnEliminar.Visibility = BarItemVisibility.Always
+                End If
+                If accion(1).ToString = "20" And accion(4).ToString = "4" Then 'Aprobar
+                    btnAprobar.Visibility = BarItemVisibility.Always
+                End If
+                If accion(1).ToString = "20" And accion(4).ToString = "5" Then 'Anular
+                    btnAnular.Visibility = BarItemVisibility.Always
+                End If
+                If accion(1).ToString = "20" And accion(4).ToString = "6" Then 'Extender
+                    btnExtender.Visibility = BarItemVisibility.Always
+                End If
+                If accion(1).ToString = "20" And accion(4).ToString = "14" Then 'Refrescar
+                    RibbonPageEstado.Visible = True
+                    btnRefrescar.Visibility = BarItemVisibility.Always
                 End If
             Next
         Catch ex As Exception
@@ -295,8 +310,8 @@ Public Class frmValv_Loc_Cli
 
 #Region "Acciones Generales"
     Private Sub frmValv_Loc_Cli_Load(sender As Object, e As EventArgs) Handles Me.Load
-        'inicializarModulo()
-        'cargarMenu()
+        inicializarModulo()
+        cargarMenu()
         Guardar_Cancelar_Eliminar_Refrescar()
         cargarVinculaciones()
         GridViewVinculacion.BestFitColumns()
@@ -417,6 +432,8 @@ Public Class frmValv_Loc_Cli
                             Limpiar()
                             Guardar_Cancelar_Eliminar_Refrescar()
                             cargarVinculaciones()
+                        ElseIf resp.Contains("0x80131904") Then
+                            MessageBox.Show("Existen registros ligados a esta vinculación, no se puede eliminar", "Eliminar registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
                         Else
                             MessageBox.Show("Ocurrió un error inesperado, intente de nuevo:" & vbCrLf & resp, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                         End If
