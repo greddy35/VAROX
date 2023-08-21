@@ -310,7 +310,6 @@ Partial Class frmPrincipal
         'accModReportAnalisis
         '
         Me.accModReportAnalisis.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeparator24, Me.accSubModAnalisis, Me.accSubModReportes, Me.accSubModDashboard})
-        Me.accModReportAnalisis.Expanded = True
         Me.accModReportAnalisis.ImageOptions.Image = CType(resources.GetObject("accModReportAnalisis.ImageOptions.Image"), System.Drawing.Image)
         Me.accModReportAnalisis.Name = "accModReportAnalisis"
         Me.accModReportAnalisis.Text = "Reportería y Ánalisis"
@@ -322,7 +321,6 @@ Partial Class frmPrincipal
         'accSubModAnalisis
         '
         Me.accSubModAnalisis.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeparator13, Me.accAnalisisCortes, Me.AccordionControlSeparator22})
-        Me.accSubModAnalisis.Expanded = True
         Me.accSubModAnalisis.Name = "accSubModAnalisis"
         Me.accSubModAnalisis.Text = "Ánalisis"
         '
@@ -345,7 +343,6 @@ Partial Class frmPrincipal
         'accSubModReportes
         '
         Me.accSubModReportes.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeparator16, Me.accDiseñadorReportes, Me.AccordionControlSeparator25, Me.accVisualizadorReportes, Me.AccordionControlSeparator23})
-        Me.accSubModReportes.Expanded = True
         Me.accSubModReportes.Name = "accSubModReportes"
         Me.accSubModReportes.Text = "Reportes"
         '
@@ -380,7 +377,6 @@ Partial Class frmPrincipal
         'accSubModDashboard
         '
         Me.accSubModDashboard.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeparator15, Me.accDiseñadorDashboard, Me.AccordionControlSeparator14, Me.accVisualizadorDashboard})
-        Me.accSubModDashboard.Expanded = True
         Me.accSubModDashboard.Name = "accSubModDashboard"
         Me.accSubModDashboard.Text = "Dashboard"
         '
@@ -415,7 +411,6 @@ Partial Class frmPrincipal
         'accModGestionGeneral
         '
         Me.accModGestionGeneral.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.accSubModGestion, Me.accSubModMantenimientos})
-        Me.accModGestionGeneral.Expanded = True
         Me.accModGestionGeneral.ImageOptions.Image = CType(resources.GetObject("accModGestionGeneral.ImageOptions.Image"), System.Drawing.Image)
         Me.accModGestionGeneral.Name = "accModGestionGeneral"
         Me.accModGestionGeneral.Text = "Gestión General"
@@ -423,7 +418,6 @@ Partial Class frmPrincipal
         'accSubModGestion
         '
         Me.accSubModGestion.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeparator9, Me.accValLocClien, Me.AccordionControlSeparator5})
-        Me.accSubModGestion.Expanded = True
         Me.accSubModGestion.Name = "accSubModGestion"
         Me.accSubModGestion.Text = "Gestión"
         '
@@ -446,7 +440,6 @@ Partial Class frmPrincipal
         'accSubModMantenimientos
         '
         Me.accSubModMantenimientos.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.accClientes, Me.AccordionControlSeparator18, Me.accLocales, Me.AccordionControlSeparator17, Me.accValvulas})
-        Me.accSubModMantenimientos.Expanded = True
         Me.accSubModMantenimientos.Name = "accSubModMantenimientos"
         Me.accSubModMantenimientos.Text = "Mantenimientos"
         '
@@ -486,7 +479,6 @@ Partial Class frmPrincipal
         'accModAdmSistema
         '
         Me.accModAdmSistema.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.accSubModSeguridad, Me.accSubModParametros})
-        Me.accModAdmSistema.Expanded = True
         Me.accModAdmSistema.ImageOptions.Image = CType(resources.GetObject("accModAdmSistema.ImageOptions.Image"), System.Drawing.Image)
         Me.accModAdmSistema.Name = "accModAdmSistema"
         Me.accModAdmSistema.Text = "Administración de Sistema"
@@ -494,7 +486,6 @@ Partial Class frmPrincipal
         'accSubModSeguridad
         '
         Me.accSubModSeguridad.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeparator4, Me.accUsuariosPrivilegios, Me.AccordionControlSeparator10, Me.accRoles, Me.AccordionControlSeparator11, Me.accConfBloq, Me.AccordionControlSeparator12})
-        Me.accSubModSeguridad.Expanded = True
         Me.accSubModSeguridad.Name = "accSubModSeguridad"
         Me.accSubModSeguridad.Text = "Seguridad"
         '
@@ -543,7 +534,6 @@ Partial Class frmPrincipal
         'accSubModParametros
         '
         Me.accSubModParametros.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.accTiposMedicion, Me.AccordionControlSeparator6, Me.accTiposValvulas, Me.AccordionControlSeparator7, Me.accClasesDispo})
-        Me.accSubModParametros.Expanded = True
         Me.accSubModParametros.Name = "accSubModParametros"
         Me.accSubModParametros.Text = "Parámetros del Sistema"
         '
@@ -943,7 +933,7 @@ Partial Class frmPrincipal
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frmPrincipal"
         Me.NavigationControl = Me.AccordionControl1
-        Me.Text = "VAROX 1.1          "
+        Me.Text = "VAROX 1.0.0         "
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.contenedor.ResumeLayout(False)
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).EndInit()
