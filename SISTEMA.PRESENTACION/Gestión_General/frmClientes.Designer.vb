@@ -98,7 +98,7 @@ Partial Class frmClientes
         Me.RibbonControl.MaxItemId = 11
         Me.RibbonControl.Name = "RibbonControl"
         Me.RibbonControl.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1})
-        Me.RibbonControl.Size = New System.Drawing.Size(1073, 193)
+        Me.RibbonControl.Size = New System.Drawing.Size(1073, 178)
         Me.RibbonControl.StatusBar = Me.RibbonStatusBar
         '
         'btnSalir
@@ -238,10 +238,10 @@ Partial Class frmClientes
         '
         'RibbonStatusBar
         '
-        Me.RibbonStatusBar.Location = New System.Drawing.Point(0, 646)
+        Me.RibbonStatusBar.Location = New System.Drawing.Point(0, 641)
         Me.RibbonStatusBar.Name = "RibbonStatusBar"
         Me.RibbonStatusBar.Ribbon = Me.RibbonControl
-        Me.RibbonStatusBar.Size = New System.Drawing.Size(1073, 30)
+        Me.RibbonStatusBar.Size = New System.Drawing.Size(1073, 35)
         '
         'TableLayoutPanel1
         '
@@ -250,12 +250,12 @@ Partial Class frmClientes
         Me.TableLayoutPanel1.Controls.Add(Me.Panel1, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Panel4, 0, 1)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 193)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 178)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 155.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1073, 453)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1073, 463)
         Me.TableLayoutPanel1.TabIndex = 6
         '
         'Panel1
@@ -397,7 +397,7 @@ Partial Class frmClientes
         Me.txtNIT.Location = New System.Drawing.Point(459, 80)
         Me.txtNIT.Name = "txtNIT"
         Me.txtNIT.Size = New System.Drawing.Size(276, 28)
-        Me.txtNIT.TabIndex = 6
+        Me.txtNIT.TabIndex = 45
         Me.txtNIT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtCodNIT

@@ -200,5 +200,20 @@ Public Class DValvulas
 #Enable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
         End Try
     End Function
-
+    Public Function CargarValvulas() As DataSet
+        Try
+            Dim Tabla As New DataSet
+            Dim Comando As New SqlCommand("GG_cargarValvulas", MyBase.conn)
+            Comando.CommandType = CommandType.StoredProcedure
+            MyBase.conn.Open()                                                              'Abrimos conexion a la BD
+            Dim adapter As New SqlDataAdapter(Comando)
+            adapter.Fill(Tabla)
+            MyBase.conn.Close()                                                             'Cerramos la conexion a BD
+            Return Tabla                                                                    'Retornamos el DataSet
+        Catch ex As Exception
+#Disable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
+            Throw ex
+#Enable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
+        End Try
+    End Function
 End Class
