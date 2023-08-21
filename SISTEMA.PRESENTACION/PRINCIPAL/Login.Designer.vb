@@ -32,9 +32,9 @@ Partial Class Login
         Me.btnSalir = New DevExpress.XtraEditors.SimpleButton()
         Me.btnVerPass = New DevExpress.XtraEditors.SimpleButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.cboCompañia = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -88,7 +88,6 @@ Partial Class Login
         Me.txtContraseña.Name = "txtContraseña"
         Me.txtContraseña.Size = New System.Drawing.Size(180, 29)
         Me.txtContraseña.TabIndex = 3
-        Me.txtContraseña.Text = "Aqua2023**"
         Me.txtContraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.txtContraseña.UseSystemPasswordChar = True
         '
@@ -174,16 +173,16 @@ Partial Class Login
         Me.Panel1.Size = New System.Drawing.Size(545, 345)
         Me.Panel1.TabIndex = 0
         '
-        'PictureBox1
+        'cboCompañia
         '
-        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(545, 345)
-        Me.PictureBox1.TabIndex = 7
-        Me.PictureBox1.TabStop = False
+        Me.cboCompañia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboCompañia.Enabled = False
+        Me.cboCompañia.Font = New System.Drawing.Font("Tahoma", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboCompañia.FormattingEnabled = True
+        Me.cboCompañia.Location = New System.Drawing.Point(438, 208)
+        Me.cboCompañia.Name = "cboCompañia"
+        Me.cboCompañia.Size = New System.Drawing.Size(95, 30)
+        Me.cboCompañia.TabIndex = 9
         '
         'Label3
         '
@@ -198,15 +197,16 @@ Partial Class Login
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "Compañia:"
         '
-        'cboCompañia
+        'PictureBox1
         '
-        Me.cboCompañia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboCompañia.Font = New System.Drawing.Font("Tahoma", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cboCompañia.FormattingEnabled = True
-        Me.cboCompañia.Location = New System.Drawing.Point(438, 208)
-        Me.cboCompañia.Name = "cboCompañia"
-        Me.cboCompañia.Size = New System.Drawing.Size(95, 30)
-        Me.cboCompañia.TabIndex = 9
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(545, 345)
+        Me.PictureBox1.TabIndex = 7
+        Me.PictureBox1.TabStop = False
         '
         'Login
         '

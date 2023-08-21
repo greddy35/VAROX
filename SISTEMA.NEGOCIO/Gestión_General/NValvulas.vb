@@ -116,4 +116,14 @@ Public Class NValvulas
             Return Nothing
         End Try
     End Function
+    Public Function NCargarValvulas() As DataSet
+        Try
+            Dim Datos As New DValvulas
+            Dim Tabla As New DataSet
+            Tabla = Datos.CargarValvulas()
+            Return Tabla
+        Catch ex As Exception
+            Return Nothing
+        End Try
+    End Function
 End Class

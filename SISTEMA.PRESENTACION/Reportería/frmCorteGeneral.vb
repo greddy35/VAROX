@@ -10,6 +10,7 @@ Public Class frmReporteria
 
 #Region "Variables Globales"
     Dim gestor As New NReportes
+    Dim gestorH As New NHistorico
     'Dim UnidDisco As String = Mid(Environment.SystemDirectory.ToString, 1, 3)
     'VARIABLES PARA CONTROL DE LOS PROGRESBAR
     Dim Progreso As Integer = 0
@@ -194,76 +195,81 @@ Public Class frmReporteria
             Dim actu As Integer = 0
             listado = gestor.NCrearListadoValvulas(fechIni, fechFin)       'Obtenemos las vinculaciones a construir
 
-            Dim flag As Boolean = False
-            For Each fila As DataRow In listado.Tables(0).Rows()
-                contenedor = gestor.NCargarValoresValvula(fila(4).ToString, fila(6).ToString, "%" + fila(2).ToString + "%", "%" + fila(3).ToString + "%", fila(5).ToString, "%" + fila(1).ToString + "%", fechIni, fechFin, CDate(fila(7)).ToString("yyyy-MM-dd 00:00:00.000"), CDate(fila(8)).ToString("yyyy-MM-dd 00:00:00.000"), fila(1).ToString)
+            If Not listado Is Nothing Then
+                Dim flag As Boolean = False
+                For Each fila As DataRow In listado.Tables(0).Rows()
+                    contenedor = gestorH.NCargarValoresValvula(fila(4).ToString, fila(6).ToString, "%" + fila(2).ToString + "%", "%" + fila(3).ToString + "%", fila(5).ToString, "%" + fila(1).ToString + "%", fechIni, fechFin, CDate(fila(7)).ToString("yyyy-MM-dd 00:00:00.000"), CDate(fila(8)).ToString("yyyy-MM-dd 00:00:00.000"), fila(1).ToString)
 
-                If contenedor.Tables(0).Rows.Count > 0 Then
-                    Dim ultLect As Decimal = 0
-                    Dim flag2 As Boolean = False
-                    For Each consumo As DataRow In contenedor.Tables(0).Rows()
-                        If flag2 = False Then
-                            ultLect = CDec(consumo(2))
-                            consumo.Item(3) = 0
-                            flag2 = True
-                        Else
-                            consumo.Item(3) = CDec(consumo(2)) - ultLect
-                            consumo.Item(5) = ultLect
-                            If CDec(consumo.Item(3)) = 0 Then
-                                consumo.Item(4) = "IGUAL"
-                            ElseIf CDec(consumo.Item(3)) < 0 Then
-                                consumo.Item(4) = "MENOR"
-                            ElseIf CDec(consumo.Item(3)) > 0 Then
-                                consumo.Item(4) = "MAYOR"
+                    If contenedor.Tables(0).Rows.Count > 0 Then
+                        Dim ultLect As Decimal = 0
+                        Dim flag2 As Boolean = False
+                        For Each consumo As DataRow In contenedor.Tables(0).Rows()
+                            If flag2 = False Then
+                                ultLect = CDec(consumo(2))
+                                consumo.Item(3) = 0
+                                flag2 = True
+                            Else
+                                consumo.Item(3) = CDec(consumo(2)) - ultLect
+                                consumo.Item(5) = ultLect
+                                If CDec(consumo.Item(3)) = 0 Then
+                                    consumo.Item(4) = "IGUAL"
+                                ElseIf CDec(consumo.Item(3)) < 0 Then
+                                    consumo.Item(4) = "MENOR"
+                                ElseIf CDec(consumo.Item(3)) > 0 Then
+                                    consumo.Item(4) = "MAYOR"
+                                End If
+                                ultLect = CDec(consumo(2))
                             End If
-                            ultLect = CDec(consumo(2))
+                        Next
+                        contenedor.Tables(0).Rows(0).Delete()
+                        contenedor.Tables(0).Rows(0).AcceptChanges()
+                        If flag = True Then
+                            base.Merge(contenedor)
+                        Else
+                            base = contenedor
+                            flag = True
                         End If
-                    Next
-                    contenedor.Tables(0).Rows(0).Delete()
-                    contenedor.Tables(0).Rows(0).AcceptChanges()
-                    If flag = True Then
-                        base.Merge(contenedor)
+                    End If
+
+                Next
+                If Not base Is Nothing Then
+                    total = base.Tables(0).Rows().Count
+                    If total > 0 Then
+                        Dim resultado As New DataSet
+                        For Each fila As DataRow In base.Tables(0).Rows()      'Recorremos los Horarios para actualizar o insertar en la BD.BIOSOFT
+                            Try
+                                resultado = gestor.NBuscarHistorico(fila(0).ToString, CDate(fila(1).ToString).ToString("yyyy-MM-dd HH:mm:ss.fff"))
+                                Dim id As Integer = 0
+                                If resultado IsNot Nothing Then
+                                    If resultado.Tables(0).Rows.Count > 0 Then
+                                        For Each result As DataRow In resultado.Tables(0).Rows()
+                                            id = CInt(result(0))
+                                        Next
+                                    End If
+                                End If
+                                If (id <> 0) Then
+                                    gestor.NModificar(id.ToString, fila(0).ToString, fila(1).ToString, fila(2).ToString, fila(3).ToString, fila(4).ToString, fila(5).ToString)
+                                    actu = actu + 1
+                                    'Console.WriteLine("Actualizado: " & fila(0).ToString)
+                                Else
+                                    gestor.NInsertar(fila(0).ToString, fila(1).ToString, fila(2).ToString, fila(3).ToString, fila(4).ToString, fila(5).ToString)
+                                    ins = ins + 1
+                                    'Console.WriteLine("Insertado: " & fila(0).ToString)
+                                End If
+                                'Actualizamos el progreso
+                                Contador = Contador + 1
+                                BackgroundWorker1.ReportProgress(1)
+                            Catch ex As Exception
+                                Console.WriteLine("Error: " & ex.ToString)
+                            End Try
+                        Next
+                        'Console.WriteLine("Registros Insertados: " & ins.ToString)
+                        'Console.WriteLine("Registros Actualizados: " & actu.ToString)Else
                     Else
-                        base = contenedor
-                        flag = True
+                        MessageBox.Show("No se encontraron datos en el rango seleccionado", "Sin Datos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                     End If
                 End If
-
-            Next
-            If Not base Is Nothing Then
-                total = base.Tables(0).Rows().Count
-
-                Dim resultado As New DataSet
-                For Each fila As DataRow In base.Tables(0).Rows()      'Recorremos los Horarios para actualizar o insertar en la BD.BIOSOFT
-                    Try
-                        resultado = gestor.NBuscarHistorico(fila(0).ToString, CDate(fila(1).ToString).ToString("yyyy-MM-dd HH:mm:ss.fff"))
-                        Dim id As Integer = 0
-                        If resultado IsNot Nothing Then
-                            If resultado.Tables(0).Rows.Count > 0 Then
-                                For Each result As DataRow In resultado.Tables(0).Rows()
-                                    id = CInt(result(0))
-                                Next
-                            End If
-                        End If
-                        If (id <> 0) Then
-                            gestor.NModificar(id.ToString, fila(0).ToString, fila(1).ToString, fila(2).ToString, fila(3).ToString, fila(4).ToString, fila(5).ToString)
-                            actu = actu + 1
-                            'Console.WriteLine("Actualizado: " & fila(0).ToString)
-                        Else
-                            gestor.NInsertar(fila(0).ToString, fila(1).ToString, fila(2).ToString, fila(3).ToString, fila(4).ToString, fila(5).ToString)
-                            ins = ins + 1
-                            'Console.WriteLine("Insertado: " & fila(0).ToString)
-                        End If
-                        'Actualizamos el progreso
-                        Contador = Contador + 1
-                        BackgroundWorker1.ReportProgress(1)
-                    Catch ex As Exception
-                        Console.WriteLine("Error: " & ex.ToString)
-                    End Try
-                Next
-                'Console.WriteLine("Registros Insertados: " & ins.ToString)
-                'Console.WriteLine("Registros Actualizados: " & actu.ToString)
-            Else
+                Else
                 MessageBox.Show("No se encontraron datos en el rango seleccionado", "Sin Datos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             End If
 

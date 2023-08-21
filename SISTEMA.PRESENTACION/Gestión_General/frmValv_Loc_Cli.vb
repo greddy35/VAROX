@@ -10,6 +10,7 @@ Public Class frmValv_Loc_Cli
 
 #Region "Variables Globales"
     Dim gestor As New NVinculacion
+    Dim gestorV As New NValvulas
     Dim gestorH As New NHistorico
     Dim clase As New Vinculacion
 #End Region
@@ -101,6 +102,7 @@ Public Class frmValv_Loc_Cli
         cboLocal.Enabled = True
         cboValvula.Enabled = True
         txtObserv.Enabled = True
+        'deHasta.Enabled = True
     End Sub
 
     Function ValidarCampos() As String
@@ -180,7 +182,7 @@ Public Class frmValv_Loc_Cli
 
     Public Sub cargarValvulas()
         Try
-            Dim datos As DataSet = gestorH.NCargarValvulas()    'Llenado del combo
+            Dim datos As DataSet = gestorV.NCargarValvulas()    'Llenado del combo
             If Not datos Is Nothing Then
                 With cboValvula
                     .DisplayMember = "VALVULA" 'VALORES A MOSTRAR
@@ -253,7 +255,7 @@ Public Class frmValv_Loc_Cli
 
                 End If
                 deDesde.Enabled = True
-                deHasta.Enabled = False
+                deHasta.Enabled = True
             End If
         Catch ex As Exception
             mensajeError(ex)
