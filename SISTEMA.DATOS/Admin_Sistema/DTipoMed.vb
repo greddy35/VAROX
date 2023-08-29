@@ -10,6 +10,7 @@ Public Class DTipoMed
             Comando.CommandType = CommandType.StoredProcedure
             Comando.Parameters.Add("@nombre", SqlDbType.VarChar).Value = Obj.Nombre
             Comando.Parameters.Add("@unidad", SqlDbType.VarChar).Value = Obj.Unidad
+            Comando.Parameters.Add("@moneda", SqlDbType.Char).Value = Obj.Moneda
             Comando.Parameters.Add("@valor", SqlDbType.Float).Value = Obj.Valor
             Comando.Parameters.Add("@descripcion", SqlDbType.VarChar).Value = Obj.Descripcion
             Comando.Parameters.Add("@usuario", SqlDbType.VarChar).Value = Obj.CreadoPor
@@ -29,6 +30,7 @@ Public Class DTipoMed
             Comando.Parameters.Add("@id", SqlDbType.VarChar).Value = Obj.Id
             Comando.Parameters.Add("@nombre", SqlDbType.VarChar).Value = Obj.Nombre
             Comando.Parameters.Add("@unidad", SqlDbType.VarChar).Value = Obj.Unidad
+            Comando.Parameters.Add("@moneda", SqlDbType.Char).Value = Obj.Moneda
             Comando.Parameters.Add("@valor", SqlDbType.Float).Value = Obj.Valor
             Comando.Parameters.Add("@descripcion", SqlDbType.VarChar).Value = Obj.Descripcion
             Comando.Parameters.Add("@usuario", SqlDbType.VarChar).Value = Obj.ModificadoPor

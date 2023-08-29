@@ -144,7 +144,7 @@ Partial Class frmClasesDispositivos
         Me.RibbonControl.MaxItemId = 11
         Me.RibbonControl.Name = "RibbonControl"
         Me.RibbonControl.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1})
-        Me.RibbonControl.Size = New System.Drawing.Size(932, 193)
+        Me.RibbonControl.Size = New System.Drawing.Size(932, 178)
         Me.RibbonControl.StatusBar = Me.RibbonStatusBar
         '
         'btnNuevo
@@ -255,10 +255,10 @@ Partial Class frmClasesDispositivos
         '
         'RibbonStatusBar
         '
-        Me.RibbonStatusBar.Location = New System.Drawing.Point(0, 609)
+        Me.RibbonStatusBar.Location = New System.Drawing.Point(0, 604)
         Me.RibbonStatusBar.Name = "RibbonStatusBar"
         Me.RibbonStatusBar.Ribbon = Me.RibbonControl
-        Me.RibbonStatusBar.Size = New System.Drawing.Size(932, 30)
+        Me.RibbonStatusBar.Size = New System.Drawing.Size(932, 35)
         '
         'TableLayoutPanel1
         '
@@ -267,12 +267,12 @@ Partial Class frmClasesDispositivos
         Me.TableLayoutPanel1.Controls.Add(Me.Panel1, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Panel4, 0, 1)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 193)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 178)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 185.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(932, 416)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(932, 426)
         Me.TableLayoutPanel1.TabIndex = 2
         '
         'Panel1
@@ -323,7 +323,7 @@ Partial Class frmClasesDispositivos
         Me.chkEstado.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chkEstado.Properties.Appearance.Options.UseFont = True
         Me.chkEstado.Properties.Caption = "Inactivo"
-        Me.chkEstado.Size = New System.Drawing.Size(99, 24)
+        Me.chkEstado.Size = New System.Drawing.Size(99, 22)
         Me.chkEstado.TabIndex = 38
         '
         'Label21
@@ -791,7 +791,7 @@ Partial Class frmClasesDispositivos
         Me.btnAceptar.ImageOptions.Image = CType(resources.GetObject("btnAceptar.ImageOptions.Image"), System.Drawing.Image)
         Me.btnAceptar.Location = New System.Drawing.Point(3, 3)
         Me.btnAceptar.Name = "btnAceptar"
-        Me.btnAceptar.Size = New System.Drawing.Size(110, 38)
+        Me.btnAceptar.Size = New System.Drawing.Size(143, 38)
         Me.btnAceptar.TabIndex = 24
         Me.btnAceptar.Text = "ACEPTAR"
         '
@@ -801,9 +801,9 @@ Partial Class frmClasesDispositivos
         Me.btnCerrarExtraer.Appearance.Font = New System.Drawing.Font("Tahoma", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCerrarExtraer.Appearance.Options.UseFont = True
         Me.btnCerrarExtraer.ImageOptions.Image = CType(resources.GetObject("btnCerrarExtraer.ImageOptions.Image"), System.Drawing.Image)
-        Me.btnCerrarExtraer.Location = New System.Drawing.Point(508, 3)
+        Me.btnCerrarExtraer.Location = New System.Drawing.Point(568, 3)
         Me.btnCerrarExtraer.Name = "btnCerrarExtraer"
-        Me.btnCerrarExtraer.Size = New System.Drawing.Size(110, 38)
+        Me.btnCerrarExtraer.Size = New System.Drawing.Size(140, 38)
         Me.btnCerrarExtraer.TabIndex = 23
         Me.btnCerrarExtraer.Text = "CANCELAR"
         '

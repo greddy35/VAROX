@@ -100,6 +100,8 @@ Partial Public Class rptCortePorCliente
         Me.label57 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label6 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label5 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.label25 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.label58 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label41 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label40 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label39 = New DevExpress.XtraReports.UI.XRLabel()
@@ -171,7 +173,7 @@ Partial Public Class rptCortePorCliente
         '
         'GroupHeader4
         '
-        Me.GroupHeader4.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.label41, Me.label40, Me.label39, Me.label38, Me.label37, Me.label36, Me.label28, Me.label35})
+        Me.GroupHeader4.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.label25, Me.label58, Me.label41, Me.label40, Me.label39, Me.label38, Me.label37, Me.label36, Me.label28, Me.label35})
         Me.GroupHeader4.GroupFields.AddRange(New DevExpress.XtraReports.UI.GroupField() {New DevExpress.XtraReports.UI.GroupField("VALVULA", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)})
         Me.GroupHeader4.HeightF = 67.8889!
         Me.GroupHeader4.KeepTogether = True
@@ -413,7 +415,7 @@ Partial Public Class rptCortePorCliente
         Me.label33.Summary = XrSummary1
         Me.label33.Text = "label33"
         Me.label33.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.label33.TextFormatString = "{0:$0.00}"
+        Me.label33.TextFormatString = "{0:n2}"
         '
         'label32
         '
@@ -453,7 +455,7 @@ Partial Public Class rptCortePorCliente
         Me.label30.Summary = XrSummary2
         Me.label30.Text = "label30"
         Me.label30.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.label30.TextFormatString = "{0:$0.00}"
+        Me.label30.TextFormatString = "{0:n2}"
         '
         'label29
         '
@@ -470,7 +472,7 @@ Partial Public Class rptCortePorCliente
         Me.label29.Summary = XrSummary3
         Me.label29.Text = "label29"
         Me.label29.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.label29.TextFormatString = "{0:$0.00}"
+        Me.label29.TextFormatString = "{0:n2}"
         '
         'label26
         '
@@ -635,7 +637,7 @@ Partial Public Class rptCortePorCliente
         Me.label61.Summary = XrSummary5
         Me.label61.Text = "label33"
         Me.label61.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.label61.TextFormatString = "{0:$0.00}"
+        Me.label61.TextFormatString = "{0:n2}"
         '
         'label62
         '
@@ -680,7 +682,7 @@ Partial Public Class rptCortePorCliente
         Me.label64.Summary = XrSummary6
         Me.label64.Text = "label30"
         Me.label64.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.label64.TextFormatString = "{0:$0.00}"
+        Me.label64.TextFormatString = "{0:n2}"
         '
         'label65
         '
@@ -697,7 +699,7 @@ Partial Public Class rptCortePorCliente
         Me.label65.Summary = XrSummary7
         Me.label65.Text = "label29"
         Me.label65.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.label65.TextFormatString = "{0:$0.00}"
+        Me.label65.TextFormatString = "{0:n2}"
         '
         'label67
         '
@@ -842,7 +844,7 @@ Partial Public Class rptCortePorCliente
         Me.label52.Summary = XrSummary9
         Me.label52.Text = "label29"
         Me.label52.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.label52.TextFormatString = "{0:$0.00}"
+        Me.label52.TextFormatString = "{0:n2}"
         '
         'label12
         '
@@ -875,7 +877,7 @@ Partial Public Class rptCortePorCliente
         Me.label56.Summary = XrSummary11
         Me.label56.Text = "label33"
         Me.label56.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.label56.TextFormatString = "{0:$0.00}"
+        Me.label56.TextFormatString = "{0:n2}"
         '
         'label13
         '
@@ -916,7 +918,7 @@ Partial Public Class rptCortePorCliente
         Me.label53.Summary = XrSummary12
         Me.label53.Text = "label30"
         Me.label53.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.label53.TextFormatString = "{0:$0.00}"
+        Me.label53.TextFormatString = "{0:n2}"
         '
         'label54
         '
@@ -982,6 +984,47 @@ Partial Public Class rptCortePorCliente
         Me.label5.Text = "label5"
         Me.label5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
         '
+        'label25
+        '
+        Me.label25.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(218, Byte), Integer))
+        Me.label25.Borders = CType((((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
+            Or DevExpress.XtraPrinting.BorderSide.Right) _
+            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+        Me.label25.BorderWidth = 0.5!
+        Me.label25.Font = New DevExpress.Drawing.DXFont("Times New Roman", 9.75!, DevExpress.Drawing.DXFontStyle.Bold)
+        Me.label25.LocationFloat = New DevExpress.Utils.PointFloat(424.3058!, 10.00001!)
+        Me.label25.Multiline = True
+        Me.label25.Name = "label25"
+        Me.label25.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.label25.SizeF = New System.Drawing.SizeF(81.94443!, 23.0!)
+        Me.label25.StylePriority.UseBackColor = False
+        Me.label25.StylePriority.UseBorders = False
+        Me.label25.StylePriority.UseBorderWidth = False
+        Me.label25.StylePriority.UseFont = False
+        Me.label25.StylePriority.UseTextAlignment = False
+        Me.label25.Text = "Moneda:"
+        Me.label25.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        '
+        'label58
+        '
+        Me.label58.Borders = CType((((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
+            Or DevExpress.XtraPrinting.BorderSide.Right) _
+            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+        Me.label58.BorderWidth = 0.5!
+        Me.label58.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[MONEDA]")})
+        Me.label58.Font = New DevExpress.Drawing.DXFont("Times New Roman", 9.75!, DevExpress.Drawing.DXFontStyle.Bold)
+        Me.label58.LocationFloat = New DevExpress.Utils.PointFloat(506.2502!, 10.0!)
+        Me.label58.Multiline = True
+        Me.label58.Name = "label58"
+        Me.label58.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.label58.SizeF = New System.Drawing.SizeF(83.75003!, 23.0!)
+        Me.label58.StylePriority.UseBorders = False
+        Me.label58.StylePriority.UseBorderWidth = False
+        Me.label58.StylePriority.UseFont = False
+        Me.label58.StylePriority.UseTextAlignment = False
+        Me.label58.Text = "label38"
+        Me.label58.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        '
         'label41
         '
         Me.label41.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(218, Byte), Integer))
@@ -1031,7 +1074,7 @@ Partial Public Class rptCortePorCliente
             Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.label39.BorderWidth = 0.5!
         Me.label39.Font = New DevExpress.Drawing.DXFont("Times New Roman", 9.75!, DevExpress.Drawing.DXFontStyle.Bold)
-        Me.label39.LocationFloat = New DevExpress.Utils.PointFloat(424.3055!, 10.0!)
+        Me.label39.LocationFloat = New DevExpress.Utils.PointFloat(271.8612!, 10.0!)
         Me.label39.Multiline = True
         Me.label39.Name = "label39"
         Me.label39.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
@@ -1052,7 +1095,7 @@ Partial Public Class rptCortePorCliente
         Me.label38.BorderWidth = 0.5!
         Me.label38.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[UNIDAD]")})
         Me.label38.Font = New DevExpress.Drawing.DXFont("Times New Roman", 9.75!, DevExpress.Drawing.DXFontStyle.Bold)
-        Me.label38.LocationFloat = New DevExpress.Utils.PointFloat(506.25!, 10.0!)
+        Me.label38.LocationFloat = New DevExpress.Utils.PointFloat(353.8058!, 10.0!)
         Me.label38.Multiline = True
         Me.label38.Name = "label38"
         Me.label38.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
@@ -1197,7 +1240,7 @@ Partial Public Class rptCortePorCliente
         Me.label46.Summary = XrSummary14
         Me.label46.Text = "label29"
         Me.label46.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.label46.TextFormatString = "{0:$0.00}"
+        Me.label46.TextFormatString = "{0:n2}"
         '
         'label47
         '
@@ -1214,7 +1257,7 @@ Partial Public Class rptCortePorCliente
         Me.label47.Summary = XrSummary15
         Me.label47.Text = "label30"
         Me.label47.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.label47.TextFormatString = "{0:$0.00}"
+        Me.label47.TextFormatString = "{0:n2}"
         '
         'label48
         '
@@ -1255,7 +1298,7 @@ Partial Public Class rptCortePorCliente
         Me.label50.Summary = XrSummary16
         Me.label50.Text = "label33"
         Me.label50.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.label50.TextFormatString = "{0:$0.00}"
+        Me.label50.TextFormatString = "{0:n2}"
         '
         'label51
         '
@@ -1442,6 +1485,8 @@ Partial Public Class rptCortePorCliente
     Friend WithEvents label6 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents label5 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents GroupHeader4 As DevExpress.XtraReports.UI.GroupHeaderBand
+    Friend WithEvents label25 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents label58 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents label41 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents label40 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents label39 As DevExpress.XtraReports.UI.XRLabel

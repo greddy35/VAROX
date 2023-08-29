@@ -27,9 +27,6 @@ Public Class DashboardP
         titleButton.Caption = "Refrescar Datos"
         e.Items.Add(titleButton)
     End Sub
-    Private Sub frmDashboardViewer_Load(sender As Object, e As EventArgs) Handles Me.Load
-
-    End Sub
     Private Sub BindDataSource(ByVal dashboard As Dashboard, ByVal dashboardSqlDataSource As DashboardSqlDataSource)
         dashboard.DataSources.Add(dashboardSqlDataSource)
         For Each item In dashboard.Items
