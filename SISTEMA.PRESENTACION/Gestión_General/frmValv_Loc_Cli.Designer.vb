@@ -199,7 +199,7 @@ Partial Class frmValv_Loc_Cli
         Me.RibbonControl.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1})
         Me.RibbonControl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemComboBox1, Me.RepositoryItemComboBox2})
         Me.RibbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2019
-        Me.RibbonControl.Size = New System.Drawing.Size(1128, 193)
+        Me.RibbonControl.Size = New System.Drawing.Size(1128, 178)
         Me.RibbonControl.StatusBar = Me.RibbonStatusBar
         '
         'btnNuevo
@@ -376,10 +376,10 @@ Partial Class frmValv_Loc_Cli
         '
         'RibbonStatusBar
         '
-        Me.RibbonStatusBar.Location = New System.Drawing.Point(0, 749)
+        Me.RibbonStatusBar.Location = New System.Drawing.Point(0, 744)
         Me.RibbonStatusBar.Name = "RibbonStatusBar"
         Me.RibbonStatusBar.Ribbon = Me.RibbonControl
-        Me.RibbonStatusBar.Size = New System.Drawing.Size(1128, 30)
+        Me.RibbonStatusBar.Size = New System.Drawing.Size(1128, 35)
         '
         'TableLayoutPanel1
         '
@@ -388,12 +388,12 @@ Partial Class frmValv_Loc_Cli
         Me.TableLayoutPanel1.Controls.Add(Me.Panel1, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Panel4, 0, 1)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 193)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 178)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 350.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1128, 556)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1128, 566)
         Me.TableLayoutPanel1.TabIndex = 6
         '
         'Panel1
@@ -897,8 +897,7 @@ Partial Class frmValv_Loc_Cli
         Me.deHasta.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple
         Me.deHasta.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.deHasta.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.deHasta.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.ClassicNew
-        Me.deHasta.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor
+        Me.deHasta.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Fluent
         Me.deHasta.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.[False]
         Me.deHasta.Size = New System.Drawing.Size(144, 28)
         Me.deHasta.TabIndex = 39
@@ -935,8 +934,7 @@ Partial Class frmValv_Loc_Cli
         Me.deDesde.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple
         Me.deDesde.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.deDesde.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.deDesde.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.ClassicNew
-        Me.deDesde.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor
+        Me.deDesde.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Fluent
         Me.deDesde.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.[False]
         Me.deDesde.Size = New System.Drawing.Size(144, 28)
         Me.deDesde.TabIndex = 37

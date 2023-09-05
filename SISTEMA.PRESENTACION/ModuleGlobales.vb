@@ -1,10 +1,17 @@
-﻿Imports DevExpress.DashboardCommon
+﻿Imports System.Reflection
+Imports System.Xml
+Imports DevExpress.CodeParser
+Imports DevExpress.DashboardCommon
 Imports DevExpress.DashboardCommon.Native
 Imports DevExpress.DashboardWin
 Imports DevExpress.DataAccess.Sql
 Imports DevExpress.XtraPivotGrid
 Imports DevExpress.XtraReports.UI
+Imports FSharp.Compiler
+Imports FSharp.Compiler.Xml
 Imports SISTEMA.DATOS
+Imports XmlElement = System.Xml.XmlElement
+Imports XmlNode = System.Xml.XmlNode
 
 Public Module ModuleGlobales
     Public pbRegistros As String

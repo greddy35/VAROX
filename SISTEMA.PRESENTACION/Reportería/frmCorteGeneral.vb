@@ -185,7 +185,6 @@ Public Class frmReporteria
 
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As DoWorkEventArgs) Handles BackgroundWorker1.DoWork
         Try
-            'gsConceptoHorario.NInsertarDefault()
             Dim fechIni As String = CDate(deDesde.EditValue).ToString("yyyy-MM-dd 00:00:00.000")
             Dim fechFin As String = CDate(deHasta.EditValue).ToString("yyyy-MM-dd 23:59:59.999")
             Dim base As DataSet = Nothing
@@ -258,6 +257,7 @@ Public Class frmReporteria
                                 End If
                                 'Actualizamos el progreso
                                 Contador = Contador + 1
+                                'Thread.Sleep(50)
                                 BackgroundWorker1.ReportProgress(1)
                             Catch ex As Exception
                                 Console.WriteLine("Error: " & ex.ToString)
@@ -323,7 +323,7 @@ Public Class frmReporteria
         If deDesde.EditValue IsNot String.Empty Or deHasta.EditValue IsNot String.Empty Then
             If MessageBox.Show("El proceso podría tardar unos minutos" & vbCrLf &
                         "en preparar la información." & vbCrLf & vbCrLf &
-                        "Evite exeder la carga de 30 días de rango", "Cargar Datos", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+                        "Evite exceder la carga de 30 días de rango", "Cargar Datos", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
                 ModuleGlobales.Centrar(GroupBox1)
                 GroupBox1.Visible = True
                 BackgroundWorker1.RunWorkerAsync()
@@ -385,6 +385,7 @@ Public Class frmReporteria
         report.Parameters("fechaFin").Value = fechFin
         report.Parameters("fechaFin").Description = "Fecha Hasta:"
         'report.Parameters("fechaFin").Enabled = False
+        report.RequestParameters = False
 
         report.ShowRibbonPreview()
     End Sub

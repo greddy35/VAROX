@@ -40,7 +40,6 @@ Partial Public Class rptCorteGeneral
         Dim XrSummary18 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
         Dim XrSummary19 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
         Dim XrSummary20 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
-        Dim MsSqlConnectionParameters1 As DevExpress.DataAccess.ConnectionParameters.MsSqlConnectionParameters = New DevExpress.DataAccess.ConnectionParameters.MsSqlConnectionParameters()
         Dim StoredProcQuery1 As DevExpress.DataAccess.Sql.StoredProcQuery = New DevExpress.DataAccess.Sql.StoredProcQuery()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(rptCorteGeneral))
         Me.TopMargin = New DevExpress.XtraReports.UI.TopMarginBand()
@@ -1506,13 +1505,7 @@ Partial Public Class rptCorteGeneral
         '
         'sqlDataSource1
         '
-        Me.sqlDataSource1.ConnectionName = "Connection"
-        MsSqlConnectionParameters1.AuthorizationType = DevExpress.DataAccess.ConnectionParameters.MsSqlAuthorizationType.SqlServer
-        MsSqlConnectionParameters1.DatabaseName = "VAROX"
-        MsSqlConnectionParameters1.Password = "$@QU@F00D5$*"
-        MsSqlConnectionParameters1.ServerName = "10.0.5.35"
-        MsSqlConnectionParameters1.UserName = "sa"
-        Me.sqlDataSource1.ConnectionParameters = MsSqlConnectionParameters1
+        Me.sqlDataSource1.ConnectionName = "VAROXConnectionString"
         Me.sqlDataSource1.Name = "sqlDataSource1"
         StoredProcQuery1.Name = "R_cargarVista"
         StoredProcQuery1.StoredProcName = "R_cargarVista"

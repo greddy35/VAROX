@@ -1,4 +1,5 @@
 ﻿Imports System.ComponentModel
+Imports System.Threading
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Button
 Imports DevExpress.XtraBars
 Imports DevExpress.XtraGrid.Views.Grid
@@ -14,6 +15,7 @@ Public Class frmClasesDispositivos
     Dim gsClases As New NClases
     Dim gsHistorico As New NHistorico
     'Variables
+    Dim datos As DataTable = Nothing
 
 #End Region
 
@@ -152,17 +154,17 @@ Public Class frmClasesDispositivos
 
     Private Sub cargarListado()
         Try
-            If Not listado Is Nothing Then
-                GridControlListado.DataSource = listado
-                limpiarGroup()
-                ModuleGlobales.Centrar(GroupBoxExtraer)
-                btnExtraerMuestra.Enabled = False
-                GroupBoxExtraer.Visible = True
-            Else
-                'Llamar al BackgroundWorker
-                MessageBox.Show("Se preparará la información, este proceso podría tardar varios minutos, se ejecutará en segundo plano, se notificará una vez completa la preparación", "Carga de Listado", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                BackgroundWorkerListado.RunWorkerAsync()
-            End If
+            'If Not listado Is Nothing Then
+            GridControlListado.DataSource = gsHistorico.NCargarListado()
+            limpiarGroup()
+            ModuleGlobales.Centrar(GroupBoxExtraer)
+            btnExtraerMuestra.Enabled = False
+            GroupBoxExtraer.Visible = True
+            'Else
+            'Llamar al BackgroundWorker
+            'MessageBox.Show("Se preparará la información, este proceso podría tardar varios minutos, se ejecutará en segundo plano, se notificará una vez completa la preparación", "Carga de Listado", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            'BackgroundWorkerListado.RunWorkerAsync()
+            'End If
         Catch ex As Exception
             mensajeError(ex)
         End Try
@@ -170,8 +172,42 @@ Public Class frmClasesDispositivos
 
     Private Sub BackgroundWorkerListado_DoWork(sender As Object, e As DoWorkEventArgs) Handles BackgroundWorkerListado.DoWork
         Try
-            listado = CType(gsHistorico.NCargarListado(), DataTable)    'Llenado del grid
-            Console.WriteLine("Se completó la carga")
+            ModuleGlobales.Centrar(GroupBoxEspera)
+            GroupBoxEspera.Visible = True
+            If Not datos Is Nothing Then
+                'total = base.Tables(0).Rows().Count
+                'If total > 0 Then
+                'Dim resultado As New DataSet
+                'For Each fila As DataRow In datos.Tables(0).Rows()      'Recorremos los Horarios para actualizar o insertar en la BD.BIOSOFT
+                '    Try
+                '        resultado = gestor.NBuscarHistorico(fila(0).ToString, CDate(fila(1).ToString).ToString("yyyy-MM-dd HH:mm:ss.fff"))
+                '        Dim id As Integer = 0
+                '        If resultado IsNot Nothing Then
+                '            If resultado.Tables(0).Rows.Count > 0 Then
+                '                For Each result As DataRow In resultado.Tables(0).Rows()
+                '                    id = CInt(result(0))
+                '                Next
+                '            End If
+                '        End If
+                '        If (id <> 0) Then
+                '            gestor.NModificar(id.ToString, fila(0).ToString, fila(1).ToString, fila(2).ToString, fila(3).ToString, fila(4).ToString, fila(5).ToString)
+                '            actu = actu + 1
+                '            'Console.WriteLine("Actualizado: " & fila(0).ToString)
+                '        Else
+                '            gestor.NInsertar(fila(0).ToString, fila(1).ToString, fila(2).ToString, fila(3).ToString, fila(4).ToString, fila(5).ToString)
+                '            ins = ins + 1
+                '            'Console.WriteLine("Insertado: " & fila(0).ToString)
+                '        End If
+                '    Catch ex As Exception
+                '        Console.WriteLine("Error: " & ex.ToString)
+                '    End Try
+                'Next
+                'Console.WriteLine("Registros Insertados: " & ins.ToString)
+                'Console.WriteLine("Registros Actualizados: " & actu.ToString)Else
+                'Else
+                '    MessageBox.Show("No se encontraron datos en el rango seleccionado", "Sin Datos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                'End If
+            End If
         Catch ex As Exception
             mensajeError(ex)
         End Try
@@ -184,7 +220,7 @@ Public Class frmClasesDispositivos
             ElseIf e.Cancelled Then
                 MessageBox.Show("Carga cancelada", "Carga de Listado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             Else
-                MessageBox.Show("Carga completada, abriendo la ventana de extración...", "Carga de Listado", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                'MessageBox.Show("Carga completada, abriendo la ventana de extración...", "Carga de Listado", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 GridControlListado.DataSource = listado
                 limpiarGroup()
                 ModuleGlobales.Centrar(GroupBoxExtraer)
@@ -297,7 +333,7 @@ Public Class frmClasesDispositivos
 
     Private Sub btnExtraerMuestra_Click(sender As Object, e As EventArgs) Handles btnExtraerMuestra.Click
         Try
-            Dim datos As DataTable
+
             Dim clave As String = txtPalabraC.Text.ToString, caracExtr As Integer = CInt(numCaract.Value), ajuste As Integer = CInt(numAjuste.Value), clase As String = txtClaseExt.Text, concepto As String = txtConceptoExt.Text
             If clave <> "" And caracExtr > 0 And clase <> "" And concepto <> "" Then
                 datos = gsHistorico.NCargarListaValvulas(clave, caracExtr.ToString, "%" + clase + "%", "%" + concepto + "%", ajuste.ToString)    'Llenado del grid
@@ -345,6 +381,7 @@ Public Class frmClasesDispositivos
             txtAjuste.Text = CInt(numAjuste.Value).ToString
             txtCaractExtr.Text = CInt(numCaract.Value).ToString
             GroupBoxExtraer.Visible = False
+            'BackgroundWorkerListado.RunWorkerAsync()
         Catch ex As Exception
             mensajeError(ex)
         End Try

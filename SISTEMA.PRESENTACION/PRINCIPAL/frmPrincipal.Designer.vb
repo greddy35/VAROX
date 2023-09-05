@@ -176,7 +176,7 @@ Partial Class frmPrincipal
         Me.BarStaticItem6.AllowFocus = DevExpress.Utils.DefaultBoolean.[False]
         Me.BarStaticItem6.AllowRightClickInMenu = False
         Me.BarStaticItem6.AutoSize = DevExpress.XtraBars.BarStaticItemSize.None
-        Me.BarStaticItem6.Caption = "Usuario:"
+        Me.BarStaticItem6.Caption = " Usuario:"
         Me.BarStaticItem6.Id = 3
         Me.BarStaticItem6.ImageOptions.Image = CType(resources.GetObject("BarStaticItem6.ImageOptions.Image"), System.Drawing.Image)
         Me.BarStaticItem6.ImageOptions.LargeImage = CType(resources.GetObject("BarStaticItem6.ImageOptions.LargeImage"), System.Drawing.Image)
@@ -187,9 +187,9 @@ Partial Class frmPrincipal
         Me.BarStaticItem6.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Immediate
         Me.BarStaticItem6.Name = "BarStaticItem6"
         Me.BarStaticItem6.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
-        Me.BarStaticItem6.Size = New System.Drawing.Size(90, 28)
+        Me.BarStaticItem6.Size = New System.Drawing.Size(100, 28)
         Me.BarStaticItem6.TextAlignment = System.Drawing.StringAlignment.Center
-        Me.BarStaticItem6.Width = 90
+        Me.BarStaticItem6.Width = 100
         '
         'BarStaticItem7
         '
@@ -575,6 +575,7 @@ Partial Class frmPrincipal
         'AccordionControlElementSesion
         '
         Me.AccordionControlElementSesion.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeparator3, Me.accCambiarContraseña, Me.AccordionControlSeparator1, Me.accCerrarSesion, Me.AccordionControlSeparator2, Me.accSalir})
+        Me.AccordionControlElementSesion.Expanded = True
         Me.AccordionControlElementSesion.ImageOptions.SvgImage = CType(resources.GetObject("AccordionControlElementSesion.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
         Me.AccordionControlElementSesion.Name = "AccordionControlElementSesion"
         Me.AccordionControlElementSesion.Text = "Sesión"
@@ -744,7 +745,7 @@ Partial Class frmPrincipal
         Me.bsiFecha.Caption = "---"
         Me.bsiFecha.Id = 9
         Me.bsiFecha.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.bsiFecha.ItemAppearance.Normal.ForeColor = System.Drawing.Color.Red
+        Me.bsiFecha.ItemAppearance.Normal.ForeColor = System.Drawing.Color.White
         Me.bsiFecha.ItemAppearance.Normal.Options.UseFont = True
         Me.bsiFecha.ItemAppearance.Normal.Options.UseForeColor = True
         Me.bsiFecha.Name = "bsiFecha"
@@ -933,7 +934,7 @@ Partial Class frmPrincipal
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frmPrincipal"
         Me.NavigationControl = Me.AccordionControl1
-        Me.Text = "VAROX 1.0.0         "
+        Me.Text = "VAROX 1.1.0         "
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.contenedor.ResumeLayout(False)
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).EndInit()
