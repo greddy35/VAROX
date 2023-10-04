@@ -86,6 +86,7 @@ Partial Class frmReporteria
         Me.RibbonPageGroup2 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonStatusBar = New DevExpress.XtraBars.Ribbon.RibbonStatusBar()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.lblNotificacion = New System.Windows.Forms.Label()
         Me.txtProgreso = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtProcesados = New System.Windows.Forms.TextBox()
@@ -182,7 +183,7 @@ Partial Class frmReporteria
         Me.RibbonControl.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1})
         Me.RibbonControl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.rideDesde, Me.rideHasta})
         Me.RibbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2019
-        Me.RibbonControl.Size = New System.Drawing.Size(986, 193)
+        Me.RibbonControl.Size = New System.Drawing.Size(986, 178)
         Me.RibbonControl.StatusBar = Me.RibbonStatusBar
         '
         'btnSalir
@@ -274,7 +275,7 @@ Partial Class frmReporteria
         Me.rideDesde.AutoHeight = False
         Me.rideDesde.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.rideDesde.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.rideDesde.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.ClassicNew
+        Me.rideDesde.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Fluent
         Me.rideDesde.Name = "rideDesde"
         Me.rideDesde.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.[False]
         '
@@ -292,7 +293,7 @@ Partial Class frmReporteria
         Me.rideHasta.AutoHeight = False
         Me.rideHasta.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.rideHasta.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.rideHasta.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.ClassicNew
+        Me.rideHasta.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Fluent
         Me.rideHasta.Name = "rideHasta"
         Me.rideHasta.UseAdvancedMode = DevExpress.Utils.DefaultBoolean.[False]
         Me.rideHasta.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.[False]
@@ -377,14 +378,15 @@ Partial Class frmReporteria
         '
         'RibbonStatusBar
         '
-        Me.RibbonStatusBar.Location = New System.Drawing.Point(0, 540)
+        Me.RibbonStatusBar.Location = New System.Drawing.Point(0, 535)
         Me.RibbonStatusBar.Name = "RibbonStatusBar"
         Me.RibbonStatusBar.Ribbon = Me.RibbonControl
-        Me.RibbonStatusBar.Size = New System.Drawing.Size(986, 30)
+        Me.RibbonStatusBar.Size = New System.Drawing.Size(986, 35)
         '
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.GroupBox1.Controls.Add(Me.lblNotificacion)
         Me.GroupBox1.Controls.Add(Me.txtProgreso)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.txtProcesados)
@@ -396,11 +398,20 @@ Partial Class frmReporteria
         Me.GroupBox1.ForeColor = System.Drawing.Color.Red
         Me.GroupBox1.Location = New System.Drawing.Point(415, 127)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(532, 162)
+        Me.GroupBox1.Size = New System.Drawing.Size(532, 186)
         Me.GroupBox1.TabIndex = 5
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Construyendo Vista"
+        Me.GroupBox1.Text = "Construyendo Datos"
         Me.GroupBox1.Visible = False
+        '
+        'lblNotificacion
+        '
+        Me.lblNotificacion.ForeColor = System.Drawing.Color.Black
+        Me.lblNotificacion.Location = New System.Drawing.Point(6, 155)
+        Me.lblNotificacion.Name = "lblNotificacion"
+        Me.lblNotificacion.Size = New System.Drawing.Size(520, 25)
+        Me.lblNotificacion.TabIndex = 7
+        Me.lblNotificacion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'txtProgreso
         '
@@ -531,7 +542,7 @@ Partial Class frmReporteria
         Me.PivotGridControl1.OptionsPrint.PrintUnusedFilterFields = False
         Me.PivotGridControl1.OptionsPrint.PrintVertLines = DevExpress.Utils.DefaultBoolean.[True]
         Me.PivotGridControl1.OptionsPrint.UsePrintAppearance = True
-        Me.PivotGridControl1.Size = New System.Drawing.Size(986, 347)
+        Me.PivotGridControl1.Size = New System.Drawing.Size(986, 357)
         Me.PivotGridControl1.TabIndex = 22
         '
         'PivotGridField1
@@ -694,7 +705,6 @@ Partial Class frmReporteria
         Me.PivotGridField10.GrandTotalCellFormat.FormatType = DevExpress.Utils.FormatType.Custom
         Me.PivotGridField10.MinWidth = 100
         Me.PivotGridField10.Name = "PivotGridField10"
-        Me.PivotGridField10.SortOrder = DevExpress.XtraPivotGrid.PivotSortOrder.Descending
         Me.PivotGridField10.TotalCellFormat.FormatString = "dd-MM-yyyy HH:mm:ss.fff"
         Me.PivotGridField10.TotalCellFormat.FormatType = DevExpress.Utils.FormatType.Custom
         Me.PivotGridField10.TotalValueFormat.FormatString = "dd-MM-yyyy HH:mm:ss.fff"
@@ -731,60 +741,60 @@ Partial Class frmReporteria
         '
         Me.PivotGridField21.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea
         Me.PivotGridField21.AreaIndex = 1
-        Me.PivotGridField21.Caption = "SUBTOTAL($)"
-        Me.PivotGridField21.CellFormat.FormatString = "c3"
+        Me.PivotGridField21.Caption = "SUBTOTAL"
+        Me.PivotGridField21.CellFormat.FormatString = "n3"
         Me.PivotGridField21.CellFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         DataSourceColumnBinding21.ColumnName = "SUB_TOTAL"
         Me.PivotGridField21.DataBinding = DataSourceColumnBinding21
-        Me.PivotGridField21.GrandTotalCellFormat.FormatString = "c3"
+        Me.PivotGridField21.GrandTotalCellFormat.FormatString = "n3"
         Me.PivotGridField21.GrandTotalCellFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.PivotGridField21.Name = "PivotGridField21"
         Me.PivotGridField21.SortOrder = DevExpress.XtraPivotGrid.PivotSortOrder.Descending
-        Me.PivotGridField21.TotalCellFormat.FormatString = "c3"
+        Me.PivotGridField21.TotalCellFormat.FormatString = "n3"
         Me.PivotGridField21.TotalCellFormat.FormatType = DevExpress.Utils.FormatType.Numeric
-        Me.PivotGridField21.TotalValueFormat.FormatString = "c3"
+        Me.PivotGridField21.TotalValueFormat.FormatString = "n3"
         Me.PivotGridField21.TotalValueFormat.FormatType = DevExpress.Utils.FormatType.Numeric
-        Me.PivotGridField21.ValueFormat.FormatString = "c3"
+        Me.PivotGridField21.ValueFormat.FormatString = "n3"
         Me.PivotGridField21.ValueFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         '
         'PivotGridField22
         '
         Me.PivotGridField22.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea
         Me.PivotGridField22.AreaIndex = 2
-        Me.PivotGridField22.Caption = "MONTO IVA($)"
-        Me.PivotGridField22.CellFormat.FormatString = "c3"
+        Me.PivotGridField22.Caption = "MONTO IVA"
+        Me.PivotGridField22.CellFormat.FormatString = "n3"
         Me.PivotGridField22.CellFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         DataSourceColumnBinding22.ColumnName = "IMPUESTO"
         Me.PivotGridField22.DataBinding = DataSourceColumnBinding22
-        Me.PivotGridField22.GrandTotalCellFormat.FormatString = "c3"
+        Me.PivotGridField22.GrandTotalCellFormat.FormatString = "n3"
         Me.PivotGridField22.GrandTotalCellFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.PivotGridField22.Name = "PivotGridField22"
         Me.PivotGridField22.SortOrder = DevExpress.XtraPivotGrid.PivotSortOrder.Descending
-        Me.PivotGridField22.TotalCellFormat.FormatString = "c3"
+        Me.PivotGridField22.TotalCellFormat.FormatString = "n3"
         Me.PivotGridField22.TotalCellFormat.FormatType = DevExpress.Utils.FormatType.Numeric
-        Me.PivotGridField22.TotalValueFormat.FormatString = "c3"
+        Me.PivotGridField22.TotalValueFormat.FormatString = "n3"
         Me.PivotGridField22.TotalValueFormat.FormatType = DevExpress.Utils.FormatType.Numeric
-        Me.PivotGridField22.ValueFormat.FormatString = "c3"
+        Me.PivotGridField22.ValueFormat.FormatString = "3n"
         Me.PivotGridField22.ValueFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         '
         'PivotGridField23
         '
         Me.PivotGridField23.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea
         Me.PivotGridField23.AreaIndex = 3
-        Me.PivotGridField23.Caption = "TOTAL($)"
-        Me.PivotGridField23.CellFormat.FormatString = "c3"
+        Me.PivotGridField23.Caption = "TOTAL"
+        Me.PivotGridField23.CellFormat.FormatString = "n3"
         Me.PivotGridField23.CellFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         DataSourceColumnBinding23.ColumnName = "TOTAL"
         Me.PivotGridField23.DataBinding = DataSourceColumnBinding23
-        Me.PivotGridField23.GrandTotalCellFormat.FormatString = "c3"
+        Me.PivotGridField23.GrandTotalCellFormat.FormatString = "n3"
         Me.PivotGridField23.GrandTotalCellFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.PivotGridField23.Name = "PivotGridField23"
         Me.PivotGridField23.SortOrder = DevExpress.XtraPivotGrid.PivotSortOrder.Descending
-        Me.PivotGridField23.TotalCellFormat.FormatString = "c3"
+        Me.PivotGridField23.TotalCellFormat.FormatString = "n3"
         Me.PivotGridField23.TotalCellFormat.FormatType = DevExpress.Utils.FormatType.Numeric
-        Me.PivotGridField23.TotalValueFormat.FormatString = "c3"
+        Me.PivotGridField23.TotalValueFormat.FormatString = "n3"
         Me.PivotGridField23.TotalValueFormat.FormatType = DevExpress.Utils.FormatType.Numeric
-        Me.PivotGridField23.ValueFormat.FormatString = "c3"
+        Me.PivotGridField23.ValueFormat.FormatString = "n3"
         Me.PivotGridField23.ValueFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         '
         'SqlDataSource1
@@ -844,9 +854,9 @@ Partial Class frmReporteria
         Me.Panel1.Controls.Add(Me.GroupBox1)
         Me.Panel1.Controls.Add(Me.PivotGridControl1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(0, 193)
+        Me.Panel1.Location = New System.Drawing.Point(0, 178)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(986, 347)
+        Me.Panel1.Size = New System.Drawing.Size(986, 357)
         Me.Panel1.TabIndex = 28
         '
         'frmReporteria
@@ -947,4 +957,5 @@ Partial Class frmReporteria
     Friend WithEvents PivotGridField22 As DevExpress.XtraPivotGrid.PivotGridField
     Friend WithEvents PivotGridField23 As DevExpress.XtraPivotGrid.PivotGridField
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents lblNotificacion As Label
 End Class

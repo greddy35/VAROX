@@ -173,7 +173,8 @@ Public Class Login
         Else
             MsgBox("NO HAY CONEXIÓN AL SERVIDOR DE BASE DE DATOS:" + vbLf + vbLf +
                 "Revise que tenga conexion a las redes de la compañia a traves de:" + vbLf +
-                "1 - Red cableada" + vbLf + "2 - Red inalámbrica", MsgBoxStyle.Critical, "Sin conexión")
+                "1 - Red cableada" + vbLf + "2 - Red inalámbrica" + vbLf + vbLf +
+                "Asegurese que el servidor está encendido y en línea", MsgBoxStyle.Critical, "Sin conexión")
         End If
         'Me.Hide()
         'frmPrincipal.Show()

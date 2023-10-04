@@ -15,7 +15,8 @@ Public Class frmReporteria
     'VARIABLES PARA CONTROL DE LOS PROGRESBAR
     Dim Progreso As Integer = 0
     Dim Contador As Integer = 0
-    Dim total As Integer = 100
+    Dim total As Integer = 1
+    Dim notificacion As String = ""
 
     Dim fechIni As String = String.Empty
     Dim fechFin As String = String.Empty
@@ -92,6 +93,7 @@ Public Class frmReporteria
         PivotGridControl1.DataSource = dsc
         PivotGridControl1.DataMember = "R_consultarHistorico"
 
+
         SqlDataSource1 = dsc
         Return dsc
     End Function
@@ -129,6 +131,16 @@ Public Class frmReporteria
         Catch ex As Exception
             MsgBox("Error al generar", MsgBoxStyle.Critical)
         End Try
+    End Sub
+
+    Private Sub cargarConstruccion()
+        If obtenerFechas() = True Then
+            If consultarHistorico() Is Nothing Then
+                MessageBox.Show("No se encontraron datos en el rango seleccionado", "Sin Datos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            End If
+        Else
+            MessageBox.Show("Seleccione el rango de fechas a consultar", "Solicitud Inválida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        End If
     End Sub
 #End Region
 
@@ -173,53 +185,90 @@ Public Class frmReporteria
     End Sub
 
     Private Sub btnRefrescar_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnRefrescar.ItemClick
-        If obtenerFechas() = True Then
-            If consultarHistorico() Is Nothing Then
-                MessageBox.Show("No se encontraron datos en el rango seleccionado", "Sin Datos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-            End If
-        Else
-            MessageBox.Show("Seleccione el rango de fechas a consultar", "Solicitud Inválida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-        End If
+        cargarConstruccion()
 
     End Sub
 
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As DoWorkEventArgs) Handles BackgroundWorker1.DoWork
         Try
-            'gsConceptoHorario.NInsertarDefault()
             Dim fechIni As String = CDate(deDesde.EditValue).ToString("yyyy-MM-dd 00:00:00.000")
             Dim fechFin As String = CDate(deHasta.EditValue).ToString("yyyy-MM-dd 23:59:59.999")
+            total = 1
             Dim base As DataSet = Nothing
             Dim contenedor As DataSet = Nothing
             Dim listado As DataSet = Nothing
             Dim ins As Integer = 0
             Dim actu As Integer = 0
             listado = gestor.NCrearListadoValvulas(fechIni, fechFin)       'Obtenemos las vinculaciones a construir
-
+            notificacion = "Dispositivos a procesar: " + listado.Tables(0).Rows().Count.ToString
+            BackgroundWorker1.ReportProgress(1)
+            Thread.Sleep(500)
             If Not listado Is Nothing Then
                 Dim flag As Boolean = False
                 For Each fila As DataRow In listado.Tables(0).Rows()
                     contenedor = gestorH.NCargarValoresValvula(fila(4).ToString, fila(6).ToString, "%" + fila(2).ToString + "%", "%" + fila(3).ToString + "%", fila(5).ToString, "%" + fila(1).ToString + "%", fechIni, fechFin, CDate(fila(7)).ToString("yyyy-MM-dd 00:00:00.000"), CDate(fila(8)).ToString("yyyy-MM-dd 00:00:00.000"), fila(1).ToString)
-
                     If contenedor.Tables(0).Rows.Count > 0 Then
                         Dim ultLect As Decimal = 0
                         Dim flag2 As Boolean = False
+                        Dim flag3 As Boolean = False
+                        notificacion = "Preparando: " + contenedor.Tables(0).Rows().Count.ToString + " registros "
+                        BackgroundWorker1.ReportProgress(1)
+                        Thread.Sleep(500)
+                        Dim cont As Integer = 1
                         For Each consumo As DataRow In contenedor.Tables(0).Rows()
+                            notificacion = "Calculando: " + cont.ToString + " registro de: " + contenedor.Tables(0).Rows().Count.ToString + " del dispositivo: " + consumo(0).ToString
+                            BackgroundWorker1.ReportProgress(1)
+                            'Thread.Sleep(1)
                             If flag2 = False Then
-                                ultLect = CDec(consumo(2))
                                 consumo.Item(3) = 0
                                 flag2 = True
                             Else
-                                consumo.Item(3) = CDec(consumo(2)) - ultLect
+                                Dim flag4 As Boolean = False
+                                If fila(9).ToString.Equals("und") And Not consumo(2).ToString.Equals("0") Then 'Si es tipo BTU y hay valor de medida
+                                    If flag3 = False Then
+                                        ultLect = ((CDec(consumo(2)) / 1000000) * 1000) 'Conversion a BTU
+                                        flag3 = True
+                                    End If
+                                    'ultLect = ((CDec(consumo(2)) / 1000000) * 1000) 'Conversion a BTU
+                                    consumo.Item(3) = ((CDec(consumo(2)) / 1000000) * 1000) - ultLect
+                                    consumo.Item(2) = ((CDec(consumo(2)) / 1000000) * 1000)
+                                    If CDec(consumo.Item(3)) = 0 Then
+                                        consumo.Item(3) = 0
+                                    End If
+                                    'ultLect = CDec(consumo.Item(2)) 'Conversion a BTU
+                                ElseIf Not fila(9).ToString.Equals("und") Then ' Cuando no es tipo BTU
+                                    If flag3 = False Then
+                                        ultLect = CDec(consumo(2))
+                                        flag3 = True
+                                    End If
+                                    consumo.Item(3) = CDec(consumo(2)) - ultLect
+                                    'ultLect = CDec(consumo(2))
+                                Else
+                                    'ultLect = CDec(consumo(2))
+                                    consumo.Item(3) = 0
+                                End If
+                                'consumo.Item(3) = CDec(consumo(2)) - ultLect
                                 consumo.Item(5) = ultLect
-                                If CDec(consumo.Item(3)) = 0 Then
+                                '-----------------CRITERIO PARA CADA TIPO DE RESULTADO DE CONSUMO-------------------
+                                If ultLect > 0 And CDec(consumo(2)) = 0 Then
+                                    consumo.Item(3) = 0
+                                    consumo.Item(4) = "ERROR"
+                                    flag4 = True
+                                ElseIf CDec(consumo.Item(3)) = 0 Then
                                     consumo.Item(4) = "IGUAL"
                                 ElseIf CDec(consumo.Item(3)) < 0 Then
                                     consumo.Item(4) = "MENOR"
                                 ElseIf CDec(consumo.Item(3)) > 0 Then
                                     consumo.Item(4) = "MAYOR"
                                 End If
-                                ultLect = CDec(consumo(2))
+                                If flag4 = True Then 'Si es un registro erroneo por valores de medicion, mantiene la lectura
+                                    flag4 = False
+                                Else
+                                    ultLect = CDec(consumo(2)) 'Actualiza la lectura actual para el siguiente registro
+                                End If
+
                             End If
+                            cont = cont + 1
                         Next
                         contenedor.Tables(0).Rows(0).Delete()
                         contenedor.Tables(0).Rows(0).AcceptChanges()
@@ -234,6 +283,9 @@ Public Class frmReporteria
                 Next
                 If Not base Is Nothing Then
                     total = base.Tables(0).Rows().Count
+                    notificacion = "Se procesarán: " + total.ToString + " registros"
+                    BackgroundWorker1.ReportProgress(1)
+                    'Thread.Sleep(1)
                     If total > 0 Then
                         Dim resultado As New DataSet
                         For Each fila As DataRow In base.Tables(0).Rows()      'Recorremos los Horarios para actualizar o insertar en la BD.BIOSOFT
@@ -258,7 +310,9 @@ Public Class frmReporteria
                                 End If
                                 'Actualizamos el progreso
                                 Contador = Contador + 1
+                                notificacion = "Registrando: " + Contador.ToString + " registros de: " + total.ToString
                                 BackgroundWorker1.ReportProgress(1)
+                                Thread.Sleep(1)
                             Catch ex As Exception
                                 Console.WriteLine("Error: " & ex.ToString)
                             End Try
@@ -269,7 +323,7 @@ Public Class frmReporteria
                         MessageBox.Show("No se encontraron datos en el rango seleccionado", "Sin Datos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                     End If
                 End If
-                Else
+            Else
                 MessageBox.Show("No se encontraron datos en el rango seleccionado", "Sin Datos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             End If
 
@@ -299,15 +353,17 @@ Public Class frmReporteria
         txtRegistros.Text = total.ToString
         txtProgreso.Text = String.Empty + Progreso.ToString + "%"
         txtProcesados.Text = Contador.ToString
+        lblNotificacion.Text = notificacion
     End Sub
 
     Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
         If e.Error IsNot Nothing Then
-            MessageBox.Show("Ocurrio un error inesperado" + e.Error.ToString, "Construcción de vista", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Ocurrio un error inesperado" + e.Error.ToString, "Construcción de datos", MessageBoxButtons.OK, MessageBoxIcon.Error)
         ElseIf e.Cancelled Then
-            MessageBox.Show("Construcción Cancelada", "Construcción de vista", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            MessageBox.Show("Construcción Cancelada", "Construcción de datos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         Else
-            MessageBox.Show("Construcción de vista completada", "Construcción de vista", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("Construcción de datos completada", "Construcción de datos", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            cargarConstruccion()
         End If
         'Reiniciamos los componentes
         ProgressBar1.Value = 0
@@ -323,7 +379,7 @@ Public Class frmReporteria
         If deDesde.EditValue IsNot String.Empty Or deHasta.EditValue IsNot String.Empty Then
             If MessageBox.Show("El proceso podría tardar unos minutos" & vbCrLf &
                         "en preparar la información." & vbCrLf & vbCrLf &
-                        "Evite exeder la carga de 30 días de rango", "Cargar Datos", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+                        "Evite exceder la carga de 30 días de rango", "Cargar Datos", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
                 ModuleGlobales.Centrar(GroupBox1)
                 GroupBox1.Visible = True
                 BackgroundWorker1.RunWorkerAsync()
@@ -385,6 +441,7 @@ Public Class frmReporteria
         report.Parameters("fechaFin").Value = fechFin
         report.Parameters("fechaFin").Description = "Fecha Hasta:"
         'report.Parameters("fechaFin").Enabled = False
+        report.RequestParameters = False
 
         report.ShowRibbonPreview()
     End Sub

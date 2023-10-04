@@ -35,6 +35,7 @@ Partial Class frmTiposMediciones
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.cboMoneda = New System.Windows.Forms.ComboBox()
         Me.cboUnidadMedida = New System.Windows.Forms.ComboBox()
         Me.txtMedida = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -66,6 +67,7 @@ Partial Class frmTiposMediciones
         Me.GridColumn10 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn11 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn12 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn6 = New DevExpress.XtraGrid.Columns.GridColumn()
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -84,7 +86,7 @@ Partial Class frmTiposMediciones
         Me.RibbonControl.MaxItemId = 8
         Me.RibbonControl.Name = "RibbonControl"
         Me.RibbonControl.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1})
-        Me.RibbonControl.Size = New System.Drawing.Size(1114, 182)
+        Me.RibbonControl.Size = New System.Drawing.Size(1114, 178)
         Me.RibbonControl.StatusBar = Me.RibbonStatusBar
         '
         'btnNuevo
@@ -210,10 +212,10 @@ Partial Class frmTiposMediciones
         '
         'RibbonStatusBar
         '
-        Me.RibbonStatusBar.Location = New System.Drawing.Point(0, 590)
+        Me.RibbonStatusBar.Location = New System.Drawing.Point(0, 582)
         Me.RibbonStatusBar.Name = "RibbonStatusBar"
         Me.RibbonStatusBar.Ribbon = Me.RibbonControl
-        Me.RibbonStatusBar.Size = New System.Drawing.Size(1114, 27)
+        Me.RibbonStatusBar.Size = New System.Drawing.Size(1114, 35)
         '
         'TableLayoutPanel1
         '
@@ -222,12 +224,12 @@ Partial Class frmTiposMediciones
         Me.TableLayoutPanel1.Controls.Add(Me.Panel1, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Panel4, 0, 1)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 182)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 178)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 150.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1114, 408)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1114, 404)
         Me.TableLayoutPanel1.TabIndex = 4
         '
         'Panel1
@@ -241,6 +243,7 @@ Partial Class frmTiposMediciones
         '
         'Panel2
         '
+        Me.Panel2.Controls.Add(Me.cboMoneda)
         Me.Panel2.Controls.Add(Me.cboUnidadMedida)
         Me.Panel2.Controls.Add(Me.txtMedida)
         Me.Panel2.Controls.Add(Me.Label4)
@@ -266,6 +269,21 @@ Partial Class frmTiposMediciones
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1108, 144)
         Me.Panel2.TabIndex = 6
+        '
+        'cboMoneda
+        '
+        Me.cboMoneda.Cursor = System.Windows.Forms.Cursors.Default
+        Me.cboMoneda.DropDownHeight = 150
+        Me.cboMoneda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboMoneda.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboMoneda.ForeColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.cboMoneda.FormattingEnabled = True
+        Me.cboMoneda.IntegralHeight = False
+        Me.cboMoneda.Items.AddRange(New Object() {"Colón", "Dólar"})
+        Me.cboMoneda.Location = New System.Drawing.Point(155, 110)
+        Me.cboMoneda.Name = "cboMoneda"
+        Me.cboMoneda.Size = New System.Drawing.Size(132, 29)
+        Me.cboMoneda.TabIndex = 36
         '
         'cboUnidadMedida
         '
@@ -469,8 +487,9 @@ Partial Class frmTiposMediciones
         '
         'spValor
         '
-        Me.spValor.EditValue = "$1.00"
-        Me.spValor.Location = New System.Drawing.Point(155, 112)
+        Me.spValor.EditValue = "1.00"
+        Me.spValor.Enabled = False
+        Me.spValor.Location = New System.Drawing.Point(293, 110)
         Me.spValor.MenuManager = Me.RibbonControl
         Me.spValor.Name = "spValor"
         Me.spValor.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -479,11 +498,11 @@ Partial Class frmTiposMediciones
         Me.spValor.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
         Me.spValor.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Buffered
         Me.spValor.Properties.HideSelection = False
-        Me.spValor.Properties.MaskSettings.Set("mask", "c")
+        Me.spValor.Properties.MaskSettings.Set("mask", "f")
         Me.spValor.Properties.MaskSettings.Set("MaskManagerType", GetType(DevExpress.Data.Mask.NumericMaskManager))
-        Me.spValor.Properties.MaxLength = 5
+        Me.spValor.Properties.MaxLength = 8
         Me.spValor.Properties.UseMaskAsDisplayFormat = True
-        Me.spValor.Size = New System.Drawing.Size(88, 28)
+        Me.spValor.Size = New System.Drawing.Size(136, 28)
         Me.spValor.TabIndex = 35
         '
         'Panel4
@@ -526,7 +545,7 @@ Partial Class frmTiposMediciones
         Me.GridViewTiposMediciones.Appearance.SelectedRow.ForeColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(52, Byte), Integer))
         Me.GridViewTiposMediciones.Appearance.SelectedRow.Options.UseFont = True
         Me.GridViewTiposMediciones.Appearance.SelectedRow.Options.UseForeColor = True
-        Me.GridViewTiposMediciones.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn1, Me.GridColumn2, Me.GridColumn4, Me.GridColumn5, Me.GridColumn3, Me.GridColumn9, Me.GridColumn10, Me.GridColumn11, Me.GridColumn12})
+        Me.GridViewTiposMediciones.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn1, Me.GridColumn2, Me.GridColumn4, Me.GridColumn6, Me.GridColumn5, Me.GridColumn3, Me.GridColumn9, Me.GridColumn10, Me.GridColumn11, Me.GridColumn12})
         Me.GridViewTiposMediciones.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus
         Me.GridViewTiposMediciones.GridControl = Me.GridControlTiposMediciones
         Me.GridViewTiposMediciones.Name = "GridViewTiposMediciones"
@@ -658,6 +677,17 @@ Partial Class frmTiposMediciones
         Me.GridColumn12.VisibleIndex = 8
         Me.GridColumn12.Width = 180
         '
+        'GridColumn6
+        '
+        Me.GridColumn6.Caption = "MONEDA"
+        Me.GridColumn6.FieldName = "MONEDA"
+        Me.GridColumn6.MinWidth = 25
+        Me.GridColumn6.Name = "GridColumn6"
+        Me.GridColumn6.OptionsColumn.AllowEdit = False
+        Me.GridColumn6.Visible = True
+        Me.GridColumn6.VisibleIndex = 3
+        Me.GridColumn6.Width = 94
+        '
         'frmTiposMediciones
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
@@ -731,4 +761,6 @@ Partial Class frmTiposMediciones
     Friend WithEvents GridColumn4 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn5 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents spValor As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents cboMoneda As ComboBox
+    Friend WithEvents GridColumn6 As DevExpress.XtraGrid.Columns.GridColumn
 End Class

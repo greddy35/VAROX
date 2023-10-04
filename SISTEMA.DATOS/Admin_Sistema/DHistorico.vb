@@ -12,7 +12,7 @@ Public Class DHistorico
             Dim Comando As New SqlCommand("AS_cargarListado", MyBase.conn)
             Comando.CommandType = CommandType.StoredProcedure
             MyBase.conn.Open()
-            Comando.CommandTimeout = 600
+            'Comando.CommandTimeout = 600
             'Abrimos conexion a la BD
             Resultado = Comando.ExecuteReader()
             Tabla.Load(Resultado)
@@ -38,10 +38,13 @@ Public Class DHistorico
             Comando.Parameters.Add("@clase", SqlDbType.VarChar).Value = valor3
             Comando.Parameters.Add("@concepto", SqlDbType.VarChar).Value = valor4
             Comando.Parameters.Add("@ajuste", SqlDbType.VarChar).Value = valor5
-            MyBase.conn.Open()                                                              'Abrimos conexion a la BD
-            'Dim adapter As New SqlDataAdapter(Comando)
+            MyBase.conn.Open()
+            'Abrimos conexion a la BD
+            Dim adapter As New SqlDataAdapter(Comando)
             Resultado = Comando.ExecuteReader()
             Tabla.Load(Resultado)
+            'Comando.CommandTimeout = 600
+            'Dim adapter As New SqlDataAdapter(Comando)
             'adapter.Fill(Tabla)
             MyBase.conn.Close()                                                             'Cerramos la conexion a BD
             Return Tabla                                                                    'Retornamos el DataSet
@@ -67,7 +70,9 @@ Public Class DHistorico
             Comando.Parameters.Add("@fechaFin", SqlDbType.DateTime).Value = valor8
             Comando.Parameters.Add("@rigeIni", SqlDbType.DateTime).Value = valor9
             Comando.Parameters.Add("@rigeFin", SqlDbType.DateTime).Value = valor10
-            MyBase.conn.Open()                                                              'Abrimos conexion a la BD
+            MyBase.conn.Open()
+            'Abrimos conexion a la BD
+            Comando.CommandTimeout = 600
             Dim adapter As New SqlDataAdapter(Comando)
             adapter.Fill(Tabla)
             MyBase.conn.Close()                                                             'Cerramos la conexion a BD

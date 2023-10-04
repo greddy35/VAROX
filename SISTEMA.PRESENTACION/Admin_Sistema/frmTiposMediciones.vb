@@ -2,6 +2,7 @@
 Imports DevExpress.XtraBars
 Imports DevExpress.XtraGrid.Views.Base
 Imports DevExpress.XtraGrid.Views.Grid
+Imports DevExpress.XtraReports.Design
 Imports SISTEMA.ENTIDADES
 Imports SISTEMA.NEGOCIO
 
@@ -61,7 +62,8 @@ Public Class frmTiposMediciones
         txtModificadoPor.Text = ""
         txtModificadoEl.Text = ""
         txtMedida.Text = ""
-        spValor.Text = "$1.0"
+        spValor.Text = "0.00"
+        cboMoneda.SelectedIndex = -1
         cboUnidadMedida.SelectedIndex = -1
     End Sub
 
@@ -69,13 +71,13 @@ Public Class frmTiposMediciones
         txtNombreTipo.Enabled = False
         txtDescripcion.Enabled = False
         cboUnidadMedida.Enabled = False
-        spValor.Enabled = False
+        cboMoneda.Enabled = False
     End Sub
     Private Sub habilitarEditables()
         txtNombreTipo.Enabled = True
         txtDescripcion.Enabled = True
         cboUnidadMedida.Enabled = True
-        spValor.Enabled = True
+        cboMoneda.Enabled = True
     End Sub
 
     Function ValidarCampos() As String
@@ -90,7 +92,10 @@ Public Class frmTiposMediciones
             If cboUnidadMedida.SelectedIndex = -1 Then
                 mensaje += "Unidad de medida" + vbCrLf
             End If
-            If spValor.Text.ToString = "0" Or spValor.Text.ToString = "" Then
+            If cboMoneda.SelectedIndex = -1 Then
+                mensaje += "Moneda de costo" + vbCrLf
+            End If
+            If spValor.Text.ToString = "0" Or spValor.Text.ToString = "" Or spValor.Text.ToString = "0.00" Then
                 mensaje += "Valor de Unidad de Medida" + vbCrLf
             End If
             Return mensaje
@@ -173,6 +178,7 @@ Public Class frmTiposMediciones
             clase.Nombre = txtNombreTipo.Text.ToUpper.ToString
             clase.Descripcion = txtDescripcion.Text.ToString
             clase.Unidad = cboUnidadMedida.SelectedItem.ToString
+            clase.Moneda = Mid(cboMoneda.SelectedItem.ToString, 1, 1)
             clase.Valor = CDec(spValor.Text)
             clase.CreadoPor = ModuleGlobales.usuario
             clase.ModificadoPor = ModuleGlobales.usuario
@@ -180,7 +186,8 @@ Public Class frmTiposMediciones
                 If MessageBox.Show("¿Desea guardar el registro nuevo?" & vbCrLf & vbCrLf &
                         "NOMBRE: " & clase.Nombre & vbCrLf &
                         "UNIDAD: " & clase.Unidad & vbCrLf &
-                        "VALOR UNIDAD: $" & clase.Valor & vbCrLf &
+                        "MONEDA: " & cboMoneda.SelectedItem.ToString & vbCrLf &
+                        "VALOR UNIDAD: " & clase.Valor & vbCrLf &
                         "DESCRIPCIÓN: " & clase.Descripcion, "Nuevo Registro", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
                     'LLAMAMOS AL METODO INSERTAR ,ENVIANDOLE LA CLASE CONSTRUIDA CON LA INFO
                     Dim resp As String = gestor.NInsertar(clase)
@@ -198,12 +205,14 @@ Public Class frmTiposMediciones
                         "---Actual---" & vbCrLf &
                         "NOMBRE: " & GridViewTiposMediciones.GetRowCellValue(GridViewTiposMediciones.FocusedRowHandle, "TIPO_MEDICION").ToString & vbCrLf &
                         "UNIDAD: " & GridViewTiposMediciones.GetRowCellValue(GridViewTiposMediciones.FocusedRowHandle, "UNIDAD").ToString & vbCrLf &
-                        "VALOR UNIDAD: $" & GridViewTiposMediciones.GetRowCellValue(GridViewTiposMediciones.FocusedRowHandle, "VALOR_UNIDAD").ToString & vbCrLf &
+                        "VALOR UNIDAD: " & GridViewTiposMediciones.GetRowCellValue(GridViewTiposMediciones.FocusedRowHandle, "VALOR_UNIDAD").ToString & vbCrLf &
+                        "MONEDA: " & GridViewTiposMediciones.GetRowCellValue(GridViewTiposMediciones.FocusedRowHandle, "MONEDA").ToString & vbCrLf &
                         "DESCRIPCIÓN: " & GridViewTiposMediciones.GetRowCellValue(GridViewTiposMediciones.FocusedRowHandle, "DESCRIPCION").ToString & vbCrLf & vbCrLf &
                         "---Cambia á---" & vbCrLf &
                         "NOMBRE: " & clase.Nombre & vbCrLf &
                         "UNIDAD: " & clase.Unidad & vbCrLf &
-                        "VALOR UNIDAD: $" & clase.Valor & vbCrLf &
+                        "MONEDA: " & cboMoneda.SelectedItem.ToString & vbCrLf &
+                        "VALOR UNIDAD: " & clase.Valor & vbCrLf &
                         "DESCRIPCIÓN: " & clase.Descripcion, "Modificar Registro", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
                     'LLAMAMOS AL METODO MODIFICAR ,ENVIANDOLE LA CLASE CONSTRUIDA CON LA INFO
                     Dim resp As String = gestor.NModificar(clase)
@@ -266,6 +275,7 @@ Public Class frmTiposMediciones
                 Dim id As String = GridViewTiposMediciones.GetRowCellValue(GridViewTiposMediciones.FocusedRowHandle, "ID_TIPO_MEDICION").ToString
                 Dim nombre As String = GridViewTiposMediciones.GetRowCellValue(GridViewTiposMediciones.FocusedRowHandle, "TIPO_MEDICION").ToString
                 Dim unidad As String = GridViewTiposMediciones.GetRowCellValue(GridViewTiposMediciones.FocusedRowHandle, "UNIDAD").ToString
+                Dim moneda As String = GridViewTiposMediciones.GetRowCellValue(GridViewTiposMediciones.FocusedRowHandle, "MONEDA").ToString
                 Dim valor As Decimal = CDec(GridViewTiposMediciones.GetRowCellValue(GridViewTiposMediciones.FocusedRowHandle, "VALOR_UNIDAD").ToString)
                 Dim descripcion As String = GridViewTiposMediciones.GetRowCellValue(GridViewTiposMediciones.FocusedRowHandle, "DESCRIPCION").ToString
                 Dim creadoPor As String = GridViewTiposMediciones.GetRowCellValue(GridViewTiposMediciones.FocusedRowHandle, "CREADO_POR").ToString
@@ -275,6 +285,14 @@ Public Class frmTiposMediciones
                 txtID.Text = id.ToString
                 txtNombreTipo.Text = nombre.ToString
                 cboUnidadMedida.SelectedItem = unidad
+                If moneda.Equals("") Then
+                    cboMoneda.SelectedIndex = -1
+                ElseIf moneda.Equals("D") Then
+                    cboMoneda.SelectedItem = "Dólar"
+                ElseIf moneda.Equals("C") Then
+                    cboMoneda.SelectedItem = "Colón"
+                End If
+                spValor.Enabled = False
                 spValor.Text = valor.ToString
                 txtDescripcion.Text = descripcion.ToString
                 txtCreadoPor.Text = creadoPor.ToString
@@ -296,9 +314,31 @@ Public Class frmTiposMediciones
                 Case "m3"
                     txtMedida.Text = "Metros cúbicos"
                 Case "und"
-                    txtMedida.Text = "Unidad"
+                    txtMedida.Text = "BTU"
             End Select
         End If
+    End Sub
+
+    Private Sub cboMoneda_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboMoneda.SelectedIndexChanged
+        Try
+            If cboMoneda.SelectedIndex > -1 Then
+                Select Case cboMoneda.SelectedItem.ToString
+                    Case "Colón"
+                        spValor.Properties.MaxLength = 8
+                        spValor.EditValue = "0.00"
+                        spValor.Enabled = True
+                    Case "Dólar"
+                        spValor.Properties.MaxLength = 6
+                        spValor.EditValue = "0.00"
+                        spValor.Enabled = True
+                End Select
+            Else
+                spValor.Enabled = False
+            End If
+
+        Catch ex As Exception
+
+        End Try
     End Sub
 
 

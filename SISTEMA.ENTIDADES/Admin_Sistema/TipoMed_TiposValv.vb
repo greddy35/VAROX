@@ -3,6 +3,7 @@
     Private _nombre As String
     Private _unidad As String
     Private _valor As Decimal
+    Private _moneda As String
     Private _descripcion As String
     Private _creadoPor As String
     Private _creadoEl As String
@@ -87,6 +88,15 @@
         End Get
         Set(value As Decimal)
             _valor = value
+        End Set
+    End Property
+
+    Public Property Moneda As String
+        Get
+            Return _moneda
+        End Get
+        Set(value As String)
+            _moneda = value
         End Set
     End Property
 End Class

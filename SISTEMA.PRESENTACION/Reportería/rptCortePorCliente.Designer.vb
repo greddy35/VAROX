@@ -20,6 +20,8 @@ Partial Public Class rptCortePorCliente
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim StoredProcQuery1 As DevExpress.DataAccess.Sql.StoredProcQuery = New DevExpress.DataAccess.Sql.StoredProcQuery()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(rptCortePorCliente))
         Dim XrSummary1 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
         Dim XrSummary2 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
         Dim XrSummary3 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
@@ -36,30 +38,21 @@ Partial Public Class rptCortePorCliente
         Dim XrSummary14 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
         Dim XrSummary15 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
         Dim XrSummary16 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
-        Dim MsSqlConnectionParameters1 As DevExpress.DataAccess.ConnectionParameters.MsSqlConnectionParameters = New DevExpress.DataAccess.ConnectionParameters.MsSqlConnectionParameters()
-        Dim StoredProcQuery1 As DevExpress.DataAccess.Sql.StoredProcQuery = New DevExpress.DataAccess.Sql.StoredProcQuery()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(rptCortePorCliente))
         Dim DynamicListLookUpSettings1 As DevExpress.XtraReports.Parameters.DynamicListLookUpSettings = New DevExpress.XtraReports.Parameters.DynamicListLookUpSettings()
+        Me.sqlDataSource1 = New DevExpress.DataAccess.Sql.SqlDataSource(Me.components)
         Me.TopMargin = New DevExpress.XtraReports.UI.TopMarginBand()
-        Me.Detail = New DevExpress.XtraReports.UI.DetailBand()
-        Me.BottomMargin = New DevExpress.XtraReports.UI.BottomMarginBand()
-        Me.GroupHeader1 = New DevExpress.XtraReports.UI.GroupHeaderBand()
-        Me.GroupHeader2 = New DevExpress.XtraReports.UI.GroupHeaderBand()
-        Me.GroupHeader3 = New DevExpress.XtraReports.UI.GroupHeaderBand()
-        Me.GroupHeader4 = New DevExpress.XtraReports.UI.GroupHeaderBand()
-        Me.GroupFooter1 = New DevExpress.XtraReports.UI.GroupFooterBand()
-        Me.GroupFooter2 = New DevExpress.XtraReports.UI.GroupFooterBand()
-        Me.GroupFooter3 = New DevExpress.XtraReports.UI.GroupFooterBand()
-        Me.GroupFooter4 = New DevExpress.XtraReports.UI.GroupFooterBand()
         Me.label21 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label20 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label11 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label10 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label9 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.Detail = New DevExpress.XtraReports.UI.DetailBand()
         Me.label27 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label18 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label19 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label22 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.BottomMargin = New DevExpress.XtraReports.UI.BottomMarginBand()
+        Me.GroupHeader1 = New DevExpress.XtraReports.UI.GroupHeaderBand()
         Me.label15 = New DevExpress.XtraReports.UI.XRLabel()
         Me.line4 = New DevExpress.XtraReports.UI.XRLine()
         Me.label33 = New DevExpress.XtraReports.UI.XRLabel()
@@ -74,6 +67,7 @@ Partial Public Class rptCortePorCliente
         Me.label42 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label2 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label1 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.GroupHeader2 = New DevExpress.XtraReports.UI.GroupHeaderBand()
         Me.label16 = New DevExpress.XtraReports.UI.XRLabel()
         Me.line3 = New DevExpress.XtraReports.UI.XRLine()
         Me.label60 = New DevExpress.XtraReports.UI.XRLabel()
@@ -88,6 +82,7 @@ Partial Public Class rptCortePorCliente
         Me.label44 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label4 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label3 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.GroupHeader3 = New DevExpress.XtraReports.UI.GroupHeaderBand()
         Me.label24 = New DevExpress.XtraReports.UI.XRLabel()
         Me.line2 = New DevExpress.XtraReports.UI.XRLine()
         Me.label52 = New DevExpress.XtraReports.UI.XRLabel()
@@ -100,6 +95,9 @@ Partial Public Class rptCortePorCliente
         Me.label57 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label6 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label5 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.GroupHeader4 = New DevExpress.XtraReports.UI.GroupHeaderBand()
+        Me.label25 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.label58 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label41 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label40 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label39 = New DevExpress.XtraReports.UI.XRLabel()
@@ -108,6 +106,10 @@ Partial Public Class rptCortePorCliente
         Me.label36 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label28 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label35 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.GroupFooter1 = New DevExpress.XtraReports.UI.GroupFooterBand()
+        Me.GroupFooter2 = New DevExpress.XtraReports.UI.GroupFooterBand()
+        Me.GroupFooter3 = New DevExpress.XtraReports.UI.GroupFooterBand()
+        Me.GroupFooter4 = New DevExpress.XtraReports.UI.GroupFooterBand()
         Me.line1 = New DevExpress.XtraReports.UI.XRLine()
         Me.label14 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label17 = New DevExpress.XtraReports.UI.XRLabel()
@@ -119,7 +121,6 @@ Partial Public Class rptCortePorCliente
         Me.label51 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label7 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label8 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.sqlDataSource1 = New DevExpress.DataAccess.Sql.SqlDataSource(Me.components)
         Me.Style1 = New DevExpress.XtraReports.UI.XRControlStyle()
         Me.Style2 = New DevExpress.XtraReports.UI.XRControlStyle()
         Me.fechaIni = New DevExpress.XtraReports.Parameters.Parameter()
@@ -127,85 +128,20 @@ Partial Public Class rptCortePorCliente
         Me.cliente = New DevExpress.XtraReports.Parameters.Parameter()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
+        'sqlDataSource1
+        '
+        Me.sqlDataSource1.ConnectionName = "VAROXConnectionString"
+        Me.sqlDataSource1.Name = "sqlDataSource1"
+        StoredProcQuery1.Name = "R_cargarVista"
+        StoredProcQuery1.StoredProcName = "R_cargarVista"
+        Me.sqlDataSource1.Queries.AddRange(New DevExpress.DataAccess.Sql.SqlQuery() {StoredProcQuery1})
+        Me.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable")
+        '
         'TopMargin
         '
         Me.TopMargin.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.label21, Me.label20, Me.label11, Me.label10, Me.label9})
         Me.TopMargin.HeightF = 75.97223!
         Me.TopMargin.Name = "TopMargin"
-        '
-        'Detail
-        '
-        Me.Detail.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.label27, Me.label18, Me.label19, Me.label22})
-        Me.Detail.HeightF = 13.00001!
-        Me.Detail.Name = "Detail"
-        '
-        'BottomMargin
-        '
-        Me.BottomMargin.Name = "BottomMargin"
-        '
-        'GroupHeader1
-        '
-        Me.GroupHeader1.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.label15, Me.line4, Me.label33, Me.label32, Me.label31, Me.label30, Me.label29, Me.label26, Me.label34, Me.label23, Me.label43, Me.label42, Me.label2, Me.label1})
-        Me.GroupHeader1.GroupFields.AddRange(New DevExpress.XtraReports.UI.GroupField() {New DevExpress.XtraReports.UI.GroupField("NOMBRE_CLIENTE", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)})
-        Me.GroupHeader1.HeightF = 114.5833!
-        Me.GroupHeader1.KeepTogether = True
-        Me.GroupHeader1.Level = 3
-        Me.GroupHeader1.Name = "GroupHeader1"
-        '
-        'GroupHeader2
-        '
-        Me.GroupHeader2.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.label16, Me.line3, Me.label60, Me.label61, Me.label62, Me.label63, Me.label64, Me.label65, Me.label67, Me.label66, Me.label45, Me.label44, Me.label4, Me.label3})
-        Me.GroupHeader2.GroupFields.AddRange(New DevExpress.XtraReports.UI.GroupField() {New DevExpress.XtraReports.UI.GroupField("NOMBRE_LOCAL", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)})
-        Me.GroupHeader2.HeightF = 101.8613!
-        Me.GroupHeader2.KeepTogether = True
-        Me.GroupHeader2.Level = 2
-        Me.GroupHeader2.Name = "GroupHeader2"
-        '
-        'GroupHeader3
-        '
-        Me.GroupHeader3.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.label24, Me.line2, Me.label52, Me.label12, Me.label56, Me.label13, Me.label55, Me.label53, Me.label54, Me.label57, Me.label6, Me.label5})
-        Me.GroupHeader3.GroupFields.AddRange(New DevExpress.XtraReports.UI.GroupField() {New DevExpress.XtraReports.UI.GroupField("VALVULA_PADRE", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)})
-        Me.GroupHeader3.HeightF = 105.0276!
-        Me.GroupHeader3.Level = 1
-        Me.GroupHeader3.Name = "GroupHeader3"
-        '
-        'GroupHeader4
-        '
-        Me.GroupHeader4.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.label41, Me.label40, Me.label39, Me.label38, Me.label37, Me.label36, Me.label28, Me.label35})
-        Me.GroupHeader4.GroupFields.AddRange(New DevExpress.XtraReports.UI.GroupField() {New DevExpress.XtraReports.UI.GroupField("VALVULA", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)})
-        Me.GroupHeader4.HeightF = 67.8889!
-        Me.GroupHeader4.KeepTogether = True
-        Me.GroupHeader4.Name = "GroupHeader4"
-        Me.GroupHeader4.RepeatEveryPage = True
-        '
-        'GroupFooter1
-        '
-        Me.GroupFooter1.HeightF = 6.805674!
-        Me.GroupFooter1.KeepTogether = True
-        Me.GroupFooter1.Level = 3
-        Me.GroupFooter1.Name = "GroupFooter1"
-        Me.GroupFooter1.PageBreak = DevExpress.XtraReports.UI.PageBreak.AfterBand
-        '
-        'GroupFooter2
-        '
-        Me.GroupFooter2.HeightF = 8.333376!
-        Me.GroupFooter2.KeepTogether = True
-        Me.GroupFooter2.Level = 2
-        Me.GroupFooter2.Name = "GroupFooter2"
-        '
-        'GroupFooter3
-        '
-        Me.GroupFooter3.HeightF = 8.889134!
-        Me.GroupFooter3.KeepTogether = True
-        Me.GroupFooter3.Level = 1
-        Me.GroupFooter3.Name = "GroupFooter3"
-        '
-        'GroupFooter4
-        '
-        Me.GroupFooter4.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.line1, Me.label14, Me.label17, Me.label46, Me.label47, Me.label48, Me.label49, Me.label50, Me.label51, Me.label7, Me.label8})
-        Me.GroupFooter4.HeightF = 117.8613!
-        Me.GroupFooter4.KeepTogether = True
-        Me.GroupFooter4.Name = "GroupFooter4"
         '
         'label21
         '
@@ -294,6 +230,12 @@ Partial Public Class rptCortePorCliente
         Me.label9.Text = "REPORTE GENERAL POR CLIENTE, LOCAL, VÁLVULA PADRE, VÁLVULA"
         Me.label9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
         '
+        'Detail
+        '
+        Me.Detail.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.label27, Me.label18, Me.label19, Me.label22})
+        Me.Detail.HeightF = 13.00001!
+        Me.Detail.Name = "Detail"
+        '
         'label27
         '
         Me.label27.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid
@@ -375,6 +317,19 @@ Partial Public Class rptCortePorCliente
         Me.label22.Text = "label14"
         Me.label22.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
         '
+        'BottomMargin
+        '
+        Me.BottomMargin.Name = "BottomMargin"
+        '
+        'GroupHeader1
+        '
+        Me.GroupHeader1.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.label15, Me.line4, Me.label33, Me.label32, Me.label31, Me.label30, Me.label29, Me.label26, Me.label34, Me.label23, Me.label43, Me.label42, Me.label2, Me.label1})
+        Me.GroupHeader1.GroupFields.AddRange(New DevExpress.XtraReports.UI.GroupField() {New DevExpress.XtraReports.UI.GroupField("NOMBRE_CLIENTE", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)})
+        Me.GroupHeader1.HeightF = 114.5833!
+        Me.GroupHeader1.KeepTogether = True
+        Me.GroupHeader1.Level = 3
+        Me.GroupHeader1.Name = "GroupHeader1"
+        '
         'label15
         '
         Me.label15.BackColor = System.Drawing.Color.Aquamarine
@@ -413,7 +368,7 @@ Partial Public Class rptCortePorCliente
         Me.label33.Summary = XrSummary1
         Me.label33.Text = "label33"
         Me.label33.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.label33.TextFormatString = "{0:$0.00}"
+        Me.label33.TextFormatString = "{0:n2}"
         '
         'label32
         '
@@ -453,7 +408,7 @@ Partial Public Class rptCortePorCliente
         Me.label30.Summary = XrSummary2
         Me.label30.Text = "label30"
         Me.label30.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.label30.TextFormatString = "{0:$0.00}"
+        Me.label30.TextFormatString = "{0:n2}"
         '
         'label29
         '
@@ -470,7 +425,7 @@ Partial Public Class rptCortePorCliente
         Me.label29.Summary = XrSummary3
         Me.label29.Text = "label29"
         Me.label29.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.label29.TextFormatString = "{0:$0.00}"
+        Me.label29.TextFormatString = "{0:n2}"
         '
         'label26
         '
@@ -583,6 +538,15 @@ Partial Public Class rptCortePorCliente
         Me.label1.Text = "label1"
         Me.label1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
         '
+        'GroupHeader2
+        '
+        Me.GroupHeader2.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.label16, Me.line3, Me.label60, Me.label61, Me.label62, Me.label63, Me.label64, Me.label65, Me.label67, Me.label66, Me.label45, Me.label44, Me.label4, Me.label3})
+        Me.GroupHeader2.GroupFields.AddRange(New DevExpress.XtraReports.UI.GroupField() {New DevExpress.XtraReports.UI.GroupField("NOMBRE_LOCAL", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)})
+        Me.GroupHeader2.HeightF = 101.8613!
+        Me.GroupHeader2.KeepTogether = True
+        Me.GroupHeader2.Level = 2
+        Me.GroupHeader2.Name = "GroupHeader2"
+        '
         'label16
         '
         Me.label16.BackColor = System.Drawing.Color.LightSkyBlue
@@ -635,7 +599,7 @@ Partial Public Class rptCortePorCliente
         Me.label61.Summary = XrSummary5
         Me.label61.Text = "label33"
         Me.label61.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.label61.TextFormatString = "{0:$0.00}"
+        Me.label61.TextFormatString = "{0:n2}"
         '
         'label62
         '
@@ -680,7 +644,7 @@ Partial Public Class rptCortePorCliente
         Me.label64.Summary = XrSummary6
         Me.label64.Text = "label30"
         Me.label64.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.label64.TextFormatString = "{0:$0.00}"
+        Me.label64.TextFormatString = "{0:n2}"
         '
         'label65
         '
@@ -697,7 +661,7 @@ Partial Public Class rptCortePorCliente
         Me.label65.Summary = XrSummary7
         Me.label65.Text = "label29"
         Me.label65.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.label65.TextFormatString = "{0:$0.00}"
+        Me.label65.TextFormatString = "{0:n2}"
         '
         'label67
         '
@@ -804,6 +768,14 @@ Partial Public Class rptCortePorCliente
         Me.label3.Text = "label3"
         Me.label3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
         '
+        'GroupHeader3
+        '
+        Me.GroupHeader3.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.label24, Me.line2, Me.label52, Me.label12, Me.label56, Me.label13, Me.label55, Me.label53, Me.label54, Me.label57, Me.label6, Me.label5})
+        Me.GroupHeader3.GroupFields.AddRange(New DevExpress.XtraReports.UI.GroupField() {New DevExpress.XtraReports.UI.GroupField("VALVULA_PADRE", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)})
+        Me.GroupHeader3.HeightF = 105.0276!
+        Me.GroupHeader3.Level = 1
+        Me.GroupHeader3.Name = "GroupHeader3"
+        '
         'label24
         '
         Me.label24.BackColor = System.Drawing.Color.Salmon
@@ -842,7 +814,7 @@ Partial Public Class rptCortePorCliente
         Me.label52.Summary = XrSummary9
         Me.label52.Text = "label29"
         Me.label52.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.label52.TextFormatString = "{0:$0.00}"
+        Me.label52.TextFormatString = "{0:n2}"
         '
         'label12
         '
@@ -875,7 +847,7 @@ Partial Public Class rptCortePorCliente
         Me.label56.Summary = XrSummary11
         Me.label56.Text = "label33"
         Me.label56.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.label56.TextFormatString = "{0:$0.00}"
+        Me.label56.TextFormatString = "{0:n2}"
         '
         'label13
         '
@@ -916,7 +888,7 @@ Partial Public Class rptCortePorCliente
         Me.label53.Summary = XrSummary12
         Me.label53.Text = "label30"
         Me.label53.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.label53.TextFormatString = "{0:$0.00}"
+        Me.label53.TextFormatString = "{0:n2}"
         '
         'label54
         '
@@ -982,6 +954,56 @@ Partial Public Class rptCortePorCliente
         Me.label5.Text = "label5"
         Me.label5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
         '
+        'GroupHeader4
+        '
+        Me.GroupHeader4.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.label25, Me.label58, Me.label41, Me.label40, Me.label39, Me.label38, Me.label37, Me.label36, Me.label28, Me.label35})
+        Me.GroupHeader4.GroupFields.AddRange(New DevExpress.XtraReports.UI.GroupField() {New DevExpress.XtraReports.UI.GroupField("VALVULA", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)})
+        Me.GroupHeader4.HeightF = 67.8889!
+        Me.GroupHeader4.KeepTogether = True
+        Me.GroupHeader4.Name = "GroupHeader4"
+        Me.GroupHeader4.RepeatEveryPage = True
+        '
+        'label25
+        '
+        Me.label25.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(218, Byte), Integer))
+        Me.label25.Borders = CType((((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
+            Or DevExpress.XtraPrinting.BorderSide.Right) _
+            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+        Me.label25.BorderWidth = 0.5!
+        Me.label25.Font = New DevExpress.Drawing.DXFont("Times New Roman", 9.75!, DevExpress.Drawing.DXFontStyle.Bold)
+        Me.label25.LocationFloat = New DevExpress.Utils.PointFloat(424.3058!, 10.00001!)
+        Me.label25.Multiline = True
+        Me.label25.Name = "label25"
+        Me.label25.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.label25.SizeF = New System.Drawing.SizeF(81.94443!, 23.0!)
+        Me.label25.StylePriority.UseBackColor = False
+        Me.label25.StylePriority.UseBorders = False
+        Me.label25.StylePriority.UseBorderWidth = False
+        Me.label25.StylePriority.UseFont = False
+        Me.label25.StylePriority.UseTextAlignment = False
+        Me.label25.Text = "Moneda:"
+        Me.label25.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        '
+        'label58
+        '
+        Me.label58.Borders = CType((((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
+            Or DevExpress.XtraPrinting.BorderSide.Right) _
+            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+        Me.label58.BorderWidth = 0.5!
+        Me.label58.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[MONEDA]")})
+        Me.label58.Font = New DevExpress.Drawing.DXFont("Times New Roman", 9.75!, DevExpress.Drawing.DXFontStyle.Bold)
+        Me.label58.LocationFloat = New DevExpress.Utils.PointFloat(506.2502!, 10.0!)
+        Me.label58.Multiline = True
+        Me.label58.Name = "label58"
+        Me.label58.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.label58.SizeF = New System.Drawing.SizeF(83.75003!, 23.0!)
+        Me.label58.StylePriority.UseBorders = False
+        Me.label58.StylePriority.UseBorderWidth = False
+        Me.label58.StylePriority.UseFont = False
+        Me.label58.StylePriority.UseTextAlignment = False
+        Me.label58.Text = "label38"
+        Me.label58.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        '
         'label41
         '
         Me.label41.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(218, Byte), Integer))
@@ -1031,7 +1053,7 @@ Partial Public Class rptCortePorCliente
             Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.label39.BorderWidth = 0.5!
         Me.label39.Font = New DevExpress.Drawing.DXFont("Times New Roman", 9.75!, DevExpress.Drawing.DXFontStyle.Bold)
-        Me.label39.LocationFloat = New DevExpress.Utils.PointFloat(424.3055!, 10.0!)
+        Me.label39.LocationFloat = New DevExpress.Utils.PointFloat(271.8612!, 10.0!)
         Me.label39.Multiline = True
         Me.label39.Name = "label39"
         Me.label39.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
@@ -1052,7 +1074,7 @@ Partial Public Class rptCortePorCliente
         Me.label38.BorderWidth = 0.5!
         Me.label38.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[UNIDAD]")})
         Me.label38.Font = New DevExpress.Drawing.DXFont("Times New Roman", 9.75!, DevExpress.Drawing.DXFontStyle.Bold)
-        Me.label38.LocationFloat = New DevExpress.Utils.PointFloat(506.25!, 10.0!)
+        Me.label38.LocationFloat = New DevExpress.Utils.PointFloat(353.8058!, 10.0!)
         Me.label38.Multiline = True
         Me.label38.Name = "label38"
         Me.label38.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
@@ -1148,6 +1170,35 @@ Partial Public Class rptCortePorCliente
         Me.label35.Text = "Fecha Hora Toma:"
         Me.label35.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
         '
+        'GroupFooter1
+        '
+        Me.GroupFooter1.HeightF = 6.805674!
+        Me.GroupFooter1.KeepTogether = True
+        Me.GroupFooter1.Level = 3
+        Me.GroupFooter1.Name = "GroupFooter1"
+        Me.GroupFooter1.PageBreak = DevExpress.XtraReports.UI.PageBreak.AfterBand
+        '
+        'GroupFooter2
+        '
+        Me.GroupFooter2.HeightF = 8.333376!
+        Me.GroupFooter2.KeepTogether = True
+        Me.GroupFooter2.Level = 2
+        Me.GroupFooter2.Name = "GroupFooter2"
+        '
+        'GroupFooter3
+        '
+        Me.GroupFooter3.HeightF = 8.889134!
+        Me.GroupFooter3.KeepTogether = True
+        Me.GroupFooter3.Level = 1
+        Me.GroupFooter3.Name = "GroupFooter3"
+        '
+        'GroupFooter4
+        '
+        Me.GroupFooter4.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.line1, Me.label14, Me.label17, Me.label46, Me.label47, Me.label48, Me.label49, Me.label50, Me.label51, Me.label7, Me.label8})
+        Me.GroupFooter4.HeightF = 117.8613!
+        Me.GroupFooter4.KeepTogether = True
+        Me.GroupFooter4.Name = "GroupFooter4"
+        '
         'line1
         '
         Me.line1.LocationFloat = New DevExpress.Utils.PointFloat(0!, 115.778!)
@@ -1197,7 +1248,7 @@ Partial Public Class rptCortePorCliente
         Me.label46.Summary = XrSummary14
         Me.label46.Text = "label29"
         Me.label46.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.label46.TextFormatString = "{0:$0.00}"
+        Me.label46.TextFormatString = "{0:n2}"
         '
         'label47
         '
@@ -1214,7 +1265,7 @@ Partial Public Class rptCortePorCliente
         Me.label47.Summary = XrSummary15
         Me.label47.Text = "label30"
         Me.label47.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.label47.TextFormatString = "{0:$0.00}"
+        Me.label47.TextFormatString = "{0:n2}"
         '
         'label48
         '
@@ -1255,7 +1306,7 @@ Partial Public Class rptCortePorCliente
         Me.label50.Summary = XrSummary16
         Me.label50.Text = "label33"
         Me.label50.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.label50.TextFormatString = "{0:$0.00}"
+        Me.label50.TextFormatString = "{0:n2}"
         '
         'label51
         '
@@ -1308,21 +1359,6 @@ Partial Public Class rptCortePorCliente
         Me.label8.StylePriority.UseTextAlignment = False
         Me.label8.Text = "VÁLVULA HIJA:"
         Me.label8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
-        '
-        'sqlDataSource1
-        '
-        Me.sqlDataSource1.ConnectionName = "Connection"
-        MsSqlConnectionParameters1.AuthorizationType = DevExpress.DataAccess.ConnectionParameters.MsSqlAuthorizationType.SqlServer
-        MsSqlConnectionParameters1.DatabaseName = "VAROX"
-        MsSqlConnectionParameters1.Password = "$@QU@F00D5$*"
-        MsSqlConnectionParameters1.ServerName = "10.0.5.35"
-        MsSqlConnectionParameters1.UserName = "sa"
-        Me.sqlDataSource1.ConnectionParameters = MsSqlConnectionParameters1
-        Me.sqlDataSource1.Name = "sqlDataSource1"
-        StoredProcQuery1.Name = "R_cargarVista"
-        StoredProcQuery1.StoredProcName = "R_cargarVista"
-        Me.sqlDataSource1.Queries.AddRange(New DevExpress.DataAccess.Sql.SqlQuery() {StoredProcQuery1})
-        Me.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable")
         '
         'Style1
         '
@@ -1442,6 +1478,8 @@ Partial Public Class rptCortePorCliente
     Friend WithEvents label6 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents label5 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents GroupHeader4 As DevExpress.XtraReports.UI.GroupHeaderBand
+    Friend WithEvents label25 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents label58 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents label41 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents label40 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents label39 As DevExpress.XtraReports.UI.XRLabel
@@ -1465,10 +1503,10 @@ Partial Public Class rptCortePorCliente
     Friend WithEvents label51 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents label7 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents label8 As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents sqlDataSource1 As DevExpress.DataAccess.Sql.SqlDataSource
     Friend WithEvents Style1 As DevExpress.XtraReports.UI.XRControlStyle
     Friend WithEvents Style2 As DevExpress.XtraReports.UI.XRControlStyle
     Friend WithEvents fechaIni As DevExpress.XtraReports.Parameters.Parameter
     Friend WithEvents fechaFin As DevExpress.XtraReports.Parameters.Parameter
     Friend WithEvents cliente As DevExpress.XtraReports.Parameters.Parameter
+    Private WithEvents sqlDataSource1 As DevExpress.DataAccess.Sql.SqlDataSource
 End Class

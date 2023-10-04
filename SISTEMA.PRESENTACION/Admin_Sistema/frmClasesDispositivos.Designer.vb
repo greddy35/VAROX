@@ -111,6 +111,10 @@ Partial Class frmClasesDispositivos
         Me.BarButtonItem2 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem3 = New DevExpress.XtraBars.BarButtonItem()
         Me.BackgroundWorkerListado = New System.ComponentModel.BackgroundWorker()
+        Me.GroupBoxEspera = New System.Windows.Forms.GroupBox()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Label135 = New System.Windows.Forms.Label()
+        Me.Label136 = New System.Windows.Forms.Label()
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -134,6 +138,7 @@ Partial Class frmClasesDispositivos
         Me.Panel5.SuspendLayout()
         CType(Me.GridControlListado, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridViewListado, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBoxEspera.SuspendLayout()
         Me.SuspendLayout()
         '
         'RibbonControl
@@ -144,7 +149,7 @@ Partial Class frmClasesDispositivos
         Me.RibbonControl.MaxItemId = 11
         Me.RibbonControl.Name = "RibbonControl"
         Me.RibbonControl.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1})
-        Me.RibbonControl.Size = New System.Drawing.Size(932, 193)
+        Me.RibbonControl.Size = New System.Drawing.Size(932, 178)
         Me.RibbonControl.StatusBar = Me.RibbonStatusBar
         '
         'btnNuevo
@@ -255,10 +260,10 @@ Partial Class frmClasesDispositivos
         '
         'RibbonStatusBar
         '
-        Me.RibbonStatusBar.Location = New System.Drawing.Point(0, 609)
+        Me.RibbonStatusBar.Location = New System.Drawing.Point(0, 604)
         Me.RibbonStatusBar.Name = "RibbonStatusBar"
         Me.RibbonStatusBar.Ribbon = Me.RibbonControl
-        Me.RibbonStatusBar.Size = New System.Drawing.Size(932, 30)
+        Me.RibbonStatusBar.Size = New System.Drawing.Size(932, 35)
         '
         'TableLayoutPanel1
         '
@@ -267,12 +272,12 @@ Partial Class frmClasesDispositivos
         Me.TableLayoutPanel1.Controls.Add(Me.Panel1, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Panel4, 0, 1)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 193)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 178)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 185.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(932, 416)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(932, 426)
         Me.TableLayoutPanel1.TabIndex = 2
         '
         'Panel1
@@ -323,7 +328,7 @@ Partial Class frmClasesDispositivos
         Me.chkEstado.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chkEstado.Properties.Appearance.Options.UseFont = True
         Me.chkEstado.Properties.Caption = "Inactivo"
-        Me.chkEstado.Size = New System.Drawing.Size(99, 24)
+        Me.chkEstado.Size = New System.Drawing.Size(99, 22)
         Me.chkEstado.TabIndex = 38
         '
         'Label21
@@ -734,7 +739,7 @@ Partial Class frmClasesDispositivos
         Me.GroupBoxExtraer.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.GroupBoxExtraer.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBoxExtraer.ForeColor = System.Drawing.Color.DarkRed
-        Me.GroupBoxExtraer.Location = New System.Drawing.Point(848, 26)
+        Me.GroupBoxExtraer.Location = New System.Drawing.Point(348, 26)
         Me.GroupBoxExtraer.Name = "GroupBoxExtraer"
         Me.GroupBoxExtraer.Size = New System.Drawing.Size(717, 544)
         Me.GroupBoxExtraer.TabIndex = 3
@@ -791,7 +796,7 @@ Partial Class frmClasesDispositivos
         Me.btnAceptar.ImageOptions.Image = CType(resources.GetObject("btnAceptar.ImageOptions.Image"), System.Drawing.Image)
         Me.btnAceptar.Location = New System.Drawing.Point(3, 3)
         Me.btnAceptar.Name = "btnAceptar"
-        Me.btnAceptar.Size = New System.Drawing.Size(110, 38)
+        Me.btnAceptar.Size = New System.Drawing.Size(143, 38)
         Me.btnAceptar.TabIndex = 24
         Me.btnAceptar.Text = "ACEPTAR"
         '
@@ -801,9 +806,9 @@ Partial Class frmClasesDispositivos
         Me.btnCerrarExtraer.Appearance.Font = New System.Drawing.Font("Tahoma", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCerrarExtraer.Appearance.Options.UseFont = True
         Me.btnCerrarExtraer.ImageOptions.Image = CType(resources.GetObject("btnCerrarExtraer.ImageOptions.Image"), System.Drawing.Image)
-        Me.btnCerrarExtraer.Location = New System.Drawing.Point(508, 3)
+        Me.btnCerrarExtraer.Location = New System.Drawing.Point(568, 3)
         Me.btnCerrarExtraer.Name = "btnCerrarExtraer"
-        Me.btnCerrarExtraer.Size = New System.Drawing.Size(110, 38)
+        Me.btnCerrarExtraer.Size = New System.Drawing.Size(140, 38)
         Me.btnCerrarExtraer.TabIndex = 23
         Me.btnCerrarExtraer.Text = "CANCELAR"
         '
@@ -1183,11 +1188,55 @@ Partial Class frmClasesDispositivos
         'BackgroundWorkerListado
         '
         '
+        'GroupBoxEspera
+        '
+        Me.GroupBoxEspera.Controls.Add(Me.Label25)
+        Me.GroupBoxEspera.Controls.Add(Me.Label135)
+        Me.GroupBoxEspera.Controls.Add(Me.Label136)
+        Me.GroupBoxEspera.Location = New System.Drawing.Point(321, 251)
+        Me.GroupBoxEspera.Name = "GroupBoxEspera"
+        Me.GroupBoxEspera.Size = New System.Drawing.Size(290, 136)
+        Me.GroupBoxEspera.TabIndex = 27
+        Me.GroupBoxEspera.TabStop = False
+        Me.GroupBoxEspera.Visible = False
+        '
+        'Label25
+        '
+        Me.Label25.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.Location = New System.Drawing.Point(6, 35)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(278, 67)
+        Me.Label25.TabIndex = 21
+        Me.Label25.Text = "Creando listado de, " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "dispositivos, esto podría" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "tomar un momento..."
+        Me.Label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label135
+        '
+        Me.Label135.BackColor = System.Drawing.Color.RoyalBlue
+        Me.Label135.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label135.ForeColor = System.Drawing.Color.White
+        Me.Label135.Location = New System.Drawing.Point(-5, 102)
+        Me.Label135.Name = "Label135"
+        Me.Label135.Size = New System.Drawing.Size(301, 34)
+        Me.Label135.TabIndex = 20
+        '
+        'Label136
+        '
+        Me.Label136.BackColor = System.Drawing.Color.RoyalBlue
+        Me.Label136.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label136.ForeColor = System.Drawing.Color.White
+        Me.Label136.Location = New System.Drawing.Point(0, 0)
+        Me.Label136.Name = "Label136"
+        Me.Label136.Size = New System.Drawing.Size(296, 30)
+        Me.Label136.TabIndex = 19
+        Me.Label136.Text = "Generación de Listado"
+        '
         'frmClasesDispositivos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(932, 639)
+        Me.Controls.Add(Me.GroupBoxEspera)
         Me.Controls.Add(Me.GroupBoxExtraer)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.RibbonStatusBar)
@@ -1223,6 +1272,7 @@ Partial Class frmClasesDispositivos
         Me.Panel5.ResumeLayout(False)
         CType(Me.GridControlListado, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridViewListado, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBoxEspera.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1319,4 +1369,8 @@ Partial Class frmClasesDispositivos
     Friend WithEvents Label24 As Label
     Friend WithEvents btnExtraerParametros As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents btnEliminar As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents GroupBoxEspera As GroupBox
+    Friend WithEvents Label25 As Label
+    Friend WithEvents Label135 As Label
+    Friend WithEvents Label136 As Label
 End Class

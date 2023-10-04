@@ -1,4 +1,5 @@
-﻿Imports DevExpress.Office
+﻿Imports System.Threading
+Imports DevExpress.Office
 Imports DevExpress.XtraBars
 Imports DevExpress.XtraCharts
 Imports DevExpress.XtraGrid.Views.Grid
@@ -11,6 +12,7 @@ Public Class frmValvulas
     Dim gestor As New NValvulas
     Dim gestorH As New NHistorico
     Dim clase As New Valvulas
+    Dim flag As Boolean = False
 #End Region
 
 #Region "Funciones y Metodos"
@@ -18,6 +20,7 @@ Public Class frmValvulas
         Limpiar()
         inhabilitarTodo()
         habilitarEditables()
+        flag = True
         btnGuardar.Enabled = True
         btnCancelar.Enabled = True
         btnRefrescar.Enabled = True
@@ -26,6 +29,7 @@ Public Class frmValvulas
     Private Sub Modificar()
         inhabilitarTodo()
         habilitarEditables()
+        flag = True
         btnGuardar.Enabled = True
         btnCancelar.Enabled = True
         btnRefrescar.Enabled = True
@@ -56,6 +60,7 @@ Public Class frmValvulas
     End Sub
 
     Private Sub Limpiar()
+        flag = False
         txtID.Text = ""
         txtAlias.Text = ""
         cboTipoMedicion.SelectedIndex = -1
@@ -286,23 +291,28 @@ Public Class frmValvulas
     End Sub
 
     Private Sub cboClaseValvula_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboClaseValvula.SelectedIndexChanged
-        If cboClaseValvula.SelectedIndex > -1 Then
+        If cboClaseValvula.SelectedIndex > -1 And flag = True Then
             txtConceptoClase.Text = cboClaseValvula.SelectedValue.ToString
             consultarDetalleClase(cboClaseValvula.Text.ToString, cboClaseValvula.SelectedValue.ToString)
+            Centrar(GroupBoxEspera)
+            GroupBoxEspera.Visible = True
+            Application.DoEvents()
+            'Thread.Sleep(3000)
             cargarListaValvulas(txtCharIni.Text.ToString, txtCaracExtr.Text.ToString, "%" & cboClaseValvula.Text.ToString & "%", "%" & cboClaseValvula.SelectedValue.ToString & "%", txtAjuste.Text.ToString)
             cboValvula.Enabled = True
         Else
             txtConceptoClase.Text = ""
             cboValvula.Enabled = False
         End If
+        GroupBoxEspera.Visible = False
     End Sub
 
     Private Sub btnNuevo_ItemClick(sender As Object, e As ItemClickEventArgs) Handles btnNuevo.ItemClick
         If GlobalesConexiones.estadoExterno.Equals("SI") Then
+            cargarClases()
             Nuevo()
             cargarTiposValvula()
             cargarTiposMedicion()
-            cargarClases()
             cargarValvulas()
             cargarValvulasPadres()
         Else

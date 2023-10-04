@@ -1,7 +1,4 @@
-﻿Imports DevExpress.DashboardCommon
-Imports DevExpress.DashboardCommon.Native
-Imports DevExpress.DashboardWin
-Imports DevExpress.DataAccess.Sql
+﻿Imports DevExpress.DataAccess.Sql
 Imports DevExpress.XtraPivotGrid
 Imports DevExpress.XtraReports.UI
 Imports SISTEMA.DATOS

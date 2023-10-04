@@ -253,7 +253,7 @@ Public Class frmClientes
             clase.Estado = CChar(IIf(chkEstado.CheckState = CheckState.Checked, "S", "N"))
             clase.IdNit = CInt(txtIdNIT.Text.ToString)
             clase.Nit = txtNIT.Text.ToString
-            clase.IVA = CInt(nudIVA.Value)
+            clase.Iva = CInt(nudIVA.Value)
             clase.Correo = txtCorreo.Text.ToString
             clase.CreadoPor = ModuleGlobales.usuario
             clase.ModificadoPor = ModuleGlobales.usuario

@@ -91,6 +91,10 @@ Partial Class frmValvulas
         Me.RepositoryItemRadioGroup2 = New DevExpress.XtraEditors.Repository.RepositoryItemRadioGroup()
         Me.BarCheckItem1 = New DevExpress.XtraBars.BarCheckItem()
         Me.RibbonPageGroup4 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+        Me.GroupBoxEspera = New System.Windows.Forms.GroupBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label135 = New System.Windows.Forms.Label()
+        Me.Label136 = New System.Windows.Forms.Label()
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemRadioGroup3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemTokenEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -105,6 +109,7 @@ Partial Class frmValvulas
         CType(Me.GridViewValvulas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemRadioGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemRadioGroup2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBoxEspera.SuspendLayout()
         Me.SuspendLayout()
         '
         'RibbonControl
@@ -116,7 +121,7 @@ Partial Class frmValvulas
         Me.RibbonControl.Name = "RibbonControl"
         Me.RibbonControl.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1})
         Me.RibbonControl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemRadioGroup3, Me.RepositoryItemTokenEdit1, Me.RepositoryItemTokenEdit2, Me.RepositoryItemRadioGroup4})
-        Me.RibbonControl.Size = New System.Drawing.Size(1138, 182)
+        Me.RibbonControl.Size = New System.Drawing.Size(1138, 178)
         Me.RibbonControl.StatusBar = Me.RibbonStatusBar
         '
         'btnSalir
@@ -259,10 +264,10 @@ Partial Class frmValvulas
         '
         'RibbonStatusBar
         '
-        Me.RibbonStatusBar.Location = New System.Drawing.Point(0, 668)
+        Me.RibbonStatusBar.Location = New System.Drawing.Point(0, 660)
         Me.RibbonStatusBar.Name = "RibbonStatusBar"
         Me.RibbonStatusBar.Ribbon = Me.RibbonControl
-        Me.RibbonStatusBar.Size = New System.Drawing.Size(1138, 27)
+        Me.RibbonStatusBar.Size = New System.Drawing.Size(1138, 35)
         '
         'TableLayoutPanel1
         '
@@ -271,12 +276,12 @@ Partial Class frmValvulas
         Me.TableLayoutPanel1.Controls.Add(Me.Panel1, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Panel4, 0, 1)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 182)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 178)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 200.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1138, 486)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1138, 482)
         Me.TableLayoutPanel1.TabIndex = 5
         '
         'Panel1
@@ -912,14 +917,59 @@ Partial Class frmValvulas
         Me.RibbonPageGroup4.Name = "RibbonPageGroup4"
         Me.RibbonPageGroup4.Text = "Estado Válvula"
         '
+        'GroupBoxEspera
+        '
+        Me.GroupBoxEspera.Controls.Add(Me.Label14)
+        Me.GroupBoxEspera.Controls.Add(Me.Label135)
+        Me.GroupBoxEspera.Controls.Add(Me.Label136)
+        Me.GroupBoxEspera.Location = New System.Drawing.Point(400, 350)
+        Me.GroupBoxEspera.Name = "GroupBoxEspera"
+        Me.GroupBoxEspera.Size = New System.Drawing.Size(290, 136)
+        Me.GroupBoxEspera.TabIndex = 26
+        Me.GroupBoxEspera.TabStop = False
+        Me.GroupBoxEspera.Visible = False
+        '
+        'Label14
+        '
+        Me.Label14.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(6, 35)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(278, 67)
+        Me.Label14.TabIndex = 21
+        Me.Label14.Text = "Cargando listado de, " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "dispositivos, esto podría" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "tomar un momento..."
+        Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label135
+        '
+        Me.Label135.BackColor = System.Drawing.Color.RoyalBlue
+        Me.Label135.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label135.ForeColor = System.Drawing.Color.White
+        Me.Label135.Location = New System.Drawing.Point(-5, 102)
+        Me.Label135.Name = "Label135"
+        Me.Label135.Size = New System.Drawing.Size(301, 34)
+        Me.Label135.TabIndex = 20
+        '
+        'Label136
+        '
+        Me.Label136.BackColor = System.Drawing.Color.RoyalBlue
+        Me.Label136.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label136.ForeColor = System.Drawing.Color.White
+        Me.Label136.Location = New System.Drawing.Point(0, 0)
+        Me.Label136.Name = "Label136"
+        Me.Label136.Size = New System.Drawing.Size(296, 30)
+        Me.Label136.TabIndex = 19
+        Me.Label136.Text = "Carga de Válvulas"
+        '
         'frmValvulas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1138, 695)
+        Me.Controls.Add(Me.GroupBoxEspera)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.RibbonStatusBar)
         Me.Controls.Add(Me.RibbonControl)
+        Me.IconOptions.LargeImage = CType(resources.GetObject("frmValvulas.IconOptions.LargeImage"), System.Drawing.Image)
         Me.Name = "frmValvulas"
         Me.Ribbon = Me.RibbonControl
         Me.StatusBar = Me.RibbonStatusBar
@@ -939,6 +989,7 @@ Partial Class frmValvulas
         CType(Me.GridViewValvulas, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemRadioGroup1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemRadioGroup2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBoxEspera.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1015,4 +1066,8 @@ Partial Class frmValvulas
     Friend WithEvents Label13 As Label
     Friend WithEvents GridColumn14 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents txtAjuste As TextBox
+    Friend WithEvents GroupBoxEspera As GroupBox
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Label135 As Label
+    Friend WithEvents Label136 As Label
 End Class
