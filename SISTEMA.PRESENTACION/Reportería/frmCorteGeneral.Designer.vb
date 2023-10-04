@@ -86,6 +86,7 @@ Partial Class frmReporteria
         Me.RibbonPageGroup2 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonStatusBar = New DevExpress.XtraBars.Ribbon.RibbonStatusBar()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.lblNotificacion = New System.Windows.Forms.Label()
         Me.txtProgreso = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtProcesados = New System.Windows.Forms.TextBox()
@@ -274,7 +275,7 @@ Partial Class frmReporteria
         Me.rideDesde.AutoHeight = False
         Me.rideDesde.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.rideDesde.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.rideDesde.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.ClassicNew
+        Me.rideDesde.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Fluent
         Me.rideDesde.Name = "rideDesde"
         Me.rideDesde.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.[False]
         '
@@ -292,7 +293,7 @@ Partial Class frmReporteria
         Me.rideHasta.AutoHeight = False
         Me.rideHasta.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.rideHasta.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.rideHasta.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.ClassicNew
+        Me.rideHasta.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Fluent
         Me.rideHasta.Name = "rideHasta"
         Me.rideHasta.UseAdvancedMode = DevExpress.Utils.DefaultBoolean.[False]
         Me.rideHasta.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.[False]
@@ -385,6 +386,7 @@ Partial Class frmReporteria
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.GroupBox1.Controls.Add(Me.lblNotificacion)
         Me.GroupBox1.Controls.Add(Me.txtProgreso)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.txtProcesados)
@@ -396,11 +398,20 @@ Partial Class frmReporteria
         Me.GroupBox1.ForeColor = System.Drawing.Color.Red
         Me.GroupBox1.Location = New System.Drawing.Point(415, 127)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(532, 162)
+        Me.GroupBox1.Size = New System.Drawing.Size(532, 186)
         Me.GroupBox1.TabIndex = 5
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Construyendo Vista"
+        Me.GroupBox1.Text = "Construyendo Datos"
         Me.GroupBox1.Visible = False
+        '
+        'lblNotificacion
+        '
+        Me.lblNotificacion.ForeColor = System.Drawing.Color.Black
+        Me.lblNotificacion.Location = New System.Drawing.Point(6, 155)
+        Me.lblNotificacion.Name = "lblNotificacion"
+        Me.lblNotificacion.Size = New System.Drawing.Size(520, 25)
+        Me.lblNotificacion.TabIndex = 7
+        Me.lblNotificacion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'txtProgreso
         '
@@ -694,7 +705,6 @@ Partial Class frmReporteria
         Me.PivotGridField10.GrandTotalCellFormat.FormatType = DevExpress.Utils.FormatType.Custom
         Me.PivotGridField10.MinWidth = 100
         Me.PivotGridField10.Name = "PivotGridField10"
-        Me.PivotGridField10.SortOrder = DevExpress.XtraPivotGrid.PivotSortOrder.Descending
         Me.PivotGridField10.TotalCellFormat.FormatString = "dd-MM-yyyy HH:mm:ss.fff"
         Me.PivotGridField10.TotalCellFormat.FormatType = DevExpress.Utils.FormatType.Custom
         Me.PivotGridField10.TotalValueFormat.FormatString = "dd-MM-yyyy HH:mm:ss.fff"
@@ -947,4 +957,5 @@ Partial Class frmReporteria
     Friend WithEvents PivotGridField22 As DevExpress.XtraPivotGrid.PivotGridField
     Friend WithEvents PivotGridField23 As DevExpress.XtraPivotGrid.PivotGridField
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents lblNotificacion As Label
 End Class

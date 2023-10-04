@@ -122,6 +122,8 @@ Partial Class frmPrincipal
         Me.BarDockControl6 = New DevExpress.XtraBars.BarDockControl()
         Me.BarDockControl7 = New DevExpress.XtraBars.BarDockControl()
         Me.BarDockControl8 = New DevExpress.XtraBars.BarDockControl()
+        Me.btnAbrirGuia = New DevExpress.XtraBars.BarButtonItem()
+        Me.accDashboardInicio = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.contenedor.SuspendLayout()
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl1.SuspendLayout()
@@ -168,8 +170,8 @@ Partial Class frmPrincipal
         'FluentFormDefaultManager1
         '
         Me.FluentFormDefaultManager1.Form = Me
-        Me.FluentFormDefaultManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.BarStaticItem6, Me.BarStaticItem7, Me.BarStaticItem8, Me.lblRol, Me.lblUser, Me.lblNombre, Me.SkinDropDownButtonItem1, Me.btnGuardarTema})
-        Me.FluentFormDefaultManager1.MaxItemId = 21
+        Me.FluentFormDefaultManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.BarStaticItem6, Me.BarStaticItem7, Me.BarStaticItem8, Me.lblRol, Me.lblUser, Me.lblNombre, Me.SkinDropDownButtonItem1, Me.btnGuardarTema, Me.btnAbrirGuia})
+        Me.FluentFormDefaultManager1.MaxItemId = 22
         '
         'BarStaticItem6
         '
@@ -376,7 +378,7 @@ Partial Class frmPrincipal
         '
         'accSubModDashboard
         '
-        Me.accSubModDashboard.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeparator15, Me.accDiseñadorDashboard, Me.AccordionControlSeparator14, Me.accVisualizadorDashboard})
+        Me.accSubModDashboard.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AccordionControlSeparator15, Me.accDiseñadorDashboard, Me.AccordionControlSeparator14, Me.accVisualizadorDashboard, Me.accDashboardInicio})
         Me.accSubModDashboard.Name = "accSubModDashboard"
         Me.accSubModDashboard.Text = "Dashboard"
         '
@@ -623,7 +625,7 @@ Partial Class frmPrincipal
         'FluentDesignFormControl1
         '
         Me.FluentDesignFormControl1.FluentDesignForm = Me
-        Me.FluentDesignFormControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.BarStaticItem6, Me.BarStaticItem7, Me.BarStaticItem8, Me.lblRol, Me.lblUser, Me.lblNombre, Me.SkinDropDownButtonItem1, Me.btnGuardarTema})
+        Me.FluentDesignFormControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.BarStaticItem6, Me.BarStaticItem7, Me.BarStaticItem8, Me.lblRol, Me.lblUser, Me.lblNombre, Me.SkinDropDownButtonItem1, Me.btnGuardarTema, Me.btnAbrirGuia})
         Me.FluentDesignFormControl1.Location = New System.Drawing.Point(0, 0)
         Me.FluentDesignFormControl1.Manager = Me.FluentFormDefaultManager1
         Me.FluentDesignFormControl1.Margin = New System.Windows.Forms.Padding(2)
@@ -639,6 +641,7 @@ Partial Class frmPrincipal
         Me.FluentDesignFormControl1.TitleItemLinks.Add(Me.lblRol)
         Me.FluentDesignFormControl1.TitleItemLinks.Add(Me.btnGuardarTema)
         Me.FluentDesignFormControl1.TitleItemLinks.Add(Me.SkinDropDownButtonItem1)
+        Me.FluentDesignFormControl1.TitleItemLinks.Add(Me.btnAbrirGuia)
         '
         'TimerConexión
         '
@@ -906,6 +909,23 @@ Partial Class frmPrincipal
         Me.BarDockControl8.Manager = Me.BarManager3
         Me.BarDockControl8.Size = New System.Drawing.Size(0, 674)
         '
+        'btnAbrirGuia
+        '
+        Me.btnAbrirGuia.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right
+        Me.btnAbrirGuia.Caption = "Guía"
+        Me.btnAbrirGuia.Id = 21
+        Me.btnAbrirGuia.ImageOptions.Image = CType(resources.GetObject("BarButtonItem1.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnAbrirGuia.ImageOptions.LargeImage = CType(resources.GetObject("BarButtonItem1.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.btnAbrirGuia.Name = "btnAbrirGuia"
+        Me.btnAbrirGuia.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
+        '
+        'accDashboardInicio
+        '
+        Me.accDashboardInicio.ImageOptions.Image = CType(resources.GetObject("AccordionControlElement1.ImageOptions.Image"), System.Drawing.Image)
+        Me.accDashboardInicio.Name = "accDashboardInicio"
+        Me.accDashboardInicio.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
+        Me.accDashboardInicio.Text = "Dashboard Inicio"
+        '
         'frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
@@ -1046,4 +1066,6 @@ Partial Class frmPrincipal
     Friend WithEvents SkinDropDownButtonItem1 As DevExpress.XtraBars.SkinDropDownButtonItem
     Friend WithEvents AccordionControlSeparator22 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
     Friend WithEvents btnGuardarTema As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents btnAbrirGuia As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents accDashboardInicio As DevExpress.XtraBars.Navigation.AccordionControlElement
 End Class

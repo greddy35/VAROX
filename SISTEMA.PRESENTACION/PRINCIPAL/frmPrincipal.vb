@@ -420,6 +420,28 @@ Public Class frmPrincipal
             MsgBox("No se logró guardar el tema actual", MsgBoxStyle.Exclamation, "Tema de Sistema")
         End If
     End Sub
+
+    Private Sub btnAbrirGuia_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnAbrirGuia.ItemClick
+        Try
+
+            Try
+                Dim loPSI As New ProcessStartInfo
+                Dim loProceso As New Process
+                loPSI.FileName = System.AppDomain.CurrentDomain.BaseDirectory + "\Manual.pdf"
+                loProceso = Process.Start(loPSI)
+
+            Catch ex As Exception
+                MsgBox("No se pudo abrir la Guía de Usuario, por favor intentelo más tarde", MsgBoxStyle.Exclamation)
+            End Try
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub accDashboardInicio_Click(sender As Object, e As EventArgs) Handles accDashboardInicio.Click
+        AbrirFormulario(DashboardP)
+    End Sub
 #End Region
 
 #End Region
