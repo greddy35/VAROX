@@ -86,6 +86,7 @@ Partial Class frmReporteria
         Me.RibbonPageGroup2 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonStatusBar = New DevExpress.XtraBars.Ribbon.RibbonStatusBar()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btnDetenerCalculo = New DevExpress.XtraEditors.SimpleButton()
         Me.lblNotificacion = New System.Windows.Forms.Label()
         Me.txtProgreso = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -124,6 +125,8 @@ Partial Class frmReporteria
         Me.Label136 = New System.Windows.Forms.Label()
         Me.StandardReportDesigner2 = New DevExpress.XtraReports.UserDesigner.Native.StandardReportDesigner()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.BarButtonGroup1 = New DevExpress.XtraBars.BarButtonGroup()
+        Me.btnCorteEjecutivo = New DevExpress.XtraBars.BarButtonItem()
         CType(Me.RecentlyUsedItemsComboBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DesignRepositoryItemComboBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -176,14 +179,14 @@ Partial Class frmReporteria
         'RibbonControl
         '
         Me.RibbonControl.ExpandCollapseItem.Id = 0
-        Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.RibbonControl.SearchEditItem, Me.btnSalir, Me.btnRefrescar, Me.btnImprimir, Me.btnExportar, Me.btnRestaurarTabla, Me.btnAbrirPlantilla, Me.btnGuardarPlantilla, Me.chkCombinar, Me.chkMostrarTotales, Me.deDesde, Me.deHasta, Me.btnConstruir, Me.btnCorteGeneral, Me.btnCorteCliente})
+        Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.RibbonControl.SearchEditItem, Me.btnSalir, Me.btnRefrescar, Me.btnImprimir, Me.btnExportar, Me.btnRestaurarTabla, Me.btnAbrirPlantilla, Me.btnGuardarPlantilla, Me.chkCombinar, Me.chkMostrarTotales, Me.deDesde, Me.deHasta, Me.btnConstruir, Me.btnCorteGeneral, Me.btnCorteCliente, Me.BarButtonGroup1, Me.btnCorteEjecutivo})
         Me.RibbonControl.Location = New System.Drawing.Point(0, 0)
-        Me.RibbonControl.MaxItemId = 16
+        Me.RibbonControl.MaxItemId = 19
         Me.RibbonControl.Name = "RibbonControl"
         Me.RibbonControl.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1})
         Me.RibbonControl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.rideDesde, Me.rideHasta})
         Me.RibbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2019
-        Me.RibbonControl.Size = New System.Drawing.Size(986, 178)
+        Me.RibbonControl.Size = New System.Drawing.Size(1247, 178)
         Me.RibbonControl.StatusBar = Me.RibbonStatusBar
         '
         'btnSalir
@@ -352,6 +355,7 @@ Partial Class frmReporteria
         Me.RibbonPageDatos.ItemLinks.Add(Me.btnExportar)
         Me.RibbonPageDatos.ItemLinks.Add(Me.btnCorteGeneral)
         Me.RibbonPageDatos.ItemLinks.Add(Me.btnCorteCliente)
+        Me.RibbonPageDatos.ItemLinks.Add(Me.btnCorteEjecutivo)
         Me.RibbonPageDatos.Name = "RibbonPageDatos"
         Me.RibbonPageDatos.Text = "Datos"
         '
@@ -360,6 +364,7 @@ Partial Class frmReporteria
         Me.RibbonPageGroup4.ItemLinks.Add(Me.btnRestaurarTabla)
         Me.RibbonPageGroup4.ItemLinks.Add(Me.btnAbrirPlantilla)
         Me.RibbonPageGroup4.ItemLinks.Add(Me.btnGuardarPlantilla)
+        Me.RibbonPageGroup4.ItemLinks.Add(Me.BarButtonGroup1)
         Me.RibbonPageGroup4.Name = "RibbonPageGroup4"
         Me.RibbonPageGroup4.Text = "Plantillas"
         '
@@ -381,11 +386,12 @@ Partial Class frmReporteria
         Me.RibbonStatusBar.Location = New System.Drawing.Point(0, 535)
         Me.RibbonStatusBar.Name = "RibbonStatusBar"
         Me.RibbonStatusBar.Ribbon = Me.RibbonControl
-        Me.RibbonStatusBar.Size = New System.Drawing.Size(986, 35)
+        Me.RibbonStatusBar.Size = New System.Drawing.Size(1247, 35)
         '
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.GroupBox1.Controls.Add(Me.btnDetenerCalculo)
         Me.GroupBox1.Controls.Add(Me.lblNotificacion)
         Me.GroupBox1.Controls.Add(Me.txtProgreso)
         Me.GroupBox1.Controls.Add(Me.Label3)
@@ -404,12 +410,25 @@ Partial Class frmReporteria
         Me.GroupBox1.Text = "Construyendo Datos"
         Me.GroupBox1.Visible = False
         '
+        'btnDetenerCalculo
+        '
+        Me.btnDetenerCalculo.Appearance.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnDetenerCalculo.Appearance.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDetenerCalculo.Appearance.Options.UseBackColor = True
+        Me.btnDetenerCalculo.Appearance.Options.UseFont = True
+        Me.btnDetenerCalculo.ImageOptions.Image = CType(resources.GetObject("btnDetenerCalculo.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnDetenerCalculo.Location = New System.Drawing.Point(412, 145)
+        Me.btnDetenerCalculo.Name = "btnDetenerCalculo"
+        Me.btnDetenerCalculo.Size = New System.Drawing.Size(108, 35)
+        Me.btnDetenerCalculo.TabIndex = 8
+        Me.btnDetenerCalculo.Text = "Detener"
+        '
         'lblNotificacion
         '
         Me.lblNotificacion.ForeColor = System.Drawing.Color.Black
-        Me.lblNotificacion.Location = New System.Drawing.Point(6, 155)
+        Me.lblNotificacion.Location = New System.Drawing.Point(6, 145)
         Me.lblNotificacion.Name = "lblNotificacion"
-        Me.lblNotificacion.Size = New System.Drawing.Size(520, 25)
+        Me.lblNotificacion.Size = New System.Drawing.Size(400, 35)
         Me.lblNotificacion.TabIndex = 7
         Me.lblNotificacion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -478,7 +497,7 @@ Partial Class frmReporteria
         Me.ProgressBar1.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(52, Byte), Integer))
         Me.ProgressBar1.Cursor = System.Windows.Forms.Cursors.WaitCursor
         Me.ProgressBar1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(90, Byte), Integer), CType(CType(202, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ProgressBar1.Location = New System.Drawing.Point(9, 113)
+        Me.ProgressBar1.Location = New System.Drawing.Point(10, 105)
         Me.ProgressBar1.Name = "ProgressBar1"
         Me.ProgressBar1.Size = New System.Drawing.Size(510, 34)
         Me.ProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous
@@ -487,6 +506,7 @@ Partial Class frmReporteria
         'BackgroundWorker1
         '
         Me.BackgroundWorker1.WorkerReportsProgress = True
+        Me.BackgroundWorker1.WorkerSupportsCancellation = True
         '
         'PivotGridControl1
         '
@@ -542,7 +562,7 @@ Partial Class frmReporteria
         Me.PivotGridControl1.OptionsPrint.PrintUnusedFilterFields = False
         Me.PivotGridControl1.OptionsPrint.PrintVertLines = DevExpress.Utils.DefaultBoolean.[True]
         Me.PivotGridControl1.OptionsPrint.UsePrintAppearance = True
-        Me.PivotGridControl1.Size = New System.Drawing.Size(986, 357)
+        Me.PivotGridControl1.Size = New System.Drawing.Size(1247, 357)
         Me.PivotGridControl1.TabIndex = 22
         '
         'PivotGridField1
@@ -856,15 +876,29 @@ Partial Class frmReporteria
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 178)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(986, 357)
+        Me.Panel1.Size = New System.Drawing.Size(1247, 357)
         Me.Panel1.TabIndex = 28
+        '
+        'BarButtonGroup1
+        '
+        Me.BarButtonGroup1.Caption = "BarButtonGroup1"
+        Me.BarButtonGroup1.Id = 17
+        Me.BarButtonGroup1.Name = "BarButtonGroup1"
+        '
+        'btnCorteEjecutivo
+        '
+        Me.btnCorteEjecutivo.Caption = "Corte Ejecutivo"
+        Me.btnCorteEjecutivo.Id = 18
+        Me.btnCorteEjecutivo.ImageOptions.Image = CType(resources.GetObject("btnCorteEjecutivo.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnCorteEjecutivo.ImageOptions.LargeImage = CType(resources.GetObject("btnCorteEjecutivo.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.btnCorteEjecutivo.Name = "btnCorteEjecutivo"
         '
         'frmReporteria
         '
         Me.AllowFormGlass = DevExpress.Utils.DefaultBoolean.[True]
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(986, 570)
+        Me.ClientSize = New System.Drawing.Size(1247, 570)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.RibbonStatusBar)
@@ -958,4 +992,7 @@ Partial Class frmReporteria
     Friend WithEvents PivotGridField23 As DevExpress.XtraPivotGrid.PivotGridField
     Friend WithEvents Panel1 As Panel
     Friend WithEvents lblNotificacion As Label
+    Friend WithEvents btnDetenerCalculo As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents BarButtonGroup1 As DevExpress.XtraBars.BarButtonGroup
+    Friend WithEvents btnCorteEjecutivo As DevExpress.XtraBars.BarButtonItem
 End Class

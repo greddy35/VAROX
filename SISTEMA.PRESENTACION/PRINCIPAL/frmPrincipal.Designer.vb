@@ -38,6 +38,7 @@ Partial Class frmPrincipal
         Me.lblNombre = New DevExpress.XtraBars.BarStaticItem()
         Me.SkinDropDownButtonItem1 = New DevExpress.XtraBars.SkinDropDownButtonItem()
         Me.btnGuardarTema = New DevExpress.XtraBars.BarButtonItem()
+        Me.btnAbrirGuia = New DevExpress.XtraBars.BarButtonItem()
         Me.AccordionControl1 = New DevExpress.XtraBars.Navigation.AccordionControl()
         Me.AccordionControlSeparator31 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
         Me.accModReportAnalisis = New DevExpress.XtraBars.Navigation.AccordionControlElement()
@@ -57,6 +58,7 @@ Partial Class frmPrincipal
         Me.accDiseñadorDashboard = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AccordionControlSeparator14 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
         Me.accVisualizadorDashboard = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.accDashboardInicio = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AccordionControlSeparator30 = New DevExpress.XtraBars.Navigation.AccordionControlSeparator()
         Me.accModGestionGeneral = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.accSubModGestion = New DevExpress.XtraBars.Navigation.AccordionControlElement()
@@ -122,8 +124,6 @@ Partial Class frmPrincipal
         Me.BarDockControl6 = New DevExpress.XtraBars.BarDockControl()
         Me.BarDockControl7 = New DevExpress.XtraBars.BarDockControl()
         Me.BarDockControl8 = New DevExpress.XtraBars.BarDockControl()
-        Me.btnAbrirGuia = New DevExpress.XtraBars.BarButtonItem()
-        Me.accDashboardInicio = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.contenedor.SuspendLayout()
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl1.SuspendLayout()
@@ -291,6 +291,16 @@ Partial Class frmPrincipal
         Me.btnGuardarTema.Name = "btnGuardarTema"
         Me.btnGuardarTema.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
         '
+        'btnAbrirGuia
+        '
+        Me.btnAbrirGuia.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right
+        Me.btnAbrirGuia.Caption = "Guía"
+        Me.btnAbrirGuia.Id = 21
+        Me.btnAbrirGuia.ImageOptions.Image = CType(resources.GetObject("btnAbrirGuia.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnAbrirGuia.ImageOptions.LargeImage = CType(resources.GetObject("btnAbrirGuia.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.btnAbrirGuia.Name = "btnAbrirGuia"
+        Me.btnAbrirGuia.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
+        '
         'AccordionControl1
         '
         Me.AccordionControl1.Appearance.Item.Hovered.ForeColor = System.Drawing.Color.MediumBlue
@@ -405,6 +415,13 @@ Partial Class frmPrincipal
         Me.accVisualizadorDashboard.Name = "accVisualizadorDashboard"
         Me.accVisualizadorDashboard.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
         Me.accVisualizadorDashboard.Text = "Visualizador de Dashboard"
+        '
+        'accDashboardInicio
+        '
+        Me.accDashboardInicio.ImageOptions.Image = CType(resources.GetObject("accDashboardInicio.ImageOptions.Image"), System.Drawing.Image)
+        Me.accDashboardInicio.Name = "accDashboardInicio"
+        Me.accDashboardInicio.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
+        Me.accDashboardInicio.Text = "Dashboard Inicio"
         '
         'AccordionControlSeparator30
         '
@@ -908,23 +925,6 @@ Partial Class frmPrincipal
         Me.BarDockControl8.Location = New System.Drawing.Point(1262, 37)
         Me.BarDockControl8.Manager = Me.BarManager3
         Me.BarDockControl8.Size = New System.Drawing.Size(0, 674)
-        '
-        'btnAbrirGuia
-        '
-        Me.btnAbrirGuia.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right
-        Me.btnAbrirGuia.Caption = "Guía"
-        Me.btnAbrirGuia.Id = 21
-        Me.btnAbrirGuia.ImageOptions.Image = CType(resources.GetObject("BarButtonItem1.ImageOptions.Image"), System.Drawing.Image)
-        Me.btnAbrirGuia.ImageOptions.LargeImage = CType(resources.GetObject("BarButtonItem1.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.btnAbrirGuia.Name = "btnAbrirGuia"
-        Me.btnAbrirGuia.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
-        '
-        'accDashboardInicio
-        '
-        Me.accDashboardInicio.ImageOptions.Image = CType(resources.GetObject("AccordionControlElement1.ImageOptions.Image"), System.Drawing.Image)
-        Me.accDashboardInicio.Name = "accDashboardInicio"
-        Me.accDashboardInicio.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
-        Me.accDashboardInicio.Text = "Dashboard Inicio"
         '
         'frmPrincipal
         '
