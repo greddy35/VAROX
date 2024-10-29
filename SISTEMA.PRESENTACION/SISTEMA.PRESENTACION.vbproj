@@ -140,6 +140,7 @@
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
     <Reference Include="UIAutomationClient" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
@@ -271,6 +272,12 @@
     <Compile Include="Reportería\frmDiseñadorDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reportería\rptCorteEjecutivo.Designer.vb">
+      <DependentUpon>rptCorteEjecutivo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportería\rptCorteEjecutivo.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reportería\rptCorteGeneral.Designer.vb">
       <DependentUpon>rptCorteGeneral.vb</DependentUpon>
     </Compile>
@@ -348,6 +355,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reportería\frmDiseñadorDashboard.resx">
       <DependentUpon>frmDiseñadorDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportería\rptCorteEjecutivo.resx">
+      <DependentUpon>rptCorteEjecutivo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportería\rptCorteGeneral.resx">
       <DependentUpon>rptCorteGeneral.vb</DependentUpon>

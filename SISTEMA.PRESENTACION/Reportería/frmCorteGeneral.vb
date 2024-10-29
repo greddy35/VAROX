@@ -189,6 +189,20 @@ Public Class frmReporteria
 
     End Sub
 
+    Private Sub btnDetenerCalculo_Click(sender As Object, e As EventArgs) Handles btnDetenerCalculo.Click
+        If MessageBox.Show("El proceso se detendrá," & vbCrLf &
+                        "y los registros no guardados se perderán." & vbCrLf & vbCrLf &
+                        "¿Seguro que desea detener el proceso?", "Detener Cálculo", MessageBoxButtons.YesNo, MessageBoxIcon.Stop) = DialogResult.Yes Then
+            If BackgroundWorker1.IsBusy Then
+
+                If BackgroundWorker1.WorkerSupportsCancellation Then
+                    GroupBox1.Visible = False
+                    BackgroundWorker1.CancelAsync()
+                End If
+            End If
+        End If
+    End Sub
+
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As DoWorkEventArgs) Handles BackgroundWorker1.DoWork
         Try
             Dim fechIni As String = CDate(deDesde.EditValue).ToString("yyyy-MM-dd 00:00:00.000")
@@ -199,10 +213,12 @@ Public Class frmReporteria
             Dim listado As DataSet = Nothing
             Dim ins As Integer = 0
             Dim actu As Integer = 0
+            notificacion = "Espere mientras se ejecutan los cálculos..."
+            BackgroundWorker1.ReportProgress(1)
             listado = gestor.NCrearListadoValvulas(fechIni, fechFin)       'Obtenemos las vinculaciones a construir
             notificacion = "Dispositivos a procesar: " + listado.Tables(0).Rows().Count.ToString
             BackgroundWorker1.ReportProgress(1)
-            Thread.Sleep(500)
+            'Thread.Sleep(500)
             If Not listado Is Nothing Then
                 Dim flag As Boolean = False
                 For Each fila As DataRow In listado.Tables(0).Rows()
@@ -211,14 +227,14 @@ Public Class frmReporteria
                         Dim ultLect As Decimal = 0
                         Dim flag2 As Boolean = False
                         Dim flag3 As Boolean = False
-                        notificacion = "Preparando: " + contenedor.Tables(0).Rows().Count.ToString + " registros "
-                        BackgroundWorker1.ReportProgress(1)
-                        Thread.Sleep(500)
+                        'notificacion = "Preparando: " + contenedor.Tables(0).Rows().Count.ToString + " registros "
+                        'BackgroundWorker1.ReportProgress(1)
+                        'Thread.Sleep(500)
                         Dim cont As Integer = 1
                         For Each consumo As DataRow In contenedor.Tables(0).Rows()
-                            notificacion = "Calculando: " + cont.ToString + " registro de: " + contenedor.Tables(0).Rows().Count.ToString + " del dispositivo: " + consumo(0).ToString
-                            BackgroundWorker1.ReportProgress(1)
-                            'Thread.Sleep(1)
+                            'notificacion = "Calculando: " + cont.ToString + " registro de: " + contenedor.Tables(0).Rows().Count.ToString + " del dispositivo: " + consumo(0).ToString
+                            'BackgroundWorker1.ReportProgress(1)
+                            'Thread.Sleep(500)
                             If flag2 = False Then
                                 consumo.Item(3) = 0
                                 flag2 = True
@@ -285,7 +301,7 @@ Public Class frmReporteria
                     total = base.Tables(0).Rows().Count
                     notificacion = "Se procesarán: " + total.ToString + " registros"
                     BackgroundWorker1.ReportProgress(1)
-                    'Thread.Sleep(1)
+                    'Thread.Sleep(500)
                     If total > 0 Then
                         Dim resultado As New DataSet
                         For Each fila As DataRow In base.Tables(0).Rows()      'Recorremos los Horarios para actualizar o insertar en la BD.BIOSOFT
@@ -302,17 +318,17 @@ Public Class frmReporteria
                                 If (id <> 0) Then
                                     gestor.NModificar(id.ToString, fila(0).ToString, fila(1).ToString, fila(2).ToString, fila(3).ToString, fila(4).ToString, fila(5).ToString)
                                     actu = actu + 1
-                                    'Console.WriteLine("Actualizado: " & fila(0).ToString)
+                                    Console.WriteLine("Actualizado: " & fila(0).ToString)
                                 Else
                                     gestor.NInsertar(fila(0).ToString, fila(1).ToString, fila(2).ToString, fila(3).ToString, fila(4).ToString, fila(5).ToString)
                                     ins = ins + 1
-                                    'Console.WriteLine("Insertado: " & fila(0).ToString)
+                                    Console.WriteLine("Insertado: " & fila(0).ToString)
                                 End If
                                 'Actualizamos el progreso
                                 Contador = Contador + 1
                                 notificacion = "Registrando: " + Contador.ToString + " registros de: " + total.ToString
                                 BackgroundWorker1.ReportProgress(1)
-                                Thread.Sleep(1)
+                                'Thread.Sleep(500)
                             Catch ex As Exception
                                 Console.WriteLine("Error: " & ex.ToString)
                             End Try
@@ -376,17 +392,22 @@ Public Class frmReporteria
     End Sub
 
     Private Sub btnConstruir_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnConstruir.ItemClick
-        If deDesde.EditValue IsNot String.Empty Or deHasta.EditValue IsNot String.Empty Then
-            If MessageBox.Show("El proceso podría tardar unos minutos" & vbCrLf &
-                        "en preparar la información." & vbCrLf & vbCrLf &
-                        "Evite exceder la carga de 30 días de rango", "Cargar Datos", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
-                ModuleGlobales.Centrar(GroupBox1)
-                GroupBox1.Visible = True
-                BackgroundWorker1.RunWorkerAsync()
-            End If
+        If Not BackgroundWorker1.IsBusy Then
+            If deDesde.EditValue IsNot String.Empty Or deHasta.EditValue IsNot String.Empty Then
+                If MessageBox.Show("El proceso podría tardar unos minutos" & vbCrLf &
+                            "en preparar la información." & vbCrLf & vbCrLf &
+                            "Evite exceder la carga de 30 días de rango", "Cargar Datos", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+                    ModuleGlobales.Centrar(GroupBox1)
+                    GroupBox1.Visible = True
+                    BackgroundWorker1.RunWorkerAsync()
+                End If
 
+            Else
+
+                MessageBox.Show("Seleccione el rango de fechas antes de refrescar", "Datos inválidos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            End If
         Else
-            MessageBox.Show("Seleccione el rango de fechas antes de refrescar", "Datos inválidos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            MessageBox.Show("Ya existe un proceso de cálculo en progreso, espere que finalice para iniciar otro", "Procesos en progreso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
     End Sub
 
@@ -454,11 +475,19 @@ Public Class frmReporteria
         'report.Parameters("fechaIni").Enabled = False
         report.Parameters("fechaFin").Value = fechFin
         report.Parameters("fechaFin").Description = "Fecha Hasta:"
-        'report.Parameters("fechaFin").Enabled = False
-        'report.Parameters("cliente").Value = {"3-928-937367", "02-0710-0193"}
         report.ShowRibbonPreview()
     End Sub
 
+    Private Sub btnCorteEjecutivo_ItemClick(sender As Object, e As ItemClickEventArgs) Handles btnCorteEjecutivo.ItemClick
+        ModuleGlobales.sql_DataSource = SqlDataSource1
+        Dim report = New rptCorteEjecutivo()
+        report.Parameters("fechaIni").Value = fechIni
+        report.Parameters("fechaIni").Description = "Fecha Desde:"
+        report.Parameters("fechaFin").Value = fechFin
+        report.Parameters("fechaFin").Description = "Fecha Hasta:"
+        report.Parameters("fechaFin").Value = fechFin
+        report.ShowRibbonPreview()
+    End Sub
 
 #End Region
 
