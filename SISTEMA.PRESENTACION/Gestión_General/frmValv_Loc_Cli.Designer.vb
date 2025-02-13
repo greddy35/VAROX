@@ -149,6 +149,12 @@ Partial Class frmValv_Loc_Cli
         Me.btnCambiarVigencia = New DevExpress.XtraEditors.SimpleButton()
         Me.deVigenciaNueva = New DevExpress.XtraEditors.DateEdit()
         Me.Label29 = New System.Windows.Forms.Label()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.txtUnidad = New System.Windows.Forms.TextBox()
+        Me.txtMoneda = New System.Windows.Forms.TextBox()
+        Me.Label32 = New System.Windows.Forms.Label()
+        Me.txtValorUnd = New System.Windows.Forms.TextBox()
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemComboBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemComboBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -737,9 +743,9 @@ Partial Class frmValv_Loc_Cli
         Me.Panel11.Controls.Add(Me.Label19)
         Me.Panel11.Controls.Add(Me.Label20)
         Me.Panel11.Controls.Add(Me.txtTipoValvula)
-        Me.Panel11.Location = New System.Drawing.Point(674, 3)
+        Me.Panel11.Location = New System.Drawing.Point(811, 3)
         Me.Panel11.Name = "Panel11"
-        Me.Panel11.Size = New System.Drawing.Size(337, 75)
+        Me.Panel11.Size = New System.Drawing.Size(305, 75)
         Me.Panel11.TabIndex = 41
         '
         'txtIdTipoValvula
@@ -747,7 +753,7 @@ Partial Class frmValv_Loc_Cli
         Me.txtIdTipoValvula.BackColor = System.Drawing.SystemColors.Info
         Me.txtIdTipoValvula.Enabled = False
         Me.txtIdTipoValvula.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtIdTipoValvula.Location = New System.Drawing.Point(152, 8)
+        Me.txtIdTipoValvula.Location = New System.Drawing.Point(136, 6)
         Me.txtIdTipoValvula.Name = "txtIdTipoValvula"
         Me.txtIdTipoValvula.Size = New System.Drawing.Size(88, 26)
         Me.txtIdTipoValvula.TabIndex = 32
@@ -757,7 +763,7 @@ Partial Class frmValv_Loc_Cli
         '
         Me.Label19.AutoSize = True
         Me.Label19.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(19, 13)
+        Me.Label19.Location = New System.Drawing.Point(3, 11)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(127, 18)
         Me.Label19.TabIndex = 31
@@ -767,7 +773,7 @@ Partial Class frmValv_Loc_Cli
         '
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(41, 46)
+        Me.Label20.Location = New System.Drawing.Point(25, 44)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(105, 18)
         Me.Label20.TabIndex = 35
@@ -778,22 +784,28 @@ Partial Class frmValv_Loc_Cli
         Me.txtTipoValvula.BackColor = System.Drawing.SystemColors.Info
         Me.txtTipoValvula.Enabled = False
         Me.txtTipoValvula.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTipoValvula.Location = New System.Drawing.Point(152, 41)
+        Me.txtTipoValvula.Location = New System.Drawing.Point(136, 39)
         Me.txtTipoValvula.Name = "txtTipoValvula"
-        Me.txtTipoValvula.Size = New System.Drawing.Size(171, 26)
+        Me.txtTipoValvula.Size = New System.Drawing.Size(163, 26)
         Me.txtTipoValvula.TabIndex = 36
         Me.txtTipoValvula.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Panel10
         '
         Me.Panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel10.Controls.Add(Me.txtValorUnd)
+        Me.Panel10.Controls.Add(Me.Label32)
+        Me.Panel10.Controls.Add(Me.txtMoneda)
+        Me.Panel10.Controls.Add(Me.txtUnidad)
+        Me.Panel10.Controls.Add(Me.Label31)
+        Me.Panel10.Controls.Add(Me.Label30)
         Me.Panel10.Controls.Add(Me.txtIdTipoMedicion)
         Me.Panel10.Controls.Add(Me.Label17)
         Me.Panel10.Controls.Add(Me.Label18)
         Me.Panel10.Controls.Add(Me.txtTipoMedicion)
         Me.Panel10.Location = New System.Drawing.Point(346, 3)
         Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(322, 75)
+        Me.Panel10.Size = New System.Drawing.Size(463, 75)
         Me.Panel10.TabIndex = 40
         '
         'txtIdTipoMedicion
@@ -803,7 +815,7 @@ Partial Class frmValv_Loc_Cli
         Me.txtIdTipoMedicion.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtIdTipoMedicion.Location = New System.Drawing.Point(127, 8)
         Me.txtIdTipoMedicion.Name = "txtIdTipoMedicion"
-        Me.txtIdTipoMedicion.Size = New System.Drawing.Size(88, 26)
+        Me.txtIdTipoMedicion.Size = New System.Drawing.Size(69, 26)
         Me.txtIdTipoMedicion.TabIndex = 32
         Me.txtIdTipoMedicion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -1432,7 +1444,7 @@ Partial Class frmValv_Loc_Cli
         Me.GroupBox1.Controls.Add(Me.Label29)
         Me.GroupBox1.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.Red
-        Me.GroupBox1.Location = New System.Drawing.Point(298, 308)
+        Me.GroupBox1.Location = New System.Drawing.Point(10, 308)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(372, 202)
         Me.GroupBox1.TabIndex = 9
@@ -1527,6 +1539,69 @@ Partial Class frmValv_Loc_Cli
         Me.Label29.Size = New System.Drawing.Size(147, 21)
         Me.Label29.TabIndex = 1
         Me.Label29.Text = "Nueva Vigencia:"
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label30.Location = New System.Drawing.Point(202, 11)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(65, 18)
+        Me.Label30.TabIndex = 37
+        Me.Label30.Text = "Unidad:"
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label31.Location = New System.Drawing.Point(348, 11)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(71, 18)
+        Me.Label31.TabIndex = 38
+        Me.Label31.Text = "Moneda:"
+        '
+        'txtUnidad
+        '
+        Me.txtUnidad.BackColor = System.Drawing.SystemColors.Info
+        Me.txtUnidad.Enabled = False
+        Me.txtUnidad.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUnidad.Location = New System.Drawing.Point(273, 8)
+        Me.txtUnidad.Name = "txtUnidad"
+        Me.txtUnidad.Size = New System.Drawing.Size(69, 26)
+        Me.txtUnidad.TabIndex = 39
+        Me.txtUnidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'txtMoneda
+        '
+        Me.txtMoneda.BackColor = System.Drawing.SystemColors.Info
+        Me.txtMoneda.Enabled = False
+        Me.txtMoneda.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtMoneda.Location = New System.Drawing.Point(419, 8)
+        Me.txtMoneda.Name = "txtMoneda"
+        Me.txtMoneda.Size = New System.Drawing.Size(39, 26)
+        Me.txtMoneda.TabIndex = 40
+        Me.txtMoneda.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label32.Location = New System.Drawing.Point(297, 44)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(86, 18)
+        Me.Label32.TabIndex = 41
+        Me.Label32.Text = "Valor Und:"
+        '
+        'txtValorUnd
+        '
+        Me.txtValorUnd.BackColor = System.Drawing.SystemColors.Info
+        Me.txtValorUnd.Enabled = False
+        Me.txtValorUnd.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtValorUnd.Location = New System.Drawing.Point(382, 41)
+        Me.txtValorUnd.Name = "txtValorUnd"
+        Me.txtValorUnd.Size = New System.Drawing.Size(76, 26)
+        Me.txtValorUnd.TabIndex = 42
+        Me.txtValorUnd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'frmValv_Loc_Cli
         '
@@ -1707,6 +1782,12 @@ Partial Class frmValv_Loc_Cli
     Friend WithEvents txtObservVigencia As RichTextBox
     Friend WithEvents Label27 As Label
     Friend WithEvents btnInfo As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents txtUnidad As TextBox
+    Friend WithEvents Label31 As Label
+    Friend WithEvents Label30 As Label
+    Friend WithEvents txtValorUnd As TextBox
+    Friend WithEvents Label32 As Label
+    Friend WithEvents txtMoneda As TextBox
     'Friend WithEvents LabelControl1 As LabelControl
     'Friend WithEvents deNuevaFecha As DateEdit
     'Friend WithEvents btnCancelarCambio As SimpleButton

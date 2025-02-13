@@ -86,4 +86,5 @@ Public Class ConexionBD_Externa
             conn.Close()
         End Try
     End Function
+
 End Class

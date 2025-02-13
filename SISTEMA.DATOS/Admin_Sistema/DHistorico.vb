@@ -84,4 +84,6 @@ Public Class DHistorico
 #Enable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
         End Try
     End Function
+
+
 End Class

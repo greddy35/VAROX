@@ -82,6 +82,9 @@ Public Class frmValv_Loc_Cli
         txtTipoMedicion.Text = ""
         txtIdTipoValvula.Text = ""
         txtTipoValvula.Text = ""
+        txtUnidad.Text = ""
+        txtMoneda.Text = ""
+        txtValorUnd.Text = ""
         txtEstado.Text = ""
         txtCreadoPor.Text = ""
         txtCreadoEl.Text = ""
@@ -233,6 +236,9 @@ Public Class frmValv_Loc_Cli
                     txtTipoValvula.Text = CStr(fila(4)).ToString
                     txtIdTipoMedicion.Text = CInt(fila(5)).ToString
                     txtTipoMedicion.Text = CStr(fila(6)).ToString
+                    txtUnidad.Text = CStr(fila(7)).ToString
+                    txtMoneda.Text = CStr(fila(8)).ToString
+                    txtValorUnd.Text = CStr(fila(9)).ToString
                 Next
             End If
         Catch ex As Exception

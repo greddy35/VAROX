@@ -31,7 +31,6 @@ Partial Public Class rptCorteEjecutivo
         Dim XrSummary9 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
         Dim XrSummary10 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
         Dim XrSummary11 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
-        Dim MsSqlConnectionParameters1 As DevExpress.DataAccess.ConnectionParameters.MsSqlConnectionParameters = New DevExpress.DataAccess.ConnectionParameters.MsSqlConnectionParameters()
         Dim StoredProcQuery1 As DevExpress.DataAccess.Sql.StoredProcQuery = New DevExpress.DataAccess.Sql.StoredProcQuery()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(rptCorteEjecutivo))
         Dim DynamicListLookUpSettings1 As DevExpress.XtraReports.Parameters.DynamicListLookUpSettings = New DevExpress.XtraReports.Parameters.DynamicListLookUpSettings()
@@ -89,6 +88,7 @@ Partial Public Class rptCorteEjecutivo
         Me.sqlDataSource1 = New DevExpress.DataAccess.Sql.SqlDataSource(Me.components)
         Me.Style1 = New DevExpress.XtraReports.UI.XRControlStyle()
         Me.Style2 = New DevExpress.XtraReports.UI.XRControlStyle()
+        Me.simb_moneda = New DevExpress.XtraReports.UI.CalculatedField()
         Me.fechaIni = New DevExpress.XtraReports.Parameters.Parameter()
         Me.fechaFin = New DevExpress.XtraReports.Parameters.Parameter()
         Me.cliente = New DevExpress.XtraReports.Parameters.Parameter()
@@ -110,7 +110,7 @@ Partial Public Class rptCorteEjecutivo
         '
         'BottomMargin
         '
-        Me.BottomMargin.HeightF = 51.76383!
+        Me.BottomMargin.HeightF = 51.76384!
         Me.BottomMargin.Name = "BottomMargin"
         '
         'GroupHeader4
@@ -802,7 +802,8 @@ Partial Public Class rptCorteEjecutivo
         '
         'label50
         '
-        Me.label50.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([IMPUESTO])")})
+        Me.label50.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(StartsWith([MONEDA], 'D'),Concat('$ ', sumSum([IMPUESTO])) , Iif(StartsWith([" &
+                    "MONEDA], 'C'),Concat('₡ ', sumSum([IMPUESTO])), ''))" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10))})
         Me.label50.Font = New DevExpress.Drawing.DXFont("Times New Roman", 9.75!, DevExpress.Drawing.DXFontStyle.Bold)
         Me.label50.LocationFloat = New DevExpress.Utils.PointFloat(586.5002!, 100.6389!)
         Me.label50.Multiline = True
@@ -815,7 +816,7 @@ Partial Public Class rptCorteEjecutivo
         Me.label50.Summary = XrSummary8
         Me.label50.Text = "label33"
         Me.label50.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.label50.TextFormatString = "{0:#,#.000}"
+        Me.label50.TextFormatString = "{0:0,0.000}"
         '
         'label49
         '
@@ -856,7 +857,7 @@ Partial Public Class rptCorteEjecutivo
         Me.label47.Summary = XrSummary9
         Me.label47.Text = "label30"
         Me.label47.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.label47.TextFormatString = "{0:#,#.000}"
+        Me.label47.TextFormatString = "{0:0,0.000}"
         '
         'label46
         '
@@ -873,7 +874,7 @@ Partial Public Class rptCorteEjecutivo
         Me.label46.Summary = XrSummary10
         Me.label46.Text = "label29"
         Me.label46.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.label46.TextFormatString = "{0:#,#.000}"
+        Me.label46.TextFormatString = "{0:0,0.000}"
         '
         'label17
         '
@@ -902,7 +903,7 @@ Partial Public Class rptCorteEjecutivo
         Me.label14.Summary = XrSummary11
         Me.label14.Text = "label14"
         Me.label14.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
-        Me.label14.TextFormatString = "{0:#,#.000}"
+        Me.label14.TextFormatString = "{0:0,0.000}"
         '
         'label7
         '
@@ -935,13 +936,7 @@ Partial Public Class rptCorteEjecutivo
         '
         'sqlDataSource1
         '
-        Me.sqlDataSource1.ConnectionName = "Connection"
-        MsSqlConnectionParameters1.AuthorizationType = DevExpress.DataAccess.ConnectionParameters.MsSqlAuthorizationType.SqlServer
-        MsSqlConnectionParameters1.DatabaseName = "VAROX"
-        MsSqlConnectionParameters1.Password = "$@QU@F00D5$*"
-        MsSqlConnectionParameters1.ServerName = "10.0.5.35"
-        MsSqlConnectionParameters1.UserName = "sa"
-        Me.sqlDataSource1.ConnectionParameters = MsSqlConnectionParameters1
+        Me.sqlDataSource1.ConnectionName = "VAROXConnectionString"
         Me.sqlDataSource1.Name = "sqlDataSource1"
         StoredProcQuery1.Name = "R_cargarVista"
         StoredProcQuery1.StoredProcName = "R_cargarVista"
@@ -968,6 +963,12 @@ Partial Public Class rptCorteEjecutivo
         Me.Style2.Name = "Style2"
         Me.Style2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.Style2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        '
+        'simb_moneda
+        '
+        Me.simb_moneda.DataMember = "R_cargarVista"
+        Me.simb_moneda.Expression = "Iif([MONEDA] LIKE 'DOLAR','$' ,Iif([MONEDA] LIKE 'COLON','₡' , '') )"
+        Me.simb_moneda.Name = "simb_moneda"
         '
         'fechaIni
         '
@@ -1030,12 +1031,13 @@ Partial Public Class rptCorteEjecutivo
         'rptCorteEjecutivo
         '
         Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.TopMargin, Me.Detail, Me.BottomMargin, Me.GroupHeader4, Me.GroupHeader1, Me.GroupFooter2, Me.PageFooter})
+        Me.CalculatedFields.AddRange(New DevExpress.XtraReports.UI.CalculatedField() {Me.simb_moneda})
         Me.ComponentStorage.AddRange(New System.ComponentModel.IComponent() {Me.sqlDataSource1})
         Me.DataMember = "R_cargarVista"
         Me.DataSource = Me.sqlDataSource1
         Me.FilterString = "[TIMESTAMP] Between(?fechaIni, ?fechaFin) And [NIT] In (?cliente) And [ESTADO_LOC" &
     "AL] In (?estado) And [TIPO_VALVULA] In (?tipo_medida) And [MONEDA] In (?moneda)"
-        Me.Margins = New DevExpress.Drawing.DXMargins(50.0!, 50.0!, 162.877!, 51.76383!)
+        Me.Margins = New DevExpress.Drawing.DXMargins(50.0!, 50.0!, 162.877!, 51.76384!)
         Me.ParameterPanelLayoutItems.AddRange(New DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem() {New DevExpress.XtraReports.Parameters.ParameterLayoutItem(Me.fechaIni, DevExpress.XtraReports.Parameters.Orientation.Horizontal), New DevExpress.XtraReports.Parameters.ParameterLayoutItem(Me.fechaFin, DevExpress.XtraReports.Parameters.Orientation.Horizontal), New DevExpress.XtraReports.Parameters.ParameterLayoutItem(Me.cliente, DevExpress.XtraReports.Parameters.Orientation.Horizontal), New DevExpress.XtraReports.Parameters.ParameterLayoutItem(Me.estado, DevExpress.XtraReports.Parameters.Orientation.Horizontal), New DevExpress.XtraReports.Parameters.ParameterLayoutItem(Me.tipo_medida, DevExpress.XtraReports.Parameters.Orientation.Horizontal), New DevExpress.XtraReports.Parameters.ParameterLayoutItem(Me.moneda, DevExpress.XtraReports.Parameters.Orientation.Horizontal)})
         Me.Parameters.AddRange(New DevExpress.XtraReports.Parameters.Parameter() {Me.fechaIni, Me.fechaFin, Me.cliente, Me.estado, Me.tipo_medida, Me.moneda})
         Me.ScriptsSource = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "private void calculatedField1_GetValue(object sender, DevExpress.XtraReports.UI" &
@@ -1097,6 +1099,7 @@ Partial Public Class rptCorteEjecutivo
     Friend WithEvents sqlDataSource1 As DevExpress.DataAccess.Sql.SqlDataSource
     Friend WithEvents Style1 As DevExpress.XtraReports.UI.XRControlStyle
     Friend WithEvents Style2 As DevExpress.XtraReports.UI.XRControlStyle
+    Friend WithEvents simb_moneda As DevExpress.XtraReports.UI.CalculatedField
     Friend WithEvents fechaIni As DevExpress.XtraReports.Parameters.Parameter
     Friend WithEvents fechaFin As DevExpress.XtraReports.Parameters.Parameter
     Friend WithEvents cliente As DevExpress.XtraReports.Parameters.Parameter

@@ -1,4 +1,5 @@
-﻿Imports SISTEMA.DATOS
+﻿Imports System.Data.SqlClient
+Imports SISTEMA.DATOS
 
 Public Class NHistorico
     Public Function NCargarListado()
@@ -34,5 +35,6 @@ Public Class NHistorico
             Return Nothing
         End Try
     End Function
+
 End Class
 

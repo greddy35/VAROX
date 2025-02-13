@@ -401,6 +401,7 @@
   <ItemGroup>
     <Content Include="IconoVarox.ico" />
     <Content Include="Reportería\Dashboard.xml" />
+    <None Include="Resources\EntradaMall.jpg" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

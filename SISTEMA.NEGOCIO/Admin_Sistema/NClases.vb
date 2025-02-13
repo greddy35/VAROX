@@ -82,4 +82,17 @@ Public Class NClases
         End Try
     End Function
 
+
+    Public Function NEjecutarTransacciones(ByVal sqlString As ArrayList) As Integer
+
+        Dim msj As Integer = 0
+        Try
+            Dim Datos As New DClases
+            msj = Datos.EjecutarTransacciones(sqlString)
+            Return msj
+        Catch ex As Exception
+            Return msj
+        End Try
+
+    End Function
 End Class
