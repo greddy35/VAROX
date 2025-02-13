@@ -1,8 +1,11 @@
 ﻿Imports DevExpress.DataAccess.Sql
 Imports DevExpress.XtraBars
 Imports DevExpress.XtraPivotGrid
+Imports DevExpress.XtraReports.Design.XtraTabControl
 Imports DevExpress.XtraReports.UI
+Imports SISTEMA.DATOS
 Imports SISTEMA.NEGOCIO
+Imports System.Collections
 Imports System.ComponentModel
 Imports System.Threading
 
@@ -11,6 +14,7 @@ Public Class frmReporteria
 #Region "Variables Globales"
     Dim gestor As New NReportes
     Dim gestorH As New NHistorico
+    Dim gestorC As New NClases
     'Dim UnidDisco As String = Mid(Environment.SystemDirectory.ToString, 1, 3)
     'VARIABLES PARA CONTROL DE LOS PROGRESBAR
     Dim Progreso As Integer = 0
@@ -86,16 +90,19 @@ Public Class frmReporteria
         End If
     End Function
     Private Function consultarHistorico() As SqlDataSource
-        Dim dsc As New SqlDataSource
-        dsc = gestor.NConsultarHistorico_sqlds(fechIni, fechFin)
-        ModuleGlobales.fechI = fechIni
-        ModuleGlobales.fechF = fechFin
-        PivotGridControl1.DataSource = dsc
-        PivotGridControl1.DataMember = "R_consultarHistorico"
+        Try
+            Dim dsc As New SqlDataSource
+            dsc = gestor.NConsultarHistorico_sqlds(fechIni, fechFin)
+            ModuleGlobales.fechI = fechIni
+            ModuleGlobales.fechF = fechFin
+            PivotGridControl1.DataSource = dsc
+            PivotGridControl1.DataMember = "R_consultarHistorico"
+            SqlDataSource1 = dsc
+            Return dsc
+        Catch ex As Exception
+            Return Nothing
+        End Try
 
-
-        SqlDataSource1 = dsc
-        Return dsc
     End Function
 
     Public Sub ShowPivotGridPreview(ByVal pivotGrid As PivotGridControl)
@@ -198,6 +205,7 @@ Public Class frmReporteria
                 If BackgroundWorker1.WorkerSupportsCancellation Then
                     GroupBox1.Visible = False
                     BackgroundWorker1.CancelAsync()
+                    BackgroundWorker1.Dispose()
                 End If
             End If
         End If
@@ -213,17 +221,25 @@ Public Class frmReporteria
             Dim listado As DataSet = Nothing
             Dim ins As Integer = 0
             Dim actu As Integer = 0
-            notificacion = "Espere mientras se ejecutan los cálculos..."
+            notificacion = "Preparando información a calcular..."
             BackgroundWorker1.ReportProgress(1)
             listado = gestor.NCrearListadoValvulas(fechIni, fechFin)       'Obtenemos las vinculaciones a construir
-            notificacion = "Dispositivos a procesar: " + listado.Tables(0).Rows().Count.ToString
+            notificacion = "Cálculando lecturas de: " + listado.Tables(0).Rows().Count.ToString + " dispositivos..."
             BackgroundWorker1.ReportProgress(1)
             'Thread.Sleep(500)
             If Not listado Is Nothing Then
                 Dim flag As Boolean = False
                 For Each fila As DataRow In listado.Tables(0).Rows()
                     contenedor = gestorH.NCargarValoresValvula(fila(4).ToString, fila(6).ToString, "%" + fila(2).ToString + "%", "%" + fila(3).ToString + "%", fila(5).ToString, "%" + fila(1).ToString + "%", fechIni, fechFin, CDate(fila(7)).ToString("yyyy-MM-dd 00:00:00.000"), CDate(fila(8)).ToString("yyyy-MM-dd 00:00:00.000"), fila(1).ToString)
-                    If contenedor.Tables(0).Rows.Count > 0 Then
+                    If contenedor.Tables(0).Rows.Count > 1 Then 'La consulta siempre genera un registro por defecto, por eso se busca si es mayor a 1
+                        'Se ejecuta cuando cancelamos la operación
+                        '------------------------------------------------
+                        notificacion = "Procesando (" + contenedor.Tables(0).Rows().Count.ToString + ") lecturas del dispositivo: (" + fila(1).ToString + ")..."
+                        BackgroundWorker1.ReportProgress(1)
+                        If BackgroundWorker1.CancellationPending Then
+                            e.Cancel = True
+                            Return
+                        End If
                         Dim ultLect As Decimal = 0
                         Dim flag2 As Boolean = False
                         Dim flag3 As Boolean = False
@@ -232,9 +248,10 @@ Public Class frmReporteria
                         'Thread.Sleep(500)
                         Dim cont As Integer = 1
                         For Each consumo As DataRow In contenedor.Tables(0).Rows()
-                            'notificacion = "Calculando: " + cont.ToString + " registro de: " + contenedor.Tables(0).Rows().Count.ToString + " del dispositivo: " + consumo(0).ToString
-                            'BackgroundWorker1.ReportProgress(1)
-                            'Thread.Sleep(500)
+                            If BackgroundWorker1.CancellationPending Then
+                                e.Cancel = True
+                                Return
+                            End If
                             If flag2 = False Then
                                 consumo.Item(3) = 0
                                 flag2 = True
@@ -299,11 +316,12 @@ Public Class frmReporteria
                 Next
                 If Not base Is Nothing Then
                     total = base.Tables(0).Rows().Count
-                    notificacion = "Se procesarán: " + total.ToString + " registros"
-                    BackgroundWorker1.ReportProgress(1)
-                    'Thread.Sleep(500)
                     If total > 0 Then
+                        notificacion = "Se registrarán: " + total.ToString + " registros"
+                        BackgroundWorker1.ReportProgress(1)
+                        'Thread.Sleep(500)
                         Dim resultado As New DataSet
+                        Dim transacciones As New ArrayList 'Almacena las transacciones a ejecutar
                         For Each fila As DataRow In base.Tables(0).Rows()      'Recorremos los Horarios para actualizar o insertar en la BD.BIOSOFT
                             Try
                                 resultado = gestor.NBuscarHistorico(fila(0).ToString, CDate(fila(1).ToString).ToString("yyyy-MM-dd HH:mm:ss.fff"))
@@ -312,18 +330,28 @@ Public Class frmReporteria
                                     If resultado.Tables(0).Rows.Count > 0 Then
                                         For Each result As DataRow In resultado.Tables(0).Rows()
                                             id = CInt(result(0))
+                                            'Existe y hay que actualizarlo
+                                            transacciones.Add("UPDATE  [dbo].[R_HISTORICO_REAL] SET [TIMESTAMP] = '" + fila(1).ToString + "',[DISPOSITIVO] = '" + fila(0).ToString + "',[LECT_ANT] = '" + fila(5).ToString + "',[VALUE] = '" + fila(2).ToString + "',[CONSUMO] = '" + fila(3).ToString + "',[REVISION] = '" + fila(4).ToString + "' WHERE ID = " + id.ToString + "")
+                                            actu = actu + 1
+                                            Console.WriteLine("Actualizado: " & fila(0).ToString)
                                         Next
                                     End If
-                                End If
-                                If (id <> 0) Then
-                                    gestor.NModificar(id.ToString, fila(0).ToString, fila(1).ToString, fila(2).ToString, fila(3).ToString, fila(4).ToString, fila(5).ToString)
-                                    actu = actu + 1
-                                    Console.WriteLine("Actualizado: " & fila(0).ToString)
-                                Else
-                                    gestor.NInsertar(fila(0).ToString, fila(1).ToString, fila(2).ToString, fila(3).ToString, fila(4).ToString, fila(5).ToString)
+                                Else 'No existe y hay que insertarlo
+                                    'REVISAR ORDEN DE CAMPOS
+                                    transacciones.Add("INSERT INTO [dbo].[R_HISTORICO_REAL] ([TIMESTAMP],[DISPOSITIVO],[LECT_ANT],[VALUE],[CONSUMO],[REVISION]) VALUES ('" + fila(1).ToString + "','" + fila(0).ToString + "','" + fila(5).ToString + "','" + fila(2).ToString + "','" + fila(3).ToString + "','" + fila(4).ToString + "')")
                                     ins = ins + 1
                                     Console.WriteLine("Insertado: " & fila(0).ToString)
                                 End If
+                                'Metodo viejo
+                                'If (id <> 0) Then
+                                '    gestor.NModificar(id.ToString, fila(0).ToString, fila(1).ToString, fila(2).ToString, fila(3).ToString, fila(4).ToString, fila(5).ToString)
+                                '    actu = actu + 1
+                                '    Console.WriteLine("Actualizado: " & fila(0).ToString)
+                                'Else
+                                '    gestor.NInsertar(fila(0).ToString, fila(1).ToString, fila(2).ToString, fila(3).ToString, fila(4).ToString, fila(5).ToString)
+                                '    ins = ins + 1
+                                '    Console.WriteLine("Insertado: " & fila(0).ToString)
+                                'End If
                                 'Actualizamos el progreso
                                 Contador = Contador + 1
                                 notificacion = "Registrando: " + Contador.ToString + " registros de: " + total.ToString
@@ -333,13 +361,36 @@ Public Class frmReporteria
                                 Console.WriteLine("Error: " & ex.ToString)
                             End Try
                         Next
+
+                        'PREGUNTA DE CONFIRMACION PARA EJECUTAR LAS TRANSACCIONES GENERADAS
+                        If MessageBox.Show("Se generaron:" & vbCrLf & vbCrLf &
+                            "Registros a Insertar: " & vbCrLf &
+                            "Registros a Actualizar: " & vbCrLf & vbCrLf &
+                            "¿Seguro de guardar en Sistema todos los registros calculados en el proceso de construcción?" & vbCrLf &
+                            "(SI) Aceptar, (NO) Cancelar", "Guardar Construcción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+                            If gestorC.NEjecutarTransacciones(transacciones) = 1 Then
+                                MsgBox("Se registraron todos los registros", MsgBoxStyle.Information)
+                            Else
+                                MsgBox("Ocurrio un error al registrar en la base de datos", MsgBoxStyle.Critical)
+                            End If
+                        Else
+                            MsgBox("Se canceló el guardado de la construcción de datos", MsgBoxStyle.Exclamation)
+                            Return
+                        End If
+
                         'Console.WriteLine("Registros Insertados: " & ins.ToString)
-                        'Console.WriteLine("Registros Actualizados: " & actu.ToString)Else
+                        'Console.WriteLine("Registros Actualizados: " & actu.ToString)Else 
                     Else
                         MessageBox.Show("No se encontraron datos en el rango seleccionado", "Sin Datos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                     End If
+                Else
+                    MessageBox.Show("No se encontraron datos en el rango seleccionado", "Sin Datos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 End If
             Else
+                If BackgroundWorker1.CancellationPending Then
+                    e.Cancel = True
+                    Return
+                End If
                 MessageBox.Show("No se encontraron datos en el rango seleccionado", "Sin Datos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             End If
 
@@ -349,17 +400,16 @@ Public Class frmReporteria
         End Try
         '---------------------------------------------------
 
-        'Se ejecuta cuando cancelamos la operación
-        '------------------------------------------------
-        If BackgroundWorker1.CancellationPending Then
-            e.Cancel = True
-            'Rollback'
-        End If
     End Sub
 
     Private Sub BackgroundWorker1_ProgressChanged(sender As Object, e As ProgressChangedEventArgs) Handles BackgroundWorker1.ProgressChanged
         'CALCULAMOS EL PORCENTAJE DE PROGRESO SEGUN LOS REGISTROS A ACTUALIZAR
-        Progreso = CInt((Contador / total) * 100)
+        Try
+            Progreso = CInt((Contador / total) * 100)
+        Catch ex As Exception
+            Progreso = 0
+        End Try
+        'Progreso = CInt((Contador / total) * 100)
         'Validamos si se pasa de 100%
         If Progreso >= 100 Then
             ProgressBar1.Value = 100
@@ -374,11 +424,14 @@ Public Class frmReporteria
 
     Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
         If e.Error IsNot Nothing Then
+            Me.BringToFront()
             MessageBox.Show("Ocurrio un error inesperado" + e.Error.ToString, "Construcción de datos", MessageBoxButtons.OK, MessageBoxIcon.Error)
         ElseIf e.Cancelled Then
+            Me.BringToFront()
             MessageBox.Show("Construcción Cancelada", "Construcción de datos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         Else
-            MessageBox.Show("Construcción de datos completada", "Construcción de datos", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Me.BringToFront()
+            MessageBox.Show("Proceso de Construcción de datos terminado", "Construcción de datos", MessageBoxButtons.OK, MessageBoxIcon.Information)
             cargarConstruccion()
         End If
         'Reiniciamos los componentes
@@ -388,6 +441,7 @@ Public Class frmReporteria
         txtProcesados.Text = "0"
         Contador = 0
         GroupBox1.Visible = False
+
         'llenarPivot()         
     End Sub
 
@@ -408,6 +462,7 @@ Public Class frmReporteria
             End If
         Else
             MessageBox.Show("Ya existe un proceso de cálculo en progreso, espere que finalice para iniciar otro", "Procesos en progreso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            GroupBox1.Visible = True
         End If
     End Sub
 
@@ -487,6 +542,15 @@ Public Class frmReporteria
         report.Parameters("fechaFin").Description = "Fecha Hasta:"
         report.Parameters("fechaFin").Value = fechFin
         report.ShowRibbonPreview()
+    End Sub
+
+    Private Sub btnOcultarVentana_Click(sender As Object, e As EventArgs) Handles btnOcultarVentana.Click
+        If MessageBox.Show("Se ocultará la ventana de progeso," & vbCrLf &
+                        "podrá trabajar otras tareas mientras se completa el proceso en segundo plano." & vbCrLf & vbCrLf &
+                        "Se notificará una vez haya terminado el proceso." & vbCrLf & vbCrLf &
+                        "¿Seguro que desea ocultar la ventana de progreso?", "Ocultar Progreso", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+            GroupBox1.Visible = False
+        End If
     End Sub
 
 #End Region

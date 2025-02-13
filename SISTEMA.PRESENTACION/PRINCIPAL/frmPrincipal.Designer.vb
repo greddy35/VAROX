@@ -28,7 +28,6 @@ Partial Class frmPrincipal
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPrincipal))
         Me.contenedor = New DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer()
         Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.FluentFormDefaultManager1 = New DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(Me.components)
         Me.BarStaticItem6 = New DevExpress.XtraBars.BarStaticItem()
         Me.BarStaticItem7 = New DevExpress.XtraBars.BarStaticItem()
@@ -126,8 +125,6 @@ Partial Class frmPrincipal
         Me.BarDockControl8 = New DevExpress.XtraBars.BarDockControl()
         Me.contenedor.SuspendLayout()
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.PanelControl1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FluentFormDefaultManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AccordionControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FluentDesignFormControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -143,29 +140,21 @@ Partial Class frmPrincipal
         Me.contenedor.Location = New System.Drawing.Point(292, 37)
         Me.contenedor.Margin = New System.Windows.Forms.Padding(2)
         Me.contenedor.Name = "contenedor"
-        Me.contenedor.Size = New System.Drawing.Size(970, 634)
+        Me.contenedor.Size = New System.Drawing.Size(1041, 634)
         Me.contenedor.TabIndex = 0
         '
         'PanelControl1
         '
-        Me.PanelControl1.Controls.Add(Me.PictureBox1)
+        Me.PanelControl1.Appearance.BackColor = System.Drawing.Color.Transparent
+        Me.PanelControl1.Appearance.Options.UseBackColor = True
+        Me.PanelControl1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.PanelControl1.ContentImage = Global.Varox.My.Resources.Resources.EntradaMall
         Me.PanelControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelControl1.Location = New System.Drawing.Point(0, 0)
         Me.PanelControl1.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.PanelControl1.Name = "PanelControl1"
-        Me.PanelControl1.Size = New System.Drawing.Size(970, 634)
+        Me.PanelControl1.Size = New System.Drawing.Size(1041, 634)
         Me.PanelControl1.TabIndex = 0
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PictureBox1.Location = New System.Drawing.Point(2, 2)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(966, 630)
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
         '
         'FluentFormDefaultManager1
         '
@@ -647,7 +636,7 @@ Partial Class frmPrincipal
         Me.FluentDesignFormControl1.Manager = Me.FluentFormDefaultManager1
         Me.FluentDesignFormControl1.Margin = New System.Windows.Forms.Padding(2)
         Me.FluentDesignFormControl1.Name = "FluentDesignFormControl1"
-        Me.FluentDesignFormControl1.Size = New System.Drawing.Size(1262, 37)
+        Me.FluentDesignFormControl1.Size = New System.Drawing.Size(1333, 37)
         Me.FluentDesignFormControl1.TabIndex = 2
         Me.FluentDesignFormControl1.TabStop = False
         Me.FluentDesignFormControl1.TitleItemLinks.Add(Me.BarStaticItem6)
@@ -798,7 +787,7 @@ Partial Class frmPrincipal
         Me.barDockControlTop.Location = New System.Drawing.Point(0, 37)
         Me.barDockControlTop.Manager = Me.BarManager1
         Me.barDockControlTop.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
-        Me.barDockControlTop.Size = New System.Drawing.Size(1262, 0)
+        Me.barDockControlTop.Size = New System.Drawing.Size(1333, 0)
         '
         'barDockControlBottom
         '
@@ -807,7 +796,7 @@ Partial Class frmPrincipal
         Me.barDockControlBottom.Location = New System.Drawing.Point(0, 671)
         Me.barDockControlBottom.Manager = Me.BarManager1
         Me.barDockControlBottom.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
-        Me.barDockControlBottom.Size = New System.Drawing.Size(1262, 40)
+        Me.barDockControlBottom.Size = New System.Drawing.Size(1333, 40)
         '
         'barDockControlLeft
         '
@@ -822,7 +811,7 @@ Partial Class frmPrincipal
         '
         Me.barDockControlRight.CausesValidation = False
         Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
-        Me.barDockControlRight.Location = New System.Drawing.Point(1262, 37)
+        Me.barDockControlRight.Location = New System.Drawing.Point(1333, 37)
         Me.barDockControlRight.Manager = Me.BarManager1
         Me.barDockControlRight.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.barDockControlRight.Size = New System.Drawing.Size(0, 634)
@@ -860,7 +849,7 @@ Partial Class frmPrincipal
         Me.BarDockControl1.Dock = System.Windows.Forms.DockStyle.Top
         Me.BarDockControl1.Location = New System.Drawing.Point(0, 37)
         Me.BarDockControl1.Manager = Me.BarManager2
-        Me.BarDockControl1.Size = New System.Drawing.Size(1262, 0)
+        Me.BarDockControl1.Size = New System.Drawing.Size(1333, 0)
         '
         'BarDockControl2
         '
@@ -868,7 +857,7 @@ Partial Class frmPrincipal
         Me.BarDockControl2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.BarDockControl2.Location = New System.Drawing.Point(0, 711)
         Me.BarDockControl2.Manager = Me.BarManager2
-        Me.BarDockControl2.Size = New System.Drawing.Size(1262, 0)
+        Me.BarDockControl2.Size = New System.Drawing.Size(1333, 0)
         '
         'BarDockControl3
         '
@@ -882,7 +871,7 @@ Partial Class frmPrincipal
         '
         Me.BarDockControl4.CausesValidation = False
         Me.BarDockControl4.Dock = System.Windows.Forms.DockStyle.Right
-        Me.BarDockControl4.Location = New System.Drawing.Point(1262, 37)
+        Me.BarDockControl4.Location = New System.Drawing.Point(1333, 37)
         Me.BarDockControl4.Manager = Me.BarManager2
         Me.BarDockControl4.Size = New System.Drawing.Size(0, 674)
         '
@@ -900,7 +889,7 @@ Partial Class frmPrincipal
         Me.BarDockControl5.Dock = System.Windows.Forms.DockStyle.Top
         Me.BarDockControl5.Location = New System.Drawing.Point(0, 37)
         Me.BarDockControl5.Manager = Me.BarManager3
-        Me.BarDockControl5.Size = New System.Drawing.Size(1262, 0)
+        Me.BarDockControl5.Size = New System.Drawing.Size(1333, 0)
         '
         'BarDockControl6
         '
@@ -908,7 +897,7 @@ Partial Class frmPrincipal
         Me.BarDockControl6.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.BarDockControl6.Location = New System.Drawing.Point(0, 711)
         Me.BarDockControl6.Manager = Me.BarManager3
-        Me.BarDockControl6.Size = New System.Drawing.Size(1262, 0)
+        Me.BarDockControl6.Size = New System.Drawing.Size(1333, 0)
         '
         'BarDockControl7
         '
@@ -922,7 +911,7 @@ Partial Class frmPrincipal
         '
         Me.BarDockControl8.CausesValidation = False
         Me.BarDockControl8.Dock = System.Windows.Forms.DockStyle.Right
-        Me.BarDockControl8.Location = New System.Drawing.Point(1262, 37)
+        Me.BarDockControl8.Location = New System.Drawing.Point(1333, 37)
         Me.BarDockControl8.Manager = Me.BarManager3
         Me.BarDockControl8.Size = New System.Drawing.Size(0, 674)
         '
@@ -930,7 +919,7 @@ Partial Class frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1262, 711)
+        Me.ClientSize = New System.Drawing.Size(1333, 711)
         Me.ControlContainer = Me.contenedor
         Me.Controls.Add(Me.contenedor)
         Me.Controls.Add(Me.AccordionControl1)
@@ -954,12 +943,10 @@ Partial Class frmPrincipal
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frmPrincipal"
         Me.NavigationControl = Me.AccordionControl1
-        Me.Text = "VAROX 1.1.0         "
+        Me.Text = "VAROX 1.2.0.1        "
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.contenedor.ResumeLayout(False)
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.PanelControl1.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FluentFormDefaultManager1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AccordionControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FluentDesignFormControl1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1045,7 +1032,6 @@ Partial Class frmPrincipal
     Friend WithEvents BarDockControl5 As DevExpress.XtraBars.BarDockControl
     Friend WithEvents BarDockControl6 As DevExpress.XtraBars.BarDockControl
     Friend WithEvents BarDockControl8 As DevExpress.XtraBars.BarDockControl
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents AccordionControlSeparator31 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
     Friend WithEvents AccordionControlSeparator24 As DevExpress.XtraBars.Navigation.AccordionControlSeparator
     Friend WithEvents accSubModAnalisis As DevExpress.XtraBars.Navigation.AccordionControlElement

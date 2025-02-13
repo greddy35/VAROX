@@ -1,0 +1,581 @@
+﻿<XtraSerializer version="1.0" application="PivotGrid">
+  <property name="#LayoutVersion" />
+  <property name="#LayoutScaleFactor">@1,Width=1@1,Height=1</property>
+  <property name="FixedColumnFieldValues" iskey="true" value="0" />
+  <property name="Fields" iskey="true" value="23">
+    <property name="Item1" isnull="true" iskey="true">
+      <property name="ImageIndex">-1</property>
+      <property name="ToolTips" isnull="true" iskey="true">
+        <property name="HeaderText" />
+        <property name="ValueText" />
+      </property>
+      <property name="FieldEditName" />
+      <property name="Name">PivotGridField1</property>
+      <property name="DataBinding" isnull="true" iskey="true">
+        <property name="ColumnName">ID_VINC</property>
+        <property name="GroupInterval">Default</property>
+        <property name="GroupIntervalNumericRange">10</property>
+        <property name="TypeNameSerializable">DataSourceColumnBinding</property>
+      </property>
+      <property name="Index">0</property>
+      <property name="AreaIndex">0</property>
+      <property name="MinWidth">20</property>
+      <property name="Width">100</property>
+    </property>
+    <property name="Item2" isnull="true" iskey="true">
+      <property name="ImageIndex">-1</property>
+      <property name="ToolTips" isnull="true" iskey="true">
+        <property name="HeaderText" />
+        <property name="ValueText" />
+      </property>
+      <property name="FieldEditName" />
+      <property name="Name">PivotGridField20</property>
+      <property name="DataBinding" isnull="true" iskey="true">
+        <property name="ColumnName">ESTADO_VINC</property>
+        <property name="GroupInterval">Default</property>
+        <property name="GroupIntervalNumericRange">10</property>
+        <property name="TypeNameSerializable">DataSourceColumnBinding</property>
+      </property>
+      <property name="Index">1</property>
+      <property name="AreaIndex">1</property>
+      <property name="SortOrder">Descending</property>
+      <property name="MinWidth">20</property>
+      <property name="Width">100</property>
+    </property>
+    <property name="Item3" isnull="true" iskey="true">
+      <property name="ImageIndex">-1</property>
+      <property name="ToolTips" isnull="true" iskey="true">
+        <property name="HeaderText" />
+        <property name="ValueText" />
+      </property>
+      <property name="FieldEditName" />
+      <property name="Name">PivotGridField2</property>
+      <property name="DataBinding" isnull="true" iskey="true">
+        <property name="ColumnName">VALVULA</property>
+        <property name="GroupInterval">Default</property>
+        <property name="GroupIntervalNumericRange">10</property>
+        <property name="TypeNameSerializable">DataSourceColumnBinding</property>
+      </property>
+      <property name="Area">RowArea</property>
+      <property name="Index">2</property>
+      <property name="AreaIndex">3</property>
+      <property name="SortOrder">Descending</property>
+      <property name="MinWidth">100</property>
+      <property name="Width">100</property>
+    </property>
+    <property name="Item4" isnull="true" iskey="true">
+      <property name="ImageIndex">-1</property>
+      <property name="ToolTips" isnull="true" iskey="true">
+        <property name="HeaderText" />
+        <property name="ValueText" />
+      </property>
+      <property name="FieldEditName" />
+      <property name="Name">PivotGridField3</property>
+      <property name="DataBinding" isnull="true" iskey="true">
+        <property name="ColumnName">VALVULA_PADRE</property>
+        <property name="GroupInterval">Default</property>
+        <property name="GroupIntervalNumericRange">10</property>
+        <property name="TypeNameSerializable">DataSourceColumnBinding</property>
+      </property>
+      <property name="Area">RowArea</property>
+      <property name="ExpandedInFieldsGroup">false</property>
+      <property name="Index">3</property>
+      <property name="AreaIndex">2</property>
+      <property name="MinWidth">100</property>
+      <property name="Width">130</property>
+    </property>
+    <property name="Item5" isnull="true" iskey="true">
+      <property name="ImageIndex">-1</property>
+      <property name="ToolTips" isnull="true" iskey="true">
+        <property name="HeaderText" />
+        <property name="ValueText" />
+      </property>
+      <property name="FieldEditName" />
+      <property name="Name">PivotGridField4</property>
+      <property name="DataBinding" isnull="true" iskey="true">
+        <property name="ColumnName">NOMBRE_CLIENTE</property>
+        <property name="GroupInterval">Default</property>
+        <property name="GroupIntervalNumericRange">10</property>
+        <property name="TypeNameSerializable">DataSourceColumnBinding</property>
+      </property>
+      <property name="Area">RowArea</property>
+      <property name="Index">4</property>
+      <property name="AreaIndex">0</property>
+      <property name="MinWidth">100</property>
+      <property name="Width">140</property>
+    </property>
+    <property name="Item6" isnull="true" iskey="true">
+      <property name="ImageIndex">-1</property>
+      <property name="ToolTips" isnull="true" iskey="true">
+        <property name="HeaderText" />
+        <property name="ValueText" />
+      </property>
+      <property name="FieldEditName" />
+      <property name="Name">PivotGridField5</property>
+      <property name="DataBinding" isnull="true" iskey="true">
+        <property name="ColumnName">NIT</property>
+        <property name="GroupInterval">Default</property>
+        <property name="GroupIntervalNumericRange">10</property>
+        <property name="TypeNameSerializable">DataSourceColumnBinding</property>
+      </property>
+      <property name="Index">5</property>
+      <property name="AreaIndex">5</property>
+      <property name="MinWidth">100</property>
+      <property name="Width">120</property>
+    </property>
+    <property name="Item7" isnull="true" iskey="true">
+      <property name="ImageIndex">-1</property>
+      <property name="ToolTips" isnull="true" iskey="true">
+        <property name="HeaderText" />
+        <property name="ValueText" />
+      </property>
+      <property name="FieldEditName" />
+      <property name="Name">PivotGridField15</property>
+      <property name="DataBinding" isnull="true" iskey="true">
+        <property name="ColumnName">ESTADO_LOCAL</property>
+        <property name="GroupInterval">Default</property>
+        <property name="GroupIntervalNumericRange">10</property>
+        <property name="TypeNameSerializable">DataSourceColumnBinding</property>
+      </property>
+      <property name="Index">6</property>
+      <property name="AreaIndex">6</property>
+      <property name="SortOrder">Descending</property>
+      <property name="MinWidth">20</property>
+      <property name="Width">100</property>
+    </property>
+    <property name="Item8" isnull="true" iskey="true">
+      <property name="ImageIndex">-1</property>
+      <property name="ToolTips" isnull="true" iskey="true">
+        <property name="HeaderText" />
+        <property name="ValueText" />
+      </property>
+      <property name="FieldEditName" />
+      <property name="Name">PivotGridField16</property>
+      <property name="DataBinding" isnull="true" iskey="true">
+        <property name="ColumnName">IVA</property>
+        <property name="GroupInterval">Default</property>
+        <property name="GroupIntervalNumericRange">10</property>
+        <property name="TypeNameSerializable">DataSourceColumnBinding</property>
+      </property>
+      <property name="Index">7</property>
+      <property name="AreaIndex">7</property>
+      <property name="SortOrder">Descending</property>
+      <property name="MinWidth">20</property>
+      <property name="Width">100</property>
+    </property>
+    <property name="Item9" isnull="true" iskey="true">
+      <property name="ImageIndex">-1</property>
+      <property name="ToolTips" isnull="true" iskey="true">
+        <property name="HeaderText" />
+        <property name="ValueText" />
+      </property>
+      <property name="FieldEditName" />
+      <property name="Name">PivotGridField17</property>
+      <property name="DataBinding" isnull="true" iskey="true">
+        <property name="ColumnName">VALOR_UNIDAD</property>
+        <property name="GroupInterval">Default</property>
+        <property name="GroupIntervalNumericRange">10</property>
+        <property name="TypeNameSerializable">DataSourceColumnBinding</property>
+      </property>
+      <property name="Index">8</property>
+      <property name="AreaIndex">10</property>
+      <property name="SortOrder">Descending</property>
+      <property name="MinWidth">20</property>
+      <property name="Width">100</property>
+    </property>
+    <property name="Item10" isnull="true" iskey="true">
+      <property name="ImageIndex">-1</property>
+      <property name="ToolTips" isnull="true" iskey="true">
+        <property name="HeaderText" />
+        <property name="ValueText" />
+      </property>
+      <property name="FieldEditName" />
+      <property name="Name">PivotGridField18</property>
+      <property name="DataBinding" isnull="true" iskey="true">
+        <property name="ColumnName">UNIDAD</property>
+        <property name="GroupInterval">Default</property>
+        <property name="GroupIntervalNumericRange">10</property>
+        <property name="TypeNameSerializable">DataSourceColumnBinding</property>
+      </property>
+      <property name="Index">9</property>
+      <property name="AreaIndex">9</property>
+      <property name="SortOrder">Descending</property>
+      <property name="MinWidth">20</property>
+      <property name="Width">100</property>
+    </property>
+    <property name="Item11" isnull="true" iskey="true">
+      <property name="ImageIndex">-1</property>
+      <property name="ToolTips" isnull="true" iskey="true">
+        <property name="HeaderText" />
+        <property name="ValueText" />
+      </property>
+      <property name="FieldEditName" />
+      <property name="Name">PivotGridField6</property>
+      <property name="DataBinding" isnull="true" iskey="true">
+        <property name="ColumnName">FECHA_INICIO_RIGE</property>
+        <property name="GroupInterval">Default</property>
+        <property name="GroupIntervalNumericRange">10</property>
+        <property name="TypeNameSerializable">DataSourceColumnBinding</property>
+      </property>
+      <property name="Index">10</property>
+      <property name="AreaIndex">2</property>
+      <property name="MinWidth">100</property>
+      <property name="Width">140</property>
+    </property>
+    <property name="Item12" isnull="true" iskey="true">
+      <property name="ImageIndex">-1</property>
+      <property name="ToolTips" isnull="true" iskey="true">
+        <property name="HeaderText" />
+        <property name="ValueText" />
+      </property>
+      <property name="FieldEditName" />
+      <property name="Name">PivotGridField7</property>
+      <property name="DataBinding" isnull="true" iskey="true">
+        <property name="ColumnName">FECHA_FIN_RIGE</property>
+        <property name="GroupInterval">Default</property>
+        <property name="GroupIntervalNumericRange">10</property>
+        <property name="TypeNameSerializable">DataSourceColumnBinding</property>
+      </property>
+      <property name="Index">11</property>
+      <property name="AreaIndex">3</property>
+      <property name="MinWidth">100</property>
+      <property name="Width">140</property>
+    </property>
+    <property name="Item13" isnull="true" iskey="true">
+      <property name="ImageIndex">-1</property>
+      <property name="ToolTips" isnull="true" iskey="true">
+        <property name="HeaderText" />
+        <property name="ValueText" />
+      </property>
+      <property name="FieldEditName" />
+      <property name="Name">PivotGridField8</property>
+      <property name="DataBinding" isnull="true" iskey="true">
+        <property name="ColumnName">NOMBRE_LOCAL</property>
+        <property name="GroupInterval">Default</property>
+        <property name="GroupIntervalNumericRange">10</property>
+        <property name="TypeNameSerializable">DataSourceColumnBinding</property>
+      </property>
+      <property name="Area">RowArea</property>
+      <property name="Index">12</property>
+      <property name="AreaIndex">1</property>
+      <property name="SortOrder">Descending</property>
+      <property name="MinWidth">100</property>
+      <property name="Width">140</property>
+    </property>
+    <property name="Item14" isnull="true" iskey="true">
+      <property name="ImageIndex">-1</property>
+      <property name="ToolTips" isnull="true" iskey="true">
+        <property name="HeaderText" />
+        <property name="ValueText" />
+      </property>
+      <property name="FieldEditName" />
+      <property name="Name">PivotGridField9</property>
+      <property name="DataBinding" isnull="true" iskey="true">
+        <property name="ColumnName">CODIGO_LOCAL</property>
+        <property name="GroupInterval">Default</property>
+        <property name="GroupIntervalNumericRange">10</property>
+        <property name="TypeNameSerializable">DataSourceColumnBinding</property>
+      </property>
+      <property name="Index">13</property>
+      <property name="AreaIndex">4</property>
+      <property name="MinWidth">20</property>
+      <property name="Width">100</property>
+    </property>
+    <property name="Item15" isnull="true" iskey="true">
+      <property name="ImageIndex">-1</property>
+      <property name="ToolTips" isnull="true" iskey="true">
+        <property name="HeaderText" />
+        <property name="ValueText" />
+      </property>
+      <property name="FieldEditName" />
+      <property name="Name">PivotGridField19</property>
+      <property name="DataBinding" isnull="true" iskey="true">
+        <property name="ColumnName">ESTADO_LOCAL</property>
+        <property name="GroupInterval">Default</property>
+        <property name="GroupIntervalNumericRange">10</property>
+        <property name="TypeNameSerializable">DataSourceColumnBinding</property>
+      </property>
+      <property name="Index">14</property>
+      <property name="AreaIndex">8</property>
+      <property name="SortOrder">Descending</property>
+      <property name="MinWidth">20</property>
+      <property name="Width">100</property>
+    </property>
+    <property name="Item16" isnull="true" iskey="true">
+      <property name="ImageIndex">-1</property>
+      <property name="ToolTips" isnull="true" iskey="true">
+        <property name="HeaderText" />
+        <property name="ValueText" />
+      </property>
+      <property name="FieldEditName" />
+      <property name="Name">PivotGridField10</property>
+      <property name="DataBinding" isnull="true" iskey="true">
+        <property name="ColumnName">TIMESTAMP</property>
+        <property name="GroupInterval">Default</property>
+        <property name="GroupIntervalNumericRange">10</property>
+        <property name="TypeNameSerializable">DataSourceColumnBinding</property>
+      </property>
+      <property name="Area">RowArea</property>
+      <property name="CellFormat" isnull="true" iskey="true">
+        <property name="FormatString">dd-MM-yyyy HH:mm:ss.fff</property>
+        <property name="FormatType">Custom</property>
+      </property>
+      <property name="TotalCellFormat" isnull="true" iskey="true">
+        <property name="FormatString">dd-MM-yyyy HH:mm:ss.fff</property>
+        <property name="FormatType">Custom</property>
+      </property>
+      <property name="GrandTotalCellFormat" isnull="true" iskey="true">
+        <property name="FormatString">dd-MM-yyyy HH:mm:ss.fff</property>
+        <property name="FormatType">Custom</property>
+      </property>
+      <property name="ValueFormat" isnull="true" iskey="true">
+        <property name="FormatString">dd-MM-yyyy HH:mm:ss.fff</property>
+        <property name="FormatType">Custom</property>
+      </property>
+      <property name="TotalValueFormat" isnull="true" iskey="true">
+        <property name="FormatString">dd-MM-yyyy HH:mm:ss.fff</property>
+        <property name="FormatType">Custom</property>
+      </property>
+      <property name="ExpandedInFieldsGroup">false</property>
+      <property name="Index">15</property>
+      <property name="AreaIndex">4</property>
+      <property name="MinWidth">100</property>
+      <property name="Width">170</property>
+    </property>
+    <property name="Item17" isnull="true" iskey="true">
+      <property name="ImageIndex">-1</property>
+      <property name="ToolTips" isnull="true" iskey="true">
+        <property name="HeaderText" />
+        <property name="ValueText" />
+      </property>
+      <property name="FieldEditName" />
+      <property name="Name">PivotGridField11</property>
+      <property name="DataBinding" isnull="true" iskey="true">
+        <property name="ColumnName">LECT_ANT</property>
+        <property name="GroupInterval">Default</property>
+        <property name="GroupIntervalNumericRange">10</property>
+        <property name="TypeNameSerializable">DataSourceColumnBinding</property>
+      </property>
+      <property name="Area">RowArea</property>
+      <property name="SummaryType">Min</property>
+      <property name="Index">16</property>
+      <property name="AreaIndex">5</property>
+      <property name="MinWidth">100</property>
+      <property name="Width">150</property>
+    </property>
+    <property name="Item18" isnull="true" iskey="true">
+      <property name="ImageIndex">-1</property>
+      <property name="ToolTips" isnull="true" iskey="true">
+        <property name="HeaderText" />
+        <property name="ValueText" />
+      </property>
+      <property name="FieldEditName" />
+      <property name="Name">PivotGridField12</property>
+      <property name="DataBinding" isnull="true" iskey="true">
+        <property name="ColumnName">VALUE</property>
+        <property name="GroupInterval">Default</property>
+        <property name="GroupIntervalNumericRange">10</property>
+        <property name="TypeNameSerializable">DataSourceColumnBinding</property>
+      </property>
+      <property name="Area">RowArea</property>
+      <property name="SummaryType">Max</property>
+      <property name="Index">17</property>
+      <property name="AreaIndex">6</property>
+      <property name="MinWidth">100</property>
+      <property name="Width">150</property>
+    </property>
+    <property name="Item19" isnull="true" iskey="true">
+      <property name="ImageIndex">-1</property>
+      <property name="ToolTips" isnull="true" iskey="true">
+        <property name="HeaderText" />
+        <property name="ValueText" />
+      </property>
+      <property name="FieldEditName" />
+      <property name="Name">PivotGridField13</property>
+      <property name="DataBinding" isnull="true" iskey="true">
+        <property name="ColumnName">CONSUMO</property>
+        <property name="GroupInterval">Default</property>
+        <property name="GroupIntervalNumericRange">10</property>
+        <property name="TypeNameSerializable">DataSourceColumnBinding</property>
+      </property>
+      <property name="Area">DataArea</property>
+      <property name="Index">18</property>
+      <property name="AreaIndex">0</property>
+      <property name="MinWidth">100</property>
+      <property name="Width">120</property>
+    </property>
+    <property name="Item20" isnull="true" iskey="true">
+      <property name="ImageIndex">-1</property>
+      <property name="ToolTips" isnull="true" iskey="true">
+        <property name="HeaderText" />
+        <property name="ValueText" />
+      </property>
+      <property name="FieldEditName" />
+      <property name="Name">PivotGridField21</property>
+      <property name="DataBinding" isnull="true" iskey="true">
+        <property name="ColumnName">SUB_TOTAL</property>
+        <property name="GroupInterval">Default</property>
+        <property name="GroupIntervalNumericRange">10</property>
+        <property name="TypeNameSerializable">DataSourceColumnBinding</property>
+      </property>
+      <property name="Area">DataArea</property>
+      <property name="CellFormat" isnull="true" iskey="true">
+        <property name="FormatString">n3</property>
+        <property name="FormatType">Numeric</property>
+      </property>
+      <property name="TotalCellFormat" isnull="true" iskey="true">
+        <property name="FormatString">n3</property>
+        <property name="FormatType">Numeric</property>
+      </property>
+      <property name="GrandTotalCellFormat" isnull="true" iskey="true">
+        <property name="FormatString">n3</property>
+        <property name="FormatType">Numeric</property>
+      </property>
+      <property name="ValueFormat" isnull="true" iskey="true">
+        <property name="FormatString">n3</property>
+        <property name="FormatType">Numeric</property>
+      </property>
+      <property name="TotalValueFormat" isnull="true" iskey="true">
+        <property name="FormatString">n3</property>
+        <property name="FormatType">Numeric</property>
+      </property>
+      <property name="Index">19</property>
+      <property name="AreaIndex">1</property>
+      <property name="SortOrder">Descending</property>
+      <property name="MinWidth">20</property>
+      <property name="Width">100</property>
+    </property>
+    <property name="Item21" isnull="true" iskey="true">
+      <property name="ImageIndex">-1</property>
+      <property name="ToolTips" isnull="true" iskey="true">
+        <property name="HeaderText" />
+        <property name="ValueText" />
+      </property>
+      <property name="FieldEditName" />
+      <property name="Name">PivotGridField22</property>
+      <property name="DataBinding" isnull="true" iskey="true">
+        <property name="ColumnName">IMPUESTO</property>
+        <property name="GroupInterval">Default</property>
+        <property name="GroupIntervalNumericRange">10</property>
+        <property name="TypeNameSerializable">DataSourceColumnBinding</property>
+      </property>
+      <property name="Area">DataArea</property>
+      <property name="CellFormat" isnull="true" iskey="true">
+        <property name="FormatString">n3</property>
+        <property name="FormatType">Numeric</property>
+      </property>
+      <property name="TotalCellFormat" isnull="true" iskey="true">
+        <property name="FormatString">n3</property>
+        <property name="FormatType">Numeric</property>
+      </property>
+      <property name="GrandTotalCellFormat" isnull="true" iskey="true">
+        <property name="FormatString">n3</property>
+        <property name="FormatType">Numeric</property>
+      </property>
+      <property name="ValueFormat" isnull="true" iskey="true">
+        <property name="FormatString">3n</property>
+        <property name="FormatType">Numeric</property>
+      </property>
+      <property name="TotalValueFormat" isnull="true" iskey="true">
+        <property name="FormatString">n3</property>
+        <property name="FormatType">Numeric</property>
+      </property>
+      <property name="Index">20</property>
+      <property name="AreaIndex">2</property>
+      <property name="SortOrder">Descending</property>
+      <property name="MinWidth">20</property>
+      <property name="Width">100</property>
+    </property>
+    <property name="Item22" isnull="true" iskey="true">
+      <property name="ImageIndex">-1</property>
+      <property name="ToolTips" isnull="true" iskey="true">
+        <property name="HeaderText" />
+        <property name="ValueText" />
+      </property>
+      <property name="FieldEditName" />
+      <property name="Name">PivotGridField23</property>
+      <property name="DataBinding" isnull="true" iskey="true">
+        <property name="ColumnName">TOTAL</property>
+        <property name="GroupInterval">Default</property>
+        <property name="GroupIntervalNumericRange">10</property>
+        <property name="TypeNameSerializable">DataSourceColumnBinding</property>
+      </property>
+      <property name="Area">DataArea</property>
+      <property name="CellFormat" isnull="true" iskey="true">
+        <property name="FormatString">n3</property>
+        <property name="FormatType">Numeric</property>
+      </property>
+      <property name="TotalCellFormat" isnull="true" iskey="true">
+        <property name="FormatString">n3</property>
+        <property name="FormatType">Numeric</property>
+      </property>
+      <property name="GrandTotalCellFormat" isnull="true" iskey="true">
+        <property name="FormatString">n3</property>
+        <property name="FormatType">Numeric</property>
+      </property>
+      <property name="ValueFormat" isnull="true" iskey="true">
+        <property name="FormatString">n3</property>
+        <property name="FormatType">Numeric</property>
+      </property>
+      <property name="TotalValueFormat" isnull="true" iskey="true">
+        <property name="FormatString">n3</property>
+        <property name="FormatType">Numeric</property>
+      </property>
+      <property name="Index">21</property>
+      <property name="AreaIndex">3</property>
+      <property name="SortOrder">Descending</property>
+      <property name="MinWidth">20</property>
+      <property name="Width">100</property>
+    </property>
+    <property name="Item23" isnull="true" iskey="true">
+      <property name="ImageIndex">-1</property>
+      <property name="ToolTips" isnull="true" iskey="true">
+        <property name="HeaderText" />
+        <property name="ValueText" />
+      </property>
+      <property name="FieldEditName" />
+      <property name="Name">PivotGridField14</property>
+      <property name="DataBinding" isnull="true" iskey="true">
+        <property name="ColumnName">REVISION</property>
+        <property name="GroupInterval">Default</property>
+        <property name="GroupIntervalNumericRange">10</property>
+        <property name="TypeNameSerializable">DataSourceColumnBinding</property>
+      </property>
+      <property name="Area">RowArea</property>
+      <property name="Index">22</property>
+      <property name="AreaIndex">7</property>
+      <property name="SortOrder">Descending</property>
+      <property name="MinWidth">100</property>
+      <property name="Width">100</property>
+    </property>
+  </property>
+  <property name="Prefilter" isnull="true" iskey="true">
+    <property name="Enabled">true</property>
+  </property>
+  <property name="OptionsBehavior" isnull="true" iskey="true">
+    <property name="HorizontalScrolling">Control</property>
+  </property>
+  <property name="OptionsCustomization" isnull="true" iskey="true">
+    <property name="AllowEdit">false</property>
+  </property>
+  <property name="OptionsData" isnull="true" iskey="true">
+    <property name="DataProcessingEngine">Optimized</property>
+  </property>
+  <property name="OptionsMenu" isnull="true" iskey="true">
+    <property name="EnableFormatRulesMenu">true</property>
+  </property>
+  <property name="OptionsPrint" isnull="true" iskey="true">
+    <property name="PrintHorzLines">True</property>
+    <property name="PrintVertLines">True</property>
+    <property name="PrintDataHeaders">True</property>
+    <property name="PrintColumnHeaders">True</property>
+    <property name="PrintRowHeaders">True</property>
+    <property name="PrintColumnAreaOnEveryPage">true</property>
+    <property name="PrintRowAreaOnEveryPage">true</property>
+    <property name="UsePrintAppearance">true</property>
+    <property name="MergeRowFieldValues">false</property>
+    <property name="PrintUnusedFilterFields">false</property>
+  </property>
+  <property name="FixedLineWidth">2</property>
+  <property name="Groups" iskey="true" value="0" />
+</XtraSerializer>

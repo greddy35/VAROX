@@ -96,4 +96,44 @@ Public Class DClases
         End Try
     End Function
 
+    Public Function EjecutarTransacciones(ByVal sqlString As ArrayList) As Integer
+
+        Dim DBCommand As SqlClient.SqlCommand = conn.CreateCommand()
+        Dim myTransaccion As SqlTransaction
+        Dim strSentencia As Object
+        Dim sentencia As String = ""
+        Dim ControlTransacc As Integer = 0
+
+        Try
+            If conn.State = ConnectionState.Closed Then
+                conn.Open()
+            ElseIf conn.State = ConnectionState.Broken Then
+                conn.Open()
+            End If
+
+            myTransaccion =
+               conn.BeginTransaction
+            DBCommand.Transaction = myTransaccion
+
+            For Each strSentencia In sqlString
+                sentencia = strSentencia.ToString()
+                DBCommand.CommandText = sentencia.ToString()
+                ' DBCommand.ExecuteNonQuery()
+                ControlTransacc = ControlTransacc + DBCommand.ExecuteNonQuery()
+            Next
+
+            myTransaccion.Commit()
+            EjecutarTransacciones = 1
+
+        Catch e As SqlException
+#Disable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
+            myTransaccion.Rollback()
+#Enable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
+            MsgBox(e.ToString, MsgBoxStyle.Critical)
+            EjecutarTransacciones = 0
+        Finally
+            conn.Close()
+        End Try
+
+    End Function
 End Class

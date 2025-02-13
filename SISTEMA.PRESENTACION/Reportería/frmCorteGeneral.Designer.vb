@@ -78,6 +78,8 @@ Partial Class frmReporteria
         Me.btnConstruir = New DevExpress.XtraBars.BarButtonItem()
         Me.btnCorteGeneral = New DevExpress.XtraBars.BarButtonItem()
         Me.btnCorteCliente = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonGroup1 = New DevExpress.XtraBars.BarButtonGroup()
+        Me.btnCorteEjecutivo = New DevExpress.XtraBars.BarButtonItem()
         Me.RibbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageDatos = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
@@ -86,6 +88,7 @@ Partial Class frmReporteria
         Me.RibbonPageGroup2 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonStatusBar = New DevExpress.XtraBars.Ribbon.RibbonStatusBar()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btnOcultarVentana = New DevExpress.XtraEditors.SimpleButton()
         Me.btnDetenerCalculo = New DevExpress.XtraEditors.SimpleButton()
         Me.lblNotificacion = New System.Windows.Forms.Label()
         Me.txtProgreso = New System.Windows.Forms.TextBox()
@@ -125,8 +128,6 @@ Partial Class frmReporteria
         Me.Label136 = New System.Windows.Forms.Label()
         Me.StandardReportDesigner2 = New DevExpress.XtraReports.UserDesigner.Native.StandardReportDesigner()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.BarButtonGroup1 = New DevExpress.XtraBars.BarButtonGroup()
-        Me.btnCorteEjecutivo = New DevExpress.XtraBars.BarButtonItem()
         CType(Me.RecentlyUsedItemsComboBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DesignRepositoryItemComboBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -334,6 +335,20 @@ Partial Class frmReporteria
         Me.btnCorteCliente.ImageOptions.LargeImage = CType(resources.GetObject("btnCorteCliente.ImageOptions.LargeImage"), System.Drawing.Image)
         Me.btnCorteCliente.Name = "btnCorteCliente"
         '
+        'BarButtonGroup1
+        '
+        Me.BarButtonGroup1.Caption = "BarButtonGroup1"
+        Me.BarButtonGroup1.Id = 17
+        Me.BarButtonGroup1.Name = "BarButtonGroup1"
+        '
+        'btnCorteEjecutivo
+        '
+        Me.btnCorteEjecutivo.Caption = "Corte Ejecutivo"
+        Me.btnCorteEjecutivo.Id = 18
+        Me.btnCorteEjecutivo.ImageOptions.Image = CType(resources.GetObject("btnCorteEjecutivo.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnCorteEjecutivo.ImageOptions.LargeImage = CType(resources.GetObject("btnCorteEjecutivo.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.btnCorteEjecutivo.Name = "btnCorteEjecutivo"
+        '
         'RibbonPage1
         '
         Me.RibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup1, Me.RibbonPageDatos, Me.RibbonPageGroup4, Me.RibbonPagePersonalizacion, Me.RibbonPageGroup2})
@@ -391,6 +406,7 @@ Partial Class frmReporteria
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.GroupBox1.Controls.Add(Me.btnOcultarVentana)
         Me.GroupBox1.Controls.Add(Me.btnDetenerCalculo)
         Me.GroupBox1.Controls.Add(Me.lblNotificacion)
         Me.GroupBox1.Controls.Add(Me.txtProgreso)
@@ -404,20 +420,31 @@ Partial Class frmReporteria
         Me.GroupBox1.ForeColor = System.Drawing.Color.Red
         Me.GroupBox1.Location = New System.Drawing.Point(415, 127)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(532, 186)
+        Me.GroupBox1.Size = New System.Drawing.Size(531, 224)
         Me.GroupBox1.TabIndex = 5
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Construyendo Datos"
         Me.GroupBox1.Visible = False
         '
+        'btnOcultarVentana
+        '
+        Me.btnOcultarVentana.AllowFocus = False
+        Me.btnOcultarVentana.ImageOptions.Image = CType(resources.GetObject("btnOcultarVentana.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnOcultarVentana.Location = New System.Drawing.Point(271, 183)
+        Me.btnOcultarVentana.Name = "btnOcultarVentana"
+        Me.btnOcultarVentana.Size = New System.Drawing.Size(135, 35)
+        Me.btnOcultarVentana.TabIndex = 9
+        Me.btnOcultarVentana.Text = "Ocultar Ventana"
+        '
         'btnDetenerCalculo
         '
+        Me.btnDetenerCalculo.AllowFocus = False
         Me.btnDetenerCalculo.Appearance.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.btnDetenerCalculo.Appearance.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDetenerCalculo.Appearance.Options.UseBackColor = True
         Me.btnDetenerCalculo.Appearance.Options.UseFont = True
         Me.btnDetenerCalculo.ImageOptions.Image = CType(resources.GetObject("btnDetenerCalculo.ImageOptions.Image"), System.Drawing.Image)
-        Me.btnDetenerCalculo.Location = New System.Drawing.Point(412, 145)
+        Me.btnDetenerCalculo.Location = New System.Drawing.Point(412, 183)
         Me.btnDetenerCalculo.Name = "btnDetenerCalculo"
         Me.btnDetenerCalculo.Size = New System.Drawing.Size(108, 35)
         Me.btnDetenerCalculo.TabIndex = 8
@@ -426,9 +453,9 @@ Partial Class frmReporteria
         'lblNotificacion
         '
         Me.lblNotificacion.ForeColor = System.Drawing.Color.Black
-        Me.lblNotificacion.Location = New System.Drawing.Point(6, 145)
+        Me.lblNotificacion.Location = New System.Drawing.Point(9, 145)
         Me.lblNotificacion.Name = "lblNotificacion"
-        Me.lblNotificacion.Size = New System.Drawing.Size(400, 35)
+        Me.lblNotificacion.Size = New System.Drawing.Size(511, 35)
         Me.lblNotificacion.TabIndex = 7
         Me.lblNotificacion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -497,9 +524,9 @@ Partial Class frmReporteria
         Me.ProgressBar1.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(52, Byte), Integer))
         Me.ProgressBar1.Cursor = System.Windows.Forms.Cursors.WaitCursor
         Me.ProgressBar1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(90, Byte), Integer), CType(CType(202, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ProgressBar1.Location = New System.Drawing.Point(10, 105)
+        Me.ProgressBar1.Location = New System.Drawing.Point(9, 105)
         Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(510, 34)
+        Me.ProgressBar1.Size = New System.Drawing.Size(511, 34)
         Me.ProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous
         Me.ProgressBar1.TabIndex = 0
         '
@@ -879,20 +906,6 @@ Partial Class frmReporteria
         Me.Panel1.Size = New System.Drawing.Size(1247, 357)
         Me.Panel1.TabIndex = 28
         '
-        'BarButtonGroup1
-        '
-        Me.BarButtonGroup1.Caption = "BarButtonGroup1"
-        Me.BarButtonGroup1.Id = 17
-        Me.BarButtonGroup1.Name = "BarButtonGroup1"
-        '
-        'btnCorteEjecutivo
-        '
-        Me.btnCorteEjecutivo.Caption = "Corte Ejecutivo"
-        Me.btnCorteEjecutivo.Id = 18
-        Me.btnCorteEjecutivo.ImageOptions.Image = CType(resources.GetObject("btnCorteEjecutivo.ImageOptions.Image"), System.Drawing.Image)
-        Me.btnCorteEjecutivo.ImageOptions.LargeImage = CType(resources.GetObject("btnCorteEjecutivo.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.btnCorteEjecutivo.Name = "btnCorteEjecutivo"
-        '
         'frmReporteria
         '
         Me.AllowFormGlass = DevExpress.Utils.DefaultBoolean.[True]
@@ -995,4 +1008,5 @@ Partial Class frmReporteria
     Friend WithEvents btnDetenerCalculo As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents BarButtonGroup1 As DevExpress.XtraBars.BarButtonGroup
     Friend WithEvents btnCorteEjecutivo As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents btnOcultarVentana As DevExpress.XtraEditors.SimpleButton
 End Class
