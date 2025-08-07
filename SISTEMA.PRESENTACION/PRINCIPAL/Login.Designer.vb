@@ -151,7 +151,7 @@ Partial Class Login
         Me.btnVerPass.MinimumSize = New System.Drawing.Size(35, 25)
         Me.btnVerPass.Name = "btnVerPass"
         Me.btnVerPass.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.[False]
-        Me.btnVerPass.Size = New System.Drawing.Size(40, 29)
+        Me.btnVerPass.Size = New System.Drawing.Size(43, 29)
         Me.btnVerPass.TabIndex = 6
         '
         'Panel1
