@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <XtraReportsLayoutSerializer SerializerVersion="22.2.5.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v22.2, Version=22.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="Report1" ScriptsSource="&#xD;&#xA;private void calculatedField1_GetValue(object sender, DevExpress.XtraReports.UI.GetValueEventArgs e) {&#xD;&#xA;    &#xD;&#xA;}&#xD;&#xA;" Margins="50, 50, 162.876953, 51.7638359" PageWidth="850" PageHeight="1100" Version="22.2" FilterString="[TIMESTAMP] Between(?fechaIni, ?fechaFin) And [NIT] In (?cliente) And [ESTADO_LOCAL] In (?estado) And [TIPO_VALVULA] In (?tipo_medida) And [MONEDA] In (?moneda)" DataMember="R_cargarVista" DataSource="#Ref-0">
   <Parameters>
-    <Item1 Ref="3" Description="Fecha Desde:" ValueInfo="2024-07-26" Name="fechaIni" Type="#Ref-2" />
-    <Item2 Ref="4" Description="Fecha Hasta:" ValueInfo="2024-08-01" Name="fechaFin" Type="#Ref-2" />
+    <Item1 Ref="3" Description="Fecha Desde:" ValueInfo="2025-07-01" Name="fechaIni" Type="#Ref-2" />
+    <Item2 Ref="4" Description="Fecha Hasta:" ValueInfo="2025-07-02" Name="fechaFin" Type="#Ref-2" />
     <Item3 Ref="7" Description="Clientes:" ValueSourceSettings="#Ref-5" MultiValue="true" Name="cliente" />
     <Item4 Ref="9" Description="Estado Clientes:" ValueSourceSettings="#Ref-8" Name="estado">
       <ExpressionBindings>
@@ -177,43 +177,43 @@
         <Item3 Ref="104" ControlType="XRLabel" Name="label3" Multiline="true" Text="Total de Tipo Medición:" TextAlignment="MiddleCenter" SizeF="155.194763,23" LocationFloat="431.3054,46.8055725" StyleName="Style1" Font="Times New Roman, 9.75pt, style=Bold" BackColor="255,141,179,226" Padding="2,2,0,0,100" Borders="All" BorderWidth="0.5">
           <StylePriority Ref="105" UseFont="false" UseBackColor="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
         </Item3>
-        <Item4 Ref="106" ControlType="XRLabel" Name="label51" Multiline="true" Text="IVA:" SizeF="134.166672,23.0000038" LocationFloat="452.3335,100.638748" StyleName="Style1" BackColor="Silver" Padding="2,2,0,0,100">
+        <Item4 Ref="106" ControlType="XRLabel" Name="label51" Multiline="true" Text="IVA:" SizeF="134.166672,23.0000038" LocationFloat="381.4167,100.638748" StyleName="Style1" BackColor="Silver" Padding="2,2,0,0,100">
           <StylePriority Ref="107" UseBackColor="false" />
         </Item4>
-        <Item5 Ref="108" ControlType="XRLabel" Name="label50" TextFormatString="{0:0,0.000}" Multiline="true" Text="label33" TextAlignment="TopRight" SizeF="134.166626,22.9999981" LocationFloat="586.5002,100.638878" StyleName="Style1" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100">
+        <Item5 Ref="108" ControlType="XRLabel" Name="label50" TextFormatString="{0:0,0.000}" Multiline="true" Text="label33" TextAlignment="TopRight" SizeF="205.083374,23.0000076" LocationFloat="515.583435,100.638885" StyleName="Style1" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100">
           <Summary Ref="109" Running="Group" />
           <ExpressionBindings>
-            <Item1 Ref="110" EventName="BeforePrint" PropertyName="Text" Expression="Iif(StartsWith([MONEDA], 'D'),Concat('$ ', sumSum([IMPUESTO])) , Iif(StartsWith([MONEDA], 'C'),Concat('₡ ', sumSum([IMPUESTO])), ''))&#xA;&#xA;" />
+            <Item1 Ref="110" EventName="BeforePrint" PropertyName="Text" Expression="Iif(StartsWith([MONEDA], 'D'),Concat('$ ', ROUND(sumSum([IMPUESTO]),3)) , Iif(StartsWith([MONEDA], 'C'),Concat('₡ ', ROUND(sumSum([IMPUESTO]),3)), ''))&#xA;&#xA;" />
           </ExpressionBindings>
           <StylePriority Ref="111" UseFont="false" />
         </Item5>
-        <Item6 Ref="112" ControlType="XRLabel" Name="label49" Multiline="true" Text="TOTAL:" SizeF="134.166672,23.0000038" LocationFloat="452.3335,146.638779" StyleName="Style1" BackColor="Silver" Padding="2,2,0,0,100">
+        <Item6 Ref="112" ControlType="XRLabel" Name="label49" Multiline="true" Text="TOTAL:" SizeF="134.166672,23.0000038" LocationFloat="381.4167,146.638779" StyleName="Style1" BackColor="Silver" Padding="2,2,0,0,100">
           <StylePriority Ref="113" UseBackColor="false" />
         </Item6>
-        <Item7 Ref="114" ControlType="XRLabel" Name="label48" Multiline="true" Text="SUBTOTAL:" SizeF="134.166672,23.0000038" LocationFloat="452.3335,123.638748" StyleName="Style1" BackColor="Silver" Padding="2,2,0,0,100">
+        <Item7 Ref="114" ControlType="XRLabel" Name="label48" Multiline="true" Text="SUBTOTAL:" SizeF="134.166672,23.0000038" LocationFloat="381.4167,123.638748" StyleName="Style1" BackColor="Silver" Padding="2,2,0,0,100">
           <StylePriority Ref="115" UseBackColor="false" />
         </Item7>
-        <Item8 Ref="116" ControlType="XRLabel" Name="label47" TextFormatString="{0:0,0.000}" Multiline="true" Text="label30" TextAlignment="TopRight" SizeF="134.166626,22.9999962" LocationFloat="586.5002,146.638779" StyleName="Style1" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100">
+        <Item8 Ref="116" ControlType="XRLabel" Name="label47" TextFormatString="{0:0,0.000}" Multiline="true" Text="label30" TextAlignment="TopRight" SizeF="205.083374,23" LocationFloat="515.583435,146.6388" StyleName="Style1" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100">
           <Summary Ref="117" Running="Group" />
           <ExpressionBindings>
-            <Item1 Ref="118" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([TOTAL])" />
+            <Item1 Ref="118" EventName="BeforePrint" PropertyName="Text" Expression="Iif(StartsWith([MONEDA], 'D'),Concat('$ ', ROUND(sumSum([TOTAL]),3)) , Iif(StartsWith([MONEDA], 'C'),Concat('₡ ', ROUND(sumSum([TOTAL]),3)), ''))" />
           </ExpressionBindings>
           <StylePriority Ref="119" UseFont="false" />
         </Item8>
-        <Item9 Ref="120" ControlType="XRLabel" Name="label46" TextFormatString="{0:0,0.000}" Multiline="true" Text="label29" TextAlignment="TopRight" SizeF="134.166626,23.0000019" LocationFloat="586.5002,123.638748" StyleName="Style1" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100">
+        <Item9 Ref="120" ControlType="XRLabel" Name="label46" TextFormatString="{0:0,0.000}" Multiline="true" Text="label29" TextAlignment="TopRight" SizeF="205.083374,23" LocationFloat="515.583435,123.638763" StyleName="Style1" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100">
           <Summary Ref="121" Running="Group" />
           <ExpressionBindings>
-            <Item1 Ref="122" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([SUB_TOTAL])" />
+            <Item1 Ref="122" EventName="BeforePrint" PropertyName="Text" Expression="Iif(StartsWith([MONEDA], 'D'),Concat('$ ', ROUND(sumSum([SUB_TOTAL]),3)) , Iif(StartsWith([MONEDA], 'C'),Concat('₡ ', ROUND(sumSum([SUB_TOTAL]),3)), ''))" />
           </ExpressionBindings>
           <StylePriority Ref="123" UseFont="false" />
         </Item9>
-        <Item10 Ref="124" ControlType="XRLabel" Name="label17" Multiline="true" Text="CONSUMO:" SizeF="134.166672,23.0000038" LocationFloat="452.3335,77.63888" StyleName="Style1" BackColor="Silver" Padding="2,2,0,0,100">
+        <Item10 Ref="124" ControlType="XRLabel" Name="label17" Multiline="true" Text="CONSUMO:" SizeF="134.166672,23.0000038" LocationFloat="381.4167,77.63888" StyleName="Style1" BackColor="Silver" Padding="2,2,0,0,100">
           <StylePriority Ref="125" UseBackColor="false" />
         </Item10>
-        <Item11 Ref="126" ControlType="XRLabel" Name="label14" TextFormatString="{0:0,0.000}" Multiline="true" Text="label14" TextAlignment="TopRight" SizeF="134.166672,22.9999981" LocationFloat="586.5002,77.63888" StyleName="Style1" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100">
+        <Item11 Ref="126" ControlType="XRLabel" Name="label14" TextFormatString="{0:0,0.000}" Multiline="true" Text="label14" TextAlignment="TopRight" SizeF="205.0835,22.9999924" LocationFloat="515.583435,77.63891" StyleName="Style1" Font="Times New Roman, 9.75pt, style=Bold" Padding="2,2,0,0,100">
           <Summary Ref="127" Running="Group" />
           <ExpressionBindings>
-            <Item1 Ref="128" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([CONSUMO])" />
+            <Item1 Ref="128" EventName="BeforePrint" PropertyName="Text" Expression="Iif(StartsWith([MONEDA], 'D'),Concat('$ ', ROUND(sumSum([CONSUMO]),3)) , Iif(StartsWith([MONEDA], 'C'),Concat('₡ ', ROUND(sumSum([CONSUMO]),3)), ''))" />
           </ExpressionBindings>
           <StylePriority Ref="129" UseFont="false" />
         </Item11>

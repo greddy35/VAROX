@@ -236,88 +236,97 @@ Public Class frmReporteria
                 Dim flag As Boolean = False
                 For Each fila As DataRow In listado.Tables(0).Rows()
                     contenedor = gestorH.NCargarValoresValvula(fila(4).ToString, fila(6).ToString, "%" + fila(2).ToString + "%", "%" + fila(3).ToString + "%", fila(5).ToString, "%" + fila(1).ToString + "%", fechIni, fechFin, CDate(fila(7)).ToString("yyyy-MM-dd 00:00:00.000"), CDate(fila(8)).ToString("yyyy-MM-dd 00:00:00.000"), fila(1).ToString)
-                    If contenedor.Tables(0).Rows.Count > 1 Then 'La consulta siempre genera un registro por defecto, por eso se busca si es mayor a 1
-                        'Se ejecuta cuando cancelamos la operación
-                        '------------------------------------------------
-                        num_disp += 1
-                        notificacion = "Procesando (" + contenedor.Tables(0).Rows().Count.ToString + ") lecturas de: (" + fila(1).ToString + ")..... " + num_disp.ToString + " de " + listado.Tables(0).Rows.Count.ToString
-                        BackgroundWorker1.ReportProgress(1)
-                        If BackgroundWorker1.CancellationPending Then
-                            e.Cancel = True
-                            Return
-                        End If
-                        Dim ultLect As Decimal = 0
-                        Dim flag2 As Boolean = False
-                        Dim flag3 As Boolean = False
-                        'notificacion = "Preparando: " + contenedor.Tables(0).Rows().Count.ToString + " registros "
-                        'BackgroundWorker1.ReportProgress(1)
-                        'Thread.Sleep(500)
-                        Dim cont As Integer = 1
-                        For Each consumo As DataRow In contenedor.Tables(0).Rows()
+                    If BackgroundWorker1.CancellationPending Then
+                        e.Cancel = True
+                        Return
+                    End If
+                    If Not contenedor Is Nothing Then
+                        If contenedor.Tables(0).Rows.Count > 1 Then 'La consulta siempre genera un registro por defecto, por eso se busca si es mayor a 1
+                            'Se ejecuta cuando cancelamos la operación
+                            '------------------------------------------------
+                            num_disp += 1
+                            notificacion = "Procesando (" + contenedor.Tables(0).Rows().Count.ToString + ") lecturas de: (" + fila(1).ToString + ")..... " + num_disp.ToString + " de " + listado.Tables(0).Rows.Count.ToString
+                            BackgroundWorker1.ReportProgress(1)
                             If BackgroundWorker1.CancellationPending Then
                                 e.Cancel = True
                                 Return
                             End If
-                            If flag2 = False Then
-                                consumo.Item(3) = 0
-                                flag2 = True
-                            Else
-                                Dim flag4 As Boolean = False
-                                If fila(9).ToString.Equals("und") And Not consumo(2).ToString.Equals("0") Then 'Si es tipo BTU y hay valor de medida
-                                    If flag3 = False Then
-                                        ultLect = ((CDec(consumo(2)) / 1000000) * 1000) 'Conversion a BTU
-                                        flag3 = True
-                                    End If
-                                    'ultLect = ((CDec(consumo(2)) / 1000000) * 1000) 'Conversion a BTU
-                                    consumo.Item(3) = ((CDec(consumo(2)) / 1000000) * 1000) - ultLect
-                                    consumo.Item(2) = ((CDec(consumo(2)) / 1000000) * 1000)
-                                    If CDec(consumo.Item(3)) = 0 Then
+                            Dim ultLect As Decimal = 0
+                            Dim flag2 As Boolean = False
+                            Dim flag3 As Boolean = False
+                            'notificacion = "Preparando: " + contenedor.Tables(0).Rows().Count.ToString + " registros "
+                            'BackgroundWorker1.ReportProgress(1)
+                            'Thread.Sleep(500)
+                            Dim cont As Integer = 1
+                            For Each consumo As DataRow In contenedor.Tables(0).Rows()
+                                If BackgroundWorker1.CancellationPending Then
+                                    e.Cancel = True
+                                    Return
+                                End If
+                                If flag2 = False Then
+                                    consumo.Item(3) = 0
+                                    flag2 = True
+                                Else
+                                    Dim flag4 As Boolean = False
+                                    If fila(9).ToString.Equals("und") And Not consumo(2).ToString.Equals("0") Then 'Si es tipo BTU y hay valor de medida
+                                        If flag3 = False Then
+                                            ultLect = ((CDec(consumo(2)) / 1000000) * 1000) 'Conversion a BTU
+                                            flag3 = True
+                                        End If
+                                        'ultLect = ((CDec(consumo(2)) / 1000000) * 1000) 'Conversion a BTU
+                                        consumo.Item(3) = ((CDec(consumo(2)) / 1000000) * 1000) - ultLect
+                                        consumo.Item(2) = ((CDec(consumo(2)) / 1000000) * 1000)
+                                        If CDec(consumo.Item(3)) = 0 Then
+                                            consumo.Item(3) = 0
+                                        End If
+                                        'ultLect = CDec(consumo.Item(2)) 'Conversion a BTU
+                                    ElseIf Not fila(9).ToString.Equals("und") Then ' Cuando no es tipo BTU
+                                        If flag3 = False Then
+                                            ultLect = CDec(consumo(2))
+                                            flag3 = True
+                                        End If
+                                        consumo.Item(3) = CDec(consumo(2)) - ultLect
+                                        'ultLect = CDec(consumo(2))
+                                    Else
+                                        'ultLect = CDec(consumo(2))
                                         consumo.Item(3) = 0
                                     End If
-                                    'ultLect = CDec(consumo.Item(2)) 'Conversion a BTU
-                                ElseIf Not fila(9).ToString.Equals("und") Then ' Cuando no es tipo BTU
-                                    If flag3 = False Then
-                                        ultLect = CDec(consumo(2))
-                                        flag3 = True
+                                    'consumo.Item(3) = CDec(consumo(2)) - ultLect
+                                    consumo.Item(5) = ultLect
+                                    '-----------------CRITERIO PARA CADA TIPO DE RESULTADO DE CONSUMO-------------------
+                                    If ultLect > 0 And CDec(consumo(2)) = 0 Then
+                                        consumo.Item(3) = 0
+                                        consumo.Item(4) = "ERROR"
+                                        flag4 = True
+                                    ElseIf CDec(consumo.Item(3)) = 0 Then
+                                        consumo.Item(4) = "IGUAL"
+                                    ElseIf CDec(consumo.Item(3)) < 0 Then
+                                        consumo.Item(4) = "MENOR"
+                                    ElseIf CDec(consumo.Item(3)) > 0 Then
+                                        consumo.Item(4) = "MAYOR"
                                     End If
-                                    consumo.Item(3) = CDec(consumo(2)) - ultLect
-                                    'ultLect = CDec(consumo(2))
-                                Else
-                                    'ultLect = CDec(consumo(2))
-                                    consumo.Item(3) = 0
-                                End If
-                                'consumo.Item(3) = CDec(consumo(2)) - ultLect
-                                consumo.Item(5) = ultLect
-                                '-----------------CRITERIO PARA CADA TIPO DE RESULTADO DE CONSUMO-------------------
-                                If ultLect > 0 And CDec(consumo(2)) = 0 Then
-                                    consumo.Item(3) = 0
-                                    consumo.Item(4) = "ERROR"
-                                    flag4 = True
-                                ElseIf CDec(consumo.Item(3)) = 0 Then
-                                    consumo.Item(4) = "IGUAL"
-                                ElseIf CDec(consumo.Item(3)) < 0 Then
-                                    consumo.Item(4) = "MENOR"
-                                ElseIf CDec(consumo.Item(3)) > 0 Then
-                                    consumo.Item(4) = "MAYOR"
-                                End If
-                                If flag4 = True Then 'Si es un registro erroneo por valores de medicion, mantiene la lectura
-                                    flag4 = False
-                                Else
-                                    ultLect = CDec(consumo(2)) 'Actualiza la lectura actual para el siguiente registro
-                                End If
+                                    If flag4 = True Then 'Si es un registro erroneo por valores de medicion, mantiene la lectura
+                                        flag4 = False
+                                    Else
+                                        ultLect = CDec(consumo(2)) 'Actualiza la lectura actual para el siguiente registro
+                                    End If
 
+                                End If
+                                cont = cont + 1
+                            Next
+                            contenedor.Tables(0).Rows(0).Delete()
+                            contenedor.Tables(0).Rows(0).AcceptChanges()
+                            If flag = True Then
+                                base.Merge(contenedor)
+                            Else
+                                base = contenedor
+                                flag = True
                             End If
-                            cont = cont + 1
-                        Next
-                        contenedor.Tables(0).Rows(0).Delete()
-                        contenedor.Tables(0).Rows(0).AcceptChanges()
-                        If flag = True Then
-                            base.Merge(contenedor)
-                        Else
-                            base = contenedor
-                            flag = True
                         End If
+                        'MsgBox("No se devolvió ningún registro en la consulta" + vbCrLf &
+                        '    "Ocurrió un error al consultar los datos, verifique la conexión a los servidores de base de datos", MsgBoxStyle.Critical)
                     End If
+                    ''''
 
                 Next
                 If Not base Is Nothing Then

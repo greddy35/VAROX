@@ -62,11 +62,13 @@ Public Class ConexionBD_Externa
 
     Public Function CrearCadena() As String
         Dim cadena As String
-        cadena = "Server=" & Me.Servidor & "; Database=" & Me.Base & ";"
+        'cadena = "Server=TCP:" & Me.Servidor & ",1433; Database=" & Me.Base & ";"
+        cadena = "Server=" & Me.Servidor & ";Database=" & Me.Base & ";"
         If Me.Seguridad Then
             cadena = cadena & "Integrated Security= SSPI;Connection Timeout= 15;"
         Else
-            cadena = cadena & "User Id=" & Me.Usuario & ";Password=" & Me.Clave
+            cadena = cadena & "User Id=" & Me.Usuario & ";Password=" & Me.Clave '& ";TrustServerCertificate=True;"
+            'cadena = "Data Source=" & Me.Servidor & ",1433;Network Library=DBMSSOCN;Initial Catalog=" & Me.Base & ";User ID=" & Me.Usuario & ";Password=" & Me.Clave & ";"
         End If
         Return cadena
     End Function
