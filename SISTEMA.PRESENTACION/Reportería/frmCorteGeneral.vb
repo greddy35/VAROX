@@ -25,6 +25,7 @@ Public Class frmReporteria
     Dim fechIni As String = String.Empty
     Dim fechFin As String = String.Empty
 
+    'Instancias
     Private LayoutStream1 As System.IO.Stream = New System.IO.MemoryStream()
 #End Region
 #Region "Funciones y Metodos"
@@ -213,6 +214,9 @@ Public Class frmReporteria
 
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As DoWorkEventArgs) Handles BackgroundWorker1.DoWork
         Try
+            'INICIA LA TOMA DE TIEMPO TRANSCURRIDO
+            Dim stopWatch As New Stopwatch()
+            stopWatch.Start()
             Dim fechIni As String = CDate(deDesde.EditValue).ToString("yyyy-MM-dd 00:00:00.000")
             Dim fechFin As String = CDate(deHasta.EditValue).ToString("yyyy-MM-dd 23:59:59.999")
             total = 1
@@ -221,6 +225,7 @@ Public Class frmReporteria
             Dim listado As DataSet = Nothing
             Dim ins As Integer = 0
             Dim actu As Integer = 0
+            Dim num_disp As Integer = 0
             notificacion = "Preparando información a calcular..."
             BackgroundWorker1.ReportProgress(1)
             listado = gestor.NCrearListadoValvulas(fechIni, fechFin)       'Obtenemos las vinculaciones a construir
@@ -231,87 +236,97 @@ Public Class frmReporteria
                 Dim flag As Boolean = False
                 For Each fila As DataRow In listado.Tables(0).Rows()
                     contenedor = gestorH.NCargarValoresValvula(fila(4).ToString, fila(6).ToString, "%" + fila(2).ToString + "%", "%" + fila(3).ToString + "%", fila(5).ToString, "%" + fila(1).ToString + "%", fechIni, fechFin, CDate(fila(7)).ToString("yyyy-MM-dd 00:00:00.000"), CDate(fila(8)).ToString("yyyy-MM-dd 00:00:00.000"), fila(1).ToString)
-                    If contenedor.Tables(0).Rows.Count > 1 Then 'La consulta siempre genera un registro por defecto, por eso se busca si es mayor a 1
-                        'Se ejecuta cuando cancelamos la operación
-                        '------------------------------------------------
-                        notificacion = "Procesando (" + contenedor.Tables(0).Rows().Count.ToString + ") lecturas del dispositivo: (" + fila(1).ToString + ")..."
-                        BackgroundWorker1.ReportProgress(1)
-                        If BackgroundWorker1.CancellationPending Then
-                            e.Cancel = True
-                            Return
-                        End If
-                        Dim ultLect As Decimal = 0
-                        Dim flag2 As Boolean = False
-                        Dim flag3 As Boolean = False
-                        'notificacion = "Preparando: " + contenedor.Tables(0).Rows().Count.ToString + " registros "
-                        'BackgroundWorker1.ReportProgress(1)
-                        'Thread.Sleep(500)
-                        Dim cont As Integer = 1
-                        For Each consumo As DataRow In contenedor.Tables(0).Rows()
+                    If BackgroundWorker1.CancellationPending Then
+                        e.Cancel = True
+                        Return
+                    End If
+                    If Not contenedor Is Nothing Then
+                        If contenedor.Tables(0).Rows.Count > 1 Then 'La consulta siempre genera un registro por defecto, por eso se busca si es mayor a 1
+                            'Se ejecuta cuando cancelamos la operación
+                            '------------------------------------------------
+                            num_disp += 1
+                            notificacion = "Procesando (" + contenedor.Tables(0).Rows().Count.ToString + ") lecturas de: (" + fila(1).ToString + ")..... " + num_disp.ToString + " de " + listado.Tables(0).Rows.Count.ToString
+                            BackgroundWorker1.ReportProgress(1)
                             If BackgroundWorker1.CancellationPending Then
                                 e.Cancel = True
                                 Return
                             End If
-                            If flag2 = False Then
-                                consumo.Item(3) = 0
-                                flag2 = True
-                            Else
-                                Dim flag4 As Boolean = False
-                                If fila(9).ToString.Equals("und") And Not consumo(2).ToString.Equals("0") Then 'Si es tipo BTU y hay valor de medida
-                                    If flag3 = False Then
-                                        ultLect = ((CDec(consumo(2)) / 1000000) * 1000) 'Conversion a BTU
-                                        flag3 = True
-                                    End If
-                                    'ultLect = ((CDec(consumo(2)) / 1000000) * 1000) 'Conversion a BTU
-                                    consumo.Item(3) = ((CDec(consumo(2)) / 1000000) * 1000) - ultLect
-                                    consumo.Item(2) = ((CDec(consumo(2)) / 1000000) * 1000)
-                                    If CDec(consumo.Item(3)) = 0 Then
+                            Dim ultLect As Decimal = 0
+                            Dim flag2 As Boolean = False
+                            Dim flag3 As Boolean = False
+                            'notificacion = "Preparando: " + contenedor.Tables(0).Rows().Count.ToString + " registros "
+                            'BackgroundWorker1.ReportProgress(1)
+                            'Thread.Sleep(500)
+                            Dim cont As Integer = 1
+                            For Each consumo As DataRow In contenedor.Tables(0).Rows()
+                                If BackgroundWorker1.CancellationPending Then
+                                    e.Cancel = True
+                                    Return
+                                End If
+                                If flag2 = False Then
+                                    consumo.Item(3) = 0
+                                    flag2 = True
+                                Else
+                                    Dim flag4 As Boolean = False
+                                    If fila(9).ToString.Equals("und") And Not consumo(2).ToString.Equals("0") Then 'Si es tipo BTU y hay valor de medida
+                                        If flag3 = False Then
+                                            ultLect = ((CDec(consumo(2)) / 1000000) * 1000) 'Conversion a BTU
+                                            flag3 = True
+                                        End If
+                                        'ultLect = ((CDec(consumo(2)) / 1000000) * 1000) 'Conversion a BTU
+                                        consumo.Item(3) = ((CDec(consumo(2)) / 1000000) * 1000) - ultLect
+                                        consumo.Item(2) = ((CDec(consumo(2)) / 1000000) * 1000)
+                                        If CDec(consumo.Item(3)) = 0 Then
+                                            consumo.Item(3) = 0
+                                        End If
+                                        'ultLect = CDec(consumo.Item(2)) 'Conversion a BTU
+                                    ElseIf Not fila(9).ToString.Equals("und") Then ' Cuando no es tipo BTU
+                                        If flag3 = False Then
+                                            ultLect = CDec(consumo(2))
+                                            flag3 = True
+                                        End If
+                                        consumo.Item(3) = CDec(consumo(2)) - ultLect
+                                        'ultLect = CDec(consumo(2))
+                                    Else
+                                        'ultLect = CDec(consumo(2))
                                         consumo.Item(3) = 0
                                     End If
-                                    'ultLect = CDec(consumo.Item(2)) 'Conversion a BTU
-                                ElseIf Not fila(9).ToString.Equals("und") Then ' Cuando no es tipo BTU
-                                    If flag3 = False Then
-                                        ultLect = CDec(consumo(2))
-                                        flag3 = True
+                                    'consumo.Item(3) = CDec(consumo(2)) - ultLect
+                                    consumo.Item(5) = ultLect
+                                    '-----------------CRITERIO PARA CADA TIPO DE RESULTADO DE CONSUMO-------------------
+                                    If ultLect > 0 And CDec(consumo(2)) = 0 Then
+                                        consumo.Item(3) = 0
+                                        consumo.Item(4) = "ERROR"
+                                        flag4 = True
+                                    ElseIf CDec(consumo.Item(3)) = 0 Then
+                                        consumo.Item(4) = "IGUAL"
+                                    ElseIf CDec(consumo.Item(3)) < 0 Then
+                                        consumo.Item(4) = "MENOR"
+                                    ElseIf CDec(consumo.Item(3)) > 0 Then
+                                        consumo.Item(4) = "MAYOR"
                                     End If
-                                    consumo.Item(3) = CDec(consumo(2)) - ultLect
-                                    'ultLect = CDec(consumo(2))
-                                Else
-                                    'ultLect = CDec(consumo(2))
-                                    consumo.Item(3) = 0
-                                End If
-                                'consumo.Item(3) = CDec(consumo(2)) - ultLect
-                                consumo.Item(5) = ultLect
-                                '-----------------CRITERIO PARA CADA TIPO DE RESULTADO DE CONSUMO-------------------
-                                If ultLect > 0 And CDec(consumo(2)) = 0 Then
-                                    consumo.Item(3) = 0
-                                    consumo.Item(4) = "ERROR"
-                                    flag4 = True
-                                ElseIf CDec(consumo.Item(3)) = 0 Then
-                                    consumo.Item(4) = "IGUAL"
-                                ElseIf CDec(consumo.Item(3)) < 0 Then
-                                    consumo.Item(4) = "MENOR"
-                                ElseIf CDec(consumo.Item(3)) > 0 Then
-                                    consumo.Item(4) = "MAYOR"
-                                End If
-                                If flag4 = True Then 'Si es un registro erroneo por valores de medicion, mantiene la lectura
-                                    flag4 = False
-                                Else
-                                    ultLect = CDec(consumo(2)) 'Actualiza la lectura actual para el siguiente registro
-                                End If
+                                    If flag4 = True Then 'Si es un registro erroneo por valores de medicion, mantiene la lectura
+                                        flag4 = False
+                                    Else
+                                        ultLect = CDec(consumo(2)) 'Actualiza la lectura actual para el siguiente registro
+                                    End If
 
+                                End If
+                                cont = cont + 1
+                            Next
+                            contenedor.Tables(0).Rows(0).Delete()
+                            contenedor.Tables(0).Rows(0).AcceptChanges()
+                            If flag = True Then
+                                base.Merge(contenedor)
+                            Else
+                                base = contenedor
+                                flag = True
                             End If
-                            cont = cont + 1
-                        Next
-                        contenedor.Tables(0).Rows(0).Delete()
-                        contenedor.Tables(0).Rows(0).AcceptChanges()
-                        If flag = True Then
-                            base.Merge(contenedor)
-                        Else
-                            base = contenedor
-                            flag = True
                         End If
+                        'MsgBox("No se devolvió ningún registro en la consulta" + vbCrLf &
+                        '    "Ocurrió un error al consultar los datos, verifique la conexión a los servidores de base de datos", MsgBoxStyle.Critical)
                     End If
+                    ''''
 
                 Next
                 If Not base Is Nothing Then
@@ -327,34 +342,24 @@ Public Class frmReporteria
                                 resultado = gestor.NBuscarHistorico(fila(0).ToString, CDate(fila(1).ToString).ToString("yyyy-MM-dd HH:mm:ss.fff"))
                                 Dim id As Integer = 0
                                 If resultado IsNot Nothing Then
-                                    If resultado.Tables(0).Rows.Count > 0 Then
+                                    If resultado.Tables(0).Rows.Count > 0 Then 'SI ENCUENTRA EL REGISTRO EN LA BD, RETORNARÁ UNA LINEA
                                         For Each result As DataRow In resultado.Tables(0).Rows()
                                             id = CInt(result(0))
                                             'Existe y hay que actualizarlo
-                                            transacciones.Add("UPDATE  [dbo].[R_HISTORICO_REAL] SET [TIMESTAMP] = '" + fila(1).ToString + "',[DISPOSITIVO] = '" + fila(0).ToString + "',[LECT_ANT] = '" + fila(5).ToString + "',[VALUE] = '" + fila(2).ToString + "',[CONSUMO] = '" + fila(3).ToString + "',[REVISION] = '" + fila(4).ToString + "' WHERE ID = " + id.ToString + "")
+                                            transacciones.Add("UPDATE  [dbo].[R_HISTORICO_REAL] SET [TIMESTAMP] = '" + CDate(fila(1).ToString).ToString("yyyy-MM-dd HH:mm:ss.fff") + "',[DISPOSITIVO] = '" + fila(0).ToString + "',[LECT_ANT] = '" + fila(5).ToString + "',[VALUE] = '" + fila(2).ToString + "',[CONSUMO] = '" + fila(3).ToString + "',[REVISION] = '" + fila(4).ToString + "' WHERE ID = " + id.ToString + "")
                                             actu = actu + 1
-                                            Console.WriteLine("Actualizado: " & fila(0).ToString)
+                                            'Console.WriteLine("Actualizado: " & fila(0).ToString & " Lect: " + fila(2).ToString)
                                         Next
+                                    Else 'No existe y hay que insertarlo
+                                        'REVISAR ORDEN DE CAMPOS
+                                        transacciones.Add("INSERT INTO [dbo].[R_HISTORICO_REAL] ([TIMESTAMP],[DISPOSITIVO],[LECT_ANT],[VALUE],[CONSUMO],[REVISION]) VALUES ('" + CDate(fila(1).ToString).ToString("yyyy-MM-dd HH:mm:ss.fff") + "','" + fila(0).ToString + "','" + fila(5).ToString + "','" + fila(2).ToString + "','" + fila(3).ToString + "','" + fila(4).ToString + "')")
+                                        ins = ins + 1
+                                        'Console.WriteLine("Insertado: " & fila(0).ToString & " Lect: " + fila(2).ToString)
                                     End If
-                                Else 'No existe y hay que insertarlo
-                                    'REVISAR ORDEN DE CAMPOS
-                                    transacciones.Add("INSERT INTO [dbo].[R_HISTORICO_REAL] ([TIMESTAMP],[DISPOSITIVO],[LECT_ANT],[VALUE],[CONSUMO],[REVISION]) VALUES ('" + fila(1).ToString + "','" + fila(0).ToString + "','" + fila(5).ToString + "','" + fila(2).ToString + "','" + fila(3).ToString + "','" + fila(4).ToString + "')")
-                                    ins = ins + 1
-                                    Console.WriteLine("Insertado: " & fila(0).ToString)
                                 End If
-                                'Metodo viejo
-                                'If (id <> 0) Then
-                                '    gestor.NModificar(id.ToString, fila(0).ToString, fila(1).ToString, fila(2).ToString, fila(3).ToString, fila(4).ToString, fila(5).ToString)
-                                '    actu = actu + 1
-                                '    Console.WriteLine("Actualizado: " & fila(0).ToString)
-                                'Else
-                                '    gestor.NInsertar(fila(0).ToString, fila(1).ToString, fila(2).ToString, fila(3).ToString, fila(4).ToString, fila(5).ToString)
-                                '    ins = ins + 1
-                                '    Console.WriteLine("Insertado: " & fila(0).ToString)
-                                'End If
                                 'Actualizamos el progreso
                                 Contador = Contador + 1
-                                notificacion = "Registrando: " + Contador.ToString + " registros de: " + total.ToString
+                                notificacion = "Preparando transacciones: " + Contador.ToString + " registros de: " + total.ToString
                                 BackgroundWorker1.ReportProgress(1)
                                 'Thread.Sleep(500)
                             Catch ex As Exception
@@ -363,13 +368,24 @@ Public Class frmReporteria
                         Next
 
                         'PREGUNTA DE CONFIRMACION PARA EJECUTAR LAS TRANSACCIONES GENERADAS
-                        If MessageBox.Show("Se generaron:" & vbCrLf & vbCrLf &
-                            "Registros a Insertar: " & vbCrLf &
-                            "Registros a Actualizar: " & vbCrLf & vbCrLf &
+                        If MessageBox.Show("Se generaron: " + total.ToString + " registros" + vbCrLf & vbCrLf &
+                            "Registros a Insertar: " + ins.ToString + " registros" + vbCrLf &
+                            "Registros a Actualizar: " + actu.ToString + " registros" + vbCrLf & vbCrLf &
                             "¿Seguro de guardar en Sistema todos los registros calculados en el proceso de construcción?" & vbCrLf &
                             "(SI) Aceptar, (NO) Cancelar", "Guardar Construcción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+                            ' Detener el temporizador
+                            stopWatch.Stop()
+                            ' Obtener el tiempo transcurrido
+                            Dim tiempoTranscurrido As TimeSpan = stopWatch.Elapsed
+                            ''Imprimir el tiempo transcurrido
+                            'Console.WriteLine("Tiempo transcurrido: " & tiempoTranscurrido.TotalMilliseconds & " milisegundos")
+                            'Console.WriteLine("Tiempo transcurrido: " & tiempoTranscurrido.TotalSeconds & " segundos")
+                            'Console.WriteLine("Tiempo transcurrido: " & tiempoTranscurrido.TotalMinutes & " minutos")
+                            'Console.WriteLine("Tiempo transcurrido: " & tiempoTranscurrido.Minutes & " minutos")
+                            'Console.WriteLine("Tiempo transcurrido: " & tiempoTranscurrido.Seconds & " segundos")
                             If gestorC.NEjecutarTransacciones(transacciones) = 1 Then
-                                MsgBox("Se registraron todos los registros", MsgBoxStyle.Information)
+                                MsgBox("Se registraron todos los registros" + vbCrLf & vbCrLf &
+                                       "Tiempo transcurrido del proceso: " + tiempoTranscurrido.Minutes.ToString + " minutos con " + tiempoTranscurrido.Seconds.ToString + " segundos", MsgBoxStyle.Information)
                             Else
                                 MsgBox("Ocurrio un error al registrar en la base de datos", MsgBoxStyle.Critical)
                             End If

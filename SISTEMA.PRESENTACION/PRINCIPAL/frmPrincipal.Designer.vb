@@ -943,7 +943,7 @@ Partial Class frmPrincipal
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frmPrincipal"
         Me.NavigationControl = Me.AccordionControl1
-        Me.Text = "VAROX 1.2.0.1        "
+        Me.Text = "VAROX 1.2.0.2        "
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.contenedor.ResumeLayout(False)
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).EndInit()

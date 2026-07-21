@@ -120,6 +120,7 @@ Public Class DClases
                 DBCommand.CommandText = sentencia.ToString()
                 ' DBCommand.ExecuteNonQuery()
                 ControlTransacc = ControlTransacc + DBCommand.ExecuteNonQuery()
+                'PrintLine("Registrado: " + sentencia.ToString)
             Next
 
             myTransaccion.Commit()

@@ -72,13 +72,14 @@ Public Class DHistorico
             Comando.Parameters.Add("@rigeFin", SqlDbType.DateTime).Value = valor10
             MyBase.conn.Open()
             'Abrimos conexion a la BD
-            Comando.CommandTimeout = 600
+            'Comando.CommandTimeout = 30
             Dim adapter As New SqlDataAdapter(Comando)
             adapter.Fill(Tabla)
             MyBase.conn.Close()                                                             'Cerramos la conexion a BD
             Return Tabla                                                                    'Retornamos el DataSet
         Catch ex As Exception
             MyBase.conn.Close()
+            Return Nothing
 #Disable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila
             Throw ex
 #Enable Warning CA2200 ' Iniciar de nuevo para preservar los detalles de la pila

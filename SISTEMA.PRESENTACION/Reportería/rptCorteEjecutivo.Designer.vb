@@ -20,6 +20,8 @@ Partial Public Class rptCorteEjecutivo
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim StoredProcQuery1 As DevExpress.DataAccess.Sql.StoredProcQuery = New DevExpress.DataAccess.Sql.StoredProcQuery()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(rptCorteEjecutivo))
         Dim XrSummary1 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
         Dim XrSummary2 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
         Dim XrSummary3 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
@@ -31,19 +33,12 @@ Partial Public Class rptCorteEjecutivo
         Dim XrSummary9 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
         Dim XrSummary10 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
         Dim XrSummary11 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
-        Dim StoredProcQuery1 As DevExpress.DataAccess.Sql.StoredProcQuery = New DevExpress.DataAccess.Sql.StoredProcQuery()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(rptCorteEjecutivo))
         Dim DynamicListLookUpSettings1 As DevExpress.XtraReports.Parameters.DynamicListLookUpSettings = New DevExpress.XtraReports.Parameters.DynamicListLookUpSettings()
         Dim StaticListLookUpSettings1 As DevExpress.XtraReports.Parameters.StaticListLookUpSettings = New DevExpress.XtraReports.Parameters.StaticListLookUpSettings()
         Dim DynamicListLookUpSettings2 As DevExpress.XtraReports.Parameters.DynamicListLookUpSettings = New DevExpress.XtraReports.Parameters.DynamicListLookUpSettings()
         Dim DynamicListLookUpSettings3 As DevExpress.XtraReports.Parameters.DynamicListLookUpSettings = New DevExpress.XtraReports.Parameters.DynamicListLookUpSettings()
+        Me.sqlDataSource1 = New DevExpress.DataAccess.Sql.SqlDataSource(Me.components)
         Me.TopMargin = New DevExpress.XtraReports.UI.TopMarginBand()
-        Me.Detail = New DevExpress.XtraReports.UI.DetailBand()
-        Me.BottomMargin = New DevExpress.XtraReports.UI.BottomMarginBand()
-        Me.GroupHeader4 = New DevExpress.XtraReports.UI.GroupHeaderBand()
-        Me.GroupHeader1 = New DevExpress.XtraReports.UI.GroupHeaderBand()
-        Me.GroupFooter2 = New DevExpress.XtraReports.UI.GroupFooterBand()
-        Me.PageFooter = New DevExpress.XtraReports.UI.PageFooterBand()
         Me.label31 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label32 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label30 = New DevExpress.XtraReports.UI.XRLabel()
@@ -56,6 +51,9 @@ Partial Public Class rptCorteEjecutivo
         Me.label11 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label10 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label9 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.Detail = New DevExpress.XtraReports.UI.DetailBand()
+        Me.BottomMargin = New DevExpress.XtraReports.UI.BottomMarginBand()
+        Me.GroupHeader4 = New DevExpress.XtraReports.UI.GroupHeaderBand()
         Me.label8 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label19 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label16 = New DevExpress.XtraReports.UI.XRLabel()
@@ -64,6 +62,7 @@ Partial Public Class rptCorteEjecutivo
         Me.label12 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label18 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label68 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.GroupHeader1 = New DevExpress.XtraReports.UI.GroupHeaderBand()
         Me.label6 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label5 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label2 = New DevExpress.XtraReports.UI.XRLabel()
@@ -72,6 +71,7 @@ Partial Public Class rptCorteEjecutivo
         Me.label36 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label28 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label4 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.GroupFooter2 = New DevExpress.XtraReports.UI.GroupFooterBand()
         Me.label22 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label23 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label3 = New DevExpress.XtraReports.UI.XRLabel()
@@ -84,8 +84,8 @@ Partial Public Class rptCorteEjecutivo
         Me.label17 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label14 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label7 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.PageFooter = New DevExpress.XtraReports.UI.PageFooterBand()
         Me.pageInfo1 = New DevExpress.XtraReports.UI.XRPageInfo()
-        Me.sqlDataSource1 = New DevExpress.DataAccess.Sql.SqlDataSource(Me.components)
         Me.Style1 = New DevExpress.XtraReports.UI.XRControlStyle()
         Me.Style2 = New DevExpress.XtraReports.UI.XRControlStyle()
         Me.simb_moneda = New DevExpress.XtraReports.UI.CalculatedField()
@@ -97,52 +97,20 @@ Partial Public Class rptCorteEjecutivo
         Me.moneda = New DevExpress.XtraReports.Parameters.Parameter()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
+        'sqlDataSource1
+        '
+        Me.sqlDataSource1.ConnectionName = "VAROXConnectionString"
+        Me.sqlDataSource1.Name = "sqlDataSource1"
+        StoredProcQuery1.Name = "R_cargarVista"
+        StoredProcQuery1.StoredProcName = "R_cargarVista"
+        Me.sqlDataSource1.Queries.AddRange(New DevExpress.DataAccess.Sql.SqlQuery() {StoredProcQuery1})
+        Me.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable")
+        '
         'TopMargin
         '
         Me.TopMargin.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.label31, Me.label32, Me.label30, Me.label29, Me.label27, Me.label26, Me.label24, Me.label21, Me.label20, Me.label11, Me.label10, Me.label9})
         Me.TopMargin.HeightF = 162.877!
         Me.TopMargin.Name = "TopMargin"
-        '
-        'Detail
-        '
-        Me.Detail.HeightF = 0.1942952!
-        Me.Detail.Name = "Detail"
-        '
-        'BottomMargin
-        '
-        Me.BottomMargin.HeightF = 51.76384!
-        Me.BottomMargin.Name = "BottomMargin"
-        '
-        'GroupHeader4
-        '
-        Me.GroupHeader4.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.label8, Me.label19, Me.label16, Me.label15, Me.label13, Me.label12, Me.label18, Me.label68})
-        Me.GroupHeader4.GroupFields.AddRange(New DevExpress.XtraReports.UI.GroupField() {New DevExpress.XtraReports.UI.GroupField("NOMBRE_LOCAL", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)})
-        Me.GroupHeader4.HeightF = 46.74372!
-        Me.GroupHeader4.KeepTogether = True
-        Me.GroupHeader4.Name = "GroupHeader4"
-        '
-        'GroupHeader1
-        '
-        Me.GroupHeader1.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.label6, Me.label5, Me.label2, Me.label1, Me.label37, Me.label36, Me.label28, Me.label4})
-        Me.GroupHeader1.HeightF = 30.54916!
-        Me.GroupHeader1.Level = 1
-        Me.GroupHeader1.Name = "GroupHeader1"
-        Me.GroupHeader1.RepeatEveryPage = True
-        '
-        'GroupFooter2
-        '
-        Me.GroupFooter2.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.label22, Me.label23, Me.label3, Me.label51, Me.label50, Me.label49, Me.label48, Me.label47, Me.label46, Me.label17, Me.label14, Me.label7})
-        Me.GroupFooter2.HeightF = 181.6817!
-        Me.GroupFooter2.KeepTogether = True
-        Me.GroupFooter2.Level = 1
-        Me.GroupFooter2.Name = "GroupFooter2"
-        Me.GroupFooter2.PageBreak = DevExpress.XtraReports.UI.PageBreak.AfterBand
-        '
-        'PageFooter
-        '
-        Me.PageFooter.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.pageInfo1})
-        Me.PageFooter.HeightF = 23.36891!
-        Me.PageFooter.Name = "PageFooter"
         '
         'label31
         '
@@ -363,6 +331,24 @@ Partial Public Class rptCorteEjecutivo
         Me.label9.Text = "REPORTE EJECUTIVO"
         Me.label9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
         '
+        'Detail
+        '
+        Me.Detail.HeightF = 0.1942952!
+        Me.Detail.Name = "Detail"
+        '
+        'BottomMargin
+        '
+        Me.BottomMargin.HeightF = 51.76384!
+        Me.BottomMargin.Name = "BottomMargin"
+        '
+        'GroupHeader4
+        '
+        Me.GroupHeader4.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.label8, Me.label19, Me.label16, Me.label15, Me.label13, Me.label12, Me.label18, Me.label68})
+        Me.GroupHeader4.GroupFields.AddRange(New DevExpress.XtraReports.UI.GroupField() {New DevExpress.XtraReports.UI.GroupField("NOMBRE_LOCAL", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)})
+        Me.GroupHeader4.HeightF = 46.74372!
+        Me.GroupHeader4.KeepTogether = True
+        Me.GroupHeader4.Name = "GroupHeader4"
+        '
         'label8
         '
         Me.label8.Borders = CType((((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
@@ -548,6 +534,14 @@ Partial Public Class rptCorteEjecutivo
         Me.label68.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
         Me.label68.TextFormatString = "{0:0,0.000}"
         '
+        'GroupHeader1
+        '
+        Me.GroupHeader1.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.label6, Me.label5, Me.label2, Me.label1, Me.label37, Me.label36, Me.label28, Me.label4})
+        Me.GroupHeader1.HeightF = 30.54916!
+        Me.GroupHeader1.Level = 1
+        Me.GroupHeader1.Name = "GroupHeader1"
+        Me.GroupHeader1.RepeatEveryPage = True
+        '
         'label6
         '
         Me.label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(218, Byte), Integer))
@@ -724,6 +718,15 @@ Partial Public Class rptCorteEjecutivo
         Me.label4.Text = "Cliente:"
         Me.label4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
         '
+        'GroupFooter2
+        '
+        Me.GroupFooter2.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.label22, Me.label23, Me.label3, Me.label51, Me.label50, Me.label49, Me.label48, Me.label47, Me.label46, Me.label17, Me.label14, Me.label7})
+        Me.GroupFooter2.HeightF = 181.6817!
+        Me.GroupFooter2.KeepTogether = True
+        Me.GroupFooter2.Level = 1
+        Me.GroupFooter2.Name = "GroupFooter2"
+        Me.GroupFooter2.PageBreak = DevExpress.XtraReports.UI.PageBreak.AfterBand
+        '
         'label22
         '
         Me.label22.BackColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(226, Byte), Integer))
@@ -791,7 +794,7 @@ Partial Public Class rptCorteEjecutivo
         'label51
         '
         Me.label51.BackColor = System.Drawing.Color.Silver
-        Me.label51.LocationFloat = New DevExpress.Utils.PointFloat(452.3335!, 100.6387!)
+        Me.label51.LocationFloat = New DevExpress.Utils.PointFloat(381.4167!, 100.6387!)
         Me.label51.Multiline = True
         Me.label51.Name = "label51"
         Me.label51.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
@@ -802,14 +805,14 @@ Partial Public Class rptCorteEjecutivo
         '
         'label50
         '
-        Me.label50.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(StartsWith([MONEDA], 'D'),Concat('$ ', sumSum([IMPUESTO])) , Iif(StartsWith([" &
-                    "MONEDA], 'C'),Concat('₡ ', sumSum([IMPUESTO])), ''))" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10))})
+        Me.label50.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(StartsWith([MONEDA], 'D'),Concat('$ ', ROUND(sumSum([IMPUESTO]),3)) , Iif(Sta" &
+                    "rtsWith([MONEDA], 'C'),Concat('₡ ', ROUND(sumSum([IMPUESTO]),3)), ''))" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10))})
         Me.label50.Font = New DevExpress.Drawing.DXFont("Times New Roman", 9.75!, DevExpress.Drawing.DXFontStyle.Bold)
-        Me.label50.LocationFloat = New DevExpress.Utils.PointFloat(586.5002!, 100.6389!)
+        Me.label50.LocationFloat = New DevExpress.Utils.PointFloat(515.5834!, 100.6389!)
         Me.label50.Multiline = True
         Me.label50.Name = "label50"
         Me.label50.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.label50.SizeF = New System.Drawing.SizeF(134.1666!, 23.0!)
+        Me.label50.SizeF = New System.Drawing.SizeF(205.0834!, 23.00001!)
         Me.label50.StyleName = "Style1"
         Me.label50.StylePriority.UseFont = False
         XrSummary8.Running = DevExpress.XtraReports.UI.SummaryRunning.Group
@@ -821,7 +824,7 @@ Partial Public Class rptCorteEjecutivo
         'label49
         '
         Me.label49.BackColor = System.Drawing.Color.Silver
-        Me.label49.LocationFloat = New DevExpress.Utils.PointFloat(452.3335!, 146.6388!)
+        Me.label49.LocationFloat = New DevExpress.Utils.PointFloat(381.4167!, 146.6388!)
         Me.label49.Multiline = True
         Me.label49.Name = "label49"
         Me.label49.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
@@ -833,7 +836,7 @@ Partial Public Class rptCorteEjecutivo
         'label48
         '
         Me.label48.BackColor = System.Drawing.Color.Silver
-        Me.label48.LocationFloat = New DevExpress.Utils.PointFloat(452.3335!, 123.6387!)
+        Me.label48.LocationFloat = New DevExpress.Utils.PointFloat(381.4167!, 123.6387!)
         Me.label48.Multiline = True
         Me.label48.Name = "label48"
         Me.label48.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
@@ -844,13 +847,14 @@ Partial Public Class rptCorteEjecutivo
         '
         'label47
         '
-        Me.label47.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([TOTAL])")})
+        Me.label47.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(StartsWith([MONEDA], 'D'),Concat('$ ', ROUND(sumSum([TOTAL]),3)) , Iif(Starts" &
+                    "With([MONEDA], 'C'),Concat('₡ ', ROUND(sumSum([TOTAL]),3)), ''))")})
         Me.label47.Font = New DevExpress.Drawing.DXFont("Times New Roman", 9.75!, DevExpress.Drawing.DXFontStyle.Bold)
-        Me.label47.LocationFloat = New DevExpress.Utils.PointFloat(586.5002!, 146.6388!)
+        Me.label47.LocationFloat = New DevExpress.Utils.PointFloat(515.5834!, 146.6388!)
         Me.label47.Multiline = True
         Me.label47.Name = "label47"
         Me.label47.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.label47.SizeF = New System.Drawing.SizeF(134.1666!, 23.0!)
+        Me.label47.SizeF = New System.Drawing.SizeF(205.0834!, 23.0!)
         Me.label47.StyleName = "Style1"
         Me.label47.StylePriority.UseFont = False
         XrSummary9.Running = DevExpress.XtraReports.UI.SummaryRunning.Group
@@ -861,13 +865,14 @@ Partial Public Class rptCorteEjecutivo
         '
         'label46
         '
-        Me.label46.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([SUB_TOTAL])")})
+        Me.label46.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(StartsWith([MONEDA], 'D'),Concat('$ ', ROUND(sumSum([SUB_TOTAL]),3)) , Iif(St" &
+                    "artsWith([MONEDA], 'C'),Concat('₡ ', ROUND(sumSum([SUB_TOTAL]),3)), ''))")})
         Me.label46.Font = New DevExpress.Drawing.DXFont("Times New Roman", 9.75!, DevExpress.Drawing.DXFontStyle.Bold)
-        Me.label46.LocationFloat = New DevExpress.Utils.PointFloat(586.5002!, 123.6387!)
+        Me.label46.LocationFloat = New DevExpress.Utils.PointFloat(515.5834!, 123.6388!)
         Me.label46.Multiline = True
         Me.label46.Name = "label46"
         Me.label46.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.label46.SizeF = New System.Drawing.SizeF(134.1666!, 23.0!)
+        Me.label46.SizeF = New System.Drawing.SizeF(205.0834!, 23.0!)
         Me.label46.StyleName = "Style1"
         Me.label46.StylePriority.UseFont = False
         XrSummary10.Running = DevExpress.XtraReports.UI.SummaryRunning.Group
@@ -879,7 +884,7 @@ Partial Public Class rptCorteEjecutivo
         'label17
         '
         Me.label17.BackColor = System.Drawing.Color.Silver
-        Me.label17.LocationFloat = New DevExpress.Utils.PointFloat(452.3335!, 77.63888!)
+        Me.label17.LocationFloat = New DevExpress.Utils.PointFloat(381.4167!, 77.63888!)
         Me.label17.Multiline = True
         Me.label17.Name = "label17"
         Me.label17.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
@@ -890,13 +895,13 @@ Partial Public Class rptCorteEjecutivo
         '
         'label14
         '
-        Me.label14.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([CONSUMO])")})
+        Me.label14.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "CONCAT(ROUND(sumSum([CONSUMO]),3),' ',[UNIDAD])")})
         Me.label14.Font = New DevExpress.Drawing.DXFont("Times New Roman", 9.75!, DevExpress.Drawing.DXFontStyle.Bold)
-        Me.label14.LocationFloat = New DevExpress.Utils.PointFloat(586.5002!, 77.63888!)
+        Me.label14.LocationFloat = New DevExpress.Utils.PointFloat(515.5834!, 77.63891!)
         Me.label14.Multiline = True
         Me.label14.Name = "label14"
         Me.label14.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.label14.SizeF = New System.Drawing.SizeF(134.1667!, 23.0!)
+        Me.label14.SizeF = New System.Drawing.SizeF(205.0835!, 22.99999!)
         Me.label14.StyleName = "Style1"
         Me.label14.StylePriority.UseFont = False
         XrSummary11.Running = DevExpress.XtraReports.UI.SummaryRunning.Group
@@ -925,6 +930,12 @@ Partial Public Class rptCorteEjecutivo
         Me.label7.Text = "label40"
         Me.label7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
         '
+        'PageFooter
+        '
+        Me.PageFooter.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.pageInfo1})
+        Me.PageFooter.HeightF = 23.36891!
+        Me.PageFooter.Name = "PageFooter"
+        '
         'pageInfo1
         '
         Me.pageInfo1.LocationFloat = New DevExpress.Utils.PointFloat(649.0833!, 0!)
@@ -933,15 +944,6 @@ Partial Public Class rptCorteEjecutivo
         Me.pageInfo1.SizeF = New System.Drawing.SizeF(100.0!, 23.0!)
         Me.pageInfo1.StylePriority.UseTextAlignment = False
         Me.pageInfo1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
-        '
-        'sqlDataSource1
-        '
-        Me.sqlDataSource1.ConnectionName = "VAROXConnectionString"
-        Me.sqlDataSource1.Name = "sqlDataSource1"
-        StoredProcQuery1.Name = "R_cargarVista"
-        StoredProcQuery1.StoredProcName = "R_cargarVista"
-        Me.sqlDataSource1.Queries.AddRange(New DevExpress.DataAccess.Sql.SqlQuery() {StoredProcQuery1})
-        Me.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable")
         '
         'Style1
         '
@@ -975,14 +977,14 @@ Partial Public Class rptCorteEjecutivo
         Me.fechaIni.Description = "Fecha Desde:"
         Me.fechaIni.Name = "fechaIni"
         Me.fechaIni.Type = GetType(Date)
-        Me.fechaIni.ValueInfo = "2024-07-26"
+        Me.fechaIni.ValueInfo = "2025-07-01"
         '
         'fechaFin
         '
         Me.fechaFin.Description = "Fecha Hasta:"
         Me.fechaFin.Name = "fechaFin"
         Me.fechaFin.Type = GetType(Date)
-        Me.fechaFin.ValueInfo = "2024-08-01"
+        Me.fechaFin.ValueInfo = "2025-07-02"
         '
         'cliente
         '

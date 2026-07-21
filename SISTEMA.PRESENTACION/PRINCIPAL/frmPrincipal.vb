@@ -269,11 +269,12 @@ Public Class frmPrincipal
             'HABILITA LOS MODULOS ASIGNADOS AL USUARIO
             iniciarMenu()
             cargarModulos()
-            Dim respuesta As Integer
-            respuesta = MessageBox.Show("¿Desea visualizar el Dashboard de Inicio?", "Dashboard Inicio", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-            If (respuesta = DialogResult.Yes) Then
-                AbrirFormulario(DashboardP)
-            End If
+            'PREGUNTA SI DESEA VISUALIZAR EL DASHBOARD DE INICIO
+            'Dim respuesta As Integer
+            'respuesta = MessageBox.Show("¿Desea visualizar el Dashboard de Inicio?", "Dashboard Inicio", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            'If (respuesta = DialogResult.Yes) Then
+            '    AbrirFormulario(DashboardP)
+            'End If
         Catch ex As Exception
             mensajeError(ex)
         End Try
